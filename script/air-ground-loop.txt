@@ -1,0 +1,246 @@
+[55 46 11 - 55 46 28] CDR
+Roger. Sounds good. And this is the crew of Apollo 13 wishing everybody there a nice evening, and we're just about ready to close out our inspection of Aquarius and get back for a pleasant evening in Odyssey. Good night.
+
+[55 46 30] CAPCOM
+Thank you, 13.
+
+[55 48 40 -] CAPCOM
+Apollo 13, Houston. The next thing we'd like you to do is to -
+
+[55 48 45] CMP
+Go ahead.
+
+[- 55 48 12] CAPCOM
+- we'd like you to roll right to 060 and null your rates for photography of the Comet Bennett. To do that, we would like you to enable quads C and D. For the maneuver, use all your quads. And in precisely 1 minute, we'd like you to terminate the battery charge on battery B. One other request, we'd like to have you verify -
+
+[55 49 12] CMP
+Okay. Will do.
+
+[55 49 14 - 55 49 21] CAPCOM
+One other request, we'd like you to verify your high gain configuration. We'd like to know what track mode, what SERVO, and what beam width.
+
+[55 49 25 - 55 50 00] CMP
+Okay, Jack. During the TV we were AUTO TRACK, NARROW BEAM WIDTH, and the PRIMARY ELECTRONICS. And we had a good lockup. Just after we started the maneuver, I was able to lock you up and get real good signal strength, and it just seemed that right there at about 239 degrees in yaw, that the signal strength would just drop off and yaw would go to zero and pitch would go to 90.
+
+[55 50 05 - 55 50 09] CAPCOM
+Roger. We copy, and the TV show was great.
+
+[55 50 12 - 55 50 19] CMP
+Okay, real fine. Okay, I'm going to maneuver to 060, 090, and 0.
+
+[55 50 31 - 55 50 33] CAPCOM
+And 13, we'd like you to check C-4 thruster.
+
+[55 51 32 - 55 51 35] CMP
+Okay, Jack. The battery charge has been terminated on battery B.
+
+[55 51 36 - 55 51 49] CAPCOM
+Roger. We see it, Jack. And we've got a reading of minus 2 degrees on the docking index. We'd like to know if that's 2.0 precise or if it's 2.1 or 1.9.
+
+[55 51 52 - 55 51 55] CMP
+No. It's minus 2.0 precisely.
+
+[55 51 56] CAPCOM
+Thank you.
+
+[55 52 57 -] CAPCOM
+13, we've got one more item for you, when you get a chance. We'd like you to stir up your cryo tanks. In addition, I have shaft and trunnion -
+
+[55 53 05] CMP
+Okay.
+
+[- 55 53 07] CAPCOM
+- for looking at Comet Bennett, if you need it.
+
+[55 53 09] CMP
+Okay. Standby.
+
+[55 55 19] LMP
+Okay, Houston -
+
+[55 55 20 - 55 55 21] CDR
+I believe we've had a problem here.
+
+[55 55 28 - 55 55 29] CAPCOM
+This is Houston. Say again, please.
+
+[55 55 35 - 55 55 40] CDR
+{Houston, we've had a problem.} {We've had a MAIN B BUS UNDERVOLT.}
+1> Not "we have a problem," as in the film. The scriptwriters felt the present tense was more appropriate.
+2> The first reading that the MAIN B electrical bus was dead: it is below the expected voltage.
+
+[55 55 42] CAPCOM
+Roger. MAIN B UNDERVOLT.
+
+[55 55 57 - 55 55 59] CAPCOM
+Okay, stand by, 13. We're looking at it.
+
+[55 56 09 - 55 56 32] LMP
+Okay. Right now, Houston the voltage is looking good. And we had a pretty large bang associated with the CAUTION AND WARNING there. And as I recall, MAIN B was the one that had an amp spike on it once before.
+
+[55 56 40] CAPCOM
+Roger, Fred.
+
+[55 56 54 - 55 56 57] LMP
+In the interim here, we're starting to go ahead and button up the tunnel again.
+
+[55 57 00] CAPCOM
+Roger.
+
+[55 57 04 - 55 57 17] LMP
+Yes. That jolt must have rocked the sensor on - I see now - O2 QUANTITY 2; it was oscillating down around 20 to 60 percent. Now it's full-scale high again.
+
+[55 57 20] CAPCOM
+Roger.
+
+[55 57 29 - 55 57 35] CDR
+And Houston, we had a RESTART on our computer. We have PGNCS light and RESTART RESET.
+
+[55 57 37 - 55 57 42] CAPCOM
+Roger. RESTART and a PGNCS light. RESET on a PNGCS, RESET -
+
+[55 57 42 - 55 58 04] CDR
+And now looking at our SERVICE MODULE RCS HELIUM 1, we have B is barber poled and D is barber poled. HELIUM 2, D is barber pole. And SECONDARY PROPELLANTS I have A and C barber pole. BMAG temperatures?
+
+[55 58 07 - 55 58 11] LMP
+Okay, AC 2 is showing zip. I'm going to try to reconfigure on that, Jack.
+
+[55 58 12] CAPCOM
+Roger.
+
+[55 58 25 - 55 58 28] LMP
+We got a MAIN BUS A UNDERVOLT now too, showing.
+
+[55 58 29] CAPCOM
+MAIN A UNDERVOLT.
+
+[55 58 32 - 55 58 37] LMP
+It's reading about 25 and a half. MAIN B is reading zip right now.
+
+[55 59 33] CDR
+And Houston, Odyssey.
+
+[55 59 38] CAPCOM
+Standby 1, Jim.
+
+[56 00 34 - 56 00 44] CAPCOM
+13, Houston. We'd like you to attempt to reconnect fuel cell 1 to MAIN A and fuel cell 3 to MAIN B. Verify quad Delta is open.
+
+[56 00 53 - 56 01 04] LMP
+Okay, Houston. I'm showing - I tried to reset and fuel cell 1 and 3 are both showing grey flags, but they're both showing zip on the flows.
+
+[56 01 07] CAPCOM
+We copy.
+
+[56 03 17 - 56 03 19] LMP
+Okay, Houston. Are you still reading - 13?
+
+[56 03 20 - 56 03 26] CAPCOM
+That's affirmative, we're reading you. We're trying to come up with some good ideas here for you.
+
+[56 03 29 - 56 03 36] LMP
+Okay. Let me give you some readings - in the interim to help MAIN A voltage, Jack. I've got BUS TIE AC on.
+
+[56 03 37] CAPCOM
+Say again, Fred.
+
+[56 03 42 - 56 03 51] LMP
+In the interim, to help out MAIN A voltage, I've got MAIN BUS TIE BAT AC on. Or would you rather accept the 25 volts we are seeing on MAIN A?
+
+[56 03 52] CAPCOM
+Okay. BUS TIE AC on.
+
+[56 04 09] CAPCOM
+13, Houston. We need OMNI Charlie, please.
+
+[56 04 19] LMP
+You got it.
+
+[56 05 32 - 56 05 42] CAPCOM
+13, Houston. We'd like you to verify couple of readings for us. We would like the nitrogen pressure on fuel cell 1. We need the oxygen pressure on fuel cell 2.
+
+[56 05 46 - 56 05 50] LMP
+Okay. Nitrogen on 1 and oxygen on 2. Is that correct?
+
+[56 05 50 - 56 05 52] CAPCOM
+Negative. Oxygen on 3.
+
+[56 05 54] LMP
+Okay.
+
+[56 05 24 - 56 05 28] LMP
+Okay. The systems test 1-A says zip.
+
+[56 06 43 - 56 06 48] LMP
+And 2 Baker, which is 3 oxygen, says 0.6.
+
+[56 06 50 - 56 06 53] CAPCOM
+2 Baker says 0.6, and say again the other one.
+
+[56 06 57 - 56 07 00] LMP
+Fuel cell 1 nitrogen reads zero.
+
+[56 07 01] CAPCOM
+Roger, zero.
+
+[56 08 46 - 56 08 52] CAPCOM
+13, Houston. We'd like you to open-circuit fuel cell 1. Leave 2 and 3 as-is.
+
+[56 08 55 - 56 08 56] LMP
+Okay. I'll get to work on that.
+
+[56 08 57 - 56 09 03] CDR
+And Jack, our O2 QUANTITY number 2 tank is reading zero. Did you get that?
+
+[56 09 04 - 56 09 06] CAPCOM
+O2 QUANTITY number 2 is zero.
+
+[56 09 07 - 56 09 21] CDR
+That's AC, okay. Yeah, that's (unintelligible) AC and it looks to me, looking out the hatch, that we are venting something. We are venting something out into the - into space.
+> In the film, the whole timeline is compressed - including this call nearly 14 minutes following the incident.
+
+[56 09 22] CAPCOM
+Roger. We copy your venting.
+
+[56 09 28] CDR
+It's a gas of some sort.
+
+[56 09 49 - 56 09 52] LMP
+Okay, fuel cell 1 you just wanted it off the line now, Jack, is that right?
+
+[56 09 52 - 56 09 55] CAPCOM
+We just wanted you to open the circuit on fuel cell 1.
+
+[56 09 58 - 56 09 59] LMP
+Okay, she's off the line.
+
+[56 12 48 - 56 13 02] CAPCOM
+13, Houston. We see you getting close to gimbal lock there. We'd like you to bring up all quad Cs on MAIN A, quad C-l, C-2, C-3, C-4 on MAIN A, and also bring B-3 and B-4 up on MAIN A.
+
+[56 13 15 - 56 13 16] CAPCOM
+13, Houston. Do you read?
+
+[56 13 20] LMP
+Yes. No, we got it.
+
+[56 13 21] CDR
+Affirm.
+
+[56 13 22 - 56 13 27] CAPCOM
+Okay. Can you tell us anything about the venting: where it's coming from, what window you see it at?
+
+[56 13 30 - 56 13 34] LMP
+It's coming out of window 1 right now, Jack, and could you give me the thrusters again?
+
+[56 13 36 -] CAPCOM
+Okay, the thrusters -
+
+[56 13 37] LMP
+What buses?
+
+[- 56 13 48] CAPCOM
+We'd like - on MAIN A, we'd like Charlie 1, 2, 3, and 4. Also Bravo 3 and 4 on MAIN A.
+
+[56 13 52] LMP
+Okay. Got it.
+
