@@ -474,5 +474,66 @@ Okay, Fred, Thank you.
 [56 45 57 - 56 46 08] CMP
 Jack, looking outside, the number of particles has diminished greatly, almost ceased now, which indicates maybe what was venting has almost stopped.
 
+[56 46 11 - 56 46 12] CAPCOM
+Roger, Jack, thank you. We copy.
 
+[56 46 16 - 56 46 18] CMP
+I'm still getting some rates in negative pitch, though.
+
+[56 46 20] CAPCOM
+Roger.
+
+[56 46 11 - 56 46 34] CAPCOM
+And 13, we'd like to verify that both BMAGs are OFF, please.
+
+[56 46 37 - 56 46 43] CMP
+Negative. We just have one BMAG. BMAG number 1 is still ON.
+
+[56 46 45 - 56 46 47] CAPCOM
+Okay, Jack. Let's take BMAG 1 OFF.
+
+[56 46 52 - 56 46 54] CMP
+Okay. BMAG number 1 OFF now.
+
+[56 48 09 - 56 48 21] CAPCOM
+13, this is Houston. We'd like you to give us a survey of your displays on MDCs 1 and 2. Give us gauge readings and talkbacks. Over.
+
+[56 48 25 - 56 48 29] CDR
+Okay. We'll start with display number 1.
+
+[56 48 32 - 56 48 44] CMP
+Okay, Jack. On MDC 1, there's nothing abnormal. All the rate indicators are zero. Ball number 2 is frozen, of course: we lost MAIN B.
+
+[56 48 45 - 56 48 54] CMP
+I've got - ball number 1 appears to be working normally.  Right now I'm sitting at roll 0, pitch 180, and yaw about 13 degrees.
+
+[56 49 00 - 56 49 04] CMP
+I'm going to try and hold 0, 180, and 0.
+
+[56 49 10 - 56 49 32] CDR
+Okay, Houston. The center panel - I'm looking at the RCS indicator A. We have a package temperature of 180. Our helium pressure is 3900. I'm looking at fuel pressure of about 180 and percentage of about, I'd say 85 percent.
+
+[56 49 32 - 56 49 54] CDR
+B is about the same, except that that package pressure is 190. On quad C, we're looking about the same, except that the package temperature is 100. On quad D, we're looking at package temperature of 160. All other indications are about the same.
+
+[56 49 56 - 56 50 09] CDR
+CM pressure - RCS pressure is looking nominal. Helium pressure's up around 4000. And package temperature is about - a little less than 80 on ring 1 and about the same on ring 2.
+
+[56 50 14 - 56 50 32] CDR
+And the - talkbacks on the SM RCS, I've got HELIUM 1 now are all grey. HELIUM 2 are all grey. PRIMARY PROPELLANT all grey. SECONDARY PROPELLANT, I've got two barber poles - A is barber pole, B grey, C barber pole, and D grey.
+
+[56 50 40 - 56 50 52] CDR
+Okay. On the ECS RADIATORS, barber pole is grey. On the - on the ECS, PRIMARY INDICATOR.
+
+[56 50 58 - 56 51 34] LMP
+Okay, Jack. Starting at the top. Okay. The CRYO TANKS: H2 1 is reading 230 and the same for 2. Our O2 CRYO TANK 1 is - looks like it's barely holding its own at 300. And, CRYO TANK 2 is reading zip. Our quantities: H2 1 is reading 73, 2, 74.
+
+[56 51 36 - 56 52 11] LMP
+On the O2 side, we're reading O2 1 at quantity 76. O2 2 pegged to full scale high. RAD TEMPs PRIMARY INLET we're reading about 55; RAD OUT is reading about 30, and the SECONDARY OUTLET is reading - reading 52 degrees.
+
+[56 52 13 - 56 53 04] LMP
+And the EVAP OUT TEMP is 45, STEAM PRESSURE 0.17, and GLYCOL DISCHARGE 48. SUIT COMPRESSOR is reading zip. The ACCUM is reading 30; H2O WASTE is reading about 34; POTABLE's reading about 98; SECONDARY RAD INLET is reading about 71; and the RAD OUT is about 30; GLYCOL EVAP TEMP is reading 65, STEAM PRESSURE pegged full scale high; DISCHARGE PRESSURE 9 psi.
+
+[56 53 07 - 56 53 12] CAPCOM
+Excuse me, Fred. I'd like to butt in here a minute. We'd like to have THRUSTER C-1 OFF.
 

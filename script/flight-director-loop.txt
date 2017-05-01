@@ -1939,5 +1939,146 @@ We got the circuit breakers. {All in,} FLIGHT.
 [56 45 22 - 56 45 24] FLIGHT
 Roger. Copy, all circuit breakers in.
 
+[56 46 15] EECOM
+FLIGHT, EECOM.
 
+[56 46 15] FLIGHT
+Go ahead, EECOM.
+
+[56 46 16 - 56 46 17] EECOM
+Don't we have both BMAGs OFF?
+
+[56 46 25 - 56 46 28] FLIGHT
+CAPCOM, would you verify that both BMAGs are OFF, please?
+
+[56 46 40 - 56 46 41] FLIGHT
+You want to bring it off, right EECOM?
+
+[56 46 43] EECOM
+Affirmative, FLIGHT.
+
+[56 46 44] FLIGHT
+CAPCOM, let's get it off.
+
+[56 47 31] FLIGHT
+CAPCOM, from FLIGHT.
+
+[56 47 34] CAPCOM
+Go, FLIGHT.
+
+[56 47 35 - 56 47 45] FLIGHT
+Will you get a cockpit panel 1, 2 layout and have the crew - just get the thing and have the crew read across all instruments, all gauges, and write down exactly what they read in those things?
+
+[56 47 47 - 56 47 52] CAPCOM
+Okay. You want a survey of panels 1 and 2 on gauges? 
+
+[56 47 53] FLIGHT
+Yeah.
+
+[56 47 54 - 56 47 56] CAPCOM
+Okay. And {talkbacks}, huh?
+1> These are the tiny indicators accompanying some switches that are grey or barber pole to indicate the state of the thing the switch controls. They provide feedback on the switch's intended action.
+
+[56 47 57 - 56 48 04] FLIGHT
+That's affirmative. Figure out some code that you can use and - I think that's something we should have gotten started a while ago.
+
+[56 48 10] FDO
+FLIGHT, FDO.
+
+[56 48 20 - 56 48 24] FLIGHT
+See that juice is still going down there, EECOM. You got any more suggestions?
+
+[56 48 28] EECOM
+FLIGHT, EECOM.
+
+[56 48 29 - 56 48 32] FLIGHT
+Any more suggestions in trying to pump up O2 TANK 1 pressure?
+
+[56 48 32 - 56 48 42] EECOM
+No. FLIGHT, we're gonna hit 100psi in 1 hour and 54 minutes. That's the end, right there.
+
+[56 48 47 - 56 48 48] FLIGHT
+Okay, 100psi -
+
+[56 48 49] EECOM
+Less than 2 hours, now.
+
+[56 50 56] FLIGHT
+FDO, from FLIGHT.
+
+[56 50 57] FDO
+Go ahead, FLIGHT.
+
+[56 50 58 - 56 51 12] FLIGHT
+Whatever planning you do, I want to do assuming that we're going around the Moon and we're using the LM for performing maneuvers, because in the present configuration, unless we get a heckuva lot smarter I think we're wasting our time planning and using the SPS.
+
+[56 51 13] FDO
+Okay, FLIGHT.
+
+[56 51 14 - 56 51 27] FLIGHT
+So I think all of our return-to-Earth type planning should be assuming the use of the LM DPS and/or RCS. And I think third priority down the line should be CSM RCS.
+
+[56 51 27 - 56 51 30] FDO
+Okay, and I'm assuming that you want fast-as-possible return.
+
+[56 51 32 - 56 51 34] FLIGHT
+Yeah, I think that's the case.
+
+[56 51 34 -] FDO
+Okay. We'll work on it from that sideline, FLIGHT -
+
+[56 51 36] FLIGHT
+Okay.
+
+[- 56 51 38] FDO
+Should be no problem.
+
+[56 51 38] GUIDO??
+I copy that, FLIGHT.
+
+[56 51 46] EECOM
+FLIGHT, EECOM.
+
+[56 51 48] FLIGHT
+Go ahead, EECOM.
+
+[56 51 49 - 56 52 20] EECOM
+Okay, listen. There is a possibility that we blew a O2 line in one of the fuel cells, and {it's effectively manifolded there}, of course. Now, I'm - I want to shut off one of the reactant valves to one of the fuel cells. And that would be FUEL CELL 3, since its O2 pressure is gone. Now, FUEL CELL 1's O2 pressure is trying to stay up there, at 45psi. Maybe the problem is in FUEL CELL 3.
+1> In other words, both tanks run into this line.
+
+[56 52 24 - 56 52 26] FLIGHT
+That sounds like a good assumption, right there.
+
+[56 52 26 - 56 52 29] EECOM
+Yeah. FUEL CELL 3 is lost anyways, FLIGHT.
+
+[56 52 29] GNC
+FLIGHT, GNC.
+
+[56 52 30] FLIGHT
+Go ahead, GNC.
+
+[56 52 31 - 56 52 32] GNC
+Turn Charlie 1 thruster OFF.
+
+[56 52 34 - 56 52 35] FLIGHT
+You want to turn Charlie 1 OFF? Why?
+
+[56 52 36 - 56 52 39] GNC
+Well, looks like we're getting a lot of firing out for no reason.
+
+[56 52 41 - 56 52 46] FLIGHT
+Okay, CAPCOM, recommend THRUSTER C-1 to off.
+
+[56 52 56] CAPCOM
+Say again, FLIGHT?
+
+[56 52 57 - 56 52 58] FLIGHT
+THRUSTER C-1 to OFF.
+
+[56 53 00] CAPCOM
+C-1 and -2 OFF.
+
+[56 53 01 - 56 53 09] FLIGHT
+No. C-1. OFF. I added a word in there. Turn THRUSTER C-1 OFF.
 
