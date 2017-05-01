@@ -10,7 +10,7 @@ Apollo 13, Houston. The next thing we'd like you to do is to -
 [55 48 45] CMP
 Go ahead.
 
-[- 55 48 12] CAPCOM
+[- 55 49 12] CAPCOM
 - we'd like you to roll right to 060 and null your rates for photography of the Comet Bennett. To do that, we would like you to enable quads C and D. For the maneuver, use all your quads. And in precisely 1 minute, we'd like you to terminate the battery charge on battery B. One other request, we'd like to have you verify -
 
 [55 49 12] CMP

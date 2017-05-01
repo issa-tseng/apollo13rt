@@ -16,7 +16,7 @@ FLIGHT, EECOM.
 [55 47 09] FLIGHT
 Go ahead, EECOM.
 
-[55 47 10 - ] EECOM
+[55 47 10 -] EECOM
 Okay, let's terminate battery B charge at 55 plus 50.
 
 [55 47 14] FLIGHT
@@ -37,10 +37,10 @@ FLIGHT, GNC.
 [55 47 24] FLIGHT
 Go, GNC.
 
-[ - 55 47 28] GNC
+[- 55 47 28] GNC
 ?? would still like to enable the other two quads for the maneuver.
 
-[55 48 29 - 55 47 35] FLIGHT
+[55 48 29 - 55 48 35] FLIGHT
 Okay. When rolling to 060 you want them to enable C and D, right?
 
 [55 47 35] GNC
@@ -52,7 +52,7 @@ Do you want them to disable A and B?
 [55 47 38] GNC
 No.
 
-[455 47 38 - 55 47 40] FLIGHT
+[55 47 38 - 55 47 40] FLIGHT
 Okay. All four quads.
 
 [55 47 40] GNC
@@ -146,7 +146,7 @@ Okay, all flight controllers. I want to go around the horn and pick up anything 
 [55 51 00] TELMU
 Go ahead, FLIGHT.
 
-[ - 55 51 04] FLIGHT
+[- 55 51 04] FLIGHT
 - you still worried about any configuration items?
 
 [55 51 06 - 55 51 14] TELMU
@@ -383,7 +383,7 @@ We just gotta -
 [ - ] FLIGHT
 FUEL CELL 1 -
 
-[ - 55 59 07] EECOM
+[- 55 59 07] EECOM
 - back to MAIN A, FUEL CELL 3 back to MAIN B.
 
 [- 55 59 10] FLIGHT
@@ -407,7 +407,7 @@ Okay.
 [55 59 35] FLIGHT
 Roger.
 
-[ - 55 59 36] EECOM
+[- 55 59 36] EECOM
 - on the fuel cell on-board, too, FLIGHT.
 
 [55 59 36] FLIGHT
@@ -454,7 +454,7 @@ Are there other problems in the RCS?
 [56 00 20 - 56 00 24] CAPCOM
 Okay, is that all we've come up with for them; have we got any other recommendations?
 
-[56 00 25 - 56 00 331] FLIGHT
+[56 00 25 - 56 00 33] FLIGHT
 Yeah, we wanted to get FUEL CELL 1 configured to MAIN A, FUEL CELL 3 to MAIN B. Did you pass that up?
 
 [56 00 32] EECOM
@@ -642,7 +642,7 @@ Okay, you want FUEL CELL 1 -
 [56 05 21] EECOM
 N2 pressure.
 
-[ - 56 05 25] FLIGHT
+[- 56 05 25] FLIGHT
 - N2 pressure. FUEL CELL 3, what do you want there?
 
 [56 05 26] EECOM
@@ -747,7 +747,7 @@ Okay, what do you want to do? Open-circuit FUEL CELL 1 and 3?
 That's affirm, flight.
 
 [56 08 10 - 56 08 20] FLIGHT
-Okay. CAPCOM, let's recommend we open-circuit FUEL CELL NUMBER 1 and number 3 and leave FUEL CELL NUMBER 2 as-is.
+Okay. CAPCOM, let's recommend we open-circuit FUEL CELL number 1 and number 3 and leave FUEL CELL number 2 as-is.
 
 [56 08 21 - 56 08 29] CAPCOM
 Okay, 1 and 3 open-circuit, 2 as-is. And earlier we got a report from them that 1 and 3 were reading {grey} but zero flow.
@@ -844,7 +844,7 @@ He's - he's - never mind, he's straightening up a little bit.
 Okay.
 
 [56 10 45 - 56 11 21] FLIGHT
-Okay, now, let's everybody keep cool. We've got the LM still attached, the LM spacecraft is good, so {if} we need to get back home we've got a LM to do it with. Let's make sure we don't do anything that's going to blow our CSM electrical power with the batteries, or that will cause us to lose the main - the FUEL CELL NUMBER 2. We want to keep the O2 and that kind of stuff working, we'd like to have RCS. But we've got the {Command Module system}, so we're in good shape if we need to get home. Let's solve the problem, but let's not make it any worse by guessin'.
+Okay, now, let's everybody keep cool. We've got the LM still attached, the LM spacecraft is good, so {if} we need to get back home we've got a LM to do it with. Let's make sure we don't do anything that's going to blow our CSM electrical power with the batteries, or that will cause us to lose the main - the FUEL CELL number 2. We want to keep the O2 and that kind of stuff working, we'd like to have RCS. But we've got the {Command Module system}, so we're in good shape if we need to get home. Let's solve the problem, but let's not make it any worse by guessin'.
 1> Note the repeated use of "if" here. The severity of the problem was not yet fully understood.
 2> As noted elsewhere[ref2 p215], FLIGHT likely meant LM here.
 
@@ -1040,7 +1040,7 @@ You don't want to get fuel cell pumps off, do you?
 Optics power is already off, I believe.
 
 [56 15 47 - 56 15 49] EECOM
-We can do that on FUEL CELL NUMBER 1, FLIGHT.
+We can do that on FUEL CELL number 1, FLIGHT.
 
 [56 15 50 - 56 16 53] FLIGHT
 Okay, well let's make sure we don't blow the whole mission.
@@ -1152,7 +1152,7 @@ Okay, I'll tell you what. {Let's discuss this for just a little bit longer there
 [56 22 14 - 56 22 16] CAPCOM
 He's asking how do we like his amperage setup right now?
 
-[56 22 19 - 21] FLIGHT
+[56 22 19 - 56 22 21] FLIGHT
 Are you happy with his power level right now, EECOM?
 
 [56 22 29] INCO
@@ -1202,7 +1202,7 @@ Say that again. You think your fuel cell pumps -
 Yeah. FUEL CELL 2 pumps I think are on AC 2.
 
 [56 23 50 - 56 24 02] FLIGHT
-Okay, but according to the checklist, he should have powered - he should have turned those off, right? Now, he said he was down through BMAG NUMBER 2 is in WARM UP, so he's already gone through the fuel cell pump stuff.
+Okay, but according to the checklist, he should have powered - he should have turned those off, right? Now, he said he was down through BMAG number 2 is in WARM UP, so he's already gone through the fuel cell pump stuff.
 
 [56 24 00 - 56 24 02] EECOM
 Okay. Good enough.
@@ -1235,7 +1235,7 @@ EECOM, from FLIGHT.
 FLIGHT, EECOM.
 
 [56 24 49 - 56 24 50] FLIGHT
-Monitor this ?? when we switch again -
+Monitor this bear when we switch again -
 
 [56 24 50] EECOM
 With you. ??
@@ -1728,7 +1728,7 @@ FLIGHT, we copy that. No problem.
 No problem, CAPCOM.
 
 [56 39 22 - 56 39 24] FLIGHT
-CAPCOM, we want to get CRYO O2 TANK NUMBER 1 HEATER ON.
+CAPCOM, we want to get CRYO O2 TANK number 1 HEATER ON.
 
 [56 39 45 - 56 39 47] FLIGHT
 You can stand the 5 amps on MAIN A?
