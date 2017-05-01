@@ -1,0 +1,7 @@
+{
+  "name": "apollo13-realtime",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": { "livescript": "~1.5" }
+}
+
