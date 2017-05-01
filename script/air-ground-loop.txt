@@ -244,3 +244,235 @@ We'd like - on MAIN A, we'd like Charlie 1, 2, 3, and 4. Also Bravo 3 and 4 on M
 [56 13 52] LMP
 Okay. Got it.
 
+[55 14 42] CAPCOM
+13, we need OMNI Bravo.
+
+[55 14 47] LMP
+OMNI Bravo.
+
+[56 16 08 - 56 16 19] CAPCOM
+Okay, 13, this is Houston. We'd like you to go to your GNC checklist, the pink pages, 1-5. Do powerdown until we get a delta of 10 amps. Over.
+
+[56 16 21 - 56 16 24] LMP
+Alright. Roger.
+
+[56 17 02 - 56 17 09] CDR
+Okay, Jack. Say again that - - for the power down - not the pink pages, the 1-5.
+
+[56 17 11 - 56 17 18] CAPCOM
+Okay. We'd like you to go down that power down procedure untir you get a delta of 10 amps. Over.
+
+[56 17 22] CDR
+Roger.
+
+[56 17 50 - 56 17 54] CAPCOM
+13, Houston. Did you copy our power down request?
+
+[56 17 57 - 56 18 00] CMP
+Roger, Jack. We're - we're doing it right now.
+
+[56 17 58 - 56 18 01] CDR
+Yeah where - where did you say that was located, Jack?
+
+[56 18 03 - 56 18 07] CAPCOM
+That's in your system checklist, page 1-5.
+
+[56 18 27 - 56 18 39] CAPCOM
+And 13, you might also check for those pages in your launch checklist. They're emergency pages - pink pages, 1-5. And we'd like you to power down until you get -
+
+[56 18 38 - 56 18 40] CMP
+Okay. That was in the launch checklist, Jack.
+
+[56 18 42 - 56 18 47] CAPCOM
+Roger. Power down until you get an amperage of 10 amps less than what you got now. Over.
+
+[56 18 51] CDR
+Okay.
+
+[56 22 07 - 56 22 09] CMP
+Okay Jack. Are you happy with the amps we have now?
+
+[56 22 11] CAPCOM
+Standby 1, Fred.
+
+[56 22 15 - 56 22 24] CMP
+Okay Jack, and on this page 1-5, we proceeded right down the list, all the way down. We're right now at BMAG number 2 is in WARM UP.
+
+[56 22 27 - 56 22 30] CAPCOM
+Roger. We copy BMAG 2 in WARM UP. We'll follow you through.
+
+[56 22 31 - 56 22 53] CMP
+Okay, and something is giving us some rates, Jack, both in pitch and roll, so I'm suspecting that maybe it's whatever it is that's venting back there. I've had to use DIRECT in order to stabilize this, and as soon as I do, we're starting to pick up rates again. Can you pick up any jets firing?  
+
+[56 22 54] CAPCOM
+Standby.
+
+[56 22 59 - 56 23 01] CAPCOM
+What direction are you rates in, Jack?
+
+[56 23 07 - 56 23 10] CMP
+It's negative pitch and negavite roll.
+
+[56 23 13] CAPCOM
+Roger.
+
+[56 24 42 - 56 24 49] CAPCOM
+13, Houston. We need to get some more instrumentation up. We'd like you to put INVERTER 1 on both AC BUSES. Over.
+
+[56 24 53] LMP
+Okay.
+
+[56 25 04 - 56 25 07] LMP
+Okay, you got INVERTER 1 on both AC BUSES now.
+
+[56 25 21 - 56 25 37] LMP
+And Jack, one of the items that we turned off was the - all the fuel cell pumps. Okay, and you might let us know when fuel cell 2 needs its pump back. We ought to take care of that guy.  
+
+[56 25 39] CAPCOM
+Roger.
+
+[56 25 47 - 56 25 51] CAPCOM
+Okay, Fred. We want FUEL CELL 2 PUMPS to AC1, please.
+
+[56 25 55 - 56 25 57] CDR
+FUEL CELL 2 to AC1. Roger.
+
+[56 26 00 - 56 26 01] LMP
+Okay, it's on AC1.
+
+[56 27 48 - 56 27 50] CAPCOM
+OMNI Charlie please, 13.
+
+[56 27 53] CDR
+OMNI Charlie.
+
+[56 28 07 - 56 28 15] CAPCOM
+Okay, 13. We've got lots and lots of people working on this. We'll give you some dope as soon as we have it, and you'll be the first one to know.
+
+[56 28 20] CMP
+Oh thank you.
+
+[56 28 30 - 56 28 47] LMP
+Okay, Jack, and the weird configuration we're sitting in now is we have the hatch installed, we still have the probe and drogue inside the command module, and we're going to stay in this situation until you kind of give us an okay to reinstall the probe and drogue.  
+
+[56 28 48 - 56 28 49] CAPCOM
+Roger. We'll give you an answer.
+
+[56 28 48 - 56 28 50] LMP
+Or if necessary, to use the LM consumables.
+
+[56 28 53] CAPCOM
+Roger.
+
+[56 32 13 - 56 32 17] CAPCOM
+13, we'd like to have you put thruster Alpha 3 on MAIN A, please.
+
+[56 32 25 - 56 32 31] LMP
+Okay, Jack. Are you monitoring the quad temps in quad A - package temps?
+
+[56 32 32] CAPCOM
+Affirmative.
+
+[56 33 40 - 56 33 48] CAPCOM
+13, this is Houston. We'd like to power down just a little bit more, so let's get BMAG 2 OFF, and make sure your lights are down. Over.
+
+[56 33 51 - 56 33 54] CDR
+Okay. The lights are down, and BMAG 2's going from STANDBY to OFF.
+
+[56 34 28 -] CAPCOM
+13, Houston -
+
+[56 34 29] CMP
+Okay Jack, now I've got a rate -
+
+[- 56 34 32] CAPCOM
+- we'd like you to open circuit FUEL CELL 3.
+
+[56 34 36 - 56 34 38] CMP
+Open circuit FUEL CELL 3.
+
+[56 34 39] CAPCOM
+Go ahead, Jack.
+
+[56 34 47 - 56 34 50] CMP
+Okay, FUEL CELL 3 is off the line now.
+
+[56 35 18 - 56 35 25] CAPCOM
+And 13, Houston. We'd like you to turn all your Bravo thrusters OFF, and put all your Delta thrusters on MAIN A, please.
+
+[56 35 28 - 56 35 32] CDR
+All Delta thrusters on MAIN A and all Bravo thrusters OFF. Roger.
+
+[56 35 57 - 56 35 59] CAPCOM
+13, Houston. Turn BATTERY A OFF -
+
+[56 35 58 - 56 36 01] CDR
+Okay, Jack, (unintelligible)
+
+[56 36 03 - 56 36 04] CDR
+BATTERY A OFF. Roger.
+
+[56 37 09 - 56 37 13] CAPCOM
+13, Houston. We'd like you to isolate your O2 surge tank. Over.
+
+[56 37 21] CMP
+Surge tank off now, Jack.
+
+[56 37 24 - 56 37 29] CMP
+Okay Jack, are you copying O2 TANK 1 cryo pressure?
+
+[56 37 32 - 56 37 38] CAPCOM
+That's affirmative, and we're trying to get power to that tank. Standby, we're working on it.
+
+[56 37 40] CMP
+Okay.
+
+[56 39 07 - 56 39 13] CMP
+Okay, we had a SERVICE MODULE RCS B {light}, Jack, due to package temperature.
+1> Warning light.
+
+[56 39 15 - 56 39 16] CAPCOM
+SERVICE MODULE RCS B.
+
+[56 39 20 - 56 39 21] CAPCOM
+We copy. No problem.
+
+[56 39 24 - 56 39 32] CMP
+Let's read you the lights we got on now: CRYO PRESS, FUEL CELL 1, FUEL CELL 3, MAIN BUS B UNDERVOLT, SUIT COMPRESSOR.
+
+[56 39 35 - 56 39 43] CAPCOM
+Roger, we copy them. And we'd like to build up the pressure in O2 TANK 1, so turn the heaters on manually. {We'll watch the pressure for you.}
+1> Overriding the automated circuit meant the heater wouldn't disengage automatically, which could lead to overheating and bursting the tank.
+
+[56 39 47 - 56 39 50] CMP
+Okay, do you want to see - we're going to get a MAIN BUS A UNDERVOLT, probably.
+
+[56 39 51 - 56 39 55] CAPCOM
+Roger, we realize that. We feel we can stand 5 more amps on it.
+
+[56 39 58] CMP
+Okay.
+
+[56 40 02 - 56 40 04] CMP
+Okay, heater on TANK 1's ON.
+
+[56 41 55 - 56 42 03] CAPCOM
+13, Houston. We'd like you to additionally bring on the fans in O2 TANK 1, and we can stand the additional amperage on that.
+
+[56 42 06 - 56 42 07] CDR
+Okay. Bring up the fans on O2 TANK 1.
+
+[56 44 35 - 56 44 50] CAPCOM
+13, Houston. We'd like you to check some circuit breakers on panel 226. CRYO O2 HEATER number 1, MAIN A. And check the three CRYO FAN MOTORS, TANK 1, three phases.
+
+[56 44 56 - 56 45 11] LMP
+Okay, Jack. 226 is configured just like it should be. I got three REAC breakers and three RAD breakers open. All the rest are closed.
+
+[56 45 13 - 56 45 14] CAPCOM
+Okay, Fred, Thank you.
+
+[56 45 57 - 56 46 08] CMP
+Jack, looking outside, the number of particles has diminished greatly, almost ceased now, which indicates maybe what was venting has almost stopped.
+
+
+
