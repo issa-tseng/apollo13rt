@@ -10,13 +10,13 @@ And now you want roll right to 060?
 [55 46 56 - 55 47 08] FLIGHT
 Might as well do that. And we're trying Comet Bennett, I'd still like the verification on the docking angle because that's what we'll be using for computation for alignments and everything else. Let's see if there's anything else.
 
-[55 47 08 -] EECOM
+[55 47 08] EECOM
 FLIGHT, EECOM.
 
 [55 47 09] FLIGHT
 Go ahead, EECOM.
 
-[ - ] EECOM
+[55 47 10 - ] EECOM
 Okay, let's terminate battery B charge at 55 plus 50.
 
 [55 47 14] FLIGHT
@@ -56,7 +56,7 @@ No.
 Okay. All four quads.
 
 [55 47 40] GNC
-They have a couple of jet maneuvers-
+They have a couple of jet maneuvers -
 
 [55 47 42 - 55 47 44] FLIGHT
 Roger. Copy, CAPCOM?
@@ -113,7 +113,7 @@ Go, GNC.
 Can we verify that they reenabled C-4 thruster?
 
 [55 50 20 - 55 50 23] FLIGHT
-Okay. Verify that they re- - You're showing that disabled, yes?
+Okay. Verify that they re- - you're showing that disabled, yes?
 
 [55 50 23] GNC
 Yes.
@@ -153,7 +153,7 @@ Go ahead, FLIGHT.
 Negative. The LM heater current indicates that the level?? was properly closed out. They apparently have not closed the LM hatch yet.
 
 [55 51 14 - 55 51 21] FLIGHT
-Okay. So you're happy that you don't need them to verify that - what was it, activation 23, those pages we were on?
+Okay. So you're happy that you don't need them to verify that - what was it, activation 2-3, those pages we were on?
 
 [55 51 21 - 55 51 23] TELMU
 That's right. That was TLC 2, and we're happy.
@@ -239,7 +239,7 @@ As long as he's in P00 and don't reselect it, he can uplink it - enter it himsel
 Okay. Why don't - you gotta pass the data for the crew checklist anyway on-board, don't you?
 
 [55 55 04] GUIDO
-Right
+Right.
 
 [- 55 55 08] FLIGHT
 Don't you have page update? Well, why don't we read it up to them and that'll serve both purposes.
@@ -294,7 +294,8 @@ We've got a MAIN B UNDERVOLT.
 
 [55 55 51 - 55 55 54] EECOM
 Okay, FLIGHT, we've got some instrumentation funnies, let me add them up.
-> Having missed the pre-explosion pressure spike on tank 2, all EECOM has to work with now is a Christmas tree of data readout. So many numbers were off whack that EECOM assumes it has to be instrumentation. Lengthy discussion ensues on the EECOM loop (available audio track).
+> Having missed the pre-explosion pressure spike on tank 2, all EECOM has to work with now is a Christmas tree of bad data readout. So many numbers were off whack all of a sudden that EECOM assumes it has to be instrumentation. Lengthy discussion ensues on the EECOM loop (available audio track).
+> Poor Sy had a "two-handed deathgrip" on his console by now.[ref2 p210]
 
 [55 55 54] FLIGHT
 Roger.
@@ -353,7 +354,7 @@ we have a lot of instrumentation problems here. Go ahead.
 
 [55 58 18 - 55 58 22] EECOM
 That's affirm. {He's flipping the fuel cells around, FLIGHT.}
-1> This ended up being a problem for the flight controllers. The astronauts were doing their own problem solving and configuration changes, so every time the controllers on the ground had a recommendation for them something would get changed and they'd have to start over.
+1> This ended up being a problem for the flight controllers. The astronauts were doing their own problem solving and configuration changes, so every time the controllers on the ground had a recommendation for them something would get changed and they'd have to start over.[ref2 p212]
 
 [55 58 23 - 55 58 26] FLIGHT
 Well, let's get some recommendation here, Sy, if you've got any better ideas.
@@ -371,7 +372,7 @@ FLIGHT, EECOM.
 Go ahead.
 
 [55 58 45 - 55 59 01] EECOM
-He's got fuel cells 1 and 3 are offline. We've got MAIN A volts, we have no MAIN B volts. Have them attempt to reconnect the fuel cells. Fuel cell 1 to MAIN A, fuel cell 3 to MAIN B.
+He's got fuel cells 1 and 3 are offline. We've got MAIN A volts, we have no MAIN B volts. Have them attempt to reconnect the fuel cells. FUEL CELL 1 to MAIN A, FUEL CELL 3 to MAIN B.
 
 [55 59 02 -] FLIGHT
 Okay.
@@ -380,10 +381,10 @@ Okay.
 We just gotta -
 
 [ - ] FLIGHT
-Fuel cell 1 -
+FUEL CELL 1 -
 
 [ - 55 59 07] EECOM
-- back to MAIN A, fuel cell 3 back to MAIN B.
+- back to MAIN A, FUEL CELL 3 back to MAIN B.
 
 [- 55 59 10] FLIGHT
 - MAIN A, 3 to MAIN B.
@@ -429,7 +430,8 @@ You seeing an attitude problem or you seeing some BI-levels that are giving you 
 
 [55 59 51 - 55 59 59] GNC
 No, it's some low pressures in the fuel and oxidizer which would be symptomatic of the {HELIUM VALVE closing and firing some jets.}
-1> Here he means these two things happening together, not that the valve closing would cause jet firing. Helium is used as an inert gas to maintain pressure on many propellant tanks even today. If the helium isn't coming in, propellant gas exits the tank without anything re-entering to keep the pressure up.
+1> Here he means these two things both happening, not that the valve closing would cause jet firing. Helium is used as an inert gas to maintain pressure in many propellant tanks even today. If the helium isn't coming in, propellant gas exits the tank without anything re-entering to keep the pressure up.
+> Kranz notes[ref1 p312] that this was a moment of realization for him; the reported bang must have been pretty strong to have jarred shut the valve. He'd seen something similar on Apollo 9 during CSM/S-IVB separation.
 
 [55 59 59 - 56 00 01] FLIGHT
 Quad number 2 HELIUM VALVE open?
@@ -453,7 +455,7 @@ Are there other problems in the RCS?
 Okay, is that all we've come up with for them; have we got any other recommendations?
 
 [56 00 25 - 56 00 331] FLIGHT
-Yeah, we wanted to get fuel cell 1 configured to MAIN A, fuel cell 3 to MAIN B. Did you pass that up?
+Yeah, we wanted to get FUEL CELL 1 configured to MAIN A, FUEL CELL 3 to MAIN B. Did you pass that up?
 
 [56 00 32] EECOM
 Let's attempt that, FLIGHT.
@@ -475,7 +477,7 @@ Let me commiserate on that.
 
 [56 01 16 - 56 01 20] CAPCOM
 Is there any kind of leads we can give them? Are we looking at instrumentation or have we got a real problem, or what?
-> The lack of answer here is telling. At some point here, steely-eyed missile man and NASA legend EECOM John Aaron had gotten called at home. He asked for some numbers to be read out, and while bolting out the door warned them the EECOM back room whatever it was, it _wasn't_ instrumentation.
+> The lack of answer here is telling. At some point here, steely-eyed missile man and NASA legend EECOM John Aaron had gotten called at home. He asked for some numbers to be read out, and while bolting out the door warned them that whatever it was, it _wasn't_ instrumentation.[ref2 p213]
 
 [56 01 34] EECOM
 FLIGHT, EECOM.
@@ -490,7 +492,7 @@ Let's reverse the configuration request -
 Okay, now wait a minute. We've got a good MAIN A BUS, let's make sure that whatever we do doesn't screw up MAIN A. MAIN A -
 
 [56 01 43 -] EECOM
-Fuel cell 2 is on MAIN A, FLIGHT -
+FUEL CELL 2 is on MAIN A, FLIGHT -
 
 [56 01 45] FLIGHT
 Okay.
@@ -502,16 +504,16 @@ Okay.
 Okay, what do you want to do?
 
 [56 01 48 - 56 01 55] EECOM
-Let's try to put fuel cell 1 on MAIN B, fuel cell 3 on MAIN A. We'll use the other sensing circuitry.
+Let's try to put FUEL CELL 1 on MAIN B, FUEL CELL 3 on MAIN A. We'll use the other sensing circuitry.
 
 [56 01 57 - 56 02 00] FLIGHT
-Fuel cell number 1 on MAIN B -
+FUEL CELL number 1 on MAIN B -
 
 [56 02 00] EECOM
-- fuel cell 3 on main A.
+- FUEL CELL 3 on main A.
 
 [56 02 09 - 56 02 11] EECOM
-We're not going to touch fuel cell 2, FLIGHT.
+We're not going to touch FUEL CELL 2, FLIGHT.
 
 [56 02 12 - 56 02 22] FLIGHT
 Okay, but if we got any problems in the system I want to make sure that we don't blow the voltage off MAIN A, then we're not going to be able to see anything.
@@ -526,7 +528,7 @@ MAIN BUS A is reading 25 volts.
 Okay. MAIN A -
 
 [56 02 39 - 56 02 48] EECOM
-And that's reflected by the fact - fuel cell 2 is putting out 53 amps, which is just about the most it can and keep our voltage up.
+And that's reflected by the fact - FUEL CELL 2 is putting out 53 amps, which is just about the most it can and keep our voltage up.
 
 [56 02 48] FLIGHT
 Okay.
@@ -631,17 +633,17 @@ Okay. Let's get readout on a couple of fuel cell pressures here -
 Okay.
 
 [- 56 05 17] EECOM
-- fuel cell 1 N2 pressure. Fuel cell 3 O2 pressure. We're reading zero {N2 pressure} on fuel cell 1 and 13psi on fuel cell 3 O2 pressure.
+- FUEL CELL 1 N2 pressure. FUEL CELL 3 O2 pressure. We're reading zero {N2 pressure} on FUEL CELL 1 and 13psi on FUEL CELL 3 O2 pressure.
 1> Nitrogen was used to pressurize the electrolytes in the fuel cell through a diaphragm. Feedback loops are set up with the cryogenic oxygen to regulate the relative pressures.
 
 [56 05 19 -] FLIGHT
-Okay, you want fuel cell 1 -
+Okay, you want FUEL CELL 1 -
 
 [56 05 21] EECOM
 N2 pressure.
 
 [ - 56 05 25] FLIGHT
-- N2 pressure. Fuel cell 3, what do you want there?
+- N2 pressure. FUEL CELL 3, what do you want there?
 
 [56 05 26] EECOM
 O2 pressure.
@@ -662,10 +664,10 @@ When his hardware restart he was doing a clearly fine maneuver ??, and that shou
 Are we using RCS now, Buck?
 
 [56 05 58] FLIGHT
-GNC from FLIGHT.
+GNC, from FLIGHT.
 
 [56 06 01] FLIGHT
-GNC from FLIGHT.
+GNC, from FLIGHT.
 
 [56 06 04] GNC
 GNC.
@@ -734,25 +736,25 @@ FLIGHT, EECOM.
 Go ahead.
 
 [56 07 51 - 56 08 04] EECOM
-Why don't we try - leave fuel cell 2 alone, and just make sure that 1 and 3 are {disconnected from both buses.} And make sure that there's abs - {that there won't be any load on them at all.} And let's see what happens to those cells.
-1> n.b. this is shutting off the _output_ electrical circuit of the fuel cells, _not_ the whole cells, which remain on.
-2> Since the fuel cell electricity was produced via a chemical reaction, reducing the load would reduce the reaction rate, which could have an impact on the problem.
+Why don't we try - leave FUEL CELL 2 alone, and just make sure that 1 and 3 are {disconnected from both buses.} And make sure that there's abs - {that there won't be any load on them at all.} And let's see what happens to those cells.
+1> n.b. this is shutting off the _output_ electrical circuit of the fuel cells, _not_ the fuel cells themselves, which remain on.
+2> Since the fuel cell electricity was produced via a chemical reaction, reducing the electrical output load would reduce the reaction rate, which could have an impact on the problem.
 
 [56 08 06 - 56 08 09] FLIGHT
-Okay, what do you want to do? Open-circuit fuel cell 1 and 3?
+Okay, what do you want to do? Open-circuit FUEL CELL 1 and 3?
 
 [56 08 09] EECOM
 That's affirm, flight.
 
 [56 08 10 - 56 08 20] FLIGHT
-Okay. CAPCOM, let's recommend we open-circuit fuel cell number 1 and number 3 and leave fuel cell number 2 as-is.
+Okay. CAPCOM, let's recommend we open-circuit FUEL CELL NUMBER 1 and number 3 and leave FUEL CELL NUMBER 2 as-is.
 
 [56 08 21 - 56 08 29] CAPCOM
 Okay, 1 and 3 open-circuit, 2 as-is. And earlier we got a report from them that 1 and 3 were reading {grey} but zero flow.
 1> Connected to the circuit. An open circuit would yield a barber pole.
 
 [56 08 29 - 56 08 32] FLIGHT
-Yeah - CAPCOM, let's amend that. EECOM from FLIGHT.
+Yeah - CAPCOM, let's amend that. EECOM, from FLIGHT.
 
 [56 08 32] EECOM
 FLIGHT, EECOM.
@@ -806,7 +808,7 @@ How about you, EECOM? You see anything that - with the instrumentation you've go
 
 [56 09 53] EECOM
 That's affirm, FLIGHT.
-> I can imagine EECOM here staring at his readouts and thinking "yes, FLIGHT, everything!"
+> One can imagine EECOM here staring at his readouts and thinking "yes, FLIGHT, everything!"
 
 [56 10 01 - 56 10 03] EECOM
 Let me look at the system, FLIGHT, as far as the venting is concerned.
@@ -842,8 +844,9 @@ He's - he's - never mind, he's straightening up a little bit.
 Okay.
 
 [56 10 45 - 56 11 21] FLIGHT
-Okay, now, let's everybody keep cool. We've got the LM still attached, the LM spacecraft is good, so {if} we need to get back home we've got a LM to do it with. Let's make sure we don't do anything that's going to blow our CSM electrical power with the batteries, or that will cause us to lose the main - the fuel cell number 2. We want to keep the O2 and that kind of stuff working, we'd like to have RCS. But we've got the command module system, so we're in good shape if we need to get home. Let's solve the problem, but let's not make it any worse by guessin'.
+Okay, now, let's everybody keep cool. We've got the LM still attached, the LM spacecraft is good, so {if} we need to get back home we've got a LM to do it with. Let's make sure we don't do anything that's going to blow our CSM electrical power with the batteries, or that will cause us to lose the main - the FUEL CELL NUMBER 2. We want to keep the O2 and that kind of stuff working, we'd like to have RCS. But we've got the {Command Module system}, so we're in good shape if we need to get home. Let's solve the problem, but let's not make it any worse by guessin'.
 1> Note the repeated use of "if" here. The severity of the problem was not yet fully understood.
+2> As noted elsewhere[ref2 p215], FLIGHT likely meant LM here.
 
 [56 11 47] GNC
 FLIGHT, GNC.
@@ -897,7 +900,7 @@ He's getting close to gimbal lock.
 CAPCOM - okay, CAPCOM, recommend he bring up C-3, C-4, B-3, B-4, C-1, C-2 on MAIN A and advise him he's getting close to gimbal lock.
 
 [56 12 52] FLIGHT
-GUIDANCE from FLIGHT.
+GUIDANCE, from FLIGHT.
 
 [56 12 53] GUIDO
 Go ahead.
