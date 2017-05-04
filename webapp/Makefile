@@ -2,7 +2,7 @@ default: build
 
 SRC = $(shell find src -name "*.ls" -type f | sort)
 LIB = $(SRC:src/%.ls=lib/%.js)
-ASSETS_SRC = $(shell find src/assets -type f | sort)
+ASSETS_SRC = $(shell find src/assets -name '*.ai' -prune -o -type f -print | sort)
 ASSETS_LIB = $(ASSETS_SRC:src/assets/%=lib/assets/%)
 
 lib:

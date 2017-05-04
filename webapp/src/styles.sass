@@ -6,6 +6,14 @@ $monospace: "courier new", courier, monospace
 
 $color-accent: #1fce17
 $color-accent-text: #25af1f
+$color-tooltip-bg: rgba(0, 0, 0, 0.6)
+
+$icon-play: "\e900"
+$icon-pause: "\e901"
+$icon-hopback: "\e902"
+$icon-leapback: "\e903"
+$icon-hopforward: "\e904"
+$icon-leapforward: "\e905"
 
 
 // UTIL
@@ -20,6 +28,35 @@ $color-accent-text: #25af1f
 @mixin reify
   content: ''
   display: block
+
+@mixin icon
+  font-family: 'webplayer' !important
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  line-height: 1
+  speak: none
+  text-transform: none
+
+@mixin bubble
+  background: $color-tooltip-bg
+  border-radius: 0.2em
+  color: #fff
+  font-size: 1.1em
+  padding: 0.3em 0.5em 0.2em
+  pointer-events: none
+  position: absolute
+  text-align: center
+
+  &:after
+    @include reify
+    border: 0.4em solid transparent
+    border-bottom-width: 0
+    border-top-color: $color-tooltip-bg
+    position: absolute
+    top: 100%
 
 
 // RESET
@@ -41,6 +78,12 @@ li
 
 
 // TOPLEVEL
+
+@font-face
+  font-family: 'webplayer'
+  src:  url('/assets/webplayer.ttf?y7bu7b') format('truetype'), url('/assets/webplayer.woff?y7bu7b') format('woff'), url('/assets/webplayer.svg?y7bu7b#icomoon') format('svg')
+  font-weight: normal
+  font-style: normal
 
 html, body
   background-color: #f7f7f7
@@ -67,8 +110,19 @@ header
 
 #player
   background-color: #e6e6e6
-  box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.04)
-  padding: 2em 0
+  border-bottom: 0.1em solid #ddd
+  border-top: 0.2em solid #ddd
+  padding: 1.3em 0
+
+#tooltip
+  @include bubble
+  border-bottom-left-radius: 0
+  display: none
+  margin-top: -1em
+
+  &:after
+    border-left-width: 0
+    left: 0
 
 
 // COMPONENTS
@@ -77,17 +131,52 @@ header
   position: relative
 
   .player-controls
-    float: left
+    padding: 0 1.7em
+    position: absolute
 
     button
-      $size: 5em
-      height: $size
-      width: $size
+      background: none
+      border: none
+      height: 5em
+      outline: none
+      text-align: center
+      vertical-align: middle
+      width: 4em
+
+      &.player-playpause
+        width: 5em
+
+      &:before
+        @include reify
+        @include icon
+        cursor: pointer
+        font-size: 3em
+        opacity: 0.7
+
+      &:hover:before
+        opacity: 1
+
+      &.player-leapback:before
+        content: $icon-leapback
+      &.player-hopback:before
+        content: $icon-hopback
+      &.player-playpause:before
+        content: $icon-play
+        font-size: 4em
+      &.player-hopforward:before
+        content: $icon-hopforward
+      &.player-leapforward:before
+        content: $icon-leapforward
+
+  &.playing .player-controls button.player-playpause:before
+    content: $icon-pause
+
+  .player-right
+    margin-left: 26.5em
 
   .player-timestamp
     overflow: hidden
-    padding: 0.4em 1em 0
-    padding-top: 0.4em
+    padding: 0.6em 1em 0
 
     p
       float: left
@@ -122,7 +211,6 @@ header
 
   .player-scrubber
     margin-top: -0.4em // extend the hit-zone
-    overflow: hidden
     padding: 0 1.3em
 
     .player-scrubber-area
@@ -160,29 +248,16 @@ header
           width: $playhead-diameter
 
       .player-scrubber-bubble
-        $bg: rgba(0, 0, 0, 0.3)
+        @include bubble
         $width: 4em
-        background: $bg
-        border-radius: 0.2em
-        color: #fff
-        font-size: 1.1em
+        border-bottom-right-radius: 0
         margin-left: ($width * -1) - 1em
-        padding: 0.3em 0.5em 0.2em
-        pointer-events: none
-        position: absolute
-        text-align: center
-        top: $playbar-top + 0.7em
+        top: -1.3em
         width: $width
 
         &:after
-          @include reify
-          border: 0.4em solid transparent
           border-right-width: 0
-          border-top-width: 0
-          border-bottom-color: $bg
-          bottom: 100%
           right: 0
-          position: absolute
 
   .player-script
     max-height: 10em

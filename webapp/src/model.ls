@@ -48,6 +48,8 @@ class Player extends Model
       dom-raw = dom.get(0)
       dom.on(\timeupdate, -> player.set(\timestamp.timecode, dom-raw.currentTime |> floor))
       dom.on(\durationchange, -> player.set(\audio.length, dom-raw.duration))
+      dom.on(\playing, -> player.set(\audio.playing, true))
+      dom.on(\pause, -> player.set(\audio.playing, false))
     )
 
 

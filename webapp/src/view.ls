@@ -40,31 +40,33 @@ class PlayerView extends DomView
     <div class="player">
       <div class="player-chrome">
         <div class="player-controls">
-          <button class="player-leapback"/>
-          <button class="player-hopback"/>
+          <button class="player-leapback" title="Back 20 seconds"/>
+          <button class="player-hopback" title="Back 6 seconds"/>
           <button class="player-playpause"/>
-          <button class="player-hopforward"/>
-          <button class="player-leapforward"/>
+          <button class="player-hopforward" title="Forward 6 seconds"/>
+          <button class="player-leapforward" title="Forward 20 seconds"/>
         </div>
-        <div class="player-timestamp">
-          <div class="player-timestamp-met">
-            <p class="player-timestamp-time"><span class="hh"/><span class="mm"/><span class="ss"/></p>
-            <p class="player-timestamp-label">Mission elapsed time</p>
-          </div>
-          <div class="player-timestamp-accident">
-            <p class="player-timestamp-label">Time <span class="accident-direction"/> accident</p>
-            <p class="player-timestamp-time"><span class="hh"/><span class="mm"/><span class="ss"/></p>
-          </div>
-        </div>
-        <div class="player-scrubber">
-          <div class="player-scrubber-area">
-            <div class="player-playbar"/>
-            <div class="player-playhead"/>
-            <div class="player-scrubber-bubble">
-              <span class="hh"/><span class="mm"/><span class="ss"/>
+        <div class="player-right">
+          <div class="player-timestamp">
+            <div class="player-timestamp-met">
+              <p class="player-timestamp-time"><span class="hh"/><span class="mm"/><span class="ss"/></p>
+              <p class="player-timestamp-label">Mission elapsed time</p>
+            </div>
+            <div class="player-timestamp-accident">
+              <p class="player-timestamp-label">Time <span class="accident-direction"/> accident</p>
+              <p class="player-timestamp-time"><span class="hh"/><span class="mm"/><span class="ss"/></p>
             </div>
           </div>
-          <div class="player-chapters"/>
+          <div class="player-scrubber">
+            <div class="player-scrubber-area">
+              <div class="player-playbar"/>
+              <div class="player-playhead"/>
+              <div class="player-scrubber-bubble">
+                <span class="hh"/><span class="mm"/><span class="ss"/>
+              </div>
+            </div>
+            <div class="player-chapters"/>
+          </div>
         </div>
       </div>
       <div class="player-script"/>
@@ -73,6 +75,8 @@ class PlayerView extends DomView
   ')
   @_template = template(
     find('audio').attr(\src, from(\audio.src))
+
+    find('.player').classed(\playing, from(\audio.playing))
 
     find('.player-timestamp-met .hh').text(from(\timestamp.hh))
     find('.player-timestamp-met .mm').text(from(\timestamp.mm).map(pad))
