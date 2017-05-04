@@ -1,3 +1,13 @@
+
+// K
+
+$sans: helvetica, arial, sans-serif
+$monospace: "courier new", courier, monospace
+
+$color-accent: #1fce17
+$color-accent-text: #25af1f
+
+
 // UTIL
 
 @mixin fill
@@ -6,6 +16,10 @@
   position: absolute
   top: 0
   right: 0
+
+@mixin reify
+  content: ''
+  display: block
 
 
 // RESET
@@ -29,18 +43,147 @@ li
 // TOPLEVEL
 
 html, body
-  background-color: #f4f4f4
+  background-color: #f7f7f7
 
 html
+  font-family: $sans
   font-size: 62.5%
+
+
+// COMMON
+
+.hide
+  display: none !important
+
+.hh:after, .mm:after
+  content: ':'
+  display: inline
+
+
+// LAYOUT
+
+header
+  height: 6em
+
+#player
+  background-color: #e6e6e6
+  box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.04)
+  padding: 2em 0
 
 
 // COMPONENTS
 
-.line
-  .line-timestamp
-    .hh:after, .mm:after
-      content: ':'
-      display: inline
+.player
+  position: relative
 
+  .player-controls
+    float: left
+
+    button
+      $size: 5em
+      height: $size
+      width: $size
+
+  .player-timestamp
+    overflow: hidden
+    padding: 0.4em 1em 0
+    padding-top: 0.4em
+
+    p
+      float: left
+
+    .player-timestamp-met
+      float: left
+      .player-timestamp-time
+        color: $color-accent-text
+        span:after
+          color: #000
+
+    .player-timestamp-accident
+      float: right
+
+    .player-timestamp-time
+      font-family: $monospace
+      font-size: 3em
+    .player-timestamp-label
+      font-size: 1.1em
+      letter-spacing: -0.01em
+      opacity: 0.6
+      padding: 0 0.3em
+      position: relative
+      text-transform: lowercase
+      top: 1.4em
+
+    .hh:after, .mm:after
+      bottom: 0.2em
+      font-size: 0.6em
+      opacity: 0.3
+      position: relative
+
+  .player-scrubber
+    margin-top: -0.4em // extend the hit-zone
+    overflow: hidden
+    padding: 0 1.3em
+
+    .player-scrubber-area
+      height: 4em
+      position: relative
+      z-index: 1
+
+      $playbar-height: 0.3em
+      $playbar-top: 1em
+      $playhead-diameter: 0.9em
+
+      .player-playbar, .player-playhead
+        height: $playbar-height
+        left: 0
+        pointer-events: none
+        position: absolute
+        top: $playbar-top
+
+      .player-playbar
+        background: #bbb
+        right: 0
+
+      .player-playhead
+        background: $color-accent
+        right: 100%
+
+        &:after
+          @include reify
+          background: $color-accent
+          border-radius: 99em
+          height: $playhead-diameter
+          position: absolute
+          right: $playhead-diameter / -2
+          top: ($playbar-height / 2) - ($playhead-diameter / 2)
+          width: $playhead-diameter
+
+      .player-scrubber-bubble
+        $bg: rgba(0, 0, 0, 0.3)
+        $width: 4em
+        background: $bg
+        border-radius: 0.2em
+        color: #fff
+        font-size: 1.1em
+        margin-left: ($width * -1) - 1em
+        padding: 0.3em 0.5em 0.2em
+        pointer-events: none
+        position: absolute
+        text-align: center
+        top: $playbar-top + 0.7em
+        width: $width
+
+        &:after
+          @include reify
+          border: 0.4em solid transparent
+          border-right-width: 0
+          border-top-width: 0
+          border-bottom-color: $bg
+          bottom: 100%
+          right: 0
+          position: absolute
+
+  .player-script
+    max-height: 10em
 
