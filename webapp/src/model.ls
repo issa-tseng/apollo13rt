@@ -1,6 +1,10 @@
 { Model, attribute, from, List } = require(\janus)
 { floor, abs } = Math
 
+# util.
+defer = (f) -> set-timeout(f, 0)
+
+
 class Global extends Model
   shadow: -> this
 
@@ -14,6 +18,14 @@ class Line extends Model
     data.end = { epoch: data.end }
     super(data)
 
+  contains: (epoch) ->
+    (start-epoch = this.get(\start.epoch))? and (start-epoch <= epoch) and (this.get(\end.epoch) >= epoch)
+
+class LineVM extends Model
+  @bind(\active, from(\player).watch(\timestamp.epoch).and(\line).all.map((epoch, line) ->
+    line.contains(epoch)
+  ))
+
 class Lines extends List
   @modelClass = Line
 
@@ -22,6 +34,28 @@ class Transcript extends Model
     @collectionClass = Lines
     default: -> new Lines()
   )
+
+  @attribute(\height, class extends attribute.NumberAttribute
+    default: -> 300
+  )
+
+  @attribute(\auto_scroll, class extends attribute.BooleanAttribute
+    default: -> true
+  )
+
+  @bind(\line_vms, from(\lines).and(\player).and.self().all.map((rl, player, transcript) ->
+    rl.map((line) -> new LineVM({ line, player, transcript })) if rl? and player?
+  ))
+
+  @bind(\active_lines, from(\line_vms).map((lvms) -> lvms?.filter((lvm) -> lvm.watch(\active))))
+  @bind(\active_ids, from(\active_lines).map((active) -> active?.map((lvm) -> lvm.get(\line).get(\id)))) # these never change so we just get.
+
+  @bind(\top_line, from(\active_lines).flatMap((active) -> active?.watchAt(0)))
+
+  _initialize: ->
+    transcript = this
+
+  bindToPlayer: (player) -> this.set(\player, player)
 
 class Player extends Model
   @bind(\timestamp.epoch, from(\timestamp.timecode).and(\timestamp.offset).all.map (+))
@@ -44,14 +78,27 @@ class Player extends Model
   _initialize: ->
     player = this
 
+    # bind audio player properties back into the model.
     this.watch(\audio.player).react((dom) ->
       dom-raw = dom.get(0)
-      dom.on(\timeupdate, -> player.set(\timestamp.timecode, dom-raw.currentTime |> floor))
-      dom.on(\durationchange, -> player.set(\audio.length, dom-raw.duration))
       dom.on(\playing, -> player.set(\audio.playing, true))
       dom.on(\pause, -> player.set(\audio.playing, false))
+      dom.on(\durationchange, -> player.set(\audio.length, dom-raw.duration))
+
+      last-timecode = 0
+      dom.on(\timeupdate, ->
+        timecode = (dom-raw.currentTime + 0.4) |> floor # shift the timecode slightly for alignment.
+        if timecode isnt last-timecode
+          last-timecode = timecode
+          <- defer
+          player.set(\timestamp.timecode, timecode)
+      )
     )
 
+    # attach transcripts to this player.
+    for _, transcript of this.get(\loops)
+      transcript.bindToPlayer(this)
 
-module.exports = { Global, Line, Lines, Transcript, Player }
+
+module.exports = { Global, Line, LineVM, Lines, Transcript, Player }
 

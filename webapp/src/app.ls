@@ -17,8 +17,11 @@ app = new App({ views, global })
 
 # get and load data.
 (flight-loop) <- $.getJSON('/assets/flight-director-loop.json')
+(air-ground-loop) <- $.getJSON('/assets/air-ground-loop.json')
 player = new Player(
-  loops: { flight: Transcript.deserialize( lines: flight-loop, name: 'Flight Director\'s Loop' ) }
+  loops:
+    flight: Transcript.deserialize( lines: flight-loop, name: 'Flight Director\'s Loop' )
+    air_ground: Transcript.deserialize( lines: air-ground-loop, name: 'Air-ground Loop' )
   audio: { src: 'assets/full.m4a' }
   timestamp: { offset: 200774 }
   accident: { epoch: 201293 }

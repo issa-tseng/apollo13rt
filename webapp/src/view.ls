@@ -1,14 +1,15 @@
 { DomView, template, find, from, Model, Varying } = require(\janus)
+{ debounce } = require(\janus-stdlib).util.varying
 $ = require(\jquery)
 
-{ Line, Transcript, Player } = require('./model')
+{ LineVM, Transcript, Player } = require('./model')
 
 clamp = (min, max, x) --> if x < min then min else if x > max then max else x
 pct = (x) -> "#{x * 100}%"
 pad = (x) -> if x < 10 then "0#x" else x
 
 class LineView extends DomView
-  @_dom = -> $('
+  @_fragment = $('
     <div class="line">
       <div class="line-timestamp">
         <span class="hh"/>
@@ -19,19 +20,28 @@ class LineView extends DomView
       <div class="line-contents"/>
     </div>
   ')
+  @_dom = -> @_fragment.clone()
   @_template = template(
-    find('.line-timestamp').classed(\hide, from(\start.epoch).map((x) -> !x?))
-    find('.hh').text(from(\start.hh))
-    find('.mm').text(from(\start.mm).map(pad))
-    find('.ss').text(from(\start.ss).map(pad))
+    find('.line').classGroup(\line-, from(\line).watch(\id))
+    find('.line').classed(\active,
+      from(\active)
+        .and(\line).watch(\id)
+        .and(\transcript).watch(\active_ids)
+        .all.flatMap((active, id, active-ids) ->
+          active or active-ids?.filter(-> it is id).watchLength().map (> 0)
+        )
+    )
 
-    find('.line-source').text(from(\source))
-    find('.line-contents').text(from(\message))
+    find('.line-timestamp').classed(\hide, from(\line).watch(\start.epoch).map((x) -> !x?))
+    find('.hh').text(from(\line).watch(\start.hh))
+    find('.mm').text(from(\line).watch(\start.mm).map(pad))
+    find('.ss').text(from(\line).watch(\start.ss).map(pad))
+
+    find('.line-source').text(from(\line).watch(\source))
+    find('.line-contents').text(from(\line).watch(\message))
   )
 
-class TranscriptVM extends Model
 class TranscriptView extends DomView
-  @viewModelClass = TranscriptVM
   @_dom = -> $('
     <div class="script">
       <div class="script-lines"/>
@@ -39,20 +49,33 @@ class TranscriptView extends DomView
     </div>
   ')
   @_template = template(
-      find('p').text(from(\subject).watch(\name))
-      find('.script-lines').render(from(\subject).watch(\lines))
+      find('p').text(from(\name))
+      find('.script-lines').render(from(\line_vms))
   )
+  _wireEvents: ->
+    dom = this.artifact()
+    transcript = this.subject
+    line-container = dom.find('.script-lines')
+
+    auto-scrolling = false
+    debounce(transcript.watch(\top_line), 5).react((line) ->
+      console.log(line)
+      if (transcript.get(\auto_scroll) is true) and (id = line?.get(\line).get(\id))?
+        offset-top = dom.find(".line-#id").get(0).offsetTop - dom.get(0).offsetTop - 50
+        auto-scrolling = true
+        line-container.finish().animate({ scroll-top: offset-top, complete: (-> auto-scrolling = false) })
+    )
 
 class PlayerView extends DomView
   @_dom = -> $('
     <div class="player">
       <div class="player-chrome">
         <div class="player-controls">
-          <button class="player-leapback" title="Back 20 seconds"/>
+          <button class="player-leapback" title="Back 15 seconds"/>
           <button class="player-hopback" title="Back 6 seconds"/>
           <button class="player-playpause"/>
           <button class="player-hopforward" title="Forward 6 seconds"/>
-          <button class="player-leapforward" title="Forward 20 seconds"/>
+          <button class="player-leapforward" title="Forward 15 seconds"/>
         </div>
         <div class="player-right">
           <div class="player-timestamp">
@@ -79,6 +102,7 @@ class PlayerView extends DomView
       </div>
       <div class="player-scripts">
         <div class="player-script-flight"/>
+        <div class="player-script-air-ground"/>
       </div>
       <audio/>
     </div>
@@ -108,6 +132,7 @@ class PlayerView extends DomView
     find('.player-scrubber-bubble .ss').text(from(\scrubber.mouse.ss).map(pad))
 
     find('.player-script-flight').render(from(\loops.flight))
+    find('.player-script-air-ground').render(from(\loops.air_ground))
   )
   _wireEvents: ->
     dom = this.artifact()
@@ -149,7 +174,7 @@ module.exports = {
   LineView
   registerWith: (library) ->
     library.register(Transcript, TranscriptView)
-    library.register(Line, LineView)
+    library.register(LineVM, LineView)
     library.register(Player, PlayerView)
 }
 

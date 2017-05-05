@@ -267,6 +267,14 @@ header
           border-right-width: 0
           right: 0
 
+  .player-scripts
+    overflow: hidden
+    padding: 0 3em
+
+    > div
+      float: left
+      margin-right: 2em
+
 .script
   p
     border-top: 0.2em solid $color-light-border
@@ -289,8 +297,11 @@ header
 
 .line
   font-family: $monospace
-  margin-bottom: 1em
-  padding: 0.3em 1em
+  padding: 0.6em 1em
+  transition: 0.2s background-color
+
+  &.active
+    background-color: #fff
 
   .line-timestamp
     font-size: 1.1em

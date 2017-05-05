@@ -27,13 +27,13 @@ lib/assets/%: src/assets/% lib/assets
 	@[[ -d "$(@D)" ]] || mkdir -p "$(@D)"
 	cp $< $@
 
-lib/assets/flight-director-loop.json: ../script/flight-director-loop.json
+lib/assets/%.json: ../script/%.json
 	cp $< $@
 
 node_modules:
 	npm install
 
-build: $(LIB) lib/index.html lib/styles.css lib/apollo13rt.js $(ASSETS_LIB) lib/assets/flight-director-loop.json
+build: $(LIB) lib/index.html lib/styles.css lib/apollo13rt.js $(ASSETS_LIB) lib/assets/flight-director-loop.json lib/assets/air-ground-loop.json
 
 clean:
 	rm -rf lib
