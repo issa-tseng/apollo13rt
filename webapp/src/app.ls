@@ -43,12 +43,17 @@ tooltip = $('#tooltip')
 $(document).on(\mouseenter, '[title]', ->
   target = $(this)
   offset = target.offset()
+  text = target.attr(\title)
 
   tooltip.css(\left, offset.left + (target.outerWidth() / 2))
   tooltip.css(\top, offset.top)
-  tooltip.text(target.attr(\title))
+  tooltip.text(text)
   tooltip.show()
 
-  target.one(\mouseleave, -> tooltip.hide())
+  target.attr(\title, '')
+  target.one(\mouseleave, ->
+    tooltip.hide()
+    target.attr(\title, text)
+  )
 )
 
