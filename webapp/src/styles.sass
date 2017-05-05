@@ -5,8 +5,10 @@ $sans: helvetica, arial, sans-serif
 $monospace: "courier new", courier, monospace
 
 $color-accent: #1fce17
+$color-accent-inactive: #bbb
 $color-accent-text: #25af1f
 $color-tooltip-bg: rgba(0, 0, 0, 0.6)
+$color-light-border: #ddd
 
 $icon-play: "\e900"
 $icon-pause: "\e901"
@@ -110,9 +112,15 @@ header
 
 #player
   background-color: #e6e6e6
-  border-bottom: 0.1em solid #ddd
-  border-top: 0.2em solid #ddd
+  border-bottom: 0.1em solid $color-light-border
+  border-top: 0.2em solid $color-light-border
   padding: 1.3em 0
+
+  .script
+    max-width: 50em
+
+    .script-lines
+      height: 35em
 
 #tooltip
   @include bubble
@@ -230,7 +238,7 @@ header
         top: $playbar-top
 
       .player-playbar
-        background: #bbb
+        background: $color-accent-inactive
         right: 0
 
       .player-playhead
@@ -259,6 +267,40 @@ header
           border-right-width: 0
           right: 0
 
-  .player-script
-    max-height: 10em
+.script
+  p
+    border-top: 0.2em solid $color-light-border
+    color: #999
+    font-weight: bold
+    margin-left: 7.2em
+    margin-top: 0.5em
+    padding: 0.3em
+
+  .script-lines
+    overflow: hidden
+    overflow-y: auto
+
+    &::-webkit-scrollbar
+      background: $color-light-border
+      width: 0.6em
+
+    &::-webkit-scrollbar-thumb
+      background: $color-accent
+
+.line
+  font-family: $monospace
+  margin-bottom: 1em
+  padding: 0.3em 1em
+
+  .line-timestamp
+    font-size: 1.1em
+    color: #999
+    margin-bottom: -1.2em
+
+  .line-source, .line-contents
+    font-size: 1.3em
+    padding-left: 5em
+
+  .line-source
+    font-weight: bold
 

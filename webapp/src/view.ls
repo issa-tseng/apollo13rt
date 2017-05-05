@@ -1,4 +1,4 @@
-{ DomView, template, find, from, Varying } = require(\janus)
+{ DomView, template, find, from, Model, Varying } = require(\janus)
 $ = require(\jquery)
 
 { Line, Transcript, Player } = require('./model')
@@ -6,12 +6,6 @@ $ = require(\jquery)
 clamp = (min, max, x) --> if x < min then min else if x > max then max else x
 pct = (x) -> "#{x * 100}%"
 pad = (x) -> if x < 10 then "0#x" else x
-
-class TranscriptView extends DomView
-  @_dom = -> $('<div class="transcript"><div class="lines"/></div>')
-  @_template = template(
-    find('.lines').render(from(\lines))
-  )
 
 class LineView extends DomView
   @_dom = -> $('
@@ -33,6 +27,20 @@ class LineView extends DomView
 
     find('.line-source').text(from(\source))
     find('.line-contents').text(from(\message))
+  )
+
+class TranscriptVM extends Model
+class TranscriptView extends DomView
+  @viewModelClass = TranscriptVM
+  @_dom = -> $('
+    <div class="script">
+      <div class="script-lines"/>
+      <p/>
+    </div>
+  ')
+  @_template = template(
+      find('p').text(from(\subject).watch(\name))
+      find('.script-lines').render(from(\subject).watch(\lines))
   )
 
 class PlayerView extends DomView
@@ -69,7 +77,9 @@ class PlayerView extends DomView
           </div>
         </div>
       </div>
-      <div class="player-script"/>
+      <div class="player-scripts">
+        <div class="player-script-flight"/>
+      </div>
       <audio/>
     </div>
   ')
@@ -97,7 +107,7 @@ class PlayerView extends DomView
     find('.player-scrubber-bubble .mm').text(from(\scrubber.mouse.mm).map(pad))
     find('.player-scrubber-bubble .ss').text(from(\scrubber.mouse.ss).map(pad))
 
-    find('.player-script').render(from(\loops.flight).watch(\lines))
+    find('.player-script-flight').render(from(\loops.flight))
   )
   _wireEvents: ->
     dom = this.artifact()
