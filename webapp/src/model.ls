@@ -89,7 +89,7 @@ class Player extends Model
       dom.on(\timeupdate, ->
         timecode = (dom-raw.currentTime + 0.4) |> floor # shift the timecode slightly for alignment.
         if timecode isnt last-timecode
-          last-timecode = timecode
+          last-timecode := timecode
           <- defer
           player.set(\timestamp.timecode, timecode)
       )
