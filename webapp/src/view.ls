@@ -106,8 +106,8 @@ class PlayerView extends DomView
         </div>
       </div>
       <div class="player-scripts">
-        <div class="player-script-flight"/>
         <div class="player-script-air-ground"/>
+        <div class="player-script-flight"/>
       </div>
       <audio/>
     </div>
