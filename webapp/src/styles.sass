@@ -62,6 +62,13 @@ $icon-link: "\e907"
     position: absolute
     top: 100%
 
+@mixin bottom-header
+  border-top: 0.2em solid $color-light-border
+  color: #999
+  font-weight: bold
+  margin-top: 0.5em
+  padding: 0.3em
+
 
 // RESET
 
@@ -105,34 +112,6 @@ html
 .hh:after, .mm:after
   content: ':'
   display: inline
-
-
-// LAYOUT
-
-header
-  height: 6em
-
-#player
-  background-color: #e6e6e6
-  border-bottom: 0.1em solid $color-light-border
-  border-top: 0.2em solid $color-light-border
-  padding: 1.3em 0
-
-  .script
-    max-width: 50em
-
-    .script-lines
-      height: 35em
-
-#tooltip
-  @include bubble
-  border-bottom-left-radius: 0
-  display: none
-  margin-top: -2em
-
-  &:after
-    border-left-width: 0
-    left: 0
 
 
 // COMPONENTS
@@ -276,15 +255,21 @@ header
     > div
       float: left
       margin-right: 2em
+      width: 33%
+
+    .player-glossary
+      float: none
+      margin-right: 0
+      overflow: hidden
+      width: auto
+
+      > p
+        @include bottom-header
 
 .script
   p
-    border-top: 0.2em solid $color-light-border
-    color: #999
-    font-weight: bold
+    @include bottom-header
     margin-left: 7.2em
-    margin-top: 0.5em
-    padding: 0.3em
 
   .script-lines
     overflow: hidden
@@ -330,7 +315,9 @@ header
       font-size: 1.3em
       line-height: 0.5em
       margin-left: 0.2em
+      position: relative
       text-decoration: none
+      top: 0.1em
       &:hover
         color: #000
 
@@ -341,4 +328,36 @@ header
 
   &:hover .line-heading a
     display: inline
+
+
+// LAYOUT
+
+header
+  h1
+    color: #4a4a4a
+    font-family: $monospace
+    font-size: 1.5em
+    font-weight: bold
+    letter-spacing: -0.02em
+    padding: 1em 2em
+
+#player
+  background-color: #e6e6e6
+  border-bottom: 0.1em solid $color-light-border
+  border-top: 0.2em solid $color-light-border
+  padding: 1.3em 0
+
+  .script .script-lines
+    height: 35em
+
+#tooltip
+  @include bubble
+  border-bottom-left-radius: 0
+  display: none
+  margin-top: -2em
+
+  &:after
+    border-left-width: 0
+    left: 0
+
 

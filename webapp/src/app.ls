@@ -21,7 +21,7 @@ app = new App({ views, global })
 player = new Player(
   loops:
     flight: Transcript.deserialize( lines: flight-loop, name: 'Flight Director\'s Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/flight-director-loop.txt' )
-    air_ground: Transcript.deserialize( lines: air-ground-loop, name: 'Air-ground Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/air-ground-loop.txt' )
+    air_ground: Transcript.deserialize( lines: air-ground-loop, name: 'Air-Ground Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/air-ground-loop.txt' )
   audio: { src: 'assets/full.m4a' }
   timestamp: { offset: 200774 }
   accident: { epoch: 201293 }
