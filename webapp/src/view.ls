@@ -11,12 +11,16 @@ pad = (x) -> if x < 10 then "0#x" else x
 class LineView extends DomView
   @_fragment = $('
     <div class="line">
-      <div class="line-timestamp">
+      <a class="line-timestamp">
         <span class="hh"/>
         <span class="mm"/>
         <span class="ss"/>
+      </a>
+      <div class="line-heading">
+        <span class="line-source"/>
+        <a class="line-edit" target="_blank" title="Suggest an edit"/>
+        <a class="line-link" title="Share link to this line"/>
       </div>
-      <div class="line-source"/>
       <div class="line-contents"/>
     </div>
   ')
@@ -36,6 +40,8 @@ class LineView extends DomView
     find('.hh').text(from(\line).watch(\start.hh))
     find('.mm').text(from(\line).watch(\start.mm).map(pad))
     find('.ss').text(from(\line).watch(\start.ss).map(pad))
+
+    find('.line-edit').attr(\href, from(\transcript).watch(\edit_url).and(\line).watch(\line).all.map((base, line) -> "#base\#L#line"))
 
     find('.line-source').text(from(\line).watch(\source))
     find('.line-contents').text(from(\line).watch(\message))
@@ -59,7 +65,6 @@ class TranscriptView extends DomView
 
     auto-scrolling = false
     debounce(transcript.watch(\top_line), 5).react((line) ->
-      console.log(line)
       if (transcript.get(\auto_scroll) is true) and (id = line?.get(\line).get(\id))?
         offset-top = dom.find(".line-#id").get(0).offsetTop - dom.get(0).offsetTop - 50
         auto-scrolling = true

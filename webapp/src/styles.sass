@@ -16,6 +16,8 @@ $icon-hopback: "\e902"
 $icon-leapback: "\e903"
 $icon-hopforward: "\e904"
 $icon-leapforward: "\e905"
+$icon-edit: "\e906"
+$icon-link: "\e907"
 
 
 // UTIL
@@ -126,7 +128,7 @@ header
   @include bubble
   border-bottom-left-radius: 0
   display: none
-  margin-top: -1em
+  margin-top: -2em
 
   &:after
     border-left-width: 0
@@ -304,14 +306,39 @@ header
     background-color: #fff
 
   .line-timestamp
+    display: block
     font-size: 1.1em
     color: #999
     margin-bottom: -1.2em
+    text-decoration: none
+    &:hover
+      text-decoration: underline
 
-  .line-source, .line-contents
+  .line-heading, .line-contents
     font-size: 1.3em
     padding-left: 5em
 
-  .line-source
-    font-weight: bold
+  .line-heading
+    .line-source
+      font-weight: bold
+      margin-right: 0.5em
+
+    a
+      @include icon
+      color: #333
+      display: none
+      font-size: 1.3em
+      line-height: 0.5em
+      margin-left: 0.2em
+      text-decoration: none
+      &:hover
+        color: #000
+
+    .line-edit:before
+      content: $icon-edit
+    .line-link:before
+      content: $icon-link
+
+  &:hover .line-heading a
+    display: inline
 
