@@ -117,6 +117,10 @@ html
 // COMPONENTS
 
 .player
+  background-color: #e6e6e6
+  border-bottom: 0.1em solid $color-light-border
+  border-top: 0.2em solid $color-light-border
+  padding: 1.3em 0
   position: relative
 
   .player-controls
@@ -254,8 +258,15 @@ html
 
     > div
       float: left
+      height: 100%
       margin-right: 2em
       width: 33%
+
+      .script
+        height: 100%
+
+        .script-lines
+          height: calc(100% - 2.5em)
 
     .player-glossary
       float: none
@@ -263,8 +274,32 @@ html
       overflow: hidden
       width: auto
 
+      .player-glossary-items
+        height: calc(100% - 2.5em)
+
       > p
         @include bottom-header
+
+  .player-resize
+    @include fill
+    height: 0.6em
+    top: auto
+
+    &:after
+      $width: 2em
+
+      @include reify
+      border-top: 1px solid #ccc
+      bottom: 0.2em
+      left: calc(50% - #{$width / 2})
+      position: absolute
+      width: $width
+
+    &:hover
+      background: rgba(0, 0, 0, 0.03)
+      cursor: ns-resize
+      &:after
+        border-top-color: #aaa
 
 .script
   p
@@ -334,21 +369,13 @@ html
 
 header
   h1
-    color: #4a4a4a
+    color: #777
     font-family: $monospace
     font-size: 1.5em
     font-weight: bold
     letter-spacing: -0.02em
     padding: 1em 2em
-
-#player
-  background-color: #e6e6e6
-  border-bottom: 0.1em solid $color-light-border
-  border-top: 0.2em solid $color-light-border
-  padding: 1.3em 0
-
-  .script .script-lines
-    height: 35em
+    text-align: center
 
 #tooltip
   @include bubble

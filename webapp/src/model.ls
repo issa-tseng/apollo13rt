@@ -35,10 +35,6 @@ class Transcript extends Model
     default: -> new Lines()
   )
 
-  @attribute(\height, class extends attribute.NumberAttribute
-    default: -> 300
-  )
-
   @attribute(\auto_scroll, class extends attribute.BooleanAttribute
     default: -> true
   )
@@ -58,6 +54,10 @@ class Transcript extends Model
   bindToPlayer: (player) -> this.set(\player, player)
 
 class Player extends Model
+  @attribute(\base_height, class extends attribute.NumberAttribute
+    default: -> 350
+  )
+
   @bind(\timestamp.epoch, from(\timestamp.timecode).and(\timestamp.offset).all.map (+))
   @bind(\timestamp.hh, from(\timestamp.epoch).map ((/ 3600) >> floor))
   @bind(\timestamp.mm, from(\timestamp.epoch).map ((% 3600 / 60) >> floor))
@@ -75,11 +75,16 @@ class Player extends Model
   @bind(\scrubber.mouse.mm, from(\scrubber.mouse.epoch).map ((% 3600 / 60) >> floor))
   @bind(\scrubber.mouse.ss, from(\scrubber.mouse.epoch).map (% 60))
 
+  @bind(\resize.mouse.delta, from(\resize.mouse.y).and(\resize.mouse.start).all.map (-))
+  @bind(\height, from(\base_height).and(\resize.mouse.clicking).and(\resize.mouse.delta).all.map((base-height, clicking, delta) ->
+    if clicking is true then base-height + delta else base-height
+  ))
+
   _initialize: ->
     player = this
 
     # bind audio player properties back into the model.
-    this.watch(\audio.player).react((dom) ->
+    player.watch(\audio.player).react((dom) ->
       dom-raw = dom.get(0)
       dom.on(\playing, -> player.set(\audio.playing, true))
       dom.on(\pause, -> player.set(\audio.playing, false))
@@ -96,8 +101,16 @@ class Player extends Model
     )
 
     # attach transcripts to this player.
-    for _, transcript of this.get(\loops)
-      transcript.bindToPlayer(this)
+    for _, transcript of player.get(\loops)
+      transcript.bindToPlayer(player)
+
+    # set mouse start and player height on mouse down and mouse up.
+    player.watch(\resize.mouse.clicking).react((clicking) ->
+      if clicking is true
+        player.set(\resize.mouse.start, player.get(\resize.mouse.y))
+      else
+        player.set(\base_height, player.get(\height))
+    )
 
 
 module.exports = { Global, Line, LineVM, Lines, Transcript, Player }

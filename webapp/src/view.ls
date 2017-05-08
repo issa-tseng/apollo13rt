@@ -5,6 +5,7 @@ $ = require(\jquery)
 { LineVM, Transcript, Player } = require('./model')
 
 clamp = (min, max, x) --> if x < min then min else if x > max then max else x
+px = (x) -> "#{x}px"
 pct = (x) -> "#{x * 100}%"
 pad = (x) -> if x < 10 then "0#x" else x
 
@@ -74,6 +75,7 @@ class TranscriptView extends DomView
 class PlayerView extends DomView
   @_dom = -> $('
     <div class="player">
+      <audio/>
       <div class="player-chrome">
         <div class="player-controls">
           <button class="player-leapback" title="Back 15 seconds"/>
@@ -113,7 +115,7 @@ class PlayerView extends DomView
           <p>Glossary</p>
         </div>
       </div>
-      <audio/>
+      <div class="player-resize"/>
     </div>
   ')
   @_template = template(
@@ -140,6 +142,8 @@ class PlayerView extends DomView
     find('.player-scrubber-bubble .mm').text(from(\scrubber.mouse.mm).map(pad))
     find('.player-scrubber-bubble .ss').text(from(\scrubber.mouse.ss).map(pad))
 
+    find('.player-scripts').css(\height, from(\height).map (px))
+
     find('.player-script-flight').render(from(\loops.flight))
     find('.player-script-air-ground').render(from(\loops.air_ground))
   )
@@ -152,7 +156,7 @@ class PlayerView extends DomView
     # feed audio element back into player.
     player.set(\audio.player, audio)
 
-    # feed mouse events into model.
+    # feed scrubber mouse events into model.
     scrubber = dom.find('.player-scrubber-area')
     scrubber.on(\mouseenter, -> player.set(\scrubber.mouse.over, true))
     scrubber.on(\mouseleave, -> player.set(\scrubber.mouse.over, false))
@@ -161,11 +165,25 @@ class PlayerView extends DomView
       event.preventDefault()
     )
 
+    # feed resizer mouse events into model.
+    resizer = dom.find('.player-resize')
+    resizer.on(\mousedown, (event) ->
+      player.set(\resize.mouse.y, event.pageY)
+      player.set(\resize.mouse.clicking, true)
+      event.preventDefault()
+    )
+
+    # feed body mouse events into model.
     body = $(document)
     left-offset = scrubber.offset().left # unlikely to change; cache for perf.
-    body.on(\mousemove, (event) -> player.set(\scrubber.mouse.at,
-      ((event.pageX - left-offset) / scrubber.width()) |> clamp(0, 1)))
-    body.on(\mouseup, -> player.set(\scrubber.clicking, false))
+    body.on(\mousemove, (event) ->
+      player.set(\scrubber.mouse.at, ((event.pageX - left-offset) / scrubber.width()) |> clamp(0, 1))
+      player.set(\resize.mouse.y, event.pageY)
+    )
+    body.on(\mouseup, ->
+      player.set(\scrubber.clicking, false)
+      player.set(\resize.mouse.clicking, false)
+    )
 
     # point-in-time mouse reactions.
     from(player.watch(\scrubber.clicking)).and(player.watch(\scrubber.mouse.timecode)).all.plain().react(([ clicking, code ]) ->
