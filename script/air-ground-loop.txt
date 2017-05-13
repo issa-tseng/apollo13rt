@@ -115,7 +115,8 @@ We got a MAIN BUS A UNDERVOLT now too, showing.
 MAIN A UNDERVOLT.
 
 [55 58 32 - 55 58 37] LMP
-It's reading about 25 and a half. MAIN B is reading zip right now.
+It's reading about {25 and a half}. MAIN B is reading zip right now.
+1> Volts
 
 [55 59 33] CDR
 And Houston, Odyssey.
@@ -260,7 +261,7 @@ Alright. Roger.
 Okay, Jack. Say again that - - for the power down - not the pink pages, the 1-5.
 
 [56 17 11 - 56 17 18] CAPCOM
-Okay. We'd like you to go down that power down procedure untir you get a delta of 10 amps. Over.
+Okay. We'd like you to go down that power down procedure until you get a delta of 10 amps. Over.
 
 [56 17 22] CDR
 Roger.
@@ -311,7 +312,7 @@ Standby.
 What direction are you rates in, Jack?
 
 [56 23 07 - 56 23 10] CMP
-It's negative pitch and negavite roll.
+It's negative pitch and negative roll.
 
 [56 23 13] CAPCOM
 Roger.

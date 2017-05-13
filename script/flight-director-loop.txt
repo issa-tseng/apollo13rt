@@ -1,14 +1,14 @@
-[55 46 46 -] CAPCOM
+[55 46 46 - 55 46 50] CAPCOM
 Okay FLIGHT, you read his pitch and yaw and his high-gain ??.
 
-[55 46 50 - 55 46 52] FLIGHT
+[55 46 50 - 55 46 51] FLIGHT
 That's affirmative.
 
-[- 55 46 55] CAPCOM
+[55 46 51 - 55 46 55] CAPCOM
 And now you want roll right to 060?
 
 [55 46 56 - 55 47 08] FLIGHT
-Might as well do that. And we're trying Comet Bennett, I'd still like the verification on the docking angle because that's what we'll be using for computation for alignments and everything else. Let's see if there's anything else.
+Might as well do that. And we'll try and get Comet Bennett, I'd still like the verification on the docking angle because that's what we'll be using for computation for alignments and everything else. Let's see if there's anything else.
 
 [55 47 08] EECOM
 FLIGHT, EECOM.
@@ -16,13 +16,13 @@ FLIGHT, EECOM.
 [55 47 09] FLIGHT
 Go ahead, EECOM.
 
-[55 47 10 -] EECOM
+[55 47 10 - 55 47 13] EECOM
 Okay, let's terminate battery B charge at 55 plus 50.
 
 [55 47 14] FLIGHT
 Okay.
 
-[- 55 47 20] EECOM
+[55 47 15 - 55 47 20] EECOM
 And at the same time, I'd sure like to have a cryo stir, all four tanks.
 
 [55 47 20 - 55 47 22] FLIGHT
@@ -31,16 +31,16 @@ Let's wait until they get settled down a little more.
 [55 47 22] EECOM
 Roger.
 
-[55 47 23 -] GNC
+[55 47 23] GNC
 FLIGHT, GNC.
 
 [55 47 24] FLIGHT
 Go, GNC.
 
-[- 55 47 28] GNC
-?? would still like to enable the other two quads for the maneuver.
+[55 47 25 - 55 47 28] GNC
+I would still like to enable the other two quads for the maneuver.
 
-[55 48 29 - 55 48 35] FLIGHT
+[55 47 29 - 55 47 35] FLIGHT
 Okay. When rolling to 060 you want them to enable C and D, right?
 
 [55 47 35] GNC
@@ -70,13 +70,13 @@ FLIGHT, INCO.
 [55 47 47] FLIGHT
 Go, INCO.
 
-[55 47 47 -] INCO
+[55 47 47 - 55 47 49] INCO
 I'd like to confirm their configuration on their high-gain now.
 
 [55 47 50] FLIGHT
 Okay.
 
-[- 55 47 56] INCO
+[55 47 51 - 55 47 56] INCO
 I'd like to know what track mode they're in and what SERVO electronics they're in.
 
 [55 47 56 - 55 48 04] FLIGHT
@@ -314,7 +314,7 @@ Go, INCO.
 
 [55 56 09 - 55 56 11] INCO
 We switched to WIDE BEAM about the time we had the problem.
-> A red herring.
+> A red herring, but a believable one if the problem were instrumentation or telemetry.
 
 [55 56 33] FLIGHT
 Okay.
@@ -453,6 +453,7 @@ Are there other problems in the RCS?
 
 [56 00 20 - 56 00 24] CAPCOM
 Okay, is that all we've come up with for them; have we got any other recommendations?
+> CAPCOM is anxious.
 
 [56 00 25 - 56 00 33] FLIGHT
 Yeah, we wanted to get FUEL CELL 1 configured to MAIN A, FUEL CELL 3 to MAIN B. Did you pass that up?
@@ -683,6 +684,7 @@ Okay. Now, are we using RCS now?
 
 [56 06 12 - 56 06 16] GNC
 That's affirmative, we're going to have to switch some thrusters to MAIN A to hold attitude here.
+> Because the thrusters required electrical power to operate and MAIN B was dead, a lot of them had to be switched around to the other bus to maintain operation.
 
 [56 06 17 - 56 06 21] FLIGHT
 Okay. How much RCS are we using?
@@ -805,10 +807,10 @@ Negative, FLIGHT.
 
 [56 09 42 - 56 09 47] FLIGHT
 How about you, EECOM? You see anything that - with the instrumentation you've got that could be venting?
+> One can imagine EECOM here staring at his readouts and thinking "yes, FLIGHT, everything!"
 
 [56 09 53] EECOM
 That's affirm, FLIGHT.
-> One can imagine EECOM here staring at his readouts and thinking "yes, FLIGHT, everything!"
 
 [56 10 01 - 56 10 03] EECOM
 Let me look at the system, FLIGHT, as far as the venting is concerned.
@@ -1464,7 +1466,7 @@ Go, EECOM.
 
 [56 32 37 -] EECOM
 We've really got to get that battery off the line and power down some more. And we've got to get some MAIN B power back so we can build our pressure back up in O2 TANK 1. {It's down to 318psi.}
-1> Nominal O2 pressure is closer to 900psi. Normally, an automated pressure sensing switch would activate a heater as the tank depleted to heat the O2 and keep the pressure around that number. The tank is effectively useless for fuel cell power at 100psi. ???????
+1> Nominal O2 pressure is closer to 900psi. Normally, an automated pressure sensing switch would activate a heater as the tank depleted to heat the O2 and keep the pressure around that number. 100psi is a bit of a redline mark, at which point even at minimal load only about 2 hours of useful power could be expected.[ref1 p317]
 
 [56 32 52] FLIGHT
 BATTERY -
@@ -1763,19 +1765,19 @@ Okay, you want to isolate repress pack.
 [56 40 40] FLIGHT
 AFD, from FLIGHT.
 
-[56 40 43] AFD??
+[56 40 43] AFD
 Go ahead, FLIGHT.
 
 [56 40 43 - 56 40 55] FLIGHT
 Get one of your guys full-time in the back room keeping track of the spacecraft configuration as we pass it up to the crew. You might use Larry. Why don't you stay on, get Larry in the back room to keep track of configuration stuff we give to the crew?
 
-[56 40 55] AFD??
+[56 40 55] AFD
 Okay, FLIGHT.
 
 [56 40 56] FLIGHT
 Okay?
 
-[56 40 57 - 56 41 00] AFD??
+[56 40 57 - 56 41 00] AFD
 And we've got the voice recorder and we're starting to transcribe that.
 
 [56 41 01 - 56 41 10] FLIGHT
