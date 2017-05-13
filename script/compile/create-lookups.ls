@@ -18,10 +18,11 @@ annotate-script = (glossary, script) -->
   for line in script
     for term, def of glossary
       lookup = [ term ] ++ (def.synonyms ? [])
-      regex = new RegExp("(?:^|[^a-z])(#{lookup.join(\|)})(?:$|[^a-z])", \i)
+      regex = new RegExp("(?:^|[^a-z])(#{lookup.join(\|)})(?:$|[^a-z])", \gi)
       if (parse = regex.exec(line.source))?
         attach-term(result, line.id, find-exact(lookup, parse.1))
-      if (parse = regex.exec(line.message))?
+
+      while (parse = regex.exec(line.message))?
         attach-term(result, line.id, find-exact(lookup, parse.1))
   result
 
