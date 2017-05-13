@@ -69,6 +69,14 @@ $icon-link: "\e907"
   margin-top: 0.5em
   padding: 0.3em
 
+@mixin custom-scrollbar
+  &::-webkit-scrollbar
+    background: $color-light-border
+    width: 0.6em
+
+  &::-webkit-scrollbar-thumb
+    background: $color-accent
+
 
 // RESET
 
@@ -275,7 +283,13 @@ html
       width: auto
 
       .player-glossary-items
+        @include custom-scrollbar
         height: calc(100% - 2.5em)
+        overflow-x: hidden
+        overflow-y: auto
+
+        ul
+          padding-right: 1em
 
       > p
         @include bottom-header
@@ -307,15 +321,9 @@ html
     margin-left: 7.2em
 
   .script-lines
+    @include custom-scrollbar
     overflow: hidden
     overflow-y: auto
-
-    &::-webkit-scrollbar
-      background: $color-light-border
-      width: 0.6em
-
-    &::-webkit-scrollbar-thumb
-      background: $color-accent
 
 .line
   font-family: $monospace
@@ -363,6 +371,23 @@ html
 
   &:hover .line-heading a
     display: inline
+
+.term
+  max-height: 8em
+  overflow: hidden
+  transition: 0.3s max-height
+
+  &.hide
+    display: block !important
+    max-height: 0
+
+  .term-name
+    font-size: 1.1em
+    font-weight: bold
+  .term-definition
+    font-size: 1.1em
+    line-height: 1.2em
+    padding-bottom: 0.5em
 
 
 // LAYOUT

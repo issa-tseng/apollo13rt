@@ -137,7 +137,7 @@ class Transcript extends Model
     return unless lvms? and idx?
     # TODO: object constancy?
     clamper = clamp(0, lvms.length - 1)
-    new List([ x for x from clamper(idx) - 3 to clamper(idx) + 3 ])
+    new List([ x for x from clamper(idx) - 2 to clamper(idx) + 2 ])
   ))
   @bind(\nearby_terms, from(\nearby_ids).and(\lookup).all.map((ids, lookup) ->
     ids?.flatMap((id) -> lookup?.watch(id.toString())).flatten()
