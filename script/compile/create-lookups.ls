@@ -8,13 +8,21 @@ attach-term = (target, id, term) ->
   else
     target[id] = [ term ]
 
+find-exact = (lookup, parsed) ->
+  for term in lookup when parsed.toLowerCase() is term.toLowerCase()
+    return term
+  return parsed
+
 annotate-script = (glossary, script) -->
   result = {}
   for line in script
     for term, def of glossary
       lookup = [ term ] ++ (def.synonyms ? [])
-      regex = new RegExp("(^|[^a-z])(#{lookup.join(\|)})($|[^a-z])", \i)
-      attach-term(result, line.id, term) if regex.exec(line.source)? or regex.exec(line.message)?
+      regex = new RegExp("(?:^|[^a-z])(#{lookup.join(\|)})(?:$|[^a-z])", \i)
+      if (parse = regex.exec(line.source))?
+        attach-term(result, line.id, find-exact(lookup, parse.1))
+      if (parse = regex.exec(line.message))?
+        attach-term(result, line.id, find-exact(lookup, parse.1))
   result
 
 glossary = load-json(process.argv.3)
