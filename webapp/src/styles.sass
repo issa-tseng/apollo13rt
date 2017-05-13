@@ -384,7 +384,23 @@ html
   .term-name
     font-size: 1.1em
     font-weight: bold
+
+    .synonyms ul
+      display: inline
+      font-weight: normal
+      padding-left: 0.4em
+
+      li
+        display: inline
+        &:after
+          content: ', '
+        &:first-child:before
+          content: '('
+        &:last-child:after
+          content: ')'
+
   .term-definition
+    color: #444
     font-size: 1.1em
     line-height: 1.2em
     padding-bottom: 0.5em
