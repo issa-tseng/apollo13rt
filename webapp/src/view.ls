@@ -83,9 +83,9 @@ class TermView extends DomView
     </div>
   ')
   @_template = template(
-    find('.term').classed(\hide, from(\matches).and.app().watch(\global).watch(\player).watch(\nearby_terms).all.flatMap((f, terms) -> terms.any(f)).map (not))
+    find('.term').classed(\hide, from(\matches).and.app(\global).watch(\player).watch(\nearby_terms).all.flatMap((f, terms) -> terms.any(f)).map (not))
     find('.term-name .name').text(from(\term))
-    find('.term-name .synonyms').render(from(\synonyms).and.app().watch(\global).watch(\player).watch(\nearby_terms).all.map((synonyms, nearby) ->
+    find('.term-name .synonyms').render(from(\synonyms).and.app(\global).watch(\player).watch(\nearby_terms).all.map((synonyms, nearby) ->
       synonyms.filter((term) -> nearby.any (is term))
     ))
     find('.term-definition').text(from(\definition))
