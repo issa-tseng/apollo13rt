@@ -129,17 +129,19 @@ class Transcript extends Model
     idx -= 1 unless (idx is 0) or (lvms.list[idx]._start <= epoch)
     idx
   ))
+  @bind(\target_id, from(\line_vms).and(\target_idx).all.flatMap((lvms, idx) ->
+    lvms?.watchAt(idx).flatMap (?._id)
+  ))
 
   @bind(\active_lines, from(\line_vms).map((lvms) -> lvms?.filter (.watch(\active))))
   @bind(\active_ids, from(\active_lines).map((active) -> active?.map (._id))) # these never change so we just get.
 
   @bind(\top_line, from(\line_vms).and(\target_idx).all.flatMap((lvms, idx) -> lvms?.watchAt(idx)))
 
-  @bind(\nearby_ids, from(\line_vms).and(\target_idx).all.map((lvms, idx) ->
-    return unless lvms? and idx?
+  @bind(\nearby_ids, from(\line_vms).and(\target_id).all.map((lvms, id) ->
+    return unless lvms? and id?
     # TODO: object constancy?
-    clamper = clamp(0, lvms.length - 1)
-    new List([ x for x from clamper(idx) - 2 til clamper(idx) + 2 ])
+    new List([ x for x from id - 2 til id + 2 ])
   ))
   @bind(\nearby_terms, from(\nearby_ids).and(\lookup).all.map((ids, lookup) ->
     ids?.flatMap((id) -> lookup?.watch(id.toString())).flatten()
