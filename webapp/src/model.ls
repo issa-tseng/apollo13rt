@@ -1,8 +1,10 @@
 { Model, attribute, from, List } = require(\janus)
 { floor, abs } = Math
+{ flatten, unique } = require(\prelude-ls)
 
 # util.
 defer = (f) -> set-timeout(f, 0)
+clamp = (min, max, x) --> if x < min then min else if x > max then max else x
 
 
 class Global extends Model
@@ -21,10 +23,21 @@ class Line extends Model
   contains: (epoch) ->
     (start-epoch = this.get(\start.epoch))? and (start-epoch <= epoch) and (this.get(\end.epoch) >= epoch)
 
+  overlaps: (range-start, range-end) ->
+    (start-epoch = this.get(\start.epoch))? and (start-epoch <= range-end) and (this.get(\end.epoch) >= range-start)
+
 class LineVM extends Model
   @bind(\active, from(\player).watch(\timestamp.epoch).and(\line).all.map((epoch, line) ->
     line.contains(epoch)
   ))
+
+  _initialize: ->
+    # perf:
+    this._start = this.get(\line).get(\start.epoch)
+    this._end = this.get(\line).get(\end.epoch)
+    this._id = this.get(\line).get(\id)
+
+  overlaps: (range-start, range-end) -> this.get(\line).overlaps(range-start, range-end)
 
 class Lines extends List
   @modelClass = Line
@@ -43,15 +56,140 @@ class Transcript extends Model
     rl.map((line) -> new LineVM({ line, player, transcript })) if rl? and player?
   ))
 
-  @bind(\active_lines, from(\line_vms).map((lvms) -> lvms?.filter((lvm) -> lvm.watch(\active))))
-  @bind(\active_ids, from(\active_lines).map((active) -> active?.map((lvm) -> lvm.get(\line).get(\id)))) # these never change so we just get.
+  # the index of the immediate-next line to be played regardless of active status.
+  # determined by binary search for performance, unless the delta is small, in which
+  # case we do a linear walk.
+  @bind(\cued_idx, from(\line_vms).and(\player).all.flatMap((lvms, player) ->
+    last-idx = null
+    last-epoch = -999 # apparently null is zero.
+    player?.watch(\timestamp.epoch).map((epoch) ->
+      return unless epoch?
 
-  @bind(\top_line, from(\active_lines).flatMap((active) -> active?.watchAt(0)))
+      idx = if abs(epoch - last-epoch) <= 30 then last-idx else (lvms.length / 2 |> floor)
+      low = 0
+      high = lvms.length - 1
+      loop
+        target-start = lvms.list[idx]._start
+        target-end = lvms.list[idx]._end
+
+        unless target-start?
+          idx -= 1
+          continue
+
+        previous-idx = idx - 1
+        until lvms.list[previous-idx]?._end? or previous-idx <= 0
+          previous-idx -= 1
+
+        if (target-start >= epoch) and ((idx is 0) or (lvms.list[previous-idx]._start < epoch))
+          break
+        else if abs(target-start - epoch) <= 30
+          if target-start < epoch
+            do
+              idx += 1
+            until lvms.list[idx]._start?
+          else
+            do
+              idx -= 1
+            until lvms.list[idx]._start?
+        else if target-start < epoch
+          low = idx
+          idx = ((high - low) / 2 |> floor) + low
+        else if target-start > epoch
+          high = idx
+          idx = ((high - low) / 2 |> floor) + low
+        else
+          throw new Error('what?')
+
+      last-epoch := epoch
+      last-idx := idx
+    )
+  ))
+
+  # now that we have the cued idx, we potentially migrate backwards until we have
+  # one of the earliest still-playing line or the next line to be played, in that
+  # order of preference.
+  @bind(\target_idx, from(\line_vms).and(\cued_idx).and(\player).watch(\timestamp.epoch).all.map((lvms, idx, epoch) ->
+    return unless idx? # implies existence of lvms.
+
+    candidate-idx = idx - 1
+    loop
+      break if candidate-idx < 0
+
+      candidate-end = lvms.list[candidate-idx]._end
+      if !candidate-end?
+        search-id = lvms.list[candidate-idx]._id
+        until (lvms.list[candidate-idx]._id is search-id) and lvms.list[candidate-idx]._end?
+          candidate-idx -= 1
+      else if candidate-end >= epoch
+        idx = candidate-idx
+        candidate-idx = idx - 1
+      else
+        break
+    idx
+  ))
+
+  @bind(\active_lines, from(\line_vms).map((lvms) -> lvms?.filter (.watch(\active))))
+  @bind(\active_ids, from(\active_lines).map((active) -> active?.map (._id))) # these never change so we just get.
+
+  @bind(\top_line, from(\line_vms).and(\target_idx).all.flatMap((lvms, idx) -> lvms?.watchAt(idx)))
+
+  @bind(\nearby_ids, from(\line_vms).and(\target_idx).all.map((lvms, idx) ->
+    return unless lvms? and idx?
+    # TODO: object constancy?
+    clamper = clamp(0, lvms.length - 1)
+    new List([ x for x from clamper(idx) - 3 to clamper(idx) + 3 ])
+  ))
+  @bind(\nearby_terms, from(\nearby_ids).and(\lookup).all.map((ids, lookup) ->
+    ids?.flatMap((id) -> lookup?.watch(id.toString())).flatten()
+  ))
 
   _initialize: ->
     transcript = this
 
   bindToPlayer: (player) -> this.set(\player, player)
+
+class Term extends Model
+  @attribute(\synonyms, class extends attribute.CollectionAttribute
+    default: -> new List()
+  )
+  @attribute(\hidden, attribute.BooleanAttribute)
+
+  @bind(\matches, from(\term).and(\synonyms).all.map((term, synonyms) ->
+    (x) -> (x is term) or (x in synonyms.list)
+  ))
+
+class Lookup extends Model
+  @deserialize = (data) -> super({ [ id, new List(terms) ] for id, terms of data })
+
+class Glossary extends Model
+  @attribute(\show.personnel, class extends attribute.BooleanAttribute
+    default: -> true
+  )
+  @attribute(\show.terms, class extends attribute.BooleanAttribute
+    default: -> true
+  )
+  @attribute(\show.hidden, class extends attribute.BooleanAttribute
+    default: -> false
+  )
+
+  @deserialize = (data) ->
+    glossary = new Glossary()
+
+    # create a lookup based on primary and synonym terms.
+    lookup = {}
+    list = []
+    for term, def of data
+      inflated = Term.deserialize(def)
+      inflated.set(\glossary, glossary)
+      lookup[term] = inflated
+      list.push(inflated)
+
+      if (synonyms = lookup[term].get(\synonyms))?
+        for synonym in synonyms.list
+          lookup[synonym] = lookup[term]
+
+    glossary.set({ lookup, list: new List(list) })
+    glossary
 
 class Player extends Model
   @attribute(\base_height, class extends attribute.NumberAttribute
@@ -79,6 +217,8 @@ class Player extends Model
   @bind(\height, from(\base_height).and(\resize.mouse.clicking).and(\resize.mouse.delta).all.map((base-height, clicking, delta) ->
     if clicking is true then base-height + delta else base-height
   ))
+
+  @bind(\nearby_terms, from(\loops.flight).watch(\nearby_terms).and(\loops.air_ground).watch(\nearby_terms).all.map (++))
 
   _initialize: ->
     player = this
@@ -113,5 +253,5 @@ class Player extends Model
     )
 
 
-module.exports = { Global, Line, LineVM, Lines, Transcript, Player }
+module.exports = { Global, Line, LineVM, Lines, Transcript, Term, Lookup, Glossary, Player }
 

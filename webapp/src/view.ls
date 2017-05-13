@@ -2,7 +2,7 @@
 { debounce } = require(\janus-stdlib).util.varying
 $ = require(\jquery)
 
-{ LineVM, Transcript, Player } = require('./model')
+{ LineVM, Transcript, Term, Player } = require('./model')
 
 clamp = (min, max, x) --> if x < min then min else if x > max then max else x
 px = (x) -> "#{x}px"
@@ -65,12 +65,28 @@ class TranscriptView extends DomView
     line-container = dom.find('.script-lines')
 
     auto-scrolling = false
-    debounce(transcript.watch(\top_line), 5).react((line) ->
+    debounce(transcript.watch(\top_line), 50).react((line) ->
       if (transcript.get(\auto_scroll) is true) and (id = line?.get(\line).get(\id))?
         offset-top = dom.find(".line-#id").get(0).offsetTop - dom.get(0).offsetTop - 50
-        auto-scrolling = true
-        line-container.finish().animate({ scroll-top: offset-top, complete: (-> auto-scrolling = false) })
+        auto-scrolling := true
+        line-container.finish().animate({ scroll-top: offset-top, complete: (-> auto-scrolling := false) })
     )
+
+class TermView extends DomView
+  @_dom = -> $('
+    <div class="term">
+      <div class="term-name">
+        <span class="name"/>
+        <span class="synonym"/>
+      </div>
+      <p class="term-definition"/>
+    </div>
+  ')
+  @_template = template(
+    find('.term').classed(\hide, from(\matches).and.app().watch(\global).watch(\player).watch(\nearby_terms).all.flatMap((f, terms) -> terms.any(f)).map (not))
+    find('.term-name .name').text(from(\term))
+    find('.term-definition').text(from(\definition))
+  )
 
 class PlayerView extends DomView
   @_dom = -> $('
@@ -146,6 +162,7 @@ class PlayerView extends DomView
 
     find('.player-script-flight').render(from(\loops.flight))
     find('.player-script-air-ground').render(from(\loops.air_ground))
+    find('.player-glossary-items').render(from(\glossary).watch(\list))
   )
   _wireEvents: ->
     dom = this.artifact()
@@ -168,7 +185,6 @@ class PlayerView extends DomView
     # feed resizer mouse events into model.
     resizer = dom.find('.player-resize')
     resizer.on(\mousedown, (event) ->
-      player.set(\resize.mouse.y, event.pageY)
       player.set(\resize.mouse.clicking, true)
       event.preventDefault()
     )
@@ -201,6 +217,7 @@ module.exports = {
   LineView
   registerWith: (library) ->
     library.register(Transcript, TranscriptView)
+    library.register(Term, TermView)
     library.register(LineVM, LineView)
     library.register(Player, PlayerView)
 }

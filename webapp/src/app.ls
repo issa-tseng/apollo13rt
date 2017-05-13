@@ -3,7 +3,7 @@
 $ = window.jQuery = window.$ = require(\jquery)
 { Library, App } = require(\janus).application
 stdlib = require(\janus-stdlib)
-{ Global, Player, Transcript } = require('./model')
+{ Global, Glossary, Lookup, Player, Transcript } = require('./model')
 
 # util.
 defer = (f) -> set-timeout(f, 0)
@@ -17,11 +17,15 @@ app = new App({ views, global })
 
 # get and load data.
 (flight-loop) <- $.getJSON('/assets/flight-director-loop.json')
+(flight-loop-lookup) <- $.getJSON('/assets/flight-director-loop.lookup.json')
 (air-ground-loop) <- $.getJSON('/assets/air-ground-loop.json')
+(air-ground-loop-lookup) <- $.getJSON('/assets/air-ground-loop.lookup.json')
+(glossary) <- $.getJSON('/assets/glossary.json')
 player = new Player(
   loops:
-    flight: Transcript.deserialize( lines: flight-loop, name: 'Flight Director\'s Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/flight-director-loop.txt' )
-    air_ground: Transcript.deserialize( lines: air-ground-loop, name: 'Air-Ground Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/air-ground-loop.txt' )
+    flight: Transcript.deserialize( lines: flight-loop, name: 'Flight Director\'s Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/flight-director-loop.txt', lookup: Lookup.deserialize(flight-loop-lookup) )
+    air_ground: Transcript.deserialize( lines: air-ground-loop, name: 'Air-Ground Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/air-ground-loop.txt', lookup: Lookup.deserialize(air-ground-loop-lookup) )
+  glossary: Glossary.deserialize(glossary)
   audio: { src: 'assets/full.m4a' }
   timestamp: { offset: 200774 }
   accident: { epoch: 201293 }
