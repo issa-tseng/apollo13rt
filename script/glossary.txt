@@ -1,37 +1,3 @@
-[flight_controllers]
-CAPCOM
-The Capsule Commander was, with rare exception, the only person allowed to speak directly to the crew. CAPCOMs were nearly always members of the astronaut pool.
-
-FLIGHT
-The Flight Director was entrusted to do anything necessary to ensure the safety of the crew and the success of the mission, and had this ultimate authority for the duration of any flight.
-
-EECOM
-The Electrical, Environmental and Consumables Manager managed the lowest level hardware in the CSM for power generation and consumption, electrical distribution, air and water, and the cryogenic gas tanks required for all of the above.
-
-GNC
-The Guidance, Navigation, and Controls Systems Engineer monitored the hardware systems that ultimately sent the spacecraft where it had to go: the propulsion and fuel thereof, the navigation computer hardware.
-
-GUIDO
-Where GNC managed the navigation and propulsion systems themselves, the Guidance Officer was in charge of their use, as well as the computer software, and tracking the position and orientation of the spacecraft.
-
-INCO
-The Integrated Communications Officer managed the communications and telemetry systems of both the CSM and LM. This included the uplink of data to the spacecraft computer.
-
-NETWORK
-An oft-ignored but massive system of ground and sea stations were required to maintain round-the-clock communications with the spacecraft. The Network officer managed this process.
-
-TELMU
-The Telemetry, Electrical, and EVA Mobility Unit Officer was essentially the EECOM of the Lunar Module, in charge of electrical and environmental hardware systems.
-
-AFD
-The Assistant Flight Director worked with FLIGHT on whatever was required at the time, allowing the Flight Director to offload tasks and focus on managing the mission.
-
-CONTROL
-The Control Officer was essentially the GNC for the Lunar Module, in charge of the navigational systems and software, as well as the propulsion hardware and fuel.
-
-RETRO
-The Retrofire Officer was in charge of any plans and maneuvers necessary to get the crew on a homewards trajectory. Back in the Earth orbit days, this entailed a retrograde burn of an appropriate time and ∆V; hence the name.
-
 [technical_terms]
 Pitch
 One of three measures of a spacecraft's attitude. Think of a plane pointing up or down to climb or descend. Also used to describe the aim of the steerable antenna.
@@ -140,4 +106,38 @@ This famous term refers to the inability of the spacecraft's attitude-tracking g
 
 DIRECT
 Direct-control mode. A spacecraft pilot would use the ACA and TTCA control sticks to directly fire thrusters to move the spacecraft about with no automated interference.
+
+[flight_controllers]
+CAPCOM
+The Capsule Commander was, with rare exception, the only person allowed to speak directly to the crew. CAPCOMs were nearly always members of the astronaut pool.
+
+FLIGHT
+The Flight Director was entrusted to do anything necessary to ensure the safety of the crew and the success of the mission, and had this ultimate authority for the duration of any flight.
+
+EECOM
+The Electrical, Environmental and Consumables Manager managed the lowest level hardware in the CSM for power generation and consumption, electrical distribution, air and water, and the cryogenic gas tanks required for all of the above.
+
+GNC
+The Guidance, Navigation, and Controls Systems Engineer monitored the hardware systems that ultimately sent the spacecraft where it had to go: the propulsion and fuel thereof, the navigation computer hardware.
+
+GUIDO
+Where GNC managed the navigation and propulsion systems themselves, the Guidance Officer was in charge of their use, as well as the computer software, and tracking the position and orientation of the spacecraft.
+
+INCO
+The Integrated Communications Officer managed the communications and telemetry systems of both the CSM and LM. This included the uplink of data to the spacecraft computer.
+
+NETWORK
+An oft-ignored but massive system of ground and sea stations were required to maintain round-the-clock communications with the spacecraft. The Network officer managed this process.
+
+TELMU
+The Telemetry, Electrical, and EVA Mobility Unit Officer was essentially the EECOM of the Lunar Module, in charge of electrical and environmental hardware systems.
+
+AFD
+The Assistant Flight Director worked with FLIGHT on whatever was required at the time, allowing the Flight Director to offload tasks and focus on managing the mission.
+
+CONTROL
+The Control Officer was essentially the GNC for the Lunar Module, in charge of the navigational systems and software, as well as the propulsion hardware and fuel.
+
+RETRO
+The Retrofire Officer was in charge of any plans and maneuvers necessary to get the crew on a homewards trajectory. Back in the Earth orbit days, this entailed a retrograde burn of an appropriate time and ∆V; hence the name.
 
