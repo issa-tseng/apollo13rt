@@ -125,6 +125,8 @@ class Transcript extends Model
         candidate-idx = idx - 1
       else
         break
+
+    idx -= 1 unless (idx is 0) or (lvms.list[idx]._start <= epoch)
     idx
   ))
 
