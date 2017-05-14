@@ -88,6 +88,8 @@ class Transcript extends Model
 
         if (target-start >= epoch) and ((idx is 0) or (lvms.list[previous-idx]._start < epoch))
           break
+        else if low is high
+          break
         else if abs(target-start - epoch) <= 30
           if target-start < epoch
             do
@@ -98,10 +100,10 @@ class Transcript extends Model
               idx -= 1
             until lvms.list[idx]._start?
         else if target-start < epoch
-          low = idx
+          low = idx + 1
           idx = ((high - low) / 2 |> floor) + low
         else if target-start > epoch
-          high = idx
+          high = idx - 1
           idx = ((high - low) / 2 |> floor) + low
         else
           throw new Error('what?')
