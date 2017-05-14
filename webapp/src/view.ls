@@ -1,14 +1,17 @@
 { DomView, template, find, from, Model, Varying } = require(\janus)
-{ debounce } = require(\janus-stdlib).util.varying
+{ debounce, sticky } = require(\janus-stdlib).util.varying
 $ = require(\jquery)
 marked = require(\marked)
 
 { LineVM, Transcript, Term, Glossary, Player } = require('./model')
 
+defer = (f) -> set-timeout(f, 0)
 clamp = (min, max, x) --> if x < min then min else if x > max then max else x
 px = (x) -> "#{x}px"
 pct = (x) -> "#{x * 100}%"
 pad = (x) -> if x < 10 then "0#x" else x
+get-time = -> (new Date()).getTime()
+max-int = Number.MAX_SAFE_INTEGER
 
 
 
@@ -57,6 +60,9 @@ class LineView extends DomView
 class TranscriptView extends DomView
   @_dom = -> $('
     <div class="script">
+      <div class="script-scroll-indicator-container">
+        <a class="script-scroll-indicator" href="#" title="Sync with audio"/>
+      </div>
       <div class="script-lines"/>
       <p/>
     </div>
@@ -64,18 +70,47 @@ class TranscriptView extends DomView
   @_template = template(
       find('p').text(from(\name))
       find('.script-lines').render(from(\line_vms))
+      find('.script-scroll-indicator').classed(\active, from(\auto_scroll).map (not))
   )
   _wireEvents: ->
     dom = this.artifact()
     transcript = this.subject
     line-container = dom.find('.script-lines')
+    indicator = dom.find('.script-scroll-indicator')
 
-    auto-scrolling = false
+    # automatically scrolls to a given line.
+    relinquished = max-int
+    get-offset = (id) -> dom.find(".line-#id").get(0).offsetTop
+    scroll-to = (scroll-top) ->
+      relinquished := max-int
+      line-container.finish().animate({ scroll-top }, { complete: (-> relinquished := get-time()) })
+
     debounce(transcript.watch(\top_line), 50).react((line) ->
-      if (transcript.get(\auto_scroll) is true) and (id = line?.get(\line).get(\id))?
-        offset-top = dom.find(".line-#id").get(0).offsetTop - dom.get(0).offsetTop - 50
-        auto-scrolling := true
-        line-container.finish().animate({ scroll-top: offset-top, complete: (-> auto-scrolling := false) })
+      id = line?.get(\line).get(\id)
+      return unless id?
+      offset = get-offset(id)
+
+      # scroll to the top line if relevant.
+      scroll-to(offset - 50) if transcript.get(\auto_scroll) is true
+
+      # position the scroll indicator always.
+      console.log(offset / line-container.get(0).scrollHeight)
+      indicator.css(\top, offset / line-container.get(0).scrollHeight |> pct)
+    )
+
+    # watch for autoscroll rising edge and trip scroll.
+    transcript.watch(\auto_scroll).react((auto) ->
+      id |> get-offset |> (- 50) |> scroll-to if auto and (id = transcript.get(\top_line)?.get(\line).get(\id))?
+    )
+
+    # turn off auto-scrolling as intelligently as we can.
+    line-container.on(\scroll, ->
+      transcript.set(\auto_scroll, false) if get-time() > (relinquished + 250) # complete fires early
+    )
+    line-container.on(\wheel, ->
+      line-container.finish()
+      transcript.set(\auto_scroll, false)
+      null # return value is significant.
     )
 
     # do this via delegate here once rather for each line for perf.
@@ -84,6 +119,8 @@ class TranscriptView extends DomView
       line-vm = $(event.target).closest('.line').data(\view).subject
       transcript.get(\player).epoch(line-vm.get(\line).get(\start.epoch))
     )
+
+    indicator.on(\click, -> transcript.set(\auto_scroll, true))
 
 
 

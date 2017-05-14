@@ -22,6 +22,7 @@ $icon-link: "\e907"
 $icon-close: "\e908"
 $icon-on: "\e909"
 $icon-off: "\e90a"
+$icon-sync: "\e90b"
 
 
 // UTIL
@@ -286,7 +287,6 @@ a
           right: 0
 
   .player-scripts
-    overflow: hidden
     padding: 0 3em
 
     > div
@@ -344,9 +344,44 @@ a
         border-top-color: #aaa
 
 .script
+  position: relative
+
   p
     @include bottom-header
     margin-left: 7.2em
+
+  .script-scroll-indicator-container
+    @include fill
+    bottom: 3em
+    left: auto
+
+  .script-scroll-indicator
+    @include icon
+    margin-top: -0.2em
+    opacity: 0
+    padding-right: 0.4em
+    position: absolute
+    right: 0.8em
+    text-decoration: none
+    transition: 0.5s top, 0.2s opacity
+    z-index: 5
+
+    &.active
+      opacity: 1
+
+    &:before
+      @include reify
+      border: 0.4em solid transparent
+      border-right-width: 0
+      border-left-color: #666
+      position: absolute
+      right: 0
+      top: 0.4em
+
+    &:after
+      color: $color-accent-text
+      content: $icon-sync
+      font-size: 1.6em
 
   .script-lines
     @include custom-scrollbar
