@@ -1,6 +1,7 @@
 { DomView, template, find, from, Model, Varying } = require(\janus)
 { debounce } = require(\janus-stdlib).util.varying
 $ = require(\jquery)
+marked = require(\marked)
 
 { LineVM, Transcript, Term, Glossary, Player } = require('./model')
 
@@ -113,13 +114,14 @@ class TermView extends DomView
     find('.term-edit').attr(\href, from(\line).map(-> "#base-term-edit-url\#L#it"))
     find('.term-hide').classed(\active, from(\hidden))
     find('.term-hide').attr(\title, from(\hidden).map(-> if it then "Show this term" else "Don't show me again"))
-    find('.term-definition').text(from(\definition))
+    find('.term-definition').html(from(\definition).map (marked))
   )
   _wireEvents: ->
     dom = this.artifact()
     term = this.subject
 
     dom.find('.term-hide').on(\click, -> term.set(\hidden, !term.get(\hidden)))
+    dom.on(\mousedown, 'p a', (event) -> $(event.target).attr(\target, \_blank))
 
 class GlossaryView extends DomView
   @_dom = -> $('

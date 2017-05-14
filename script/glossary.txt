@@ -45,7 +45,7 @@ Fuel cell
 A clever system which reacted H2 and O2 to produce water and electricity. It is essentially like a battery, with a cathode and anode, but with flowing rather than static reactants. There were three on board Apollo, each supplying 31 volts.
 
 Gimbal lock
-This famous term refers to the inability of the spacecraft's attitude-tracking gimbals to deal with certain orientations. In gimbal lock, two of the three gyroscopic axes aligned with each other, rendering them unable to turn independently to track certain spacecraft movements, which would in turn invalidate the spacecraft alignment and the crew would have to manually realign from star sightings.
+This [famous term](https://www.youtube.com/watch?v=OmCzZ-D8Wdk) refers to the inability of the spacecraft's attitude-tracking gimbals to deal with certain orientations. In gimbal lock, two of the three gyroscopic axes aligned with each other, rendering them unable to turn independently to track certain spacecraft movements, which would in turn invalidate the spacecraft alignment and the crew would have to manually realign from star sightings.
 
 H2
 Hydrogen gas. This was stored in cryogenic tanks and used along with O2 in the fuel cells to produce power and water.

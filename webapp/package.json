@@ -7,7 +7,8 @@
     "jquery": "~3.1",
     "prelude-ls": "~1.1",
     "janus": "~0.3",
-    "janus-stdlib": "~0.2"
+    "janus-stdlib": "~0.2",
+    "marked": "~0.3"
   },
 
   "devDependencies": {
