@@ -33,7 +33,7 @@ lib/assets/%.json: ../script/%.json
 node_modules:
 	npm install
 
-build: $(LIB) lib/index.html lib/styles.css lib/apollo13rt.js $(ASSETS_LIB) lib/assets/flight-director-loop.json lib/assets/flight-director-loop.lookup.json lib/assets/air-ground-loop.json lib/assets/air-ground-loop.lookup.json lib/assets/glossary.json
+build: $(LIB) lib/index.html lib/styles.css lib/apollo13rt.js $(ASSETS_LIB) lib/assets/flight-director-loop.json lib/assets/flight-director-loop.lookup.json lib/assets/air-ground-loop.json lib/assets/air-ground-loop.lookup.json lib/assets/glossary.json lib/assets/glossary.lookup.json
 
 clean:
 	rm -rf lib

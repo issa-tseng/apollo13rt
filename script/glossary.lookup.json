@@ -1,1 +1,1 @@
-{}
+{"AC electrical bus":["CSM"],"Barber pole":["Talkback"],"BMAG":["Attitude","Rates"],"DC electrical bus":["CSM"],"Glycol":["O2"],"Fuel cell":["H2","O2"],"Gimbal lock":["Attitude"],"H2":["O2"],"Jet":["RCS"],"O2":["Glycol"],"Pitch":["Attitude"],"PGNCS":["Attitude"],"Rates":["Attitude"],"RCS":["Attitude","Ullage","Quad"],"Roll":["Attitude"],"Talkback":["Barber pole"],"Quad":["CSM","RCS"],"Yaw":["Attitude"],"AFD":["FLIGHT"],"CONTROL":["GNC"],"EECOM":["CSM"],"GUIDO":["GNC"],"INCO":["CSM"],"TELMU":["EECOM"]}
