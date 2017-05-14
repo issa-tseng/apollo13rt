@@ -147,6 +147,9 @@ a
   input
     opacity: 0
 
+.glossary-term
+  border-bottom: 1px dotted #777
+
 
 // COMPONENTS
 
@@ -550,6 +553,25 @@ header
       border-right-width: 0
       left: auto
       right: 0
+
+#floating-glossary
+  background: $color-tooltip-bg
+  border-radius: 0.2em
+  display: none
+  margin-left: -0.6em
+  padding: 1em
+  position: absolute
+  width: 30em
+
+  .term
+    max-height: 99em
+    .term-name
+      color: #fff
+      .synonyms, a
+        display: none
+    .term-definition
+      color: #ddd
+      padding: 0
 
 @media (max-width: 1000px)
   .player .player-scripts

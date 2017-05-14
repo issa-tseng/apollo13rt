@@ -175,6 +175,13 @@ class Term extends Model
     (x) -> (x is term) or (x in synonyms.list)
   ))
 
+  decorate: (cross-look) ->
+    return unless (terms = cross-look[this.get(\term)])?
+    text = this.get(\definition)
+    for term in terms
+      text .= replace(new RegExp(term, \ig), -> "<span class=\"glossary-term\" data-term=\"#term\">#it</span>")
+    this.set(\definition, text)
+
 class Lookup extends Model
   @deserialize = (data) -> super({ [ id, new List(terms) ] for id, terms of data })
 
@@ -189,7 +196,7 @@ class Glossary extends Model
     default: -> false
   )
 
-  @deserialize = (data) ->
+  @deserialize = (data, cross-look = {}) ->
     glossary = new Glossary()
 
     # create a lookup based on primary and synonym terms.
@@ -197,6 +204,7 @@ class Glossary extends Model
     list = []
     for term, def of data
       inflated = Term.deserialize(def)
+      inflated.decorate(cross-look)
       inflated.set(\glossary, glossary)
       lookup[term] = inflated
       list.push(inflated)
