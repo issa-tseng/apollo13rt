@@ -11,6 +11,11 @@ clamp = (min, max, x) --> if x < min then min else if x > max then max else x
 class Global extends Model
   shadow: -> this
 
+
+
+########################################
+# TRANSCRIPT MODELS
+
 class Line extends Model
   @bind(\start.hh, from(\start.epoch).map ((/ 3600) >> floor))
   @bind(\start.mm, from(\start.epoch).map ((% 3600 / 60) >> floor))
@@ -153,6 +158,11 @@ class Transcript extends Model
 
   bindToPlayer: (player) -> this.set(\player, player)
 
+
+
+########################################
+# GLOSSARY MODELS
+
 class Term extends Model
   @attribute(\synonyms, class extends attribute.CollectionAttribute
     default: -> new List()
@@ -195,6 +205,11 @@ class Glossary extends Model
 
     glossary.set({ lookup, list: new List(list) })
     glossary
+
+
+
+########################################
+# PLAYER MODEL
 
 class Player extends Model
   @attribute(\base_height, class extends attribute.NumberAttribute

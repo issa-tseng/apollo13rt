@@ -10,6 +10,11 @@ px = (x) -> "#{x}px"
 pct = (x) -> "#{x * 100}%"
 pad = (x) -> if x < 10 then "0#x" else x
 
+
+
+########################################
+# TRANSCRIPT VIEWS
+
 class LineView extends DomView
   @_fragment = $('
     <div class="line">
@@ -72,6 +77,12 @@ class TranscriptView extends DomView
         auto-scrolling := true
         line-container.finish().animate({ scroll-top: offset-top, complete: (-> auto-scrolling := false) })
     )
+
+
+
+
+########################################
+# GLOSSARY VIEWS
 
 base-term-edit-url = "https://github.com/clint-tseng/apollo13rt/edit/master/script/glossary.txt"
 class TermView extends DomView
@@ -156,6 +167,11 @@ class GlossaryView extends DomView
     find('.glossary-show-hidden').classed(\checked, from(\show.hidden))
     find('.glossary-show-hidden span').render(from.attribute(\show.hidden)).context(\edit)
   )
+
+
+
+########################################
+# PLAYER VIEW
 
 class PlayerView extends DomView
   @_dom = -> $('
