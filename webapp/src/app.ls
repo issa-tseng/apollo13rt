@@ -47,17 +47,25 @@ tooltip = $('#tooltip')
 $(document).on(\mouseenter, '[title]', ->
   target = $(this)
   offset = target.offset()
+  outer-width = target.outerWidth()
   text = target.attr(\title)
 
-  tooltip.css(\left, offset.left + (target.outerWidth() / 2))
+  tooltip.removeClass(\mirrored)
+  tooltip.css(\left, offset.left + (outer-width / 2))
   tooltip.css(\top, offset.top)
   tooltip.text(text)
   tooltip.show()
 
+  # reflect if necessary. detect because it has wrapped.
+  if tooltip.height() > 13
+    tooltip.addClass(\mirrored)
+    tooltip.css(\left, 0) # move away for full measurement.
+    tooltip.css(\left, offset.left + (outer-width / 2) - tooltip.outerWidth())
+
   target.attr(\title, '')
   target.one(\mouseleave, ->
     tooltip.hide()
-    target.attr(\title, text)
+    target.attr(\title, text) unless target.attr(\title) isnt ''
   )
 )
 
