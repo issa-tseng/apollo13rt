@@ -621,7 +621,7 @@ Right.
 [- 56 04 35] FLIGHT
 Okay.
 
-[65 04 58] EECOM
+[56 04 58] EECOM
 FLIGHT, EECOM.
 
 [56 04 59] FLIGHT
@@ -714,7 +714,7 @@ Roger. Let's solve one problem at a time. Come back to me later on on it.o
 We confirming those numbers?
 
 [56 07 20 - 56 07 22] FLIGHT
-Buck [GNC], I need that RCS stuff as soon as you can get it.
+Buck, I need that RCS stuff as soon as you can get it.
 
 [56 07 22 - 56 07 24] GNC
 Roger, Flight. He's turned off all jets now.
@@ -764,7 +764,7 @@ FLIGHT, EECOM.
 [56 08 33 -] FLIGHT
 Why don't we just open-circuit 1 and make sure we don't have any problems getting that back onto the bus -
 
-[56 08 07] EECOM
+[56 08 37] EECOM
 Okay, FLIGHT.
 
 [- 56 08 40] FLIGHT
@@ -1041,10 +1041,10 @@ You don't want to get fuel cell pumps off, do you?
 [56 16 44 - 56 16 47] FLIGHT
 Optics power is already off, I believe.
 
-[56 15 47 - 56 15 49] EECOM
+[56 16 47 - 56 16 49] EECOM
 We can do that on FUEL CELL number 1, FLIGHT.
 
-[56 15 50 - 56 16 53] FLIGHT
+[56 16 50 - 56 16 53] FLIGHT
 Okay, well let's make sure we don't blow the whole mission.
 > Kranz himself writes[ref1 p314] that he realized within fifteen minutes that an oxygen tank had exploded and that the mission was now survival, not a lunar landing. But it is not clear if the entire room was on this page quite yet.
 
@@ -1660,10 +1660,10 @@ The fuel cells are fed off the tanks in the Service Module, FLIGHT. The surge ta
 Okay, I'm with you. I'm with you.
 > People online seem to be really impressed with this exchange. But if this sort of conversation didn't happen in MCC, we would never have flown anywhere. It's basic teamwork and leadership. Perhaps the reaction says more about the typical manager than about NASA.
 
-[56 26 49] EECOM
+[56 36 49] EECOM
 Roger.
 
-[56 26 50 - 56 36 53] FLIGHT
+[56 36 50 - 56 36 53] FLIGHT
 CAPCOM, let's also isolate the surge tank.
 
 [56 36 57 - 56 36 59] CAPCOM
@@ -1682,13 +1682,13 @@ Yeah. What we're really doing is securing our entry systems right now.
 Yeah, we're trying to figure out some way to get {power on BUS B.}
 1> Recall that the tank heaters, which are needed to raise the pressure, are on BUS B which is currently dead.
 
-[56 27 59] FLIGHT
+[56 37 59] FLIGHT
 EECOM, from FLIGHT.
 
-[56 28 10] FLIGHT
+[56 38 10] FLIGHT
 EECOM, from FLIGHT.
 
-[56 28 11] EECOM
+[56 38 11] EECOM
 FLIGHT, EECOM.
 
 [56 38 12 - 56 38 15] FLIGHT

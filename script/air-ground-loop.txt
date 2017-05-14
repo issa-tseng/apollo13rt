@@ -169,7 +169,7 @@ Negative. Oxygen on 3.
 [56 05 54] LMP
 Okay.
 
-[56 05 24 - 56 05 28] LMP
+[56 05 54 - 56 05 58] LMP
 Okay. The systems test 1-A says zip.
 
 [56 06 43 - 56 06 48] LMP
@@ -245,10 +245,10 @@ We'd like - on MAIN A, we'd like Charlie 1, 2, 3, and 4. Also Bravo 3 and 4 on M
 [56 13 52] LMP
 Okay. Got it.
 
-[55 14 42] CAPCOM
+[56 14 42] CAPCOM
 13, we need OMNI Bravo.
 
-[55 14 47] LMP
+[56 14 47] LMP
 OMNI Bravo.
 
 [56 16 08 - 56 16 19] CAPCOM
@@ -484,7 +484,7 @@ I'm still getting some rates in negative pitch, though.
 [56 46 20] CAPCOM
 Roger.
 
-[56 46 11 - 56 46 34] CAPCOM
+[56 46 31 - 56 46 34] CAPCOM
 And 13, we'd like to verify that both BMAGs are OFF, please.
 
 [56 46 37 - 56 46 43] CMP

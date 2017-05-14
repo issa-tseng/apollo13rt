@@ -13,6 +13,7 @@ parse-file = (path) ->
   by-id = {}
   by-last-source = {}
   current-source = null
+  last-start = 0
   for line, nr in read-file-sync(path, \utf8).split('\n')
     if (parse = /^\[(\d\d) (\d\d) (\d\d) - (\d\d) (\d\d) (\d\d)\] (.+)$/.exec(line))?
       # a full line. create.
@@ -22,6 +23,8 @@ parse-file = (path) ->
       id = incr++
 
       throw new Error("Message goes back in time (#{nr + 1} -> #line)") if start > end
+      throw new Error("Message predates predecessor (#{nr + 1} -> #line)") if start < last-start
+      last-start := start
 
       current-source = source
       line = by-last-source[current-source] = by-id[id] = { id, start, end, source, line: nr + 1 }
@@ -34,6 +37,9 @@ parse-file = (path) ->
       end = start
       id = incr++
 
+      throw new Error("Message predates predecessor (#{nr + 1} -> #line)") if start < last-start
+      last-start := start
+
       current-source = source
       line = by-last-source[current-source] = by-id[id] = { id, start, end, source, line: nr + 1 }
       result.push(line)
@@ -43,6 +49,9 @@ parse-file = (path) ->
       [ _, start-hh, start-mm, start-ss, source ] = parse
       start = hms(start-hh, start-mm, start-ss)
       id = incr++
+
+      throw new Error("Message predates predecessor (#{nr + 1} -> #line)") if start < last-start
+      last-start := start
 
       current-source = source
       line = by-last-source[current-source] = by-id[id] = { id, start, source, line: nr + 1 }
