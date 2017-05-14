@@ -134,7 +134,7 @@ class TermView extends DomView
         <span class="name"/>
         <span class="synonyms"/>
         <a class="term-edit" target="_blank" title="Suggest an edit"/>
-        <a class="term-hide"/>
+        <a class="term-hide" href="#"/>
       </div>
       <p class="term-definition"/>
     </div>
