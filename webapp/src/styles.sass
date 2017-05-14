@@ -436,13 +436,12 @@ a
     display: inline
 
 .term
-  max-height: 8em
+  max-height: 0
   overflow: hidden
   transition: 0.3s max-height
 
-  &.hide
-    display: block !important
-    max-height: 0
+  &.active
+    max-height: 8em
 
   .term-name
     font-size: 1.1em

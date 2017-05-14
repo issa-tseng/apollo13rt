@@ -94,7 +94,6 @@ class TranscriptView extends DomView
       scroll-to(offset - 50) if transcript.get(\auto_scroll) is true
 
       # position the scroll indicator always.
-      console.log(offset / line-container.get(0).scrollHeight)
       indicator.css(\top, offset / line-container.get(0).scrollHeight |> pct)
     )
 
@@ -143,18 +142,18 @@ class TermView extends DomView
   @_template = template(
     find('.term').classGroup(\category-, from(\category))
 
-    find('.term').classed(\hide,
+    find('.term').classed(\active,
       from(\hidden)
         .and(\glossary).watch(\show.hidden)
         .and(\matches)
         .and.app(\global).watch(\player).watch(\nearby_terms)
         .all.flatMap((hidden, show-hidden, f, terms) ->
           if hidden and show-hidden
-            false
-          else if hidden
             true
+          else if hidden
+            false
           else
-            terms.any(f).map (not)
+            terms.any(f)
         )
     )
 
