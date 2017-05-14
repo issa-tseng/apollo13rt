@@ -7,6 +7,7 @@ $monospace: "courier new", courier, monospace
 $color-accent: #1fce17
 $color-accent-inactive: #bbb
 $color-accent-text: #25af1f
+$color-warning: #c31
 $color-tooltip-bg: rgba(0, 0, 0, 0.6)
 $color-light-border: #ddd
 
@@ -303,16 +304,19 @@ html
       overflow: hidden
       width: auto
 
-      .player-glossary-items
+      .glossary
+        height: 100%
+
+      .glossary-items
         @include custom-scrollbar
         height: calc(100% - 2.5em)
         overflow-x: hidden
         overflow-y: auto
 
-        ul
+        > ul
           padding-right: 1em
 
-      > p
+      .glossary > p
         @include bottom-header
 
   .player-resize
@@ -409,16 +413,41 @@ html
     .synonyms ul
       display: inline
       font-weight: normal
-      padding-left: 0.4em
 
       li
         display: inline
         &:after
           content: ', '
+        &:first-child
+          padding-left: 0.4em
         &:first-child:before
           content: '('
         &:last-child:after
           content: ')'
+
+    a
+      @include icon
+      color: #333
+      display: none
+      font-size: 1.18em
+      line-height: 0.5em
+      margin-left: 0.2em
+      position: relative
+      text-decoration: none
+      top: 0.1em
+      &:hover
+        color: #000
+
+    .term-hide.active
+      color: $color-warning
+
+    .term-edit:before
+      content: $icon-edit
+    .term-hide:before
+      content: $icon-close
+
+  &:hover .term-name a
+    display: inline
 
   .term-definition
     color: #444
@@ -426,6 +455,29 @@ html
     line-height: 1.2em
     padding-bottom: 0.5em
 
+.glossary
+  position: relative
+
+  .glossary-controls
+    bottom: 0
+    color: #555
+    display: none
+    position: absolute
+    right: 0.5em
+
+    label
+      padding-left: 1.5em
+
+    .checkbox
+      color: #222
+
+  &.hide-personnel .category-personnel
+    max-height: 0
+  &.hide-technical .category-technical
+    max-height: 0
+
+  &:hover .glossary-controls
+    display: block
 
 // LAYOUT
 

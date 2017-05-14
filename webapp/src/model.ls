@@ -1,4 +1,5 @@
 { Model, attribute, from, List } = require(\janus)
+{ debounce } = require(\janus-stdlib).util.varying
 { floor, abs } = Math
 { flatten, unique } = require(\prelude-ls)
 
@@ -169,7 +170,7 @@ class Glossary extends Model
   @attribute(\show.personnel, class extends attribute.BooleanAttribute
     default: -> true
   )
-  @attribute(\show.terms, class extends attribute.BooleanAttribute
+  @attribute(\show.technical, class extends attribute.BooleanAttribute
     default: -> true
   )
   @attribute(\show.hidden, class extends attribute.BooleanAttribute

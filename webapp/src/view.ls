@@ -2,7 +2,7 @@
 { debounce } = require(\janus-stdlib).util.varying
 $ = require(\jquery)
 
-{ LineVM, Transcript, Term, Player } = require('./model')
+{ LineVM, Transcript, Term, Glossary, Player } = require('./model')
 
 clamp = (min, max, x) --> if x < min then min else if x > max then max else x
 px = (x) -> "#{x}px"
@@ -72,23 +72,87 @@ class TranscriptView extends DomView
         line-container.finish().animate({ scroll-top: offset-top, complete: (-> auto-scrolling := false) })
     )
 
+base-term-edit-url = "https://github.com/clint-tseng/apollo13rt/edit/master/script/glossary.txt"
 class TermView extends DomView
   @_dom = -> $('
     <div class="term">
       <div class="term-name">
         <span class="name"/>
         <span class="synonyms"/>
+        <a class="term-edit" target="_blank" title="Suggest an edit"/>
+        <a class="term-hide"/>
       </div>
       <p class="term-definition"/>
     </div>
   ')
   @_template = template(
-    find('.term').classed(\hide, from(\matches).and.app(\global).watch(\player).watch(\nearby_terms).all.flatMap((f, terms) -> terms.any(f)).map (not))
+    find('.term').classGroup(\category-, from(\category))
+
+    find('.term').classed(\hide,
+      from(\hidden)
+        .and(\glossary).watch(\show.hidden)
+        .and(\matches)
+        .and.app(\global).watch(\player).watch(\nearby_terms)
+        .all.flatMap((hidden, show-hidden, f, terms) ->
+          if hidden and show-hidden
+            false
+          else if hidden
+            true
+          else
+            terms.any(f).map (not)
+        )
+    )
+
     find('.term-name .name').text(from(\term))
-    find('.term-name .synonyms').render(from(\synonyms).and.app(\global).watch(\player).watch(\nearby_terms).all.map((synonyms, nearby) ->
-      synonyms.filter((term) -> nearby.any (is term))
-    ))
+    find('.term-name .synonyms').render(
+      from(\synonyms)
+        .and.app(\global).watch(\player).watch(\nearby_terms)
+        .all.map((synonyms, nearby) -> synonyms.filter((term) -> nearby.any (is term)))
+    )
+
+    find('.term-edit').attr(\href, from(\line).map(-> "#base-term-edit-url\#L#it"))
+    find('.term-hide').classed(\active, from(\hidden))
+    find('.term-hide').attr(\title, from(\hidden).map(-> if it then "Show this term" else "Don't show me again"))
     find('.term-definition').text(from(\definition))
+  )
+  _wireEvents: ->
+    dom = this.artifact()
+    term = this.subject
+
+    dom.find('.term-hide').on(\click, -> term.set(\hidden, !term.get(\hidden)))
+
+class GlossaryView extends DomView
+  @_dom = -> $('
+    <div class="glossary">
+      <div class="glossary-items"/>
+      <p>Glossary</p>
+      <div class="glossary-controls">
+        <label class="glossary-show-personnel" title="Show personnel titles">
+          <span class="checkbox"/> Personnel
+        </label>
+        <label class="glossary-show-technical" title="Show technical jargon">
+          <span class="checkbox"/> Technical
+        </label>
+        <label class="glossary-show-hidden" title="Show terms you\'ve hidden">
+          <span class="checkbox"/> Hidden
+        </label>
+      </div>
+    </div>
+  ')
+  @_template = template(
+    find('.glossary').classed(\hide-personnel, from(\show.personnel).map (not))
+    find('.glossary').classed(\hide-technical, from(\show.technical).map (not))
+
+    find('.glossary-items').render(from(\list))
+
+    find('.glossary-show-personnel').classed(\checked, from(\show.personnel))
+    find('.glossary-show-personnel span').render(from.attribute(\show.personnel)).context(\edit)
+
+    find('.glossary-show-technical').classed(\checked, from(\show.technical))
+    find('.glossary-show-technical span').render(from.attribute(\show.technical)).context(\edit)
+
+    find('.glossary-show-hidden').classed(\checked, from(\show.hidden))
+    find('.glossary-show-hidden span').render(from.attribute(\show.hidden)).context(\edit)
   )
 
 class PlayerView extends DomView
@@ -129,10 +193,7 @@ class PlayerView extends DomView
       <div class="player-scripts">
         <div class="player-script-air-ground"/>
         <div class="player-script-flight"/>
-        <div class="player-glossary">
-          <div class="player-glossary-items"/>
-          <p>Glossary</p>
-        </div>
+        <div class="player-glossary"/>
       </div>
       <div class="player-resize"/>
     </div>
@@ -165,7 +226,7 @@ class PlayerView extends DomView
 
     find('.player-script-flight').render(from(\loops.flight))
     find('.player-script-air-ground').render(from(\loops.air_ground))
-    find('.player-glossary-items').render(from(\glossary).watch(\list))
+    find('.player-glossary').render(from(\glossary))
   )
   _wireEvents: ->
     dom = this.artifact()
@@ -221,6 +282,7 @@ module.exports = {
   registerWith: (library) ->
     library.register(Transcript, TranscriptView)
     library.register(Term, TermView)
+    library.register(Glossary, GlossaryView)
     library.register(LineVM, LineView)
     library.register(Player, PlayerView)
 }
