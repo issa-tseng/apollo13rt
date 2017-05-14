@@ -9,6 +9,7 @@ $color-accent-inactive: #bbb
 $color-accent-text: #25af1f
 $color-warning: #c31
 $color-tooltip-bg: rgba(0, 0, 0, 0.6)
+$color-definition-bg: rgba(0, 0, 0, 0.8)
 $color-light-border: #ddd
 
 $icon-play: "\e900"
@@ -149,6 +150,7 @@ a
 
 .glossary-term
   border-bottom: 1px dotted #777
+  cursor: help
 
 
 // COMPONENTS
@@ -556,11 +558,10 @@ header
       left: auto
       right: 0
 
-#floating-glossary
-  background: $color-tooltip-bg
-  border-radius: 0.2em
-  display: none
-  margin-left: -0.6em
+.floating-glossary
+  background: $color-definition-bg
+  border-radius: 0.2em 0 0.2em 0.2em
+  margin-left: -0.5em
   padding: 1em
   position: absolute
   width: 30em
@@ -574,6 +575,8 @@ header
     .term-definition
       color: #ddd
       padding: 0
+      .glossary-term
+        border-bottom-color: #fff
 
 @media (max-width: 1000px)
   .player .player-scripts

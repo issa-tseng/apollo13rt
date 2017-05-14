@@ -1,6 +1,7 @@
 
 # basic requires.
 $ = window.jQuery = window.$ = require(\jquery)
+{ Varying } = require(\janus)
 { Library, App } = require(\janus).application
 stdlib = require(\janus-stdlib)
 { Global, Glossary, Lookup, Player, Transcript } = require('./model')
@@ -44,9 +45,11 @@ $('#player').append(player-view.artifact())
 player-view.wireEvents()
 
 # other generic actions:
+$document = $(document)
+
 # automatically tooltip if a title is hovered.
 tooltip = $('#tooltip')
-$(document).on(\mouseenter, '[title]', ->
+$document.on(\mouseenter, '[title]', ->
   target = $(this)
   offset = target.offset()
   outer-width = target.outerWidth()
@@ -73,25 +76,32 @@ $(document).on(\mouseenter, '[title]', ->
 
 # automatically define if a term is hovered.
 glossary = player.get(\glossary)
-floating-glossary = $('#floating-glossary')
-$(document).on(\mouseenter, '.glossary-term', ->
+$document.on(\mouseenter, '.glossary-term:not(.active)', ->
   initiator = $(this)
   term = glossary.get("lookup.#{initiator.attr(\data-term)}")
   throw new Error("didn't find an expected term!") unless term?
 
+  floating-glossary = $('<div class="floating-glossary"/>')
   term-view = app.getView(term)
   floating-glossary.append(term-view.artifact())
   term-view.wireEvents()
 
-  floating-glossary.show()
-  target-offset = initiator.closest('p').offset()
+  floating-glossary.appendTo($('body'))
+  target-offset = initiator.offset()
   floating-glossary.css(\left, target-offset.left - floating-glossary.outerWidth())
   floating-glossary.css(\top, target-offset.top)
 
-  initiator.on(\mouseleave, ->
-    term-view.destroy()
-    floating-glossary.hide()
-    floating-glossary.empty()
+  initiator.addClass(\active)
+  is-hovered = new Varying(true)
+  targets = initiator.add(floating-glossary)
+  targets.on(\mouseenter, -> is-hovered.set(true))
+  targets.on(\mouseleave, -> is-hovered.set(false))
+  stdlib.util.varying.sticky(is-hovered, { true: 100 }).react((hovered) ->
+    if !hovered
+      initiator.removeClass(\active)
+      term-view.destroy()
+      floating-glossary.remove()
+      this.stop()
   )
 )
 
