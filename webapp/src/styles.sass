@@ -18,6 +18,9 @@ $icon-hopforward: "\e904"
 $icon-leapforward: "\e905"
 $icon-edit: "\e906"
 $icon-link: "\e907"
+$icon-close: "\e908"
+$icon-on: "\e909"
+$icon-off: "\e90a"
 
 
 // UTIL
@@ -120,6 +123,24 @@ html
 .hh:after, .mm:after
   content: ':'
   display: inline
+
+.checkbox
+  @include icon
+  &:before
+    color: #555
+    content: $icon-off
+    font-size: 1.5em
+    margin-right: -1.1em
+    position: relative
+    top: 0.1em
+    transition: 0.2s color
+
+    .checked &
+      color: $color-accent-text
+      content: $icon-on
+
+  input
+    opacity: 0
 
 
 // COMPONENTS
