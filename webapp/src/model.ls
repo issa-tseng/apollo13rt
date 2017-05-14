@@ -272,6 +272,10 @@ class Player extends Model
         player.set(\base_height, player.get(\height))
     )
 
+  # navigates the player to a given epoch.
+  epoch: (epoch) ->
+    this.get(\audio.player).get(0).currentTime = (epoch - this.get(\timestamp.offset))
+
 
 module.exports = { Global, Line, LineVM, Lines, Transcript, Term, Lookup, Glossary, Player }
 

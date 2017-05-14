@@ -18,7 +18,7 @@ pad = (x) -> if x < 10 then "0#x" else x
 class LineView extends DomView
   @_fragment = $('
     <div class="line">
-      <a class="line-timestamp">
+      <a class="line-timestamp" href="#">
         <span class="hh"/>
         <span class="mm"/>
         <span class="ss"/>
@@ -78,6 +78,12 @@ class TranscriptView extends DomView
         line-container.finish().animate({ scroll-top: offset-top, complete: (-> auto-scrolling := false) })
     )
 
+    # do this via delegate here once rather for each line for perf.
+    dom.on(\click, '.line-timestamp', (event) ->
+      event.preventDefault()
+      line-vm = $(event.target).closest('.line').data(\view).subject
+      transcript.get(\player).epoch(line-vm.get(\line).get(\start.epoch))
+    )
 
 
 
