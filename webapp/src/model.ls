@@ -17,6 +17,9 @@ class Global extends Model
 # TRANSCRIPT MODELS
 
 class Line extends Model
+  @attribute(\tokens, attribute.CollectionAttribute)
+  @attribute(\annotations, attribute.CollectionAttribute)
+
   @bind(\start.hh, from(\start.epoch).map ((/ 3600) >> floor))
   @bind(\start.mm, from(\start.epoch).map ((% 3600 / 60) >> floor))
   @bind(\start.ss, from(\start.epoch).map (% 60))
@@ -25,6 +28,10 @@ class Line extends Model
     data.start = { epoch: data.start }
     data.end = { epoch: data.end }
     super(data)
+
+  _initialize: ->
+    # massage the description for annotations.
+    this.set(\message, this.get(\message).replace(/\{([^}]+)\}/g, (_, text) -> "<span class=\"token-annotation\">#text</span>"))
 
   contains: (epoch) ->
     (start-epoch = this.get(\start.epoch))? and (start-epoch <= epoch) and (this.get(\end.epoch) >= epoch)

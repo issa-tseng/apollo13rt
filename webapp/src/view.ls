@@ -32,6 +32,10 @@ class LineView extends DomView
         <a class="line-link" title="Share link to this line"/>
       </div>
       <div class="line-contents"/>
+      <div class="line-annotations">
+        <div class="line-token-annotations"/>
+        <div class="line-whole-annotations"/>
+      </div>
     </div>
   ')
   @_dom = -> @_fragment.clone()
@@ -54,7 +58,10 @@ class LineView extends DomView
     find('.line-edit').attr(\href, from(\transcript).watch(\edit_url).and(\line).watch(\line).all.map((base, line) -> "#base\#L#line"))
 
     find('.line-source').text(from(\line).watch(\source))
-    find('.line-contents').text(from(\line).watch(\message))
+    find('.line-contents').html(from(\line).watch(\message))
+
+    find('.line-token-annotations').render(from(\line).watch(\tokens))
+    find('.line-whole-annotations').render(from(\line).watch(\annotations))
   )
 
 class TranscriptView extends DomView

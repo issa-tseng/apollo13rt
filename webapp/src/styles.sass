@@ -12,6 +12,8 @@ $color-tooltip-bg: rgba(0, 0, 0, 0.6)
 $color-definition-bg: rgba(0, 0, 0, 0.8)
 $color-light-border: #ddd
 
+$border-annotation: 1px dotted #777
+
 $icon-play: "\e900"
 $icon-pause: "\e901"
 $icon-hopback: "\e902"
@@ -149,7 +151,7 @@ a
     opacity: 0
 
 .glossary-term
-  border-bottom: 1px dotted #777
+  border-bottom: $border-annotation
   cursor: help
 
 
@@ -439,8 +441,37 @@ a
     .line-link:before
       content: $icon-link
 
+  .line-contents .token-annotation
+    border-bottom: $border-annotation
+    &:after
+      content: '1'
+      font-size: 0.5em
+      vertical-align: super
+
+    ~ .token-annotation:after
+      content: '2'
+      ~ .token-annotation:after
+        content: '3'
+        ~ .token-annotation:after
+          content: '4'
+
   &:hover .line-heading a
     display: inline
+
+  .line-annotations
+    color: #777
+    font-family: $sans
+    padding-left: 6.5em
+    li
+      padding-top: 0.3em
+
+    .line-token-annotations
+      @for $idx from 1 through 4
+        li:nth-child(#{$idx})
+          span:before
+            content: '#{$idx}'
+            font-weight: bold
+            padding-right: 0.3em
 
 .term
   max-height: 0
