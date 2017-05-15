@@ -36,9 +36,6 @@ class Line extends Model
   contains: (epoch) ->
     (start-epoch = this.get(\start.epoch))? and (start-epoch <= epoch) and (this.get(\end.epoch) >= epoch)
 
-  overlaps: (range-start, range-end) ->
-    (start-epoch = this.get(\start.epoch))? and (start-epoch <= range-end) and (this.get(\end.epoch) >= range-start)
-
 class LineVM extends Model
   @bind(\active, from(\player).watch(\timestamp.epoch).and(\line).all.map((epoch, line) ->
     line.contains(epoch)
@@ -49,8 +46,6 @@ class LineVM extends Model
     this._start = this.get(\line).get(\start.epoch)
     this._end = this.get(\line).get(\end.epoch)
     this._id = this.get(\line).get(\id)
-
-  overlaps: (range-start, range-end) -> this.get(\line).overlaps(range-start, range-end)
 
 class Lines extends List
   @modelClass = Line
