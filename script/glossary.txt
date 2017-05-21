@@ -1,9 +1,15 @@
 [technical]
 210 (210s)
-This referred to big 210-foot antennas on the ground, which were sensitive enough to receive high-bitrate data from the omnidirectional antennas.
+This referred to big 210-foot antennas on the ground, which were sensitive enough to receive high-bitrate data from the weaker omnidirectional antennas.
 
-AC electrical bus (AC BUS 1, AC BUS 2, AC BUS 3)
+AC electrical bus (AC bus, AC buses, AC BUS 1, AC BUS 2, AC BUS 3, AC 1, AC 2, AC 3)
 There were three inverters connected to the two DC electrical buses in the CSM which transformed the DC power into AC for some of the spacecraft systems. Motors, for instance, are far easier to engineer with AC rather than DC power.
+
+Aerozine
+A 50/50 mixture of hydrazine and UDMH. Both of these chemicals are extraordinarily unpleasant.
+
+Apollo Guidance Computer (AGC)
+The main computer managing navigation, autopilot, and other miscellenia. The same hardware and software were used in both the CM and the LM. The primary interface to the AGC was the DSKY.
 
 Aquarius
 The given name of the Apollo 13 Lunar Module.
@@ -20,8 +26,23 @@ A common term for the two fuels that many engines or thrusters burn: either a fu
 BMAG
 The two Body Mounted Attitude Gyros served as a backup system to the IMU, tracking the spacecraft attitude. They didn't work the same way as the IMU, and typically provided only rates, not absolute attitude.
 
-Cryo
+BAT BUS TIE
+The batteries had their own buses A and B. When they were wanted in use, the battery buses would be tied over to the main buses.
+
+CMC
+Command Module Computer: the AGC that lives in the CM.
+
+Coarse Align (VERB 41)
+A coarse alignment acquired and kept the platform within 2 degrees of a desired attitude. Like fine alignment, it was done using star sightings.
+
+Cryo (Cryogenic Tank, Cryogenic Tanks)
 Cryogenic (very cold) tanks were used for dense storage of useful gases like Oxygen and Hydrogen. Recall that cold gases take less volume.
+
+Current (Amps, Amperage)
+You may recall from basic electrical physics that current and voltage are key elements of electrical flow. Current is particularly important to monitor, as it is directly representative of the rate of power draw.
+
+Cryogenic Tank Heaters (O2 TANK 1 HEATERS, CRYOGENIC O2 HEATER 1)
+Recall that by the Ideal Gas Law (PV=nRT) the same amount of gas at a higher temperature will be under greater pressure. Because many systems (like the fuel cells) were pressure-fed and had a minimum operating pressure, the heaters could be used to raise the pressure even with less gas remaining.
 
 CSM
 Command/Service Module, the name for the mated Command and Sevice Modules. These formed two-thirds of the Apollo spacecraft system, along with the Lunar Module.
@@ -29,20 +50,35 @@ Command/Service Module, the name for the mated Command and Sevice Modules. These
 DC electrical bus (MAIN A, MAIN B)
 The CSM was wired with two direct current electrical loops to its components to supply power to them. Not every component was on both buses. Each could be powered by up to two of the fuel cells.
 
+Descent Propulsion System (DPS)
+The Lunar Module had two engines, both of which burned the same Aerozine/nitrogen tetroxide combination as the other Apollo engines. The DPS was part of the descent stage of the Lunar Module, and was left behind on the Moon to save weight. It was unique in that it could throttle down to 10% of full thrust.
+
 DIRECT
-Direct-control mode. A spacecraft pilot would use the ACA and TTCA control sticks to directly fire thrusters to move the spacecraft about with no automated interference.
+Direct-control mode. A spacecraft pilot would use the ACA and TTCA control sticks to directly fire thrusters to move the spacecraft about with no automated intervention.
+
+Docking Index
+As the connection between the CSM and LM was round, it was possible to dock at a slightly "twisted" angle if their roll angles were slightly different. The error here could be read off of little marks in the tunnel connecting the two craft.
 
 Glycol
 A water/glycol mix was circulated around the spacecraft to heat-producing components such as the computer as a cooling system. A combination of heat transfer to cryogenic O2 and evaporation was used to dissipate the heat. Glycol was added to the water as an antifreeze.
 
-DSKY
-Display/Keyboard, pronounced "diskey." This was the primary interface between the crew and the Apollo Guidance Computer.
+Display/Keyboard (DSKY)
+Pronounced "diskey." This was the primary interface between the crew and the Apollo Guidance Computer.
+
+Environmental Control System (ECS)
+The broad term encompassing an entire set of systems that provided breathable air and maintained acceptable temperatures for both crew and equipment, among other things.
+
+Fine Align
+Usually using a P52, the astronauts could very precisely determine and control the attitude of the Apollo spacecraft. This was often done just before critical moments sensitive to attitude, like maneuver burns.
 
 Flows
 A slang term for electrical current.
 
 Fuel cell
 A clever system which reacted H2 and O2 to produce water and electricity. It is essentially like a battery, with a cathode and anode, but with flowing rather than static reactants. There were three on board Apollo, each supplying 31 volts.
+
+Fuel Cell Pump (Fuel Cell Pumps, FUEL CELL 1 PUMP, FUEL CELL 2 PUMP, FUEL CELL 3 PUMP)
+The fuel cell pumps didn't pump reactants, they pumped coolant. A water/glycol mixture was used to keep the fuel cell systems from overheating.
 
 Gimbal lock
 This [famous term](https://www.youtube.com/watch?v=OmCzZ-D8Wdk) refers to the inability of the spacecraft's attitude-tracking gimbals to deal with certain orientations. In gimbal lock, two of the three gyroscopic axes aligned with each other, rendering them unable to turn independently to track certain spacecraft movements, which would in turn invalidate the spacecraft alignment and the crew would have to manually realign from star sightings.
@@ -51,13 +87,19 @@ H2
 Hydrogen gas. This was stored in cryogenic tanks and used along with O2 in the fuel cells to produce power and water.
 
 Helium
-Helium is often used to this day for its extraordinarily high natural density in spacecraft as an inert repressurization agent as material left a pressurized environment.
+Helium is often used to this day in spacecraft for its extraordinarily high natural compressibility as an inert repressurization agent as material left a pressurized environment.
+
+Hypergolic
+A reaction where chemicals ignite and burn spontaneously on contact with each other. Hypergolic chemicals tend to be nasty, but don't need any separate ignition system.
 
 Inverter (INVERTER 1, INVERTER 2, INVERTER 3)
 A device that pulls DC power and transforms it into AC power by oscillating its output. You might use one in your car, RV, or boat to power AC devices off a DC battery.
 
-Jet
+Jet (Jets)
 A colloquial term for an RCS thruster.
+
+Main Display Console (MDC)
+The three central control panels in the CM were MDC-1, -2, and -3.
 
 O2
 Oxygen gas. This was stored in cryogenic tanks and used along with O2 in the fuel cells to produce power and water, cooling liquid for the glycol thermal control system, and pressurized air for the cabin and spacesuits.
@@ -72,13 +114,25 @@ Open-circuit
 To break a circuit entirely so it no longer forms a loop. This was as much as one could do to ensure an electrical bus was entirely offline.
 
 P00
-An idle program for the Apollo Guidance Computer. Pronounced "poo." The AGC was never completely idle, but this was as close as it got, and it ensured the AGC wouldn't try to goof up any numbers while the ground controllers were uplinking data to the spacecraft.
+An idle program for the AGC. Pronounced "poo." The AGC was never completely idle, but this was as close as it got, and it ensured the AGC wouldn't try to goof up any numbers while the ground controllers were uplinking data to the spacecraft.
+
+P52
+The name of an alignment program in the AGC. It was a colloquially used term for executing a star-sighting fine alignment using the AOT. The computer could read the AOT orientation automatically once the astronaut found the relevant star.
+
+Passive Thermal Control (PTC)
+The Sun is incredibly harsh in space: the difference between the lighted and shadowed side of the spacecraft was as much as 300˚C. To deal with this, Apollo was often put into a slow roll, and thrusters were disengaged (hence, passive). This was called a PTC.
 
 Pitch
 One of three measures of a spacecraft's attitude. Think of a plane pointing up or down to climb or descend. Also used to describe the aim of the steerable antenna.
 
 PGNCS
 Pronounced "pings," the Primary Guidance, Navigation, and Control System was a collective name for a series of components including the IMU, AGC, and star-sighting sextant that collectively provided on-board determination and control of spacecraft position and attitude.
+
+Probe and Drogue
+The CM and LM docked along the access tunnel the crew use to transit the two. This means that the guidepost (probe) and dish (drogue) you remember from the docking sequence in the film end up inside the tunnel, and thus had to be unmounted and moved aside.
+
+Pulse Code Modulation (PCM)
+A method of encoding digital data into radio wave signals, still in use today for various purposes.
 
 Rates
 The rate of change in the spacecraft's attitude. Sometimes used to express an acceleration rather than a speed: "giving us rates."
@@ -89,11 +143,35 @@ Reaction Control System; small thrusters used to lightly maneuver the spacecraft
 Roll
 One of three measures of a spacecraft's attitude. Think of a sausage turning on a spit.
 
-Systems test
-Not every measurement was available directly on a panel gauge or to the telemetry systems. Some readings had to be taken manually off a panel one at a time.
+Real-time Computing Complex (RTCC)
+Five mainframes lived here, which amongst other things processed the data that was displayed in Mission Control.
 
-Talkback
+S-Band Antenna (high-gain)
+The steerable S-Band Antenna could point in a particular direction and focus a high-powered signal at it. This greatly improved power efficiency and communications quality with ground systems. The computer on-board could typically aim it automatically.
+
+Stabilization and control system (SCS)
+The SCS monitored the spacecraft attitude and rates, and could automatically control the thrusters to maintain certain parameters. It also served as a backup to the PGNCS.
+
+SIG SENSOR
+There was a circuit breaker labeled "SIG SENSOR," and so this became a general name for all the instumentation on that circuit. (??)
+
+Service Propulsion System (SPS)
+This was the hypergolic main engine on the Service Module. It burned Aerozine with nitrogen tetroxide, and normally did all the work of getting to and from lunar orbit.
+
+Surge Tank
+A reserve tank of pressurized O2 on the CM itself. This meant it stay on-board and could be used through Earth re-entry.
+
+Systems test
+Not every measurement was available directly on a panel gauge or to the telemetry systems. Some readings had to be taken manually off a panel-mounted voltmeter one at a time.
+
+Talkback (Talkbacks)
 Talkback indicators accompanied many switches on the control panel, and provided feedback on the status of the system that switch controls, often indicating whether the switch was actually having the intended effect. They could read grey (positive) or barber pole (negative).
+
+TLC
+Trans-lunar coast. The period during which the spacecraft's orbit takes between the Earth and the Moon.
+
+TM
+Telemetry. Most, but not all, of the critical instrument readings on Apollo were beamed to ground stations on a PCM code.
 
 Ullage
 Fuel [doesn't sit neatly](https://www.youtube.com/watch?v=u656se4e34M#t=1m04) at the bottom of the tank in Zero-G. Ullage is a forward acceleration of the spacecraft around the fuel to push it back to the bottom before a burn.
@@ -104,8 +182,14 @@ An electrical supply or bus that is providing less voltage than expected is unde
 Quad (Quads)
 A pack of four RCS thrusters. The letters A-D (and sometimes phonetic names thereof) referred to different quads on the CSM.
 
+VERB 49
+A command issued to autopilot the spacecraft to a new desired attitude.
+
 Yaw
 One of three measures of a spacecraft's attitude. Think of flicking a spinner on a table. Also used to describe the aim of the steerable antenna.
+
+Wide Beam
+The high-gain antenna on-board could be configured to operate on three beam widths: wide, medium, and narrow. As you can imagine, narrow beam was more focused and powerful, but required more-precise aim.
 
 [personnel]
 FLIGHT

@@ -1,7 +1,7 @@
 [55 46 11 - 55 46 28] CDR
 Roger. Sounds good. And this is the crew of Apollo 13 wishing everybody there a nice evening, and we're just about ready to close out our inspection of Aquarius and get back for a pleasant evening in Odyssey. Good night.
 
-[55 46 30] CAPCOM
+[55 46 31] CAPCOM
 Thank you, 13.
 
 [55 48 40 -] CAPCOM
@@ -67,7 +67,7 @@ This is Houston. Say again, please.
 [55 55 35 - 55 55 40] CDR
 {Houston, we've had a problem.} {We've had a MAIN B BUS UNDERVOLT.}
 1> Not "we have a problem," as in the film. The scriptwriters felt the present tense was more appropriate.
-2> The first reading that the MAIN B electrical bus was dead: it is below the expected voltage.
+2> The first reading that the MAIN B electrical bus was dead. It would never recover.
 
 [55 55 42] CAPCOM
 Roger. MAIN B UNDERVOLT.
@@ -116,7 +116,7 @@ MAIN A UNDERVOLT.
 
 [55 58 32 - 55 58 37] LMP
 It's reading about {25 and a half}. MAIN B is reading zip right now.
-1> Volts
+1> volts
 
 [55 59 33] CDR
 And Houston, Odyssey.
@@ -146,10 +146,12 @@ Okay. Let me give you some readings - in the interim to help MAIN A voltage, Jac
 Say again, Fred.
 
 [56 03 42 - 56 03 51] LMP
-In the interim, to help out MAIN A voltage, I've got MAIN BUS TIE BAT AC on. Or would you rather accept the 25 volts we are seeing on MAIN A?
+In the interim, to help out MAIN A voltage, I've got MAIN BUS TIE BAT {A/C} on. Or would you rather accept the 25 volts we are seeing on MAIN A?
+1> These letters are designations, not "alternating current."
+> 29 volts was the target operating voltage of the bus. Adding more power sources in series ups the voltage.
 
 [56 03 52] CAPCOM
-Okay. BUS TIE AC on.
+Okay. BUS TIE A/C on.
 
 [56 04 09] CAPCOM
 13, Houston. We need OMNI Charlie, please.
@@ -169,7 +171,7 @@ Negative. Oxygen on 3.
 [56 05 54] LMP
 Okay.
 
-[56 05 54 - 56 05 58] LMP
+[56 06 23 - 56 06 28] LMP
 Okay. The systems test 1-A says zip.
 
 [56 06 43 - 56 06 48] LMP
@@ -245,7 +247,7 @@ We'd like - on MAIN A, we'd like Charlie 1, 2, 3, and 4. Also Bravo 3 and 4 on M
 [56 13 52] LMP
 Okay. Got it.
 
-[56 14 42] CAPCOM
+[56 14 42 - 56 14 43] CAPCOM
 13, we need OMNI Bravo.
 
 [56 14 47] LMP
@@ -333,13 +335,13 @@ And Jack, one of the items that we turned off was the - all the fuel cell pumps.
 Roger.
 
 [56 25 47 - 56 25 51] CAPCOM
-Okay, Fred. We want FUEL CELL 2 PUMPS to AC1, please.
+Okay, Fred. We want FUEL CELL 2 PUMPS to AC 1, please.
 
 [56 25 55 - 56 25 57] CDR
-FUEL CELL 2 to AC1. Roger.
+FUEL CELL 2 to AC 1. Roger.
 
 [56 26 00 - 56 26 01] LMP
-Okay, it's on AC1.
+Okay, it's on AC 1.
 
 [56 27 48 - 56 27 50] CAPCOM
 OMNI Charlie please, 13.
@@ -443,7 +445,7 @@ Let's read you the lights we got on now: CRYO PRESS, FUEL CELL 1, FUEL CELL 3, M
 
 [56 39 35 - 56 39 43] CAPCOM
 Roger, we copy them. And we'd like to build up the pressure in O2 TANK 1, so turn the heaters on manually. {We'll watch the pressure for you.}
-1> Overriding the automated circuit meant the heater wouldn't disengage automatically, which could lead to overheating and bursting the tank.
+1> Overriding the automated circuit meant the heater wouldn't disengage automatically, which could lead to overheating and damage.
 
 [56 39 47 - 56 39 50] CMP
 Okay, do you want to see - we're going to get a MAIN BUS A UNDERVOLT, probably.
@@ -467,7 +469,10 @@ Okay. Bring up the fans on O2 TANK 1.
 13, Houston. We'd like you to check some circuit breakers on panel 226. CRYO O2 HEATER number 1, MAIN A. And check the three CRYO FAN MOTORS, TANK 1, three phases.
 
 [56 44 56 - 56 45 11] LMP
-Okay, Jack. 226 is configured just like it should be. I got three REAC breakers and three RAD breakers open. All the rest are closed.
+Okay, Jack. 226 is configured just like it should be. I got three {REAC breakers} and three {RAD breakers} open. All the rest are closed.
+1> The valves that closed the fuel cell reactant valves were electrically actuated. To prevent accidental closing, the circuit breakers to those valves were normally pulled.
+2> Fuel cell radiator breakers ??
+
 
 [56 45 13 - 56 45 14] CAPCOM
 Okay, Fred, Thank you.
