@@ -3,7 +3,7 @@
 hms = (hh, mm, ss) -> parse-int(hh) * 60 * 60 + parse-int(mm) * 60 + parse-int(ss)
 
 attach-line-annotation = (line, annotation) -> line.[]annotations.push(annotation)
-attach-token-annotation = (line, idx, annotation) -> line.{}tokens[idx] = annotation
+attach-token-annotation = (line, idx, annotation) -> line.[]tokens.push(annotation)
 
 parse-file = (path) ->
   result = []
