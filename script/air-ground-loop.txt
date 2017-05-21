@@ -529,7 +529,7 @@ CM pressure - RCS pressure is looking nominal. Helium pressure's up around 4000.
 And the - talkbacks on the SM RCS, I've got HELIUM 1 now are all grey. HELIUM 2 are all grey. PRIMARY PROPELLANT all grey. SECONDARY PROPELLANT, I've got two barber poles - A is barber pole, B grey, C barber pole, and D grey.
 
 [56 50 40 - 56 50 52] CDR
-Okay. On the ECS RADIATORS, barber pole is grey. On the - on the ECS, PRIMARY INDICATOR.
+Okay. On the ECS RADIATORS, ?? is grey. On the - on the ECS, PRIMARY INDICATOR.
 
 [56 50 58 - 56 51 34] LMP
 Okay, Jack. Starting at the top. Okay. The CRYO TANKS: H2 1 is reading 230 and the same for 2. Our O2 CRYO TANK 1 is - looks like it's barely holding its own at 300. And, CRYO TANK 2 is reading zip. Our quantities: H2 1 is reading 73, 2, 74.
@@ -542,4 +542,131 @@ And the EVAP OUT TEMP is 45, STEAM PRESSURE 0.17, and GLYCOL DISCHARGE 48. SUIT 
 
 [56 53 07 - 56 53 12] CAPCOM
 Excuse me, Fred. I'd like to butt in here a minute. We'd like to have THRUSTER C-1 OFF.
+
+[56 53 17 - 56 53 18] CDR
+C-1 is OFF.
+
+[56 53 19 -] CAPCOM
+And proceed -
+
+[56 53 19 - 56 53 21] LMP
+Okay.
+
+[- 56 53 23] CAPCOM
+- my last copy is SECONDARY RAD IN.
+
+[56 53 28 - 56 53 59] LMP
+Okay. Your SECONDARY RAD IN, I gave to you 70 - about 72 degrees; the RAD OUT is about 30; the GLYCOL EVAP TEMP is reading about 65; STEAM PRESSURE full scale high, GLYCOL DISCHARGE PRESSURE about 9 psi. The ACCUM - SECONDARY ACCUMULATOR is about 30 - 34 percent.
+
+[56 54 01 - 56 54 19] LMP
+Our temperatures: SUITS showing about 52 degrees; CABIN about 58 degrees; pressures, SUIT reading 4.1, CABIN at 5. PARTIAL PRESSURE CO2 is up to a little over 1, about 1.1.
+
+[56 54 21 - 56 54 47] LMP
+On the SPS side of the house, the temperature is 72 degrees, helium's reading 3500; N2 A is reading 2300; N2 B about 2450. And our ullage pressures: FUEL is reading about 165; OXIDIZER 170.
+
+[56 54 52 - 56 55 32] LMP
+Fuel cells: FUEL CELL 1, both CLOSED, they're zip; SKIN TEMP 405 degrees; CONDENSE EXHAUST is lower scale. FUEL CELL 2 - right now we've got an O2 - an H2 FLOW reading of 0.13 to 0.14, and the O2 FLOW is right now pegged full scale high although it has been varying depending on thruster activity which has also {given us MAIN BUS A undervolts} from a steady reading of about 1.1 up to full scale high.
+1> As thrusters used power when they fired and each load drops the voltage, the thrusters could trigger undervolt warnings when they engaged.
+
+[56 55 34 - 56 56 03] LMP
+The T-SKIN is about 445 and the CONDENSOR EXHAUST 17, correction, 180. Let's see if you want it on the DC indicator: FUEL CELL 1 is 0 amps; 2 is reading somewhere between 44 and about - oscillating 44 to 48, again depending on thruster activity.
+
+[56 56 04] CAPCOM
+Standby.
+
+[56 56 05 - 56 56 09] LMP
+- is 0 amps. Say again, Jack?
+
+[56 56 23] CDR
+Houston, 13.
+
+[56 56 56 - 56 56 59] LMP
+Hello, Houston; Apollo 13. How do you read?
+
+[56 57 08 - 56 57 21] CAPCOM
+Okay, 13. This is Houston. It apears to us that we're losing O2 flow through FUEL CELL 3. So, we want you to close the REAC valve on FUEL CELL 3. It looks like FUEL CELL 1 and 2 are trying to hold up okay. You copy?
+
+[56 57 26 - 56 57 39] LMP
+Are you saying FUEL CELL 1 and 2 - 1 and 2 are trying to hold up but we're leaking O2 out of FUEL CELL 3? And you want me to shut the REAC valve on FUEL CELL 3? Did I hear you right?
+
+[56 57 41 - 56 57 44] CAPCOM
+That's affirmative. Close the REAC valve on FUEL CELL 3.
+
+[56 57 48 - 56 57 55] LMP
+Okay. I'll go to the SSR page. Do you want me to go through that whole smash for fuel cell shutdown? Is that correct?
+
+[56 57 58] CAPCOM
+Standby.
+
+[56 58 25 - 56 58 37] CAPCOM
+Okay, 13. We want you to turn the inline heaters OFF on FUEL CELL 1. Then we want you to go through the fuel cell shutdown procedure on FUEL CELL 3. Read back.
+
+[56 58 40 - 56 58 49] CMP
+Okay. Shut down the inline heater on FUEL CELL 1. We're proceeding with the shutdown, special subroutine, for FUEL CELL 3.
+
+[56 58 51] CAPCOM
+That's affirmative.
+
+[56 59 13 - 56 59 14] CAPCOM
+13. OMNI Bravo, please.
+
+[56 59 55 - 56 59 56] CAPCOM
+13, Houston. Over.
+
+[56 59 59] CMP
+Go ahead.
+
+[57 00 00 - 57 00 06] CAPCOM
+Okay. You got OMNI Bravo and we'd like to have you verify that the tape recorder is OFF please.
+
+[57 00 08] CMP
+That's affirm.
+
+[57 00 11 - 57 00 22] CMP
+Okay, Jack. I'm sitting here with an 06 18 showing and I can't get rid of it. Oh, stand by just a -
+
+[57 00 49 - 57 00 51] CDR
+Okay. FUEL CELL 3 REACs are OFF, Houston.
+
+[57 00 53] CAPCOM
+Roger, Jim. Thank you.
+
+[57 01 55 - 57 02 00] CMP
+Okay, Jack. Step 2, special subroutine 1 for the fuel cell procedure has been completed.
+
+[57 02 02] CAPCOM
+Roger, thank you.
+
+[57 04 31 - 57 04 46] CMP
+Okay, Jack. I'd like to bring on jet A-4. I've got null on negative pitch control, and - negative pitch control, and right now neither DIRECT or AUTO coils.
+
+[57 04 48 - 57 04 51] CAPCOM
+Okay. You say no pitch in either DIRECT or AUTO? You want to bring on A-4?
+
+[57 04 54 - 57 04 58] CMP
+Yeah, I've got a positive pitch rate and I can't stop it.
+
+[57 04 59] CAPCOM
+Okay.
+
+[57 05 09 - 57 05 12] CAPCOM
+Okay, Jack. Bring A-4 on. Stop the pitch rate.
+
+[57 05 16] CMP
+Okay. That got it.
+
+[57 05 37 - 57 05 39] CAPCOM
+And 13, we need OMNI Charlie, please.
+
+[57 05 42 - 57 05 43] LMP
+OMNI Charlie.
+
+[57 05 47 - 57 05 52] CAPCOM
+And Freddo, we would like to have you verify fuel cell reactants talkback is barber pole.
+
+[57 05 55 - 57 06 00] LMP
+That's affirm. I watched it and it went barber pole as I threw the switch.
+
+[57 06 02] CAPCOM
+Roger.
 

@@ -2089,3 +2089,316 @@ C-1 and -2 OFF.
 [56 53 01 - 56 53 09] FLIGHT
 No. C-1. OFF. I added a word in there. Turn THRUSTER C-1 OFF.
 
+[56 53 25] FLIGHT
+EECOM, from FLIGHT.
+
+[56 53 26] EECOM
+FLIGHT, EECOM.
+
+[56 53 27 - 56 53 28] FLIGHT
+Why don't you show me where you think that problem is?
+
+[56 53 29] EECOM
+Okay. Clint's coming up.
+
+[56 55 16] EECOM
+FLIGHT, EECOM.
+
+[56 55 23] FLIGHT
+Go ahead, EECOM.
+> This is actually Glynn Lunney responding, who was preparing for his shift. He spent about half an hour before his team came on circulating the consoles and issuing a single critical question to each that had to be answered in the following hour or so.
+
+[56 55 24 - 56 55 29] EECOM
+We need to get the - make sure the inline heaters for FUEL CELLS 1 and 3 are OFF.
+
+[56 55 50] FLIGHT
+EECOM, from FLIGHT.
+
+[56 55 51] EECOM
+FLIGHT.
+
+[56 55 52 - 56 56 54] FLIGHT
+You want to shut off both reactant valves to FUEL CELL number 3?
+
+[56 55 54 - 56 55 55] EECOM
+It's dead anyway, FLIGHT.
+
+[56 55 56] FLIGHT
+Okay.
+
+[56 55 56 - 56 55 59] EECOM
+And the inline heaters OFF in FUEL CELLS 1 and 3, please.
+
+[56 56 00 - 56 56 30] FLIGHT
+What we're proposing here - supposing here, CAPCOM, is we may have a - had some problem in FUEL CELL number 3 since that's the one that's reading no O2 right now. And we may be losing our O2 through FUEL CELL number 3, the O2 manifold - inasmuch as they're manifolded together commonly. Looks like the O2 in FUEL CELL 1 and 2 seem to be trying to stay up there. And FUEL CELL 3 looks like it's the oddball here.
+
+[56 56 42 - 56 56 48] FLIGHT
+CAPCOM, let's close the REACTANT VALVE to FUEL CELL number 3.
+
+[56 56 49 - 56 56 51] CAPCOM
+Okay, close REACTANT VALVE to FUEL CELL number 3.
+
+[56 56 53 - 56 56 56] CAPCOM
+And you're saying that 1 and 2 look okay?
+
+[56 56 57 - 56 57 03] FLIGHT
+Well, what it looks like - looks like the pressure's trying to stay up there and this is the best guess we've got right now because we've got to stop this O2 flow.
+
+[56 57 04] CAPCOM
+Okay.
+
+[56 57 13] GNC
+FLIGHT, GNC.
+
+[56 57 14] FLIGHT
+GO, GNC.
+
+[56 57 15 - 56 57 17] GNC
+Some more jet reconfigurations to see if we can hold the attitude.
+
+[56 57 18] FLIGHT
+Okay.
+
+[56 57 19 - 56 57 20] GNC
+We'd like to turn Charlie 2 OFF -
+
+[56 57 20 - 56 57 26] FLIGHT
+Wait, why are we interested in holding attitude? If we're not venting why not drift for a while? That would probably be better from a standpoint of thermal control anyway, wouldn't it?
+
+[56 57 28 - 56 57 31] GNC
+I'd think we'd like to get into a controlled drift rather than just some random thing, FLIGHT.
+
+[56 57 34] FLIGHT
+Standby.
+
+[56 57 55 - 56 57 59] FLIGHT
+Do you want them to go through that whole smash for fuel cell shutdown, Sy? I assume you do - heaters and all?
+
+[56 58 01] FLIGHT
+EECOM?
+
+[56 58 03 - 56 58 05] EECOM
+That's affirm, FLIGHT. He's gone through much of it already, got the pumps off.
+
+[56 58 06 - 56 58 10] FLIGHT
+Okay. You want them to go through the whole fuel cell shutdown. Heaters and all.
+
+[56 58 10 - 56 58 12] EECOM
+Heaters, reactant valves, and the pumps of course he's already done.
+
+[56 58 13 - 56 58 14] FLIGHT
+Okay. Go ahead, CAPCOM.
+
+[56 58 15 - 56 58 18] EECOM
+And get the inline heaters OFF on FUEL CELL 1 also, FLIGHT.
+
+[56 58 19 - 56 58 21] FLIGHT
+Inline heaters OFF on FUEL CELL 1.
+
+[56 58 21 - 56 58 23] EECOM
+Roger, it'll cut the current requirement down, anyway.
+
+[56 58 55 - 56 58 57] CAPCOM
+The comms holding up? Sounds like he's going out.
+
+[56 58 58 - 56 59 01] FLIGHT
+How you doing there, INCO? From a standpoint of OMNI-switching?
+
+[56 59 02 - 56 59 03] INCO
+We might be a little better on Bravo.
+
+[56 59 04 - 56 59 10] FLIGHT
+Okay. Can you figure me out some way to keep communications and yet cut down a bit on the load? You might talk to EECOM on it.
+
+[56 59 11 - 56 59 13] INCO
+Okay. We can turn the tape recorder OFF.
+
+[56 59 14] FLIGHT
+EECOM, from FLIGHT.
+
+[56 59 15] EECOM
+FLIGHT, EECOM.
+
+[56 59 16 - 56 59 17] FLIGHT
+You don't need the tape recorder, do you?
+
+[56 59 17 - 56 59 18] EECOM
+Heck, no. Get it off.
+
+[56 59 18] FLIGHT
+Let's get it off.
+
+[56 59 21 - 56 59 24] INCO
+It may be already off, but that's one thing we don't need.
+
+[56 59 24 - 56 59 30] EECOM
+Let's go down the list as much of that INCO stuff as we can get, FLIGHT. I think that's about the one biggie right there.
+
+[56 59 30 - 56 59 33] INCO
+Is that the only thing we can give up? We turn the POWER AMPS OFF, we won't get high-bitrate.
+
+[56 59 35] FLIGHT
+CAPCOM, from FLIGHT.
+
+[56 59 36] CAPCOM
+Go.
+
+[56 59 37 - 56 59 39] FLIGHT
+Let's also verify tape recorders OFF, please.
+
+[56 59 40 - 56 59 41] CAPCOM
+Okay, I think we -
+
+[56 59 42 - 56 59 48] FLIGHT
+I don't think we got down that far on the list, did we? We went through the BMAGs and that was lights - BMAGs and lights, and I think we stopped right there.
+
+[56 59 50 - 56 59 54] EECOM
+Yeah, that's affirm, FLIGHT. Tape record - we'll skip a step and go tape recorder OFF.
+
+[57 00 12 - 57 00 14] RECOVERY
+AFD, meet RECOVERY. RECOVERY loop.
+
+[57 00 18 - 57 00 19] FLIGHT
+What was that, CAPCOM?
+
+[57 00 22 - 57 00 23] GUIDO
+We copy, FLIGHT.
+
+[57 00 23 - 57 00 24] FLIGHT
+What was that, GUIDANCE?
+
+[57 00 25 - 57 00 28] GUIDO
+He had an 06 18 he couldn't get rid of; he's got rid of it now.
+
+[57 01 04] FDO
+FLIGHT, FDO.
+
+[57 01 17 - 57 01 26] CAPCOM
+Okay, FLIGHT. I had them reading off a lot of gauge readings, and we got over to FUEL CELL 3. And I hope your people were copying all this down.
+
+[57 01 27 - 57 01 32] FLIGHT
+Did you get some kind of master? We got it on tape, I'm sure we can get it off the tape.
+
+[57 01 32 - 57 01 36] CAPCOM
+Alright. That's affirm. I'd say I have 95 percent of the ones he read.
+
+[57 01 35] FLIGHT
+Okay.
+
+[57 02 18] FDO
+FLIGHT, FDO.
+
+[57 02 19] FLIGHT
+Go, FDO.
+
+[57 02 20 - 57 02 24] FDO
+When the systems men can stand it, I need two minutes for a checkpoint to save all this data.
+
+[57 02 26 - 57 02 32] FLIGHT
+I don't see why we couldn't - EECOM, GNC, can you stand a checkpoint right now?
+
+[57 02 36 - 57 02 38] EECOM
+It only takes a minute, I guess I'll have to if we need it, FLIGHT.
+
+[57 02 38] GNC
+Go ahead, FLIGHT.
+
+[57 02 39 - 57 02 41] FLIGHT
+Yeah, I think it'd be good to get a checkpoint. Go ahead.
+
+[57 02 42 - 57 02 47] FLIGHT
+EECOM, have you deduced anything - have you seen your REACTANT VALVES go off? You seen flow cease?
+
+[57 02 51] EECOM
+Can't tell, FLIGHT.
+
+[57 02 52] FLIGHT
+Yeah.
+
+[57 02 52 - 57 02 58] EECOM
+They were open-circuited, and the pressure - still appears to be going down.
+
+[57 02 59] FLIGHT
+Yup.
+
+[57 03 27] FDO??
+Negative, FLIGHT.
+
+[57 03 37] EECOM
+FLIGHT, EECOM.
+
+[57 03 38] FLIGHT
+Go, EECOM.
+
+[57 03 39 - 57 03 46] EECOM
+We'd better confirm that the FUEL CELL 3 REACTANT VALVE circuit breaker on panel 226 was closed when he shut those.
+
+[57 03 47 - 57 03 50] FLIGHT
+FUEL CELL 3 REACTANT circuit breaker and what panel?
+
+[57 03 51] EECOM
+226.
+
+[57 03 54] EECOM
+They're normally open.
+> To avoid accidental shutoff of the reactant valves, the electrically activated shutoff valves were normally open-circuited and had to be closed in order for the shutoff switch to actually do anything.
+
+[57 03 58 - 57 03 59] FLIGHT
+Okay, good idea.
+
+[57 04 00 -] CAPCOM
+You want them - close the circuit breaker -
+
+[57 04 02] FLIGHT
+Yeah.
+
+[- 57 04 03] CAPCOM
+- on the valve, and then -
+
+[57 04 03] FLIGHT
+Yeah.
+
+[57 04 05 - 57 04 07] EECOM
+Yeah, FLIGHT; he should have gotten a barber pole on that.
+
+[57 04 17 - 57 04 21] FLIGHT
+Yeah, wouldn't he get a barber pole when he turned the reactants off? EECOM?
+
+[57 04 22] EECOM
+Affirm, FLIGHT.
+
+[57 04 24 - 57 04 26] FLIGHT
+Even with the circuit breaker open?
+
+[57 04 26] EECOM
+No -
+
+[57 04 26 - 57 04 30] FLIGHT
+No. Okay, so he ought to know that. We can just verify that he got a -
+> The rest of the sentence here would have been "barber pole."
+
+[57 04 35 - 57 04 36] FDO
+Okay, FLIGHT. We have our checkpoint.
+
+[57 04 37 - 57 04 49] FLIGHT
+Okay. All flight controllers, I'd suggest you start handing over, because I think a fresh team's probably going to be thinking clearer. I think the rest of us can continue working in some other function in support of the new team coming on.
+
+[57 04 49 - 57 04 50] GNC
+Go on thruster A-4, FLIGHT.
+
+[57 04 51 - 57 04 53] FLIGHT
+Okay. Go on thruster A-4, CAPCOM.
+
+[57 04 52] INCO
+OMNI Charlie, FLIGHT.
+
+[57 04 53 - 57 04 54] FLIGHT
+Roger. And OMNI Charlie.
+
+[57 06 13 - 57 06 50] FLIGHT
+Okay. All flight controllers, I'm handing over to Glynn. I assume the majority of all the team guys are pretty much briefed and up to speed as best we can. Now what I'd suggest is the {white team} do two things: they go over the DLOGs - okay - let me go back over this again. We're handing over to Glynn. I'd suggest the white team goes back and starts going through the DLOG of the data. In other words, let's see if we can go back to the initial conditions and work on that problem and see if we can find out what happened and we may find some better clues as to what to do and let the fresh guys come on and try to figure out where do we go from here.
+1> Kranz's team was the white team. Glynn headed up black team.
+
+[57 06 53 - 57 06 56] FLIGHT
+And the DLOG is in way now. Roger.
+

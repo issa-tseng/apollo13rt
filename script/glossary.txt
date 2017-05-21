@@ -1,4 +1,7 @@
 [technical]
+V06 N18 (06 18)
+Appears to be a notice/error normally shown during LM extraction. I'm not sure why it would be popping up here. Certainly it is some kind of attitude/navigational alarm.
+
 210 (210s)
 This referred to big 210-foot antennas on the ground, which were sensitive enough to receive high-bitrate data from the weaker omnidirectional antennas.
 
@@ -28,6 +31,9 @@ The two Body Mounted Attitude Gyros served as a backup system to the IMU, tracki
 
 BAT BUS TIE
 The batteries had their own buses A and B. When they were wanted in use, the battery buses would be tied over to the main buses.
+
+Checkpoint
+A tape of the data coming down from Apollo would be periodically recorded for safekeeping.
 
 CMC
 Command Module Computer: the AGC that lives in the CM.
@@ -160,6 +166,9 @@ This was the hypergolic main engine on the Service Module. It burned Aerozine wi
 
 Surge Tank
 A reserve tank of pressurized O2 on the CM itself. This meant it stay on-board and could be used through Earth re-entry.
+
+SSR
+Special subroutine. In other contexts, it can also mean the Staff Support Room in Mission Control, where each flight controller's team worked with them over their own loop.
 
 Systems test
 Not every measurement was available directly on a panel gauge or to the telemetry systems. Some readings had to be taken manually off a panel-mounted voltmeter one at a time.
