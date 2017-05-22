@@ -300,6 +300,7 @@ a
       float: left
       height: 100%
       margin-right: 2em
+      transition: 0.3s opacity
       width: 33%
 
       .script
@@ -307,6 +308,9 @@ a
 
         .script-lines
           height: calc(100% - 2.5em)
+
+    &.inactive > div
+      opacity: 0
 
     .player-glossary
       float: none

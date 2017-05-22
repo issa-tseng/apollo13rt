@@ -288,6 +288,7 @@ class PlayerView extends DomView
     find('.player-scrubber-bubble .ss').text(from(\scrubber.mouse.ss).map(pad))
 
     find('.player-scripts').css(\height, from(\height).map (px))
+    find('.player-scripts').classed(\inactive, from(\height).map (< 35))
 
     find('.player-script-flight').render(from(\loops.flight))
     find('.player-script-air-ground').render(from(\loops.air_ground))
