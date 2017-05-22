@@ -104,7 +104,7 @@ class TranscriptView extends DomView
 
     # turn off auto-scrolling as intelligently as we can.
     line-container.on(\scroll, ->
-      transcript.set(\auto_scroll, false) if get-time() > (relinquished + 250) # complete fires early
+      transcript.set(\auto_scroll, false) if get-time() > (relinquished + 400) # complete fires early
     )
     line-container.on(\wheel, ->
       line-container.finish()
