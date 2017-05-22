@@ -83,7 +83,7 @@ class TranscriptView extends DomView
     get-offset = (id) -> dom.find(".line-#id").get(0).offsetTop
     scroll-to = (scroll-top) ->
       relinquished := max-int
-      line-container.finish().animate({ scroll-top }, { complete: (-> relinquished := get-time()) })
+      line-container.stop(true).animate({ scroll-top }, { complete: (-> relinquished := get-time()) })
 
     debounce(transcript.watch(\top_line), 50).react((line) ->
       id = line?._id
@@ -104,7 +104,7 @@ class TranscriptView extends DomView
 
     # turn off auto-scrolling as intelligently as we can.
     line-container.on(\scroll, ->
-      transcript.set(\auto_scroll, false) if get-time() > (relinquished + 400) # complete fires early
+      transcript.set(\auto_scroll, false) if get-time() > (relinquished + 200) # complete fires early
     )
     line-container.on(\wheel, ->
       line-container.finish()
