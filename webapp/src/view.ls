@@ -158,15 +158,15 @@ class TermView extends DomView
           else if hidden
             false
           else
-            terms.any(f)
+            terms.find(f)?
         )
     )
 
     find('.term-name .name').text(from(\term))
     find('.term-name .synonyms').render(
-      from(\synonyms)
-        .and.app(\global).watch(\player).watch(\nearby_terms)
-        .all.map((synonyms, nearby) -> synonyms.filter((term) -> nearby.any (is term)))
+      from(\synonyms).and.app(\global).watch(\player).all.map((synonyms, player) ->
+        synonyms.filter((term) -> player.watch(\nearby_terms).map((nearby) -> term in nearby))
+      )
     )
 
     find('.term-edit').attr(\href, from(\line).map(-> "#base-term-edit-url\#L#it"))

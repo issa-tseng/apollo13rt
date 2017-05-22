@@ -1,4 +1,4 @@
-{ Model, attribute, from, List } = require(\janus)
+{ Model, attribute, from, List, Set, Varying } = require(\janus)
 { debounce } = require(\janus-stdlib).util.varying
 { floor, abs } = Math
 { flatten, unique } = require(\prelude-ls)
@@ -137,13 +137,11 @@ class Transcript extends Model
   ))
   @bind(\top_line, from(\lines).and(\target_idx).all.flatMap((lines, idx) -> lines?.watchAt(idx)))
 
-  @bind(\nearby_ids, from(\lines).and(\target_id).all.map((lines, id) ->
-    return unless lines? and id?
-    # TODO: object constancy?
-    new List([ x for x from id - 2 til id + 2 ])
-  ))
+  # these two work on primitives as they're only ever used as direct lookups.
+  @bind(\nearby_ids, from(\target_id).flatMap((id = 0) -> [ x for x from id - 2 til id + 2 ]))
   @bind(\nearby_terms, from(\nearby_ids).and(\lookup).all.map((ids, lookup) ->
-    ids?.flatMap((id) -> lookup?.watch(id.toString())).flatten()
+    return [] unless ids? and lookup?
+    [ l.list for id in ids when (l = lookup.get(id))? ] |> flatten
   ))
 
   _initialize: ->
