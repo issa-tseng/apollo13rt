@@ -3,7 +3,7 @@
 $ = require(\jquery)
 marked = require(\marked)
 
-{ LineVM, Transcript, Term, Glossary, Player } = require('./model')
+{ Line, Transcript, Term, Glossary, Player } = require('./model')
 
 defer = (f) -> set-timeout(f, 0)
 clamp = (min, max, x) --> if x < min then min else if x > max then max else x
@@ -40,28 +40,21 @@ class LineView extends DomView
   ')
   @_dom = -> @_fragment.clone()
   @_template = template(
-    find('.line').classGroup(\line-, from(\line).watch(\id))
-    find('.line').classed(\active,
-      from(\active)
-        .and(\line).watch(\id)
-        .and(\transcript).watch(\active_ids)
-        .all.flatMap((active, id, active-ids) ->
-          active or active-ids?.filter(-> it is id).watchLength().map (> 0)
-        )
-    )
+    find('.line').classGroup(\line-, from(\id))
+    find('.line').classed(\active, from(\active))
 
-    find('.line-timestamp').classed(\hide, from(\line).watch(\start.epoch).map((x) -> !x?))
-    find('.hh').text(from(\line).watch(\start.hh))
-    find('.mm').text(from(\line).watch(\start.mm).map(pad))
-    find('.ss').text(from(\line).watch(\start.ss).map(pad))
+    find('.line-timestamp').classed(\hide, from(\start.epoch).map((x) -> !x?))
+    find('.hh').text(from(\start.hh))
+    find('.mm').text(from(\start.mm).map(pad))
+    find('.ss').text(from(\start.ss).map(pad))
 
-    find('.line-edit').attr(\href, from(\transcript).watch(\edit_url).and(\line).watch(\line).all.map((base, line) -> "#base\#L#line"))
+    find('.line-edit').attr(\href, from(\line).map((line) -> "\#L#line"))
 
-    find('.line-source').text(from(\line).watch(\source))
-    find('.line-contents').html(from(\line).watch(\message))
+    find('.line-source').text(from(\source))
+    find('.line-contents').html(from(\message))
 
-    find('.line-token-annotations').render(from(\line).watch(\tokens))
-    find('.line-whole-annotations').render(from(\line).watch(\annotations))
+    find('.line-token-annotations').render(from(\tokens))
+    find('.line-whole-annotations').render(from(\annotations))
   )
 
 class TranscriptView extends DomView
@@ -76,7 +69,7 @@ class TranscriptView extends DomView
   ')
   @_template = template(
       find('p').text(from(\name))
-      find('.script-lines').render(from(\line_vms))
+      find('.script-lines').render(from(\lines))
       find('.script-scroll-indicator').classed(\active, from(\auto_scroll).map (not))
   )
   _wireEvents: ->
@@ -93,7 +86,7 @@ class TranscriptView extends DomView
       line-container.finish().animate({ scroll-top }, { complete: (-> relinquished := get-time()) })
 
     debounce(transcript.watch(\top_line), 50).react((line) ->
-      id = line?.get(\line).get(\id)
+      id = line?._id
       return unless id?
       offset = get-offset(id)
 
@@ -106,7 +99,7 @@ class TranscriptView extends DomView
 
     # watch for autoscroll rising edge and trip scroll.
     transcript.watch(\auto_scroll).react((auto) ->
-      id |> get-offset |> (- 50) |> scroll-to if auto and (id = transcript.get(\top_line)?.get(\line).get(\id))?
+      id |> get-offset |> (- 50) |> scroll-to if auto and (id = transcript.get(\top_line)?._id)?
     )
 
     # turn off auto-scrolling as intelligently as we can.
@@ -119,11 +112,16 @@ class TranscriptView extends DomView
       null # return value is significant.
     )
 
-    # do this via delegate here once rather for each line for perf.
+    # do these via delegate here once rather for each line for perf.
     dom.on(\click, '.line-timestamp', (event) ->
       event.preventDefault()
-      line-vm = $(event.target).closest('.line').data(\view).subject
-      transcript.get(\player).epoch(line-vm.get(\line).get(\start.epoch))
+      line = $(event.target).closest('.line').data(\view).subject
+      transcript.get(\player).epoch(line.get(\start.epoch))
+      transcript.set(\auto_scroll, true)
+    )
+    dom.on(\mouseenter, '.line-edit', ->
+      return if this.hostname isnt window.location.hostname
+      this.href = transcript.get(\edit_url) + this.hash
     )
 
     indicator.on(\click, -> transcript.set(\auto_scroll, true))
@@ -350,7 +348,7 @@ module.exports = {
     library.register(Transcript, TranscriptView)
     library.register(Term, TermView)
     library.register(Glossary, GlossaryView)
-    library.register(LineVM, LineView)
+    library.register(Line, LineView)
     library.register(Player, PlayerView)
 }
 

@@ -33,19 +33,13 @@ class Line extends Model
     # massage the description for annotations.
     this.set(\message, this.get(\message).replace(/\{([^}]+)\}/g, (_, text) -> "<span class=\"token-annotation\">#text</span>"))
 
-  contains: (epoch) ->
-    (start-epoch = this.get(\start.epoch))? and (start-epoch <= epoch) and (this.get(\end.epoch) >= epoch)
-
-class LineVM extends Model
-  @bind(\active, from(\player).watch(\timestamp.epoch).and(\line).all.map((epoch, line) ->
-    line.contains(epoch)
-  ))
-
-  _initialize: ->
     # perf:
-    this._start = this.get(\line).get(\start.epoch)
-    this._end = this.get(\line).get(\end.epoch)
-    this._id = this.get(\line).get(\id)
+    this._start = this.get(\start.epoch)
+    this._end = this.get(\end.epoch)
+    this._id = this.get(\id)
+
+  contains_: (epoch) ->
+    (start-epoch = this.get(\start.epoch))? and (start-epoch <= epoch) and (this.get(\end.epoch) >= epoch)
 
 class Lines extends List
   @modelClass = Line
@@ -60,35 +54,33 @@ class Transcript extends Model
     default: -> true
   )
 
-  @bind(\line_vms, from(\lines).and(\player).and.self().all.map((rl, player, transcript) ->
-    rl.map((line) -> new LineVM({ line, player, transcript })) if rl? and player?
-  ))
-
   # the index of the immediate-next line to be played regardless of active status.
   # determined by binary search for performance, unless the delta is small, in which
   # case we do a linear walk.
-  @bind(\cued_idx, from(\line_vms).and(\player).all.flatMap((lvms, player) ->
+  @bind(\cued_idx, from(\lines).and(\player).all.flatMap((lines, player) ->
     last-idx = null
     last-epoch = -999 # apparently null is zero.
     player?.watch(\timestamp.epoch).map((epoch) ->
       return unless epoch?
 
-      idx = if abs(epoch - last-epoch) <= 30 then last-idx else (lvms.length / 2 |> floor)
+      idx = if abs(epoch - last-epoch) <= 30 then last-idx else (lines.length / 2 |> floor)
       low = 0
-      high = lvms.length - 1
+      high = lines.length - 1
       loop
-        target-start = lvms.list[idx]._start
-        target-end = lvms.list[idx]._end
+        break if idx + 1 is lines.length
+
+        target-start = lines.list[idx]._start
+        target-end = lines.list[idx]._end
 
         unless target-start?
           idx -= 1
           continue
 
         previous-idx = idx - 1
-        until lvms.list[previous-idx]?._end? or previous-idx <= 0
+        until lines.list[previous-idx]?._end? or previous-idx <= 0
           previous-idx -= 1
 
-        if (target-start >= epoch) and ((idx is 0) or (lvms.list[previous-idx]._start < epoch))
+        if (target-start >= epoch) and ((idx is 0) or (lines.list[previous-idx]._start < epoch))
           break
         else if low is high
           break
@@ -96,11 +88,12 @@ class Transcript extends Model
           if target-start < epoch
             do
               idx += 1
-            until lvms.list[idx]._start?
+              break if idx is high
+            until lines.list[idx]._start?
           else
             do
               idx -= 1
-            until lvms.list[idx]._start?
+            until lines.list[idx]._start?
         else if target-start < epoch
           low = idx + 1
           idx = ((high - low) / 2 |> floor) + low
@@ -118,17 +111,17 @@ class Transcript extends Model
   # now that we have the cued idx, we potentially migrate backwards until we have
   # one of the earliest still-playing line or the next line to be played, in that
   # order of preference.
-  @bind(\target_idx, from(\line_vms).and(\cued_idx).and(\player).watch(\timestamp.epoch).all.map((lvms, idx, epoch) ->
-    return unless idx? # implies existence of lvms.
+  @bind(\target_idx, from(\lines).and(\cued_idx).and(\player).watch(\timestamp.epoch).all.map((lines, idx, epoch) ->
+    return unless idx? # implies existence of lines.
 
     candidate-idx = idx - 1
     loop
       break if candidate-idx < 0
 
-      candidate-end = lvms.list[candidate-idx]._end
+      candidate-end = lines.list[candidate-idx]._end
       if !candidate-end?
-        search-id = lvms.list[candidate-idx]._id
-        until (lvms.list[candidate-idx]._id is search-id) and lvms.list[candidate-idx]._end?
+        search-id = lines.list[candidate-idx]._id
+        until (lines.list[candidate-idx]._id is search-id) and lines.list[candidate-idx]._end?
           candidate-idx -= 1
       else if candidate-end >= epoch
         idx = candidate-idx
@@ -136,20 +129,16 @@ class Transcript extends Model
       else
         break
 
-    idx -= 1 unless (idx is 0) or (lvms.list[idx]._start <= epoch)
+    idx -= 1 unless (idx is 0) or (lines.list[idx]._start <= epoch)
     idx
   ))
-  @bind(\target_id, from(\line_vms).and(\target_idx).all.flatMap((lvms, idx) ->
-    lvms?.watchAt(idx).flatMap (?._id)
+  @bind(\target_id, from(\lines).and(\target_idx).all.flatMap((lines, idx) ->
+    lines?.watchAt(idx).flatMap (?._id)
   ))
+  @bind(\top_line, from(\lines).and(\target_idx).all.flatMap((lines, idx) -> lines?.watchAt(idx)))
 
-  @bind(\active_lines, from(\line_vms).map((lvms) -> lvms?.filter (.watch(\active))))
-  @bind(\active_ids, from(\active_lines).map((active) -> active?.map (._id))) # these never change so we just get.
-
-  @bind(\top_line, from(\line_vms).and(\target_idx).all.flatMap((lvms, idx) -> lvms?.watchAt(idx)))
-
-  @bind(\nearby_ids, from(\line_vms).and(\target_id).all.map((lvms, id) ->
-    return unless lvms? and id?
+  @bind(\nearby_ids, from(\lines).and(\target_id).all.map((lines, id) ->
+    return unless lines? and id?
     # TODO: object constancy?
     new List([ x for x from id - 2 til id + 2 ])
   ))
@@ -159,6 +148,40 @@ class Transcript extends Model
 
   _initialize: ->
     transcript = this
+
+    do
+      # when our target_idx changes, push active state down into lines.
+      # but we can't do that until we have a player:
+      (player) <- transcript.watch(\player).reactNow()
+      return unless player?
+
+      # now watch idx, but also update on epoch-change:
+      was-active = {}
+      last-idx = -1
+      from(transcript.watch(\target_idx)).and(player.watch(\timestamp.epoch)).all.plain().reactNow(([ idx, epoch ]) ->
+        return unless idx? and epoch?
+        return if idx is last-idx
+
+        # first clear out active lines that are no longer.
+        for wa-idx, line of was-active when not line.contains_(epoch)
+          line.set(\active, false)
+          delete was-active[wa-idx]
+
+        # now add lines that should be active. go until we have four inactive in a row.
+        lines = transcript.get(\lines).list
+        misses = 0
+        while misses < 4
+          line = lines[idx]
+          if line.contains_(epoch)
+            unless was-active[idx]?
+              line.set(\active, true)
+              was-active[idx] = line
+          else
+            misses += 1
+          idx += 1
+
+        last-idx := idx
+      )
 
   bindToPlayer: (player) -> this.set(\player, player)
 
@@ -289,5 +312,5 @@ class Player extends Model
     this.get(\audio.player).get(0).currentTime = (epoch - this.get(\timestamp.offset))
 
 
-module.exports = { Global, Line, LineVM, Lines, Transcript, Term, Lookup, Glossary, Player }
+module.exports = { Global, Line, Lines, Transcript, Term, Lookup, Glossary, Player }
 
