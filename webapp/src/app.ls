@@ -88,7 +88,7 @@ $document.on(\mouseenter, '.glossary-term:not(.active)', ->
 
   floating-glossary.appendTo($('body'))
   target-offset = initiator.offset()
-  floating-glossary.css(\left, target-offset.left - floating-glossary.outerWidth())
+  floating-glossary.css(\left, Math.max(0, target-offset.left - floating-glossary.outerWidth()))
   floating-glossary.css(\top, target-offset.top)
 
   initiator.addClass(\active)
