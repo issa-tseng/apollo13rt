@@ -17,7 +17,7 @@ lib/apollo13rt.js: lib/app.js
 lib/index.html: src/index.html lib
 	cp src/index.html lib/
 
-lib/styles.css: src/styles.sass lib
+lib/styles.css: src/styles.sass src/styles/*.sass lib
 	node node_modules/node-sass/bin/node-sass --output-style compressed $< > $@
 
 lib/assets: lib
@@ -34,6 +34,8 @@ node_modules:
 	npm install
 
 build: $(LIB) lib/index.html lib/styles.css lib/apollo13rt.js $(ASSETS_LIB) lib/assets/flight-director-loop.json lib/assets/flight-director-loop.lookup.json lib/assets/air-ground-loop.json lib/assets/air-ground-loop.lookup.json lib/assets/glossary.json lib/assets/glossary.lookup.json
+
+quick: lib/index.html lib/styles.css $(ASSETS_LIB)
 
 clean:
 	rm -rf lib

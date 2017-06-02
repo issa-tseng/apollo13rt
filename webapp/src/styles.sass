@@ -1,56 +1,7 @@
 
-// K
-
-$sans: helvetica, arial, sans-serif
-$monospace: "courier new", courier, monospace
-
-$color-accent: #1fce17
-$color-accent-inactive: #bbb
-$color-accent-text: #25af1f
-$color-warning: #c31
-$color-tooltip-bg: rgba(0, 0, 0, 0.6)
-$color-definition-bg: rgba(0, 0, 0, 0.8)
-$color-light-border: #ddd
-
-$border-annotation: 1px dotted #777
-
-$icon-play: "\e900"
-$icon-pause: "\e901"
-$icon-hopback: "\e902"
-$icon-leapback: "\e903"
-$icon-hopforward: "\e904"
-$icon-leapforward: "\e905"
-$icon-edit: "\e906"
-$icon-link: "\e907"
-$icon-close: "\e908"
-$icon-on: "\e909"
-$icon-off: "\e90a"
-$icon-sync: "\e90b"
-
+@import 'styles/common.sass'
 
 // UTIL
-
-@mixin fill
-  bottom: 0
-  left: 0
-  position: absolute
-  top: 0
-  right: 0
-
-@mixin reify
-  content: ''
-  display: block
-
-@mixin icon
-  font-family: 'webplayer' !important
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  font-style: normal
-  font-weight: normal
-  font-variant: normal
-  line-height: 1
-  speak: none
-  text-transform: none
 
 @mixin bubble
   background: $color-tooltip-bg
@@ -613,6 +564,30 @@ header
       .glossary-term
         border-bottom-color: #fff
 
+#exhibits
+  padding-bottom: 3em
+  h2
+    border-bottom: 1px solid $color-accent
+    color: #222
+    font-family: $monospace
+    font-size: 3em
+    font-weight: normal
+    margin-top: 1em
+    padding: 0.3em 1em
+
+  // TODO: classname
+  > ul > li
+    background: #f4f4f4
+    border-bottom: 1px solid $color-light-border
+    padding: 1em 3em
+
+    h3
+      color: #444
+      font-family: $sans
+      font-size: 1.4em
+      font-weight: normal
+
+
 @media (max-width: 1000px)
   .player .player-scripts
     padding-bottom: 17em
@@ -630,4 +605,6 @@ header
       height: 15.5em
       margin-left: 7.5em
       margin-top: 1.5em
+
+@import 'styles/panels.sass'
 

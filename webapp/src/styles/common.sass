@@ -1,0 +1,54 @@
+
+// K
+
+$sans: helvetica, arial, sans-serif
+$monospace: "courier new", courier, monospace
+
+$color-accent: #1fce17
+$color-accent-inactive: #bbb
+$color-accent-text: #25af1f
+$color-warning: #c31
+$color-tooltip-bg: rgba(0, 0, 0, 0.6)
+$color-definition-bg: rgba(0, 0, 0, 0.8)
+$color-light-border: #ddd
+
+$border-annotation: 1px dotted #777
+
+$icon-play: "\e900"
+$icon-pause: "\e901"
+$icon-hopback: "\e902"
+$icon-leapback: "\e903"
+$icon-hopforward: "\e904"
+$icon-leapforward: "\e905"
+$icon-edit: "\e906"
+$icon-link: "\e907"
+$icon-close: "\e908"
+$icon-on: "\e909"
+$icon-off: "\e90a"
+$icon-sync: "\e90b"
+
+
+// UTIL
+
+@mixin fill
+  bottom: 0
+  left: 0
+  position: absolute
+  top: 0
+  right: 0
+
+@mixin reify
+  content: ''
+  display: block
+
+@mixin icon
+  font-family: 'webplayer' !important
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  line-height: 1
+  speak: none
+  text-transform: none
+
