@@ -1,0 +1,1580 @@
+
+@import 'common.sass'
+
+// K
+$bank-height: 66px
+$talkback-bank-height: 36px
+$rail-width: 4px
+$rail-outer-width: 6px
+$switch-width: 52px
+$switch-outer-width: $switch-width + $rail-outer-width
+$gauge-halfwidth: 56px
+
+$label-padding-v: 4px
+$label-padding-h: 12px
+
+$color-bracket: #666
+$color-gauge: #4d4d4d
+$color-lamp: #e4e1da
+
+// UTIL
+@mixin rot($deg)
+  transform: rotate(#{$deg}deg)
+  span
+    transform: rotate(#{-$deg}deg)
+
+// GENERAL
+.panel-wrapper
+  position: relative
+  width: 5000px
+
+.panel
+  .bank
+    height: $bank-height
+    position: absolute
+
+    &.talkbacks
+      height: $talkback-bank-height
+
+    div
+      background-repeat: no-repeat
+      background-position: center center
+      float: left
+      height: $bank-height
+      margin-left: $rail-outer-width
+      position: relative
+      width: $switch-width
+
+      &:last-child
+        margin-right: $rail-outer-width
+
+      &:before, &:last-child:after
+        @include reify
+        background: #eee
+        border: 1px solid #aaa
+        border-radius: 999px
+        height: 64px
+        position: absolute
+        top: 0
+        width: $rail-width
+
+      &:before
+        right: 100%
+      &:last-child:after
+        left: 100%
+
+      &.panel-toggle2
+        background-image: url(/assets/panel-toggle2.svg)
+        background-size: 50px 50px
+      &.panel-toggle3
+        background-image: url(/assets/panel-toggle3.svg)
+        background-size: 50px 50px
+      &.panel-togglelong
+        background-image: url(/assets/panel-togglelong.svg)
+        background-size: 50px 65px
+      &.panel-valve
+        background-image: url(/assets/panel-valve.svg)
+        background-size: 50px 50px
+        &:before, &:after
+          display: none
+      &.panel-plug
+        .glyph
+          background-image: url(/assets/panel-plug.svg)
+          background-size: 50px 65px
+          display: block
+          height: 65px
+          margin-top: 8px
+          width: 50px
+      &.panel-talkback
+        height: $talkback-bank-height
+        margin: 0
+        width: $switch-outer-width
+        &:before, &:after
+          display: none
+        .glyph
+          background: #ccc
+          border: 1px solid #666
+          height: auto
+          margin: 5px 16px
+          padding: 3px
+          width: auto
+          &:before
+            @include reify
+            background: #f7f7f7 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAL0lEQVQYV2NkQAX/oVxGEA0moABFAlkSQwImiVUCWRLZeLg12ARBkmDTsOqAuRgAEpsIBusLqaYAAAAASUVORK5CYII=)
+            border: 1px solid #888
+            border-radius: 0
+            height: 16px
+            position: static
+            width: 16px
+          &:after
+            @include reify
+            @include fill
+            background: #aaa
+            border: 1px solid #666
+            bottom: 0
+            height: 7px
+            margin: 3px
+
+      .guard
+        background-image: url(/assets/panel-guard.svg)
+        background-size: 50px 80px
+        display: block
+        height: 80px
+        left: 1px
+        top: -7px
+        width: 50px
+
+      span
+        position: absolute
+        text-transform: uppercase
+      .upper, .lower
+        text-align: center
+        width: 100%
+      .upper
+        bottom: calc(100% + #{$label-padding-v})
+      .lower
+        top: calc(100% + #{$label-padding-v})
+      .left, .left-upper, .left-lower
+        right: calc(100% + #{$label-padding-h})
+        text-align: right
+      .right, .right-upper, .right-lower
+        left: calc(100% + #{$label-padding-h})
+      .left, .right
+        top: calc(50% - 0.6em)
+      .left-upper, .right-upper
+        top: 0
+      .left-lower, .right-lower
+        bottom: 0
+
+    .bank-header
+      margin-left: 3px
+      position: absolute
+      text-align: center
+      text-transform: uppercase
+
+      span
+        background-color: #e6e6e6
+        padding: 0 3px
+        position: relative
+        z-index: 2
+
+      &:before
+        @include reify
+        @include fill
+        border: 1px solid $color-bracket
+        border-bottom: none
+        top: 50%
+
+      &.header-width-1, &.nobracket
+        &:before
+          display: none
+
+    .nowrap
+      white-space: nowrap
+    .twoline
+      margin-top: -0.6em
+    .natcase
+      text-transform: none
+    .condense
+      letter-spacing: -0.08em
+    .outline
+      border: 1px solid $color-bracket
+    .vert
+      line-height: 1em
+      margin-top: -1em
+      word-break: break-all
+
+    $arrow-length: 2em
+    .arrow-left
+      padding-left: $arrow-length
+      position: relative
+      &:before
+        @include reify
+        border-top: 1px solid $color-bracket
+        right: 100%
+        position: absolute
+        top: 50%
+        width: $arrow-length
+      &:after
+        @include reify
+        border: 4px solid transparent
+        border-right-color: $color-bracket
+        position: absolute
+        right: calc(100% + #{$arrow-length})
+        top: calc(50% - 4px)
+    .arrow-right
+      padding-right: $arrow-length
+      position: relative
+      &:before
+        @include reify
+        border-top: 1px solid $color-bracket
+        left: 100%
+        position: absolute
+        top: 50%
+        width: $arrow-length
+      &:after
+        @include reify
+        border: 4px solid transparent
+        border-left-color: $color-bracket
+        position: absolute
+        left: calc(100% + #{$arrow-length})
+        top: calc(50% - 4px)
+
+    @for $idx from 1 to 16
+      .header-row-#{$idx}
+        bottom: calc(100% + #{$label-padding-v} + #{12px * ($idx - 1)})
+      .header-col-#{$idx}
+        left: #{$switch-outer-width * ($idx - 1)}
+      .header-width-#{$idx}
+        width: #{($switch-outer-width * $idx) - 1px}
+      .footer-row-#{$idx}
+        top: calc(100% + #{$label-padding-v} + #{12px * ($idx - 1)})
+
+        &:before
+          border-bottom: 1px solid $color-bracket
+          border-top: none
+          bottom: 50%
+          top: 0
+    @for $idx from 1 to 16
+      .header-col-g#{$idx}
+        left: #{$gauge-halfwidth * ($idx - 1)}
+        &.header-width-g1
+          @if $idx % 2 == 0
+            margin-left: -2px
+            text-align: right
+          @else
+            margin-left: 5px
+            text-align: left
+      .header-width-g#{$idx}
+        width: #{($gauge-halfwidth * $idx) - 1px}
+
+    .header-row-1:before, .footer-row-1:before
+      display: none
+    .header-row-1.bracket:before
+      display: block
+
+  .dial
+    height: 125px
+    position: absolute
+    width: 125px
+
+    .glyph
+      background-image: url(/assets/panel-dial.svg)
+      background-size: 125px 125px
+      height: 100%
+      width: 100%
+
+    .label
+      text-transform: uppercase
+
+    $dial-label-padding-v: 2px
+    .label.upper, .label.lower
+      left: 0
+      position: absolute
+      text-align: center
+      width: 125px
+    .label.upper
+      bottom: calc(100% + #{$dial-label-padding-v})
+      &.far
+        bottom: calc(100% + 16px + #{$dial-label-padding-v})
+    .label.lower
+      top: calc(100% + #{$dial-label-padding-v})
+
+    .label.left, .label.right
+      height: 1em
+      position: absolute
+      top: calc(50% - 0.7em)
+      width: 300px
+      span
+        display: block
+        position: absolute
+        top: 0
+
+    .label.left
+      right: 63px
+      transform-origin: right center
+      span
+        right: 66px
+        text-align: right
+        transform-origin: right center
+      &.far span
+        background-color: #e6e6e6
+        right: 85px
+      &.rot-15
+        @include rot(75)
+      &.rot-30
+        @include rot(60)
+      &.rot-45
+        @include rot(45)
+      &.rot-60
+        @include rot(30)
+      &.rot-75
+        @include rot(15)
+      &.rot-120
+        @include rot(-30)
+      &.rot-135
+        @include rot(-45)
+      &.rot-150
+        @include rot(-60)
+
+    .label.right
+      left: 63px
+      transform-origin: left center
+      span
+        left: 66px
+        transform-origin: left center
+      &.far span
+        background-color: #e6e6e6
+        left: 85px
+      &.rot-15
+        @include rot(-75)
+      &.rot-30
+        @include rot(-60)
+      &.rot-45
+        @include rot(-45)
+      &.rot-60
+        @include rot(-30)
+      &.rot-75
+        @include rot(-15)
+      &.rot-120
+        @include rot(30)
+      &.rot-135
+        @include rot(45)
+      &.rot-150
+        @include rot(60)
+
+  .dblgauge
+    $label-offset-h: 38px
+    $label-offset-v: 96px
+    background: url(/assets/panel-dblgauge.svg)
+    background-size: 136px 136px
+    height: 136px
+    position: absolute
+    width: 136px
+
+    .label
+      color: #eee
+      font-size: 0.8em
+      letter-spacing: -0.08em
+      position: absolute
+      text-transform: uppercase
+      &.upper
+        bottom: $label-offset-v
+        &.far
+          bottom: $label-offset-v + 48px
+          color: #000
+          font-size: 1em
+          letter-spacing: 0
+      &.left
+        left: $label-offset-h
+      &.right
+        right: $label-offset-h
+      &.middle
+        text-align: center
+        width: 100%
+      &.lower
+        top: $label-offset-v
+
+  .lingauge
+    $outer-padding-h: 5px
+    $padding-h: 8px
+    $padding-v: 22px
+    background: #f7f7f7
+    border: 1px solid $color-gauge
+    border-left-width: $outer-padding-h
+    border-right-width: $outer-padding-h
+    border-radius: 0.2em
+    height: 162px
+    position: absolute
+    width: 100px
+
+    &:before
+      @include reify
+      @include fill
+      background: $color-gauge
+      box-shadow: 0 -45px 0 #444 inset
+      left: $padding-h
+      right: $padding-h
+
+    .left, .right
+      color: #eee
+      height: 100%
+      position: absolute
+      .marker
+        border: 7px solid transparent
+        position: absolute
+        z-index: 2
+
+    .left
+      left: $padding-h
+
+      .marker
+        border-left-color: #000
+        border-left-width: 11px
+        left: #{-($padding-h + $outer-padding-h)}
+        top: 60px
+
+      &.shared-labels
+        .ticks .tick.major span
+          text-align: center
+          width: 60px
+
+    .right
+      right: $padding-h
+      width: 10px
+
+      .marker
+        border-right-color: #000
+        border-right-width: 11px
+        right: #{-($padding-h + $outer-padding-h)}
+        top: 80px
+
+      .label
+        right: 0
+
+      .tick
+        margin-left: 4px
+        &.fine
+          margin-left: 6px
+        &.major
+          margin-left: 0
+          span
+            margin-left: 0
+            right: 14px
+
+    .label
+      padding: 0 2px
+      position: absolute
+      &.lower
+        bottom: 0
+      &.middle
+        text-align: center
+        width: 80px
+
+    .ticks
+      @include fill
+      bottom: auto
+      height: calc(100% - #{2 * $padding-v})
+      left: 0
+      top: $padding-v
+
+      .tick
+        border-bottom: 1px solid #fff
+        color: #fff
+        margin-bottom: -1px
+        width: 6px
+
+        &.hidden
+          border-color: transparent
+          &.major:first-child
+            border-bottom-color: #fff
+            border-top-color: transparent
+        &.fine
+          width: 4px
+        &.major
+          width: 10px
+          &:first-child
+            border-top: 1px solid #fff
+          span
+            margin-left: 12px
+            margin-top: -0.6em
+            position: absolute
+
+        .tick.major
+          border-top: none
+
+      .div-2
+        height: 50%
+        &:last-child
+          margin-bottom: 50%
+      .div-3
+        height: 33.3%
+        &:last-child
+          margin-bottom: 33.3%
+      .div-4
+        height: 25%
+        &:last-child
+          margin-bottom: 25%
+      .div-5
+        height: 20%
+        &:last-child
+          margin-bottom: 20%
+      .div-6
+        height: 16.6%
+        &:last-child
+          margin-bottom: 16.6%
+      .div-8
+        height: 12.5%
+        &:last-child
+          margin-bottom: 12.5%
+
+    &.no-footer .ticks
+      height: calc(100% - #{2 * $padding-v} + 10px)
+    &.no-margins .ticks
+      $padding: 5px
+      height: calc(100% - #{2 * $padding})
+      top: $padding
+
+  .spinner
+    background: #ddd url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAFCAYAAACEhIafAAAAEUlEQVQYV2NggIIGEA0mIAAADZkBAeYZ6D4AAAAASUVORK5CYII=)
+    border: 2px solid #444
+    box-shadow: 0 -25px 0 rgba(0, 0, 0, 0.16) inset
+    height: 60px
+    position: absolute
+    width: 30px
+    .inner
+      background: #eee
+      box-shadow: 0 -15px 0 rgba(0, 0, 0, 0.1) inset
+      border-left: 1px solid #444
+      border-right: 1px solid #444
+      height: 100%
+      margin: 0 8px
+      text-align: center
+      &:before
+        color: #444
+        content: '1 2 3'
+        font-weight: bold
+        line-height: 2em
+        width: 0
+      &.manual
+        &:before
+          content: ''
+        span
+          color: #444
+          display: block
+          font-weight: bold
+    .label
+      $label-width: 80px
+      bottom: calc(100% + 12px)
+      left: calc(50% - #{$label-width / 2})
+      position: absolute
+      text-align: center
+      text-transform: uppercase
+      width: $label-width
+
+  .fdai
+    background-image: url(/assets/panel-fdai.svg)
+    background-size: 375px 355px
+    height: 355px
+    position: absolute
+    width: 375px
+
+  .warnings
+    overflow: hidden
+    position: absolute
+    li
+      background: $color-lamp
+      border: 1px solid #888
+      display: table
+      float: left
+      height: 28px
+      margin-bottom: 3px
+      margin-right: 3px
+      text-transform: uppercase
+      width: 75px
+      span
+        display: table-cell
+        text-align: center
+        vertical-align: middle
+
+  .panel-tiny-gauge
+    background: url(/assets/panel-tiny-gauge.svg)
+    background-size: 85px 85px
+    height: 85px
+    position: absolute
+    width: 85px
+
+    span
+      color: $color-gauge
+      font-size: 0.8em
+      letter-spacing: -0.05em
+      margin-left: -8px
+      position: absolute
+      text-align: center
+      text-transform: uppercase
+      width: 16px
+    .lower, .upper
+      left: 50%
+    .upper
+      top: 20px
+    .lower
+      color: #e4e4e4
+      bottom: 12px
+    .left, .right
+      top: calc(50% - 0.6em)
+    .left
+      left: 28px
+    .right
+      right: 20px
+
+  .panel-sig-gauge
+    background: url(/assets/panel-sig-gauge.svg)
+    background-size: 85px 85px
+    height: 85px
+    position: absolute
+    width: 85px
+    div
+      color: #e4e4e4
+      font-size: 0.8em
+      letter-spacing: -0.05em
+      margin: 0 auto
+      padding-top: 48px
+      text-align: center
+      text-transform: uppercase
+      width: 42px
+
+  .gauge
+    background: url(/assets/panel-gauge.svg)
+    background-size: 130px 130px
+    height: 130px
+    position: absolute
+    width: 130px
+    .cover
+      $cover-size: 30px
+      background: $color-gauge
+      bottom: 30px
+      height: $cover-size
+      left: calc(50% - #{$cover-size / 2})
+      position: absolute
+      transform: rotate(45deg)
+      width: $cover-size
+    .label
+      color: #e4e4e4
+      font-size: 0.8em
+      letter-spacing: -0.05em
+      position: absolute
+      text-transform: uppercase
+      &.lower
+        left: calc(50% - 35px)
+        text-align: center
+        top: 90px
+        width: 70px
+      &.a
+        right: 100px
+        top: 78px
+      &.b
+        right: 100px
+        top: 42px
+      &.c
+        right: 76px
+        top: 19px
+      &.d
+        left: 76px
+        top: 21px
+      &.e
+        left: 98px
+        top: 47px
+      &.f
+        left: 95px
+        top: 80px
+    .upper.far
+      bottom: calc(100% + #{$label-padding-v})
+      position: absolute
+      text-align: center
+      width: 100%
+
+  .alarm
+    $alarm-size: 47px
+    background: #666
+    border: 2px solid #333
+    border-radius: 0.7em
+    box-shadow: 0 -3px 0 #555 inset
+    color: #fff
+    display: table
+    font-weight: bold
+    height: $alarm-size
+    position: absolute
+    text-align: center
+    width: $alarm-size
+    span
+      display: table-cell
+      text-transform: uppercase
+      vertical-align: middle
+    &.master
+      background: #c1272d
+      border-color: #711215
+      box-shadow: 0 -3px 0 #961317 inset
+
+  .counter
+    background: #000
+    border: 2px solid $color-gauge
+    border-radius: 0.2em
+    position: absolute
+    span
+      background: #333
+      border-radius: 0.2em
+      box-shadow: 0 -8px 0 #111 inset
+      display: block
+      color: #fff
+      float: left
+      font-size: 1.2em
+      font-weight: bold
+      margin-left: 1px
+      padding: 3px 2px
+      text-align: center
+      width: 1em
+      &:first-child
+        margin-left: 0
+      &.invert
+        background: #ddd
+        box-shadow: 0 -8px 0 #ccc inset
+        color: #000
+    .label
+      left: calc(100% + 5px)
+      position: absolute
+      text-transform: uppercase
+      top: 3px
+      white-space: nowrap
+      &.upper
+        bottom: calc(100% + #{$label-padding-v})
+        left: 0
+        text-align: center
+        top: auto
+        width: 100%
+
+  .flip-switches
+    position: absolute
+    .alarm
+      margin-bottom: 10px
+      position: static
+    .covers
+      left: -34px
+      position: absolute
+      top: -2px
+    .cover
+      background: url(/assets/panel-flipcover.svg)
+      background-size: 120px 55px
+      height: 55px
+      margin-bottom: 6px
+      width: 120px
+
+
+// CM MDC
+#panel-cm-mdc .panel-main
+  width: 5000px
+#panel-cm-15-1a
+  left: 295px
+  top: 328px
+#panel-cm-15-1b
+  left: 520px
+  top: 328px
+#panel-cm-1-altimeter
+  background: url(/assets/panel-altimeter.svg)
+  background-size: 215px 192px
+  height: 192px
+  left: 1227px
+  top: 223px
+  position: absolute
+  width: 215px
+  div
+    height: 1em
+    left: 117px
+    position: absolute
+    top: calc(95px - 0.5em)
+    transform-origin: left center
+    width: 65px
+    span
+      font-size: 0.8em
+      right: 0
+      position: absolute
+      text-align: center
+      top: 0
+    @each $angle in 0, 22, 45, 67, 90, 120, 150, 180, 210, 240, 270, 300
+      &.rot-#{$angle}
+        @include rot($angle)
+    &.near
+      color: #fff
+      text-transform: uppercase
+      width: 42px
+      span
+        right: -10px
+#panel-cm-1-fdai
+  left: 845px
+  top: 883px
+#panel-cm-1-dial-1
+  left: 950px
+  top: 467px
+  .label-x
+    margin-left: -7px
+    margin-top: 10px
+  .label.right span
+    left: 70px
+  .glyph
+    transform: rotate(180deg)
+#panel-cm-1-1
+  left: 935px
+  top: 622px
+#panel-cm-1-alarm-1
+  left: 786px
+  top: 758px
+#panel-cm-1-2
+  left: 617px
+  top: 925px
+#panel-cm-1-gauge-g
+  background: url(/assets/panel-g-gauge.svg)
+  background-size: 128px 128px
+  height: 128px
+  left: 692px
+  top: 889px
+  position: absolute
+  width: 128px
+  span
+    font-size: 0.8em
+    position: absolute
+  .a, .g
+    top: 59px
+  .b, .f
+    top: 40px
+  .c, .e
+    top: 29px
+  .a
+    left: 26px
+  .b
+    left: 31px
+  .c
+    left: 43px
+  .d
+    left: 61px
+    top: 25px
+  .e
+    left: 78px
+  .f, .h
+    left: 86px
+  .g
+    left: 90px
+  .h
+    top: 74px
+  .z
+    left: 20px
+    top: 70px
+  div
+    color: #fff
+    left: 38px
+    position: absolute
+    text-align: center
+    text-transform: uppercase
+    top: 80px
+#panel-cm-1-alarm-5
+  height: 44px
+  left: 1287px
+  top: 883px
+  width: 87px
+#panel-cm-1-counter-1
+  left: 1304px
+  top: 973px
+  .label
+    font-weight: bold
+#panel-cm-1-counter-2
+  left: 1351px
+  top: 973px
+  .label
+    font-weight: bold
+#panel-cm-1-saturn-ind
+  $indicator-size: 28px
+  left: 1284px
+  position: absolute
+  top: 1067px
+  .indicator
+    background: $color-lamp
+    border: 2px solid $color-bracket
+    border-radius: 999px
+    float: left
+    font-size: 0.8em
+    height: $indicator-size
+    margin-right: 6px
+    text-align: center
+    width: $indicator-size
+  > .indicator
+    height: $indicator-size - 3px
+    padding-top: 3px
+  .engines
+    clear: left
+    margin: 0 auto
+    padding-top: 8px
+    width: 76px
+    span
+      display: block
+      padding-bottom: 5px
+      text-align: center
+      text-transform: uppercase
+    .indicator
+      font-size: 1.3em
+      line-height: $indicator-size
+      margin-bottom: 5px
+    .center-engine
+      margin-left: 18px
+
+#panel-cm-1-3
+  left: 518px
+  top: 1061px
+#panel-cm-1-4
+  left: 698px
+  top: 1061px
+#panel-cm-1-5
+  left: 418px
+  top: 1185px
+#panel-cm-1-6
+  left: 358px
+  top: 1327px
+#panel-cm-1-7
+  left: 672px
+  top: 1327px
+#panel-cm-1-gauge-3
+  left: 832px
+  top: 1292px
+#panel-cm-1-gauge-labels-a
+  left: 984px
+  top: 1286px
+  .header-x
+    width: 242px
+  .header-y
+    width: 120px
+  .header-z
+    left: 123px
+    width: 120px
+#panel-cm-1-gauge-4
+  border-left-width: 1px
+  left: 984px
+  top: 1291px
+  width: 40px
+  &:before
+    left: 3px
+#panel-cm-1-gauge-5
+  left: 1025px
+  top: 1291px
+  width: 48px
+  .ticks .tick.major span
+    width: 9px
+#panel-cm-1-gauge-6
+  left: 1078px
+  top: 1291px
+  width: 48px
+  .ticks .tick.major span
+    width: 9px
+#panel-cm-1-gauge-7
+  left: 1132px
+  top: 1291px
+  width: 48px
+  .ticks .tick.major span
+    width: 9px
+#panel-cm-1-gauge-8
+  border-right-width: 1px
+  left: 1185px
+  top: 1291px
+  width: 40px
+  &:before
+    right: 3px
+#panel-cm-1-spinner-1
+  left: 1037px
+  top: 1466px
+#panel-cm-1-spinner-2
+  left: 1147px
+  top: 1466px
+  transform: rotate(-90deg)
+  span
+    transform: rotate(90deg)
+#panel-cm-1-15
+  left: 1266px
+  top: 1293px
+  #panel-cm-1-15-1
+    font-size: 0.9em
+#panel-cm-1-16
+  left: 1386px
+  top: 1293px
+  .covers
+    margin-left: -1px
+    transform: scaleX(-1)
+#panel-cm-1-8
+  left: 345px
+  top: 1438px
+#panel-cm-1-14
+  height: 107px
+  left: 556px
+  top: 1453px
+  div
+    height: 107px
+    width: 77px
+    &:before, &:last-child:after
+      height: 104px
+  .header-width-x
+    width: 87px
+#panel-cm-1-alarm-2
+  left: 672px
+  top: 1451px
+#panel-cm-1-alarm-3
+  left: 672px
+  top: 1520px
+#panel-cm-1-9
+  left: 759px
+  top: 1477px
+#panel-cm-1-spinner-3
+  left: 353px
+  top: 1565px
+  width: 20px
+#panel-cm-1-counter-3
+  left: 443px
+  top: 1590px
+#panel-cm-1-spinner-4
+  left: 353px
+  top: 1642px
+  width: 20px
+#panel-cm-1-counter-4
+  left: 443px
+  top: 1667px
+#panel-cm-1-spinner-5
+  left: 353px
+  top: 1719px
+  width: 20px
+#panel-cm-1-counter-5
+  left: 443px
+  top: 1744px
+#panel-cm-1-alarm-4
+  left: 566px
+  top: 1622px
+#panel-cm-1-10
+  left: 691px
+  top: 1611px
+#panel-cm-1-11
+  left: 1079px
+  top: 1611px
+#panel-cm-1-12
+  left: 548px
+  top: 1720px
+#panel-cm-1-13
+  left: 1079px
+  top: 1720px
+#panel-cm-warn-1
+  left: 2181px
+  top: 219px
+  width: 320px
+#panel-cm-warn-2
+  left: 2518px
+  top: 219px
+  width: 320px
+#panel-cm-2-fdai
+  left: 1586px
+  top: 454px
+#panel-cm-warn-dsky
+  left: 1611px
+  top: 861px
+  width: 136px
+  li
+    width: 62px
+#panel-cm-dsky-display
+  left: 1800px
+  position: absolute
+  top: 861px
+  width: 136px
+  div
+    background: #00bf00
+    color: #4d4d4d
+    position: absolute
+    text-align: center
+    text-transform: uppercase
+    width: 64px
+  .comp-acty
+    opacity: 0.15
+  .prog, .noun
+    right: 0
+  .verb, .noun
+    top: 53px
+#panel-cm-dsky-key
+  $key-size: 50px
+  $key-margin: 2px
+
+  left: 1584px
+  position: absolute
+  top: 1104px
+  width: 378px
+  .column
+    float: left
+    margin-right: $key-margin * 2
+    padding-top: $key-size / 2
+    width: $key-size
+    &.right
+      float: right
+  span
+    background: #444
+    border-radius: 0.2em
+    color: #eee
+    display: block
+    float: left
+    font-weight: bold
+    height: $key-size
+    line-height: $key-size
+    margin: $key-margin
+    text-align: center
+    text-transform: uppercase
+    width: $key-size
+    &.twoline
+      line-height: 1em
+      p
+        padding-top: 14px
+#panel-cm-2-gauge-1
+  left: 2038px
+  top: 194px
+#panel-cm-2-x
+  left: 1992px
+  top: 328px
+  .panel-talkback
+    float: none
+    .left
+      right: 100%
+#panel-cm-2-1
+  left: 2015px
+  top: 447px
+#panel-cm-2-gauge-labels-b
+  left: 1985px
+  top: 598px
+  .header-col-gx
+    left: 175px
+    width: 60px
+#panel-cm-2-gauge-7
+  left: 1985px
+  top: 599px
+#panel-cm-2-gauge-8
+  left: 2098px
+  top: 599px
+#panel-cm-2-gauge-labels-g
+  left: 1985px
+  top: 698px
+#panel-cm-2-a
+  left: 2246px
+  top: 573px
+#panel-cm-2-2
+  left: 2805px
+  top: 475px
+  .header-x
+    $offset: -256px
+    left: $offset
+    width: calc(100% + #{-$offset})
+#panel-cm-2-gauge-labels-c
+  left: 3000px
+  top: 510px
+#panel-cm-2-gauge-9
+  left: 3000px
+  top: 511px
+#panel-cm-2-gauge-10
+  left: 3113px
+  top: 511px
+  .label-x
+    margin-top: 6px
+#panel-cm-2-gauge-11
+  left: 3226px
+  top: 511px
+#panel-cm-2-gauge-12
+  left: 3339px
+  top: 511px
+#panel-cm-2-3
+  left: 2679px
+  top: 604px
+#panel-cm-2-4
+  left: 2243px
+  top: 643px
+#panel-cm-2-dial-1
+  left: 2508px
+  top: 674px
+  .label.left.far span
+    right: 70px
+  .label.right
+    left: 58px
+    span
+      left: 68px
+    &.far span
+      left: 75px
+  .glyph
+    transform: rotate(15deg)
+#panel-cm-2-b
+  left: 2246px
+  top: 778px
+#panel-cm-2-5a
+  left: 2679px
+  top: 723px
+#panel-cm-2-5b
+  left: 2832px
+  top: 723px
+#panel-cm-2-5c
+  left: 3104px
+  top: 723px
+#panel-cm-2-5d
+  left: 3200px
+  top: 723px
+#panel-cm-2-6
+  left: 2011px
+  top: 846px
+#panel-cm-2-dial-2
+  left: 2508px
+  top: 854px
+  .glyph
+    transform: rotate(-15deg)
+#panel-cm-2-gauge-labels-a
+  left: 2700px
+  top: 846px
+  .header-width-x
+    width: 200px
+  .header-col-x
+    left: 65px
+  .header-col-y
+    left: 152px
+  .header-a
+    left: 202px
+    width: 210px
+  .header-col-b
+    left: 200px
+  .header-col-c
+    left: 299px
+  .header-col-d
+    left: 356px
+#panel-cm-2-gauge-2
+  left: 2690px
+  top: 847px
+#panel-cm-2-gauge-3
+  left: 2840px
+  top: 847px
+#panel-cm-2-gauge-4
+  left: 2990px
+  top: 847px
+#panel-cm-2-gauge-labels-d
+  left: 3136px
+  top: 863px
+#panel-cm-2-gauge-13
+  left: 3139px
+  top: 873px
+#panel-cm-2-gauge-labels-e
+  left: 3267px
+  top: 863px
+  .header-x
+    left: 117px
+    text-align: center
+#panel-cm-2-gauge-14
+  left: 3270px
+  top: 873px
+#panel-cm-2-gauge-15
+  border-left-width: 1px
+  left: 3383px
+  top: 873px
+  width: 61px
+  &:before
+    left: 2px
+  .label.middle
+    width: 40px
+#panel-cm-2-c
+  left: 2246px
+  top: 953px
+#panel-cm-2-d
+  left: 2534px
+  top: 985px
+  .glyph
+    box-shadow: -8px 0 0 #ddd, 8px 0 0 #ddd
+    z-index: 2
+#panel-cm-2-7
+  left: 2011px
+  top: 1016px
+#panel-cm-2-8
+  left: 2515px
+  top: 1052px
+#panel-cm-2-gauge-5
+  left: 2840px
+  top: 1007px
+#panel-cm-2-gauge-6
+  left: 2990px
+  top: 1007px
+#panel-cm-2-e
+  left: 2130px
+  top: 1121px
+#panel-cm-2-9
+  left: 2011px
+  top: 1189px
+#panel-cm-2-10a
+  left: 2514px
+  top: 1189px
+#panel-cm-2-10b
+  left: 2874px
+  top: 1189px
+#panel-cm-2-10c
+  left: 2944px
+  top: 1189px
+  .header-x
+    width: 226px
+#panel-cm-2-spinner-1
+  left: 3356px
+  top: 1187px
+#panel-cm-2-11
+  left: 1573px
+  top: 1327px
+#panel-cm-2-12
+  left: 1539px
+  top: 1454px
+#panel-cm-2-13
+  left: 1539px
+  top: 1591px
+#panel-cm-2-14
+  left: 1539px
+  top: 1710px
+#panel-cm-2-15
+  left: 3011px
+  top: 1312px
+  .header-x
+    width: 416px
+#panel-cm-2-gauge-labels-f
+  left: 3156px
+  position: absolute
+  top: 1286px
+  span
+    display: inline-block
+    text-align: center
+    text-transform: uppercase
+    width: 90px
+#panel-cm-2-gauge-16
+  left: 3161px
+  top: 1308px
+  transform: rotate(90deg)
+  span
+    transform: rotate(-90deg)
+    &.lower
+      bottom: 14px
+#panel-cm-2-gauge-17
+  left: 3251px
+  top: 1308px
+#panel-cm-2-gauge-18
+  left: 3341px
+  top: 1308px
+#panel-cm-2-dial-3
+  left: 3130px
+  top: 1418px
+  .x-spacer
+    display: inline-block
+    width: 1.5em
+  .y-spacer
+    display: inline-block
+    width: 2.3em
+  .glyph
+    transform: rotate(30deg)
+#panel-cm-2-dial-4
+  left: 3298px
+  top: 1418px
+  .x-spacer
+    display: inline-block
+    width: 2em
+#panel-cm-2-16
+  left: 3271px
+  top: 1604px
+#panel-cm-3-dial-1
+  left: 3581px
+  top: 340px
+  .label.upper.far
+      margin-bottom: 10px
+  .label.right.far span
+    left: 79px
+  .label span
+    background-color: #e6e6e6
+#panel-cm-3-gauge-labels-a
+  left: 3560px
+  top: 510px
+#panel-cm-3-gauge-1
+  left: 3560px
+  top: 519px
+#panel-cm-3-gauge-2
+  left: 3673px
+  top: 519px
+#panel-cm-3-gauge-3
+  left: 3786px
+  top: 519px
+#panel-cm-3-gauge-4
+  left: 3899px
+  top: 519px
+#panel-cm-3-a1
+  left: 3855px
+  top: 741px
+#panel-cm-3-a2
+  left: 4096px
+  top: 741px
+#panel-cm-3-17
+  left: 3580px
+  top: 774px
+#panel-cm-3-b
+  left: 3855px
+  top: 806px
+#panel-cm-3-1
+  left: 3855px
+  top: 879px
+#panel-cm-3-alarm-1
+  left: 4058px
+  top: 953px
+#panel-cm-3-dial-2
+  left: 4136px
+  top: 920px
+#panel-cm-3-2
+  left: 3855px
+  top: 995px
+#panel-cm-3-gauge-7
+  left: 4280px
+  top: 961px
+  .label.lower
+    top: 97px
+#panel-cm-3-c
+  left: 4032px
+  top: 1092px
+#panel-cm-3-3
+  left: 3855px
+  top: 1156px
+#panel-cm-3-gauge-6
+  left: 4304px
+  top: 1100px
+#panel-cm-3-d
+  left: 3562px
+  top: 1260px
+#panel-cm-3-e
+  left: 3858px
+  top: 1260px
+#panel-cm-3-dial-3
+  left: 4333px
+  top: 1271px
+  .label.left.far span
+    right: 74px
+  .label.right.far span
+    left: 77px
+  .label span
+    background-color: #e6e6e6
+  .label-x
+    margin-left: -8px
+#panel-cm-3-dial-4
+  left: 4535px
+  top: 1271px
+  .glyph
+    transform: rotate(-60deg)
+#panel-cm-3-4
+  left: 3559px
+  top: 1331px
+#panel-cm-3-5a
+  left: 3787px
+  top: 1331px
+#panel-cm-3-5b
+  left: 3855px
+  top: 1331px
+  .label-x
+    left: calc(100% + 25px)
+#panel-cm-3-6
+  left: 3559px
+  top: 1460px
+#panel-cm-3-7
+  left: 3791px
+  top: 1460px
+#panel-cm-3-f
+  left: 4242px
+  top: 1460px
+  .panel-talkback
+    float: none
+    height: 65px
+#panel-cm-3-8
+  left: 4324px
+  top: 1460px
+#panel-cm-3-9
+  left: 3559px
+  top: 1591px
+#panel-cm-3-spinner-1
+  left: 3812px
+  top: 1590px
+  .label
+    margin-bottom: 2px
+#panel-cm-3-spinner-2
+  left: 3812px
+  top: 1715px
+  .label
+    margin-bottom: 2px
+#panel-cm-3-10
+  left: 3926px
+  top: 1591px
+  .header-x
+    left: -146px
+    width: 320px
+#panel-cm-3-11
+  left: 4324px
+  top: 1591px
+#panel-cm-3-gauge-5
+  left: 4577px
+  top: 1504px
+#panel-cm-3-12
+  left: 3559px
+  top: 1716px
+#panel-cm-3-13
+  left: 3926px
+  top: 1716px
+#panel-cm-3-14
+  left: 4324px
+  top: 1716px
+#panel-cm-3-dial-5
+  left: 4597px
+  top: 1671px
+  .label span
+    background-color: #e6e6e6
+  .glyph
+    transform: rotate(-75deg)
+#panel-cm-3-counter-1
+  left: 3656px
+  top: 922px
+#panel-cm-3-counter-2
+  left: 3656px
+  top: 957px
+#panel-cm-3-gauge-oxid
+  background: url(/assets/panel-oxid-gauge.svg)
+  background-size: 60px 60px
+  height: 60px
+  left: 3628px
+  position: absolute
+  text-transform: uppercase
+  top: 1017px
+  width: 60px
+  span
+    font-size: 0.8em
+    position: absolute
+  .a, .g
+    left: 40px
+  .a, .c
+    top: 36px
+  .c, .e
+    left: 17px
+  .e, .g
+    top: 12px
+  .d
+    left: 8px
+    top: 25px
+  .b, .f
+    left: 28px
+  .b
+    top: 41px
+  .f
+    top: 8px
+  .incr
+    left: 33px
+    letter-spacing: -0.05em
+    top: 20px
+  .decr
+    left: 32px
+    letter-spacing: -0.05em
+    top: 29px
+  .scale
+    left: calc(100% + 2px)
+    top: calc(50% - 1em)
+  .label
+    position: absolute
+    text-align: center
+    text-transform: uppercase
+    &.upper
+      bottom: 100%
+#panel-cm-3-15
+  left: 3728px
+  top: 1010px
+#panel-cm-3-16
+  left: 3620px
+  top: 1125px
+  .header-x
+    left: -30px
+    width: 145px
+#panel-cm-16-1a
+  left: 4231px
+  top: 330px
+#panel-cm-16-1b
+  left: 4465px
+  top: 330px
+
