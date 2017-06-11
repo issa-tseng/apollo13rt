@@ -310,5 +310,13 @@ class Player extends Model
     this.get(\audio.player).get(0).currentTime = (epoch - this.get(\timestamp.offset))
 
 
-module.exports = { Global, Line, Lines, Transcript, Term, Lookup, Glossary, Player }
+
+########################################
+# EXHIBIT MODELS
+
+class ExhibitArea extends Model
+class Topic extends Model
+class Exhibit extends Model
+
+module.exports = { Global, Line, Lines, Transcript, Term, Lookup, Glossary, Player, ExhibitArea, Topic, Exhibit }
 

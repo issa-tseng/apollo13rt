@@ -3,7 +3,7 @@
 $ = require(\jquery)
 marked = require(\marked)
 
-{ Line, Transcript, Term, Glossary, Player } = require('./model')
+{ Line, Transcript, Term, Glossary, Player, ExhibitArea, Topic, Exhibit } = require('./model')
 
 defer = (f) -> set-timeout(f, 0)
 clamp = (min, max, x) --> if x < min then min else if x > max then max else x
@@ -64,11 +64,11 @@ class TranscriptView extends DomView
         <a class="script-scroll-indicator" href="#" title="Sync with audio"/>
       </div>
       <div class="script-lines"/>
-      <p/>
+      <p><span class="leader">Transcript:</span><span class="name"/></p>
     </div>
   ')
   @_template = template(
-      find('p').text(from(\name))
+      find('p .name').text(from(\name))
       find('.script-lines').render(from(\lines))
       find('.script-scroll-indicator').classed(\active, from(\auto_scroll).map (not))
   )
@@ -342,6 +342,81 @@ class PlayerView extends DomView
     dom.find('.player-leapforward').on(\click, -> audio-raw.currentTime += 15)
 
 
+
+########################################
+# EXHIBIT VIEWS
+
+class ExhibitAreaView extends DomView
+  @_dom = -> $('
+    <div class="exhibit-area">
+      <div class="exhibit-toc"/>
+      <div class="exhibit-content"/>
+    </div>
+  ')
+  @_template = template(
+    find('.exhibit-area').classed(\has-exhibit, from.app(\global).watch(\exhibit).map (?))
+    find('.exhibit-toc').render(from(\topics))
+    find('.exhibit-content').render(from.app(\global).watch(\exhibit))
+  )
+  _wireEvents: ->
+    dom = this.artifact()
+    global = this.options.app.get(\global)
+
+    dom.on(\click, '.exhibit-title', -> global.set(\exhibit, $(this).data(\view).subject))
+
+class TopicView extends DomView
+  @_dom = -> $('
+    <div class="topic">
+      <div class="topic-header">
+        <div class="topic-active">
+          <div class="topic-active-name"><span class="name"/><span class="close">&times;</span></div>
+        </div>
+        <div class="topic-name"><span class="name"/><span class="arrow"/></div>
+      </div>
+      <div class="topic-contents"></div>
+    </div>
+  ')
+  @_template = template(
+    find('.topic-name .name').text(from(\title))
+    find('.topic-contents').render(from(\exhibits)).options( renderItem: (.context(\summary)) )
+
+    find('.topic').classed(\active, from.app(\global).watch(\exhibit).and(\exhibits)
+      .all.flatMap((active, all) -> if active? then all.any (is active) else false)
+    )
+  )
+  _wireEvents: ->
+    dom = this.artifact()
+    app = this.options.app
+
+    # we want to retain the last relevant name, so handle this point-in-time instead:
+    active-name = dom.find('.topic-active-name .name')
+    from(app.watch(\global)).watch(\exhibit)
+      .and(this.subject.watch(\exhibits))
+      .all.plain().flatMap((active, all) ->
+        (all.any (is active)).flatMap((is-ours) -> if is-ours then active.watch(\title) else null)
+      ).react((title) -> active-name.text(title) if title?)
+
+    # clear active exhibit if close is pressed.
+    dom.find('.close').on(\click, ~> app.get(\global).unset(\exhibit))
+
+class ExhibitTitleView extends DomView
+  @_dom = -> $('
+    <div class="exhibit-title">
+      <p class="name"/>
+      <p class="description"/>
+    </div>
+  ')
+  @_template = template(
+    find('.exhibit-title').classed(\active, from.app(\global).watch(\exhibit).and.self().map(-> it.subject).all.map (is))
+    find('.name').text(from(\title))
+    find('.description').text(from(\description))
+  )
+
+class ExhibitView extends DomView
+  @_dom = -> $('<div class="exhibit"/>')
+  @_template = template(find('.exhibit').text(from(\title)))
+
+
 module.exports = {
   TranscriptView
   LineView
@@ -351,5 +426,10 @@ module.exports = {
     library.register(Glossary, GlossaryView)
     library.register(Line, LineView)
     library.register(Player, PlayerView)
+
+    library.register(ExhibitArea, ExhibitAreaView)
+    library.register(Topic, TopicView)
+    library.register(Exhibit, ExhibitTitleView, context: \summary)
+    library.register(Exhibit, ExhibitView)
 }
 

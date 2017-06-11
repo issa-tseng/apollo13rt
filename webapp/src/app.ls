@@ -1,10 +1,10 @@
 
 # basic requires.
 $ = window.jQuery = window.$ = require(\jquery)
-{ Varying } = require(\janus)
+{ Varying, List } = require(\janus)
 { Library, App } = require(\janus).application
 stdlib = require(\janus-stdlib)
-{ Global, Glossary, Lookup, Player, Transcript } = require('./model')
+{ Global, Glossary, Lookup, Player, Transcript, ExhibitArea, Topic, Exhibit } = require('./model')
 
 # util.
 defer = (f) -> set-timeout(f, 0)
@@ -16,7 +16,7 @@ require('./view').registerWith(views)
 global = new Global()
 app = new App({ views, global })
 
-# get and load data.
+# get and load player data.
 (flight-loop) <- $.getJSON('/assets/flight-director-loop.json')
 (flight-loop-lookup) <- $.getJSON('/assets/flight-director-loop.lookup.json')
 (air-ground-loop) <- $.getJSON('/assets/air-ground-loop.json')
@@ -35,6 +35,29 @@ player = new Player(
 global.set(\player, player)
 window.player = player
 
+# set up exhibit data.
+topics = new List([
+  new Topic( title: 'Primer', exhibits: new List([
+    new Exhibit( title: 'Apollo 13 Real-time', description: 'Get an overview of the real-time experience.' ),
+    new Exhibit( title: 'Spaceflight 101', description: 'Learn the basics of spaceflight and orbital mechanics.' ),
+    new Exhibit( title: 'Apollo Architecture', description: 'See how Apollo got to the Moon and back.' ),
+    new Exhibit( title: 'The Accident', description: 'There\'s more to the story than "Houston, we\'ve had a problem."' )
+  ])),
+  new Topic( title: 'Overview', exhibits: new List([
+    new Exhibit( title: 'Getting to the Moon', description: 'A walkthrough of the propulsion and maneuvering systems.' ),
+    new Exhibit( title: 'Navigating the Stars', description: 'An introduction to the navigation systems and processes.' ),
+    new Exhibit( title: 'Powering the Spacecraft', description: 'A look at the electrical systems that become critical on 13.' ),
+    new Exhibit( title: 'Communicating with Apollo', description: 'A brief look at how ground communication and tracking was done.' ),
+    new Exhibit( title: 'The Flight Controllers', description: 'An overview of each flight controller position in Mission Control.' )
+  ])),
+  new Topic( title: 'Reference', exhibits: new List([
+    new Exhibit( title: 'Control Panels', description: 'Annotated replicas of the CM and LM control panel layouts.' ),
+    new Exhibit( title: 'Electrical Systems', description: 'High-resolution recreations of the EPS system diagrams.' ),
+    new Exhibit( title: 'Environmental Systems', description: 'High-resolution recreations of the ECS system diagrams.' )
+  ]))
+])
+viewer = new ExhibitArea({ topics })
+
 # wait for document ready.
 <- $
 <- defer # because jquery does weird shit with exceptions.
@@ -43,6 +66,10 @@ window.player = player
 player-view = app.getView(player)
 $('#player').append(player-view.artifact())
 player-view.wireEvents()
+
+exhibit-area = app.getView(viewer)
+$('#exhibits').append(exhibit-area.artifact())
+exhibit-area.wireEvents()
 
 # other generic actions:
 $document = $(document)

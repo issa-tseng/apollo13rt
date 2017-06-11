@@ -26,7 +26,7 @@
   color: #999
   font-weight: bold
   margin-top: 0.5em
-  padding: 0.3em
+  padding: 0.3em 0
 
 @mixin custom-scrollbar
   &::-webkit-scrollbar
@@ -70,6 +70,9 @@ html
   font-family: $sans
   font-size: 62.5%
 
+#markup
+  display: none
+
 
 // COMMON
 
@@ -109,7 +112,7 @@ a
 // COMPONENTS
 
 .player
-  background-color: #e6e6e6
+  background-color: $color-box-bg
   border-bottom: 0.1em solid $color-light-border
   border-top: 0.2em solid $color-light-border
   padding: 1.3em 0
@@ -310,7 +313,12 @@ a
 
   p
     @include bottom-header
-    margin-left: 7.2em
+    margin-left: 1em
+
+    .leader
+      color: #ccc
+      display: inline-block
+      width: 6.5em
 
   .script-scroll-indicator-container
     @include fill
@@ -512,6 +520,109 @@ a
   &.hide-technical .category-technical
     max-height: 0
 
+.topic
+  padding: 0 0.6em
+  position: relative
+
+  .topic-name
+    border-bottom: 0.2em solid $color-light-border
+    color: #999
+    cursor: default
+    font-weight: bold
+    padding: 0.3em 0
+    position: relative
+    transition: 0.2s border-color
+    z-index: 2
+
+    .arrow
+      border: 0.4em solid transparent
+        bottom: none
+        top-color: #999
+      display: inline-block
+      left: 0.3em
+      opacity: 0
+      position: relative
+      top: -0.1em
+      transition: 0.2s opacity
+
+  .topic-contents
+    margin-top: 1.5em
+    transition: 0.4s padding-top
+
+  .topic-active
+    @include fill
+    background-color: #fff
+    bottom: auto
+    max-height: 0
+    overflow: hidden
+    transition: 0.4s max-height
+    z-index: 1
+    .topic-active-name
+      color: #444
+      font-size: 2em
+      font-weight: bold
+      letter-spacing: -0.02em
+      margin: 0.3em
+      padding-top: 1em
+    .close
+      bottom: 0.08em
+      color: #999
+      cursor: pointer
+      font-size: 0.8em
+      font-weight: normal
+      left: 0.3em
+      position: relative
+  &.active
+    .topic-name
+      border-bottom-color: transparent
+    .topic-active
+      max-height: 6em
+    .topic-contents
+      padding-top: 3em
+
+.exhibit-title
+  .name
+    font-size: 1.1em
+    font-weight: bold
+
+  .description
+    color: #444
+    font-size: 1.1em
+    line-height: 1.2em
+    padding-bottom: 1.5em
+
+  &:hover
+    cursor: pointer
+    .name
+      text-decoration: underline
+
+  &.active
+    cursor: default
+    opacity: 0.5
+    &:hover .name
+      text-decoration: none
+
+.exhibit-area
+  .exhibit-content
+    background: $color-box-bg
+    display: none
+    margin-left: 0.4em
+    min-height: 30em
+    position: relative
+    top: 2.5em
+
+  &.has-exhibit
+    .exhibit-toc .topic
+      .topic-name .arrow
+        opacity: 1
+      &:hover
+        background-color: #f4f4f4
+        z-index: 3
+
+    .exhibit-content
+      display: block
+
+
 // LAYOUT
 
 header
@@ -565,27 +676,29 @@ header
         border-bottom-color: #fff
 
 #exhibits
-  padding-bottom: 3em
-  h2
-    border-bottom: 1px solid $color-accent
-    color: #222
-    font-family: $monospace
-    font-size: 3em
-    font-weight: normal
-    margin-top: 1em
-    padding: 0.3em 1em
+  $margin-h: 2em
+  margin: 3.5em $margin-h 6em
 
-  // TODO: classname
-  > ul > li
-    background: #f4f4f4
-    border-bottom: 1px solid $color-light-border
-    padding: 1em 3em
+  .topic
+    margin-left: 1em
 
-    h3
-      color: #444
-      font-family: $sans
-      font-size: 1.4em
-      font-weight: normal
+  .exhibit-toc
+    position: absolute
+    width: calc(100% - #{2 * $margin-h})
+
+    > ul > li
+      float: left
+      margin-right: 2em
+      width: 33%
+      &:first-child
+        margin-left: -0.6em
+      &:last-child
+        float: none
+        margin-right: 0
+        overflow: hidden
+        width: auto
+        .topic
+          margin-left: 0
 
 
 @media (max-width: 1000px)
