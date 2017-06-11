@@ -6,8 +6,8 @@ ASSETS_SRC = $(shell find src/assets -name '*.ai' -prune -o -type f -print | sor
 ASSETS_LIB = $(ASSETS_SRC:src/assets/%=lib/assets/%)
 JSON_SRC = $(shell find ../script -name '*.json' -maxdepth 1 -type f | sort)
 JSON_LIB = $(JSON_SRC:../script/%=lib/assets/%)
-ARTICLES_SRC = $(shell find src/articles -name '*.html' -o -name '*.md' -maxdepth 1 -type f | sort)
-ARTICLES_LIB = $(ARTICLES_SRC:src/articles/%=lib/articles/%.part)
+EXHIBITS_SRC = $(shell find ../exhibits -name '*.html' -o -name '*.md' -maxdepth 1 -type f | sort)
+EXHIBITS_LIB = $(EXHIBITS_SRC:../exhibits/%=lib/exhibits/%.part)
 
 lib:
 	mkdir lib/
@@ -18,17 +18,17 @@ lib/%.js: src/%.ls lib node_modules
 lib/apollo13rt.js: lib/app.js
 	node node_modules/browserify/bin/cmd.js -e $< -o $@ --im
 
-lib/articles: lib
-	@mkdir -p lib/articles
+lib/exhibits: lib
+	@mkdir -p lib/exhibits
 
-lib/articles/%.md.part: src/articles/%.md lib/articles
+lib/exhibits/%.md.part: ../exhibits/%.md lib/exhibits
 	cat $< | node node_modules/marked/bin/marked | awk 'BEGIN{ print "<div class=\"article\" id=\"$(shell basename $(basename $<))\">" } END{ print "</div>" } 1' > $@
 
-lib/articles/%.html.part: src/articles/%.html lib/articles
+lib/exhibits/%.html.part: ../exhibits/%.html lib/exhibits
 	cp $< $@
 
-lib/index.html: src/index.html lib $(ARTICLES_LIB)
-	find lib/articles -name '*.part' -type f | xargs cat | awk 'BEGIN{ RS = "\f"; getline c < "-"; RS="\n" } /###/{ print c } 1' $< > $@
+lib/index.html: src/index.html lib $(EXHIBITS_LIB)
+	find lib/exhibits -name '*.part' -type f | xargs cat | awk 'BEGIN{ RS = "\f"; getline c < "-"; RS="\n" } /###/{ print c } 1' $< > $@
 
 lib/styles.css: src/styles.sass src/styles/*.sass lib
 	node node_modules/node-sass/bin/node-sass --output-style compressed $< > $@
