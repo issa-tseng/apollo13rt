@@ -10,8 +10,8 @@ The Flight Director's Loop is a rare gem. Mission Control was wired with numerou
 
 The Air-Ground Loop audio is the actual radio link between Houston and the Apollo spacecraft. With rare exception, only CAPCOM, typically themself an astronaut, was allowed to speak to the astronauts. You will hear decisions get made on the Flight Director's Loop and subsequently passed up on the Air-Ground Loop.
 
-Exhibits
---------
+The Exhibits
+------------
 
 Copious reference material is provided here. If you are brand-new to Apollo, browsing through the Primer section is highly-recommended. The Overview section provides a somewhat deeper look at various aspects of flying Apollo to the Moon, and will prove helpful if you get stuck understanding the relationship between technical terms and systems while listening to the audio. The Reference Manual section provides even further detail on particular technical subsystems, for those who are interested in understanding exactly what the various switches and valves controlled.
 

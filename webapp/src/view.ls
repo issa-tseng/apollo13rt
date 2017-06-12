@@ -414,7 +414,7 @@ class ExhibitTitleView extends DomView
 
 class ExhibitView extends DomView
   @_dom = -> $('<div class="exhibit"/>')
-  @_template = template(find('.exhibit').text(from(\title)))
+  @_template = template(find('.exhibit').html(from(\content)))
 
 
 module.exports = {

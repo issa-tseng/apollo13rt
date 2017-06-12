@@ -1,3 +1,4 @@
+$ = window.jQuery = window.$ = require(\jquery)
 { Model, attribute, from, List, Set, Varying } = require(\janus)
 { debounce } = require(\janus-stdlib).util.varying
 { floor, abs } = Math
@@ -317,6 +318,9 @@ class Player extends Model
 class ExhibitArea extends Model
 class Topic extends Model
 class Exhibit extends Model
+  _initialize: ->
+    # grab our html fragment off of the dom.
+    this.set(\content, $("\#markup \##{this.get(\lookup)}").prop(\outerHTML))
 
 module.exports = { Global, Line, Lines, Transcript, Term, Lookup, Glossary, Player, ExhibitArea, Topic, Exhibit }
 

@@ -38,10 +38,10 @@ window.player = player
 # set up exhibit data.
 topics = new List([
   new Topic( title: 'Primer', exhibits: new List([
-    new Exhibit( title: 'Apollo 13 Real-time', description: 'Get an overview of the real-time experience.' ),
-    new Exhibit( title: 'Spaceflight 101', description: 'Learn the basics of spaceflight and orbital mechanics.' ),
-    new Exhibit( title: 'Apollo Architecture', description: 'See how Apollo got to the Moon and back.' ),
-    new Exhibit( title: 'The Accident', description: 'There\'s more to the story than "Houston, we\'ve had a problem."' )
+    new Exhibit( lookup: \primer-a13rt, title: 'Apollo 13 Real-time', description: 'Get an overview of the real-time experience.' ),
+    new Exhibit( lookup: \primer-spaceflight101, title: 'Spaceflight 101', description: 'Learn the basics of spaceflight and orbital mechanics.' ),
+    new Exhibit( lookup: \primer-apollo, title: 'Apollo Architecture', description: 'See how Apollo got to the Moon and back.' ),
+    new Exhibit( lookup: \primer-accident, title: 'The Accident', description: 'There\'s more to the story than "Houston, we\'ve had a problem."' )
   ])),
   new Topic( title: 'Overview', exhibits: new List([
     new Exhibit( title: 'Getting to the Moon', description: 'A walkthrough of the propulsion and maneuvering systems.' ),
