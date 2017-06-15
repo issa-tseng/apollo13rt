@@ -169,7 +169,7 @@ class Transcript extends Model
         # now add lines that should be active. go until we have four inactive in a row.
         lines = transcript.get(\lines).list
         misses = 0
-        while misses < 4
+        while misses < 4 and idx < lines.length
           line = lines[idx]
           if line.contains_(epoch)
             unless was-active[idx]?
