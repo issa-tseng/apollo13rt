@@ -1,17 +1,12 @@
-{ DomView, template, find, from, Model, Varying } = require(\janus)
-{ debounce, sticky } = require(\janus-stdlib).util.varying
 $ = require(\jquery)
 marked = require(\marked)
 
-{ Line, Transcript, Term, Glossary, Player, ExhibitArea, Topic, Exhibit } = require('./model')
+{ DomView, template, find, from, List, Model, attribute, Varying } = require(\janus)
+{ debounce, sticky, from-event } = require(\janus-stdlib).util.varying
 
-defer = (f) -> set-timeout(f, 0)
-clamp = (min, max, x) --> if x < min then min else if x > max then max else x
-px = (x) -> "#{x}px"
-pct = (x) -> "#{x * 100}%"
-pad = (x) -> if x < 10 then "0#x" else x
-get-time = -> (new Date()).getTime()
-max-int = Number.MAX_SAFE_INTEGER
+{ Line, Transcript, Term, Glossary, Player, ExhibitArea, Topic, Exhibit } = require('./model')
+{ defer, clamp, px, pct, pad, get-time, max-int, size-of } = require('./util')
+{ min } = Math
 
 
 

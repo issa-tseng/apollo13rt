@@ -1,12 +1,12 @@
-$ = window.jQuery = window.$ = require(\jquery)
-{ Model, attribute, from, List, Set, Varying } = require(\janus)
-{ debounce } = require(\janus-stdlib).util.varying
+$ = require(\jquery)
 { floor, abs } = Math
 { flatten, unique } = require(\prelude-ls)
 
-# util.
-defer = (f) -> set-timeout(f, 0)
-clamp = (min, max, x) --> if x < min then min else if x > max then max else x
+{ Model, attribute, from, List, Set, Varying } = require(\janus)
+{ debounce } = require(\janus-stdlib).util.varying
+
+{ defer, clamp } = require('./util')
+
 
 
 class Global extends Model
