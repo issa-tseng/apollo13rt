@@ -23,11 +23,19 @@ $color-lamp: #e4e1da
   span
     transform: rotate(#{-$deg}deg)
 
-// GENERAL
+// CHROME
 .panel-wrapper
-  position: relative
-  width: 5000px
+  overflow: hidden
+  .panel-inner-wrapper
+    cursor: grab
+    position: relative
+    transition: 0.3s transform
+    &.dragging
+      cursor: grabbing
+      transition: none
 
+
+// LAYOUT AND DISPLAY
 .panel
   .bank
     height: $bank-height
