@@ -336,6 +336,17 @@ class PlayerView extends DomView
     dom.find('.player-hopforward').on(\click, -> audio-raw.currentTime += 6)
     dom.find('.player-leapforward').on(\click, -> audio-raw.currentTime += 15)
 
+    # fixed player/scroll handling.
+    container = $('#timeline')
+    threshold = dom.position().top
+    chrome-height = dom.outerHeight() - player.get(\base_height)
+    crossed-threshold = from-event(body, \scroll, (.target.scrollingElement.scrollTop > threshold))
+
+    crossed-threshold.react((is-fixed) -> container.toggleClass(\fixed-player, is-fixed is true))
+    from(crossed-threshold).and(player.watch(\base_height)).all.plain().map((is-fixed, base-height) ->
+      if is-fixed then chrome-height + base-height else \auto
+    ).react(-> container.css(\height, it))
+
 
 
 ########################################
