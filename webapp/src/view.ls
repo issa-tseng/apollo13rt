@@ -494,6 +494,7 @@ class PanelView extends DomView
   _wireEvents: ->
     dom = this.artifact()
     model = this.subject
+    wrapper = dom.find('.panel-inner-wrapper')
 
     # grab the total layout size and store it, as it is soon lost.
     layout = dom.find('.panel-inner-wrapper img')
@@ -501,7 +502,7 @@ class PanelView extends DomView
 
     # respond to mouse events.
     mouse-pos = from-event($(document), \mousemove, (event) -> { x: event.screenX, y: event.screenY })
-    dom.find('.panel-inner-wrapper').on(\mousedown, (event) ->
+    wrapper.on(\mousedown, (event) ->
       event.preventDefault() # stop default drag operations.
 
       model.set(\mouse.clicking, true)
@@ -514,6 +515,10 @@ class PanelView extends DomView
         tracker.stop()
       )
     )
+
+    <- defer
+    # enable zoom transitions, but only after initial computation.
+    wrapper.addClass(\initialized)
 
 
 module.exports = {

@@ -31,7 +31,8 @@ $color-lamp: #e4e1da
   .panel-inner-wrapper
     cursor: grab
     position: relative
-    transition: 0.3s transform
+    &.initialized
+      transition: 0.3s transform
     &.dragging
       cursor: grabbing
       transition: none
