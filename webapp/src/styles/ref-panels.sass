@@ -4,11 +4,13 @@
 // K
 $bank-height: 66px
 $talkback-bank-height: 36px
+$breaker-bank-height: 40px
 $rail-width: 4px
 $rail-outer-width: 6px
 $switch-width: 52px
 $switch-outer-width: $switch-width + $rail-outer-width
 $gauge-halfwidth: 56px
+$breaker-outer-width: 44px
 
 $label-padding-v: 4px
 $label-padding-h: 12px
@@ -43,6 +45,9 @@ $color-lamp: #e4e1da
 
     &.talkbacks
       height: $talkback-bank-height
+
+    &.breakers
+      height: $breaker-bank-height
 
     div
       background-repeat: no-repeat
@@ -85,6 +90,16 @@ $color-lamp: #e4e1da
         background-size: 50px 50px
         &:before, &:after
           display: none
+      &.panel-breaker
+        background-image: url(/assets/panel-breaker.svg)
+        background-size: 40px 40px
+        height: 40px
+        margin-left: 4px
+        width: 40px
+        &:before, &:after
+          display: none
+        &.gap
+          visibility: hidden
       &.panel-plug
         .glyph
           background-image: url(/assets/panel-plug.svg)
@@ -228,7 +243,7 @@ $color-lamp: #e4e1da
         left: calc(100% + #{$arrow-length})
         top: calc(50% - 4px)
 
-    @for $idx from 1 to 16
+    @for $idx from 1 to 17
       .header-row-#{$idx}
         bottom: calc(100% + #{$label-padding-v} + #{12px * ($idx - 1)})
       .header-col-#{$idx}
@@ -261,10 +276,25 @@ $color-lamp: #e4e1da
     .header-row-1.bracket:before
       display: block
 
+    &.breakers
+      @for $idx from 1 to 17
+        .header-col-#{$idx}
+          left: #{$breaker-outer-width * ($idx - 1)}
+        .header-width-#{$idx}
+          width: #{($breaker-outer-width * $idx) - 1px}
+
   .dial
     height: 125px
     position: absolute
     width: 125px
+
+    &.mini
+      height: 100px
+      width: 100px
+      .glyph
+        background-size: 100px 100px
+      .label.upper
+        width: 100px
 
     .glyph
       background-image: url(/assets/panel-dial.svg)
@@ -287,6 +317,16 @@ $color-lamp: #e4e1da
         bottom: calc(100% + 16px + #{$dial-label-padding-v})
     .label.lower
       top: calc(100% + #{$dial-label-padding-v})
+
+    .label.lower-left, .label.lower-right
+      position: absolute
+      top: calc(100% + #{$dial-label-padding-v})
+    .label.lower-left
+      right: calc(50% + 25px)
+      text-align: right
+    .label.lower-right
+      left: calc(50% + 25px)
+      text-align: left
 
     .label.left, .label.right
       height: 1em
@@ -350,6 +390,16 @@ $color-lamp: #e4e1da
         @include rot(45)
       &.rot-150
         @include rot(60)
+
+    &.mini
+      .label.left
+        right: 50px
+        span
+          right: 56px
+      .label.right
+        left: 50px
+        span
+          left: 56px
 
   .dblgauge
     $label-offset-h: 38px
@@ -756,9 +806,30 @@ $color-lamp: #e4e1da
       margin-bottom: 6px
       width: 120px
 
+  .audiobank
+    position: absolute
+
+    .bank, .spinner
+      float: left
+      position: relative
+
+    .bank + .spinner
+      margin-left: 12px
+    .spinner + .bank
+      margin-left: 12px
+
+    .bank div
+      padding-bottom: 11px
+      &:before, &:last-child:after
+        top: 6px
+    .spinner
+      margin-top: 7px
+      .label
+        margin-bottom: 1px
+
 
 // CM MDC
-#panel-cm-mdc .panel-main
+#ref-panel-cm-mdc .panel-main
   width: 5000px
 #panel-cm-15-1a
   left: 295px
@@ -1585,4 +1656,293 @@ $color-lamp: #e4e1da
 #panel-cm-16-1b
   left: 4465px
   top: 330px
+
+
+
+// CM AUX
+#ref-panel-cm-aux
+  .panel-inner-wrapper, .panel-main
+    width: 2960px
+
+#panel-cm-9-1
+  left: 1084px
+  top: 159px
+  transform: rotate(19deg)
+#panel-cm-9-2
+  left: 1037px
+  top: 279px
+  transform: rotate(19deg)
+#panel-cm-9-3
+  left: 994px
+  top: 396px
+  transform: rotate(19deg)
+#panel-cm-9-4
+  left: 1281px
+  top: 161px
+  transform: rotate(19deg)
+#panel-cm-9-5
+  left: 1223px
+  top: 279px
+  transform: rotate(19deg)
+#panel-cm-9-6
+  left: 1177px
+  top: 397px
+  transform: rotate(19deg)
+#panel-cm-9-7
+  left: 996px
+  top: 549px
+  transform: rotate(19deg)
+
+#panel-cm-8-1
+  left: 83px
+  top: 813px
+#panel-cm-8-2
+  left: 250px
+  top: 800px
+#panel-cm-8-3
+  left: 121px
+  top: 926px
+  .header-width-x
+    width: 410px
+#panel-cm-8-dial-1
+  left: 800px
+  top: 913px
+  .glyph
+    transform: rotate(210deg)
+#panel-cm-8-dial-2
+  left: 940px
+  top: 913px
+  .glyph
+    transform: rotate(210deg)
+#panel-cm-8-dial-3
+  left: 1080px
+  top: 913px
+  .glyph
+    transform: rotate(210deg)
+#panel-cm-8-4
+  left: 141px
+  top: 1013px
+#panel-cm-8-5
+  left: 620px
+  top: 1001px
+#panel-cm-8-6
+  left: 790px
+  top: 1087px
+#panel-cm-8-7
+  left: 925px
+  top: 1075px
+  div:before, div:after
+    display: none
+#panel-cm-8-8
+  left: 152px
+  top: 1113px
+#panel-cm-8-9
+  left: 170px
+  top: 1202px
+#panel-cm-8-10
+  left: 827px
+  top: 1202px
+#panel-cm-8-11
+  left: 197px
+  top: 1284px
+#panel-cm-7-1
+  left: 842px
+  top: 1354px
+  transform: rotate(56deg)
+#panel-cm-7-2
+  left: 700px
+  top: 1421px
+  transform: rotate(56deg)
+#panel-cm-7-3
+  left: 639px
+  top: 1480px
+  transform: rotate(56deg)
+#panel-cm-7-4
+  left: 537px
+  top: 1545px
+  transform: rotate(56deg)
+#panel-cm-7-dial-1
+  left: 574px
+  top: 1360px
+  transform: rotate(56deg)
+#panel-cm-7-dial-2
+  left: 435px
+  top: 1371px
+  transform: rotate(56deg)
+#panel-cm-7-dial-labels-a
+  left: 336px
+  top: 1370px
+  transform: rotate(56deg)
+  .header-width-x
+    width: 205px
+#panel-cm-7-dial-3
+  left: 295px
+  top: 1400px
+  transform: rotate(56deg)
+  .label.upper.far span
+    background-color: #e6e6e6
+    padding: 0 2px
+#panel-cm-7-dial-4
+  left: 361px
+  top: 1498px
+  transform: rotate(56deg)
+  .label.upper.far span
+    background-color: #e6e6e6
+    padding: 0 2px
+#panel-cm-7-dial-5
+  left: 455px
+  position: absolute
+  top: 1588px
+  transform: rotate(56deg)
+  .label
+    position: absolute
+    text-align: center
+    text-transform: uppercase
+    width: 100%
+    &.upper
+      bottom: 100%
+      &.far
+        bottom: calc(100% + 16px)
+      span
+        background-color: #e6e6e6
+        padding: 0 2px
+  .glyph
+    background: url(/assets/panel-o2-dial.svg)
+    background-size: 78px 78px
+    height: 78px
+    width: 78px
+#panel-cm-6-1
+  left: 1592px
+  top: 163px
+  transform: rotate(-19deg)
+#panel-cm-6-2
+  left: 1635px
+  top: 281px
+  transform: rotate(-19deg)
+#panel-cm-6-3
+  left: 1679px
+  top: 398px
+  transform: rotate(-19deg)
+#panel-cm-6-4
+  left: 1784px
+  top: 158px
+  transform: rotate(-19deg)
+#panel-cm-6-5
+  left: 1818px
+  top: 280px
+  transform: rotate(-19deg)
+#panel-cm-6-6
+  left: 1862px
+  top: 397px
+  transform: rotate(-19deg)
+#panel-cm-6-7
+  left: 1866px
+  top: 534px
+  transform: rotate(-19deg)
+#panel-cm-5-1
+  left: 1825px
+  top: 790px
+#panel-cm-5-2
+  left: 2137px
+  top: 790px
+#panel-cm-5-3
+  left: 2425px
+  top: 792px
+#panel-cm-5-4
+  left: 2708px
+  top: 792px
+#panel-cm-5-5
+  left: 2395px
+  top: 880px
+#panel-cm-5-6
+  left: 2545px
+  top: 880px
+#panel-cm-5-dial-labels-a
+  left: 1832px
+  top: 917px
+  .header-width-x
+    width: 386px
+  .header-col-y
+    left: 125px
+  .header-width-y
+    width: 261px
+#panel-cm-5-dial-1
+  left: 1835px
+  top: 905px
+#panel-cm-5-dial-2
+  left: 1970px
+  top: 905px
+#panel-cm-5-7
+  left: 2099px
+  top: 927px
+#panel-cm-5-8
+  left: 2233px
+  top: 968px
+#panel-cm-5-9
+  left: 1826px
+  top: 1064px
+  .upper span
+    background-color: #e6e6e6
+    display: inline
+    position: static
+#panel-cm-5-10
+  left: 2159px
+  top: 1064px
+  .header-width-x
+    width: 625px
+#panel-cm-5-11
+  left: 2389px
+  top: 1064px
+#panel-cm-5-12
+  left: 1910px
+  top: 1166px
+  .header-width-x
+    width: 849px
+#panel-cm-5-13
+  left: 2496px
+  top: 1166px
+#panel-cm-5-14
+  left: 1898px
+  top: 1247px
+#panel-cm-4-1
+  left: 2161px
+  top: 1358px
+  transform: rotate(-56deg)
+#panel-cm-4-2a
+  left: 2217px
+  top: 1458px
+  transform: rotate(-56deg)
+#panel-cm-4-2b
+  left: 2273px
+  top: 1373px
+  transform: rotate(-56deg)
+#panel-cm-4-dial-1
+  left: 2299px
+  top: 1511px
+  transform: rotate(-56deg)
+  .label.upper.far
+    margin-left: -5px
+    width: 110px
+  .label span
+    background-color: #e4e4e4
+  .label.left span
+    right: 52px
+  .label.right span
+    left: 52px
+  .group.left span
+    right: 68px
+  .group.right span
+    left: 68px
+#panel-cm-4-3
+  left: 2377px
+  top: 1411px
+  transform: rotate(-56deg)
+#panel-cm-4-4
+  left: 2328px
+  top: 1519px
+  transform: rotate(-56deg)
+#panel-cm-4-5
+  left: 2405px
+  top: 1563px
+  transform: rotate(-56deg)
 

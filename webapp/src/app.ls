@@ -51,7 +51,8 @@ topics = new List([
     new Exhibit( title: 'The Flight Controllers', description: 'An overview of each flight controller position in Mission Control.' )
   ])),
   new Topic( title: 'Reference', exhibits: new List([
-    new Exhibit( lookup: \ref-panels, title: 'Control Panels', description: 'Annotated replicas of the CM and LM control panel layouts.' ),
+    new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'Annotated diagram of the main CM control panel.' ),
+    new Exhibit( lookup: \ref-panel-cm-aux, title: 'Command Module Auxiliary Panels', description: 'Annotated diagram of additional CM panels.' ),
     new Exhibit( title: 'Electrical Systems', description: 'High-resolution recreations of the EPS system diagrams.' ),
     new Exhibit( title: 'Environmental Systems', description: 'High-resolution recreations of the ECS system diagrams.' )
   ]))
