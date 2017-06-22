@@ -5,6 +5,7 @@ $ = window.jQuery = window.$ = require(\jquery)
 { Library, App } = require(\janus).application
 stdlib = require(\janus-stdlib)
 { Global, Glossary, Lookup, Player, Transcript, ExhibitArea, Topic, Exhibit } = require('./model')
+{ from-event } = require(\janus-stdlib).util.varying
 
 # util.
 defer = (f) -> set-timeout(f, 0)
@@ -132,4 +133,10 @@ $document.on(\mouseenter, '.glossary-term:not(.active)', ->
       this.stop()
   )
 )
+
+# dumbest visual detail i've ever cared about:
+is-scrolled = from-event($(document), \scroll, (.target.scrollingElement.scrollTop > 20))
+global.watch(\exhibit)
+  .flatMap((exhibit) -> if exhibit? then is-scrolled else false)
+  .react(-> $('html').toggleClass('dark-canvas', it))
 
