@@ -356,13 +356,13 @@ class ExhibitAreaView extends DomView
   @_dom = -> $('
     <div class="exhibit-area">
       <div class="exhibit-toc"/>
-      <div class="exhibit-content"/>
+      <div class="exhibit-wrapper"/>
     </div>
   ')
   @_template = template(
     find('.exhibit-area').classed(\has-exhibit, from.app(\global).watch(\exhibit).map (?))
     find('.exhibit-toc').render(from(\topics))
-    find('.exhibit-content').render(from.app(\global).watch(\exhibit))
+    find('.exhibit-wrapper').render(from.app(\global).watch(\exhibit))
 
     # need this to suppress spurious transitions.
     find('.exhibit-area').classed(\has-exhibit-delayed, from.app(\global).flatMap((global) ->
@@ -423,8 +423,16 @@ class ExhibitTitleView extends DomView
   )
 
 class ExhibitView extends DomView
-  @_dom = -> $('<div class="exhibit"/>')
-  @_template = template(find('.exhibit').html(from(\content)))
+  @_dom = -> $('
+    <div class="exhibit">
+      <h1/>
+      <div class="exhibit-content"/>
+    </div>
+  ')
+  @_template = template(
+    find('h1').text(from(\title))
+    find('.exhibit-content').html(from(\content))
+  )
   _wireEvents: ->
     dom = this.artifact()
     app = this.options.app

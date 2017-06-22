@@ -707,7 +707,7 @@ header
           margin-right: -0.6em
 
 .exhibit-area
-  .exhibit-content
+  .exhibit-wrapper
     display: none
     margin-left: 0.4em
     min-height: 30em
@@ -742,41 +742,52 @@ header
         .topic-name .arrow
           opacity: 1
 
-    .exhibit-content
+    .exhibit-wrapper
       animation-duration: 1s
       animation-iteration-count: 1
       animation-name: article-appear
       display: block
-      padding: 5em 2em
+      padding: 2em
 
-.article
-  $content-padding-left: 12em
-  margin: 0 auto
-  max-width: 83em
-  padding-top: 2em
+.exhibit
+  h1
+    border-bottom: 0.1em solid $color-light-border
+    color: #454545
+    margin-bottom: 0.5em
+    margin-left: calc(33% + 1.4em)
+    padding-bottom: 0.3em
 
-  h2
-    font-size: 2em
-    font-weight: normal
-    height: 1em
-    margin-bottom: -1em
-    max-width: 9em
-  p, ul
-    font-size: 1.6em
-    font-weight: lighter
-    line-height: 1.4em
-    padding-bottom: 1em
-    padding-left: $content-padding-left
-  ul
-    list-style-type: square
-    padding-left: $content-padding-left + 1em
-    li
-      display: list-item
-      padding-bottom: 0.3em
-      &:last-child
-        padding-bottom: 0
-  p + h2, ul + h2
+  .article
+    margin: 0 auto
+    max-width: 83em
+    padding-bottom: 4em
+    padding-left: calc(33% - 10em)
     padding-top: 1em
+
+    h2
+      font-family: $monospace
+      font-size: 1.4em
+      font-weight: normal
+      height: 0
+      line-height: 1.8em
+      margin-left: calc(-50% - 1em)
+      text-align: right
+      width: 50%
+    p, ul
+      font-size: 1.6em
+      font-weight: lighter
+      line-height: 1.4em
+      padding-bottom: 1em
+    ul
+      list-style-type: square
+      padding-left: 1em
+      li
+        display: list-item
+        padding-bottom: 0.3em
+        &:last-child
+          padding-bottom: 0
+    p + h2, ul + h2
+      padding-top: 1em
 
 
 
