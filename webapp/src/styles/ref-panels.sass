@@ -36,13 +36,18 @@ $color-lamp: #e4e1da
     top: 0
     z-index: 1
   .panel-wrapper
+    cursor: -webkit-grab
+    cursor: grab
     overflow: hidden
     .panel-inner-wrapper
-      cursor: grab
       position: relative
+      -moz-user-select: none
+      -webkit-user-select: none
+      user-select: none
       &.initialized
         transition: 0.3s transform
       &.dragging
+        cursor: -webkit-grabbing
         cursor: grabbing
         transition: none
 

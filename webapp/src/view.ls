@@ -6,7 +6,7 @@ marked = require(\marked)
 
 { Line, Transcript, Term, Glossary, Player, ExhibitArea, Topic, Exhibit } = require('./model')
 { defer, clamp, px, pct, pad, get-time, max-int, size-of } = require('./util')
-{ min } = Math
+{ min, max } = Math
 
 
 
@@ -458,7 +458,7 @@ class PanelVM extends Model
     default: -> \all
   )
   @bind(\window, from.varying(window |> $ |> size-of))
-  @bind(\frame.width, from(\window.width).map (- 85))
+  @bind(\frame.width, from(\window.width))
   @bind(\frame.height, from(\window.height).and(\view.options.app).watch(\global).watch(\player).watch(\base_height)
       .all.map((window-height, player-height) -> window-height - player-height - 145))
   @default(\target.x, 0.5)
@@ -476,7 +476,7 @@ class PanelVM extends Model
       if scale-mode is \zoom
         1.0
       else if scale-mode is \fit
-        frame-height / all-height
+        max((frame-height / all-height), (frame-width / all-width))
       else if scale-mode is \all
         min((frame-height / all-height), (frame-width / all-width))
     ))
