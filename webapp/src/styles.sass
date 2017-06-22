@@ -712,13 +712,12 @@ header
 .exhibit-area
   .exhibit-wrapper
     display: none
-    margin-left: 0.4em
     min-height: 30em
-    position: relative
-    top: 2.5em
+    padding: 2em
+      top: 4.5em
 
   .exhibit-toc
-    animation-duration: 1s
+    animation-duration: 2s
     animation-timing-function: $ease-extreme-out
     animation-iteration-count: 1
     background: $color-bg
@@ -750,25 +749,23 @@ header
       animation-iteration-count: 1
       animation-name: article-appear
       display: block
-      padding: 2em
 
 .exhibit
   h1
     border-bottom: 0.1em solid $color-light-border
     color: #444
     margin-bottom: 0.5em
-    margin-left: calc(33% + 1.4em)
+    margin-left: calc(33% + 1.55em)
     padding-bottom: 0.3em
 
   .article
-    margin: 0 auto
-    max-width: 83em
+    max-width: 76em
     padding-bottom: 4em
-    padding-left: calc(33% - 10em)
+    padding-left: calc(33% + 3em)
     padding-top: 1em
 
     h2
-      color: #444
+      color: #888
       font-family: $monospace
       font-size: 1.4em
       font-weight: normal
@@ -792,6 +789,12 @@ header
           padding-bottom: 0
     p + h2, ul + h2
       padding-top: 1em
+
+  &.reference
+    margin: -2em
+      top: -4.3em
+    h1
+      display: none
 
 
 

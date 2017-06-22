@@ -52,10 +52,10 @@ topics = new List([
     new Exhibit( title: 'The Flight Controllers', description: 'An overview of each flight controller position in Mission Control.' )
   ])),
   new Topic( title: 'reference', exhibits: new List([
-    new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'Annotated diagram of the main CM control panel.' ),
-    new Exhibit( lookup: \ref-panel-cm-aux, title: 'Command Module Auxiliary Panels', description: 'Annotated diagram of additional CM panels.' ),
-    new Exhibit( title: 'Electrical Systems', description: 'High-resolution recreations of the EPS system diagrams.' ),
-    new Exhibit( title: 'Environmental Systems', description: 'High-resolution recreations of the ECS system diagrams.' )
+    new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'Annotated diagram of the main CM control panel.', reference: true ),
+    new Exhibit( lookup: \ref-panel-cm-aux, title: 'Command Module Auxiliary Panels', description: 'Annotated diagram of additional CM panels.', reference: true ),
+    new Exhibit( title: 'Electrical Systems', description: 'High-resolution recreations of the EPS system diagrams.', reference: true ),
+    new Exhibit( title: 'Environmental Systems', description: 'High-resolution recreations of the ECS system diagrams.', reference: true )
   ]))
 ])
 viewer = new ExhibitArea({ topics })
@@ -138,5 +138,5 @@ $document.on(\mouseenter, '.glossary-term:not(.active)', ->
 is-scrolled = from-event($(document), \scroll, (.target.scrollingElement.scrollTop > 20))
 global.watch(\exhibit)
   .flatMap((exhibit) -> if exhibit? then is-scrolled else false)
-  .react(-> $('html').toggleClass('dark-canvas', it))
+  .react(-> $('html').toggleClass(\dark-canvas, it))
 

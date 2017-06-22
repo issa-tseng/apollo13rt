@@ -431,6 +431,7 @@ class ExhibitView extends DomView
   ')
   @_template = template(
     find('h1').text(from(\title))
+    find('.exhibit').classed(\reference, from(\reference))
     find('.exhibit-content').html(from(\content))
   )
   _wireEvents: ->
@@ -456,9 +457,10 @@ class PanelVM extends Model
     values: -> new List([ \all, \fit, \zoom ])
     default: -> \all
   )
-  @bind(\window, from(\view).flatMap((view) -> window |> $ |> size-of))
+  @bind(\window, from.varying(window |> $ |> size-of))
   @bind(\frame.width, from(\window.width).map (- 85))
-  @bind(\frame.height, from(\window.height).map (- 150))
+  @bind(\frame.height, from(\window.height).and(\view.options.app).watch(\global).watch(\player).watch(\base_height)
+      .all.map((window-height, player-height) -> window-height - player-height - 145))
   @default(\target.x, 0.5)
   @default(\target.y, 0.5)
   @bind(\mouse.delta.x, from(\mouse.now.x).and(\mouse.down.x).all.map (-))

@@ -26,16 +26,25 @@ $color-lamp: #e4e1da
     transform: rotate(#{-$deg}deg)
 
 // CHROME
-.panel-wrapper
-  overflow: hidden
-  .panel-inner-wrapper
-    cursor: grab
-    position: relative
-    &.initialized
-      transition: 0.3s transform
-    &.dragging
-      cursor: grabbing
-      transition: none
+.panel
+  padding-bottom: 4em
+  position: relative
+  .panel-controls
+    padding: 1em
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 1
+  .panel-wrapper
+    overflow: hidden
+    .panel-inner-wrapper
+      cursor: grab
+      position: relative
+      &.initialized
+        transition: 0.3s transform
+      &.dragging
+        cursor: grabbing
+        transition: none
 
 
 // LAYOUT AND DISPLAY
