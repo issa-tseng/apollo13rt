@@ -250,7 +250,7 @@ class Glossary extends Model
 
 class Player extends Model
   @attribute(\base_height, class extends attribute.NumberAttribute
-    default: -> 450
+    default: -> 400
   )
 
   @bind(\timestamp.epoch, from(\timestamp.timecode).and(\timestamp.offset).all.map (+))

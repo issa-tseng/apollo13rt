@@ -64,7 +64,7 @@ li
   font-style: normal
 
 html, body
-  background-color: #f7f7f7
+  background-color: $color-bg
 
 html
   font-family: $sans
@@ -535,6 +535,7 @@ a
     font-weight: bold
     padding: 0.3em 0
     position: relative
+    text-transform: capitalize
     transition: 0.2s border-color
     z-index: 2
 
@@ -549,40 +550,19 @@ a
       top: -0.1em
       transition: 0.2s opacity
 
+  .topic-active-name
+    font-weight: bold
+    padding: 0.3em
+    position: absolute
+    right: 0.3em
+    top: 0
+
   .topic-contents
     margin-top: 1.5em
-    transition: 0.4s padding-top
 
-  .topic-active
-    @include fill
-    background-color: #fff
-    bottom: auto
-    max-height: 0
-    overflow: hidden
-    transition: 0.4s max-height
-    z-index: 1
-    .topic-active-name
-      color: #444
-      font-size: 2em
-      font-weight: bold
-      letter-spacing: -0.02em
-      margin: 0.3em
-      padding-top: 1em
-    .close
-      bottom: 0.08em
-      color: #999
-      cursor: pointer
-      font-size: 0.8em
-      font-weight: normal
-      left: 0.3em
-      position: relative
-  &.active
-    .topic-name
-      border-bottom-color: transparent
-    .topic-active
-      max-height: 6em
-    .topic-contents
-      padding-top: 3em
+  &.active .topic-name
+    border-bottom-color: #888
+    color: #555
 
 .exhibit-title
   .name
@@ -606,56 +586,6 @@ a
     &:hover .name
       text-decoration: none
 
-.exhibit-area
-  .exhibit-content
-    background: #fff
-    display: none
-    margin-left: 0.4em
-    min-height: 30em
-    position: relative
-    top: 2.5em
-
-  &.has-exhibit
-    .exhibit-toc .topic
-      .topic-name .arrow
-        opacity: 1
-      &:hover
-        background-color: #f4f4f4
-        z-index: 3
-
-    .exhibit-content
-      display: block
-      padding: 5em 2em 0
-
-.article
-  $content-padding-left: 12em
-  margin: 0 auto
-  max-width: 83em
-  padding-top: 2em
-
-  h2
-    font-size: 2em
-    font-weight: normal
-    height: 1em
-    margin-bottom: -1em
-    max-width: 9em
-  p, ul
-    font-size: 1.6em
-    font-weight: lighter
-    line-height: 1.4em
-    padding-bottom: 1em
-    padding-left: $content-padding-left
-  ul
-    list-style-type: square
-    padding-left: $content-padding-left + 1em
-    li
-      display: list-item
-      padding-bottom: 0.3em
-      &:last-child
-        padding-bottom: 0
-  p + h2, ul + h2
-    padding-top: 1em
-
 
 
 // LAYOUT
@@ -670,11 +600,11 @@ header
     padding: 1em 2em
     text-align: center
 
-#timeline.fixed-player
-  #player
-    position: fixed
-    top: 0
-    z-index: 1
+#timeline.fixed-player #player
+  box-shadow: 0 0.5em 0 #f7f7f7
+  position: fixed
+  top: 0
+  z-index: 2
 
 #tooltip
   @include bubble
@@ -716,32 +646,6 @@ header
       .glossary-term
         border-bottom-color: #fff
 
-#exhibits
-  $margin-h: 2em
-  margin: 3.5em $margin-h 6em
-
-  .topic
-    margin-left: 1em
-
-  .exhibit-toc
-    position: absolute
-    width: calc(100% - #{2 * $margin-h})
-
-    > ul > li
-      float: left
-      margin-right: 2em
-      width: 33%
-      &:first-child
-        margin-left: -0.6em
-      &:last-child
-        float: none
-        margin-right: 0
-        overflow: hidden
-        width: auto
-        .topic
-          margin-left: 0
-
-
 @media (max-width: 1000px)
   .player .player-scripts
     padding-bottom: 17em
@@ -759,6 +663,124 @@ header
       height: 15.5em
       margin-left: 7.5em
       margin-top: 1.5em
+
+
+
+// EXHIBIT LAYOUT
+
+@keyframes toc-down
+  0%
+    max-height: 8em
+  100%
+    max-height: 2em
+@keyframes article-appear
+  0%
+    opacity: 0.3
+    transform: translateY(1em)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+#exhibits
+  .topic
+    margin-left: 1em
+
+  .exhibit-toc
+    margin-top: 2.4em
+    padding: 0.6em 2em 1em
+
+    > ul > li
+      float: left
+      margin-right: 2em
+      width: 33%
+      &:first-child
+        margin-left: -0.6em
+        .topic, + li .topic
+          margin-right: -1.2em
+      &:last-child
+        float: none
+        margin-left: calc(67% + 2em)
+        margin-right: 0
+        width: auto
+        .topic
+          margin-left: 0
+          margin-right: -0.6em
+
+.exhibit-area
+  .exhibit-content
+    display: none
+    margin-left: 0.4em
+    min-height: 30em
+    position: relative
+    top: 2.5em
+
+  .exhibit-toc
+    animation-duration: 1s
+    animation-timing-function: $ease-extreme-out
+    animation-iteration-count: 1
+    background: $color-bg
+    border-top: 1px solid transparent
+    transition: 0.6s border-color, 0.6s background
+
+  &.has-exhibit
+    .exhibit-toc
+      animation-name: toc-down
+      background: $color-box-bg
+      border-top-color: $color-light-border
+      bottom: 0
+      left: 0
+      max-height: 2em
+      right: 0
+      position: fixed
+      z-index: 1
+
+      .topic
+        background: $color-box-bg
+        box-shadow: 0 -0.2em 0 0.4em $color-box-bg, 0 -0.3em 0 0.4em $color-light-border
+        transition: 0.4s transform
+
+        .topic-name .arrow
+          opacity: 1
+
+    .exhibit-content
+      animation-duration: 1s
+      animation-iteration-count: 1
+      animation-name: article-appear
+      display: block
+      padding: 5em 2em
+
+.article
+  $content-padding-left: 12em
+  margin: 0 auto
+  max-width: 83em
+  padding-top: 2em
+
+  h2
+    font-size: 2em
+    font-weight: normal
+    height: 1em
+    margin-bottom: -1em
+    max-width: 9em
+  p, ul
+    font-size: 1.6em
+    font-weight: lighter
+    line-height: 1.4em
+    padding-bottom: 1em
+    padding-left: $content-padding-left
+  ul
+    list-style-type: square
+    padding-left: $content-padding-left + 1em
+    li
+      display: list-item
+      padding-bottom: 0.3em
+      &:last-child
+        padding-bottom: 0
+  p + h2, ul + h2
+    padding-top: 1em
+
+
+
+// ARTICLE CONTENT
 
 @import 'styles/ref-panels.sass'
 
