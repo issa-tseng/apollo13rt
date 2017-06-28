@@ -13,7 +13,10 @@ defer = (f) -> set-timeout(f, 0)
 # basic app setup.
 views = new Library()
 stdlib.view.registerWith(views)
-require('./view').registerWith(views)
+require('./view/player').registerWith(views)
+require('./view/transcript').registerWith(views)
+require('./view/glossary').registerWith(views)
+require('./view/exhibit').registerWith(views)
 global = new Global()
 app = new App({ views, global })
 
