@@ -1,10 +1,10 @@
 $ = require(\jquery)
 
-{ DomView, template, find, from } = require(\janus)
-{ debounce } = require(\janus-stdlib).util.varying
+{ DomView, template, find, from, Varying } = require(\janus)
+{ debounce, sticky } = require(\janus-stdlib).util.varying
 
 { Line, Transcript } = require('../model')
-{ pct, pad, get-time, max-int } = require('../util')
+{ pct, pad, get-time, max-int, bump } = require('../util')
 
 
 class LineView extends DomView
@@ -73,6 +73,7 @@ class TranscriptView extends DomView
     scroll-to = (scroll-top) ->
       relinquished := max-int
       line-container.stop(true).animate({ scroll-top }, { complete: (-> relinquished := get-time()) })
+    scroll-top-line = -> id |> get-offset |> (- 50) |> scroll-to if (id = transcript.get(\top_line)?._id)?
 
     debounce(transcript.watch(\top_line), 50).react((line) ->
       id = line?._id
@@ -87,13 +88,21 @@ class TranscriptView extends DomView
     )
 
     # watch for autoscroll rising edge and trip scroll.
-    transcript.watch(\auto_scroll).react((auto) ->
-      id |> get-offset |> (- 50) |> scroll-to if auto and (id = transcript.get(\top_line)?._id)?
+    transcript.watch(\auto_scroll).react((auto) -> scroll-top-line() if auto)
+
+    # track whether the browser is getting resized, and suppress autoscroll disengagement.
+    # TODO: this seems like a common pattern. perhaps the stdlib utils should have some automatic
+    # inner-varying management system.
+    is-resizing-inner = new Varying(false)
+    is-resizing = sticky(is-resizing-inner, true: 50 )
+    $(window).on(\resize, ->
+      bump(is-resizing-inner)
+      scroll-top-line()
     )
 
     # turn off auto-scrolling as intelligently as we can.
     line-container.on(\scroll, ->
-      transcript.set(\auto_scroll, false) if get-time() > (relinquished + 200) # complete fires early
+      transcript.set(\auto_scroll, false) if get-time() > (relinquished + 200) and not is-resizing.get() # complete fires early
     )
     line-container.on(\wheel, ->
       line-container.finish()

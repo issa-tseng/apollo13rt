@@ -4,7 +4,7 @@ $ = require(\jquery)
 { from-event-now } = require(\janus-stdlib).util.varying
 
 
-module.exports =
+module.exports = util =
   defer: (f) -> set-timeout(f, 0)
   clamp: (min, max, x) --> if x < min then min else if x > max then max else x
   px: (x) -> "#{x}px"
@@ -16,4 +16,9 @@ module.exports =
   size-of: (selector) ->
     dom = $(selector)
     from-event-now($(window), \resize, -> { width: dom.width(), height: dom.height() })
+
+  bump: (varying) ->
+    varying.set(true)
+    <- util.defer
+    varying.set(false)
 
