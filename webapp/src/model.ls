@@ -159,13 +159,20 @@ class Transcript extends Model
 
       # now watch idx, but also update on epoch-change:
       was-active = {}
+      active-ids = {}
       last-idx = -1
       from(transcript.watch(\target_idx)).and(player.watch(\timestamp.epoch)).all.plain().reactNow(([ idx, epoch ]) ->
         return unless idx? and epoch?
         return if idx is last-idx
 
-        # first clear out active lines that are no longer.
-        for wa-idx, line of was-active when not line.contains_(epoch)
+        # first clear out active primary lines that are no longer.
+        for wa-idx, line of was-active when line._start? and not line.contains_(epoch)
+          line.set(\active, false)
+          delete was-active[wa-idx]
+          delete active-ids[line._id]
+
+        # now clear out active secondary lines that are no longer.
+        for wa-idx, line of was-active when not active-ids[line._id]
           line.set(\active, false)
           delete was-active[wa-idx]
 
@@ -174,10 +181,11 @@ class Transcript extends Model
         misses = 0
         while misses < 4 and idx < lines.length
           line = lines[idx]
-          if line.contains_(epoch)
+          if line.contains_(epoch) or active-ids[line._id] is true
             unless was-active[idx]?
               line.set(\active, true)
               was-active[idx] = line
+              active-ids[line._id] = true
           else
             misses += 1
           idx += 1
