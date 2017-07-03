@@ -30,7 +30,9 @@ class ExhibitAreaView extends DomView
 
     dom.on(\click, '.exhibit-title', -> global.set(\exhibit, $(this).data(\view).subject))
     global.watch(\exhibit).react((active) ->
-      $('body').animate({ scrollTop: $('header').height() }) if active?
+      if active?
+        $('body').animate({ scrollTop: $('header').height() })
+        dom.addClass(\exhibited)
     )
 
 class TopicView extends DomView
@@ -80,6 +82,7 @@ class ExhibitTitleView extends DomView
 class ExhibitView extends DomView
   @_dom = -> $('
     <div class="exhibit">
+      <div class="exhibit-close">Close</div>
       <h1/>
       <div class="exhibit-content"/>
     </div>
@@ -92,6 +95,9 @@ class ExhibitView extends DomView
   _wireEvents: ->
     dom = this.artifact()
     app = this.options.app
+    global = app.get(\global)
+
+    dom.find('.exhibit-close').on(\click, ~> global.unset(\exhibit))
 
     # wait for completion.
     <~ this.on(\appendedToDocument)
