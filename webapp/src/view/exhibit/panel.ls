@@ -46,17 +46,34 @@ class PanelVM extends Model
     this.watch(\mouse.clicking).react((is-clicking) ~>
       if is-clicking is false
         # react to trailing edge to adjust target and null mouse delta.
-        target-x = this.get(\target.x) - (this.get(\mouse.delta.x) / this.get(\all.width) / this.get(\scale.factor))
-        margin-x = this.get(\margin.x)
-        this.set(\target.x, clamp(margin-x, 1 - margin-x, target-x))
-
-        target-y = this.get(\target.y) - (this.get(\mouse.delta.y) / this.get(\all.height) / this.get(\scale.factor))
-        margin-y = this.get(\margin.y)
-        this.set(\target.y, clamp(margin-y, 1 - margin-y, target-y))
+        this.focusTarget(
+          this.get(\target.x) - (this.get(\mouse.delta.x) / this.get(\all.width) / this.get(\scale.factor)),
+          this.get(\target.y) - (this.get(\mouse.delta.y) / this.get(\all.height) / this.get(\scale.factor))
+        )
 
         this.unset(\mouse.down)
         this.unset(\mouse.now)
     )
+
+  # pans to focus on an (x, y) point in real-screen-space relative to the current frame.
+  focusScreenXY: (x, y, scale-factor = this.get(\scale.factor)) ->
+    this.focusTarget(
+      this.get(\target.x) + (x - (this.get(\frame.width) / 2)) / this.get(\all.width) / scale-factor,
+      this.get(\target.y) + (y - (this.get(\frame.height) / 2)) / this.get(\all.height) / scale-factor
+    )
+
+  # pans to focus on a specific (x, y) [0, 1]-space point. clamps as necessary.
+  focusTarget: (x, y) ->
+    margin-x = this.get(\margin.x)
+    this.set(\target.x, clamp(margin-x, 1 - margin-x, x))
+    margin-y = this.get(\margin.y)
+    this.set(\target.y, clamp(margin-y, 1 - margin-y, y))
+
+  # zooms in by one level.
+  zoom: ->
+    switch this.get(\scale.mode)
+    | \all => this.set(\scale.mode, \fit)
+    | \fit => this.set(\scale.mode, \zoom)
 
 class PanelView extends DomView
   @viewModelClass = PanelVM
@@ -74,6 +91,7 @@ class PanelView extends DomView
   _wireEvents: ->
     dom = this.artifact()
     model = this.subject
+    outer-wrapper = dom.find('.panel-wrapper')
     wrapper = dom.find('.panel-inner-wrapper')
 
     # grab the total layout size and store it, as it is soon lost.
@@ -94,6 +112,13 @@ class PanelView extends DomView
         model.set(\mouse.clicking, false)
         tracker.stop()
       )
+    )
+
+    outer-wrapper.on(\dblclick, (event) ->
+      event.preventDefault()
+      scale-factor = model.get(\scale.factor)
+      model.zoom()
+      model.focusScreenXY(event.pageX, event.pageY - outer-wrapper.offset().top, scale-factor)
     )
 
     <- defer
