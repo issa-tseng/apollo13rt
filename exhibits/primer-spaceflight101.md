@@ -58,7 +58,9 @@ We can invert this effect by turning around so that instead our engines point in
 
 {{figure:orbits-subtle}}
 
-The final example (**figure 4**) demonstrates just how profoundly small changes in velocity can affect the orbit. From an orbit that just reaches the Moon, we'll decelerate by a mere 30m/s&mdash;roughly highway car speed. When you listen to the astronauts worry about small details like the particular set of thrusters they are using to point the spacecraft in different directions, it is this effect that they are keenly aware of&mdash;particularly with a close approach to the Moon coming up.
+The final example (**figure 4**) demonstrates just how profoundly small changes in velocity can affect the orbit. From an orbit that just reaches the Moon, we'll decelerate by a mere 20m/s&mdash;not even highway car speed. It may not look like much on this extreme scale, but that small change is the difference between passing comfortably over the surface of the Earth by a margin of ~1,200,000km (~740,000mi) and smashing into the Earth while trying to pass ~270,000km (~168,000mi) below its surface.
+
+When you listen to the astronauts worry about small details like the particular set of thrusters they are using to point the spacecraft in different directions, it is this effect that they are keenly aware of&mdash;particularly with a close approach to the Moon coming up.
 
 There are other types of burns that do different things&mdash;we'll cover just one more. Prograde and retrograde burns modify the orbit, but only within the 2D plane in 3D space that the spacecraft is already travelling within. If that plane itself needs to change, this can be done by burning orthogonally to it. But recall again our second observation, that changing our immediate path is really difficult. Changing our plane necessarily involves changing our _entire_ path, including our immediate path. So this is really expensive to do, fuel-wise.
 
