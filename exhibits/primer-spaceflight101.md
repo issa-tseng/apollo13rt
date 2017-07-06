@@ -36,11 +36,11 @@ The first thing to understand is that given any instantaneous velocity (speed an
 
 The second thing to understand is _just how fast_ orbital speed is. In Earth orbit roughly 100nm (155mi/185km) above the surface, the Apollo spacecraft would typically be travelling at over 28,000km/h (~17,500mph). Most of a rocket's launch efforts are not invested in pushing the spacecraft up, but rather in hurling it sideways.
 
-The reason this is important to understand is because one must realize how little impact maneuvering or even full engine burns have on a spacecraft's _immediate_ location or trajectory. A typical Apollo burn might modify its speed by somewhere between 20km/h and 150km/h. The more involved burns that flung the spacecraft to and from the Moon required changes in speed of upwards of 3,000km/h&mdash;much more, but still not hugely significant in the face of its immense base speed.
+The reason this is important to understand is because one must realize how little impact maneuvering or even full engine burns have on a spacecraft's _immediate_ location or trajectory. A typical Apollo burn might modify its speed by somewhere between 20km/h and 150km/h. The more intense burns that flung the spacecraft to and from the Moon required changes in speed of upwards of 10,000km/h&mdash;much more, but that 50% increase in speed accounts for the difference between a low 185km Earth orbit and an orbit that reaches the Moon, some 385,000km (~240,000mi) away.
 
 {{figure:orbits-fail}}
 
-Instead, what a burn has far more impact on is the overall shape of the orbit. Let's try this out (**figure 1**). On the left is a typical Apollo orbit just after launch: the numbers described just above. The orbit and planet to scale, while the spacecraft is blown up so you can see which way it's burning. Notice how close the orbit is to the surface of the planet, despite the spacecraft being well into space. We want to go to the moon, so let's wait until we're as close as possible, point at it, and burn for a little bit. We will increase our speed by 5,400 km/h to 32,400 km/h.
+Instead, what a burn has far more impact on is the overall shape of the orbit. Let's try this out (**figure 1**). On the left is a typical Apollo orbit just after launch: the numbers described just above. The orbit and planet are to scale, while the spacecraft is blown up so you can see which way it's burning. Notice how close the orbit is to the surface of the planet, despite the spacecraft being well into space. We want to go to the moon, so let's wait until we're as close as possible, point at it, and burn for a little bit. We will increase our speed by 5,400 km/h to 32,400 km/h.
 
 That didn't work at all. In fact, despite going faster we are now destined to crash back into Earth. This is because we forgot about our second observation, that our burns are relatively small percentages of the spacecraft's base speed. We're not going to be able to overwhelm the momentary velocity taking us parallel to the Moon by adding a small percentage of it towards the Moon.
 
@@ -56,7 +56,9 @@ It doesn't matter much today, but this is known as a **prograde** burn. Of cours
 
 We can invert this effect by turning around so that instead our engines point in the direction of our travel, and burning. This is called a **retrograde** burn (**figure 3**).
 
-You can also see from this example just how profound tiny changes in velocity can affect the orbit. When you listen to the astronauts worry about small details like the particular set of thrusters they are using to point the spacecraft in different directions, it is this effect that they are keenly aware of&mdash;particularly with a close approach to the Moon coming up.
+{{figure:orbits-subtle}}
+
+The final example (**figure 4**) demonstrates just how profoundly small changes in velocity can affect the orbit. From an orbit that just reaches the Moon, we'll decelerate by a mere 30m/s&mdash;roughly highway car speed. When you listen to the astronauts worry about small details like the particular set of thrusters they are using to point the spacecraft in different directions, it is this effect that they are keenly aware of&mdash;particularly with a close approach to the Moon coming up.
 
 There are other types of burns that do different things&mdash;we'll cover just one more. Prograde and retrograde burns modify the orbit, but only within the 2D plane in 3D space that the spacecraft is already travelling within. If that plane itself needs to change, this can be done by burning orthogonally to it. But recall again our second observation, that changing our immediate path is really difficult. Changing our plane necessarily involves changing our _entire_ path, including our immediate path. So this is really expensive to do, fuel-wise.
 

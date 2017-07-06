@@ -29,7 +29,7 @@ vectors-to-RPhi = (mu, r, v) ->
   (phi) -> a * (1 - square(e)) / (1 + e * cos(phi + omega))
 
 
-plot-orbit = (r0, v0, n = 128) ->
+plot-orbit = (r0, v0, n = 256) ->
   r = vectors-to-RPhi(earthMu, r0, v0)
   points = [ [ phi, r(phi) ] for phi from 0 to (2 * pi) by (2 * pi / n) ]
   trim = r0.0 - points[0].1
@@ -113,6 +113,10 @@ example = (target, r0, v0, dv, duration, limits) ->
 class Orbit extends Model
   @default(\width, 300)
   @default(\height, 150)
+
+  @default(\earth, true)
+  @default(\moon, false)
+
   @bind(\scaler, from(\hlimits).and(\width).and(\height).all.map(gen-scaler))
 
 class OrbitView extends DomView
@@ -138,6 +142,7 @@ class OrbitView extends DomView
     find('.orbit-ship').css(\top, from(\r).and(\scaler.y).all.map((r, scaler) -> scaler(r.1) |> px))
     find('.orbit-ship').css(\transform, from(\dv).all.map((dv) -> "rotate(#{atan2(-1 * dv.1, dv.0) + (pi / 2)}rad)"))
 
+    find('.orbit-earth').classed(\hide, from(\earth).map (not))
     find('.orbit-earth').css(\left, from(\scaler.x).all.map((scaler) -> scaler(0) |> px))
     find('.orbit-earth').css(\top, from(\scaler.y).all.map((scaler) -> scaler(0) |> px))
 
