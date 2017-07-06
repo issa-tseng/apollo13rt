@@ -43,11 +43,11 @@
     $size: 2em
 
     @include icon
-    bottom: 0.5em
+    bottom: 3.5em
     color: #444
     cursor: pointer
     height: $size
-    left: 0.5em
+    left: 0
     position: absolute
     width: $size
     &:before
@@ -75,7 +75,7 @@
 
   .orbit-moon
     right: 0
-    top: 50%
+    top: calc(50% - 1.8em) // because of the caption
 
   .orbit-travel, .orbit-moon
     &:after
@@ -86,4 +86,10 @@
       display: inline-block
       margin-left: 0.2em
       vertical-align: middle
+
+  p.orbit-caption
+    border-top: 2px solid $color-light-border
+    font-size: 1.1em
+    padding-bottom: 1em
+    padding-top: 0.3em
 

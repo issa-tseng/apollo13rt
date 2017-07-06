@@ -32,29 +32,35 @@ Orbital Mechanics 101
 
 [Much has been written](http://www.braeunig.us/space/orbmech.htm) about this popularly misunderstood and rather counterintuitive topic. We can avoid most of the details here, and instead focus on developing a basic-enough grasp to understand what is happening in these six hours.
 
-The first thing to understand is that given any instantaneous velocity (speed and direction) and position of an object above Earth, we can definitively (with some handwaving) calculate its entire orbit. This follows from following Newton's Law of Gravitation, `F=GmM/R`, over time. This rule isn't terribly intuitive or informative on its own, but it helps us think about what happens when we change the parameters involved. For example, it is not possible to speed up or slow down without profoundly affecting the shape of one's orbit. This is commonly misunderstood and incorrectly depicted in popular films.
+The first thing to understand is that given any instantaneous velocity (speed and direction) and position of an object above Earth, we can definitively (with some handwaving) calculate its entire orbit. This follows from computing Newton's Law of Gravitation, `F=GmM/R`, over time. This rule isn't terribly intuitive or informative on its own, but it helps us think about what happens when we change the parameters involved. For example, it is not possible to speed up or slow down without profoundly affecting the shape of one's orbit. This is commonly misunderstood and incorrectly depicted in popular films.
 
 The second thing to understand is _just how fast_ orbital speed is. In Earth orbit roughly 100nm (155mi/185km) above the surface, the Apollo spacecraft would typically be travelling at over 28,000km/h (~17,500mph). Most of a rocket's launch efforts are not invested in pushing the spacecraft up, but rather in hurling it sideways.
 
 The reason this is important to understand is because one must realize how little impact maneuvering or even full engine burns have on a spacecraft's _immediate_ location or trajectory. A typical Apollo burn might modify its speed by somewhere between 20km/h and 150km/h. The more involved burns that flung the spacecraft to and from the Moon required changes in speed of upwards of 3,000km/h&mdash;much more, but still not hugely significant in the face of its immense base speed.
 
-Instead, what a burn has far more impact on is the overall shape of the orbit. Let's try this out. We want to go to the moon, so let's wait until we're as close as possible, point at it, and burn everything we've got.
-
 {{figure:orbits-fail}}
-That didn't work at all. This is because we forgot about our second observation, that our burns are relatively small percentages of the spacecraft's base speed. We're not going to be able to overwhelm the momentary velocity taking us parallel to the Moon by adding a small percentage of it towards the Moon. Let's try working _with_ the speed we already have, then.
+
+Instead, what a burn has far more impact on is the overall shape of the orbit. Let's try this out (**figure 1**). On the left is a typical Apollo orbit just after launch: the numbers described just above. The orbit and planet to scale, while the spacecraft is blown up so you can see which way it's burning. Notice how close the orbit is to the surface of the planet, despite the spacecraft being well into space. We want to go to the moon, so let's wait until we're as close as possible, point at it, and burn for a little bit. We will increase our speed by 5,400 km/h to 32,400 km/h.
+
+That didn't work at all. In fact, despite going faster we are now destined to crash back into Earth. This is because we forgot about our second observation, that our burns are relatively small percentages of the spacecraft's base speed. We're not going to be able to overwhelm the momentary velocity taking us parallel to the Moon by adding a small percentage of it towards the Moon.
 
 {{figure:orbits-prograde}}
-That was more interesting. By burning in the same direction as our travel, we modified the opposite side of our orbit by moving it outwards significantly. Remember again: we can change the shape of our orbit by changing our speed, but most changes we can make don't really have much effect on our immediate local path. So all that change goes elsewhere in the orbit: in this case, to the opposite side. It doesn't matter much today, but this is known as a **prograde** burn.
+
+Let's try working _with_ the speed we already have, then. We'll burn exactly the same amount, just in our direction of travel (**figure 2**).
+
+That was more interesting. By burning in the same direction as our travel, we modified the opposite side of our orbit by moving it outwards significantly. Remember again: we can change the shape of our orbit by changing our speed, but most changes we can make don't really have much effect on our immediate local path. So all that change goes elsewhere in the orbit: in this case, to the opposite side.
+
+It doesn't matter much today, but this is known as a **prograde** burn. Of course, if we wanted to go to the Moon, we'd want to do exactly the same thing but on the other side of Earth.
 
 {{figure:orbits-retrograde}}
-We can invert this effect by turning around so that instead our engines point in the direction of our travel, and burning. This is called a **retrograde** burn.
 
-You can also see from this example just how profound tiny changes in velocity affect the orbit. When you listen to the astronauts worry about small details like the particular set of thrusters they are using to point the spacecraft in different directions, it is this effect that they are keenly aware of&mdash;particularly with a close approach to the Moon coming up.
+We can invert this effect by turning around so that instead our engines point in the direction of our travel, and burning. This is called a **retrograde** burn (**figure 3**).
 
-{{clearfigure}}
+You can also see from this example just how profound tiny changes in velocity can affect the orbit. When you listen to the astronauts worry about small details like the particular set of thrusters they are using to point the spacecraft in different directions, it is this effect that they are keenly aware of&mdash;particularly with a close approach to the Moon coming up.
+
 There are other types of burns that do different things&mdash;we'll cover just one more. Prograde and retrograde burns modify the orbit, but only within the 2D plane in 3D space that the spacecraft is already travelling within. If that plane itself needs to change, this can be done by burning orthogonally to it. But recall again our second observation, that changing our immediate path is really difficult. Changing our plane necessarily involves changing our _entire_ path, including our immediate path. So this is really expensive to do, fuel-wise.
 
-These burn examples illustrate the third thing to understand, which is that much like orbits, burns can be described by two basic parameters: the point in orbit of the burn and the change in velocity (commonly referred to as ∆V). Because rocket engines do not instantaneously modify a spacecraft's speed by tens or hundreds of km/h and because it is easier to keep an eye on a clock than a position in the universe, this is more practically delivered to the astronauts and executed upon with three primary datapoints: wall-clock time of burn, attitude of the spacecraft during the burn, and how long to burn for. (Because spacecraft engines, especially the adjustable-throttle Lunar Descent engine, also do not instantaneously throttle up, there are additional parameters for that and other details.) These figures would be read up and written down on a pre-printed PAD form.
+These burn examples illustrate the third thing to understand, which is that much like orbits, burns can be described by two basic parameters: the point in orbit of the burn and the change in velocity (commonly referred to as &Delta;V). Because rocket engines do not instantaneously modify a spacecraft's speed by tens or hundreds of km/h and because it is easier to keep an eye on a clock than a position in the universe, this is more practically delivered to the astronauts and executed upon with three primary datapoints: wall-clock time of burn, attitude of the spacecraft during the burn, and how long to burn for. (Because spacecraft engines, especially the adjustable-throttle Lunar Descent engine, also do not instantaneously throttle up, there are additional parameters for that and other details.) These figures would be read up and written down on a pre-printed PAD form.
 
 Our last note will be that nothing is ever so clean as presented here. In reality, any object orbiting anywhere in the Solar System is affected by a multitude of gravitational forces, the Earth is not actually spherical nor is its weight distributed evenly, and no burn is ever purely prograde or retrograde or plane change. Many, many factors go into actual orbital and burn calculation. For Apollo, these factors were all calculated on massive computers on the ground over the course of the mission.
 
@@ -65,7 +71,7 @@ There is one very important thing to understand about rocketry itself: the fuel 
 
 But the flip-side of this is that the spacecraft gets vastly lighter as it burns that fuel, while the engines remain just as powerful. This means that by the time the spacecraft is on its way to the Moon, for example, and has burned most of its fuel, that little bit of fuel left can cause, percentage-wise, an immense amount of change in spacecraft velocity.
 
-This nonlinearity is why rockets and spacecraft are typically not accounted in terms of liters or gallons of fuel remaining, but rather in ∆V remaining: how much more change in velocity do we have in reserve?
+This nonlinearity is why rockets and spacecraft are typically not accounted in terms of liters or gallons of fuel remaining, but rather in &Delta;V remaining: how much more change in velocity do we have in reserve?
 
 It is also a big factor in the design of the Apollo architecture, as we shall cover briefly.
 

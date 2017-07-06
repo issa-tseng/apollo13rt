@@ -124,6 +124,10 @@ class OrbitView extends DomView
       <div class="orbit-earth orbit-label">Earth</div>
       <div class="orbit-travel orbit-label">Travel</div>
       <div class="orbit-moon orbit-label">Moon</div>
+      <p class="orbit-caption">
+        <strong>Figure <span class="orbit-caption-number"/></strong>: 
+        <span class="orbit-caption-text"/>
+      </p>
     </div>
   ')
   @_template = template(
@@ -141,6 +145,9 @@ class OrbitView extends DomView
     find('.orbit-travel').css(\top, from(\r).and(\scaler.y).all.map((r, scaler) -> scaler(r.1) |> px))
 
     find('.orbit-moon').classed(\hide, from(\moon).map (not))
+
+    find('.orbit-caption-number').text(from(\caption.number))
+    find('.orbit-caption-text').text(from(\caption.text))
   )
   _wireEvents: ->
     dom = this.artifact()
