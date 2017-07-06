@@ -1,0 +1,89 @@
+
+@import 'common.sass'
+
+@keyframes burn
+  0%
+    height: 0.8em
+  50%
+    height: 0.5em
+  100%
+    height: 0.8em
+
+.orbit
+  position: relative
+
+  .orbit-ship
+    $size: 1.6em
+
+    @include icon
+    height: $size
+    margin-left: #{$size / -2}
+    margin-top: #{$size / -2}
+    position: absolute
+    width: $size
+    z-index: 2
+    &:before
+      content: $icon-rocket
+      font-size: $size
+    &:after
+      @include reify
+      animation: 0.2s linear 0s infinite normal none running burn
+      background: linear-gradient(180deg, orange, red 40%, transparent)
+      display: none
+      height: 0.8em
+      position: absolute
+      right: calc(50% - 0.2em)
+      top: calc(50% + 0.7em)
+      width: 0.4em
+
+  .burning ~ .orbit-ship:after
+    display: block
+
+  .orbit-playpause
+    $size: 2em
+
+    @include icon
+    bottom: 0.5em
+    color: #444
+    cursor: pointer
+    height: $size
+    left: 0.5em
+    position: absolute
+    width: $size
+    &:before
+      content: $icon-play
+      font-size: $size
+    &:hover
+      color: #000
+
+  $label-color: #777
+  .orbit-label
+    color: $label-color
+    line-height: 1em
+    margin-top: -0.5em
+    position: absolute
+    text-transform: lowercase
+
+  .orbit-earth
+    margin-left: -2em
+    text-align: center
+    width: 4em
+
+  .orbit-travel
+    margin-left: -3em
+    transform: rotate(-90deg)
+
+  .orbit-moon
+    right: 0
+    top: 50%
+
+  .orbit-travel, .orbit-moon
+    &:after
+      @include reify
+      border: 0.4em solid transparent
+        left-color: $label-color
+        right-width: 0
+      display: inline-block
+      margin-left: 0.2em
+      vertical-align: middle
+

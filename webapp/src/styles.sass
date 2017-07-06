@@ -607,7 +607,7 @@ header
   box-shadow: 0 0.5em 0 #f7f7f7
   position: fixed
   top: 0
-  z-index: 2
+  z-index: 5
 
 #tooltip
   @include bubble
@@ -751,7 +751,7 @@ header
       max-height: 2em
       right: 0
       position: fixed
-      z-index: 2
+      z-index: 3
 
       .topic
         background: $color-box-bg
@@ -839,9 +839,16 @@ header
     h1
       display: none
 
+@media (min-width: 1000px)
+  .article .figure
+    clear: left
+    float: left
+    margin-left: -31em
+    width: 30em
 
 
 // ARTICLE CONTENT
 
 @import 'styles/ref-panels.sass'
+@import 'styles/figure-orbits.sass'
 

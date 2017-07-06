@@ -331,7 +331,9 @@ class Topic extends Model
 class Exhibit extends Model
   _initialize: ->
     # grab our html fragment off of the dom.
-    this.set(\content, $("\#markup \##{this.get(\lookup)}").prop(\outerHTML))
+    if (raw = $("\#markup \##{this.get(\lookup)}").prop(\outerHTML))?
+      processed = raw.replace(/(?:<p>)?{{figure:([^}]+)}}(?:<\/p>)?/gi, '<div class="figure" data-figure="$1"></div>')
+      this.set(\content, processed)
 
 module.exports = { Global, Line, Lines, Transcript, Term, Lookup, Glossary, Player, ExhibitArea, Topic, Exhibit }
 

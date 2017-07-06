@@ -5,6 +5,7 @@ $ = require(\jquery)
 
 { ExhibitArea, Topic, Exhibit } = require('../model')
 { PanelView } = require('./exhibit/panel')
+{ get-exhibit-model } = require('./exhibit/package')
 
 
 class ExhibitAreaView extends DomView
@@ -106,6 +107,14 @@ class ExhibitView extends DomView
     dom.find('.panel').each(->
       view = new (PanelView.withFragment(this))(null, { app })
       view.wireEvents()
+    )
+
+    # drop in figures where we find them.
+    dom.find('.figure').each(->
+      container = $(this)
+      if (view = app.getView(get-exhibit-model(container.attr(\data-figure))))?
+        container.append(view.artifact())
+        view.wireEvents()
     )
 
 

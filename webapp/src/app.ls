@@ -17,6 +17,7 @@ require('./view/player').registerWith(views)
 require('./view/transcript').registerWith(views)
 require('./view/glossary').registerWith(views)
 require('./view/exhibit').registerWith(views)
+require('./view/exhibit/package').registerWith(views)
 global = new Global()
 app = new App({ views, global })
 
