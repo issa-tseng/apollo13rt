@@ -122,7 +122,10 @@ class TranscriptView extends DomView
       this.href = transcript.get(\edit_url) + this.hash
     )
 
-    indicator.on(\click, -> transcript.set(\auto_scroll, true))
+    indicator.on(\click, (event) ->
+      event.preventDefault()
+      transcript.set(\auto_scroll, true)
+    )
 
 
 module.exports = {
