@@ -335,5 +335,8 @@ class Exhibit extends Model
       processed = raw.replace(/(?:<p>)?{{figure:([^}]+)}}(?:<\/p>)?/gi, '<div class="figure" data-figure="$1"></div>')
       this.set(\content, processed)
 
-module.exports = { Global, Line, Lines, Transcript, Term, Lookup, Glossary, Player, ExhibitArea, Topic, Exhibit }
+class Graphic extends Model
+  @default(\width, 300)
+
+module.exports = { Global, Line, Lines, Transcript, Term, Lookup, Glossary, Player, ExhibitArea, Topic, Exhibit, Graphic }
 
