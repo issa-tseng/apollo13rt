@@ -21,5 +21,5 @@ Credits
 * **[NASA](https://nasa.gov)** flew Apollo, and provided transcription of the Air-Ground Loop.
 * **[John Stoll](https://archive.org/details/Apollo13Audio)** of NASA Johnson Space Center made this audio available.
 * **[ulysses777x](https://www.youtube.com/user/ulysses777x)** corrected the audio playback timing.
-* **[Clint Tseng](https://twitter.com/cxlt)** did transcription of the Flight Director's Loop and built this web application.
+* **[Clint Tseng](https://twitter.com/cxlt)** did transcription and made the explanations, graphics, design, and programming.
 

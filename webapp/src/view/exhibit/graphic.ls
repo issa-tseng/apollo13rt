@@ -7,7 +7,7 @@ class GraphicView extends DomView
     <div class="graphic">
       <img/>
       <div class="graphic-caption">
-        <strong>Figure <span class="graphic-caption-number"/></strong>:
+        <strong>Figure <span class="graphic-caption-number"/></strong>: 
         <span class="graphic-caption-text"/>
       </div>
     </div>

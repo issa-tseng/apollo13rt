@@ -12,6 +12,7 @@ get-exhibit-model = -> switch(it)
 | \arch-lm => new Graphic( src: 'assets/arch-lm.svg', height: 126 )
 | \arch-sivb => new Graphic( src: 'assets/arch-sivb.svg', height: 368 )
 | \arch-lv => new Graphic( src: 'assets/arch-lv.svg', height: 1380 )
+| \o2-tank => new Graphic( src: 'assets/o2-tank.svg', height: 365, caption_number: 1, caption: 'A cutaway view of an Apollo 13-era cryogenic oxygen tank. Later versions were modified to, among other things, reduce the exposed wiring and remove the fans entirely.' )
 
 module.exports = {
   get-exhibit-model
