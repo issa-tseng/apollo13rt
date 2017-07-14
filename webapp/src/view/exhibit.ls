@@ -112,7 +112,7 @@ class ExhibitView extends DomView
     # drop in figures where we find them.
     dom.find('.figure').each(->
       container = $(this)
-      if (view = app.getView(get-exhibit-model(container.attr(\data-figure))))?
+      if (view = app.vendView(get-exhibit-model(container.attr(\data-figure))))?
         container.append(view.artifact())
         view.wireEvents()
     )

@@ -69,11 +69,11 @@ viewer = new ExhibitArea({ topics })
 <- defer # because jquery does weird shit with exceptions.
 
 # create and append views.
-player-view = app.getView(player)
+player-view = app.vendView(player)
 $('#player').append(player-view.artifact())
 player-view.wireEvents()
 
-exhibit-area = app.getView(viewer)
+exhibit-area = app.vendView(viewer)
 $('#exhibits').append(exhibit-area.artifact())
 exhibit-area.wireEvents()
 
@@ -115,7 +115,7 @@ $document.on(\mouseenter, '.glossary-term:not(.active)', ->
   throw new Error("didn't find an expected term!") unless term?
 
   floating-glossary = $('<div class="floating-glossary"/>')
-  term-view = app.getView(term)
+  term-view = app.vendView(term)
   floating-glossary.append(term-view.artifact())
   term-view.wireEvents()
 
