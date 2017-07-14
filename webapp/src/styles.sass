@@ -795,7 +795,7 @@ header
 
   .article
     max-width: 76em
-    padding-bottom: 4em
+    padding-bottom: 2em
     padding-left: calc(33% + 3em)
     padding-top: 1em
 
@@ -825,6 +825,32 @@ header
     p + h2, ul + h2
       padding-top: 1em
 
+  .exhibit-nav
+    background: #f2f2f2
+    border-top-color: #eaeaea
+    height: 9em
+    margin: 0 -2em
+    padding: 2em
+
+    > div
+      width: 30em
+
+      &:hover
+        cursor: pointer
+        .name
+          text-decoration: underline
+
+      strong
+        color: #777
+        display: block
+        padding-bottom: 0.3em
+
+    .prev
+      float: left
+    .next
+      float: right
+      text-align: right
+
   &.reference
     margin: -2em
       top: -4.3em
@@ -838,6 +864,8 @@ header
       right: 0
       z-index: 1
     h1
+      display: none
+    .exhibit-nav
       display: none
 
 .article .figure .graphic-caption

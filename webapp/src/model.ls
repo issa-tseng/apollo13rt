@@ -327,6 +327,8 @@ class Player extends Model
 # EXHIBIT MODELS
 
 class ExhibitArea extends Model
+  @bind(\all_topics, from(\topics).map((topics) -> topics.flatMap(-> it.watch(\exhibits)).flatten()))
+
 class Topic extends Model
 class Exhibit extends Model
   _initialize: ->

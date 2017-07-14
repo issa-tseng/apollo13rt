@@ -1,6 +1,6 @@
 $ = require(\jquery)
 
-{ DomView, template, find, from } = require(\janus)
+{ Model, DomView, template, find, from } = require(\janus)
 { sticky } = require(\janus-stdlib).util.varying
 
 { ExhibitArea, Topic, Exhibit } = require('../model')
@@ -80,18 +80,37 @@ class ExhibitTitleView extends DomView
     find('.description').text(from(\description))
   )
 
+class ExhibitVM extends Model
+  @bind(\all_topics, from.app(\stack).flatMap((.watchAt(-2))).watch(\all_topics))
+  @bind(\idx, from(\subject).and(\all_topics).all.flatMap((exhibit, all) -> all.indexOf(exhibit)))
+
+  @bind(\prev, from(\all_topics).and(\idx).all.flatMap((all, idx) -> all.watchAt(idx - 1) unless idx is 0))
+  @bind(\next, from(\all_topics).and(\idx).all.flatMap((all, idx) -> all.watchAt(idx + 1)))
+
 class ExhibitView extends DomView
+  @viewModelClass = ExhibitVM
   @_dom = -> $('
     <div class="exhibit">
       <div class="exhibit-close">Close</div>
       <h1/>
       <div class="exhibit-content"/>
+      <div class="exhibit-nav">
+        <div class="prev"><strong>Previously</strong> <div class="exhibit-nav-target"/></div>
+        <div class="next"><strong>Next up</strong> <div class="exhibit-nav-target"/></div>
+      </div>
     </div>
   ')
   @_template = template(
-    find('h1').text(from(\title))
-    find('.exhibit').classed(\reference, from(\reference))
-    find('.exhibit-content').html(from(\content))
+    find('.exhibit').classed(\reference, from(\subject).watch(\reference))
+
+    find('h1').text(from(\subject).watch(\title))
+    find('.exhibit-content').html(from(\subject).watch(\content))
+
+    find('.exhibit-nav .prev').classed(\hide, from(\prev).map(-> !it?))
+    find('.exhibit-nav .prev .exhibit-nav-target').render(from(\prev)).context(\summary)
+
+    find('.exhibit-nav .next').classed(\hide, from(\next).map(-> !it?))
+    find('.exhibit-nav .next .exhibit-nav-target').render(from(\next)).context(\summary)
   )
   _wireEvents: ->
     dom = this.artifact()
@@ -116,6 +135,9 @@ class ExhibitView extends DomView
         container.append(view.artifact())
         view.wireEvents()
     )
+
+    dom.find('.prev').on(\cilck, ~> global.set(\exhibit, this.subject.get(\prev)))
+    dom.find('.next').on(\cilck, ~> global.set(\exhibit, this.subject.get(\next)))
 
 
 module.exports = {
