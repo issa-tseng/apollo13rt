@@ -139,7 +139,7 @@ $document.on(\mouseenter, '.glossary-term:not(.active)', ->
 )
 
 # dumbest visual detail i've ever cared about:
-is-scrolled = from-event($(document), \scroll, (.target.scrollingElement.scrollTop > 20))
+is-scrolled = from-event($(document), \scroll, (.target.scrollingElement.scrollTop > 30))
 global.watch(\exhibit)
   .flatMap((exhibit) -> if exhibit? then is-scrolled else false)
   .react(-> $('html').toggleClass(\dark-canvas, it))
