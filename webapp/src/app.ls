@@ -58,8 +58,7 @@ topics = new List([
   new Topic( title: 'reference', exhibits: new List([
     new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'Annotated diagram of the main CM control panel.', reference: true ),
     new Exhibit( lookup: \ref-panel-cm-aux, title: 'Command Module Auxiliary Panels', description: 'Annotated diagram of additional CM panels.', reference: true ),
-    new Exhibit( title: 'Electrical Systems', description: 'High-resolution recreations of the EPS system diagrams.', reference: true ),
-    new Exhibit( title: 'Environmental Systems', description: 'High-resolution recreations of the ECS system diagrams.', reference: true )
+    new Exhibit( lookup: \ref-panel-eps, title: 'Fuel Cell Systems', description: 'Annotated diagram of the EPS fuel cell systems.', reference: true )
   ]))
 ])
 viewer = new ExhibitArea({ topics })
