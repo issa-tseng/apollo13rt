@@ -1,5 +1,5 @@
 $ = require(\jquery)
-{ floor, abs } = Math
+{ floor, abs, max } = Math
 { flatten, unique } = require(\prelude-ls)
 
 { Model, attribute, from, List, Set, Varying } = require(\janus)
@@ -314,7 +314,7 @@ class Player extends Model
       if clicking is true
         player.set(\resize.mouse.start, player.get(\resize.mouse.y))
       else
-        player.set(\base_height, player.get(\height))
+        player.set(\base_height, max(0, player.get(\height)))
     )
 
   # navigates the player to a given epoch.
