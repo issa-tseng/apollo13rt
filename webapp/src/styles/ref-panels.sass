@@ -29,7 +29,7 @@ $color-lamp: #e4e1da
 .panel
   padding-bottom: 4em
   position: relative
-  .panel-controls
+  .panel-controls, .panel-legend
     background: $color-box-bg
     border: 1px solid $color-light-border
     box-shadow: 0 0 0 2px $color-bg
@@ -37,8 +37,9 @@ $color-lamp: #e4e1da
     padding: 0.6em
     position: absolute
     right: 0
-    top: 0
     z-index: 1
+  .panel-controls
+    top: 0
     ul
       overflow: hidden
       li
@@ -77,6 +78,17 @@ $color-lamp: #e4e1da
         button
           @include fill
           opacity: 0
+  .panel-legend
+    top: 4em
+    li
+      font-size: 1.2em
+      margin-bottom: 0.3em
+      .swatch
+        $size: 1.2em
+        float: left
+        height: $size
+        margin-right: 0.3em
+        width: $size
   .panel-wrapper
     cursor: -webkit-grab
     cursor: grab
@@ -2013,6 +2025,18 @@ $color-lamp: #e4e1da
 #ref-panel-eps
   .panel-inner-wrapper, .panel-main
     width: 1180px * 2 // double the 1:1 drawing.
+
+  .panel-legend
+    .hydrogen .swatch
+      background-color: #f15a24
+    .oxygen .swatch
+      background-color: #ebc500
+    .nitrogen .swatch
+      background-color: #8cc63f
+    .water .swatch
+      background-color: #0071bc
+    .glycol .swatch
+      background-color: #00c1ed
 
   .bank .bank-header span
     background-color: #f7f7f7
