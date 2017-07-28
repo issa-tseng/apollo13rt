@@ -2,7 +2,8 @@ $ = require(\jquery)
 { floor, abs, max } = Math
 { flatten, unique } = require(\prelude-ls)
 
-{ Model, attribute, from, List, Set, Varying } = require(\janus)
+{ Model, attribute, from, List, Set, Varying, types } = require(\janus)
+{ Request, Store } = require(\janus).store
 { debounce } = require(\janus-stdlib).util.varying
 
 { defer, clamp } = require('./util')
@@ -340,5 +341,28 @@ class Exhibit extends Model
 class Graphic extends Model
   @default(\width, 300)
 
-module.exports = { Global, Line, Lines, Transcript, Term, Lookup, Glossary, Player, ExhibitArea, Topic, Exhibit, Graphic }
+
+
+########################################
+# BASIC REQUESTS
+
+class BasicRequest extends Request
+  (url) -> super({ url })
+class BasicStore extends Store
+  _handle: ->
+    $.getJSON(this.request.options.url, (data) ~> this.request.set(types.result.success(data)))
+    types.handling.handled()
+
+
+
+module.exports = {
+  Global,
+  Line, Lines, Transcript,
+  Term, Lookup, Glossary,
+  Player,
+  ExhibitArea, Topic, Exhibit, Graphic,
+  BasicRequest, BasicStore,
+
+  registerWith: (library) -> library.register(BasicRequest, BasicStore)
+}
 

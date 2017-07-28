@@ -1,0 +1,10 @@
+{
+  "panel-eps-h1": { 
+    "title": "Heat Exchanger",
+    "description": "The extremely hot gaseous mixture of hydrogen and water vapor exiting the fuel cell meets cold water/glycol coolant fresh from the cooling radiators. The cooling effect begins condensing the water into liquid form. The coolant, now quite warm itself, heads off to help preheat gases entering the fuel cell."
+  },
+  "panel-eps-h2": {
+    "title": "Heat Exchanger",
+    "description": "When fed via the bypass valve above, this exchanger preheats the incoming hydrogen with them hot hydrogen/water output of the fuel cell. This also cools the output mixed gas before it hits the next exchanger and separator."
+  }
+}

@@ -2,12 +2,17 @@ $ = require(\jquery)
 
 { DomView, template, find, from, List, Model, attribute } = require(\janus)
 { from-event } = require(\janus-stdlib).util.varying
+{ Term, BasicRequest } = require('../../model')
 
-{ defer, clamp, px, size-of } = require('../../util')
+{ defer, clamp, px, size-of, attach-floating-box } = require('../../util')
 { min, max } = Math
 
 
 class PanelVM extends Model
+  @attribute(\lookup, class extends attribute.ReferenceAttribute
+    request: -> new BasicRequest('/exhibits/ref-panel.lookup.json')
+  )
+
   @attribute(\scale.mode, class extends attribute.EnumAttribute
     values: -> new List([ \all, \fit, \zoom ])
     default: -> \all
@@ -55,6 +60,9 @@ class PanelVM extends Model
         this.unset(\mouse.now)
     )
 
+    # request our lookup as well.
+    this.resolveNow(\lookup, this.get(\options.app))
+
   # pans to focus on an (x, y) point in real-screen-space relative to the current frame.
   focusScreenXY: (x, y, scale-factor = this.get(\scale.factor)) ->
     this.focusTarget(
@@ -90,6 +98,7 @@ class PanelView extends DomView
       @_dom = -> $(dom)
   _wireEvents: ->
     dom = this.artifact()
+    app = this.options.app
     model = this.subject
     outer-wrapper = dom.find('.panel-wrapper')
     wrapper = dom.find('.panel-inner-wrapper')
@@ -119,6 +128,14 @@ class PanelView extends DomView
       scale-factor = model.get(\scale.factor)
       model.zoom()
       model.focusScreenXY(event.pageX, event.pageY - outer-wrapper.offset().top, scale-factor)
+    )
+
+    wrapper.on(\mouseenter, '[id]', (event) ->
+      initiator = $(this)
+      if (info = model.get(\lookup)?.get(initiator.attr(\id)))?
+        term = new Term({ term: info.title, definition: info.description }) # for now at least reuse glossary.
+        term-view = app.vendView(term)
+        attach-floating-box(initiator, term-view)
     )
 
     <- defer

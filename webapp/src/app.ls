@@ -7,8 +7,7 @@ stdlib = require(\janus-stdlib)
 { Global, Glossary, Lookup, Player, Transcript, ExhibitArea, Topic, Exhibit } = require('./model')
 { from-event } = require(\janus-stdlib).util.varying
 
-# util.
-defer = (f) -> set-timeout(f, 0)
+{ defer, attach-floating-box } = require('./util')
 
 # basic app setup.
 views = new Library()
@@ -18,8 +17,10 @@ require('./view/transcript').registerWith(views)
 require('./view/glossary').registerWith(views)
 require('./view/exhibit').registerWith(views)
 require('./view/exhibit/package').registerWith(views)
+stores = new Library()
+require('./model').registerWith(stores)
 global = new Global()
-app = new App({ views, global })
+app = new App({ views, stores, global })
 
 # get and load player data.
 (flight-loop) <- $.getJSON('/assets/flight-director-loop.json')
@@ -113,28 +114,9 @@ $document.on(\mouseenter, '.glossary-term:not(.active)', ->
   term = glossary.get("lookup.#{initiator.attr(\data-term)}")
   throw new Error("didn't find an expected term!") unless term?
 
-  floating-glossary = $('<div class="floating-glossary"/>')
   term-view = app.vendView(term)
-  floating-glossary.append(term-view.artifact())
+  attach-floating-box(initiator, term-view)
   term-view.wireEvents()
-
-  floating-glossary.appendTo($('body'))
-  target-offset = initiator.offset()
-  floating-glossary.css(\left, Math.max(0, target-offset.left - floating-glossary.outerWidth()))
-  floating-glossary.css(\top, target-offset.top)
-
-  initiator.addClass(\active)
-  is-hovered = new Varying(true)
-  targets = initiator.add(floating-glossary)
-  targets.on(\mouseenter, -> is-hovered.set(true))
-  targets.on(\mouseleave, -> is-hovered.set(false))
-  stdlib.util.varying.sticky(is-hovered, { true: 100 }).react((hovered) ->
-    if !hovered
-      initiator.removeClass(\active)
-      term-view.destroy()
-      floating-glossary.remove()
-      this.stop()
-  )
 )
 
 # dumbest visual detail i've ever cared about:
