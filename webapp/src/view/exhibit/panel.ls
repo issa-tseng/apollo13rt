@@ -128,6 +128,7 @@ class PanelView extends DomView
       scale-factor = model.get(\scale.factor)
       model.zoom()
       model.focusScreenXY(event.pageX, event.pageY - outer-wrapper.offset().top, scale-factor)
+      false
     )
 
     wrapper.on('mouseenter mouseup', '[id]', (event) ->
