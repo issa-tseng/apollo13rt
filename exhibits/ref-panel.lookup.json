@@ -1,10 +1,82 @@
 {
   "panel-eps-h1": { 
     "title": "Heat Exchanger",
-    "description": "The extremely hot gaseous mixture of hydrogen and water vapor exiting the fuel cell meets cold water/glycol coolant fresh from the cooling radiators. The cooling effect begins condensing the water into liquid form. The coolant, now quite warm itself, heads off to help preheat gases entering the fuel cell."
+    "description": "The extremely hot gaseous exhaust of hydrogen and water vapor exiting the fuel cell meets cold water/glycol coolant fresh from the cooling radiators. The cooling effect begins condensing the water into liquid form. The coolant, now quite warm itself, heads off to help preheat gases entering the fuel cell."
   },
   "panel-eps-h2": {
     "title": "Heat Exchanger",
-    "description": "When fed via the bypass valve above, this exchanger preheats the incoming hydrogen with them hot hydrogen/water output of the fuel cell. This also cools the output mixed gas before it hits the next exchanger and separator."
-  }
+    "description": "When fed via the bypass valve above, this exchanger preheats the incoming hydrogen with them hot hydrogen/water exhaust of the fuel cell. This also cools the output mixed gas before it hits the next exchanger and separator."
+  },
+  "panel-eps-h3": {
+    "title": "Heat Exchanger",
+    "description": "When fed via the bypass valve to the right, cold water/glycol coolant just out of the cooling radiators is prewarmed with leftover heat from coolant entering the radiators. The bypass valve is controlled by a temperature sensor monitoring the mixed hydrogen/water condensation output."
+  },
+  "panel-eps-h4": {
+    "title": "Heat Exchanger",
+    "description": "Here hydrogen gas entering the system fresh from the SM tank is prewarmed with water/glycol coolant which has just been sent to do the same for the oxygen gas entering the system."
+  },
+  "panel-eps-h5": {
+    "title": "Heat Exchanger",
+    "description": "Here hot water/glycol coolant just heated by the output of the fuel cell is heat-exchanged with fresh oxygen entering the fuel cell from the SM tank to prewarm the gas before it hits the fuel cell itself."
+  },
+  "panel-eps-h6": { "title": "Signal Conditioner", "description": "Conditions the sensor signal for output to the instrumentation system." },
+  "panel-eps-h7": { "title": "Signal Conditioner", "description": "Conditions the sensor signal for output to the instrumentation system." },
+  "panel-eps-h8": { "title": "Temperature Sensor", "description": "Monitors the output temperature from the fuel cell and actuates a bypass valve in response." },
+  "panel-eps-h9": { "title": "Temperature Sensor", "description": "Monitors the output temperature from the fuel cell and actuates the hydrogen line heater in response." },
+  "panel-eps-h10": { "title": "Temperature Sensor", "description": "Monitors the exterior skin temperature of the fuel cell." },
+  "panel-eps-h11": { "title": "Signal Conditioner", "description": "Conditions the sensor signal for output to the instrumentation system." },
+  "panel-eps-h12": { "title": "Temperature Sensor", "description": "Monitors the temperature of the gas/liquid mixture exiting the condenser/exchanger." },
+  "panel-eps-h13": { "title": "Temperature Sensor", "description": "Monitors the temperature of the gas/liquid mixture exiting the condenser/exchanger and actuates the glycol/glycol exchanger bypass valve in response." },
+  "panel-eps-h14": { "title": "Pressure Sensor", "description": "Monitors the pressure of the hydrogen gas cycle." },
+  "panel-eps-h15": { "title": "Pressure Sensor", "description": "Monitors the pressure of the oxygen gas system." },
+  "panel-eps-h16": { "title": "pH Sensor", "description": "Monitors the pH of the generated potable water. This has [deeper implications](https://blogs.nasa.gov/waynehalesblog/2009/01/07/post_1231342021582/) than the drinkability of the water. Drew power from phase A of the three-phase AC supply." },
+  "panel-eps-h17": { "title": "Pressure Sensor", "description": "Monitors the pressure of the nitrogen gas pressurization agent." },
+  "panel-eps-h18": { "title": "Differential Bridge Amplifier", "description": "Converts the difference in two sensors into a signal output to the instrumentation system." },
+  "panel-eps-h20": { "title": "Differential Temperature Sensor", "description": "Monitors the differential temperature of the water/glycol coolant." },
+  "panel-eps-h21": { "title": "Differential Temperature Sensor", "description": "Monitors the differential temperature of the water/glycol coolant." },
+  "panel-eps-h22": { "title": "Flow Sensor", "description": "Monitors the flow rate of hydrogen entering the fuel cell system." },
+  "panel-eps-h23": { "title": "Flow Sensor", "description": "Monitors the flow rate of oxygen entering the fuel cell system." },
+  "panel-eps-h24": { "title": "Differential Temperature Sensor", "description": "Monitors the differential temperature of the water/glycol coolant." },
+  "panel-eps-h25": { "title": "Power Factor Correction", "description": "Regulates the AC power factor being fed into the fuel cell system." },
+  "panel-eps-h26": { "title": "Hydrogen Purge Valve", "description": "Manually actuated valve which purged the hydrogen/water exhaust from the system. This was done periodically to retain gas purity." },
+  "panel-eps-h27": { "title": "Bypass Valve", "description": "Automatically actuated valve which offloaded exhaust heat onto hydrogen entering the fuel cell." },
+  "panel-eps-h28": { "title": "Oxygen Purge Valve", "description": "Manually actuated valve which purged stagnant oxygen from the system. This was done periodically to retain gas purity." },
+  "panel-eps-h29": { "title": "Bypass Valve", "description": "Automatically actuated valve which vented excess oxygen based on the reference nitrogen pressure." },
+  "panel-eps-h30": { "title": "Bypass Valve", "description": "Automatically actuated valve which vented excess hydrogen based on the reference nitrogen pressure." },
+  "panel-eps-h31": { "title": "Nitrogen Purge Valve", "description": "Ground-crew actuated valve which vented nitrogen gas during ground systems testing." },
+  "panel-eps-h32": { "title": "Bypass Valve", "description": "Automatically actuated valve which recirculated just-cooled water/glycol coolant to a heat exchanger with warm coolant entering the radiators." },
+  "panel-eps-h33": { "title": "Nitrogen Purge Valve", "description": "Automatically actuated valve which regulated nitrogen pressure in the system to retain a reference pressure." },
+  "panel-eps-h34": { "title": "Nitrogen Purge Valve", "description": "Ground-crew actuated valve which vented nitrogen gas during ground systems testing." },
+  "panel-eps-h35": { "title": "Bypass Valve", "description": "Manually actuated valve which bypassed three of the eight radiator panels. This was sometimes necessary to prevent overcooling." },
+  "panel-eps-h36": { "title": "Hydrogen Reactants Valve", "description": "Manually actuated valve which allowed hydrogen to enter the fuel cell system from the SM tank. It had two solenoids: one which closed it and the other which held it open to prevent accidental closing in heavy vibration or shock." },
+  "panel-eps-h37": { "title": "Oxygen Reactants Valve", "description": "Manually actuated valve which allowed oxygen to enter the fuel cell system from the SM tank. It had two solenoids: one which closed it and the other which held it open to prevent accidental closing in heavy vibration or shock." },
+  "panel-eps-h38": { "title": "Water Separator", "description": "A three-phase AC motor-driven vane pump helped separate the condensed liquid water from the hydrogen gas and sent it down a different feed line." },
+  "panel-eps-h39": { "title": "Line Heater", "description": "Automatically enabled heating coil which drew DC power directly from the fuel cell output to preheat the incoming hydrogen. Could be manually disengaged." },
+  "panel-eps-h40": { "title": "Check Valve", "description": "Prevented water from flowing back into the separator." },
+  "panel-eps-h41": { "title": "Coolant Pump", "description": "Pumped coolant through its cycle around the system. Driven by three-phase AC power." },
+  "panel-eps-h42": { "title": "Orifice", "description": "Regulated nitrogen flow to maintain a differential reference pressure." },
+  "panel-eps-h43": { "title": "Nitrogen Tank", "description": "Spare nitrogen was stored at an initial 1500psia to supply pressurization to the rest of the system." },
+  "panel-eps-h44": { "title": "Fuel Cell Radiator", "description": "Dissipated heat from the water/glycol coolant flowing through it. This bank contained five panels." },
+  "panel-eps-h45": { "title": "Purge Line Heater", "description": "Drew DC power from either main bus to heat the purge line, preventing vented water from freezing in the line." },
+  "panel-eps-h46": { "title": "Fuel Cell Radiator", "description": "Dissipated heat from the water/glycol coolant flowing through it. This bypassable bank contained three panels." },
+  "panel-eps-h47": { "title": "Water/Glycol Accumulator", "description": "Stored excess water/glycol that could come and go from the system as needed. Regulated by the reference nitrogen pressure." },
+
+  "panel-eps-gauge-1": { "title": "Condensor Exhaust Temperature Gauge", "description": "Displayed the temperature of the condensor exhaust on MDC-3." },
+  "panel-eps-1-3": { "title": "Fuel Cell Pumps Switch", "description": "Found on MDC-5, these switches fed AC power to the fuel cell pumps from either AC bus." },
+  "panel-eps-2-1": { "title": "Pumps AC Breaker", "description": "Found on RHEB-226, this breaker managed all three AC phases entering the fuel cell." },
+  "panel-eps-3-3": { "title": "Fuel Cell Purge Switch", "description": "Found on MDC-3, these switches manually activated reactant purge to maintain gas purity." },
+  "panel-eps-10-1": { "title": "Fuel Cell Purge Breaker", "description": "Found on RHEB-226, this breaker managed the solenoids on the purge valves." },
+  "panel-eps-4-1": { "title": "Fuel Cell Heater Switch", "description": "Found on MDC-3, this switch could manually disengage the normally-automatic hydrogen line heater." },
+  "panel-eps-gauge-2": { "title": "DC Amps Gauge", "description": "Found on MDC-3, this gauge could display the amperage output of one fuel cell at a time." },
+  "panel-eps-gauge-3": { "title": "Module Skin Temperature Gauge", "description": "Displayed the temperature of the fuel cell reactor skin on MDC-3." },
+  "panel-eps-gauge-4": { "title": "Reactant Flow Gauge", "description": "Displayed the flow of reactant gasses into the fuel cell on MDC-3." },
+  "panel-eps-c-3": { "title": "Radiator Bypass Talkback", "description": "Showed the status of radiator partial bypass on MDC-3." },
+  "panel-eps-5-4": { "title": "Radiator Bypass Switch", "description": "Found on MDC-3, these switches allowed bypass of three of the eight fuel cell coolant radiators in case temperatures were below minimum." },
+  "panel-eps-b-1": { "title": "Radiator Temperature Talkback", "description": "Showed the acceptability of the coolant temperature on MDC-3." },
+  "panel-eps-a-1": { "title": "pH Talkback", "description": "Showed the acceptability of the potable water pH on MDC-3. A high reading could indicate a severe problem with the fuel cell electrolyte." },
+  "panel-eps-6-2": { "title": "Line Heater Switch", "description": "Found on MDC-3, this switch activated the hydrogen purge line heater to prevent water from freezing in the line while purging." },
+  "panel-eps-9-1": { "title": "Reac Valves Breaker", "description": "Found on RHEB-226, this breaker managed power flow to the Reac Valves switch found on MDC-3." },
+  "panel-eps-9-2": { "title": "Bus Cont Breaker", "description": "Found on RHEB-226, this breaker managed power flow to the switch that could permanently close the reactant valves." },
+  "panel-eps-11-1": { "title": "Valve Latch Switch", "description": "Found on MDC-3, this switch fed power to the solenoids that held the reactant valves open to prevent accidental closing in vibration or shock." },
+  "panel-eps-12-1": { "title": "Reac Valves Switch", "description": "Found on MDC-3, this switch toggled power flow to either the hold-open or close-shut solenoids on the reactant feed lines running into the fuel cell." }
 }
