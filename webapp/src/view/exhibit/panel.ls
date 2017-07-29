@@ -130,7 +130,7 @@ class PanelView extends DomView
       model.focusScreenXY(event.pageX, event.pageY - outer-wrapper.offset().top, scale-factor)
     )
 
-    wrapper.on(\mouseenter, '[id]', (event) ->
+    wrapper.on('mouseenter mouseup', '[id]', (event) ->
       initiator = $(this)
       if (info = model.get(\lookup)?.get(initiator.attr(\id)))?
         term = new Term({ term: info.title, definition: info.description }) # for now at least reuse glossary.
