@@ -131,7 +131,7 @@ class PanelView extends DomView
       false
     )
 
-    wrapper.on('mouseenter mouseup', '[id]', (event) ->
+    wrapper.on('mouseenter mouseup', '[id]:not(.active)', (event) ->
       initiator = $(this)
       if (info = model.get(\lookup)?.get(initiator.attr(\id)))?
         term = new Term({ term: info.title, definition: info.description }) # for now at least reuse glossary.
