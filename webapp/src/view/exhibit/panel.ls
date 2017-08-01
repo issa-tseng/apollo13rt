@@ -110,6 +110,8 @@ class PanelView extends DomView
     # respond to mouse events.
     mouse-pos = from-event($(document), \mousemove, (event) -> { x: event.screenX, y: event.screenY })
     wrapper.on(\mousedown, (event) ->
+      return if event.button is 2 # ignore right clicks.
+
       event.preventDefault() # stop default drag operations.
 
       model.set(\mouse.clicking, true)
