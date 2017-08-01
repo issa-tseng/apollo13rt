@@ -60,6 +60,7 @@ topics = new List([
     new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'Annotated diagram of the main CM control panel.', reference: true ),
     new Exhibit( lookup: \ref-panel-cm-aux, title: 'Command Module Auxiliary Panels', description: 'Annotated diagram of additional CM panels.', reference: true ),
     new Exhibit( lookup: \ref-panel-eps, title: 'Fuel Cell Systems', description: 'Annotated diagram of the EPS fuel cell systems.', reference: true )
+    new Exhibit( lookup: \ref-panel-o2, title: 'Oxygen Subsystem', description: 'Annotated diagram of the EPS/ECS oxygen subsystems.', reference: true )
   ]))
 ])
 viewer = new ExhibitArea({ topics })

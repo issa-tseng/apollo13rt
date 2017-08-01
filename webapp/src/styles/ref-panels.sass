@@ -89,6 +89,8 @@ $color-lamp: #e4e1da
         height: $size
         margin-right: 0.3em
         width: $size
+      &:last-child
+        margin-bottom: 0
   .panel-wrapper
     cursor: -webkit-grab
     cursor: grab
@@ -2079,7 +2081,7 @@ $color-lamp: #e4e1da
 
 
 
-// CM AUX
+// EPS Fuel Cell
 #ref-panel-eps
   .panel-inner-wrapper, .panel-main
     width: 1180px * 2 // double the 1:1 drawing.
@@ -2381,4 +2383,34 @@ $color-lamp: #e4e1da
   top: 1058px
   width: 76px
 
+
+
+// EPS/ECS O2
+#ref-panel-o2
+  .panel-inner-wrapper, .panel-main
+    width: 1450px * 2 // double the 1:1 drawing
+
+  .panel-legend
+    .oxygen .swatch
+      background-color: #ebc500
+    .glycol .swatch
+      background-color: #00c1ed
+
+  .bank .bank-header span
+    background-color: #f7f7f7
+
+#panel-o2-gauge-label-1, #panel-o2-gauge-1
+  left: 315px
+  top: 800px
+
+#panel-o2-1
+  left: 866px
+  top: 693px
+#panel-o2-gauge-label-2, #panel-o2-gauge-2
+  left: 945px
+  top: 800px
+
+#panel-o2-gauge-3
+  left: 2215px
+  top: 787px
 
