@@ -5,10 +5,9 @@ Getting to the Moon and home again involved a small number of broad, basic tasks
 
 * **Propulsion**: Getting to orbit in space, and changing that orbit to meet and subsequently orbit the Moon.
 * **Navigation**: Understanding where the spacecraft was and which way it was pointed.
-* **Life and Systems Support**: Keeping the astronauts and the systems alive, powered, and temperature-regulated.
-* **Communication**: Maintaining a link between Apollo and the ground.
+* **Systems and Life Support**: Keeping the spacecraft and astronauts alive, powered, and temperature-regulated.
 
-While Apollo was, in aggregate, an immensely complex system comprised of countless components, miles of wiring and circuitry, and cutting-edge-for-the-time technology, we can vastly simplify our effort to understand the spacecraft by approaching it at a high level from these four fundamental problem areas. Each is covered in detail in the Overview section below.
+While Apollo was, in aggregate, an immensely complex system comprised of countless components, miles of wiring and circuitry, and cutting-edge-for-the-time technology, we can vastly simplify our effort to understand the spacecraft by approaching it at a high level from these four fundamental problem areas. Each is covered in detail in the Overview section.
 
 There are a few other elemental concepts to understand before diving in:
 

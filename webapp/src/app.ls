@@ -50,11 +50,10 @@ topics = new List([
     new Exhibit( lookup: \primer-accident, title: 'The Accident', description: 'There\'s more to the story than "Houston, we\'ve had a problem."' )
   ])),
   new Topic( title: 'overview', exhibits: new List([
-    new Exhibit( title: 'Getting to the Moon', description: 'A walkthrough of the propulsion and maneuvering systems.' ),
-    new Exhibit( title: 'Navigating the Stars', description: 'An introduction to the navigation systems and processes.' ),
+    new Exhibit( lookup: \overview-propulsion, title: 'Getting to the Moon', description: 'A walkthrough of the propulsion and maneuvering systems.' ),
+    new Exhibit( lookup: \overview-navigation, title: 'Navigating the Stars', description: 'An introduction to the navigation systems and processes.' ),
     new Exhibit( title: 'Powering the Spacecraft', description: 'A look at the electrical systems that become critical on 13.' ),
-    new Exhibit( title: 'Communicating with Apollo', description: 'A brief look at how ground communication and tracking was done.' ),
-    new Exhibit( title: 'The Flight Controllers', description: 'An overview of each flight controller position in Mission Control.' )
+    new Exhibit( title: 'The Flight Controllers', description: 'An overview of relevant flight controller positions in Mission Control.' )
   ])),
   new Topic( title: 'reference', exhibits: new List([
     new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'Annotated diagram of the main CM control panel.', reference: true ),
