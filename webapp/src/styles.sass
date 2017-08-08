@@ -876,6 +876,13 @@ header
   padding-bottom: 1em
   padding-top: 0.3em
 
+  p // the markdown generator creates paragraphs, which we don't want here.
+    display: inline
+    font-size: inherit
+    font-weight: inherit
+    line-height: inherit
+    padding: auto
+
 
 @media (min-width: 1000px)
   .article .figure

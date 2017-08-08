@@ -14,6 +14,8 @@ get-exhibit-model = -> switch(it)
 | \arch-sivb => new Graphic( src: 'assets/arch-sivb.svg', height: 368 )
 | \arch-lv => new Graphic( src: 'assets/arch-lv.svg', height: 1380 )
 | \o2-tank => new Graphic( src: 'assets/o2-tank.svg', height: 365, caption_number: 1, caption: 'A cutaway view of an Apollo 13-era cryogenic oxygen tank. Later versions were modified to, among other things, reduce the exposed wiring and remove the fans entirely.' )
+| \eps-thumbnail => new Graphic( src: 'assets/eps-fuelcells.svg', height: 215, caption_number: 1, caption: 'A highly detailed system diagram of the overall fuel cell system is available [here](#ref-panel-eps).' )
+| \o2-thumbnail => new Graphic( src: 'assets/o2-subsystem.svg', height: 127, caption_number: 2, caption: 'A highly detailed system diagram of the overall cryogenic oxygen subsystem is available [here](#ref-panel-o2).' )
 
 module.exports = {
   get-exhibit-model
