@@ -870,18 +870,22 @@ header
     .exhibit-nav
       display: none
 
-.article .figure .graphic-caption
-  border-top: 2px solid $color-light-border
-  font-size: 1.1em
-  padding-bottom: 1em
-  padding-top: 0.3em
+.article .figure
+  .graphic.down
+    padding-top: 3em
 
-  p // the markdown generator creates paragraphs, which we don't want here.
-    display: inline
-    font-size: inherit
-    font-weight: inherit
-    line-height: inherit
-    padding: auto
+  .graphic-caption
+    border-top: 2px solid $color-light-border
+    font-size: 1.1em
+    padding-bottom: 1em
+    padding-top: 0.3em
+
+    p // the markdown generator creates paragraphs, which we don't want here.
+      display: inline
+      font-size: inherit
+      font-weight: inherit
+      line-height: inherit
+      padding: auto
 
 
 @media (min-width: 1000px)

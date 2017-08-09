@@ -14,6 +14,8 @@ class GraphicView extends DomView
     </div>
   ')
   @_template = template(
+    find('.graphic').classed(\down, from(\down))
+
     find('img').attr(\src, from(\src))
     find('img').css(\width, from(\width))
     find('img').css(\height, from(\height))
