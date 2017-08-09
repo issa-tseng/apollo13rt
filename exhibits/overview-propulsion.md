@@ -19,11 +19,11 @@ Ultimately, whether by DAP, SCS, or Direct engagement, the jets were fired by en
 Mission Profile
 ---------------
 
-{{figure:burns}}
+{{figure:burn-profile}}
 
-An Apollo mission involved quite a few precision burns. Following launch, the biggest ones were Trans-Lunar Injection, which brought the spacecraft from a largely circular Earth orbit into a highly elliptical orbit which could reach the Moon, Lunar Orbit Injection, which recircularized the orbit around the Moon once the spacecraft arrived, and Trans-Earth Injection, which was the inverse of Trans-Lunar Injection, bringing the spacecraft home.
+An Apollo mission involved quite a few precision burns. Following launch, the biggest ones were Trans-Lunar Injection (TLI), which brought the spacecraft from a largely circular Earth orbit into a highly elliptical orbit which could reach the Moon, Lunar Orbit Injection (LOI), which recircularized the orbit around the Moon once the spacecraft arrived, and Trans-Earth Injection (TEI), which was the inverse of Trans-Lunar Injection, bringing the spacecraft home.
 
-However, a number of midcourse correction burns (MCCs) were also important, correcting errors in the orbit at predetermined times on the way to and from the Moon. Several midcourse corrections would be executed as necessary. Sometimes they were omitted, and sometimes the required &Delta;V was small enough to be simply carried out by the RCS system rather than the SPS.
+However, a number of midcourse correction burns (MCCs) were also important, correcting errors in the orbit at predetermined times on the way to and from the Moon. As many as seven midcourse corrections would be executed as necessary. Sometimes they were omitted, and sometimes the required &Delta;V was small enough to be simply carried out by the RCS system rather than the SPS.
 
 Anatomy of a Burn
 -----------------
