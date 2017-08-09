@@ -5,19 +5,19 @@ The combined Command Module/Service Module (CSM) stack was powered by three fuel
 Fuel Cells
 ----------
 
-At a very high level, fuel cells look very similar to batteries. They involve a cathode, an anode, and an electrolyte medium immersing and connecting the two just like a battery does. However, where a battery becomes deplete over time due to the static nature of these three components, a fuel cell avoids this problem by deriving its electric potential from constantly flowing and thus replenished chemicals on the cathode and anode ends.
+At a very high level, fuel cells look very similar to batteries. They involve a metallic cathode and anode, and an electrolyte medium immersing and connecting the two just like a battery does. However, where a battery becomes deplete over time due to the static nature of these three components, a fuel cell avoids this problem by deriving its electric potential from constantly flowing and thus replenished chemicals on the porous cathode and anode ends.
 
 {{figure:eps-thumbnail}}
 
 The Apollo Fuel Cell design is known as an Alkaline or a Bacon Fuel Cell, and consumes pure hydrogen and oxygen gas fed from cryogenic tanks in the Service Module, with a static potassium hydroxide (KOH) electrolyte mediating the two, and produces electricity, heat, and potable water. On the anode side, the hydrogen gas reacts with spare hydroxide ions to produce water and electrons (2H&#8322; + 4OH&#8315; &rarr; 4H&#8322;O + 4e&#8315;), whilst on the cathode side oxygen gas and electrons returning from their circuit through the various powered components on the spacecraft would interact to form hydroxide ions (O&#8322; + 2H&#8322;O + 4e&#8315; &rarr; 4OH&#8315;). The electrolyte would carry the hydroxide ions across from the cathode to the anode to complete the sustained reaction loop.
 
-While excess hydrogen could to some extent be separated from the water byproduct and recycled through the system, the oxygen gas was consumed as-needed, and any excess was simply vented out of the spacecraft. Indeed, both halves of the cryogenic gas fuel cell subsystems would be periodically purged of stale gas to ensure their ongoing purity.
+While excess hydrogen could to some extent be separated from the water byproduct and recycled through the system, the oxygen gas was consumed as-needed, and any excess was simply vented out of the spacecraft. Indeed, both halves of the fuel cell gas subsystems would be periodically purged of stale gas to ensure their ongoing purity.
 
 {{figure:o2-thumbnail}}
 
 Reactant purity is quite important. Because the static electrolyte design employed by NASA did not naturally reject carbon dioxide, pure oxygen had to be used. This is because potassium hydroxide could break down or transform into potassium carbonate with the infiltration of carbon dioxide, a state known as elecrolyte poisoning which could lead not just to reduced performance but to [dangerous explosive situations](https://blogs.nasa.gov/waynehalesblog/2009/01/07/post_1231342021582/) due to imbalances in the carefully measured chemical reactions. The pH Hi indicator on the MDC, which operated based on the acidity of the water byproduct of the reaction, was important as it provided a leading indicator of this potential situation.
 
-Each of the three Apollo Fuel Cells actually contained 31 individual 1 volt cells, each of which carried out this reaction process, and which were wired together to provide the 28 volt baseline power the various components required. The fuel cells were, due to the efficiency of cryogenic gas storage, expected to supply the vast majority of power for any given Apollo mission.
+Each of the three Apollo Fuel Cells actually contained 31 individual 1 volt cells, each of which carried out this reaction process, and which were wired together to provide the 28 volt baseline power the various components required at up to 1420 watts. The fuel cells were, due to the efficiency of cryogenic gas storage, expected to supply the vast majority of power for any given Apollo mission. The surviving operation of any one cell was expected to ensure a safe return home, though nominally all three ran, distributed across the two DC buses.
 
 Command Module batteries
 ------------------------
@@ -28,23 +28,25 @@ Of the three primary batteries, typically only A and B were kept on the line, wh
 
 A battery charger onboard could be connected to any of the three to charge them. It took in both DC and AC power&mdash;the three-phase AC was used to boost the DC supply up to 40 volts, and phase A was used to run some of the control circuitry&mdash;and contained filters and sensors to ensure appropriate power delivery for the battery profile.
 
-The two pyro batteries were typically kept entirely off the line until needed, to isolate them from the rest of the power system. They were never to be charged during flight. In case of pyro battery failure, careful manipulation of the circuit breakers could bring any of the three batteries in as a replacement.
+The two pyro batteries were typically kept entirely off the line until needed, to isolate them from the rest of the power system. They were never to be charged during flight. In case of pyro battery failure, careful manipulation of the circuit breakers could bring any of the three primary batteries in as a replacement.
 
 CSM Main DC buses
 -----------------
 
 The Command/Service Module combined spacecraft had two primary DC buses upon which power was routed. Not every component was connected to both buses, and in some cases redundant equipment was distributed between the two: of the three AC inverters, for example, one could only be connected to Main DC Bus A, the second only to Main B, whilst the third could be connected to either A or B.
 
-Each bus had various diodes and current-sensing protections that would kick in to mitigate failure scenarios. An overload, for instance, would automatically disconnect the fuel cells from the system and warn the crew. Each bus was capable of handling all system load, so undervolts were not expected to occur. Of course, with a serious malfunction (as with Apollo 13) power generation could fall behind consumption and voltage could drop below 26.25V, the point at which a warning light would appear.
+Each bus had various diodes and current-sensing protections that would kick in to mitigate failure scenarios. An overload, for instance, would automatically disconnect the fuel cells from the system and warn the crew. Each bus was capable of handling all system load, so undervolts were not expected to occur. Of course, with a serious malfunction (as with Apollo 13) power generation could fall behind consumption and voltage could drop below 26.25V, the point at which an Undervolt warning light would appear.
+
+Most of the components had individual protection via circuit breakers exposed on the Command Module panels. The circuit breakers were for far more than protection, however: they were used heavily to regulate which components were given power and when. Many of Apollo's checklists pertained to circuit breakers and the particular order they ought to be engaged and disengaged to ensure safe operation of the vehicle. It was also advantageous from a power consumption standpoint to keep components offline whenever they were not being used.
 
 CSM AC power system
 -------------------
 
 Some components are easier to engineer given AC power than DC. Universal motors, for instance, are very easy to construct and reliable under operation when fed three-phase AC power (your home likely receives two-phase AC power, with the two phases oscillating at a 180&deg; offset from each other; three-phase is the same concept but with three phases oscillating at 120&deg; offsets instead).
 
-AC power generation was done by the three AC inverters; their connection to the DC bus to draw source power is discussed above. Each inverter was an eight-stage solid-state unit comprised of many components related to generating oscillation, managing and filtering harmonic noise, rectifying the signal, and other standard inverter tasks.
+AC power generation was done by the three redundant AC inverters; their connection to the DC bus to draw source power is discussed above. Each inverter was an eight-stage solid-state unit comprised of many components related to generating oscillation, managing and filtering harmonic noise, rectifying the signal, and other standard inverter tasks.
 
-Any of the three AC inverters could then be output onto either or both of the two AC buses, numbered 1 and 2. Many of the components that fed off the AC buses had three individual breakers, one for each phase. Others depended only on a particular phase. A fourth AC ground wire was circulated alongside the power phases, just as your AC components have a ground prong to go with the two powered phases.
+Any of the three AC inverters could then be output onto either or both of the two AC buses, numbered 1 and 2. Many of the components that fed off the AC buses had three individual breakers, one for each phase. Others depended only on a particular phase. A fourth AC ground wire was circulated alongside the power phases, just as your AC appliances at home have a ground prong to go with the two powered phases.
 
 Lunar Module batteries
 ----------------------
