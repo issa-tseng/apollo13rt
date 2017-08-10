@@ -53,7 +53,7 @@ Lunar Module batteries
 
 The Lunar Module was equipped with only batteries for operation. The two LM batteries were the same silver oxide-zinc batteries as found in the Command Module, but were each a much larger 296 amp-hour capacity instead. As a result, they weighed a fairly significant 57kg (125lb) each.
 
-They could be charged off of the Command/Service Module power system via an umbilical that fed through the interior of the docking tunnel between the two modules. Typically, the Lunar Module wasn't powered up at all until very close to the Moon ???, at which point the fuel cell could easily sustain both craft for the short duration before undocking and lunar landing. The umbilical was not meant to send power in reverse to the Command/Service Module, a limitation that would end up being overcome over the course of Apollo 13.
+They could be charged off of the Command/Service Module power system via an umbilical that fed through the interior of the docking tunnel between the two modules. Typically, the Lunar Module wasn't powered up at all until the Apollo spacecraft was already in stable lunar orbit, at which point the fuel cell could easily sustain both craft for the short duration before undocking and lunar landing. The umbilical was not meant to send power in reverse to the Command/Service Module, a limitation that would end up being overcome over the course of Apollo 13.
 
 The LM also featured an AC bus and two AC inverters.
 

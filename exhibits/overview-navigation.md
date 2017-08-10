@@ -16,7 +16,7 @@ Something more precise is needed for accurate navigation, and ideally something 
 Manned Spaceflight Network
 --------------------------
 
-{{figure:msfn}}
+{{figure:msfn-sites}}
 
 An offshoot of the NASA Deep Space Network, the Manned Spaceflight Network (MSFN) was a collection of 14 ground, 4 sea, and 8 air-based stations around the world that tracked the Apollo spacecraft for the duration of its mission. Using large 26 meter (85ft) antenna dishes, these stations performed the critical operations of providing communications to and from the spacecraft as well as information about its position and velocity. After all, if one is to aim a communications dish at the appropriate spot in the sky, one must understand where the target object is.
 
@@ -29,11 +29,11 @@ Determining Attitude
 
 The MSFN ground tracking stations help augment the accuracy and reliability of the onboard IMU by providing accurate point-in-time measurements of spacecraft position and velocity. But spacecraft attitude still thus far depends exclusively on the IMU's spinning gyroscope (or the backup BMAGs which could measure only rotational accerelation). If the IMU hits gimbal lock, or if the gyro itself simply drifts over time due to friction and vibration, the attitude numbers lose their accuracy.
 
-{{figure:aot-chart}}
+{{figure:aot-starchart}}
 
 The solution was the same as that employed by mariners upon the ancient sea: to look to the stars. A built-in onboard sextant called the Alignment Optical Telescope (AOT) could be used to sight known stars. Once star positions were confirmed and locked in, the computer could calculate its orientation relative to the universe and a fresh set of numbers could be obtained.
 
-The process of platform (spacecraft) alignment was referred to by the AGC program numbers used to execute the sighting and alignment: P51 and P52. A P51 was performed when the spacecraft attitude was completely unknown or untrustworthy, whereas a P52 was more of a realignment process, for when the last known attitude was judged to still be relatively correct. Upon completion of the process, the computer would output a number indicating the relative error of the inputted numbers: inaccurate sightings of the stars relative to each other could be detected in the math that followed. When the error number read zero, this was referred to as ["all balls"](https://www.youtube.com/watch?v=5jCyE0me41Y).
+The process of platform (spacecraft) alignment was referred to by the AGC program numbers used to execute the sighting and alignment: P51 and P52. A P51 was performed when the spacecraft attitude was completely unknown or untrustworthy, whereas a P52 was more of a realignment process, for when the last known attitude was judged to still be relatively correct. Upon completion of the process, the computer would output a number indicating the relative error of the inputted numbers: inaccurate sightings of the stars relative to each other could be detected in the math that followed. When the error number read all zeroes, this was referred to as ["all balls"](https://www.youtube.com/watch?v=5jCyE0me41Y).
 
 The AOT also had some neat tricks: its mount was rotationally encoded, so once the astronaut had it aligned with the desired star, there was no need to read and key numbers: the computer could read them automatically once instructed to.
 

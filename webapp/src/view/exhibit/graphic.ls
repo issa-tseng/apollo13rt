@@ -3,6 +3,8 @@ marked = require(\marked)
 
 $ = require(\jquery)
 
+safe-marked = (x) -> marked(x) if x?
+
 class GraphicView extends DomView
   @_dom = -> $('
     <div class="graphic">
@@ -21,7 +23,7 @@ class GraphicView extends DomView
     find('img').css(\height, from(\height))
 
     find('.graphic-caption').classed(\hide, from(\caption).map(-> !it?))
-    find('.graphic-caption-text').html(from(\caption).map(marked))
+    find('.graphic-caption-text').html(from(\caption).map(safe-marked))
     find('.graphic-caption-number').text(from(\caption_number))
   )
 

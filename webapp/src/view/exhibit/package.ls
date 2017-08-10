@@ -18,6 +18,8 @@ get-exhibit-model = -> switch(it)
 | \o2-thumbnail => new Graphic( src: 'assets/o2-subsystem.svg', height: 127, caption_number: 2, caption: 'A highly detailed system diagram of the overall cryogenic oxygen subsystem is available [here](#ref-panel-o2).' )
 | \burn-profile => new Graphic( src: 'assets/burn-profile.svg', height: 100, down: true, caption_number: 1, caption: 'A not-to-scale drawing of the typical scheduled burns of an Apollo mission. A: TLI, B: MCC, C: LOI, D: TEI, E: MCC.' )
 | \pad => new Graphic( src: 'assets/pad.svg', height: 524, down: true, caption_number: 2, caption: 'A sample PAD form in which burn parameters would be read to the crew and transcribed. The N numbers on the right indicate computer program nouns, and the thick boxes indicated a +/- sign symbol.' )
+| \msfn-sites => new Graphic( src: 'assets/msfn-sites.svg', height: 199, down: true, caption_number: 1, caption: 'A reproduction of a map of MSFN sites around the world, including mobile air and sea sites, around the Apollo era.' )
+| \aot-starchart => new Graphic( src: 'assets/aot-starchart.svg', height: 191, caption_number: 2, caption: 'An example star chart used with the AOT on the LM. The number below each marked star is the number the computer recognizes the star by.' )
 
 module.exports = {
   get-exhibit-model
