@@ -56,9 +56,10 @@ topics = new List([
     new Exhibit( title: 'The Flight Controllers', description: 'An overview of relevant flight controller positions in Mission Control.' )
   ])),
   new Topic( title: 'reference', exhibits: new List([
-    new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'Annotated diagram of the main CM control panel.', reference: true ),
-    new Exhibit( lookup: \ref-panel-cm-aux, title: 'Command Module Auxiliary Panels', description: 'Annotated diagram of additional CM panels.', reference: true ),
-    new Exhibit( lookup: \ref-panel-eps, title: 'Fuel Cell Systems', description: 'Annotated diagram of the EPS fuel cell systems.', reference: true )
+    new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'High-resolution diagram of the main CM control panel.', reference: true ),
+    new Exhibit( lookup: \ref-panel-cm-aux, title: 'Command Module Auxiliary Panels', description: 'High-resolution diagram of additional CM panels.', reference: true ),
+    new Exhibit( lookup: \ref-panel-lm, title: 'Lunar Module Control Panels', description: 'High-resolution diagram of the Lunar Module panels.', reference: true ),
+    new Exhibit( lookup: \ref-panel-eps, title: 'Fuel Cell Systems', description: 'Annotated diagram of the EPS fuel cell systems.', reference: true ),
     new Exhibit( lookup: \ref-panel-o2, title: 'Oxygen Subsystem', description: 'Annotated combined diagram of the EPS/ECS oxygen subsystems.', reference: true )
   ]))
 ])

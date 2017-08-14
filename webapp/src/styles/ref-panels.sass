@@ -11,6 +11,8 @@ $switch-width: 52px
 $switch-outer-width: $switch-width + $rail-outer-width
 $gauge-halfwidth: 56px
 $breaker-outer-width: 44px
+$lm-breaker-width: 65px
+$lm-breaker-outer-width: $lm-breaker-width + $rail-width
 
 $label-padding-v: 4px
 $label-padding-h: 12px
@@ -240,6 +242,13 @@ $color-lamp: #e4e1da
       .left-lower, .right-lower
         bottom: 0
 
+    &.single
+      .bank-header, .upper, .lower
+        left: -17px
+        width: 86px
+      .bank-header
+        left: -14px
+
     .bank-header
       margin-left: 3px
       position: absolute
@@ -262,6 +271,8 @@ $color-lamp: #e4e1da
       &.header-width-1, &.nobracket
         &:before
           display: none
+        &.bracket:before
+          display: block
 
     .nowrap
       white-space: nowrap
@@ -353,6 +364,14 @@ $color-lamp: #e4e1da
           left: #{$breaker-outer-width * ($idx - 1)}
         .header-width-#{$idx}
           width: #{($breaker-outer-width * $idx) - 1px}
+      &.lm
+        .panel-breaker
+          width: $lm-breaker-width
+        @for $idx from 1 to 22
+          .header-col-#{$idx}
+            left: #{$lm-breaker-outer-width * ($idx - 1)}
+          .header-width-#{$idx}
+            width: #{($lm-breaker-outer-width * $idx) - 1px}
 
   .dial
     height: 125px
@@ -687,6 +706,52 @@ $color-lamp: #e4e1da
     height: 355px
     position: absolute
     width: 375px
+
+  .xpntr
+    background-image: url(/assets/panel-xpntr.svg)
+    background-size: 205px 205px
+    color: #f7f7f7
+    height: 205px
+    position: absolute
+    width: 205px
+    .axis-v
+      left: 2px
+      position: absolute
+      text-align: center
+      text-transform: uppercase
+      top: 8px
+      width: 10px
+      word-break: break-all
+      span
+        display: block
+        margin-bottom: 3px
+    .labels-v
+      left: 12px
+      position: absolute
+      text-align: right
+      top: 1px
+      width: 12px
+      span
+        display: block
+        margin-bottom: 8px
+    .axis-h
+      bottom: 3px
+      left: 54px
+      position: absolute
+      text-transform: uppercase
+      span
+        margin-right: 5px
+    .labels-h
+      bottom: 16px
+      left: 30px
+      position: absolute
+      width: 180px
+      span
+        display: block
+        float: left
+        margin-right: 6px
+        text-align: center
+        width: 14px
 
   .warnings
     overflow: hidden
@@ -2669,4 +2734,239 @@ $color-lamp: #e4e1da
   height: 270px
   top: 723px
   width: 231px
+
+
+// LM PANELS
+#ref-panel-lm
+  .panel-main
+    width: 5572px
+
+  .bank > div
+    &:before, &:after
+      display: none
+
+    $lm-label-buffer: -7px
+    .upper
+      bottom: calc(100% + #{$lm-label-buffer})
+    .lower
+      top: calc(100% + #{$lm-label-buffer})
+    .left
+      right: 100%
+    .right
+      left: 100%
+
+#panel-lm-11-1
+  left: 145px
+  top: 128px
+#panel-lm-11-2
+  left: 145px
+  top: 318px
+#panel-lm-11-3
+  left: 145px
+  top: 508px
+#panel-lm-11-4
+  left: 145px
+  top: 700px
+#panel-lm-11-5
+  left: 145px
+  top: 890px
+  .bracket:before
+    border-left: none
+    border-right: none
+
+#panel-lm-16-1
+  left: 4055px
+  top: 163px
+#panel-lm-16-2
+  left: 4055px
+  top: 352px
+#panel-lm-16-3
+  left: 4055px
+  top: 532px
+#panel-lm-16-4
+  left: 4055px
+  top: 712px
+  .header-x:before
+    border-left: none
+    border-right: none
+
+#panel-lm-ul-1
+  left: 2605px
+  top: 100px
+  .header-width-x
+    width: 427px
+  #panel-lm-ul-1-3
+    margin-left: 200px
+  .header-col-x
+    left: 311px
+
+#panel-lm-1-warn-1
+  left: 2261px
+  top: 248px
+  width: 210px
+#panel-lm-1-warn-2
+  left: 2456px
+  top: 248px
+  width: 210px
+#panel-lm-1-1
+  left: 1998px
+  top: 522px
+  .header-width-x
+    width: 197px
+  .header-width-y
+    width: 83px
+  .header-width-z
+    width: 56px
+  .header-col-a
+    left: 87px
+  .header-col-b
+    left: 144px
+#panel-lm-1-2
+  left: 2282px
+  top: 531px
+  .header-width-x
+    width: 114px
+  .header-width-y
+    width: 56px
+  .header-col-a
+    left: 58px
+#panel-lm-1-3
+  left: 2457px
+  top: 482px
+#panel-lm-1-4
+  left: 2457px
+  top: 561px
+#panel-lm-1-5
+  left: 2639px
+  top: 532px
+#panel-lm-1-xpntr
+  left: 1998px
+  top: 699px
+#panel-lm-1-alarm-labels-1
+  left: 2317px
+  top: 717px
+#panel-lm-1-alarm-1
+  left: 2352px
+  top: 727px
+
+  border-radius: 999px
+#panel-lm-1-6
+  left: 2344px
+  top: 840px
+#panel-lm-1-gauge-labels-1
+  left: 2456px
+  top: 705px
+  .header-width-1
+    width: 112px
+  .header-col-2
+    left: 112px
+  .header-col-3
+    left: 224px
+#panel-lm-1-gauge-1
+  left: 2457px
+  top: 705px
+#panel-lm-1-gauge-2
+  left: 2570px
+  top: 705px
+#panel-lm-1-gauge-3
+  left: 2683px
+  top: 705px
+#panel-lm-1-alarm-2
+  left: 2010px
+  top: 950px
+#panel-lm-1-7
+  left: 1992px
+  top: 1080px
+#panel-lm-1-8
+  left: 1992px
+  top: 1190px
+#panel-lm-1-fdai
+  left: 2072px
+  top: 942px
+#panel-lm-1-gauge-4
+  left: 2457px
+  top: 971px
+  .label
+    width: 58px
+#panel-lm-1-gauge-5
+  left: 2527px
+  top: 971px
+  &:before
+    right: 0
+  .label
+    right: -9px
+    width: 65px
+  .ticks.invert
+    background-color: #f7f7f7
+    height: 110px
+    left: auto
+    overflow: hidden
+    top: 137px
+    width: 54px
+    .tick
+      border-color: #4d4d4d
+      span
+        color: #4d4d4d
+      &.major
+        margin-left: 44px
+#panel-lm-1-gauge-4, #panel-lm-1-gauge-5
+  height: 255px
+  width: 65px
+  text-transform: uppercase
+  &:before
+    left: 0
+  .ticks
+    height: 210px
+    top: 32px
+    .tick span
+      text-align: right
+#panel-lm-1-gauge-6
+  height: 255px
+  left: 2626px
+  top: 971px
+  width: 55px
+
+  background: #4d4d4d
+  &:before
+    background: #f7f7f7
+    bottom: 8px
+    box-shadow: 0 -45px #eaeaea inset
+    top: 8px
+  .marker
+    border-right-color: #f7f7f7
+    right: 4px
+  .ticks
+    height: 212px
+    left: auto
+    right: 15px
+    &:before
+      $width: 12px
+      @include reify
+      background: #4d4d4d
+      bottom: -1px
+      right: -$width
+      position: absolute
+      top: 0
+      width: $width
+    .tick
+      border-color: #4d4d4d
+      span
+        color: #4d4d4d
+#panel-lm-1-9
+  left: 2723px
+  top: 971px
+#panel-lm-1-10
+  left: 2712px
+  top: 1071px
+#panel-lm-1-11
+  left: 2723px
+  top: 1171px
+
+
+#panel-lm-2-xpntr
+  left: 3433px
+  top: 699px
+#panel-lm-2-fdai
+  left: 3171px
+  top: 942px
 
