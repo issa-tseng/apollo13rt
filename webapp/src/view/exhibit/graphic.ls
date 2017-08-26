@@ -8,6 +8,7 @@ safe-marked = (x) -> marked(x) if x?
 class GraphicView extends DomView
   @_dom = -> $('
     <div class="graphic">
+      <a class="graphic-expand" target="_blank"/>
       <img/>
       <div class="graphic-caption">
         <strong>Figure <span class="graphic-caption-number"/></strong>: 
@@ -17,6 +18,11 @@ class GraphicView extends DomView
   ')
   @_template = template(
     find('.graphic').classed(\down, from(\down))
+
+    find('.graphic-expand').attr(\href, from(\expandable).and(\src).all.map((expands, src) -> src if expands))
+    find('.graphic-expand').classed(\hide, from(\expandable).map (not))
+    find('.graphic-expand').css(\width, from(\width))
+    find('.graphic-expand').css(\height, from(\height))
 
     find('img').attr(\src, from(\src))
     find('img').css(\width, from(\width))

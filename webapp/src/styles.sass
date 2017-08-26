@@ -871,8 +871,33 @@ header
       display: none
 
 .article .figure
-  .graphic.down
-    padding-top: 3em
+  .graphic
+    .graphic-expand
+      position: absolute
+
+      &:before
+        $margin: 0.5em
+        $size: 2em
+        @include reify
+        @include icon
+        background-color: #666
+        border-radius: $size
+        bottom: $margin
+        color: #fff
+        content: $icon-expand
+        font-size: $size
+        height: 1em
+        line-height: 0.95em
+        position: absolute
+        right: $margin
+        text-align: center
+        transition: 0.2s transform
+        width: 1em
+      &:hover:before
+        transform: scale(1.4)
+
+    &.down
+      padding-top: 3em
 
   .graphic-caption
     border-top: 2px solid $color-light-border
