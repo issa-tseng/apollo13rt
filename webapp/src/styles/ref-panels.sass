@@ -372,6 +372,15 @@ $color-lamp: #e4e1da
             left: #{$lm-breaker-outer-width * ($idx - 1)}
           .header-width-#{$idx}
             width: #{($lm-breaker-outer-width * $idx) - 1px}
+    &.wide
+      $wide-gap: 25px
+      > div
+        margin-right: $wide-gap
+      @for $idx from 1 to 17
+        .header-col-#{$idx}
+          left: #{($switch-outer-width + $wide-gap) * ($idx - 1) - ($wide-gap / 2)}
+        .header-width-#{$idx}
+          width: #{(($switch-outer-width + $wide-gap) * $idx) - 1px}
 
   .dial
     height: 125px
@@ -474,6 +483,8 @@ $color-lamp: #e4e1da
         @include rot(-30)
       &.rot-75
         @include rot(-15)
+      &.rot-105
+        @include rot(15)
       &.rot-120
         @include rot(30)
       &.rot-135
@@ -2755,6 +2766,9 @@ $color-lamp: #e4e1da
     .right
       left: 100%
 
+    &.panel-talkback .upper
+      bottom: 100%
+
 #panel-lm-11-1
   left: 145px
   top: 128px
@@ -2956,11 +2970,59 @@ $color-lamp: #e4e1da
   left: 2723px
   top: 971px
 #panel-lm-1-10
-  left: 2712px
+  left: 2717px
   top: 1071px
 #panel-lm-1-11
   left: 2723px
   top: 1171px
+#panel-lm-1-12
+  left: 2087px
+  top: 1332px
+#panel-lm-1-13a
+  left: 2206px
+  top: 1433px
+  .header-col-x
+    left: -94px
+#panel-lm-1-13b
+  left: 2123px
+  top: 1521px
+#panel-lm-1-14a
+  left: 2397px
+  top: 1312px
+#panel-lm-1-14b
+  left: 2394px
+  top: 1357px
+#panel-lm-1-15a
+  left: 2397px
+  top: 1472px
+#panel-lm-1-15b
+  left: 2394px
+  top: 1517px
+#panel-lm-1-16
+  left: 2564px
+  top: 1327px
+#panel-lm-1-17
+  left: 2564px
+  top: 1480px
+#panel-lm-1-dial-1-labels
+  left: 2631px
+  top: 1399px
+#panel-lm-1-dial-1
+  left: 2642px
+  top: 1399px
+  .glyph
+    transform: scale(0.8)
+  .label.left span
+    right: 54px
+  .label.right span
+    left: 54px
+#panel-lm-1-alarm-3
+  border-radius: 999px
+  left: 2655px
+  top: 1280px
+#panel-lm-1-alarm-4
+  left: 2731px
+  top: 1280px
 
 
 #panel-lm-2-xpntr
