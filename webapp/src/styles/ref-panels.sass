@@ -2778,10 +2778,14 @@ $color-lamp: #e4e1da
       bottom: calc(100% + #{$lm-label-buffer})
     .lower
       top: calc(100% + #{$lm-label-buffer})
-    .left
+    .left, .left-upper, .left-lower
       right: 100%
-    .right
+    .right, .right-upper, .right-lower
       left: 100%
+    .left-upper, .right-upper
+      top: 7px
+    .left-lower, .right-lower
+      bottom: 7px
 
     &.panel-breaker
       .upper
@@ -2800,8 +2804,12 @@ $color-lamp: #e4e1da
       bottom: calc(100% - 6px)
     .label.left span
       right: 54px
+    .label.left.far span
+      right: 62px
     .label.right span
       left: 54px
+    .label.right.far span
+      left: 62px
 
 #panel-lm-11-1
   left: 145px
@@ -3315,4 +3323,71 @@ $color-lamp: #e4e1da
 #panel-lm-3-15
   left: 3585px
   top: 1805px
+
+#panel-lm-10-1
+  left: 105px
+  top: 1245px
+  div span
+    left: calc(100% + 3px)
+    text-align: center
+#panel-lm-10-2
+  left: 105px
+  top: 1330px
+#panel-lm-10-3
+  left: 363px
+  top: 1235px
+#panel-lm-10-4
+  left: 305px
+  top: 1330px
+#panel-lm-10-dial-1
+  left: 463px
+  top: 1244px
+
+#panel-lm-14-lamp-1
+  left: 3952px
+  top: 1272px
+#panel-lm-14-gauge-1
+  left: 4032px
+  top: 1092px
+#panel-lm-14-gauge-2
+  left: 4032px
+  top: 1222px
+#panel-lm-14-lamp-2
+  left: 4292px
+  top: 1122px
+#panel-lm-14-1
+  left: 4279px
+  top: 1268px
+#panel-lm-14-2
+  left: 4462px
+  top: 1268px
+#panel-lm-14-dial-1
+  left: 4415px
+  top: 1130px
+  #ref-panel-lm &.dial
+    .glyph
+      transform: scale(0.72) rotate(-150deg)
+    .label.upper.far
+      bottom: calc(100% + 10px)
+    .left.rot-150
+      margin-top: 11px
+#panel-lm-14-3a
+  left: 4605px
+  top: 1126px
+#panel-lm-14-3b
+  left: 4602px
+  top: 1178px
+#panel-lm-14-3c
+  left: 4602px
+  top: 1273px
+#panel-lm-14-4a
+  left: 5072px
+  top: 1150px
+#panel-lm-14-4b
+  left: 5069px
+  top: 1208px
+#panel-lm-14-5
+  left: 5402px
+  top: 1208px
+
 
