@@ -305,8 +305,8 @@
       <span class="bank-header header-row-1 header-col-2 header-width-1">Temp</span>
       <span class="bank-header header-row-1 header-col-3 header-width-1">Press</span>
     </div>
-    <div class="bank" id="panel-lm-1-6">
-      <span class="bank-header header-row-2 header-col-1 header-width-1 nobracket">X-Pointer Scale</span>
+    <div class="bank single" id="panel-lm-1-6">
+      <span class="bank-header header-row-1 header-col-1 header-width-1 nobracket">X-Pointer Scale</span>
       <div id="panel-lm-1-6-1" class="panel-toggle2"><span class="upper">Hi Mult</span>
         <span class="lower">Lo Mult</span></div>
     </div>
@@ -647,6 +647,7 @@
       <div id="panel-lm-1-17-1" class="panel-toggle3"><span class="upper">Asc</span>
         <span class="right nowrap">Des 1</span><span class="lower">Des 2</span></div>
     </div>
+    <div id="panel-lm-1-alarm-cover"></div>
     <div class="alarm" id="panel-lm-1-alarm-3">
       <span>Abort</span>
     </div>
@@ -669,7 +670,407 @@
       <div class="glyph"></div>
     </div>
 
-
+    <!-- PANEL 2 -->
+    <ul class="warnings" id="panel-lm-2-warn-1">
+      <li><span>ASC Hi Reg</span></li> <li><span>Inverter</span></li>
+      <li><span>Asc Qty</span></li> <li><span>Battery</span></li>
+      <li><span>Eng Gmbl</span></li> <li><span>Rndz Rdr</span></li>
+      <li></li> <li><span>Ldg Rdr</span></li>
+      <li></li> <li><span>Pre Amps</span></li>
+    </ul>
+    <ul class="warnings" id="panel-lm-2-warn-2">
+      <li><span>Ed Relays</span></li> <li><span>ECS</span></li>
+      <li><span>RCS</span></li> <li><span>O&#8322; Qty</span></li>
+      <li><span>Heater</span></li> <li><span>Glycol</span></li>
+      <li><span>C/W Pwr</span></li> <li><span>Water Qty</span></li>
+      <li></li> <li><span>S-Bd Rcvr</span></li>
+    </ul>
+    <div class="bank" id="panel-lm-2-gauge-labels-1">
+      <span class="bank-header header-row-2 header-col-g1 header-width-g6"><span>Reaction Control</span></span>
+      <span class="bank-header header-row-1 header-col-g1 header-width-g2">Temp</span>
+      <span class="bank-header header-row-1 header-col-g3 header-width-g2">Press</span>
+      <span class="bank-header header-row-1 header-col-g5 header-width-g2">Quantity</span>
+    </div>
+    <div class="lingauge no-footer" id="panel-lm-2-gauge-1">
+      <div class="left shared-labels">
+        <div class="marker"></div>
+        <div class="label middle">&deg;F</div>
+        <div class="label">A</div>
+        <div class="ticks">
+          <div class="tick div-5 major">
+            <span>120</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>100</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>80</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>60</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>40</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick major"><span>20</span></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="marker"></div>
+        <div class="label">B</div>
+        <div class="ticks">
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lingauge" id="panel-lm-2-gauge-2">
+      <div class="left shared-labels">
+        <div class="marker"></div>
+        <div class="label middle">PSIA</div>
+        <div class="label lower middle">&times;10</div>
+        <div class="label">A</div>
+        <div class="ticks">
+          <div class="tick div-4 major">
+            <span>400</span><div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-4 major">
+            <span>300</span><div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-4 major">
+            <span>200</span><div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-4 major">
+            <span>100</span><div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick major"><span>0</span></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="marker"></div>
+        <div class="label">B</div>
+        <div class="ticks">
+          <div class="tick div-4 major">
+            <div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-4 major">
+            <div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-4 major">
+            <div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-4 major">
+            <div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lingauge no-footer" id="panel-lm-2-gauge-3">
+      <div class="left shared-labels">
+        <div class="marker"></div>
+        <div class="label">A</div>
+        <div class="ticks">
+          <div class="tick div-5 major">
+            <span>100</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>80</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>60</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>40</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>20</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick major"><span>0</span></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="marker"></div>
+        <div class="label">B</div>
+        <div class="ticks">
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bank" id="panel-lm-2-gauge-labels-2">
+      <span class="bank-header header-row-2 header-col-g1 header-width-g7"><span>ECS</span></span>
+      <span class="bank-header header-row-1 header-col-g1 header-width-g2">Temp</span>
+      <span class="bank-header header-row-1 header-col-g3 header-width-g2">Press</span>
+      <span class="bank-header header-row-1 header-col-g6 header-width-g2">Part Press CO&#8322;</span>
+    </div>
+    <div class="lingauge no-footer" id="panel-lm-2-gauge-4">
+      <div class="left shared-labels">
+        <div class="marker"></div>
+        <div class="label middle">&deg;F</div>
+        <div class="label">SUIT</div>
+        <div class="ticks">
+          <div class="tick div-6 major">
+            <span>100</span><div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-6 major">
+            <span>90</span><div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-6 major">
+            <span>80</span><div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-6 major">
+            <span>70</span><div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-6 major">
+            <span>60</span><div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-6 major">
+            <span>50</span><div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick major"><span>40</span></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="marker"></div>
+        <div class="label">CABIN</div>
+        <div class="ticks">
+          <div class="tick div-6 major">
+            <div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-6 major">
+            <div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-6 major">
+            <div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-6 major">
+            <div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-6 major">
+            <div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-6 major">
+            <div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lingauge no-footer" id="panel-lm-2-gauge-5">
+      <div class="left shared-labels">
+        <div class="marker"></div>
+        <div class="label middle">PSIA</div>
+        <div class="label">SUIT</div>
+        <div class="ticks">
+          <div class="tick div-5 major">
+            <span>10</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>8</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>6</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>4</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>2</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick major"><span>0</span></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="marker"></div>
+        <div class="label">CABIN</div>
+        <div class="ticks">
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lingauge no-footer" id="panel-lm-2-gauge-6">
+      <div class="right">
+        <div class="marker"></div>
+        <div class="label">MM&nbsp;Hg</div>
+        <div class="ticks">
+          <div class="tick div-6 major">
+            <span>30</span>
+          </div>
+          <div class="tick div-6 major">
+            <span>20</span><div class="tick div-2 major"></div><span>15</span>
+          </div>
+          <div class="tick div-6 major">
+            <span>10</span><div class="tick div-4"></div><div class="tick div-4"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-2 major">
+            <span>5</span><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div>
+          </div>
+          <div class="tick major"><span>0</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="bank talkbacks wide" id="panel-lm-2-1a">
+      <span class="bank-header header-row-2 header-col-1 header-width-2"><span>System A</span></span>
+      <div id="panel-lm-2-1a-1" class="panel-talkback"><span class="glyph"></span><span class="upper">Asc Fuel</span></div>
+      <div id="panel-lm-2-1a-2" class="panel-talkback"><span class="glyph"></span><span class="upper">Asc Oxid</span></div>
+      <span class="bank-header header-row-2 header-col-3 header-width-2"><span>System B</span></span>
+      <div id="panel-lm-2-1a-3" class="panel-talkback"><span class="glyph"></span><span class="upper">Asc Fuel</span></div>
+      <div id="panel-lm-2-1a-4" class="panel-talkback"><span class="glyph"></span><span class="upper">Asc Oxid</span></div>
+    </div>
+    <div class="bank wide" id="panel-lm-2-1b">
+      <div id="panel-lm-2-1b-1" class="panel-toggle3"><span class="upper nowrap condense">Asc Feed 1</span>
+        <span class="lower">Close</span></div>
+      <div id="panel-lm-2-1b-2" class="panel-toggle3"><span class="upper nowrap condense">Asc Feed 2</span>
+        <span class="lower">Close</span></div>
+      <div id="panel-lm-2-1b-3" class="panel-toggle3"><span class="upper nowrap condense">Asc Feed 1</span>
+        <span class="lower">Close</span></div>
+      <div id="panel-lm-2-1b-4" class="panel-toggle3"><span class="upper nowrap condense">Asc Feed 2</span>
+        <span class="lower">Close</span></div>
+    </div>
+    <div class="bank talkbacks wide" id="panel-lm-2-2a">
+      <span class="bank-header header-row-2 header-col-1 header-width-4"><span>Thruster Pair</span></span>
+      <div id="panel-lm-2-2a-1" class="panel-talkback"><span class="glyph"></span><span class="upper">Quad 1</span></div>
+      <div id="panel-lm-2-2a-2" class="panel-talkback"><span class="glyph"></span><span class="upper">Quad 4</span></div>
+      <div id="panel-lm-2-2a-3" class="panel-talkback"><span class="glyph"></span><span class="upper">Quad 1</span></div>
+      <div id="panel-lm-2-2a-4" class="panel-talkback"><span class="glyph"></span><span class="upper">Quad 4</span></div>
+    </div>
+    <div class="bank wide" id="panel-lm-2-2b">
+      <div id="panel-lm-2-2b-1" class="panel-toggle3"><span class="upper">Open</span>
+        <span class="lower">Close</span></div>
+      <div id="panel-lm-2-2b-2" class="panel-toggle3"><span class="upper">Open</span>
+        <span class="lower">Close</span></div>
+      <div id="panel-lm-2-2b-3" class="panel-toggle3"><span class="upper">Open</span>
+        <span class="lower">Close</span></div>
+      <div id="panel-lm-2-2b-4" class="panel-toggle3"><span class="upper">Open</span>
+        <span class="lower">Close</span></div>
+    </div>
+    <div class="bank" id="panel-lm-2-gauge-labels-3">
+      <span class="bank-header header-row-1 header-col-g1 header-width-g2">Glycol</span>
+      <span class="bank-header header-row-1 header-col-g3 header-width-g2">Quantity</span>
+    </div>
+    <div class="lingauge no-footer" id="panel-lm-2-gauge-7">
+      <div class="left shared-labels">
+        <div class="marker"></div>
+        <div class="label">&deg;F</div>
+        <div class="ticks">
+          <div class="tick div-4 major">
+            <span>80</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-4 major">
+            <span>60</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-4 major">
+            <span>40</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-4 major">
+            <span>20</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick major"><span>0</span></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="marker"></div>
+        <div class="label">PSIA</div>
+        <div class="ticks">
+          <div class="tick div-4 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-4 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-4 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-4 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lingauge no-footer" id="panel-lm-2-gauge-8">
+      <div class="left shared-labels">
+        <div class="marker"></div>
+        <div class="label">O&#8322;</div>
+        <div class="ticks">
+          <div class="tick div-5 major">
+            <span>100</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>80</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>60</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>40</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <span>20</span><div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick major"><span>0</span></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="marker"></div>
+        <div class="label">H&#8322;O</div>
+        <div class="ticks">
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+          <div class="tick div-5 major">
+            <div class="tick div-4"></div><div class="tick div-4 major"></div><div class="tick div-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="xpntr" id="panel-lm-2-xpntr">
       <div class="axis-v"><span>Elev</span><span>Rt</span><span>Fwd</span><span>Vel</span></div>
       <div class="labels-v">
@@ -680,7 +1081,315 @@
         <span>20</span><span>15</span><span>10</span><span>5</span><span>0</span><span>5</span><span>10</span><span>15</span><span>20</span>
       </div>
     </div>
+    <div class="bank talkbacks wide" id="panel-lm-2-3a">
+      <div id="panel-lm-2-3a-1" class="panel-talkback"><span class="glyph"></span><span class="upper">Quad 2</span></div>
+      <div id="panel-lm-2-3a-2" class="panel-talkback"><span class="glyph"></span><span class="upper">Quad 3</span></div>
+      <div id="panel-lm-2-3a-3" class="panel-talkback"><span class="glyph"></span><span class="upper">Quad 2</span></div>
+      <div id="panel-lm-2-3a-4" class="panel-talkback"><span class="glyph"></span><span class="upper">Quad 3</span></div>
+    </div>
+    <div class="bank wide" id="panel-lm-2-3b">
+      <div id="panel-lm-2-3b-1" class="panel-toggle3"><span class="upper">Open</span>
+        <span class="lower">Close</span></div>
+      <div id="panel-lm-2-3b-2" class="panel-toggle3"><span class="upper">Open</span>
+        <span class="lower">Close</span></div>
+      <div id="panel-lm-2-3b-3" class="panel-toggle3"><span class="upper">Open</span>
+        <span class="lower">Close</span></div>
+      <div id="panel-lm-2-3b-4" class="panel-toggle3"><span class="upper">Open</span>
+        <span class="lower">Close</span></div>
+    </div>
     <div class="fdai" id="panel-lm-2-fdai"></div>
+    <div class="alarm master" id="panel-lm-2-alarm-1">
+      <span>Master Alarm</span>
+    </div>
+    <div class="bank single" id="panel-lm-2-4">
+      <span class="bank-header header-row-1 header-col-1 header-width-1 nobracket">Rate/Err Mon</span>
+      <div id="panel-lm-2-4-1" class="panel-toggle2"><span class="upper">Rndz Radar</span>
+        <span class="lower">Ldg Rdr/Cmptr</span></div>
+    </div>
+    <div class="bank single" id="panel-lm-2-5">
+      <span class="bank-header header-row-1 header-col-1 header-width-1 nobracket">Attitude Mon</span>
+      <div id="panel-lm-2-5-1" class="panel-toggle2"><span class="upper">PGNS</span>
+        <span class="lower">AGS</span></div>
+    </div>
+    <div class="bank talkbacks wide" id="panel-lm-2-6a">
+      <span class="bank-header header-row-2 header-col-1 header-width-1 bracket"><span>Crsfd</span></span>
+      <div id="panel-lm-2-6a-1" class="panel-talkback"><span class="glyph"></span></div>
+    </div>
+    <div class="bank wide" id="panel-lm-2-6b">
+      <div id="panel-lm-2-6b-1" class="panel-toggle3"><span class="upper">Open</span>
+        <span class="lower">Close</span></div>
+    </div>
+    <div class="bank talkbacks wide" id="panel-lm-2-7a">
+      <span class="bank-header header-row-2 header-col-1 header-width-2"><span>Main Sov</span></span>
+      <div id="panel-lm-2-7a-1" class="panel-talkback"><span class="glyph"></span><span class="upper">Sys A</span></div>
+      <div id="panel-lm-2-7a-1" class="panel-talkback"><span class="glyph"></span><span class="upper">Sys B</span></div>
+    </div>
+    <div class="bank wide" id="panel-lm-2-7b">
+      <div id="panel-lm-2-7b-1" class="panel-toggle3"><span class="upper">Open</span>
+        <span class="lower">Close</span></div>
+      <div id="panel-lm-2-7b-2" class="panel-toggle3"><span class="upper">Open</span>
+        <span class="lower">Close</span></div>
+    </div>
+    <div class="dial" id="panel-lm-2-dial-1">
+      <div class="label upper far">Temp/Press Mon</div>
+      <div class="label upper"><span>He</span></div>
+      <div class="label right rot-30"><span>PRPLNT</span></div>
+      <div class="label right rot-60"><span>FUEL MANF</span></div>
+      <div class="label right rot-90"><span>OXID MANF</span></div>
+      <div class="glyph"></div>
+    </div>
+    <div class="bank single" id="panel-lm-2-8">
+      <span class="bank-header header-row-1 header-col-1 header-width-1"><span>ACA Prop</span></span>
+      <div id="panel-lm-2-8-1" class="panel-toggle2"><span class="upper">Enable</span>
+        <span class="lower">Disable</span></div>
+    </div>
+    <div class="dial" id="panel-lm-2-dial-2">
+      <div class="label upper far">GLYCOL</div>
+      <div class="label right rot-45"><span>INST (SEC)</span></div>
+      <div class="label right rot-75"><span>PUMP 1</span></div>
+      <div class="label right rot-105"><span>PUMP 2</span></div>
+      <div class="glyph"></div>
+    </div>
+    <div class="lamp" id="panel-lm-2-lamp-1"></div>
+    <div class="dial" id="panel-lm-2-dial-3">
+      <div class="label upper far">SUIT FAN</div>
+      <div class="label right rot-45"><span>OFF</span></div>
+      <div class="label right rot-75"><span>1</span></div>
+      <div class="label right rot-105"><span>2</span></div>
+      <div class="glyph"></div>
+    </div>
+    <div class="lamp" id="panel-lm-2-lamp-2"></div>
+    <div class="dial" id="panel-lm-2-dial-4">
+      <div class="label upper far">O&#8322;/H&#8322;O QTY MON</div>
+      <div class="label left rot-15"><span>C/W RESET</span></div>
+      <div class="label right rot-15"><span>DES</span></div>
+      <div class="label right rot-45"><span>ASC 1</span></div>
+      <div class="label right rot-75"><span>ASC 2</span></div>
+      <div class="glyph"></div>
+    </div>
+    <div class="lamp" id="panel-lm-2-lamp-3"><span>CO&#8322;</span></div>
+    <div class="lamp" id="panel-lm-2-lamp-4"><span>H&#8322;O Sep</span></div>
+
+    <!-- PANEL 3 -->
+    <div class="bank single" id="panel-lm-3-1">
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Eng Gmbl</span>
+      <div id="panel-lm-3-1-1" class="panel-toggle2"><span class="upper">Enable</span>
+        <span class="lower">Off</span></div>
+    </div>
+    <div class="bank single" id="panel-lm-3-2">
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Des Eng Cmd Ovrd</span>
+      <div id="panel-lm-3-2-1" class="panel-toggle2"><span class="upper">On</span>
+        <span class="lower">Off</span></div>
+    </div>
+    <div class="bank single" id="panel-lm-3-3">
+      <span class="bank-header header-row-2 header-col-1 header-width-x"><span>Radar</span></span>
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Ldg Ant</span>
+      <div id="panel-lm-3-3-1" class="panel-toggle3"><span class="upper">Auto</span>
+        <span class="right">DES</span><span class="lower">Hover</span></div>
+    </div>
+    <div class="bank single" id="panel-lm-3-4">
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Radar Test</span>
+      <div id="panel-lm-3-4-1" class="panel-toggle3"><span class="upper">Rdnz</span>
+        <span class="right">Off</span><span class="lower">Ldg</span></div>
+    </div>
+    <div class="gauge" id="panel-lm-3-gauge-1">
+      <div class="cover"></div>
+      <div class="label lower">Signal Strength</div>
+      <div class="label a">0</div>
+      <div class="label b">1</div>
+      <div class="label c">2</div>
+      <div class="label d">3</div>
+      <div class="label e">4</div>
+      <div class="label f">5</div>
+    </div>
+    <div class="bank single" id="panel-lm-3-5">
+      <span class="bank-header header-row-2 header-col-1 header-width-x"><span>Rendezvous Radar</span></span>
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Slew Rate</span>
+      <div id="panel-lm-3-5-1" class="panel-toggle2"><span class="upper">Hi</span>
+        <span class="lower">Lo</span></div>
+    </div>
+    <div class="lamp" id="panel-lm-3-lamp-1"><span>No Track</span></div>
+    <div class="bank single" id="panel-lm-3-6">
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Slew</span>
+      <div id="panel-lm-3-5-1" class="panel-toggle3"><span class="upper">Up</span>
+        <span class="left">Left</span><span class="right">Right</span><span class="lower">Down</span></div>
+    </div>
+    <div class="bank wide" id="panel-lm-3-dial-1-labels">
+      <span class="bank-header header-row-1 header-col-1 header-width-x bracket"><span>Ldg Radar Pwr</span></span>
+      <span class="bank-header header-row-1 header-col-y header-width-x bracket"><span>Rndz Radar</span></span>
+    </div>
+    <div class="dial" id="panel-lm-3-dial-1">
+      <div class="label upper far">Test Monitor</div>
+      <div class="label left rot-45"><span>Alt Xmtr</span></div>
+      <div class="label left rot-15"><span>Vel Xmtr</span></div>
+      <div class="label right rot-15"><span>AGC</span></div>
+      <div class="label right rot-45"><span>Xmtr Pwr</span></div>
+      <div class="label right rot-75"><span>Shaft Err</span></div>
+      <div class="label right rot-105"><span>Trun Err</span></div>
+      <div class="glyph"></div>
+    </div>
+    <div class="dial" id="panel-lm-3-dial-2">
+      <div class="label left rot-30"><span>Auto Track</span></div>
+      <div class="label upper"><span>Slew</span></div>
+      <div class="label right rot-30"><span>LGC</span></div>
+      <div class="glyph"></div>
+    </div>
+    <div class="bank wide" id="panel-lm-3-7">
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Dead Band</span>
+      <div id="panel-lm-3-7-1" class="panel-toggle2"><span class="upper">Max</span>
+        <span class="lower">Min</span></div>
+      <span class="bank-header header-row-2 header-col-2 header-width-2"><span>Gyro Test</span></span>
+      <div id="panel-lm-3-7-2" class="panel-toggle3"><span class="upper">Roll</span>
+        <span class="right">Pitch</span><span class="lower">Yaw</span></div>
+      <div id="panel-lm-3-7-3" class="panel-toggle3"><span class="upper">Pos RT</span>
+        <span class="right">Off</span><span class="lower">Neg RT</span></div>
+    </div>
+    <div class="bank wide" id="panel-lm-3-8">
+      <span class="bank-header header-row-2 header-col-1 header-width-3"><span>Attitude Control</span></span>
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Roll</span>
+      <div id="panel-lm-3-8-1" class="panel-toggle2"><span class="upper nowrap condense">Mode Cont</span>
+        <span class="right">Pulse</span><span class="lower">Dir</span></div>
+      <span class="bank-header header-row-1 header-col-2 header-width-1">Pitch</span>
+      <div id="panel-lm-3-8-2" class="panel-toggle3"><span class="upper nowrap condense">Mode Cont</span>
+        <span class="right">Pulse</span><span class="lower">Dir</span></div>
+      <span class="bank-header header-row-1 header-col-3 header-width-1">Yaw</span>
+      <div id="panel-lm-3-8-3" class="panel-toggle3"><span class="upper nowrap condense">Mode Cont</span>
+        <span class="right">Pulse</span><span class="lower">Dir</span></div>
+    </div>
+    <div class="bank wide" id="panel-lm-3-9">
+      <span class="bank-header header-row-2 header-col-2 header-width-2"><span>Mode Control</span></span>
+      <span class="bank-header header-row-1 header-col-1 header-width-1">PGNS</span>
+      <div id="panel-lm-3-9-1" class="panel-toggle2"><span class="upper">Auto</span>
+        <span class="right">Att Hold</span><span class="lower">Off</span></div>
+      <span class="bank-header header-row-1 header-col-2 header-width-1">Pitch</span>
+      <div id="panel-lm-3-9-2" class="panel-toggle3"><span class="upper">Auto</span>
+        <span class="right">Att Hold</span><span class="lower">Off</span></div>
+      <span class="bank-header header-row-1 header-col-3 header-width-1">IMU Cage</span>
+      <div id="panel-lm-3-9-3" class="panel-toggle2"><span class="upper">On</span>
+        <span class="lower">Off</span></div>
+    </div>
+    <div class="bank" id="panel-lm-3-gauge-2-labels">
+      <span class="bank-header header-row-2 header-col-1 header-width-x"><span>Htr Cont</span></span>
+      <span class="bank-header header-row-1 header-col-1 header-width-x">Temp</span>
+    </div>
+    <div class="lingauge no-footer" id="panel-lm-3-gauge-2">
+      <div class="right">
+        <div class="marker"></div>
+        <div class="label">&deg;F</div>
+        <div class="ticks">
+          <div class="tick div-6 major">
+            <span>300</span><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div>
+          </div>
+          <div class="tick div-6 major">
+            <span>200</span><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div>
+          </div>
+          <div class="tick div-6 major">
+            <span>100</span><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div>
+          </div>
+          <div class="tick div-6 major">
+            <span>50</span><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div>
+          </div>
+          <div class="tick div-6 major">
+            <span>0</span><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div>
+          </div>
+          <div class="tick div-6 major">
+            <span>-50</span><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div><div class="tick div-5"></div>
+          </div>
+          <div class="tick major"><span>-100</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="bank wide" id="panel-lm-3-10">
+      <span class="bank-header header-row-3 header-col-1 header-width-4"><span>Event Timer</span></span>
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Reset/ Count</span>
+      <div id="panel-lm-3-10-1" class="panel-toggle3"><span class="upper">Reset</span>
+        <span class="right">Up</span><span class="lower">Down</span></div>
+      <span class="bank-header header-row-1 header-col-2 header-width-1">Timer Cont</span>
+      <div id="panel-lm-3-10-2" class="panel-toggle3"><span class="upper">Start</span>
+        <span class="lower">Stop</span></div>
+      <span class="bank-header header-row-2 header-col-3 header-width-2"><span>Slew Cont</span></span>
+      <span class="bank-header header-row-1 header-col-3 header-width-1">Min</span>
+      <div id="panel-lm-3-10-3" class="panel-toggle2"><span class="upper">Tens</span>
+        <span class="lower">Units</span></div>
+      <span class="bank-header header-row-1 header-col-4 header-width-1">Sec</span>
+      <div id="panel-lm-3-10-4" class="panel-toggle2"><span class="upper">Tens</span>
+        <span class="lower">Units</span></div>
+    </div>
+    <div class="bank wide" id="panel-lm-3-11a">
+      <span class="bank-header header-row-2 header-col-1 header-width-2"><span>RCS Sys A/B-2</span></span>
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Quad 1</span>
+      <div id="panel-lm-3-11a-1" class="panel-toggle3"><span class="upper">Auto</span>
+        <span class="right">Off</span><span class="lower">Man</span></div>
+      <span class="bank-header header-row-1 header-col-2 header-width-1">Quad 4</span>
+      <div id="panel-lm-3-11a-2" class="panel-toggle3"><span class="upper">Auto</span>
+        <span class="right">Off</span><span class="lower">Man</span></div>
+    </div>
+    <div class="bank wide" id="panel-lm-3-11b">
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Quad 2</span>
+      <div id="panel-lm-3-11b-1" class="panel-toggle3"><span class="upper">Auto</span>
+        <span class="right">Off</span><span class="lower">Man</span></div>
+      <span class="bank-header header-row-1 header-col-2 header-width-1">Quad 3</span>
+      <div id="panel-lm-3-11b-2" class="panel-toggle3"><span class="upper">Auto</span>
+        <span class="right">Off</span><span class="lower">Man</span></div>
+    </div>
+    <div class="bank wide" id="panel-lm-3-dial-3-labels">
+      <span class="bank-header header-row-1 header-col-1 header-width-1 bracket"><span>Radar</span></span>
+      <span class="bank-header header-row-1 header-col-2 header-width-1 bracket"><span>RCS</span></span>
+    </div>
+    <div class="dial" id="panel-lm-3-dial-3">
+      <div class="label upper far">Temp Monitor</div>
+      <div class="label left rot-45"><span>Rndz</span></div>
+      <div class="label left rot-15"><span>LDG</span></div>
+      <div class="label right rot-15"><span>Quad 1</span></div>
+      <div class="label right rot-45"><span>Quad 2</span></div>
+      <div class="label right rot-75"><span>Quad 3</span></div>
+      <div class="label right rot-105"><span>Quad 4</span></div>
+      <div class="label right rot-135"><span>S-Band</span></div>
+      <div class="glyph"></div>
+    </div>
+    <div class="bank single" id="panel-lm-3-12">
+      <span class="bank-header header-row-2 header-col-1 header-width-x"><span>Lighting</span></span>
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Side Panels</span>
+      <div id="panel-lm-3-12-1" class="panel-toggle2"><span class="upper">On</span>
+        <span class="lower">Off</span></div>
+    </div>
+    <div class="bank single" id="panel-lm-3-13">
+      <span class="bank-header header-row-1 header-col-1 header-width-x bracket"><span>Flood</span></span>
+      <div id="panel-lm-3-13-1" class="panel-toggle2"><span class="upper">Ovhd/Fwd</span>
+        <span class="right">Off</span><span class="lower">All</span></div>
+    </div>
+    <div class="dial" id="panel-lm-3-dial-4">
+      <div class="label upper far">Ovhd/Fwd</div>
+      <div class="label left rot-135"><span>Dim</span></div>
+      <div class="label right rot-135"><span>Bright</span></div>
+      <div class="glyph"></div>
+    </div>
+    <div class="dial" id="panel-lm-3-dial-5">
+      <div class="label upper far">Lamp/Tone Test</div>
+      <div class="label left rot-105"><span>Off</span></div>
+      <div class="label left rot-75"><span>Alarm Tone</span></div>
+      <div class="label left rot-45"><span>C/W 1</span></div>
+      <div class="label left rot-15"><span>Eng PB-C/W 2</span></div>
+      <div class="label right rot-15"><span>C/W 3</span></div>
+      <div class="label right rot-45"><span>C/W 4</span></div>
+      <div class="label right rot-75"><span>Compnt</span></div>
+      <div class="label right rot-105"><span>Off</span></div>
+      <div class="glyph"></div>
+    </div>
+    <div class="bank single" id="panel-lm-3-14">
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Exterior Ltg</span>
+      <div id="panel-lm-3-14-1" class="panel-toggle3"><span class="upper">On</span>
+        <span class="right">Off</span><span class="lower">Track</span></div>
+    </div>
+    <div class="bank" id="panel-lm-3-alarm-1-label">
+      <span class="bank-header header-row-1 header-col-1 header-width-2">Lunar Contact</span>
+    </div>
+    <div class="alarm" id="panel-lm-3-alarm-1"></div>
+    <div class="bank single" id="panel-lm-3-15">
+      <span class="bank-header header-row-1 header-col-1 header-width-1 nobracket">X-Pointer Scale</span>
+      <div id="panel-lm-3-15-1" class="panel-toggle2"><span class="upper">Hi Mult</span>
+        <span class="lower">Lo Mult</span></div>
+    </div>
 
 
     <img class="panel-main" src="/assets/panel-lm.svg"/>

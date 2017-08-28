@@ -247,6 +247,7 @@ $color-lamp: #e4e1da
         left: -17px
         width: 86px
       .bank-header
+        font-weight: bold
         left: -14px
 
     .bank-header
@@ -457,6 +458,8 @@ $color-lamp: #e4e1da
         @include rot(30)
       &.rot-75
         @include rot(15)
+      &.rot-105
+        @include rot(-15)
       &.rot-120
         @include rot(-30)
       &.rot-135
@@ -951,6 +954,20 @@ $color-lamp: #e4e1da
       background-size: 120px 55px
       height: 55px
       margin-bottom: 6px
+      width: 120px
+
+  .lamp
+    background: url(/assets/panel-lamp.svg)
+    background-size: 40px 40px
+    height: 40px
+    position: absolute
+    width: 40px
+    span
+      bottom: calc(100% + 4px)
+      left: -40px
+      position: absolute
+      text-align: center
+      text-transform: uppercase
       width: 120px
 
   .audiobank
@@ -2766,8 +2783,25 @@ $color-lamp: #e4e1da
     .right
       left: 100%
 
+    &.panel-breaker
+      .upper
+        bottom: calc(100% + #{$label-padding-v})
+
     &.panel-talkback .upper
       bottom: 100%
+
+  .dial
+    .glyph
+      transform: scale(0.72)
+    .label.upper.far
+      bottom: calc(100% + 6px)
+      font-weight: bold
+    .label.upper
+      bottom: calc(100% - 6px)
+    .label.left span
+      right: 54px
+    .label.right span
+      left: 54px
 
 #panel-lm-11-1
   left: 145px
@@ -3010,12 +3044,21 @@ $color-lamp: #e4e1da
 #panel-lm-1-dial-1
   left: 2642px
   top: 1399px
-  .glyph
-    transform: scale(0.8)
-  .label.left span
-    right: 54px
-  .label.right span
-    left: 54px
+  #ref-panel-lm &.dial
+    .glyph
+      transform: scale(0.72) rotate(-75deg)
+    .label.upper.far
+      bottom: calc(100% + 18px)
+#panel-lm-1-alarm-cover
+  $height: 118px
+  $width: 164px
+  background: url(/assets/panel-lmabort-cover.svg)
+  background-size: $width $height
+  height: $height
+  left: 2635px
+  position: absolute
+  top: 1256px
+  width: $width
 #panel-lm-1-alarm-3
   border-radius: 999px
   left: 2655px
@@ -3025,10 +3068,251 @@ $color-lamp: #e4e1da
   top: 1280px
 
 
+#panel-lm-2-warn-1
+  left: 3208px
+  top: 253px
+  width: 210px
+#panel-lm-2-warn-2
+  left: 3383px
+  top: 253px
+  width: 210px
+#panel-lm-2-gauge-labels-1
+  left: 2836px
+  top: 465px
+#panel-lm-2-gauge-1
+  left: 2840px
+  top: 498px
+#panel-lm-2-gauge-2
+  left: 2952px
+  top: 498px
+#panel-lm-2-gauge-3
+  left: 3064px
+  top: 498px
+#panel-lm-2-gauge-labels-2
+  left: 3197px
+  top: 465px
+#panel-lm-2-gauge-4
+  left: 3207px
+  top: 498px
+#panel-lm-2-gauge-5
+  left: 3319px
+  top: 498px
+#panel-lm-2-gauge-6
+  height: 180px
+  left: 3494px
+  top: 481px
+  width: 71px
+  &:before
+    left: 0
+#panel-lm-2-1a
+  left: 2835px
+  top: 731px
+#panel-lm-2-1b
+  left: 2831px
+  top: 777px
+#panel-lm-2-2a
+  left: 2835px
+  top: 901px
+#panel-lm-2-2b
+  left: 2831px
+  top: 947px
+#panel-lm-2-gauge-labels-3
+  left: 3193px
+  top: 721px
+#panel-lm-2-gauge-7
+  left: 3197px
+  top: 731px
+#panel-lm-2-gauge-8
+  left: 3309px
+  top: 731px
 #panel-lm-2-xpntr
   left: 3433px
   top: 699px
+#panel-lm-2-3a
+  left: 2835px
+  top: 1051px
+#panel-lm-2-3b
+  left: 2831px
+  top: 1097px
 #panel-lm-2-fdai
   left: 3171px
   top: 942px
+#panel-lm-2-alarm-1
+  left: 3572px
+  top: 942px
+#panel-lm-2-4
+  left: 3564px
+  top: 1073px
+#panel-lm-2-5
+  left: 3564px
+  top: 1192px
+#panel-lm-2-6a
+  left: 2838px
+  top: 1244px
+#panel-lm-2-6b
+  left: 2835px
+  top: 1288px
+#panel-lm-2-7a
+  left: 2978px
+  top: 1244px
+#panel-lm-2-7b
+  left: 2975px
+  top: 1288px
+#panel-lm-2-dial-1
+  left: 2816px
+  top: 1397px
+#panel-lm-2-8
+  left: 3058px
+  top: 1428px
+#panel-lm-2-dial-2
+  left: 3197px
+  top: 1336px
+  #ref-panel-lm &.dial .glyph
+    transform: scale(0.72) rotate(75deg)
+#panel-lm-2-lamp-1
+  left: 3355px
+  top: 1375px
+#panel-lm-2-dial-3
+  left: 3197px
+  top: 1482px
+  #ref-panel-lm &.dial .glyph
+    transform: scale(0.72) rotate(45deg)
+#panel-lm-2-lamp-2
+  left: 3327px
+  top: 1523px
+#panel-lm-2-dial-4
+  left: 3399px
+  top: 1405px
+  #ref-panel-lm &.dial .glyph
+    transform: scale(0.72) rotate(75deg)
+  .label.upper.far
+    margin-bottom: 4px
+#panel-lm-2-lamp-3
+  left: 3427px
+  top: 1553px
+#panel-lm-2-lamp-4
+  left: 3487px
+  top: 1553px
+#panel-lm-3-1
+  left: 1927px
+  top: 1673px
+#panel-lm-3-2
+  left: 1914px
+  top: 1783px
+#panel-lm-3-3
+  left: 2051px
+  top: 1670px
+  .header-width-x
+    width: 400px
+#panel-lm-3-4
+  left: 2051px
+  top: 1783px
+#panel-lm-3-gauge-1
+  left: 2151px
+  top: 1670px
+#panel-lm-3-5
+  left: 2171px
+  top: 1833px
+  .header-width-x
+    width: 280px
+#panel-lm-3-lamp-1
+  left: 2350px
+  top: 1847px
+#panel-lm-3-6
+  left: 2171px
+  top: 1953px
+#panel-lm-3-dial-1-labels
+  left: 1929px
+  top: 1929px
+  .header-width-x
+    width: 110px
+  .header-col-y
+    left: 100px
+#panel-lm-3-dial-1
+  left: 1968px
+  top: 1927px
+  #ref-panel-lm &.dial
+    .glyph
+      transform: scale(0.72) rotate(-45deg)
+    .label.upper.far
+      bottom: calc(100% + 18px)
+#panel-lm-3-dial-2
+  left: 2307px
+  top: 1913px
+  .glyph
+    transform: rotate(-30deg)
+#panel-lm-3-7
+  left: 2511px
+  top: 1700px
+#panel-lm-3-8
+  left: 2511px
+  top: 1820px
+#panel-lm-3-9
+  left: 2511px
+  top: 1940px
+#panel-lm-3-gauge-2-labels
+  left: 2815px
+  top: 1674px
+  .header-width-x
+    width: 90px
+#panel-lm-3-gauge-2
+  height: 210px
+  left: 2827px
+  top: 1675px
+  width: 60px
+  &:before
+    left: 0
+#panel-lm-3-10
+  left: 2919px
+  top: 1686px
+#panel-lm-3-11a
+  left: 3002px
+  top: 1806px
+#panel-lm-3-11b
+  left: 3002px
+  top: 1906px
+#panel-lm-3-dial-3-labels
+  left: 2824px
+  top: 1926px
+#panel-lm-3-dial-3
+  left: 2835px
+  top: 1925px
+  #ref-panel-lm &.dial
+    .glyph
+      transform: scale(0.72) rotate(-45deg)
+    .label.upper.far
+      bottom: calc(100% + 18px)
+#panel-lm-3-12
+  left: 3267px
+  top: 1674px
+  .header-width-x
+    width: 262px
+#panel-lm-3-13
+  left: 3267px
+  top: 1765px
+  .header-width-x
+    width: 280px
+#panel-lm-3-dial-4
+  left: 3398px
+  top: 1785px
+  #ref-panel-lm &.dial .glyph
+    transform: scale(0.72) rotate(105deg)
+#panel-lm-3-dial-5
+  left: 3311px
+  top: 1925px
+  #ref-panel-lm &.dial .glyph
+    transform: scale(0.72) rotate(-105deg)
+#panel-lm-3-14
+  left: 3545px
+  top: 1955px
+#panel-lm-3-alarm-1-label
+  left: 3549px
+  top: 1695px
+#panel-lm-3-alarm-1
+  border-radius: 999px
+  left: 3584px
+  top: 1695px
+#panel-lm-3-15
+  left: 3585px
+  top: 1805px
 
