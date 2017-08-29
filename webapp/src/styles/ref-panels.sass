@@ -466,6 +466,8 @@ $color-lamp: #e4e1da
         @include rot(-45)
       &.rot-150
         @include rot(-60)
+      &.rot-165
+        @include rot(-75)
 
     .label.right
       left: 63px
@@ -494,6 +496,8 @@ $color-lamp: #e4e1da
         @include rot(45)
       &.rot-150
         @include rot(60)
+      &.rot-165
+        @include rot(75)
 
     &.mini
       .label.left
@@ -880,6 +884,58 @@ $color-lamp: #e4e1da
       position: absolute
       text-align: center
       width: 100%
+    &.custom
+      background: url(/assets/panel-gauge-blank.svg)
+      .tick
+        height: 72px
+        left: 63px
+        top: 29px
+        position: absolute
+        width: 2px
+        &:before
+          @include reify
+          background-color: #e6e6e6
+          bottom: 0
+          height: 12px
+          position: absolute
+          width: 2px
+        @each $deg in 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270, 285, 300, 315, 330, 345, 80, 100, 140, 160, 200, 220, 260, 280, 290, 65, 295
+          &.rot-#{$deg}
+            transform: rotate(#{$deg}deg)
+            span
+              transform: rotate(#{-$deg}deg)
+              @if $deg < 180
+                transform-origin: right center
+              @else
+                left: 0
+                right: auto
+                transform-origin: left center
+        span
+          bottom: -6px
+          color: #e6e6e6
+          font-size: 0.8em
+          position: absolute
+          right: 0
+        &.rot-180 span
+          bottom: -10px
+          left: -20px
+          text-align: center
+          transform-origin: center center
+          width: 40px
+        .tick
+          left: 0
+          top: 0
+          &:before
+            bottom: 3px
+            width: 1px
+          &.incr-9
+            transform: rotate(9deg)
+          &.incr-10
+            transform: rotate(10deg)
+          &.incr-12
+            transform: rotate(12deg)
+          .tick
+            top: 0
 
   .alarm
     $alarm-size: 47px
@@ -3507,4 +3563,28 @@ $color-lamp: #e4e1da
 #panel-lm-12-8
   left: 4744px
   top: 1964px
+#panel-lm-12-10
+  left: 4944px
+  top: 1842px
+#panel-lm-12-gauge-1
+  left: 4974px
+  top: 1684px
+#panel-lm-12-gauge-2
+  left: 5114px
+  top: 1684px
+#panel-lm-12-gauge-3
+  left: 5034px
+  top: 1854px
+#panel-lm-12-dial-1
+  left: 4944px
+  top: 1950px
+#panel-lm-12-dial-2
+  left: 5137px
+  top: 1956px
+#panel-lm-12-dial-3
+  left: 5290px
+  top: 1940px
+#panel-lm-12-dial-4
+  left: 5293px
+  top: 1730px
 

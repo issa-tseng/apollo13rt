@@ -1433,25 +1433,35 @@
 
     <!-- PANEL 14 -->
     <div class="lamp" id="panel-lm-14-lamp-1"><span>DC Bus Fault</span></div>
-    <!-- sigh. both of these are the wrong scale. -->
-    <div class="gauge" id="panel-lm-14-gauge-1">
+    <div class="gauge custom" id="panel-lm-14-gauge-1">
       <div class="cover"></div>
       <div class="label lower">Volts</div>
-      <div class="label a">20</div>
-      <div class="label b">25</div>
-      <div class="label c">30</div>
-      <div class="label d">35</div>
-      <div class="label e">40</div>
+      <div class="tick rot-60"><span>20</span>
+        <div class="tick incr-12"><div class="tick incr-12"><div class="tick incr-12"><div class="tick incr-12"></div></div></div></div></div>
+      <div class="tick rot-120"><span>25</span>
+        <div class="tick incr-12"><div class="tick incr-12"><div class="tick incr-12"><div class="tick incr-12"></div></div></div></div></div>
+      <div class="tick rot-180"><span>30</span>
+        <div class="tick incr-12"><div class="tick incr-12"><div class="tick incr-12"><div class="tick incr-12"></div></div></div></div></div>
+      <div class="tick rot-240"><span>35</span>
+        <div class="tick incr-12"><div class="tick incr-12"><div class="tick incr-12"><div class="tick incr-12"></div></div></div></div></div>
+      <div class="tick rot-300"><span>40</span></div>
     </div>
-    <div class="gauge" id="panel-lm-14-gauge-2">
+    <div class="gauge custom" id="panel-lm-14-gauge-2">
       <div class="cover"></div>
       <div class="label lower">Amps</div>
-      <div class="label a">0</div>
-      <div class="label b">20</div>
-      <div class="label c">40</div>
-      <div class="label d">60</div>
-      <div class="label e">80</div>
-      <div class="label f">100</div>
+      <div class="tick rot-45"><span>0</span>
+        <div class="tick incr-9"><div class="tick incr-9"><div class="tick incr-9"><div class="tick incr-9"></div></div></div></div></div>
+      <div class="tick rot-90"><span>20</span>
+        <div class="tick incr-9"><div class="tick incr-9"><div class="tick incr-9"><div class="tick incr-9"></div></div></div></div></div>
+      <div class="tick rot-135"><span>40</span>
+        <div class="tick incr-9"><div class="tick incr-9"><div class="tick incr-9"><div class="tick incr-9"></div></div></div></div></div>
+      <div class="tick rot-180"><span>60</span>
+        <div class="tick incr-9"><div class="tick incr-9"><div class="tick incr-9"><div class="tick incr-9"></div></div></div></div></div>
+      <div class="tick rot-225"><span>80</span>
+        <div class="tick incr-9"><div class="tick incr-9"><div class="tick incr-9"><div class="tick incr-9"></div></div></div></div></div>
+      <div class="tick rot-270"><span>100</span>
+        <div class="tick incr-9"><div class="tick incr-9"><div class="tick incr-9"><div class="tick incr-9"></div></div></div></div></div>
+      <div class="tick rot-315"><span>120</span></div>
     </div>
     <div class="lamp" id="panel-lm-14-lamp-2"><span>Bat Fault</span></div>
     <div class="bank single" id="panel-lm-14-1">
@@ -1787,6 +1797,111 @@
         <span class="upper">Tape</span></div>
       <div id="panel-lm-12-8-2" class="panel-toggle2"><span class="upper">On</span>
         <span class="lower">Off</span></div>
+    </div>
+    <div class="bank single" id="panel-lm-12-9">
+      <span class="bank-header header-row-1 header-col-1 header-width-x bracket"><span>Communications Antennas</span></span>
+    </div>
+    <div class="bank single" id="panel-lm-12-10">
+      <span class="bank-header header-row-1 header-col-1 header-width-1">Track Mode</span>
+      <div id="panel-lm-12-10-1" class="panel-toggle3"><span class="upper">Auto</span>
+        <span class="right">Off</span><span class="lower">Slew</span></div>
+    </div>
+    <div class="gauge custom" id="panel-lm-12-gauge-1">
+      <div class="cover"></div>
+      <div class="label lower">Pitch Degs</div>
+      <div class="tick rot-65"><span>-75</span></div>
+      <div class="tick rot-80"><span>-60</span>
+        <div class="tick incr-10"></div></div>
+      <div class="tick rot-100"><span>-30</span>
+        <div class="tick incr-10"></div></div>
+      <div class="tick rot-120"><span>0</span>
+        <div class="tick incr-10"></div></div>
+      <div class="tick rot-140"><span>30</span>
+        <div class="tick incr-10"></div></div>
+      <div class="tick rot-160"><span>60</span>
+        <div class="tick incr-10"></div></div>
+      <div class="tick rot-180"><span>90</span>
+        <div class="tick incr-10"></div></div>
+      <div class="tick rot-200"><span>120</span>
+        <div class="tick incr-10"></div></div>
+      <div class="tick rot-220"><span>150</span>
+        <div class="tick incr-10"></div></div>
+      <div class="tick rot-240"><span>180</span>
+        <div class="tick incr-10"></div></div>
+      <div class="tick rot-260"><span>210</span>
+        <div class="tick incr-10"></div></div>
+      <div class="tick rot-280"><span>240</span></div>
+      <div class="tick rot-295"><span>255</span></div>
+    </div>
+    <div class="gauge custom" id="panel-lm-12-gauge-2">
+      <div class="cover"></div>
+      <div class="label lower">Yaw Degs</div>
+      <div class="tick rot-105"><span>-75</span></div>
+      <div class="tick rot-120"><span>-60</span>
+        <div class="tick incr-10"><div class="tick incr-10"></div></div></div>
+      <div class="tick rot-150"><span>-30</span>
+        <div class="tick incr-10"><div class="tick incr-10"></div></div></div>
+      <div class="tick rot-180"><span>0</span>
+        <div class="tick incr-10"><div class="tick incr-10"></div></div></div>
+      <div class="tick rot-210"><span>30</span>
+        <div class="tick incr-10"><div class="tick incr-10"></div></div></div>
+      <div class="tick rot-240"><span>60</span></div>
+      <div class="tick rot-255"><span>75</span></div>
+    </div>
+    <div class="gauge" id="panel-lm-12-gauge-3">
+      <div class="cover"></div>
+      <div class="label lower">Signal Strength</div>
+      <div class="label a">0</div>
+      <div class="label b">1</div>
+      <div class="label c">2</div>
+      <div class="label d">3</div>
+      <div class="label e">4</div>
+      <div class="label f">5</div>
+    </div>
+    <div class="dial" id="panel-lm-12-dial-1">
+      <div class="label upper far">Pitch</div>
+      <div class="label left rot-165"><span>-75</span></div>
+      <div class="label left rot-150"><span>-60</span></div>
+      <div class="label left rot-120"><span>-30</span></div>
+      <div class="label left rot-90"><span>0</span></div>
+      <div class="label left rot-60"><span>30</span></div>
+      <div class="label left rot-30"><span>60</span></div>
+      <div class="label upper"><span>90</span></div>
+      <div class="label right rot-30"><span>120</span></div>
+      <div class="label right rot-60"><span>150</span></div>
+      <div class="label right rot-90"><span>180</span></div>
+      <div class="label right rot-120"><span>210</span></div>
+      <div class="label right rot-150"><span>240</span></div>
+      <div class="label right rot-165"><span>255</span></div>
+      <div class="glyph"></div>
+    </div>
+    <div class="dial" id="panel-lm-12-dial-2">
+      <div class="label upper far">Yaw</div>
+      <div class="label left rot-90"><span>-90</span></div>
+      <div class="label left rot-75"><span>-75</span></div>
+      <div class="label left rot-60"><span>-60</span></div>
+      <div class="label left rot-30"><span>-30</span></div>
+      <div class="label upper"><span>0</span></div>
+      <div class="label right rot-30"><span>30</span></div>
+      <div class="label right rot-60"><span>60</span></div>
+      <div class="label right rot-75"><span>75</span></div>
+      <div class="label right rot-90"><span>90</span></div>
+      <div class="glyph"></div>
+    </div>
+    <div class="dial" id="panel-lm-12-dial-3">
+      <div class="label upper far">S-Band</div>
+      <div class="label left rot-60"><span>Fwd</span></div>
+      <div class="label left rot-30"><span>Aft</span></div>
+      <div class="label upper"><span>Slew</span></div>
+      <div class="label right rot-30"><span>Lunar Stay</span></div>
+      <div class="glyph"></div>
+    </div>
+    <div class="dial" id="panel-lm-12-dial-4">
+      <div class="label upper far">VHF</div>
+      <div class="label left rot-30"><span>Aft</span></div>
+      <div class="label upper"><span>Fwd</span></div>
+      <div class="label right rot-30"><span>EVA</span></div>
+      <div class="glyph"></div>
     </div>
 
 
