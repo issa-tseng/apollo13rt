@@ -39,7 +39,7 @@ The S-IVB (pronounced "S 4 B") stage was the final stage of the Saturn V launch 
 
 The S-IVB also carried the Instument Unit (IU), the critical navigation, control, and communications system for the entire Saturn V launch vehicle. It also performed functions like providing its own cooling and detecting emergency scenarios.
 
-In what would become a fateful design decision, the S-IVB IU communicated with ground stations on a similar frequency band as the Lunar Module. Normally, this wouldn't be a problem, as by the time the LM was fully operational and needed communications, the S-IVB would have disabled or have impacted the Moon already. But on 13 the sudden need for the LM at an early stage would cause significant problems in the first hours of the accident.
+In what would become a fateful design decision, the S-IVB IU communicated with ground stations on a similar frequency band as the Lunar Module. Normally, this wouldn't be a problem, as by the time the LM was fully operational and needed communications, the S-IVB would have been disabled or would have impacted the Moon already. But on 13 the sudden need for the LM at an early stage would cause significant problems in the first hours of the accident.
 
 S-IC / S-II
 -----------
