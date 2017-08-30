@@ -42,6 +42,8 @@ Most of the components had individual protection via circuit breakers exposed on
 CSM AC power system
 -------------------
 
+{{figure:ac-phases}}
+
 Some components are easier to engineer given AC power than DC. Universal motors, for instance, are very easy to construct and reliable under operation when fed three-phase AC power (your home likely receives two-phase AC power, with the two phases oscillating at a 180&deg; offset from each other; three-phase is the same concept but with three phases oscillating at 120&deg; offsets instead).
 
 AC power generation was done by the three redundant AC inverters; their connection to the DC bus to draw source power is discussed above. Each inverter was an eight-stage solid-state unit comprised of many components related to generating oscillation, managing and filtering harmonic noise, rectifying the signal, and other standard inverter tasks.
