@@ -27,11 +27,12 @@ The two loops are transcribed independently based on the timing-corrected versio
     When there is a dash but no end time -
 
     [55 05 25] GNC
-    {Negative,} FLIGHT.
-    1> A numbered commentary note relates to the {bracketed text} in the line. Multiple brackets and numbers may be used.
+    {Negative}, {FLIGHT}.
+    1> A numbered commentary note relates to the {bracketed text} in the line.
+    2> Multiple brackets and numbers may be used.
 
     [- 55 05 30] FLIGHT
-    - a single line was interrupted briefly by another line in a way that was hard to separate.
+    - a single line was interrupted briefly by another line in a way that is hard to separate.
 
 This raw transcript format integrates all the interactive transcript display in the web player, such that anybody can use the GitHub text editor to recommend changes or additions.
 
