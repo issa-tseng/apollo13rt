@@ -10,6 +10,8 @@ The propulsion system on the Service Module (called the Service Propulsion Syste
 Reaction Control System
 -----------------------
 
+{{figure:rcs}}
+
 Of course, the spacecraft still needs to be able to orient itself in between burns. This is necessary for a variety of reasons, including communications, thermal control, and avoiding gimbal lock. This task is accomplished via the Reaction Control System (RCS), a series of small jets carefully positioned around the spacecraft to allow precise control of all three attitude axes: pitch, roll, and yaw. In addition, by selectively determining which jets to fire the RCS system could also be used to provide translational rather than rotational force&mdash;that is, it could push the spacecraft around rather than turn it. These jets used the same nitrogen tetroxide oxidizer as the main engines, but burned monomethylhydrazine (MMH) fuel instead. Each of the fuel and oxidizer had a primary and a secondary tank for redundancy.
 
 Jets could be fired by the Digital Autopilot (DAP) or by manual crew input. Crew input could either (typically in relatively extreme circumstances) directly engage the solenoids to fire the thrusters, or could be filtered through various selectable input modes via the Stabilization Control System (SCS) to tailor the system to different circumstances. Min Impulse mode, for instance, would fire each jet only once for a 15 millisecond burst each time the stick was pushed.
