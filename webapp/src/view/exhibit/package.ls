@@ -23,6 +23,7 @@ get-exhibit-model = -> switch(it)
 | \imu => new Graphic( src: 'assets/imu.svg', height: 400, caption_number: 1, caption: 'A cutaway view of the active components of the Inertial Measurement Unit. The cylinders inside the central Stable Member were an assortment of gyroscopes and accelerometers.' )
 | \msfn-sites => new Graphic( src: 'assets/msfn-sites.svg', height: 199, down: true, caption_number: 2, caption: 'A reproduction of a map of MSFN sites around the world, including mobile air and sea sites, around the Apollo era.', expandable: true )
 | \aot-starchart => new Graphic( src: 'assets/aot-starchart.svg', height: 191, caption_number: 3, caption: 'An example star chart used with the AOT on the LM. The number below each marked star is the number the computer recognizes the star by.', expandable: true )
+| \mocr => new Graphic( src: 'assets/mocr.svg', height: 175, caption_number: 1, caption: 'Floor plan layout of the various flight controller consoles within the MOCR.', expandable: true )
 
 module.exports = {
   get-exhibit-model
