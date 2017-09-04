@@ -72,10 +72,12 @@ viewer = new ExhibitArea({ topics })
 # create and append views.
 player-view = app.vendView(player)
 $('#player').append(player-view.artifact())
-player-view.wireEvents()
 
 exhibit-area = app.vendView(viewer)
 $('#exhibits').append(exhibit-area.artifact())
+
+# wire all events after rendering is done so relayout does not occur.
+player-view.wireEvents()
 exhibit-area.wireEvents()
 
 # other generic actions:

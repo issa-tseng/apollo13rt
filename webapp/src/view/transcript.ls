@@ -8,39 +8,49 @@ $ = require(\jquery)
 
 
 class LineView extends DomView
-  @_fragment = $('
-    <div class="line">
-      <a class="line-timestamp" href="#">
-        <span class="hh"/>
-        <span class="mm"/>
-        <span class="ss"/>
-      </a>
-      <div class="line-heading">
-        <span class="line-source"/>
-        <a class="line-edit" target="_blank" title="Suggest an edit"/>
-        <a class="line-link" title="Share link to this line"/>
+  # custom render methodology for better perf; render immutable text once only.
+  _render: ->
+    line = this.subject
+    fragment = $("
+      <div>
+        <div class=\"line line-#{line._id}\">
+          #{("<a class=\"line-timestamp\" href=\"#\">
+              <span class=\"hh\">#{line.get(\start.hh)}</span>
+              <span class=\"mm\">#{line.get(\start.mm) |> pad}</span>
+              <span class=\"ss\">#{line.get(\start.ss) |> pad}</span>
+            </a>" if line._start?) ? ''}
+          <div class=\"line-heading\">
+            <span class=\"line-source\">#{line.get(\source)}</span>
+            <a class=\"line-edit\" href=\"\#L#{line.get(\line)}\" target=\"_blank\" title=\"Suggest an edit\"/>
+            #{("<a class=\"line-link\" title=\"Share link to this line\"/>" if line._start?) ? ''}
+          </div>
+          <div class=\"line-contents\">#{line.get(\message)}</div>
+          <div class=\"line-annotations\">
+            <div class=\"line-token-annotations\"/>
+            <div class=\"line-whole-annotations\"/>
+          </div>
+        </div>
       </div>
-      <div class="line-contents"/>
-      <div class="line-annotations">
-        <div class="line-token-annotations"/>
-        <div class="line-whole-annotations"/>
-      </div>
-    </div>
-  ')
-  @_dom = -> @_fragment.clone()
+    ")
+
+    # now kick off bindings as usual.
+    this._bindings = LineView._template(fragment)((x) ~> LineView.point(x, this))
+    fragment.children()
+
+  # these commented templating lines are now integrated directly above.
   @_template = template(
-    find('.line').classGroup(\line-, from(\id))
+    #find('.line').classGroup(\line-, from(\id))
     find('.line').classed(\active, from(\active))
 
-    find('.line-timestamp').classed(\hide, from(\start.epoch).map((x) -> !x?))
-    find('.hh').text(from(\start.hh))
-    find('.mm').text(from(\start.mm).map(pad))
-    find('.ss').text(from(\start.ss).map(pad))
+    #find('.line-timestamp').classed(\hide, from(\start.epoch).map((x) -> !x?))
+    #find('.hh').text(from(\start.hh))
+    #find('.mm').text(from(\start.mm).map(pad))
+    #find('.ss').text(from(\start.ss).map(pad))
 
-    find('.line-edit').attr(\href, from(\line).map((line) -> "\#L#line"))
+    #find('.line-edit').attr(\href, from(\line).map((line) -> "\#L#line"))
 
-    find('.line-source').text(from(\source))
-    find('.line-contents').html(from(\message))
+    #find('.line-source').text(from(\source))
+    #find('.line-contents').html(from(\message))
 
     find('.line-token-annotations').render(from(\tokens))
     find('.line-whole-annotations').render(from(\annotations))
