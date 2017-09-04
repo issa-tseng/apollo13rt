@@ -6,7 +6,7 @@ $ = require(\jquery)
 { Request, Store } = require(\janus).store
 { debounce } = require(\janus-stdlib).util.varying
 
-{ defer, clamp } = require('./util')
+{ defer, clamp, pad } = require('./util')
 
 
 
@@ -45,6 +45,7 @@ class Line extends Model
 
   contains_: (epoch) ->
     (start-epoch = this.get(\start.epoch))? and (start-epoch <= epoch) and (this.get(\end.epoch) >= epoch)
+  startHms_: -> "#{this.get(\start.hh)}:#{this.get(\start.mm) |> pad}:#{this.get(\start.ss) |> pad}"
 
 class Lines extends List
   @modelClass = Line

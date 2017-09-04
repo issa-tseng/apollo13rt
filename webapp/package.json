@@ -7,7 +7,8 @@
     "prelude-ls": "~1.1",
     "janus": "~0.3",
     "janus-stdlib": "~0.2",
-    "marked": "~0.3"
+    "marked": "~0.3",
+    "clipboard-copy": "~1"
   },
   "devDependencies": {
     "livescript": "~1.5",

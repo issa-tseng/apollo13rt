@@ -1,4 +1,5 @@
 $ = require(\jquery)
+copy = require(\clipboard-copy)
 
 { DomView, template, find, from, Varying } = require(\janus)
 { debounce, sticky } = require(\janus-stdlib).util.varying
@@ -130,6 +131,11 @@ class TranscriptView extends DomView
     dom.on(\mouseenter, '.line-edit', ->
       return if this.hostname isnt window.location.hostname
       this.href = transcript.get(\edit_url) + this.hash
+    )
+    dom.on(\click, '.line-link', (event) ->
+      line = $(event.target).closest('.line').data(\view).subject
+      if copy(window.location.href.replace(/(?:#.*)?$/, \# + line.startHms_())) is true
+        $('#tooltip').text('Copied!')
     )
 
     indicator.on(\click, (event) ->
