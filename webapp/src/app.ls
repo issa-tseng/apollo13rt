@@ -45,7 +45,7 @@ window.player = player
 topics = new List([
   new Topic( title: 'primer', exhibits: new List([
     new Exhibit( lookup: \primer-a13rt, title: 'Apollo 13 Real-time', description: 'Get an overview of the real-time experience.' ),
-    new Exhibit( lookup: \primer-spaceflight101, title: 'Spaceflight 101', description: 'Learn the basics of spaceflight and orbital mechanics.' ),
+    new Exhibit( lookup: \primer-spaceflight, title: 'Spaceflight 101', description: 'Learn the basics of spaceflight and orbital mechanics.' ),
     new Exhibit( lookup: \primer-apollo, title: 'Apollo Architecture', description: 'See how Apollo got to the Moon and back.' ),
     new Exhibit( lookup: \primer-accident, title: 'The Accident', description: 'There\'s more to the story than "Houston, we\'ve had a problem."' )
   ])),
@@ -63,7 +63,7 @@ topics = new List([
     new Exhibit( lookup: \ref-panel-o2, title: 'Oxygen Subsystem', description: 'Annotated combined diagram of the EPS/ECS oxygen subsystems.', reference: true )
   ]))
 ])
-viewer = new ExhibitArea({ topics })
+exhibit-area = new ExhibitArea({ topics })
 
 # wait for document ready.
 <- $
@@ -73,12 +73,12 @@ viewer = new ExhibitArea({ topics })
 player-view = app.vendView(player)
 $('#player').append(player-view.artifact())
 
-exhibit-area = app.vendView(viewer)
-$('#exhibits').append(exhibit-area.artifact())
+exhibit-area-view = app.vendView(exhibit-area)
+$('#exhibits').append(exhibit-area-view.artifact())
 
 # wire all events after rendering is done so relayout does not occur.
 player-view.wireEvents()
-exhibit-area.wireEvents()
+exhibit-area-view.wireEvents()
 
 # other generic actions:
 $document = $(document)
@@ -134,6 +134,9 @@ $window.on(\hashchange, (event) ->
     player.epoch(hms-to-epoch(hh, mm, ss))
     player.get(\loops.flight).set(\auto_scroll, true)
     player.get(\loops.air_ground).set(\auto_scroll, true)
+  else
+    for exhibit in exhibit-area.get(\all_topics).list when exhibit.get(\lookup) is new-hash
+      return global.set(\exhibit, exhibit)
 )
 
 # dumbest visual detail i've ever cared about:
