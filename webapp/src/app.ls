@@ -131,6 +131,7 @@ $window.on(\hashchange, (event) ->
   hms = /^(..):(..):(..)$/.exec(new-hash)
   if hms?
     [ _, hh, mm, ss ] = [ parse-int(x) for x in hms ]
+    player.bookmark()
     player.epoch(hms-to-epoch(hh, mm, ss))
     player.get(\loops.flight).set(\auto_scroll, true)
     player.get(\loops.air_ground).set(\auto_scroll, true)

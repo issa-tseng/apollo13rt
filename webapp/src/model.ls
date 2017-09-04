@@ -280,6 +280,8 @@ class Player extends Model
   @bind(\scrubber.mouse.mm, from(\scrubber.mouse.epoch).map ((% 3600 / 60) >> floor))
   @bind(\scrubber.mouse.ss, from(\scrubber.mouse.epoch).map (% 60))
 
+  @bind(\bookmark.timecode, from(\bookmark.epoch).and(\timestamp.offset).all.map (-))
+
   @bind(\resize.mouse.delta, from(\resize.mouse.y).and(\resize.mouse.start).all.map (-))
   @bind(\height, from(\base_height).and(\resize.mouse.clicking).and(\resize.mouse.delta).all.map((base-height, clicking, delta) ->
     if clicking is true then base-height + delta else base-height
@@ -322,6 +324,12 @@ class Player extends Model
   # navigates the player to a given epoch.
   epoch: (epoch) ->
     this.get(\audio.player).get(0).currentTime = (epoch - this.get(\timestamp.offset))
+
+  # sets the player bookmark to the current epoch. (unless less than 15 seconds
+  # have played from the very beginning)
+  bookmark: ->
+    return if this.get(\timestamp.timecode) < 15
+    this.set(\bookmark.epoch, this.get(\timestamp.epoch))
 
 
 

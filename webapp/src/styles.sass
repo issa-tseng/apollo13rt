@@ -254,6 +254,60 @@ a
           border-right-width: 0
           right: 0
 
+  .player-bookmark
+    $mark-color: #555
+    border-left: 1px solid $mark-color
+    height: 0.3em
+    position: absolute
+    top: 1em
+    transition: 0.3s height
+    width: 0
+
+    &:before
+      $hit-size: 2.4em
+      @include reify
+      height: $hit-size
+      right: $hit-size / -2
+      position: absolute
+      top: 0.3em
+      width: $hit-size
+
+    .player-bookmark-icon
+      right: -1.15em
+      padding: 0.3em
+      position: absolute
+      top: 0.3em
+      transition: 0.3s transform
+      &:before
+        @include reify
+        @include icon
+        color: $color-accent-text
+        content: $icon-hopback
+        font-size: 1.8em
+
+    .player-bookmark-label
+      color: $mark-color
+      font-size: 1.1em
+      overflow: hidden
+      padding: 0.5em 0
+      position: absolute
+      right: 0.3em
+      top: 0.3em
+      transition: 0.3s width
+      white-space: nowrap
+      width: 0
+
+    &:hover
+      height: 1.9em
+      cursor: pointer
+      .player-bookmark-icon
+        transform: translateX(-13.5em)
+      .player-bookmark-label
+        width: 11.1em
+
+      ~ .player-scrubber-bubble
+        display: none
+
   .player-scripts
     padding: 0 2em
 

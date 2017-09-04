@@ -33,6 +33,10 @@ class PlayerView extends DomView
             <div class="player-scrubber-area">
               <div class="player-playbar"/>
               <div class="player-playhead"/>
+              <div class="player-bookmark">
+                <div class="player-bookmark-icon"/>
+                <div class="player-bookmark-label">Back to previous position</div>
+              </div>
               <div class="player-scrubber-bubble">
                 <span class="hh"/><span class="mm"/><span class="ss"/>
               </div>
@@ -72,6 +76,9 @@ class PlayerView extends DomView
     find('.player-scrubber-bubble .hh').text(from(\scrubber.mouse.hh))
     find('.player-scrubber-bubble .mm').text(from(\scrubber.mouse.mm).map(pad))
     find('.player-scrubber-bubble .ss').text(from(\scrubber.mouse.ss).map(pad))
+
+    find('.player-bookmark').classed(\hide, from(\bookmark.epoch).map(-> !it?))
+    find('.player-bookmark').css(\right, from(\bookmark.timecode).and(\audio.length).all.map ((/) >> (-> 1 - it) >> pct))
 
     find('.player-scripts').css(\height, from(\height).map (px))
     find('.player-scripts').classed(\inactive, from(\height).map (< 35))
@@ -126,6 +133,11 @@ class PlayerView extends DomView
     dom.find('.player-playpause').on(\click, -> if audio-raw.paused is true then audio-raw.play() else audio-raw.pause())
     dom.find('.player-hopforward').on(\click, -> audio-raw.currentTime += 6)
     dom.find('.player-leapforward').on(\click, -> audio-raw.currentTime += 15)
+    dom.find('.player-bookmark').on(\click, (event) ->
+      event.stopPropagation() # so the standard mouse timecode handler does not fire.
+      player.epoch(player.get(\bookmark.epoch))
+      player.unset(\bookmark)
+    )
 
     # fixed player/scroll handling.
     container = $('#timeline')
