@@ -15,6 +15,8 @@ module.exports = util =
   get-time: -> (new Date()).getTime()
   max-int: Number.MAX_SAFE_INTEGER
 
+  hms-to-epoch: (hh, mm, ss) -> (hh * 60 * 60) + (mm * 60) + ss
+
   size-of: (selector) ->
     dom = $(selector)
     from-event-now($(window), \resize, -> { width: dom.width(), height: dom.height() })

@@ -15,7 +15,7 @@ class LineView extends DomView
     fragment = $("
       <div>
         <div class=\"line line-#{line._id}\">
-          #{("<a class=\"line-timestamp\" href=\"#\">
+          #{("<a class=\"line-timestamp\" href=\"##{line.startHms_()}\">
               <span class=\"hh\">#{line.get(\start.hh)}</span>
               <span class=\"mm\">#{line.get(\start.mm) |> pad}</span>
               <span class=\"ss\">#{line.get(\start.ss) |> pad}</span>
@@ -122,12 +122,6 @@ class TranscriptView extends DomView
     )
 
     # do these via delegate here once rather for each line for perf.
-    dom.on(\click, '.line-timestamp', (event) ->
-      event.preventDefault()
-      line = $(event.target).closest('.line').data(\view).subject
-      transcript.get(\player).epoch(line.get(\start.epoch))
-      transcript.set(\auto_scroll, true)
-    )
     dom.on(\mouseenter, '.line-edit', ->
       return if this.hostname isnt window.location.hostname
       this.href = transcript.get(\edit_url) + this.hash

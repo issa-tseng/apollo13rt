@@ -7,7 +7,7 @@ stdlib = require(\janus-stdlib)
 { Global, Glossary, Lookup, Player, Transcript, ExhibitArea, Topic, Exhibit } = require('./model')
 { from-event } = require(\janus-stdlib).util.varying
 
-{ defer, attach-floating-box } = require('./util')
+{ defer, hms-to-epoch, attach-floating-box } = require('./util')
 
 # basic app setup.
 views = new Library()
@@ -82,6 +82,7 @@ exhibit-area.wireEvents()
 
 # other generic actions:
 $document = $(document)
+$window = $(window)
 
 # automatically tooltip if a title is hovered.
 tooltip = $('#tooltip')
@@ -120,6 +121,19 @@ $document.on(\mouseenter, '.glossary-term:not(.active)', ->
   term-view = app.vendView(term)
   attach-floating-box(initiator, term-view)
   term-view.wireEvents()
+)
+
+# handle hash changes.
+$window.on(\hashchange, (event) ->
+  new-hash = window.location.hash?.slice(1)
+  return unless new-hash?
+
+  hms = /^(..):(..):(..)$/.exec(new-hash)
+  if hms?
+    [ _, hh, mm, ss ] = [ parse-int(x) for x in hms ]
+    player.epoch(hms-to-epoch(hh, mm, ss))
+    player.get(\loops.flight).set(\auto_scroll, true)
+    player.get(\loops.air_ground).set(\auto_scroll, true)
 )
 
 # dumbest visual detail i've ever cared about:
