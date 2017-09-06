@@ -66,6 +66,7 @@ exhibit-area = new ExhibitArea({ topics })
 <- $
 <- defer # because jquery does weird shit with exceptions.
 
+start = (new Date()).getTime()
 # create and append views.
 player-view = app.vendView(player)
 $('#player').append(player-view.artifact())
@@ -76,6 +77,11 @@ $('#exhibits').append(exhibit-area-view.artifact())
 # wire all events after rendering is done so relayout does not occur.
 player-view.wireEvents()
 exhibit-area-view.wireEvents()
+
+end = (new Date()).getTime()
+console.log("Render: #{end - start}ms")
+# ~1800ms to begin
+# ~1300ms after inline rendering
 
 # other generic actions:
 $document = $(document)
