@@ -155,14 +155,14 @@ class Transcript extends Model
     do
       # when our target_idx changes, push active state down into lines.
       # but we can't do that until we have a player:
-      (player) <- transcript.watch(\player).reactNow()
+      (player) <- transcript.watch(\player).react()
       return unless player?
 
       # now watch idx, but also update on epoch-change:
       was-active = {}
       active-ids = {}
       last-idx = -1
-      from(transcript.watch(\target_idx)).and(player.watch(\timestamp.epoch)).all.plain().reactNow(([ idx, epoch ]) ->
+      from(transcript.watch(\target_idx)).and(player.watch(\timestamp.epoch)).all.plain().react(([ idx, epoch ]) ->
         return unless idx? and epoch?
         return if idx is last-idx
 
@@ -292,7 +292,7 @@ class Player extends Model
     player = this
 
     # bind audio player properties back into the model.
-    player.watch(\audio.player).react((dom) ->
+    player.watch(\audio.player).reactLater((dom) ->
       dom-raw = dom.get(0)
       dom.on(\playing, -> player.set(\audio.playing, true))
       dom.on(\pause, -> player.set(\audio.playing, false))
@@ -313,7 +313,7 @@ class Player extends Model
       transcript.bindToPlayer(player)
 
     # set mouse start and player height on mouse down and mouse up.
-    player.watch(\resize.mouse.clicking).react((clicking) ->
+    player.watch(\resize.mouse.clicking).reactLater((clicking) ->
       if clicking is true
         player.set(\resize.mouse.start, player.get(\resize.mouse.y))
       else

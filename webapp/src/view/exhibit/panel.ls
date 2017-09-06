@@ -117,7 +117,7 @@ class PanelView extends DomView
       model.set(\mouse.clicking, true)
       model.set(\mouse.down, { x: event.screenX, y: event.screenY })
       model.set(\mouse.now, { x: event.screenX, y: event.screenY })
-      tracker = mouse-pos.react(-> model.set(\mouse.now, it))
+      tracker = mouse-pos.reactLater(-> model.set(\mouse.now, it))
 
       $(document).one(\mouseup, ->
         model.set(\mouse.clicking, false)

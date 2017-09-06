@@ -125,7 +125,7 @@ class PlayerView extends DomView
     )
 
     # point-in-time mouse reactions.
-    from(player.watch(\scrubber.clicking)).and(player.watch(\scrubber.mouse.timecode)).all.plain().react(([ clicking, code ]) ->
+    from(player.watch(\scrubber.clicking)).and(player.watch(\scrubber.mouse.timecode)).all.plain().reactLater(([ clicking, code ]) ->
       audio-raw.currentTime = code if clicking is true
     )
     dom.find('.player-leapback').on(\click, -> audio-raw.currentTime -= 15)
@@ -145,10 +145,10 @@ class PlayerView extends DomView
     chrome-height = dom.outerHeight() - player.get(\base_height)
     crossed-threshold = from-event(body, \scroll, (.target.scrollingElement.scrollTop > threshold))
 
-    crossed-threshold.react((is-fixed) -> container.toggleClass(\fixed-player, is-fixed is true))
+    crossed-threshold.reactLater((is-fixed) -> container.toggleClass(\fixed-player, is-fixed is true))
     from(crossed-threshold).and(player.watch(\base_height)).all.plain().map((is-fixed, base-height) ->
       if is-fixed then chrome-height + base-height else \auto
-    ).react(-> container.css(\height, it))
+    ).reactLater(-> container.css(\height, it))
 
 
 module.exports = {

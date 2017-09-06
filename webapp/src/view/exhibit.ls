@@ -22,7 +22,7 @@ class ExhibitAreaView extends DomView
 
     # need this to suppress spurious transitions.
     find('.exhibit-area').classed(\has-exhibit-delayed, from.app(\global).flatMap((global) ->
-      sticky(global.watch(\exhibit).map((?)), false: 900 )
+      sticky( false: 900 )(global.watch(\exhibit).map((?)))
     ))
   )
   _wireEvents: ->

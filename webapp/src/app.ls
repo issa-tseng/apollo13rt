@@ -144,5 +144,5 @@ $window.on(\hashchange, (event) ->
 is-scrolled = from-event($(document), \scroll, (.target.scrollingElement.scrollTop > 30))
 global.watch(\exhibit)
   .flatMap((exhibit) -> if exhibit? then is-scrolled else false)
-  .react(-> $('html').toggleClass(\dark-canvas, it))
+  .reactLater(-> $('html').toggleClass(\dark-canvas, it))
 

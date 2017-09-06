@@ -86,7 +86,7 @@ class TranscriptView extends DomView
       line-container.stop(true).animate({ scroll-top }, { complete: (-> relinquished := get-time()) })
     scroll-top-line = -> id |> get-offset |> (- 50) |> scroll-to if (id = transcript.get(\top_line)?._id)?
 
-    debounce(transcript.watch(\top_line), 50).react((line) ->
+    debounce(50, transcript.watch(\top_line)).reactLater((line) ->
       id = line?._id
       return unless id?
       offset = get-offset(id)
@@ -99,13 +99,13 @@ class TranscriptView extends DomView
     )
 
     # watch for autoscroll rising edge and trip scroll.
-    transcript.watch(\auto_scroll).react((auto) -> scroll-top-line() if auto)
+    transcript.watch(\auto_scroll).reactLater((auto) -> scroll-top-line() if auto)
 
     # track whether the browser is getting resized, and suppress autoscroll disengagement.
     # TODO: this seems like a common pattern. perhaps the stdlib utils should have some automatic
     # inner-varying management system.
     is-resizing-inner = new Varying(false)
-    is-resizing = sticky(is-resizing-inner, true: 50 )
+    is-resizing = sticky( true: 50 )(is-resizing-inner)
     $(window).on(\resize, ->
       bump(is-resizing-inner)
       scroll-top-line()
