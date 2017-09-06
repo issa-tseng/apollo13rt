@@ -1,6 +1,5 @@
 $ = require(\jquery)
 { floor, abs, max } = Math
-{ flatten, unique } = require(\prelude-ls)
 
 { Model, attribute, from, List, Set, Varying, types } = require(\janus)
 { Request, Store } = require(\janus).store
@@ -147,7 +146,7 @@ class Transcript extends Model
   @bind(\nearby_ids, from(\target_id).flatMap((id = 0) -> [ x for x from id - 2 til id + 2 ]))
   @bind(\nearby_terms, from(\nearby_ids).and(\lookup).all.map((ids, lookup) ->
     return [] unless ids? and lookup?
-    [ l.list for id in ids when (l = lookup.get(id))? ] |> flatten
+    [ term for id in ids when (l = lookup.get(id))? for term in l.list ]
   ))
 
   _initialize: ->

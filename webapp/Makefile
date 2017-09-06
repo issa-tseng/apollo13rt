@@ -18,7 +18,7 @@ lib/%.js: src/%.ls lib node_modules
 	node node_modules/livescript/bin/lsc --output "$(@D)" --compile "$<"
 
 lib/apollo13rt.js: lib/app.js
-	node node_modules/browserify/bin/cmd.js -e $< -o $@ --im
+	node node_modules/browserify/bin/cmd.js --exclude domino -e $< -o $@ --im
 
 lib/exhibits: lib
 	@mkdir -p lib/exhibits
