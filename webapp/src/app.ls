@@ -7,7 +7,7 @@ stdlib = require(\janus-stdlib)
 { Global, Glossary, Lookup, Player, Transcript, ExhibitArea, Topic, Exhibit } = require('./model')
 { from-event } = require(\janus-stdlib).util.varying
 
-{ defer, hms-to-epoch, attach-floating-box } = require('./util')
+{ defer, hms-to-epoch, attach-floating-box, load-assets } = require('./util')
 
 # basic app setup.
 views = new Library()
@@ -22,18 +22,15 @@ require('./model').registerWith(stores)
 global = new Global()
 app = new App({ views, stores, global })
 
-# get and load player data.
-(flight-loop) <- $.getJSON('/assets/flight-director-loop.json')
-(flight-loop-lookup) <- $.getJSON('/assets/flight-director-loop.lookup.json')
-(air-ground-loop) <- $.getJSON('/assets/air-ground-loop.json')
-(air-ground-loop-lookup) <- $.getJSON('/assets/air-ground-loop.lookup.json')
-(glossary) <- $.getJSON('/assets/glossary.json')
-(glossary-lookup) <- $.getJSON('/assets/glossary.lookup.json')
+# get and load player data. TODO: someday maybe merge these for perf?
+data-paths = <[ flight-director-loop flight-director-loop.lookup air-ground-loop air-ground-loop.lookup glossary glossary.lookup]>
+(data) <- load-assets(data-paths)
+
 player = new Player(
   loops:
-    flight: Transcript.deserialize( lines: flight-loop, name: 'Flight Director\'s Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/flight-director-loop.txt', lookup: Lookup.deserialize(flight-loop-lookup) )
-    air_ground: Transcript.deserialize( lines: air-ground-loop, name: 'Air-Ground Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/air-ground-loop.txt', lookup: Lookup.deserialize(air-ground-loop-lookup) )
-  glossary: Glossary.deserialize(glossary, glossary-lookup)
+    flight: Transcript.deserialize( lines: data['flight-director-loop'], name: 'Flight Director\'s Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/flight-director-loop.txt', lookup: Lookup.deserialize(data['flight-director-loop.lookup']) )
+    air_ground: Transcript.deserialize( lines: data['air-ground-loop'], name: 'Air-Ground Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/air-ground-loop.txt', lookup: Lookup.deserialize(data['air-ground-loop.lookup']) )
+  glossary: Glossary.deserialize(data.glossary, data['glossary.lookup'])
   audio: { src: 'assets/full.m4a' }
   timestamp: { offset: 200774 }
   accident: { epoch: 201293 }

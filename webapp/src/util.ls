@@ -49,3 +49,13 @@ module.exports = util =
         this.stop()
     )
 
+  load-assets: (assets, done) ->
+    result = {}
+    completed = 0
+
+    for let asset in assets
+      (asset-data) <- $.getJSON("/assets/#asset.json")
+      completed += 1
+      result[asset] = asset-data
+      done(result) if completed is assets.length
+
