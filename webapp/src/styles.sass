@@ -265,8 +265,9 @@ a
 
     &:before
       $hit-size: 2.4em
+      $bottom-bonus: 0.4em
       @include reify
-      height: $hit-size
+      height: $hit-size + $bottom-bonus
       right: $hit-size / -2
       position: absolute
       top: 0.3em
@@ -275,6 +276,7 @@ a
     .player-bookmark-icon
       right: -1.15em
       padding: 0.3em
+        bottom: 0.7em
       position: absolute
       top: 0.3em
       transition: 0.3s transform
