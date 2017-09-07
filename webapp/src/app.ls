@@ -23,7 +23,7 @@ require('./view/exhibit').registerWith(views)
 require('./view/exhibit/package').registerWith(views)
 stores = new Library()
 require('./model').registerWith(stores)
-global = new Global()
+global = new Global( own_href: window.location.href )
 app = new App({ views, stores, global })
 
 # render splash screen.
@@ -102,7 +102,7 @@ $document.on(\mouseenter, '[title]', ->
   outer-width = target.outerWidth()
   text = target.attr(\title)
 
-  tooltip.removeClass(\mirrored)
+  tooltip.removeClass('mirrored dropped')
   tooltip.css(\left, offset.left + (outer-width / 2))
   tooltip.css(\top, offset.top)
   tooltip.text(text)
@@ -113,6 +113,11 @@ $document.on(\mouseenter, '[title]', ->
     tooltip.addClass(\mirrored)
     tooltip.css(\left, 0) # move away for full measurement.
     tooltip.css(\left, offset.left + (outer-width / 2) - tooltip.outerWidth())
+
+  # drop if necessary.
+  if offset.top < 25
+    tooltip.addClass(\dropped)
+    tooltip.css(\top, offset.top + target.outerHeight())
 
   target.attr(\title, '')
   target.one(\mouseleave, ->
@@ -135,6 +140,10 @@ $document.on(\mouseenter, '.glossary-term:not(.active)', ->
 
 # handle hash changes.
 $window.on(\hashchange, (event) ->
+  # first update our notion of what our own page url is.
+  global.set(\own_href, window.location.href)
+
+  # now see if we have some timecode navigation to do, and do it.
   new-hash = window.location.hash?.slice(1)
   return if is-blank(new-hash)
 
@@ -147,6 +156,7 @@ $window.on(\hashchange, (event) ->
   player.get(\loops.air_ground).set(\auto_scroll, true)
 )
 
+# handle internal exhibit links.
 $document.on(\click, 'a', (event) ->
   return unless event.target.host is window.location.host
   target-hash = event.target.hash?.slice(1)
@@ -157,6 +167,16 @@ $document.on(\click, 'a', (event) ->
     global.set(\exhibit, exhibit)
     event.preventDefault()
     return false
+)
+
+# toplevel layout actions:
+# update social media links.
+fb-link = $('#share-fb')
+twitter-link = $('#share-twitter')
+global.watch(\own_href).react((href) ->
+  encoded = encodeURIComponent(href)
+  fb-link.attr(\href, "https://www.facebook.com/sharer/sharer.php?u=#encoded")
+  twitter-link.attr(\href, "https://twitter.com/home?status=Hear%20Apollo%2013%20happen%20in%20real%20time%3A%20#encoded")
 )
 
 # dumbest visual detail i've ever cared about:

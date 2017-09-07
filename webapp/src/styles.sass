@@ -658,6 +658,32 @@ header
     padding: 1em 2em
     text-align: center
 
+  ul
+    position: absolute
+    right: 2em
+    top: 1em
+    li
+      float: left
+      margin-left: 1.6em
+      a
+        color: #999
+        display: block
+        font-size: 2.2em
+        height: 1em
+        overflow: hidden
+        text-decoration: none
+        white-space: nowrap
+        width: 1em
+        &:before
+          @include icon
+
+    #share-fb:before
+      content: $icon-facebook
+    #share-twitter:before
+      content: $icon-twitter
+    #go-github:before
+      content: $icon-github
+
 #timeline.fixed-player #player
   box-shadow: 0 0.5em 0 #f7f7f7
   position: fixed
@@ -670,7 +696,6 @@ header
   display: none
   margin-top: -2em
   z-index: 99
-
   &:after
     border-left-width: 0
     left: 0
@@ -678,12 +703,25 @@ header
   &.mirrored
     border-bottom-left-radius: 0.2em
     border-bottom-right-radius: 0
-
     &:after
       border-left-width: 0.4em
       border-right-width: 0
       left: auto
       right: 0
+
+  &.dropped
+    border-bottom-left-radius: 0.2em
+    border-top-left-radius: 0
+    margin-top: 0.6em
+    &:after
+      border-bottom-color: $color-tooltip-bg
+      border-bottom-width: 0.4em
+      border-top-width: 0
+      bottom: 100%
+      top: auto
+    &.mirrored
+      border-radius: 0.2em
+      border-top-right-radius: 0
 
 .floating-box
   background: $color-definition-bg
