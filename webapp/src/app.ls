@@ -7,7 +7,7 @@ stdlib = require(\janus-stdlib)
 { Splash, Global, Glossary, Lookup, Player, Transcript, ExhibitArea, Topic, Exhibit } = require('./model')
 { from-event } = require(\janus-stdlib).util.varying
 
-{ defer, hms-to-epoch, hash-to-hms, epoch-to-hms, attach-floating-box, load-assets } = require('./util')
+{ defer, hms-to-epoch, hash-to-hms, epoch-to-hms, attach-floating-box, load-assets, is-blank } = require('./util')
 
 $document = $(document)
 $window = $(window)
@@ -136,19 +136,27 @@ $document.on(\mouseenter, '.glossary-term:not(.active)', ->
 # handle hash changes.
 $window.on(\hashchange, (event) ->
   new-hash = window.location.hash?.slice(1)
-  return unless new-hash?
+  return if is-blank(new-hash)
 
-  hms = /^(..):(..):(..)$/.exec(new-hash)
-  if hms?
-    [ _, hh, mm, ss ] = [ parse-int(x) for x in hms ]
-    player.bookmark()
-    player.epoch(hms-to-epoch(hh, mm, ss))
-    player.get(\loops.flight).set(\auto_scroll, true)
-    player.get(\loops.air_ground).set(\auto_scroll, true)
-  else
-    for exhibit in exhibit-area.get(\all_topics).list when exhibit.get(\lookup) is new-hash
-      $('#splash .splash').data(\view)?.subject.destroy()
-      return global.set(\exhibit, exhibit)
+  hms = hash-to-hms(new-hash)
+  return unless hms?
+  { hh, mm, ss } = hms
+  player.bookmark()
+  player.epoch(hms-to-epoch(hh, mm, ss))
+  player.get(\loops.flight).set(\auto_scroll, true)
+  player.get(\loops.air_ground).set(\auto_scroll, true)
+)
+
+$document.on(\click, 'a', (event) ->
+  return unless event.target.host is window.location.host
+  target-hash = event.target.hash?.slice(1)
+  return if is-blank(target-hash)
+
+  for exhibit in exhibit-area.get(\all_topics).list when exhibit.get(\lookup) is target-hash
+    $('#splash .splash').data(\view)?.subject.destroy()
+    global.set(\exhibit, exhibit)
+    event.preventDefault()
+    return false
 )
 
 # dumbest visual detail i've ever cared about:
