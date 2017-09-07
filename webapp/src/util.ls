@@ -3,11 +3,12 @@ $ = require(\jquery)
 { Varying } = require(\janus)
 stdlib = require(\janus-stdlib)
 { from-event-now } = stdlib.util.varying
-{ min, max } = Math
+{ min, max, floor } = Math
 
 
 module.exports = util =
   defer: (f) -> set-timeout(f, 0)
+  wait: (time, f) -> set-timeout(f, time)
   clamp: (min, max, x) --> if x < min then min else if x > max then max else x
   px: (x) -> "#{x}px"
   pct: (x) -> "#{x * 100}%"
@@ -15,7 +16,22 @@ module.exports = util =
   get-time: -> (new Date()).getTime()
   max-int: Number.MAX_SAFE_INTEGER
 
+  nonextant: (x) -> !x?
+  is-blank: (x) -> !x? or (x is '') or Number.isNaN(x)
+  if-extant: (f) -> (x) -> f(x) if x?
+
   hms-to-epoch: (hh, mm, ss) -> (hh * 60 * 60) + (mm * 60) + ss
+  epoch-to-hms: (epoch) -> {
+    hh: epoch / 3600 |> floor
+    mm: epoch % 3600 / 60 |> floor
+    ss: epoch % 60
+  }
+  hash-to-hms: (hash) ->
+    if (hms = /^(..):(..):(..)$/.exec(hash))?
+      [ _, hh, mm, ss ] = [ parse-int(x) for x in hms ]
+      { hh, mm, ss }
+    else
+      null
 
   size-of: (selector) ->
     dom = $(selector)

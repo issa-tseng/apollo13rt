@@ -1,0 +1,99 @@
+@import 'common.sass'
+
+#splash .splash
+  @include fill
+  background: $color-bg
+  overflow-x: hidden
+  overflow-y: auto
+  padding: 10em
+  position: fixed
+  transition: 0.4s opacity
+  z-index: 99999
+
+  &.destroying
+    opacity: 0
+
+  $left-gutter: 18px
+
+  h1
+    $border-left: 2px
+    border-left: $border-left solid $color-accent
+    font-family: $monospace
+    font-size: 3.5em
+    font-weight: normal
+    margin-left: calc(-#{$left-gutter} - #{$border-left})
+    padding-left: $left-gutter
+
+  img
+    float: right
+    margin-left: 2em
+    width: 30%
+
+  p
+    color: #444
+    font-family: $serif
+    font-size: 1.75em
+    line-height: 1.4em
+    margin-bottom: 1em
+
+  .start-options
+    padding-top: 1.5em
+
+  button
+    background: $color-accent-dark
+    border: none
+      radius: 0.3em
+    color: #fff
+    font-family: $serif
+    font-size: 1.5em
+    letter-spacing: -0.02em
+    line-height: 1.4em
+    margin-right: 0.6em
+    padding: 0.6em
+      right: 1em // the icon does weird things
+
+    &:hover
+      cursor: pointer
+
+    &:before
+      @include icon
+      float: left
+      font-size: 1.4em
+      padding-right: 0.15em
+
+    ~ button
+      background: $color-accent-text
+
+  #start-beginning:before
+    content: $icon-play
+  #resume-saved:before
+    content: $icon-hopforward
+  #start-url:before
+    content: $icon-link
+
+  h2
+    $border-left: 2px
+    border-left: $border-left solid $color-accent-inactive
+    font-family: $monospace
+    font-weight: normal
+    margin-left: calc(-#{$left-gutter} - #{$border-left})
+    margin-bottom: 1em
+    margin-top: 3em
+    padding-left: $left-gutter
+
+  li
+    color: #666
+    font-family: $serif
+    font-size: 1.3em
+    line-height: 1.2em
+    margin-bottom: 0.8em
+
+    a
+      font-weight: normal
+
+// PAGE STATE
+body.init
+  overflow: hidden
+  header
+    display: none
+

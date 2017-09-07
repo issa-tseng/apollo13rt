@@ -2,17 +2,21 @@
 Apollo 13 Real-time
 ===================
 
-{{figure:apollo13}}
+<img id="logo" src="/assets/patch.png" alt="Apollo 13 Mission Patch"/>
 
 What you are about to hear is the Mission Control Flight Director's Loop for the first six hours following the Apollo 13 accident.
 
 You will hear the strength and style of leadership of both Gene Kranz and Glynn Lunney, the legendary Flight Directors on-shift during the accident. You will hear problems develop, symptoms get diagnosed, red herrings get chased, and issues get resolved. You will experience the tight teamwork, grace under pressure, endless resourcefulness, and extensive knowledge of the flight controllers on the ground and the crew on-board the spacecraft.
 
-By listening to this real-time playback of the events following the incident, you will come to understand the workings and realities of Apollo spaceflight. Systems are powered up and down, maneuvers and burns are executed, communication is lost and gained, and tricky navigation is performed—all a part of daily Apollo life. And in understanding the workings of the spacecraft more deeply, you will gain an appreciation for how brutally simple yet elegant Apollo was, and what a blunt instrument it was that we sent hurtling through the heavens.
+By listening to this real-time playback of the events following the incident, you will come to understand the workings and realities of Apollo spaceflight. Systems are powered up and down, maneuvers and burns are executed, communication is lost and gained, and tricky navigation is performed&mdash;all a part of daily Apollo life. And in understanding the workings of the spacecraft more deeply, you will gain an appreciation for how brutally simple yet elegant Apollo was, and what a blunt instrument it was that we sent hurtling through the heavens.
 
-You can jump straight into the recording, or you can peruse the [primer](#primer) first to learn more about Apollo.
+You can jump straight into the recording, or you can peruse the [primer](#primer-intro) first to learn more about Apollo.
 
-<div class="start-options"></div>
+<div class="start-options">
+  <button id="start-beginning">Start from the beginning</button>
+  <button id="resume-saved">Resume from <span class="hh"></span><span class="mm"></span><span class="ss"></span></button>
+  <button id="start-url">Start at linked position (<span class="hh"></span><span class="mm"></span><span class="ss"></span>)</button>
+</div>
 
 Credits
 -------

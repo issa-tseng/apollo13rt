@@ -4,14 +4,18 @@ $ = window.jQuery = window.$ = require(\jquery)
 { Varying, List } = require(\janus)
 { Library, App } = require(\janus).application
 stdlib = require(\janus-stdlib)
-{ Global, Glossary, Lookup, Player, Transcript, ExhibitArea, Topic, Exhibit } = require('./model')
+{ Splash, Global, Glossary, Lookup, Player, Transcript, ExhibitArea, Topic, Exhibit } = require('./model')
 { from-event } = require(\janus-stdlib).util.varying
 
-{ defer, hms-to-epoch, attach-floating-box, load-assets } = require('./util')
+{ defer, hms-to-epoch, hash-to-hms, epoch-to-hms, attach-floating-box, load-assets } = require('./util')
+
+$document = $(document)
+$window = $(window)
 
 # basic app setup.
 views = new Library()
 stdlib.view.registerWith(views)
+require('./view/splash').registerWith(views)
 require('./view/player').registerWith(views)
 require('./view/transcript').registerWith(views)
 require('./view/glossary').registerWith(views)
@@ -22,8 +26,14 @@ require('./model').registerWith(stores)
 global = new Global()
 app = new App({ views, stores, global })
 
+# render splash screen.
+$ -> defer ->
+  splash-view = app.vendView(Splash.initialize())
+  $('#splash').append(splash-view.artifact())
+  splash-view.wireEvents()
+
 # get and load player data. TODO: someday maybe merge these for perf?
-data-paths = <[ flight-director-loop flight-director-loop.lookup air-ground-loop air-ground-loop.lookup glossary glossary.lookup]>
+data-paths = <[ flight-director-loop flight-director-loop.lookup air-ground-loop air-ground-loop.lookup glossary glossary.lookup ]>
 (data) <- load-assets(data-paths)
 
 player = new Player(
@@ -41,7 +51,7 @@ window.player = player
 # set up exhibit data.
 topics = new List([
   new Topic( title: 'primer', exhibits: new List([
-    new Exhibit( lookup: \primer-a13rt, title: 'Apollo 13 Real-time', description: 'Get an overview of the real-time experience.' ),
+    new Exhibit( lookup: \primer-intro, title: 'Apollo 13 Real-time', description: 'Get an overview of the real-time experience.' ),
     new Exhibit( lookup: \primer-spaceflight, title: 'Spaceflight 101', description: 'Learn the basics of spaceflight and orbital mechanics.' ),
     new Exhibit( lookup: \primer-apollo, title: 'Apollo Architecture', description: 'See how Apollo got to the Moon and back.' ),
     new Exhibit( lookup: \primer-accident, title: 'The Accident', description: 'There\'s more to the story than "Houston, we\'ve had a problem."' )
@@ -84,9 +94,6 @@ console.log("Render: #{end - start}ms")
 # ~1300ms after inline rendering
 
 # other generic actions:
-$document = $(document)
-$window = $(window)
-
 # automatically tooltip if a title is hovered.
 tooltip = $('#tooltip')
 $document.on(\mouseenter, '[title]', ->
@@ -140,6 +147,7 @@ $window.on(\hashchange, (event) ->
     player.get(\loops.air_ground).set(\auto_scroll, true)
   else
     for exhibit in exhibit-area.get(\all_topics).list when exhibit.get(\lookup) is new-hash
+      $('#splash .splash').data(\view)?.subject.destroy()
       return global.set(\exhibit, exhibit)
 )
 

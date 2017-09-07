@@ -127,6 +127,7 @@ class PlayerView extends DomView
     # point-in-time mouse reactions.
     from(player.watch(\scrubber.clicking)).and(player.watch(\scrubber.mouse.timecode)).all.plain().reactLater(([ clicking, code ]) ->
       audio-raw.currentTime = code if clicking is true
+      player.setProgress() # really, these two lines should be player.epoch() but oh well.
     )
     dom.find('.player-leapback').on(\click, -> audio-raw.currentTime -= 15)
     dom.find('.player-hopback').on(\click, -> audio-raw.currentTime -= 6)

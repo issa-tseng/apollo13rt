@@ -53,7 +53,7 @@ class TermView extends DomView
     term = this.subject
 
     dom.find('.term-hide').on(\click, -> term.set(\hidden, !term.get(\hidden)))
-    dom.on(\mousedown, 'p a', (event) -> $(event.target).attr(\target, \_blank))
+    dom.on(\focus, 'p a', (event) -> $(event.target).attr(\target, \_blank))
 
 class GlossaryView extends DomView
   @_dom = -> $('

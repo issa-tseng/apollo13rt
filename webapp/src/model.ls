@@ -3,9 +3,9 @@ $ = require(\jquery)
 
 { Model, attribute, from, List, Set, Varying, types } = require(\janus)
 { Request, Store } = require(\janus).store
-{ debounce } = require(\janus-stdlib).util.varying
+{ throttle } = require(\janus-stdlib).util.varying
 
-{ defer, clamp, pad } = require('./util')
+{ defer, clamp, pad, get-time, epoch-to-hms, hash-to-hms, hms-to-epoch } = require('./util')
 
 
 
@@ -14,6 +14,29 @@ $ = require(\jquery)
 
 class Global extends Model
   shadow: -> this
+
+class Splash extends Model
+  @bind(\progress.adjusted, from(\progress.epoch).and(\progress.mtime).all.map((epoch, mtime) ->
+    return if Number.isNaN(epoch) or Number.isNaN(epoch)
+    diff = get-time() - mtime
+    if diff > 60 * 60 * 1000 # over an hour
+      epoch - 15
+    else if diff > 60 * 1000 # over a minute
+      epoch - 8
+    else
+      epoch
+  ))
+  @bind(\progress.parts, from(\progress.adjusted).map(epoch-to-hms))
+
+  @bind(\hash.parts, from(\hash.raw).map(hash-to-hms))
+  @bind(\hash.epoch, from(\hash.parts.hh).and(\hash.parts.mm).and(\hash.parts.ss).all.map(hms-to-epoch))
+
+  @initialize = ->
+    # load attributes from various known locations.
+    new Splash({
+      progress: { epoch: localStorage.getItem(\progress_epoch) |> parse-int, mtime: localStorage.getItem(\progress_mtime) |> parse-int }
+      hash: { raw: window.location.hash?.slice(1) }
+    })
 
 
 
@@ -320,16 +343,29 @@ class Player extends Model
         player.set(\base_height, max(0, player.get(\height)))
     )
 
+    # update our saved position every few seconds.
+    throttle(5_000, player.watch(\timestamp.epoch)).reactLater(this~setProgress)
+
+  # starts playing the audio.
+  play: -> this.get(\audio.player).get(0).play()
+
   # navigates the player to a given epoch.
-  epoch: (epoch) ->
+  epoch: (epoch) !->
     this.get(\audio.player).get(0).currentTime = (epoch - this.get(\timestamp.offset))
+    this.setProgress()
 
   # sets the player bookmark to the current epoch. (unless less than 15 seconds
   # have played from the very beginning)
-  bookmark: ->
+  bookmark: !->
     return if this.get(\timestamp.timecode) < 15
     this.set(\bookmark.epoch, this.get(\timestamp.epoch))
 
+  # saves the current position to localstorage for resumption.
+  setProgress: !->
+    epoch = this.get(\timestamp.epoch)
+    return if !epoch? or epoch < (this.get(\timestamp.offset) + 15)
+    localStorage.setItem(\progress_mtime, get-time())
+    localStorage.setItem(\progress_epoch, epoch)
 
 
 ########################################
@@ -364,7 +400,7 @@ class BasicStore extends Store
 
 
 module.exports = {
-  Global,
+  Global, Splash,
   Line, Lines, Transcript,
   Term, Lookup, Glossary,
   Player,
