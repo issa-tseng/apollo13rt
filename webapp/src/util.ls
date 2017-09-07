@@ -66,6 +66,8 @@ module.exports = util =
     )
 
   load-assets: (assets, done) ->
+    done() if !assets? or assets.length is 0
+
     result = {}
     completed = 0
 

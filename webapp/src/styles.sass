@@ -1030,3 +1030,26 @@ header
 
 @import 'styles/ref-panels.sass'
 
+
+// SPECIAL OPERATION MODES
+
+html.chromeless
+  header
+    display: none
+
+html.kiosk-mode
+  body
+    overflow-y: hidden
+  &, body, #timeline, #player
+    height: 100%
+  .player
+    height: calc(100% - 2.9em)
+    .player-resize
+      display: none
+  .player-scripts
+    height: calc(100% - 7em) !important
+
+html.exhibit-mode
+  .exhibit
+    margin-top: 3em
+

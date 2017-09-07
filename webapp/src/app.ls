@@ -9,6 +9,11 @@ stdlib = require(\janus-stdlib)
 
 { defer, hms-to-epoch, hash-to-hms, epoch-to-hms, attach-floating-box, load-assets, is-blank } = require('./util')
 
+# determine application mode.
+kiosk-mode = window.location.search is '?kiosk'
+exhibit-mode = window.location.search is '?exhibit'
+
+# generate toplevel references.
 $document = $(document)
 $window = $(window)
 
@@ -23,75 +28,76 @@ require('./view/exhibit').registerWith(views)
 require('./view/exhibit/package').registerWith(views)
 stores = new Library()
 require('./model').registerWith(stores)
-global = new Global( own_href: window.location.href )
+global = new Global( own_href: window.location.href, mode: { kiosk: kiosk-mode, exhibit: exhibit-mode } )
 app = new App({ views, stores, global })
 
 # render splash screen.
-$ -> defer ->
-  splash-view = app.vendView(Splash.initialize())
-  $('#splash').append(splash-view.artifact())
-  splash-view.wireEvents()
+$ ->
+  if (kiosk-mode is true) or (exhibit-mode is true)
+    $('body').removeClass(\init)
+    $('html').addClass(\chromeless).toggleClass(\kiosk-mode, kiosk-mode).toggleClass(\exhibit-mode, exhibit-mode)
+  else
+    splash-view = app.vendView(Splash.initialize())
+    $('#splash').append(splash-view.artifact())
+    splash-view.wireEvents()
 
 # get and load player data. TODO: someday maybe merge these for perf?
 data-paths = <[ flight-director-loop flight-director-loop.lookup air-ground-loop air-ground-loop.lookup glossary glossary.lookup ]>
-(data) <- load-assets(data-paths)
+(data) <- load-assets(if exhibit-mode then [] else data-paths)
 
-player = new Player(
-  loops:
-    flight: Transcript.deserialize( lines: data['flight-director-loop'], name: 'Flight Director\'s Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/flight-director-loop.txt', lookup: Lookup.deserialize(data['flight-director-loop.lookup']) )
-    air_ground: Transcript.deserialize( lines: data['air-ground-loop'], name: 'Air-Ground Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/air-ground-loop.txt', lookup: Lookup.deserialize(data['air-ground-loop.lookup']) )
-  glossary: Glossary.deserialize(data.glossary, data['glossary.lookup'])
-  audio: { src: 'assets/full.m4a' }
-  timestamp: { offset: 200774 }
-  accident: { epoch: 201293 }
-)
-global.set(\player, player)
-window.player = player
+unless exhibit-mode is true
+  player = new Player(
+    loops:
+      flight: Transcript.deserialize( lines: data['flight-director-loop'], name: 'Flight Director\'s Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/flight-director-loop.txt', lookup: Lookup.deserialize(data['flight-director-loop.lookup']) )
+      air_ground: Transcript.deserialize( lines: data['air-ground-loop'], name: 'Air-Ground Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/air-ground-loop.txt', lookup: Lookup.deserialize(data['air-ground-loop.lookup']) )
+    glossary: Glossary.deserialize(data.glossary, data['glossary.lookup'])
+    audio: { src: 'assets/full.m4a' }
+    timestamp: { offset: 200774 }
+    accident: { epoch: 201293 }
+  )
+  global.set(\player, player)
+  window.player = player
 
 # set up exhibit data.
-topics = new List([
-  new Topic( title: 'primer', exhibits: new List([
-    new Exhibit( lookup: \primer-intro, title: 'Apollo 13 Real-time', description: 'Get an overview of the real-time experience.' ),
-    new Exhibit( lookup: \primer-spaceflight, title: 'Spaceflight 101', description: 'Learn the basics of spaceflight and orbital mechanics.' ),
-    new Exhibit( lookup: \primer-apollo, title: 'Apollo Architecture', description: 'See how Apollo got to the Moon and back.' ),
-    new Exhibit( lookup: \primer-accident, title: 'The Accident', description: 'There\'s more to the story than "Houston, we\'ve had a problem."' )
-  ])),
-  new Topic( title: 'overview', exhibits: new List([
-    new Exhibit( lookup: \overview-propulsion, title: 'Getting to the Moon', description: 'A walkthrough of the propulsion and maneuvering systems.' ),
-    new Exhibit( lookup: \overview-navigation, title: 'Navigating the Stars', description: 'An introduction to the navigation systems and processes.' ),
-    new Exhibit( lookup: \overview-power, title: 'Powering the Spacecraft', description: 'A look at the electrical systems that become critical on 13.' ),
-    new Exhibit( lookup: \overview-personnel, title: 'The Flight Controllers', description: 'An overview of relevant flight controller positions in Mission Control.' )
-  ])),
-  new Topic( title: 'reference', exhibits: new List([
-    new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'High-resolution diagram of the main CM control panel.', reference: true ),
-    new Exhibit( lookup: \ref-panel-cm-aux, title: 'Command Module Auxiliary Panels', description: 'High-resolution diagram of additional CM panels.', reference: true ),
-    new Exhibit( lookup: \ref-panel-lm, title: 'Lunar Module Control Panels', description: 'High-resolution diagram of the Lunar Module panels.', reference: true ),
-    new Exhibit( lookup: \ref-panel-eps, title: 'Fuel Cell Systems', description: 'Annotated diagram of the EPS fuel cell systems.', reference: true ),
-    new Exhibit( lookup: \ref-panel-o2, title: 'Oxygen Subsystem', description: 'Annotated combined diagram of the EPS/ECS oxygen subsystems.', reference: true )
-  ]))
-])
-exhibit-area = new ExhibitArea({ topics })
+unless kiosk-mode is true
+  topics = new List([
+    new Topic( title: 'primer', exhibits: new List([
+      new Exhibit( lookup: \primer-intro, title: 'Apollo 13 Real-time', description: 'Get an overview of the real-time experience.' ),
+      new Exhibit( lookup: \primer-spaceflight, title: 'Spaceflight 101', description: 'Learn the basics of spaceflight and orbital mechanics.' ),
+      new Exhibit( lookup: \primer-apollo, title: 'Apollo Architecture', description: 'See how Apollo got to the Moon and back.' ),
+      new Exhibit( lookup: \primer-accident, title: 'The Accident', description: 'There\'s more to the story than "Houston, we\'ve had a problem."' )
+    ])),
+    new Topic( title: 'overview', exhibits: new List([
+      new Exhibit( lookup: \overview-propulsion, title: 'Getting to the Moon', description: 'A walkthrough of the propulsion and maneuvering systems.' ),
+      new Exhibit( lookup: \overview-navigation, title: 'Navigating the Stars', description: 'An introduction to the navigation systems and processes.' ),
+      new Exhibit( lookup: \overview-power, title: 'Powering the Spacecraft', description: 'A look at the electrical systems that become critical on 13.' ),
+      new Exhibit( lookup: \overview-personnel, title: 'The Flight Controllers', description: 'An overview of relevant flight controller positions in Mission Control.' )
+    ])),
+    new Topic( title: 'reference', exhibits: new List([
+      new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'High-resolution diagram of the main CM control panel.', reference: true ),
+      new Exhibit( lookup: \ref-panel-cm-aux, title: 'Command Module Auxiliary Panels', description: 'High-resolution diagram of additional CM panels.', reference: true ),
+      new Exhibit( lookup: \ref-panel-lm, title: 'Lunar Module Control Panels', description: 'High-resolution diagram of the Lunar Module panels.', reference: true ),
+      new Exhibit( lookup: \ref-panel-eps, title: 'Fuel Cell Systems', description: 'Annotated diagram of the EPS fuel cell systems.', reference: true ),
+      new Exhibit( lookup: \ref-panel-o2, title: 'Oxygen Subsystem', description: 'Annotated combined diagram of the EPS/ECS oxygen subsystems.', reference: true )
+    ]))
+  ])
+  exhibit-area = new ExhibitArea({ topics })
 
 # wait for document ready.
 <- $
-<- defer # because jquery does weird shit with exceptions.
 
-start = (new Date()).getTime()
 # create and append views.
-player-view = app.vendView(player)
-$('#player').append(player-view.artifact())
+unless exhibit-mode is true
+  player-view = app.vendView(player)
+  $('#player').append(player-view.artifact())
 
-exhibit-area-view = app.vendView(exhibit-area)
-$('#exhibits').append(exhibit-area-view.artifact())
+unless kiosk-mode is true
+  exhibit-area-view = app.vendView(exhibit-area)
+  $('#exhibits').append(exhibit-area-view.artifact())
 
 # wire all events after rendering is done so relayout does not occur.
-player-view.wireEvents()
-exhibit-area-view.wireEvents()
-
-end = (new Date()).getTime()
-console.log("Render: #{end - start}ms")
-# ~1800ms to begin
-# ~1300ms after inline rendering
+player-view.wireEvents() unless exhibit-mode is true
+exhibit-area-view.wireEvents() unless kiosk-mode is true
 
 # other generic actions:
 # automatically tooltip if a title is hovered.
@@ -127,7 +133,7 @@ $document.on(\mouseenter, '[title]', ->
 )
 
 # automatically define if a term is hovered.
-glossary = player.get(\glossary)
+glossary = player?.get(\glossary)
 $document.on(\mouseenter, '.glossary-term:not(.active)', ->
   initiator = $(this)
   term = glossary.get("lookup.#{initiator.attr(\data-term)}")
@@ -157,17 +163,20 @@ $window.on(\hashchange, (event) ->
 )
 
 # handle internal exhibit links.
-$document.on(\click, 'a', (event) ->
-  return unless event.target.host is window.location.host
-  target-hash = event.target.hash?.slice(1)
+handle-exhibit-hash = (hash, event) ->
+  target-hash = hash?.slice(1)
   return if is-blank(target-hash)
 
   for exhibit in exhibit-area.get(\all_topics).list when exhibit.get(\lookup) is target-hash
     $('#splash .splash').data(\view)?.subject.destroy()
     global.set(\exhibit, exhibit)
-    event.preventDefault()
+    event?.preventDefault()
     return false
+$document.on(\click, 'a', (event) ->
+  return unless event.target.host is window.location.host
+  handle-exhibit-hash(event.target.hash, event)
 )
+handle-exhibit-hash(window.location.hash) if exhibit-mode is true
 
 # toplevel layout actions:
 # update social media links.
@@ -184,4 +193,11 @@ is-scrolled = from-event($(document), \scroll, (.target.scrollingElement.scrollT
 global.watch(\exhibit)
   .flatMap((exhibit) -> if exhibit? then is-scrolled else false)
   .reactLater(-> $('html').toggleClass(\dark-canvas, it))
+
+# navigate to hash and start playing automatically if we are in kiosk mode:
+if kiosk-mode is true
+  if (hms = hash-to-hms(window.location.hash?.slice(1)))?
+    { hh, mm, ss } = hms
+    player.epoch(hms-to-epoch(hh, mm, ss))
+  player.play()
 

@@ -32,7 +32,7 @@ class TermView extends DomView
           else if hidden
             false
           else
-            terms.find(f)?
+            terms?.find(f)?
         )
     )
 
