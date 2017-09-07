@@ -27,6 +27,7 @@
   img
     float: right
     margin-left: 2em
+    min-width: 250px
     width: 30%
 
   p
@@ -48,6 +49,7 @@
     font-size: 1.5em
     letter-spacing: -0.02em
     line-height: 1.4em
+    margin-bottom: 1em
     margin-right: 0.6em
     padding: 0.6em
       right: 1em // the icon does weird things
@@ -95,5 +97,13 @@
 body.init
   overflow: hidden
   header
-    display: none
+    visibility: hidden
+
+
+@media (max-width: 630px)
+  #splash .splash img
+    float: none
+@media (max-width: 500px)
+  #splash .splash
+    padding: 4em
 
