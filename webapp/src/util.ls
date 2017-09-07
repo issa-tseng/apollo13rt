@@ -57,7 +57,7 @@ module.exports = util =
     targets.on(\mouseenter, -> is-hovered.set(true))
     targets.on(\mouseleave, -> is-hovered.set(false))
     initiator.on(\mousedown, -> is-hovered.set(false))
-    stdlib.util.varying.sticky(is-hovered, { true: 100 }).reactLater((hovered) ->
+    stdlib.util.varying.sticky( true: 100 )(is-hovered).reactLater((hovered) ->
       if !hovered
         initiator.removeClass(\active)
         view.destroy()
