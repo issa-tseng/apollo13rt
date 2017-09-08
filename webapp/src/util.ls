@@ -68,16 +68,20 @@ module.exports = util =
     initiator.addClass(\active)
     is-hovered = new Varying(true)
     targets = initiator.add(box)
+
+    kill = ->
+      initiator.removeClass(\active)
+      view.destroy()
+      box.remove()
     targets.on(\mouseenter, -> is-hovered.set(true))
     targets.on(\mouseleave, -> is-hovered.set(false))
     initiator.on(\mousedown, -> is-hovered.set(false))
     stdlib.util.varying.sticky( true: 100 )(is-hovered).reactLater((hovered) ->
-      if !hovered
-        initiator.removeClass(\active)
-        view.destroy()
-        box.remove()
-        this.stop()
+      return if hovered
+      kill()
+      this.stop()
     )
+    $('body').one(\touchend, -> kill())
 
   load-assets: (assets, done) ->
     done() if !assets? or assets.length is 0

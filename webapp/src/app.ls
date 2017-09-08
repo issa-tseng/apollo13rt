@@ -141,14 +141,25 @@ $document.on(\mouseenter, '[title]', ->
 
 # automatically define if a term is hovered.
 glossary = player?.get(\glossary)
-$document.on(\mouseenter, '.glossary-term:not(.active)', ->
-  initiator = $(this)
+pop-glossary = (initiator) ->
   term = glossary.get("lookup.#{initiator.attr(\data-term)}")
   throw new Error("didn't find an expected term!") unless term?
 
   term-view = app.vendView(term)
   attach-floating-box(initiator, term-view)
   term-view.wireEvents()
+
+$document.on(\mouseenter, '.glossary-term:not(.active)', -> pop-glossary($(this)))
+$document.on(\touchstart, '.glossary-term', (event) ->
+  event.stopPropagation()
+  event.preventDefault()
+
+  initiator = $(this)
+  pop-glossary(initiator)
+  initiator.one(\touchend, (event) ->
+    event.stopPropagation()
+    event.preventDefault()
+  )
 )
 
 # handle hash changes.
