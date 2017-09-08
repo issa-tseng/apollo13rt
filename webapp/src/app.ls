@@ -150,6 +150,7 @@ $window.on(\hashchange, (event) ->
   global.set(\own_href, window.location.href)
 
   # now see if we have some timecode navigation to do, and do it.
+  return if exhibit-mode is true
   new-hash = window.location.hash?.slice(1)
   return if is-blank(new-hash)
 
