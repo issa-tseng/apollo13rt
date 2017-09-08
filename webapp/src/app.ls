@@ -8,6 +8,7 @@ stdlib = require(\janus-stdlib)
 { from-event } = require(\janus-stdlib).util.varying
 
 { defer, hms-to-epoch, hash-to-hms, epoch-to-hms, attach-floating-box, load-assets, is-blank } = require('./util')
+{ max } = Math
 
 # determine application mode.
 kiosk-mode = window.location.search is '?kiosk'
@@ -98,6 +99,12 @@ unless kiosk-mode is true
 # wire all events after rendering is done so relayout does not occur.
 player-view.wireEvents() unless exhibit-mode is true
 exhibit-area-view.wireEvents() unless kiosk-mode is true
+
+# set initial player height to something sane, if necessary.
+if player?
+  window-height = $window.height()
+  if window-height < 900
+    player.set(\height, max(window-height - 550, 250))
 
 # other generic actions:
 # automatically tooltip if a title is hovered.
