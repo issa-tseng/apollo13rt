@@ -41,7 +41,21 @@ Compilation scripts in the `/script` directory compile this raw format into two 
 Web player
 ----------
 
-To be developed and settled down: content to follow here.
+The web player is written in [Janus](/clint-tseng/janus), a functional reactive programming framework. It was written in a bit of a rush, so it isn't the cleanest code, but if active development continues a few small refactors should bring it into line. Of note are `app.ls`, which kickstarts the entire application and `model.ls` which defines all the viewmodel behaviour of the application.
+
+To build and run the web player, first compile the scripts as describe in the previous section, then simply run `make` in the `webapp/` directory. You'll have to then serve the `lib/` directory at the root level of a web server; you'll want to use something full-fledged like nginx if you wish for audio seeking to work correctly (this rules out eg Python's `SimpleHTTPServer`).
+
+Kiosk Modes
+===========
+
+It is easy to create a kiosk installation of this application, which adjusts the layout for optimal full-screen display on a television, or presents only the exhibit and reference material. All you have to do is direct a web browser at particular URLs:
+
+* [`/?kiosk`](http://apollo13realtime.org/?kiosk) will show only the audio controls, transcripts, and glossary, and will begin playing the audio automatically. When the audio reaches the end, the page will refresh and the audio will begin playing again.
+* [`/?kiosk#56:56:56`](http://apollo13realtime.org/?kiosk#56:56:56) is exactly the same as `/?kiosk`, but will cue the audio to begin playing from a particular timestamp. In fact, you can direct the browser to navigate to a timestamp hash at any time and the audio will begin playing there.
+* [`/?exhibit`](http://apollo13realtime.org/?exhibit) will show only the exhibit section, starting with the table of contents. This is useful if you wish to dedicate an entire or noninteractive display to the audio player, but still want to provide access to the additional material.
+* [`/?exhibit#primer-apollo`](http://apollo13realtime.org/?exhibit#primer-apollo) is exactly the same as `/?exhibit`, but will automatically open a particular article. Controls will still be present to dismiss that article and display another. To find the identifier associated with an article, use the filenames you find [here](https://github.com/clint-tseng/apollo13rt/tree/master/exhibits), without extensions.
+
+If you have feedback, suggestions, or problems, please don't hesitate to let us know: either by filing a ticket on the issues page here, or reaching out to us directly. And if you do feature this experience somewhere, we'd absolutely love to see pictures and hear about it!
 
 License
 =======

@@ -15,6 +15,11 @@ The Exhibits
 
 Copious reference material is provided here. If you are brand-new to Apollo, browsing through the Primer section is highly-recommended. The Overview section provides a somewhat deeper look at various aspects of flying Apollo to the Moon, and will prove helpful if you get stuck understanding the relationship between technical terms and systems while listening to the audio. The Reference Manual section provides even further detail on particular technical subsystems, for those who are interested in understanding exactly what the various switches and valves controlled.
 
+Creating Installations
+----------------------
+
+It is easy to create a kiosk installation of this application, which adjusts the layout for optimal full-screen display on a television, or presents only the exhibit and reference material. For more information, see [the readme](https://github.com/clint-tseng/apollo13rt#kiosk-modes).
+
 Credits
 -------
 
