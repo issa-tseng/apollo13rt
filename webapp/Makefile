@@ -20,6 +20,9 @@ lib/%.js: src/%.ls lib node_modules
 lib/apollo13rt.js: lib/app.js
 	node node_modules/browserify/bin/cmd.js --exclude domino -e $< -o $@ --im
 
+lib/apollo13rt.min.js: lib/apollo13rt.js
+	node node_modules/uglify-js/bin/uglifyjs "$<" -o $@
+
 lib/exhibits: lib
 	@mkdir -p lib/exhibits
 
@@ -52,6 +55,8 @@ node_modules:
 	npm install
 
 build: $(JS_LIB) lib/apollo13rt.js lib/styles.css $(ASSETS_LIB) $(EXHIBITS_STATIC_LIB) $(SCRIPT_LIB) lib/index.html
+
+production: build lib/apollo13rt.min.js
 
 clean:
 	rm -rf lib/

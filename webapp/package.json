@@ -12,6 +12,7 @@
   "devDependencies": {
     "livescript": "~1.5",
     "node-sass": "~3",
-    "browserify": "~14"
+    "browserify": "~14",
+    "uglify-js": "~3"
   }
 }
