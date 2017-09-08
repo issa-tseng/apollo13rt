@@ -8,7 +8,7 @@ $ = require(\jquery)
 
 
 class SplashView extends DomView
-  @_dom = -> $('<div class="splash"/>').append($('#markup > #title').clone())
+  @_dom = -> $('<div class="splash"/>').append($('#markup > #introduction').clone())
   @_template = template(
     find('#resume-saved').classed(\hide, from(\progress.epoch).map(is-blank))
     find('#resume-saved .hh').text(from(\progress.parts.hh))
