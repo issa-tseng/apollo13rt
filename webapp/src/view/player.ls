@@ -4,7 +4,8 @@ $ = require(\jquery)
 { from-event } = require(\janus-stdlib).util.varying
 
 { Player } = require('../model')
-{ clamp, px, pct, pad } = require('../util')
+{ clamp, px, pct, pad, click-touch } = require('../util')
+{ min } = Math
 
 class PlayerView extends DomView
   @_dom = -> $('
@@ -98,11 +99,18 @@ class PlayerView extends DomView
 
     # feed scrubber mouse events into model.
     scrubber = dom.find('.player-scrubber-area')
+    left-offset = scrubber.offset().left # unlikely to change; cache for perf.
     scrubber.on(\mouseenter, -> player.set(\scrubber.mouse.over, true))
+    scrubber.on(\touchstart, -> player.set(\scrubber.mouse.over, true))
     scrubber.on(\mouseleave, -> player.set(\scrubber.mouse.over, false))
-    scrubber.on(\mousedown, (event) ->
+    scrubber.on(\touchend,  -> player.set( 'scrubber.mouse.over': false, 'scrubber.clicking': false ))
+    scrubber.on('mousedown touchstart', (event) ->
       player.set(\scrubber.clicking, true)
       event.preventDefault()
+    )
+    scrubber.on(\touchmove, (event) ->
+      scrubber-width = scrubber.width()
+      player.set(\scrubber.mouse.at, min.apply(null, [ (touch.pageX - left-offset) / scrubber-width |> clamp(0, 1) for touch in event.targetTouches ]))
     )
 
     # feed resizer mouse events into model.
@@ -114,7 +122,6 @@ class PlayerView extends DomView
 
     # feed body mouse events into model.
     body = $(document)
-    left-offset = scrubber.offset().left # unlikely to change; cache for perf.
     body.on(\mousemove, (event) ->
       player.set(\scrubber.mouse.at, ((event.pageX - left-offset) / scrubber.width()) |> clamp(0, 1))
       player.set(\resize.mouse.y, event.pageY)
@@ -129,12 +136,13 @@ class PlayerView extends DomView
       audio-raw.currentTime = code if clicking is true
       player.setProgress() # really, these two lines should be player.epoch() but oh well.
     )
-    dom.find('.player-leapback').on(\click, -> audio-raw.currentTime -= 15)
-    dom.find('.player-hopback').on(\click, -> audio-raw.currentTime -= 6)
-    dom.find('.player-playpause').on(\click, -> if audio-raw.paused is true then audio-raw.play() else audio-raw.pause())
-    dom.find('.player-hopforward').on(\click, -> audio-raw.currentTime += 6)
-    dom.find('.player-leapforward').on(\click, -> audio-raw.currentTime += 15)
-    dom.find('.player-bookmark').on(\click, (event) ->
+
+    click-touch(dom.find('.player-leapback'), -> audio-raw.currentTime -= 15)
+    click-touch(dom.find('.player-hopback'), -> audio-raw.currentTime -= 6)
+    click-touch(dom.find('.player-playpause'), -> if audio-raw.paused is true then audio-raw.play() else audio-raw.pause())
+    click-touch(dom.find('.player-hopforward'), -> audio-raw.currentTime += 6)
+    click-touch(dom.find('.player-leapforward'), -> audio-raw.currentTime += 15)
+    dom.find('.player-bookmark').on('click', (event) ->
       event.stopPropagation() # so the standard mouse timecode handler does not fire.
       player.epoch(player.get(\bookmark.epoch))
       player.unset(\bookmark)

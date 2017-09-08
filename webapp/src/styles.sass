@@ -343,6 +343,7 @@ a
         height: calc(100% - 2.5em)
         overflow-x: hidden
         overflow-y: auto
+        -webkit-overflow-scrolling: touch
 
         > ul
           padding-right: 1em
@@ -422,6 +423,7 @@ a
     @include custom-scrollbar
     overflow: hidden
     overflow-y: auto
+    -webkit-overflow-scrolling: touch
 
 .line
   font-family: $monospace
@@ -724,6 +726,10 @@ header
     &.mirrored
       border-radius: 0.2em
       border-top-right-radius: 0
+
+  &.fading
+    opacity: 0
+    transition: 3s opacity cubic-bezier(.6, 0, 1, .4)
 
 .floating-box
   background: $color-definition-bg

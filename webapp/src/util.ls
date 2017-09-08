@@ -37,6 +37,20 @@ module.exports = util =
     dom = $(selector)
     from-event-now($(window), \resize, -> { width: dom.width(), height: dom.height() })
 
+  click-touch: (dom, f) ->
+    dom.on('click touchstart', (event) ->
+      event.preventDefault()
+      f.call(this, event)
+
+      unless util.is-blank(this.title)
+        # trigger a tooltip but have it fade quickly.
+        title = this.title
+        trigger = $(this)
+        trigger.trigger(\mouseenter)
+        trigger.attr(\title, title) # since the browser would never show it anyway.
+        $('#tooltip').addClass(\fading)
+    )
+
   bump: (varying) ->
     varying.set(true)
     <- util.defer

@@ -115,7 +115,7 @@ $document.on(\mouseenter, '[title]', ->
   outer-width = target.outerWidth()
   text = target.attr(\title)
 
-  tooltip.removeClass('mirrored dropped')
+  tooltip.removeClass('mirrored dropped fading')
   tooltip.css(\left, offset.left + (outer-width / 2))
   tooltip.css(\top, offset.top)
   tooltip.text(text)
