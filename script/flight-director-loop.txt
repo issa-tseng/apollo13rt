@@ -1,5 +1,5 @@
 [55 46 46 - 55 46 50] CAPCOM
-Okay FLIGHT, you read his pitch and yaw and his high-gain ??.
+Okay FLIGHT, you read his pitch and yaw and his high-gain meter.
 
 [55 46 50 - 55 46 51] FLIGHT
 That's affirmative.
@@ -150,7 +150,7 @@ Go ahead, FLIGHT.
 - you still worried about any configuration items?
 
 [55 51 06 - 55 51 14] TELMU
-Negative. The LM heater current indicates that the level?? was properly closed out. They apparently have not closed the LM hatch yet.
+Negative. The LM heater current indicates that the LM was properly closed out. They apparently have not closed the LM hatch yet.
 
 [55 51 14 - 55 51 21] FLIGHT
 Okay. So you're happy that you don't need them to verify that - what was it, activation 2-3, those pages we were on?
@@ -635,7 +635,7 @@ Okay.
 
 [- 56 05 17] EECOM
 - FUEL CELL 1 N2 pressure. FUEL CELL 3 O2 pressure. We're reading zero {N2 pressure} on FUEL CELL 1 and 13psi on FUEL CELL 3 O2 pressure.
-1> Nitrogen was used to pressurize the electrolytes in the fuel cell through a diaphragm. Feedback loops are set up with the cryogenic oxygen to regulate the relative pressures.
+1> Nitrogen was used to pressurize the electrolytes in the fuel cell through a diaphragm, as well as the reactant feed systems. Feedback loops are set up with the cryogenic oxygen to regulate the relative pressures.
 
 [56 05 19 -] FLIGHT
 Okay, you want FUEL CELL 1 -
@@ -659,7 +659,7 @@ FLIGHT, GUIDANCE.
 Go, GUIDANCE.
 
 [56 05 35 - 56 05 45] GUIDO
-When his hardware restart he was doing a clearly fine maneuver ??, and that should have killed it, but we're still moving. We ought to stop it.
+When his hardware restart he was doing a clearly fine maneuver, and that should have killed it, but we're still moving. We ought to stop it.
 
 [56 05 45] FLIGHT
 Are we using RCS now, Buck?
@@ -923,7 +923,7 @@ Yeah.
 Yeah, it'll coarse align itself there, won't it?
 
 [56 13 17 -] GUIDO
-It's coarse align at -
+It'll coarse align at -
 
 [56 13 19] FLIGHT
 Roger.
@@ -971,7 +971,7 @@ On board. OMNI Bravo.
 CAPCOM, recommend OMNI Bravo.
 
 [56 14 47 - 56 14 51] FLIGHT
-Okay. What - you want to go through power down - give me the page.
+Okay. What - you want to go to - power down - give me the page.
 
 [56 14 51 - 56 14 57] EECOM
 Emergency 1-5, FLIGHT, we'll go down - try to get a delta of 10 amps reduction.
@@ -1079,7 +1079,7 @@ Well, don't know where to say the sun is right now, FLIGHT.
 [56 17 47 - 56 17 50] GNC
 Well, it's pretty close to quad A right now. Are we -
 
-[56 17 51] FLIGHT
+[56 17 51] EECOM
 By 90 degrees?
 
 [56 17 53 - 56 17 56] GNC
@@ -1133,7 +1133,7 @@ Okay.
 Let's get - I guess we can put INVERTER 3 to MAIN A. AC 2.
 
 [56 21 23] EECOM
-(unintelligible) just temporarily -
+Let's just do it temporarily -
 
 [56 21 23 - 56 21 29] FLIGHT
 Now, let me ask you a question - before you do that would you like to make sure you've got all AC load you don't need isolated from the bus?
@@ -1142,7 +1142,7 @@ Now, let me ask you a question - before you do that would you like to make sure 
 Nah, it - let's not do that right now, FLIGHT. I think we're in good shape that way. The MAIN A is up high enough where it can handle the inverter.
 
 [56 21 40 - 56 21 46] FLIGHT
-Well, the thing that concerns me is starting - is throwing equipment - we have a problem, we don't know the cause of the problem, and -
+Well, the thing that concerns me is starting - is throwing equipment - we had a problem, we don't know the cause of the problem, and -
 
 [56 21 46 - 56 21 58] EECOM
 FLIGHT, I've got a feeling we've lost two fuel cells. I hate to put it that way, but - I don't know why we've lost them. It doesn't all tag up. And it's not an instrumentation problem, the best I can tell right now.
@@ -1468,7 +1468,7 @@ Go, EECOM.
 
 [56 32 37 -] EECOM
 We've really got to get that battery off the line and power down some more. And we've got to get some MAIN B power back so we can build our pressure back up in O2 TANK 1. {It's down to 318psi.}
-1> Nominal O2 pressure is closer to 900psi. Normally, an automated pressure sensing switch would activate a heater as the tank depleted to heat the O2 and keep the pressure around that number. 100psi is a bit of a redline mark, at which point even at minimal load only about 2 hours of useful power could be expected.[ref1 p317]
+1> Nominal O2 pressure is around 900psi. Normally, an automated pressure sensing switch would activate a heater as the tank depleted to heat the O2 and keep the pressure around that number. 100psi is a bit of a redline mark, at which point even at minimal load only about 2 hours of useful power could be expected.[ref1 p317]
 
 [56 32 52] FLIGHT
 BATTERY -
@@ -1760,11 +1760,11 @@ Okay.
  - we'll watch the pressure.
 
 [56 40 18 - 56 40 23] EECOM
-FLIGHT, to be consistent we ought to isolate the repress package also.
+FLIGHT, to be consistent we ought to isolate the REPRESS package also.
 > The repressurization package, like the O2 surge tank, was a reserve of pressurized oxygen gas in the Command Module.
 
 [56 40 24 - 56 40 26] FLIGHT
-Okay, you want to isolate repress pack.
+Okay, you want to isolate REPRESS pack.
 
 [56 40 40] FLIGHT
 AFD, from FLIGHT.
@@ -1909,7 +1909,7 @@ FAN MOTOR.
 
 [56 44 10 - 56 44 13] EECOM
 CRYO FAN MOTORS TANK 1. There are three circuit breakers - {three phase.}
-1> Three-phase alternating current. Motors are easiest built on three-phase AC. Unlike the two-phase AC your house gets, three-phase AC works with three wires.
+1> Three-phase alternating current. Motors are easier built on three-phase AC. Unlike the two-phase AC your house gets, three-phase AC works with three wires.
 
 [56 44 17 - 56 44 18] FLIGHT
 Get that, CAPCOM?
@@ -2106,7 +2106,7 @@ FLIGHT, EECOM.
 
 [56 55 23] FLIGHT
 Go ahead, EECOM.
-> This is actually Glynn Lunney responding, who was preparing for his shift. He spent about half an hour before his team came on circulating the consoles and issuing a single critical question to each that had to be answered in the following hour or so.
+> This is actually Glynn Lunney responding, who was preparing for his shift. He spent some time before his team came on circulating the consoles and issuing a single critical question to each that had to be answered in the following half hour.
 
 [56 55 24 - 56 55 29] EECOM
 We need to get the - make sure the inline heaters for FUEL CELLS 1 and 3 are OFF.
@@ -2117,7 +2117,7 @@ EECOM, from FLIGHT.
 [56 55 51] EECOM
 FLIGHT.
 
-[56 55 52 - 56 56 54] FLIGHT
+[56 55 52 - 56 55 54] FLIGHT
 You want to shut off both reactant valves to FUEL CELL number 3?
 
 [56 55 54 - 56 55 55] EECOM
@@ -2396,9 +2396,1635 @@ OMNI Charlie, FLIGHT.
 Roger. And OMNI Charlie.
 
 [57 06 13 - 57 06 50] FLIGHT
-Okay. All flight controllers, I'm handing over to Glynn. I assume the majority of all the team guys are pretty much briefed and up to speed as best we can. Now what I'd suggest is the {white team} do two things: they go over the DLOGs - okay - let me go back over this again. We're handing over to Glynn. I'd suggest the white team goes back and starts going through the DLOG of the data. In other words, let's see if we can go back to the initial conditions and work on that problem and see if we can find out what happened and we may find some better clues as to what to do and let the fresh guys come on and try to figure out where do we go from here.
+Okay. All flight controllers, I'm handing over to Glynn. I assume the majority of all the team guys are pretty much briefed and up to speed as best we can. Now what I'd suggest is the {white team} do two things: they go over the DLOGs - okay - let me go back over this again. We're handing over to Glynn. I'd suggest the white team goes back and starts going through the DLOG of the data. In other words, let's see if we can go back to the initial conditions and work on that problem to see if we can find out what happened and we may find some better clues as to what to do and let the fresh guys come on and try to figure out where do we go from here.
 1> Kranz's team was the white team. Glynn headed up black team.
 
 [57 06 53 - 57 06 56] FLIGHT
 And the DLOG is in way now. Roger.
+
+[57 07 14 - 57 07 19] FLIGHT
+Okay, EECOM. {Tell me about the latch.} Do you think you've got the reactants latched?
+1> FLIGHT is following up on the possibility that the reactant valve didn't close. There was, in addition to the breaker, a latch that could wedge it open to prevent it from closing in case of heavy vibration, as could happen during a burn.
+
+[57 07 20] EECOM
+FLIGHT, EECOM.
+
+[57 07 21] FLIGHT
+Go.
+
+[57 07 22 - 57 07 36] EECOM
+The crew reported he got barber pole whenever he threw the reactant switch, so that implies that he did all the right things and he really got it shut off. And it looks like that didn't help us any - the pressure's not improving any.
+
+[57 07 37 - 57 07 41] FLIGHT
+Okay, now the next question is: are you willing to do that on FUEL CELL number 1?
+
+[57 07 42 - 57 07 46] EECOM
+That's the question we're pondering, FLIGHT. We've got to come up with an answer on that one.
+
+[57 07 47 - 57 07 49] FLIGHT
+Soon. FUEL CELL 2 is working okay.
+
+[57 07 50] EECOM
+That's affirm.
+
+[57 07 51 - 57 07 55] FLIGHT
+Unless we do something to get that oxygen, it's not going to do us any good to save fuel cells.
+> In other words, there's no reason to be reluctant to shut off another fuel cell if there won't be any oxygen to feed into the working one anyway. You can already see how much more Lunney opines on debates.
+
+[57 07 56] EECOM
+That's affirmative.
+
+[57 07 57 - 57 07 59] FLIGHT
+Okay - okay. GNC, FLIGHT.
+
+[57 08 01] GNC
+GNC.
+
+[57 08 02 - 57 08 04] FLIGHT
+You stabilized now? - standby.
+
+[57 08 06 - 57 08 08] FLIGHT
+Here comes configuration, I think it's yours.
+
+[57 08 34 - 57 08 36] FLIGHT
+I didn't copy all those; did you, GNC?
+
+[57 08 36 - 57 08 37] GNC
+Roger, FLIGHT. We concur.
+
+[57 08 38 - 57 08 40] FLIGHT
+Is that good? How are the rates?
+
+[57 08 41 - 57 08 42] CAPCOM
+You copy those, GNC?
+
+[57 08 42 - 57 08 44] GNC
+It's holding down around a tenth of a degree per second, FLIGHT.
+
+[57 08 45] FLIGHT
+Isolating. ??
+
+[57 08 46 - 57 08 47] GNC
+He's in ACCEL CMD, so -
+
+[57 08 50] FLIGHT
+ACCEL CMD?
+
+[57 08 51] GNC
+Right.
+
+[57 08 53] FLIGHT
+Alright.
+
+[57 08 57 - 57 08 58] CAPCOM
+FLIGHT, did you copy all those thrusters?
+
+[57 08 59 - 57 09 01] FLIGHT
+Go ahead. Who's calling?
+
+[57 09 02] CAPCOM
+CAPCOM. Did you copy all those -
+
+[57 09 03 - 57 09 05] FLIGHT
+I didn't copy them all, Jack. GNC, did you copy them all?
+
+[57 09 06 - 57 09 07] GNC
+That's affirmative, FLIGHT.
+
+[57 09 07 - 57 09 08] FLIGHT
+Do you like that configuration for right now?
+
+[57 09 09] GNC
+Yes.
+
+[57 09 10 - 57 09 17] FLIGHT
+As best you can tell - best you can tell, the rates are okay. And he's flying ACCEL CMD.
+
+[57 09 19] GNC
+Roger, FLIGHT.
+
+[57 09 20 - 57 09 21] FLIGHT
+No rate damping, then, right?
+
+[57 09 22] GNC
+Roger.
+
+[57 09 24 - 57 09 26] FLIGHT
+Are both BMAG packages off?
+
+[57 09 27] GNC
+Yes, they are.
+
+[57 09 29] FLIGHT
+Okay.
+
+[57 09 45 - 57 09 48] FLIGHT
+Standby. EECOM, you need anything?
+
+[57 09 51] EECOM
+Roger, FLIGHT. We'll take those.
+
+[57 09 53] CAPCOM
+We want those?
+
+[57 09 55] EECOM
+Roger.
+
+[57 09 57] FLIGHT
+What do you want?
+
+[57 09 59 -] EECOM
+Get him to go through the meters -
+
+[57 10 00] FLIGHT
+Okay.
+
+[- 57 10 01] EECOM
+- on FUEL CELL 1 and 3.
+
+[57 10 02 - 57 10 03] FLIGHT
+Okay. Just FUEL CELL 1 and 3, Jack.
+
+[57 11 25 - 57 11 31] FLIGHT
+EECOM, I don't like the way that O2 pressure's going down. If you want to do something about these other reactant valves, let's make up our mind.
+
+[57 11 31] EECOM
+Okay.
+
+[57 11 32] FLIGHT
+Don't you think?
+
+[57 11 32 - 57 11 35] EECOM
+Let me get that for you in a minute, FLIGHT. Let's standby on these readouts.
+
+[57 11 36 - 57 11 40] FLIGHT
+Yeah, okay. Anybody can copy the readouts. Be sure you're discussing these reactants.
+
+[57 11 54 - 57 12 02] CAPCOM
+Hey, FLIGHT. CAPCOM. Long time ago I heard someone mention something about closing the REPRESS package and then we never made a decision on that. Do they want to do that, too?
+
+[57 12 03 - 57 12 04] FLIGHT
+EECOM? - he's busy.
+
+[57 12 06] EECOM
+Go, FLIGHT.
+
+[57 12 07 - 57 12 11] FLIGHT
+Do you want to close out the REPRESS pack? I think that came on for them before.
+
+[57 12 12 - 57 12 14] EECOM
+We indicated earlier that we'd like to get it closed -
+
+[57 12 14] FLIGHT
+Yes, Jack.
+
+[57 12 23] EECOM
+FLIGHT, EECOM.
+
+[57 12 24] FLIGHT
+Go ahead.
+
+[57 12 25 - 57 12 42] EECOM
+Okay, on the reactant - FUEL CELL 1. Seems to me we have no choice but to go ahead and do it. The pressure continues to drop. We're not going to have anything left soon anyway. So, looks like the next best thing to try is to go ahead and turn the reactants OFF on FUEL CELL 1.
+
+[57 12 43 - 57 12 46] FLIGHT
+Yeah. What is this pounds on your display, Clint?
+
+[57 12 47] EECOM
+On O2?
+
+[57 12 48] FLIGHT
+Yup.
+
+[57 12 49 - 57 12 51] EECOM
+That's - that's invalid.
+
+[57 12 52] FLIGHT
+Okay.
+
+[57 12 57 - 57 13 03] EECOM
+And of course, you'll want to make sure that his circuit breaker is closed for FUEL CELL 1 when he starts to close the reactant valves.
+
+[57 13 04 - 57 13 05] FLIGHT
+Which circuit breaker is that; the one on 226?
+
+[57 13 06] EECOM
+Roger.
+
+[57 13 10 - 57 13 11] FLIGHT
+That's FUEL CELL number 1.
+
+[57 13 12 - 57 13 13] EECOM
+That's right, FUEL CELL reactants number 1.
+
+[57 13 14] FLIGHT
+Alright.
+
+[57 13 16 - 57 13 17] EECOM
+Is he done with that readout yet?
+
+[57 13 20 - 57 13 23] EECOM
+I didn't copy the last part of it, FLIGHT -
+
+[57 13 32 - 57 13 33] FLIGHT
+EECOM, FLIGHT.
+
+[57 13 34] EECOM
+Go, FLIGHT.
+
+[57 13 34 - 57 13 43] FLIGHT
+Is there any chance that I'm just looking at a bad pressure reading here? I'm going to shut off the second fuel cell now, is there any data you can correlate that says that yeah, that pressure is going down?
+
+[57 13 45 - 57 13 46] EECOM
+On the O2 tank?
+
+[57 13 46] FLIGHT
+Yes.
+
+[57 13 51 - 57 13 52] FLIGHT
+You understand my question?
+
+[57 13 52 - 57 14 00] EECOM
+I understand your question. The temperatures are also dropping. Let me get a verification on that - standby just a minute.
+> Ideal gas law PV=nRT can help verify the two readings against each other.
+
+[57 14 00] FLIGHT
+Alright.
+
+[57 14 15 - 57 14 18] FLIGHT
+Yeah, we copy that. Tell them we're debating shutting off the reactants on 1.
+
+[57 14 19] EECOM
+FLIGHT, EECOM.
+
+[57 14 19] FLIGHT
+Go ahead.
+
+[57 14 20 - 57 14 21] EECOM
+The temperature is the only thing we have.
+
+[57 14 22] FLIGHT
+And does it correlate?
+
+[57 14 23] EECOM
+Pretty closely.
+
+[57 14 24 - 57 14 27] FLIGHT
+You're saying that I'm looking at a valid pressure in that tank, and it's still going down.
+
+[57 14 28] EECOM
+That's the way it looks, FLIGHT.
+
+[57 14 29] FLIGHT
+Therefore?
+
+[57 14 30 - 57 14 33] EECOM
+Therefore we need to go to FUEL CELL 1 and turn off the reactants.
+
+[57 14 34 - 57 14 37] FLIGHT
+CAPCOM, FUEL CELL 1 reactants. Circuit breaker and a switch.
+
+[57 14 38 - 57 14 41] CAPCOM
+Okay - you want them to go through the fuel cell shutdown procedure on 1?
+
+[57 14 42] FLIGHT
+EECOM?
+
+[57 14 43] EECOM
+Say again, FLIGHT?
+
+[57 14 43 - 57 14 45] FLIGHT
+Do you want them to go through the fuel cell shutdown procedure on 1?
+
+[57 14 47] EECOM
+That's affirmative.
+
+[57 14 48] FLIGHT
+Yes, Jack.
+
+[57 14 50] CAPCOM
+Because -
+
+[57 14 51 - 57 14 56] FLIGHT
+Because the tank 1 is still going down. Pressure and temp - pressure going down, temperature confirms it.
+
+[57 14 57] CAPCOM
+Okay.
+
+[57 15 05] FLIGHT
+EECOM, FLIGHT.
+
+[57 15 06] EECOM
+Go ahead, FLIGHT.
+
+[57 15 07 - 57 15 09] FLIGHT
+Of course, you want to ask yourself if you want to open 3.
+> Open-circuit FUEL CELL 3, perhaps?
+
+[57 15 13] EECOM
+Open 3?
+
+[57 15 14 - 57 15 15] FLIGHT
+Yeah. You don't want to do that?
+
+[57 15 16 - 57 15 18] EECOM
+No, we can leave 3 like it is. ??
+
+[57 15 26] GNC
+FLIGHT, GNC.
+
+[57 15 28] FLIGHT
+Standby.
+
+[57 15 31 - 57 15 32] FLIGHT
+What MAIN BUS do you want up?
+
+[57 15 33] EECOM
+MAIN A.
+
+[57 15 34] FLIGHT
+Just like we -
+
+[57 15 34] EECOM
+Just like it is.
+
+[57 15 35 - 57 15 37] FLIGHT
+Just like it is. FUEL CELL 2's on MAIN A.
+
+[57 15 39] EECOM
+That's affirm.
+
+[57 15 41] INCO
+FLIGHT, INCO.
+
+[57 15 41] FLIGHT
+Go.
+
+[57 15 42] INCO
+OMNI Bravo.
+
+[57 15 45 - 57 15 46] FLIGHT
+OMNI Bravo, too, Jack.
+
+[57 16 01] FLIGHT
+EECOM, FLIGHT.
+
+[57 16 03] EECOM
+Go ahead, FLIGHT.
+
+[57 16 04 - 57 16 07] FLIGHT
+How long can I leave that stuff off and still turn it back on? Any time at all?
+
+[57 16 08 - 57 16 11] EECOM
+Negative, FLIGHT. It's like it wipes it out.
+> As dramatized in the film, once the fuel cells are shut off they're done for good.
+
+[57 16 12] FLIGHT
+Alright.
+
+[57 16 20] FLIGHT
+EECOM, FLIGHT.
+
+[57 16 23 - 57 16 26] FLIGHT
+I don't know. That's what I'm asking, but we've got that shut off now.
+
+[57 16 31 - 57 16 32] FLIGHT
+Okay. When you can.
+
+[57 17 07] EECOM
+That's right, FLIGHT.
+
+[57 17 08 - 57 17 10] FLIGHT
+You're ready for that now. Sure, absolutely, huh EECOM?
+
+[57 17 11] EECOM
+That's it, FLIGHT.
+
+[57 17 12 - 57 17 16] FLIGHT
+It's still going down and it's not possible that thing is sort of bottoming out, is it?
+
+[57 17 17 - 57 17 22] EECOM
+Well, the rate is slower but we have a little less pressure too, so we would expect it to be a little bit slower.
+
+[57 17 23 - 57 17 25] FLIGHT
+You are sure, then; you want to close it.
+
+[57 17 26 - 57 17 27] EECOM
+Seems to me we have no choice, FLIGHT.
+
+[57 17 31] FLIGHT
+Well.
+
+[57 17 33 - 57 17 36] EECOM
+Standby one minute; our ?? went down again. One more.
+
+[57 17 50 - 57 17 51] EECOM
+We're go on that, FLIGHT.
+
+[57 17 52 - 57 17 54] FLIGHT
+Okay. That's your best judgement; we think we ought to close that off, huh?
+
+[57 17 55] EECOM
+That's affirmative.
+
+[57 17 56 - 57 18 01] FLIGHT
+It's dropping down to {234}. Yeah. Okay. FUEL CELL 1 REACTANTS coming OFF.
+1> psi.
+
+[57 18 20] GNC
+FLIGHT, GNC.
+
+[57 18 21] FLIGHT
+Go ahead.
+
+[57 18 22 - 57 18 30] GNC
+I think we can help the CMP a bit if we can tell them to enable BD ROLL in the DAP. He's got AC turned OFF and he's got AC selected in the DAP. Can we tell him to -
+
+[57 18 31 - 57 18 32] FLIGHT
+Is he under DAP control?
+
+[57 18 32 -] GNC
+Well, he goes to it occasionally -
+
+[57 18 34] FLIGHT
+Okay.
+
+[- 57 18 36] GNC
+- he's in - RATE CMD right - ACCEL CMD right now, but -
+
+[57 18 36 - 57 18 40] FLIGHT
+Okay. Okay. He's got AC off, huh?
+
+[57 18 40] GNC
+Right.
+
+[57 18 41 - 57 18 46] FLIGHT
+CAPCOM, when you get a spare minute there, Jack needs to enable BD ROLL in the DAP if he wants to use it.
+
+[57 18 47 - 57 18 49] FLIGHT
+If he wants to use the DAP, that is.
+
+[57 18 55 - 57 18 56] FLIGHT
+Jeez, it's really going down.
+
+[57 19 18] EECOM
+FLIGHT, EECOM.
+
+[57 19 18] FLIGHT
+Go.
+
+[57 19 19 - 57 19 25] EECOM
+Okay, is the - LM gotten all set up for using LM systems for supporting the CSM?
+
+[57 19 26] TELMU??
+That's affirmative.
+
+[57 19 27] FLIGHT
+Yes.
+
+[57 19 28 - 57 19 31] EECOM
+Okay. We'll get you time as to what it looks like we'll have for power here, shortly.
+
+[57 19 33 - 57 19 35] FLIGHT
+TELMU and CONTROL, FLIGHT.
+
+[57 19 35] CONTROL
+CONTROL here.
+
+[57 19 37 - 57 19 39] FLIGHT
+Keep reminding me of that heater; now I don't want to let that thing go to long.
+
+[57 19 40 - 57 19 48] CONTROL
+Okay. We're still trying to get some data - substantiating data on that, FLIGHT. My own personal opinion is the sooner we can take care of that, the better off I'm going to feel about it.
+
+[57 19 49 - 57 19 50] FLIGHT
+Yeah, okay, Hal. Go get 'em.
+
+[57 19 51 - 57 19 56] TELMU
+Okay; and FLIGHT, TELMU. We're working on a procedure right now that powers the LM internally from it's own power.
+
+[57 19 57 - 57 19 58] FLIGHT
+Yes. Fine.
+
+[57 19 58] INCO
+FLIGHT, INCO.
+
+[57 19 59] FLIGHT
+Go.
+
+[57 19 59 - 57 20 03] INCO
+Save you a little more power to turn the HIGH-GAIN antenna switch to OFF.
+
+[57 20 03 - 57 20 04] FLIGHT
+HIGH-GAIN antenna OFF?
+
+[57 20 05] INCO
+POWER switch OFF.
+
+[57 20 06 - 57 20 08] FLIGHT
+POWER switch. You're doing okay on the OMNIs, huh?
+
+[57 20 09 - 57 20 10] INCO
+Yes. We've got the 210s.
+
+[57 20 11 - 57 20 16] FLIGHT
+Okay. CAPCOM, he can turn the HIGH-GAIN antenna POWER switch OFF; we're doing fine on the OMNIs. We've got the big dish.
+
+[57 20 17] EECOM
+FLIGHT, EECOM.
+
+[57 20 17] FLIGHT
+Go.
+
+[57 20 18] EECOM
+Let's charge BATTERY A.
+
+[57 20 19 - 57 20 25] FLIGHT
+Yeah, I was wondering about that. Do you - let me get the HIGH-GAIN POWER off first, okay? Clint?
+
+[57 20 25] EECOM
+Okay.
+
+[57 20 33 - 57 20 35] FLIGHT
+How ?? amps will that give us, EECOM?
+
+[57 20 35 - 57 20 42] EECOM
+About 1.3, 1.4 amps - amp-hours per hour. The cost is about 4 and a half amps.
+
+[57 20 43 - 57 20 44] FLIGHT
+So it's no big deal on the amps.
+
+[57 20 44 - 57 20 48] EECOM
+That's right. And we'd like to use whatever time we have to put energy back into the battery.
+
+[57 20 50 - 57 20 52] FLIGHT
+Yeah, and I see O2 tank 1 pressure is 217.
+
+[57 20 53 - 57 20 54] EECOM
+That's affirm. It's still coming down.
+
+[57 20 55] FLIGHT
+CAPCOM, FLIGHT.
+
+[57 20 57 - 57 20 58] CAPCOM
+Go, FLIGHT - standby.
+
+[57 21 08 - 57 21 10] FLIGHT
+GUIDANCE, you want anything done with the CMC right now?
+
+[57 21 11 - 57 21 15] GUIDO
+FLIGHT, we would like a VERB 74 before they power it down.
+
+[57 21 15] FLIGHT
+VERB 74, CAPCOM.
+
+[57 21 16 - 57 21 17] CAPCOM
+You ready for it now?
+
+[57 21 18 - 57 21 21] GUIDO
+Standby, FLIGHT, let me the flight - site configured.
+
+[57 21 30] FLIGHT
+EECOM, FLIGHT.
+
+[57 21 32] EECOM
+Go ahead, FLIGHT.
+
+[57 21 33 - 57 21 35] FLIGHT
+Does the temperature in tank 2 correspond with the pressure reading?
+
+[57 21 36 - 57 21 37] EECOM
+Let me see how close it is, FLIGHT
+
+[57 21 50 -] GUIDO
+FLIGHT, GUIDANCE -
+
+[57 21 50] FLIGHT
+Go.
+
+[- 57 21 51] GUIDO
+- we're ready.
+
+[57 21 52 - 57 21 53] FLIGHT
+You have VERB 74 you want?
+
+[57 21 54] GUIDO
+Roger.
+
+[57 21 55] FLIGHT
+VERB 74.
+
+[57 22 00] EECOM
+FLIGHT, EECOM.
+
+[57 22 00] FLIGHT
+Go.
+
+[57 22 01 - 57 22 06] EECOM
+Temperature and pressure correspond - they verify that the pressure reading's right.
+
+[57 22 07] FLIGHT
+In tank 2?
+
+[57 22 13 - 57 22 14] EECOM
+That's right, FLIGHT. Tank 2.
+
+[57 22 14 - 57 22 21] FLIGHT
+Okay. Now, is it possible that we still have that tank and it's good? And we could somehow get power on {B} and use it?
+1> MAIN DC BUS B
+
+[57 22 22 - 57 22 24] EECOM
+Not likely, FLIGHT.
+
+[57 22 24 - 57 22 25] FLIGHT
+What's not likely, Clint?
+
+[57 22 25 - 57 22 29] EECOM
+Not likely for it to be able to - actually have anything left in the tank.
+
+[57 22 31] FLIGHT
+You don't think so?
+
+[57 22 32 - 57 22 35] EECOM
+I don't think so, but let's - we'll pulse (?) that one to you.
+
+[57 22 35] FLIGHT
+Alright.
+
+[57 22 35 - 57 22 38] EECOM
+Let me get you a time it looks like we've got on tank 1 here.
+
+[57 22 38] FLIGHT
+Alright.
+
+[57 22 57] FLIGHT
+TELMU, FLIGHT.
+
+[57 22 58] TELMU
+Go, FLIGHT.
+
+[57 22 59 - 57 23 11] FLIGHT
+Is there anything simple that we can refer the crew to to get them thinking about using the LM here? Have you got anything - checklist, paperwork that'll describe to them what your intentions are?
+
+[57 23 12 - 57 23 18] TELMU
+Negative, there's nothing documented in contingency. We're thinking about using the LM as a lifeboat, we have some procedures here. On the ground, though.
+
+[57 23 19 - 57 23 22] FLIGHT
+I'm sure you do. What do they amount to? Flying with the tunnel open?
+
+[57 23 23 - 57 23 27] TELMU
+Roger. Just a LM, low power - low - supplying power to the CSM.
+
+[57 23 28 - 57 23 29] FLIGHT
+Supplying power to the CSM?
+
+[57 23 30 - 57 23 31] TELMU
+Yes; about 5 amps.
+
+[57 23 33] FLIGHT
+To what?
+
+[57 23 35 - 57 23 36] TELMU
+To their {MAIN BUS B}.
+1> Which hasn't actually functioned since the accident.
+
+[57 23 37 - 57 23 45] FLIGHT
+Okay. Where did - well, MAIN B is in bad shape. We don't have anything on MAIN B right now. What's that power for? TELMU?
+
+[57 23 47 - 57 23 48] TELMU
+Just anything they might need it for.
+
+[57 23 49 - 57 23 50] FLIGHT
+GNC and EECOM?
+
+[57 23 50] ???
+Go, FLIGHT.
+
+[57 23 51 - 57 23 52] FLIGHT
+What power do you need from the LM?
+
+[57 24 01] FLIGHT
+That's right.
+
+[57 24 02] EECOM
+We confirm that here.
+
+[57 24 07 - 57 24 09] EECOM
+FLIGHT, EECOM. Looks like we've got about 40 minutes left in that tank.
+
+[57 24 12] EECOM
+That's affirm.
+
+[57 24 13] FLIGHT
+Yes.
+
+[57 24 16 - 57 24 18] EECOM
+Like to get battery 1 charged, FLIGHT.
+
+[57 24 21] FLIGHT
+Now -
+
+[57 24 45 - 57 24 52] FLIGHT
+CAPCOM, just for his information we're not going to do a DPS burn until we hook around the Moon. Let them know that. And that's at about 79 +30.
+> This later turns out to be incorrect. FLIGHT is thinking of the PC+2 burn to send the spacecraft home from the far side of the Moon, but one correction burn ends up happening before then.
+
+[57 25 24] GUIDO
+FLIGHT, GUIDANCE.
+
+[57 25 24] FLIGHT
+Go ahead.
+
+[57 25 25 - 57 25 29] GUIDO
+We didn't get a good recording on that VERB 74, we'll need them to do it again.
+
+[57 25 31] EECOM
+FLIGHT, EECOM.
+
+[57 25 31] FLIGHT
+Go ahead.
+
+[57 25 32 - 57 25 40] EECOM
+We'd like to get BATTERY A on charge, and we'd like to go ahead and get some more power off if we can. I'm not sure what the situation is on getting the computer up -
+
+[57 25 40 - 57 25 50] FLIGHT
+Clint, let me ask you now, is there anything you want to do - trying to pump up the other tank? Anything? Are you satisfied that both of these tanks are going down and we're past helping them? Even with batteries? That's what I'm getting at.
+
+[57 25 53 - 57 25 56] FLIGHT
+I'm trying to be sure that you're satisfied that there's nothing else we can do.
+
+[57 25 57 - 57 26 02] EECOM
+About all we can do is power down and let heat leak help us some - which is probably going to be trivial.
+
+[57 26 03 - 57 26 05] FLIGHT
+Okay. There's nothing else you want to try.
+
+[57 26 07 - 57 26 13] FLIGHT
+That's the only reason I'm delaying on this BATTERY A charge, Clint; to be sure you've gone through everything and you don't have any other tricks up your sleeve.
+
+[57 26 13 - 57 26 14] EECOM
+Sure don't, FLIGHT.
+
+[57 26 15 - 57 26 17] FLIGHT
+Okay, what are other power do you want to take off before we start the charge?
+
+[57 26 18 - 57 26 23] EECOM
+Well, looks like we're going to get into the control area. Whatever they can give up we'll have to come up with, here.
+
+[57 26 23 - 57 26 25] FLIGHT
+Okay, are you ready to go ahead and charge BATTERY A?
+
+[57 26 26] EECOM
+That's affirmative.
+
+[57 26 26 - 57 26 28] FLIGHT
+CAPCOM, why don't they get all they can in BATTERY A?
+
+[57 26 29 - 57 26 35] CAPCOM
+Okay, and Jack also asked me if we wanted to get a P52 and get the LM platform up with the -
+
+[57 26 35 - 57 26 37] FLIGHT
+What do you think of that? GUIDANCE?
+
+[57 26 38] GUIDO
+Go ahead, FLIGHT.
+
+[57 26 39 - 57 26 48] FLIGHT
+CONTROL. Question is, do you want to do a quick P52 on the CSM so that we can do an align to the LM? I don't know if we want to keep the LM platform up all that time anyway.
+
+[57 26 47 - 57 26 51] CONTROL
+That's too much power in my mind, FLIGHT, to keep that thing running for all that time.
+
+[57 26 51 - 57 26 52] FLIGHT
+Okay, therefore you don't -
+
+[57 26 53] CONTROL
+My vote is not to do that.
+
+[57 26 54] FLIGHT
+Yeah.
+
+[57 26 55] GUIDO
+Mine, too.
+
+[57 26 56 - 57 27 01] FLIGHT
+Okay, CAPCOM, we don't see any need in doing that, because we wouldn't be using the LM platform until about 79 hours.
+
+[57 27 03 - 57 27 08] CAPCOM
+Okay, you don't want to worry about the LM platform. We'll align it later with the AOT, huh?
+
+[57 27 11] CONTROL
+FLIGHT, CONTROL.
+
+[57 27 16] FLIGHT
+Yeah.
+
+[57 27 41 - 57 27 42] FLIGHT
+Did you say BATTERY A charge?
+
+[57 27 42] CAPCOM
+Yup.
+
+[57 27 43 - 57 27 45] FLIGHT
+Okay. EECOM, we charging A? Watch it, there, okay?
+
+[57 27 46] EECOM
+I'm watching; it's fine.
+
+[57 27 48] FLIGHT
+Okay.
+
+[57 27 51] FLIGHT
+EECOM?
+
+[57 27 52] EECOM
+Go, FLIGHT.
+
+[57 27 53 - 57 28 03] FLIGHT
+Go one more time around that room. We're letting this thing go down, although I realize we don't have anymore thoughts to do, but I want to be sure that if there's anything we can do here, that we're doing it. To keep your -
+
+[57 28 03 - 57 28 08] EECOM
+Just power down, FLIGHT. All we can power down will put us in that much better configuration.
+
+[57 28 08 - 57 28 12] FLIGHT
+Okay, I got that part but are there any other things that you can do besides that, is what I'm getting at?
+
+[57 28 13] EECOM
+Negative, FLIGHT.
+
+[57 28 14 - 57 28 19] FLIGHT
+Okay. GNC, can you help EECOM there as to what else you might power down, if anything? I don't know whether you can or not.
+
+[57 28 20 - 57 28 26] GNC
+Roger, FLIGHT. We'll work on that, although we're in an ATTITUDE HOLD situation here, and I'd hate to give up the CMC and the IMU right now.
+
+[57 28 29 - 57 28 31] FLIGHT
+Yeah, well the CMC doesn't matter.
+> The SCS can perform an ATT HOLD without input from the CMC.
+
+[57 28 35] GNC
+Okay, we'll work on it, FLIGHT.
+
+[57 28 35 - 57 28 38] EECOM
+FLIGHT, we're not going to have anything in about 40 minutes here.
+
+[57 28 50] EECOM
+FLIGHT, EECOM.
+
+[57 28 56] EECOM
+FLIGHT, EECOM.
+
+[57 28 58] FLIGHT
+Go ahead.
+
+[57 28 59 - 57 29 04] EECOM
+Okay, we've got an update on the time. Looks like we've got about 18 minutes until we get down to 100psi, and that's the cutoff point.
+
+[57 29 05 - 57 29 07] FLIGHT
+Alright. But we're charging BATTERY A.
+
+[57 29 07 - 57 29 09] EECOM
+Well, that doesn't mean much in 18 minutes, though. But we're doing all we can do.
+
+[57 29 10 - 57 29 13] FLIGHT
+Alright. CONTROL and GUIDANCE, one more time.
+
+[57 29 14] GUIDO
+Go ahead.
+
+[57 29 15] CONTROL
+Go, FLIGHT.
+
+[57 29 15 -] FLIGHT
+Will it do any good at all to - TELMU, FLIGHT -
+
+[57 29 19] TELMU
+Go, FLIGHT.
+
+[- 57 29 29] FLIGHT
+- join in here. The question is, should we try to do a quick align with the CSM and do an alignment in the LM? Can we keep an alignment in the LM up until 79 hours? Can you keep that kind of power on?
+
+[57 29 31] TELMU??
+Standby.
+
+[57 29 32 - 57 29 37] FLIGHT
+The pilots are reporting it's difficult to do that alignment from scratch in the LM docked.
+
+[57 29 40 - 57 29 42] FLIGHT
+And we get a tradeoff here as to whether we can stand that kind of power.
+
+[57 29 45] TELMU??
+Standby 1, FLIGHT.
+
+[57 29 47 - 57 29 48] FLIGHT
+Alright. Pronto.
+
+[57 29 57 - 57 30 13] GNC
+FLIGHT, GNC. We'd save a little power if we turn all the jets off in QUAD C. We're pulsing those jets and we suspect that - we've closed the PROP ISOL VALVES in QUAD C so it's doing us no good right now, so we need to turn off all the jets in the quad.
+> Even with the propellant feed lines closed, with the thruster still on power would still be spent powering the solenoids in an attempt to fire.
+
+[57 30 14 -] FLIGHT
+Oh, okay, RCS SELECT -
+
+[57 30 15] GNC
+Right.
+
+[- 57 30 17] FLIGHT
+RCS SELECT is ??? check.
+
+[57 30 27 - 57 30 30] FLIGHT
+EECOM? Any need to dump water?
+
+[57 30 34 - 57 30 35] EECOM
+Negative on that, FLIGHT.
+
+[57 30 36 - 57 30 37] FLIGHT
+No sweat there, {Jack}.
+1> CAPCOM Jack Lousma, still on shift since before the accident.
+
+[57 30 46] EECOM
+FLIGHT, EECOM.
+
+[57 30 47] FLIGHT
+Go ahead.
+
+[57 30 48 - 57 30 51] EECOM
+They get the {POWER AMPL} off? I heard them talking about it a while ago. I don't know.
+1> The high-gain antenna power amplifier.
+
+[57 30 51] FLIGHT
+No, they don't.
+
+[57 30 53 - 57 30 56] EECOM
+We can eliminate that central in the 85 foot gainway.
+
+[57 30 57 -] INCO
+That's not exactly true -
+
+[57 30 59] EECOM
+Okay.
+
+[- 57 31 02] INCO
+We're looking at it to see how far down we can go.
+
+[57 31 02 - 57 31 05] EECOM
+Alright. I believe GNC has got some things we can turn down here.
+
+[57 31 06 - 57 31 11] FLIGHT
+Yeah, he just - AUTO RCS in Quad Charlie can go off; we've got that Quad PROP ISOL'd. Which I didn't know, but.
+
+[57 31 12] EECOM
+Alright.
+
+[57 31 13 - 57 31 15] FLIGHT
+Quad Charlie AUTO RCS - GNC, FLIGHT.
+
+[57 31 17] FLIGHT
+GNC, FLIGHT.
+
+[57 31 19] GNC
+Go ahead, FLIGHT.
+
+[57 31 20 - 57 31 23] FLIGHT
+Confirm: Quad Charlie is PROP ISOL'd off, right?
+
+[57 31 24 -] GNC
+Well, we haven't confirmed that, FLIGHT, but it appears that that's the situation we're in. The shock of the O2 thing, it probably closed those valves -
+
+[57 31 35] FLIGHT
+Oh, you think -
+
+[- 57 31 38] GNC
+- and we haven't been able to open them because those are powered off of MAIN B.
+
+[57 31 40] FLIGHT
+Mm. Okay.
+
+[57 31 41 - 57 31 42] GNC
+But A appears to be working okay.
+
+[57 31 43 - 57 31 50] FLIGHT
+Okay. We think Quad Charlie's PROP ISOL'd off, Jack, so in that case we ought to turn off the AUTO RCS SELECT; that'll save a little power. Probably not much.
+
+[57 31 54 - 57 31 55] CAPCOM
+Yeah - you want AUTO RCS OFF on Charlie?
+
+[57 31 56] FLIGHT
+Uh huh.
+
+[57 31 57 - 57 32 01] CAPCOM
+How about antennas? How are we doing? Did I hear them give me some bad comm there?
+
+[57 32 02 - 57 32 04] INCO
+We're in pretty good shape right now, FLIGHT.
+
+[57 32 04] CAPCOM
+Okay.
+
+[57 32 05] FLIGHT
+EECOM, FLIGHT.
+
+[57 32 06] EECOM
+Go ahead, FLIGHT.
+
+[57 32 07 - 57 32 16] FLIGHT
+Let me try one more time. Is it possible that if we got power to MAIN B that we could get TANK 2 powered up and up the pressure?
+
+[57 32 17 - 57 32 24] EECOM
+We don't feel like that's a possibility, FLIGHT. We might just be able to get power to B but we don't feel like we'll be able to get anything out of TANK 2.
+
+[57 32 24 - 57 32 26] FLIGHT
+Okay, now why is that? Tell me why.
+
+[57 32 27 - 57 32 32] EECOM
+It's because the numbers we're looking at indicate that it's essentially {ambient}.
+1> Pressure-wise.
+
+[57 32 33] FLIGHT
+Hold on. ???
+
+[57 32 35] FLIGHT
+Okay.
+
+[57 32 39 - 57 32 41] FLIGHT
+GNC, watch we don't pick up any rates now, will you please?
+
+[57 32 42] GNC
+Okay, FLIGHT.
+
+[57 32 52] FLIGHT
+EECOM, FLIGHT.
+
+[57 32 54] EECOM
+Go, FLIGHT.
+
+[57 32 54 - 57 32 56] FLIGHT
+How long have we got now in the cell?
+
+[57 32 56 - 57 32 58] EECOM
+Last account we had 18 minutes, let me get an update.
+
+[57 32 58 - 57 33 02] FLIGHT
+Okay. TELMU, what have we got to do to power up to get some comm on the LM?
+
+[57 33 02 - 57 33 05] TELMU
+Okay FLIGHT, we've got a procedure here that gets power up first on the LM.
+
+[57 33 14 - 57 33 15] FLIGHT
+Yeah. EECOM, FLIGHT.
+
+[57 33 16] EECOM
+Go, FLIGHT.
+
+[57 33 17 - 57 33 19] FLIGHT
+Yeah, that gets us power but what do you want up? Just the comm?
+
+[57 33 21 - 57 33 23] EECOM
+We'll have to have an environment for the crew, the way this can be -
+
+[57 33 23 - 57 33 30] FLIGHT
+That's what I'm asking you, EECOM and TELMU. We've got to figure out how - we're just about out of CSM talkin'.
+
+[57 33 30] TELMU
+Okay.
+
+[57 33 31 - 57 33 33] FLIGHT
+What do you want them to power up in the LM?
+
+[57 33 33] TELMU
+Standby 1.
+
+[57 33 35] - EECOM
+FLIGHT, EECOM -
+
+[57 33 35] FLIGHT
+Alright.
+
+[- 57 33 38] EECOM
+- ?? here that we'll have to live out at the LM.
+
+[57 33 38] FLIGHT
+I understand.
+
+[57 33 41] EECOM
+Okay.
+
+[57 33 55 - 57 34 01] FLIGHT
+We've got a power up procedure from TELMU but we've got to start thinking about what you want pow - configured in the ECS and the comm.
+
+[57 34 01] EECOM
+Right.
+
+[57 34 02 -] FLIGHT
+That gets power in the LM, and then we'll get you some comm and TM here.
+
+[57 34 05] EECOM
+Yup.
+
+[- 57 34 12] FLIGHT
+Do we need to send any power to the CSM? For the platform, or anything? {Or, can we even do that?}
+1> Sending power back over to the CSM wasn't part of the original design consideration.
+
+[57 34 13 - 57 34 14] EECOM
+I'm not sure we can do that yet.
+
+[57 34 14] FLIGHT
+Can't do that.
+
+[57 34 17 - 57 34 18] FLIGHT
+That was a long time ago.
+
+[57 34 18 - 57 34 20] CAPCOM
+Okay. When do you want them to start working on this procedure?
+
+[57 34 21 - 57 34 27] FLIGHT
+Well, tell them they can start thinking about the power - going over and powering right now because they're going to have lights problem in a little while in the CSM.
+
+[57 34 27 - 57 34 35] CAPCOM
+Okay, I'll send it up. And they wanted to know if we wanted them to try to reset the PROPELLANT VALVES in the secondaries.
+
+[57 34 36] GNC
+Yeah, roger, FLIGHT.
+
+[57 34 37] FLIGHT
+GNC?
+
+[57 34 38 - 57 34 41] GNC
+That won't do any good because we lost MAIN B and those valves are powered off of B.
+
+[57 34 40 - 57 34 43] FLIGHT
+No - no, CAPCOM. It's off MAIN B.
+
+[57 35 34] FLIGHT
+EE - TELMU, FLIGHT.
+
+[57 35 36] TELMU
+Go, FLIGHT.
+
+[57 35 36 - 57 35 40] FLIGHT
+Does this title - this PG&E (??) page - mean anything more than just power up the LM?
+
+[57 35 40] TELMU
+No. That's all.
+
+[57 35 41] FLIGHT
+Alright.
+
+[57 35 44] EECOM
+FLIGHT, EECOM.
+
+[57 35 52] EECOM
+FLIGHT, EECOM.
+
+[57 35 53] FLIGHT
+Go ahead.
+
+[57 35 53 - 57 36 03] EECOM
+We'd like to go ahead and power down the CSM all we can except leave that battery charger on. Of course, leave a little light because we're going to be there in 15 minutes anyway.
+
+[57 36 03 - 57 36 15] FLIGHT
+CAPCOM, we're going to out of power in the CSM in 15 minutes in the fuel cells. We want them to start getting the tunnel clear and get ready and get over there and power up the LM as soon as they can, they ought to send somebody over there. EECOM, what ought they do to leave the cockpit?
+> At this point, the CSM is clearly a lost cause. But in the 15 minutes of power left, the controllers and crew need to ensure that the spacecraft life support, illumination, communications, and navigation are all ready to go in the LM, or the crew will be flying blind in every possible way: unconscious, in the dark, with no support or instructions from the ground, and with no idea which way the spacecraft is pointing.
+
+[57 36 16] EECOM
+Say again?
+
+[57 36 17 - 57 36 25] FLIGHT
+EECOM, GNC. What ought we do to leave the CSM cockpit? We're going to lose power on the buses, now what do you want to switch off?
+
+[57 36 27 - 57 36 28] EECOM
+Power it down, FLIGHT. All of it.
+
+[57 36 27 - 57 36 30] GNC
+The CMC and the IMU, mainly, FLIGHT.
+
+[57 38 24] FLIGHT
+That's the problem.
+
+[57 38 41] EECOM
+FLIGHT, EECOM.
+
+[57 38 42] FLIGHT
+Go ahead.
+
+[57 38 43 - 57 38 46] EECOM
+Last ditch down on O2 tank 2 is turn the fans on.
+
+[57 38 48 - 57 38 49] EECOM
+That'll cost about 1 amp.
+
+[57 38 49 - 57 38 50] FLIGHT
+What are they off? MAIN A?
+
+[57 38 52 - 57 38 53] EECOM
+They're on AC.
+
+[57 38 54 - 57 38 56] FLIGHT
+Okay. Fans in tank 2 ON.
+
+[57 38 57] EECOM
+Fans, tank 2, ON.
+
+[57 38 59] FLIGHT
+CAPCOM, FLIGHT.
+
+[57 39 02 - 57 39 11] FLIGHT
+Tell them to try the fans in tank 2. They're off the AC and last ditch stand we'll try the fans in tank 2. Turn the fans on in TANK 2, it only takes 1 amp.
+
+[57 39 11] CAPCOM
+Okay.
+
+[57 39 26 - 57 39 28] FLIGHT
+TELMU, GUIDANCE, and CONTROL; FLIGHT.
+
+[57 39 28] CONTROL
+CONTROL, here.
+
+[57 39 28] GUIDO??
+Go, FLIGHT.
+
+[57 39 29 - 57 39 31] FLIGHT
+Do you know status of the CSM platform right now?
+
+[57 39 33 - 57 39 37] GUIDO
+Negative, FLIGHT. It's - good as far as we know.
+
+[57 39 38 - 57 39 42] FLIGHT
+No, no, no. Do you know its orientation? Do you know its orientation?
+
+[57 39 42 - 57 39 43] GUIDO
+It's PTC REFSMMAT.
+
+[57 39 44 - 57 39 45] FLIGHT
+Yeah. You know what you've got, and so okay.
+
+[57 39 49] FLIGHT
+EECOM?
+
+[57 39 50] EECOM
+Go, FLIGHT.
+
+[57 39 51 - 57 39 53] FLIGHT
+Did he get it? Fans 2 on?
+
+[57 39 53 - 57 39 54] EECOM
+We can't tell, FLIGHT.
+
+[57 39 55 - 57 39 56] FLIGHT
+He got it, did he, Jack? Number 2 fans?
+
+[57 39 57] CAPCOM (off loop)
+He said he got it.
+
+[57 39 58] FLIGHT
+Okay.
+
+[57 39 59 - 57 40 12] FLIGHT
+GUIDANCE, CONTROL, and TELMU. The point is, should we, quick - if you guys can't run out the power steady, run out - align the - your IMU to the CSM while we study the problem? See what we got in the way of power?
+
+[57 40 13 - 57 40 18] FLIGHT
+Tom Stafford is concerned that they'll have a hell of a time getting the platform aligned in the LM with AOT.
+> It was already known that sun glare could cause problems finding star positions with the vehicles docked. On top of that, debris would prove a huge issue once this procedure was actually attempted.
+
+[57 40 19] GUIDO??
+I agree, FLIGHT.
+
+[57 40 20] CONTROL
+I agree, too, FLIGHT.
+
+[57 40 21 - 57 40 22] FLIGHT
+Okay. What's should we tell them to do?
+
+[57 40 24 - 57 40 27] CONTROL
+It's going to take about 15, 20 minutes as I understand it to do that procedure, that right GUIDANCE?
+
+[57 40 27] FLIGHT
+Which procedure?
+
+[57 40 28] GUIDO
+The docked alignment -
+
+[57 40 29] CONTROL
+Docked align.
+
+[57 40 30 - 57 40 31] CAPCOM
+How about you give me an Activation page?
+
+[57 40 31 -] FLIGHT
+How about - a -
+
+[57 40 32] GUIDO
+Well, how long does it take to -
+
+[- 57 40 36] FLIGHT
+- how about a coarse align? At least you get - at least you start in -
+
+[57 40 36 - 57 40 37] GUIDO
+Okay, that's in the ballpark, FLIGHT; that's correct.
+
+[57 40 38 - 57 40 45] FLIGHT
+Okay, now. What do you - what do we do to get this done? EECOM, you got all my power in the LM with that procedure? What power have you got on the LM?
+> It's possible FLIGHT meant to ring TELMU here.
+
+[57 40 45] GUIDO
+FLIGHT, GUIDANCE.
+
+[57 40 46] FLIGHT
+Go ahead.
+
+[57 40 47 -] GUIDO
+We ought to go ahead and go a P52 first in the CSM and get -
+
+[57 40 49 -] FLIGHT
+That's what I'm asking you -
+
+[- 57 40 51] GUIDO
+- a reference. Right -
+
+[- 57 40 55] FLIGHT
+- do you know? Well, do you have one now? We don't have much time! Do you have a good one now? As far as you know?
+
+[57 40 56] GUIDO
+A good alignment?
+
+[57 40 57 - 57 40 59] FLIGHT
+Yeah! That's what I'm asking! Do you have a good alignment?
+
+[57 41 01] GNC
+FLIGHT, GNC.
+
+[57 41 02 - 57 41 04] FLIGHT
+I'm not worried about the tenths of a degree, either.
+
+[57 41 05] EECOM
+FLIGHT, EECOM.
+
+[57 41 05 - 57 41 06] GUIDO
+Well, it ought to be that good, FLIGHT.
+
+[57 41 06 -] FLIGHT
+Yeah, okay. So we don't need to do a 52 -
+
+[57 41 07] EECOM
+FLIGHT, EECOM.
+
+[- 57 41 09] FLIGHT
+Go ahead.
+
+[57 41 09 - 57 41 13] EECOM
+Okay, we need to open up the surge tank. The manifold pressure is dropping.
+
+[57 41 16 - 57 41 22] FLIGHT
+Uh - okay. Would you rather power that from the LM - pump that up from the LM?
+
+[57 41 22 - 57 41 26] EECOM
+Well, we - we've got to get into the LM first, FLIGHT.
+
+[57 41 27 - 57 41 30] FLIGHT
+CAPCOM, get them going in the LM. We've got to get the oxygen on in the LM.
+
+[57 41 36] TELMU
+FLIGHT, TELMU.
+
+[57 41 44] TELMU
+FLIGHT, TELMU.
+
+[57 41 45] FLIGHT
+Go ahead.
+
+[57 41 46 -] TELMU
+Okay, we have a procedure here. Probably the easiest thing is to refer them to Activation -
+
+[57 41 52] FLIGHT
+Go.
+
+[57 41 52] EECOM
+FLIGHT, EECOM.
+
+[- 57 41 54] TELMU
+- 11 and Activation 12.
+
+[57 41 55] FLIGHT
+What will that do for us?
+
+[57 41 56 - 57 41 57] TELMU
+That gives them the comm -
+
+[57 41 57 -] FLIGHT
+Okay, Activation 11 -
+
+[57 42 00] TELMU
+And 12.
+
+[- 57 42 01] FLIGHT
+- and 12. 
+
+[57 42 03 - 57 42 04] TELMU
+13, step 1.
+
+[57 42 05 - 57 42 06] FLIGHT
+Okay. Got that, Jack?
+
+[57 42 06 - 57 42 08] TELMU
+And cross out the VHF stuff.
+
+[57 42 08 -] FLIGHT
+Okay -
+
+[57 42 09] EECOM
+FLIGHT, EECOM.
+
+[- 57 42 10] FLIGHT
+- does that give us ECS also?
+
+[57 42 11 - 57 42 12] TELMU
+That gives us glycol circulation.
+
+[57 42 13 - 57 42 15] FLIGHT
+Okay, how about ECS? Come on, I need some oxygen.
+
+[57 42 16 - 57 42 17] EECOM
+Disregard the surge tank request.
+
+[57 42 17] FLIGHT
+Alright.
+
+[57 42 18] FLIGHT
+Give me some oxygen.
+
+[57 42 19] TELMU
+Negative.
+
+[57 42 19 - 57 42 20] FLIGHT
+Do I need some oxygen right now?
+
+[57 42 21 - 57 42 26] TELMU
+Roger - just go to Activation {step} 1.
+1> TELMU probably did not mean to say "step" here.
+
+[57 42 26 - 57 42 27] FLIGHT
+And start there, huh?
+
+[57 42 28] TELMU
+Right.
+
+[57 42 29] FLIGHT
+And go how many steps? Activation -
+
+[57 42 32 - 57 42 34] TELMU
+Just 1. Step 3.
+
+[57 42 36] FLIGHT
+Uh.
+
+[57 42 37 - 57 42 39] TELMU
+Activation 1, step 3, FLIGHT.
+
+[57 42 39] FLIGHT
+Step 3?
+
+[57 42 40] TELMU
+Right.
+
+[57 42 40 - 57 42 42] FLIGHT
+And then what? Activation 11?
+
+[57 42 43] TELMU
+Activation 11 -
+
+[57 42 44] FLIGHT
+12?
+
+[57 42 45 - 57 42 47] TELMU
+12, 13 step 1.
+
+[57 42 48 - 57 42 50] FLIGHT
+Okay. Got that, CAPCOM?
+
+[57 42 51 - 57 42 55] CAPCOM
+I've got Activation 1 step 3; Activation 11, 12, 13 step 1.
+
+[57 42 55 - 57 42 59] TELMU
+Roger, and FLIGHT, in Activation 11, omit step 1.
+> This is the VHF cross-out.
+
+[57 42 59] FLIGHT
+Alright.
+
+[57 43 01 - 57 43 07] FLIGHT
+Okay. That'll give them what, now; glycol flow, comm, and some ECS? Is that right? That's what we want.
+
+[57 43 08] TELMU
+Roger.
+
+[57 43 08 - 57 43 09] FLIGHT
+Okay. That's what we want.
+
+[57 43 26] TELMU
+FLIGHT, TELMU.
+
+[57 43 26] FLIGHT
+Go.
+
+[57 43 27 - 57 43 31] TELMU
+One other input: we also need the DEMAND REGs to CABIN.
+
+[57 43 32] FLIGHT
+Roger.
+
+[57 43 55 - 57 43 59] FLIGHT
+Do you want them to do Activation 1 down to step 3 - TELMU?
+
+[57 44 00] TELMU
+That's affirmative.
+
+[57 44 01 - 57 44 02] FLIGHT
+It's down to step 3.
+
+[57 44 03 - 57 44 04] FLIGHT
+Down to step 3.
+
+[57 44 09] FLIGHT
+That's 12 and 13.
+
+[57 44 11 - 57 44 12] FLIGHT
+And DEMAND REGs to CABIN.
+
+[57 44 17] FLIGHT
+Right.
+
+[57 44 19 - 57 44 22] FLIGHT
+TELMU, when do we do DEMAND REGs to CABIN? That's the end of those three steps?
+
+[57 44 22 - 57 44 23] TELMU
+At the end of the sequence.
+
+[57 44 23 - 57 44 25] FLIGHT
+At the end of the sequence, DEMAND REGs to CABIN, Jack.
+
+[57 44 27 - 57 44 32] FLIGHT
+And I - I'm still not satisfied he's got Activation 1 down to step 3.
+
+[57 44 37 - 57 44 42] EECOM
+FLIGHT, EECOM. The voltage is going to begin to drop and we'll need to power down with it.
+
+[57 44 42 - 57 44 45] FLIGHT
+Okay. What do you want them to do? Turn everything off?
+
+[57 44 45 - 57 44 49] EECOM
+Leave the lights on, and - leave the lights on. As far as they need it.
+
+[57 44 49 - 57 44 50] FLIGHT
+And where do they power it from, the LM?
+
+[57 44 51 - 57 44 57] EECOM
+That'll be power from the CSM as long as we have anything. We will bring up BAT A when we get down about 25 volts or so.
+
+[57 44 57] FLIGHT
+Why?
+
+[57 44 59 - 57 45 02] EECOM
+Until they get into the LM and keep their lights up and whatever they have to have.
+
+[57 45 03 - 57 45 07] GUIDO?
+We don't want to store the IMU alignment in the CSM right now, so we've got to keep that up until you get the LM aligned, right?
+
+[57 45 08 - 57 45 09] FLIGHT
+Mm. Okay.
+
+[57 45 11 - 57 45 13] EECOM
+We'll do that by bringing BAT A on MAIN A.
+
+[57 45 14 - 57 45 16] FLIGHT
+Well, we've got to quickly do that or we're going to be losing it.
+
+[57 45 16 - 57 45 17] EECOM
+We've got 3 or 4 minutes, FLIGHT.
+> FLIGHT appears to laugh at this line.
+
+[57 45 18] FLIGHT
+Yeah -
+
+[57 45 19 - 57 45 23] GUIDO?
+But the thing is, we want to pass to them - when he does see it go down. Or, start going down. To get BATTERY A On.
+
+[57 45 24] FLIGHT
+Is that -
+
+[57 45 25] GUIDO
+To watch it.
+
+[57 45 25 - 57 45 29] FLIGHT
+Now, you think we really want to spend that to keep the platform on? We're using the entry batteries, too.
+
+[57 45 31 - 57 45 33] EECOM
+But we'd take out a battery we won't get back.
+
+[57 45 34] FLIGHT
+That's right.
+
+[57 45 36 - 57 45 41] FLIGHT
+No. Down to step 3. Down to step 3. All the way down to step 3.
+
+[57 45 49 - 57 45 59] FLIGHT
+Yeah. Alright, okay. I just want to be sure we're sure we want to do that. And quick, get a coarse align. CONTROL and TELMU, will the steps I got give me a coarse align?
 

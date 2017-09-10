@@ -5,11 +5,20 @@ Appears to be a notice/error normally shown during LM extraction. I'm not sure w
 210 (210s)
 This referred to big 210-foot antennas on the ground, which were sensitive enough to receive high-bitrate data from the weaker omnidirectional antennas.
 
+Acceleration Command (ACCEL CMD)
+Similar to but independent from DIRECT in that the ACA stick would directly fire the thrusters, thus changing the attitude rates. When the stick was let go, the thrusters would stop, maintaining the rates. Could be engaged per-axis. Unlike DIRECT, ACCEL CMD operated proportionally, and relied on the SCS ECA.
+
 AC electrical bus (AC bus, AC buses, AC BUS 1, AC BUS 2, AC BUS 3, AC 1, AC 2, AC 3)
 There were three inverters connected to the two DC electrical buses in the CSM which transformed the DC power into AC for some of the spacecraft systems. Motors, for instance, are far easier to engineer with AC rather than DC power.
 
+Attitude Control Assembly (ACA, RHC)
+Also known as the Rotational Hand Controller (RHC), the ACA was a small joystick that allowed control of the attitude rates of the spacecraft. It could manipulate all three axes, and had multiple modes of control operation.
+
 Aerozine
 A 50/50 mixture of hydrazine and UDMH. Both of these chemicals are extraordinarily unpleasant.
+
+Alignment Optical Telescope (AOT)
+aoeuaoeu
 
 Apollo Guidance Computer (AGC)
 The main computer managing navigation, autopilot, and other miscellenia. The same hardware and software were used in both the CM and the LM. The primary interface to the AGC was the DSKY.
@@ -60,10 +69,13 @@ Descent Propulsion System (DPS)
 The Lunar Module had two engines, both of which burned the same Aerozine/nitrogen tetroxide combination as the other Apollo engines. The DPS was part of the descent stage of the Lunar Module, and was left behind on the Moon to save weight. It was unique in that it could throttle down to 10% of full thrust.
 
 DIRECT
-Direct-control mode. A spacecraft pilot would use the ACA and TTCA control sticks to directly fire thrusters to move the spacecraft about with no automated intervention.
+A setting for the control assemblies. With this engaged, a spacecraft pilot could push the ACA control stick to near the limit of its tilt to directly engage the solenoids to fire the thrusters, bypassing the SCS entirely.
 
 Docking Index
 As the connection between the CSM and LM was round, it was possible to dock at a slightly "twisted" angle if their roll angles were slightly different. The error here could be read off of little marks in the tunnel connecting the two craft.
+
+Electronics Control Assembly (ECA)
+The logic center at the heart of the SCS. It sat between the ACA/TTCA control sticks and the thrusters, and could translate commands from one to the other in different ways.
 
 Glycol
 A water/glycol mix was circulated around the spacecraft to heat-producing components such as the computer as a cooling system. A combination of heat transfer to cryogenic O2 and evaporation was used to dissipate the heat. Glycol was added to the water as an antifreeze.
@@ -132,13 +144,16 @@ Pitch
 One of three measures of a spacecraft's attitude. Think of a plane pointing up or down to climb or descend. Also used to describe the aim of the steerable antenna.
 
 PGNCS
-Pronounced "pings," the Primary Guidance, Navigation, and Control System was a collective name for a series of components including the IMU, AGC, and star-sighting sextant that collectively provided on-board determination and control of spacecraft position and attitude.
+Pronounced "pings," the Primary Guidance, Navigation, and Control System was a collective name for a series of components including the IMU, AGC, and AOT that collectively provided on-board determination and control of spacecraft position and attitude.
 
 Probe and Drogue
 The CM and LM docked along the access tunnel the crew use to transit the two. This means that the guidepost (probe) and dish (drogue) you remember from the docking sequence in the film end up inside the tunnel, and thus had to be unmounted and moved aside.
 
 Pulse Code Modulation (PCM)
 A method of encoding digital data into radio wave signals, still in use today for various purposes.
+
+Rate Damping
+In many of the SCS/ECS control modes, the spacecraft would automatically fire thrusters to bring its rates to zero or near-zero.
 
 Rates
 The rate of change in the spacecraft's attitude. Sometimes used to express an acceleration rather than a speed: "giving us rates."
@@ -215,6 +230,9 @@ The Control Officer was essentially the GNC for the Lunar Module, in charge of t
 
 EECOM
 The Electrical, Environmental and Consumables Manager managed the lowest level hardware in the CSM for power generation and consumption, electrical distribution, air and water, and the cryogenic gas tanks required for all of the above.
+
+FDO
+The Flight Dynamics Officer managed the spacecraft trajectory, understanding its current path and managing changes to it to deliver the spacecraft to its destination.
 
 GNC
 The Guidance, Navigation, and Controls Systems Engineer monitored the hardware systems that ultimately sent the spacecraft where it had to go: the propulsion and fuel thereof, the navigation computer hardware.

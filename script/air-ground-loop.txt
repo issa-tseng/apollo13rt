@@ -73,7 +73,7 @@ This is Houston. Say again, please.
 Roger. MAIN B UNDERVOLT.
 
 [55 55 57 - 55 55 59] CAPCOM
-Okay, stand by, 13. We're looking at it.
+Okay, standby, 13. We're looking at it.
 
 [55 56 09 - 55 56 32] LMP
 Okay. Right now, Houston the voltage is looking good. And we had a pretty large bang associated with the CAUTION AND WARNING there. And as I recall, MAIN B was the one that had an amp spike on it once before.
@@ -623,7 +623,7 @@ Okay. You got OMNI Bravo and we'd like to have you verify that the tape recorder
 That's affirm.
 
 [57 00 11 - 57 00 22] CMP
-Okay, Jack. I'm sitting here with an 06 18 showing and I can't get rid of it. Oh, stand by just a -
+Okay, Jack. I'm sitting here with an 06 18 showing and I can't get rid of it. Oh, standby just a -
 
 [57 00 49 - 57 00 51] CDR
 Okay. FUEL CELL 3 REACs are OFF, Houston.
@@ -669,4 +669,365 @@ That's affirm. I watched it and it went barber pole as I threw the switch.
 
 [57 06 02] CAPCOM
 Roger.
+
+[57 08 02 - 57 08 31] CMP
+Okay. Jack. Let me give you a thruster configuration right now. Able 1, Charlie 1, Able 2 are off. Charlie 2, MAIN A, all the thrusters that I call that are on are on MAIN A. Baker 1 off. Dog 1 on, Baker 2 off, Dog 2 on. Able 3, Charlie 3, Able 4, Charlie 4 on. Baker 3 off, Dog 3 on, Baker 4 off, Dog 4 on.
+
+[57 09 29 - 57 09 32] CAPCOM
+Okay, Jack. That thruster configuration looks okay.
+
+[57 09 36 - 57 09 44] CMP
+Alright. Okay. Do you want some readings from the systems test meter regarding fuel cells?
+
+[57 09 47 - 57 09 49] CAPCOM
+Standby 1 on that, Jack. Let me ask the EECOM.
+
+[57 09 48 - 57 09 50] CMP
+We've got some incompatibilities here.
+
+[57 10 05 - 57 10 10] CAPCOM
+Okay, 13. We'd like to have you give us those systems test readings on FUEL CELL 1 and 3, please.
+
+[57 10 13 - 57 10 14] CDR
+Okay. 1 and 3 coming up.
+
+[57 10 16 - 57 11 09] LMP
+Okay Jack, 1-A is reading - lower scale. 0. 1-B is reading 3.45. Okay. You only want FUEL CELLs 1 and 3, okay - ignore that 1-B reading. 1-C is reading 3.4. Now, 1-D is reading 2.4. 2-B is reading 0.25.
+
+[57 11 11 - 57 11 12] CAPCOM
+Roger, is that 2 Bravo, Fred?
+
+[57 11 16 - 57 11 23] LMP
+That's 2 Bravo is reading - oh, about 0.25 to 0.3.
+
+[57 11 41 - 57 11 44] LMP
+Okay. 2-C is reading 4.1.
+
+[57 12 12 - 57 12 15] LMP
+And 3-A is reading 4.0.
+
+[57 12 17 - 57 12 19] CAPCOM
+Roger, 4.0. Say again what it is, please.
+
+[57 12 24 - 57 12 26] LMP
+3 Able. 3-A.
+
+[57 12 50 - 57 12 52] LMP
+And 3-B is reading 1.8.
+
+[57 13 00 - 57 13 05] LMP
+And 3-D is reading 1.95.
+
+[57 14 10 - 57 14 14] LMP
+And Houston, 13. O2 tank pressure number 1 is less than 300 now.
+
+[57 14 16 - 57 14 17] CAPCOM
+Roger. We're seeing that. We confirm it.
+
+[57 15 07 - 57 15 23] CAPCOM
+13, Houston. We're going to have to have you go through the shutdown procedure on fuel cell 1. Our O2 pressure is going down as you note and the temperature confirms it. Did you copy?
+
+[57 15 26 - 57 15 30] CMP
+Okay. Well, what bus configuration - what MAIN BUS do you want powered?
+
+[57 15 38 - 57 15 45] CAPCOM
+Okay, Jack. We want you to leave the bus configuration as it is. FUEL CELL 2 on MAIN A.
+
+[57 15 47 - 57 15 48] CAPCOM
+And we need OMNI Bravo.
+
+[57 15 54 - 57 15 57] CMP
+Okay, Jack. We're proceeding with the shutdown procedure for FUEL CELL 1.
+
+[57 16 37 - 57 16 41] CAPCOM
+And 13, Houston. We'd like you to isolate the REPRESS package, please.
+
+[57 16 44] CMP
+Okay.
+
+[57 16 45 - 57 16 46] CDR
+Isolate the REPRESS package. Roger.
+
+[57 16 47 - 57 16 49] LMP
+I can confirm REPRESS package is OFF.
+
+[57 16 50 - 57 16 54] CAPCOM
+Roger. So now you've got the REPRESS package and the surge tank isolated. Is that affirm?
+
+[57 16 57] LMP
+That is Charlie.
+
+[57 17 01 - 57 17 07] CMP
+Okay. Now, this is - we're ready to close the REACs on FUEL CELL 1. Is that right?
+
+[57 17 38 - 57 17 39] CAPCOM
+Jack, standby on the fuel -
+
+[57 17 39 - 57 17 42] CMP
+On that last - confirmation. Okay.
+
+[57 17 43 - 57 17 45] CAPCOM
+Roger. We're - we're giving you one last -
+
+[57 17 44 - 57 17 46] CMP
+We want to just get one last confirmation.
+
+[57 17 48 - 57 17 50] CAPCOM
+Okay, Jack. We're getting that last confirmation. Standby, please.
+
+[57 18 03 - 57 18 09] CAPCOM
+Okay, 13. We verify that we want you to close down - shut down FUEL CELL 1, close REACs valve.
+
+[57 18 12 -] CDR
+Roger -
+
+[57 18 12] CMP
+Okay.
+
+[- 57 18 14] CDR
+- FUEL CELL 1; close the REACs valve.
+
+[57 18 21] CMP
+Fuel -
+
+[57 18 21 - 57 18 23] CDR
+REACs valve on FUEL CELL 1 is closed.
+
+[57 18 47 - 57 18 54] CMP
+Okay, Jack. I can confirm step 2. The FUEL CELL shutdown procedure is complete for FUEL CELL 1.
+
+[57 18 58] CAPCOM
+Roger.
+
+[57 20 00 - 57 20 04] CAPCOM
+13, we recommend that you enable BD ROLL in the DAP. Over.
+
+[57 20 07 - 57 20 08] CMP
+Okay. Will do -
+
+[57 20 08 - 57 20 09] CDR
+BD ROLL in the DAP.
+
+[57 20 25 - 57 20 30] CAPCOM
+13, Houston. We're working on the big dish now, so turn the HIGH-GAIN POWER switch off, please.
+
+[57 20 33] LMP
+Okay.
+
+[57 20 57 - 57 21 07] CMP
+Okay, Jack. When we got the loud bang, we got also a restart. Did you copy that? Is - does GUIDO want anything, a VERB 74 or anything done with the CMC?
+
+[57 21 08] CAPCOM
+Standby.
+
+[57 21 56 - 57 21 59] CAPCOM
+13, Houston. We're ready with a VERB 74 now, please.
+
+[57 22 06] CMP
+Coming down at you.
+
+[57 23 55 - 57 24 01] CMP
+Okay, Jack. It looks like O2 tank 1 pressure is just a hair over 200.
+
+[57 24 03 - 57 24 05] CAPCOM
+We confirm that here and the temperature also confirms it.
+
+[57 24 10 - 57 24 11] CMP
+Okay. Does it look like it's still going down?
+
+[57 24 14 - 57 24 19] CAPCOM
+It's slowly going to zero, and we're starting to think about the LM lifeboat.
+
+[57 24 22 - 57 24 43] CMP
+Yeah, that's what we're thinking about too. You want me to do a quick P52? It kind of looks like - we've been talking it over, and it kind of looks like we'd probably align our plats - LM platform with our platform and then power down the CM, and keep the LM powered up doing a DPS - whatever DPS burns you give us?
+
+[57 24 55 - 57 25 10] CAPCOM
+13, we're not going to concern ourselves at the moment with a DPS burn; it's going to be some time before we'd get to that. But we're working on other procedures to give you, which will allow us to use the LM systems. Over.
+
+[57 25 13 - 57 25 14] CMP
+Okay. Real fine.
+
+[57 26 41 - 57 26 43] CAPCOM
+Apollo 13, Houston. We'd like to charge BATTERY A now.
+
+[57 26 47 - 57 26 48] CDR
+Charge BATTERY A. Roger.
+
+[57 27 13 - 57 27 27] CAPCOM
+And Jack, in regard to your question about the P52 and LM platform, it's - there's no need to worry about that now. We wouldn't be using the LM platform for - until about 79 hours, so let's go as is on the platform for now. Over.
+
+[57 27 30 - 57 27 31] CDR
+Okay. We understand.
+
+[57 27 37] CMP
+Okay, Jack.
+
+[57 30 14 - 57 30 28] CMP
+And Jack, we've turned off the waste dump heater. If you're going to consider dumping any more waste water, we probably ought to do it while the duct is warm there.
+
+[57 30 31 - 57 30 32] CAPCOM
+Roger. Standby, Jack.
+
+[57 30 39 - 57 30 41] CAPCOM
+Okay Jack, let's keep the water; no need for a dump right now.
+
+[57 30 44] CMP
+Alright.
+
+[57 31 16 - 57 31 25] CAPCOM
+13, Houston. We see the PROP ISOL valve on RCS Quad Charlie closed, so we'd like to also disable AUTO RCS feature in Quad Charlie.
+
+[57 31 31 - 57 31 34] CDR
+You want us to isolate the AUTO RCS features in Quad Charlie?
+
+[57 32 35] CAPCOM
+Affirmative.
+
+[57 32 44 - 57 32 50] CDR
+Okay Jack, I didn't plan to reset that Quad Charlie PROP ISOL valve. Do you want me to do that?
+
+[57 32 55 - 57 33 01] CDR
+Okay, we just tried it and Quad Alpha and Charlie barber poles are showing.
+
+[57 33 02] CAPCOM
+Standby, Jim.
+
+[57 33 04 - 57 33 11] CMP
+Okay, Jack. That's the secondary propellant barber poles on Alpha and Charlie.
+
+[57 34 48 - 57 35 06] CAPCOM
+13, Houston. It won't do any good to try to power the propellant valves on A and C, so we want you to disable the AUTO on RCS Charlie. And we have a procedure for getting power from the LM we'd like you to copy down.
+
+[57 35 10] CMP
+Okay.
+
+[57 35 10] CDR
+Standby, Jack.
+
+[57 35 12 - 57 35 13] CMP
+That sounds like good news.
+
+[57 36 06 - 57 36 08] LMP
+Okay, Jack, about how long is it?
+
+[57 36 14 - 57 36 27] CAPCOM
+It's not a very long procedure, Fred. We figure we've got about 15 minutes' worth of power left in the Command Module, so we want you to start getting over in the LM and getting some power on that. And you ready to copy your procedure?
+
+[57 36 28] LMP
+Okay.
+
+[57 36 30] CAPCOM
+Okay, in the CSM -
+
+[57 36 31] LMP
+Standby.
+
+[57 36 41] LMP
+Go ahead.
+
+[57 36 43 - 57 37 05] CAPCOM
+Okay. In the CSM on panel 5, circuit breakers LM POWER 1 and 2, OPEN. Then LM POWER switch, reset and release. In the LM, on panel 11 and panel 16, TRANSLUNAR BUS TIE, both circuit breakers CLOSE. On panel 16, circuit breaker ASCENT ECA CONTROL, CLOSE. On 16, DESCENT ECA CONTROL, CLOSE. On panel 14, put your BAT 5 NORMAL feed ON. BATs 1, 2, 3, and 4 LOW VOLTAGE taps, ON. BAT 5 NORMAL feed, OFF. ASCENT ECA CONTROL, OPEN. You copy?
+> You can find these controls on the [CSM Auxiliary](#ref-panel-cm-aux) and [Lunar Module](#ref-panel-lm) control panel diagrams.
+
+[57 38 10] LMP
+Standby 1.
+
+[57 38 26 - 57 38 57] LMP
+Okay. In the CSM, on panel 5, we want CB LM POWER 1 and 2, OPEN. Then the LM POWER switch to reset, release. In the LM, panels 11 and 16, XLUNAR BUS TIE breakers closed. The DECSENT ECA CONTROL closed. On panel 14, BAT 5 NORMAL feed ON, followed by BATS 1, 2, 3, and 4 LOW VOLTAGE taps ON. Then BAT 5 NORMAL feed OFF. Then ASCENT ECA CONTROL breaker OPEN.
+
+[57 39 00 - 57 39 01] CAPCOM
+That's a good readback, Fred.
+
+[57 39 16 - 57 39 21] CAPCOM
+And 13, Houston. As a final effort here, we'd like you to turn on the fans in tank 2. Over.
+
+[57 39 24 - 57 39 27] CDR
+Roger, understand. Turn on the fans in tank 2.
+
+[57 39 36 - 57 39 38] CDR
+You want the O2 fans in tank 2, Jack?
+
+[57 39 40] CAPCOM
+That's affirmative, Jim.
+
+[57 39 46 - 57 39 48] CDR
+O2 tanks - fans in tank 2 are on.
+
+[57 39 49] CAPCOM
+Roger.
+
+[57 41 33 - 57 41 36] CAPCOM
+13, Houston. We'd like you to start making your way over to the LM now.
+
+[57 41 41 - 57 41 43] CMP
+Fred and Jim are in the LM.
+
+[57 41 45 - 57 41 46] CAPCOM
+Okay, Jack. Thank you.
+
+[57 43 06 - 57 43 07] CMP
+Okay, Houston. You read, 13?
+
+[57 43 09 -] CAPCOM
+Reading you loud and clear, Jack. I've got a procedure for -
+
+[57 43 13] CMP
+Okay.
+
+[- 57 43 14] CAPCOM
+- the guys in the LM.
+
+[57 43 18] CMP
+You've got another one?
+
+[57 43 20 - 57 43 23] CAPCOM
+I have an activation procedure. I'd like you to copy it down.
+
+[57 43 28 - 57 43 29] CMP
+How long is it, Jack?
+
+[57 43 30 - 57 43 49] CAPCOM
+It's just four lines. Go to Activation 1, do step 3. Go to Activation 11, omit step 1. Do Activation 12, and then go to Activation 13 and do step 1. Do you copy?
+
+[57 43 57 - 57 44 01] CDR
+Okay. Is that Activation 1? Do step 3. Is that correct?
+
+[57 44 02 - 57 44 03] CAPCOM
+Thats affirmative, Jim.
+
+[57 44 05 - 57 44 09] CDR
+Activation 11, omit step 1, do the rest. Is that correct?
+
+[57 44 10] CAPCOM
+That's affirmative.
+
+[57 44 13 - 57 44 16] CDR
+Do Activation 12 and Activation 13, step 1.
+
+[57 44 18] CAPCOM
+That's all correct.
+
+[57 44 28 - 57 44 36] CMP
+Okay, Jack, pressure in tank 1 is approaching 100psi. What's going to be the symptoms of this fuel cell starting to drop off?
+
+[57 44 55 - 57 44 56] CAPCOM
+Standby, Jack, we'll get the word on that.
+
+[57 44 59] CMP
+Okay.
+
+[57 45 09 - 57 45 14] CAPCOM
+And Jim, when you get to the end of that procedure, we'd also like to have you put the DEMAND REGs to CABIN.
+
+[57 45 18 - 57 45 19] CDR
+DEMAND REGs to CABIN. Roger.
+
+[57 45 34 - 57 45 37] CDR
+Jack, was that Activation 1 step 3 only, or all of Activation 1?
+
+[57 45 42 - 57 45 44] CAPCOM
+That's correct - go all the way down to step 3, Jim.
+
+[57 45 47 - 57 45 48] CDR
+Activation 1 to step 3. Roger.
 
