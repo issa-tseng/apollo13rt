@@ -1031,3 +1031,187 @@ That's correct - go all the way down to step 3, Jim.
 [57 45 47 - 57 45 48] CDR
 Activation 1 to step 3. Roger.
 
+[57 46 52 - 57 46 55] CDR
+Houston, Apollo 13. Never mind.
+
+[57 46 57 - 57 46 58] CAPCOM
+13, say again, please.
+
+[57 47 02 - 57 47 04] CDR
+Oh, we were curious about Activation 11 on the VHF.
+
+[57 47 07 - 57 47 09] CAPCOM
+Omit the VHF.
+
+[57 48 20 - 57 48 38] CAPCOM
+Jack, this is Houston. We want you to keep the IMU up and keep the lights on so you can see in there, and leave battery off - BATTERY A off. And at the appropriate time, we'll put it on MAIN A. And we're going to keep the IMU up so as we can get a coarse align in the LM.
+
+[57 48 41 - 57 48 48] CDR
+Alright. Real good. Right now, we're charging BATTERY A. Do you want to discontinue that?
+
+[57 48 50 - 57 48 51] CAPCOM
+Discontinue the charge on BATTERY A, Jack.
+
+[57 49 25 - 57 49 34] CMP
+Okay, Jack. I discontinued charge on BATTERY A. You give me the call and I'll turn BUS TIE AC on.
+
+[57 49 35 - 57 49 38] CAPCOM
+Roger. And we want you to keep the lights up and the IMU on.
+
+[57 49 41] CMP
+Okay.
+
+[57 49 51 - 57 49 57] CAPCOM
+And Jack, we'd like you to leave the COMM configuration as-is until we get COMM with the LM.
+
+[57 50 00] CMP
+Okay.
+
+[57 51 11 - 57 51 16] CAPCOM
+And 13, this is Houston. I've got another procedure for the LM. A short one.
+
+[57 51 18 - 57 51 19] CDR
+Okay, ready to copy, Jack.
+
+[57 51 20 - 57 51 39] CAPCOM
+Okay, on panel 11 we'd like you to close the LGC/DSKY circuit breaker. Then we want you to go to Activation 25, do steps 1, 2, and 3. Then go to Activation 30, and that will give us a docked IMU coarse align. Over.
+
+[57 51 44 - 57 51 52] CDR
+Roger. Panel 11, close LGC circuit breaker. Activation 25, do steps 1, 2, 3, and then do complete Activation 30. Is that correct?
+
+[57 51 53 - 57 51 56] CAPCOM
+That's affirmative. On panel 11, LGC/DSKY circuit breaker closed.
+> A somewhat unnecessary clarification, as the only thing labeled "LGC" on panel 11 is the LGC/DSKY breaker.
+
+[57 53 19 - 57 53 25] CAPCOM
+And in the LM, let's go to panel 11 and close the SUIT FAN circuit breaker and get SUIT FAN 1 cranked up.
+
+[57 53 29 - 57 53 32] CDR
+Okay. Panel 11, close SUIT FAN circuit breaker, and we'll get the suit fan cranked up.
+
+[57 53 33] CAPCOM
+That's affirm.
+
+[57 53 50 - 57 53 56] CAPCOM
+And Jack, in the CSM, go to BYPASS on the radiators and turn your GLYCOL PUMP off.
+
+[57 53 59] CMP
+Okay.
+
+[57 54 03 - 57 54 05] CMP
+Pull the BYPASS; GLYCOL PUMP going off.
+
+[57 54 07] CAPCOM
+Roger.
+
+[57 55 46 - 57 55 55] CAPCOM
+And 13, in the CSM we want to verify that all the FUEL CELL PUMPs are off, and we want to have you turn off the O2 FANs in TANK 2.
+
+[57 55 58 - 57 56 01] CMP
+Okay. Tank 2 fans going off.
+
+[57 56 02 - 57 56 09] CMP
+Okay, that leaves me with TANK 1 FANs on, and TANK 1 HEATERs on.
+
+[57 56 12 - 57 56 13] CMP
+FUEL CELL 2 PUMP going off now.
+
+[57 56 23 - 57 56 25] CAPCOM
+And Jack, leave them both on in TANK 1.
+
+[57 56 29] CMP
+Okay.
+
+[57 57 58 - 57 58 00] CAPCOM
+13, Houston. We've got AOS on the LM here.
+
+[57 58 03] CMP
+Okay.
+
+[57 59 24 - 57 59 31] CAPCOM
+And 13, this is Houston. In the LM we'd like to have you go to Activation 12 step 3, which is get the batteries on high taps. Over.
+
+[57 59 36] LMP
+Okay.
+
+[57 59 43 - 57 59 45] CDR
+How you going there? Activation 12, step 3.
+> For a while here, Aquarius has their audio mode set to VOX, so you'll hear a lot of their chatter back and forth that they don't realize is being transmitted.
+
+[58 00 19 - 58 00 21] LMP
+Okay. And Jack, how do you read from Aquarius?
+
+[58 00 24 - 58 00 26] CAPCOM
+Aquarius, Houston. Say again, please.
+
+[58 00 29 - 58 00 32] LMP
+Okay, I was just making a COMM check here. I'm on high voltage taps.
+
+[58 00 33 - 58 00 35] CAPCOM
+Roger. We see them, Fred, and I'm reading you loud and clear.
+
+[58 00 40 - 58 00 42] LMP
+Okay. Didn't think I'd be back this soon.
+
+[58 00 51] LMP
+Okay. What next, James?
+
+[58 00 56] LMP
+Coarse align?
+
+[58 00 58 - 58 01 00] CDR
+Do it right. Take your time.
+
+[58 01 32 - 58 01 41] CAPCOM
+And Aquarius, Houston. We'd like you to - on your alignment, can you continue right on through the fine align Activation 31? Go right on through step 7. Over.
+
+[58 01 46 - 58 01 49] LMP
+Okay, you want to go on 31 through step number 7, Jack.
+
+[58 01 50 - 58 02 03] CAPCOM
+That's affirmative. And Odyssey, we've got another configuration for you. All 16 RCS AUTO SELECT OFF. All RCS heaters off. Over.
+> It's unclear where this instruction came from.
+
+[58 02 06 - 58 02 13] CMP
+Okay. I can verify all heaters off. Jack, I've got to keep a fairly minimum deadband until I get through this coarse align.
+
+[58 02 15] CAPCOM
+Roger.
+
+[58 02 27 - 58 02 32] LMP
+Okay, VERB 41, NOUN 20. Okay.
+
+[58 02 42 - 58 02 55] LMP
+You want plus? Plus or minus? Plus 302.43? Is that right?
+
+[58 03 12 - 58 03 40] LMP
+Okay, let me enter it. Okay, what's the next one? Plus 347.78. 347.78. Okay. 081.3. Is that right? ENTER. Okay.
+
+[58 03 54 - 58 03 56] CAPCOM
+Odyssey, Houston, BATTERY A on.
+
+[58 03 59 - 58 04 00] CMP
+BATTERY A on now.
+
+[58 04 01] CAPCOM
+Go ahead, Aquarius.
+
+[58 04 03 - 58 04 25] CDR
+Houston - okay, I want you to double check my arithmetic to make sure we got a good coarse align. {The roll CAL angle} was -2 degrees. The command module angles were 355.57, 167.78, 351.87.
+> This the docking angle index from the very beginning of this audio.
+
+[58 04 37 - 58 04 46] CAPCOM
+Okay, Jim. We copy the roll CAL at minus 2.0. Command module is 355.57, 167.78, 351.87.
+
+[58 05 23 - 58 05 25] LMP
+VERB 41, we've done that. Okay.
+
+[58 05 28 - 58 05 30] CAPCOM
+Aquarius, Houston. Request high bit rate, please.
+
+[58 05 36] LMP
+You want high bit rate?
+
+[58 05 38 - 58 05 40] CAPCOM
+That's affirmative, Fred. Won't cost us anything.
+
