@@ -1215,3 +1215,230 @@ You want high bit rate?
 [58 05 38 - 58 05 40] CAPCOM
 That's affirmative, Fred. Won't cost us anything.
 
+[58 06 23 - 58 06 33] CAPCOM
+Odyssey, Houston. We'd like you to, on your COMM configuration, go to PRIMARY POWER AMPL OFF, LOW BIT RATE, and DOWNVOICE BACKUP. Over.
+
+[58 06 42 - 58 06 44] CAPCOM
+And Aquarius, we need your SUIT GAS DIVERTER to CABIN.
+
+[58 06 56 - 58 06 57] CMP
+Alright. You got it.
+
+[58 07 03 - 58 07 09] CMP
+Houston, I've got to PRIMARY POWER AMPLIFIER OFF, LOW BIT RATE, DOWNVOICE BACKUP.
+
+[58 07 12 - 58 07 15] CAPCOM
+Okay, Jack, thank you. And Aquarius, your arithmetic looks good on the coarse align there.
+
+[58 07 20 - 58 07 24] CMP
+Okay. Okay, standby for an ENTER.
+
+[58 07 27] CMP
+Three -
+
+[58 07 40 - 58 07 58] CMP
+Get the GET; we need the GET. What is it? What's that? 58? 58:07?
+
+[58 08 15] CMP
+58 what?
+
+[58 09 17] CDR
+Houston, Aquarius.
+
+[58 09 19] CAPCOM
+Go ahead, Aquarius.
+
+[58 09 23 - 58 09 46] CDR
+Here are the gimbal angles. Command module, 356.69, 163.42, 346.67. Aquarius is 302.26, 345.92, 011.79. Over.
+
+[58 09 48 - 58 10 03] CAPCOM
+Okay, Jim. I got command module 356.69, 163.42, 346.67. Aquarius, 302.26, 345.92, 011.78.
+
+[58 11 08 - 58 11 09] CDR
+That's 011.79.
+
+[58 11 12] CAPCOM
+Say again, please.
+
+[58 11 18 - 58 11 21] CDR
+The LM middle gimbal is 011.79.
+
+[58 11 23 - 58 11 24] CAPCOM
+011.79. Got it.
+
+[58 12 20 - 58 12 37] CAPCOM
+Odyssey, Houston. We need a COMMAND RESET on your - on your COMM, and then we'd like you to power down the CMC, power down the IMU, heaters off on the IMU, but leave your BATTERY A on.
+
+[58 12 44] CMP
+Yeah.
+
+[58 12 59] CAPCOM
+Odyssey, Houston.
+
+[58 13 09] LMP
+Ask him if he's -
+
+[58 13 15 - 58 13 16] CDR
+Houston, this is Odyssey. Go ahead.
+
+[58 13 17] CAPCOM
+Okay, Jim.
+
+[58 13 19] CDR
+Copy it down.
+
+[58 13 20 - 58 13 35] CAPCOM
+Okay, Jim. I think I'm reading Jack, now. But what we want him to do is give us a COMMAND RESET. And then power down the CMC, power down the IMU, turn the IMU heater off, leave BATTERY A on. Over.
+
+[58 14 20 - 58 14 41] CMP
+That's just about 80 - in fact, 82 hours out of the two primary cartridges. That's two guys. 44 is what LC8 got. That would be 88 hours. We got a secondary, you're right. We're listening.
+
+[58 14 42] CAPCOM
+Odyssey, Houston.
+
+[58 14 43] CMP
+They can stand it.
+
+[58 14 46] CMP
+Go ahead?
+
+[58 14 47 - 58 14 50] CAPCOM
+Yeah, Jack, did you copy down about the CMC IMU?
+
+[58 14 53 - 58 15 07] CMP
+Yeah, Jack; I read it back twice to you. COMMAND RESET, which I've done. I'm about to power down the IMU, power down the CMC, turn the IMU heaters off, leave BAT A on.
+
+[58 15 08] CAPCOM
+That's affirm. Thank you.
+
+[58 15 12 - 58 15 21] CMP
+Okay, I just got a MASTER ALARM and MAIN BUS A UNDERVOLT. And I'm starting to power down, now. We've lost the -
+
+[58 15 22 - 58 15 42] LMP
+The only advantage to doing it early - if we can power back - the LM back down. The only advantage to doing it early is you can do a big burn now and a midcourse and then power the LM down. Otherwise, we've got to keep the LM powered up clear until we get around the Moon.
+
+[58 15 45 - 58 15 47] LMP
+Plus, it would be inside on the burn.
+
+[58 15 57 - 58 16 01] LMP
+I just hope the G&N hangs up on - hangs in on this one - I'd sure hate to do that one manual.
+> Little does he know.
+
+[58 16 06] CDR
+Oh boy.
+
+[58 16 07 - 58 16 20] CAPCOM
+Odyssey, Houston. Couple circuit breakers for you. On panel 276, on your INSTRUMENTATION POWER CONTROL, open CB number 3 and number 4.
+
+[58 16 34 - 58 16 38] CMP
+Okay, Houston. Panel 276, INSTRUMENTATION out and reset -
+
+[58 16 38] LMP
+- you got a lot of light -
+
+[58 16 39 - 58 16 41] CMP
+CB 3 and CB 4 are open.
+
+[58 16 46] CMP
+What?
+
+[58 16 48 - 58 17 03] CAPCOM
+That's affirmative, Odyssey. And also get your SCS electronics package and power off, and your FDAI POWER/GPI off, and your AUTO jet SELECT, all 16 off.
+
+[58 17 09 - 58 17 12] CMP
+Okay, well wait a second. Let me - let me get the CMC powered down.
+
+[58 17 14] CAPCOM
+Roger, Jack.
+
+[58 17 24 - 58 17 28] CDR
+Jack, while he's doing that, copy down what you just said again. I want to write it down.
+
+[58 17 37 - 58 17 46] CAPCOM
+Aquarius, we need to get your sublimator powered up. Activation page 20 and Activation page 21 step 3. Over.
+
+[58 17 54 - 58 17 58] CDR
+Roger. Activation 20 and Activation page 21, step 3, sublimator.
+
+[58 18 00] CAPCOM
+Roger.
+
+[58 18 01] LMP
+That's Activation, page 20?
+
+[58 18 10 - 58 18 21] CMP
+Okay, Jack. Now I have to power down my IMU. I have no control at all. I'm going to turn by 16 jets off. Say again the other things you wanted?
+
+[58 18 29 - 58 18 38] CAPCOM
+Okay, Jack. We'd like you to turn off your O2 TANK 2 heaters and fans. Correction - TANK 1. Turn the fans and heaters off.
+
+[58 18 41 - 58 18 46] CDR
+Okay. And Jack, can we turn on the FDAI circuit breakers so we could have a ball to see if we go to gimbal lock or not?
+> Another oversight in the rushed procedure - they are flying blind.
+
+[58 18 51] CAPCOM
+Standby.
+
+[58 18 54 - 58 19 02] CDR
+Houston, he's going to give a 16 NOUN 20, Jack. And okay, I've got O2 heaters and fans off in TANK 1.
+
+[58 19 16 - 58 19 18] CDR
+And Jack, let me know if we get close to gimbal lock, would you?
+
+[58 19 26 - 58 19 33] CAPCOM
+Jim, we didn't want you to power down the ball in the LM. We wanted you to power down the ball in the CSM.
+
+[58 19 41 - 58 19 42] CMP
+Jack, they haven't powered down -
+
+[58 19 43 - 58 19 45] CDR
+Jack, we don't have the balls powered up in the LM.
+
+[58 19 45 - 58 19 54] CMP
+I have the CMC and IMU in the command module powered down. The heaters are out.
+
+[58 19 56 - 58 20 05] LMP
+And the EVAP flow valve, that's open now. And I've undone my suit hoses here and opened up the suit flow valves. So we've got air flowing in the LM now.
+
+[58 20 12 - 58 20 15] CMP
+OKay, Jack. Will you say again the SCS items you wanted me to power down?
+
+[58 20 46 - 58 20 47] CMP
+Okay, Houston. Do you read Odyssey?
+
+[58 20 55 - 58 20 56] CDR
+Hello, Houston. How do you read?
+
+[58 21 03 - 58 21 04] LMP
+His gimbal lock and ours are different, Jim.
+
+[58 21 10 - 58 21 13] CAPCOM
+Apollo 13, Houston. Say again, please. You were cut out.
+
+[58 21 16 - 58 21 27] CMP
+Okay, Jack. Do you want me to proceed by the SCS powerdown checklist? I did not copy the SCS items you wanted me to power down.
+
+[58 21 33 - 58 21 37] CAPCOM
+Okay, Odyssey. We want you to go SCS ELECTRONICS POWER OFF.
+
+[58 21 40] CMP
+Okay. It's done.
+
+[58 21 41 -] CAPCOM
+FDAI POWER/GPI OFF. AUTO jet SELECT, 16 -
+
+[58 21 48] CMP
+That's done.
+
+[- 58 21 52] CAPCOM
+OFF. And all your ROTATIONAL CONTROL POWER, OFF.
+
+[58 21 52 - 58 21 59] CMP
+It's done. ROTATION CONTROL POWER, DIRECT, and AUTO closed OFF.
+
+[58 22 00 - 58 22 06] CDR
+Okay, Jack. Tell me there - we need to know when we're getting close to gimbal lock in the LM. We have no balls right now.
+
+[58 22 07 - 58 22 14] CAPCOM
+Okay. We want you to power up your eight-ball. We want you to get your RCS heaters on. Pressurize the RCS and open up the MAIN SOVs. Over.
+

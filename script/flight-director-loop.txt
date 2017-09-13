@@ -4093,6 +4093,7 @@ We're going to put BATTERY A on - can you put it on while it's charging?
 
 [57 46 49] EECOM2
 No. We'll have to take the charge off.
+> From here out, two EECOMs are active on the loop. EECOM2 is John Aaron.
 
 [57 46 50] EECOM
 Negative.
@@ -4692,7 +4693,8 @@ Negative, FLIGHT, the COMM activation is the same as you've got over there, exce
 Can we go on the OMNI right now?
 
 [57 57 43 - 57 57 45] INCO
-Roger. As we come up on the Goldstone with the 210 we'll be alright.
+Roger. As we come up on the {Goldstone} with the 210 we'll be alright.
+1> The Goldstone MSFN site in Southen California.
 
 [57 57 46 - 57 57 47] NETWORK
 We have AOS with the 210 now, FLIGHT.
@@ -5044,7 +5046,7 @@ No. We'd like for him to go to panel 12; we'd like to go FUNCTION switch to VOIC
 [58 05 15] FLIGHT
 CAPCOM, got that?
 
-[58 05 16] EECOM2?
+[58 05 16] EECOM2
 INCO, can you come meet me in number 1?
 
 [58 05 17] CAPCOM
@@ -5074,6 +5076,601 @@ FLIGHT, EECOM.
 [58 05 58] FLIGHT
 Go.
 
-[58 05 59 - 58 06 02] EECOM2
-If we can get low bit rate with the POWER AMPL off, let's turn the PRIMARY POWER AMPL off on the COMM system.
+[58 05 59 - 58 06 04] EECOM2
+If we can get low bit rate with the POWER AMPL off, let's turn the PRIMARY POWER AMPL off on the COMM system. There's no sense in -
+
+[58 06 04 - 58 06 05] FLIGHT
+INCO? Can we do that?
+
+[58 06 06 - 58 06 07] INCO
+Yes. Let's try it.
+
+[58 06 07 - 58 06 08] FLIGHT
+CSM POWER AMPL off?
+
+[58 06 09 - 58 06 10] INCO
+LOW BIT RATE. DOWNVOICE BACKUP.
+
+[58 06 11] FLIGHT
+You need him to do that?
+
+[58 06 12] INCO
+Yes.
+
+[58 06 13 - 58 06 19] FLIGHT
+Okay, CAPCOM. LOW BIT RATE. DOWNVOICE BACKUP, and POWER AMPL OFF in the CSM.
+
+[58 06 20] CAPCOM
+Okay.
+
+[58 06 21 - 58 06 22] EECOM2
+INCO, EECOM. Meet me on number 1.
+
+[58 06 26] TELMU
+FLIGHT, TELMU.
+
+[58 06 27] FLIGHT
+Go.
+
+[58 06 28 - 58 06 29] TELMU
+We need to get the SUIT GAS DIVERTER to CABIN.
+
+[58 06 30] FLIGHT
+Yes.
+
+[58 06 39 - 58 06 41] FLIGHT
+CAPCOM, LM: SUIT GAS DIVERTER to CABIN.
+
+[58 06 49 - 58 06 50] FLIGHT
+GUIDANCE, how's that arithmetic?
+
+[58 06 51] GUIDO
+It looks good, FLIGHT.
+> Not nearly the snappy slide rule action seen in the film.
+
+[58 06 52 - 58 06 53] FLIGHT
+The arithmetic is go?
+
+[58 06 54] GUIDO
+Roger.
+
+[58 06 55 - 58 06 56] FLIGHT
+CAPCOM, the arithmetic's good.
+
+[58 06 58 - 58 06 59] FLIGHT
+TELMU, we got an alignment now?
+
+[58 07 00] GUIDO
+A coarse align.
+
+[58 07 01] TELMU
+We've got a coarse align, FLIGHT.
+
+[58 07 02] FLIGHT
+Okay. CAPCOM -
+
+[58 07 10] FLIGHT
+Okay.
+
+[58 07 30 - 58 07 43] FLIGHT
+As soon as we've got the alignment and we're finished with it we're going CMC OFF, IMU OFF, we'll leave the heater circuit breakers on powered from - BATTERY A. Until you tell me whether we need to keep them up or not.
+
+[58 07 44 - 58 07 46] CAPCOM
+How come we're getting so much noise on the COMM?
+> Again, an important question.
+
+[58 07 47] FLIGHT
+Don't know. INCO?
+
+[58 07 50 - 58 07 54] INCO
+We'd like to do a COMMAND RESET on the CSM so we can get the LOW BIT RATE.
+> An answer to a completely different question.
+
+[58 07 57 - 58 07 58] FLIGHT
+I thought we just told them that.
+
+[58 07 58 - 58 08 01] INCO
+We did, but the way the commands work and everything -
+
+[58 08 02 - 58 08 04] FLIGHT
+Alright. They're in the middle of it, I'll give it to them in a minute.
+
+[58 08 05] INCO
+Alright.
+
+[58 08 59 - 58 09 01] FLIGHT
+Are we turning off some more of the instrumentation, gentlemen?
+
+[58 09 02 - 58 09 05] FLIGHT
+GUIDANCE, have they got the fine align down to where you want it, yet?
+
+[58 09 05 - 58 09 11] GUIDO
+FLIGHT, we need him to read the angles to us. We've lost CSM data; we don't know what the CSM got on the {06 20}.
+1> V06 N20
+
+[58 09 13 - 58 09 14] FLIGHT
+Okay, you really need that, huh?
+
+[58 09 15] GUIDO
+Roger.
+
+[58 09 15 - 58 09 18] FLIGHT
+CAPCOM, they need a VERB 06 NOUN 20 on the CSM. We lost it.
+
+[58 09 26] FLIGHT
+Here they are.
+> Turns out, Jim is already on it.
+
+[58 09 49] GUIDO
+Copy, FLIGHT.
+
+[58 09 50] FLIGHT
+Yup.
+
+[58 10 06 - 58 10 07] FLIGHT
+You got everything you need, GUIDANCE?
+
+[58 10 12] EECOM
+FLIGHT, EECOM.
+
+[58 10 12] FLIGHT
+Go.
+
+[58 10 13] EECOM
+We're ready to go ahead and power down the CMC now.
+
+[58 10 15 - 58 10 17] FLIGHT
+Wait a minute. I want to be sure the guidance is alright.
+
+[58 10 17] EECOM
+Okay.
+
+[58 10 27 - 58 10 30] FLIGHT
+GUIDANCE, can one of you tell me if you've got everything you need?
+
+[58 10 31 - 58 10 33] GUIDO2
+FLIGHT, GUIDANCE, we got everything.
+
+[58 10 35] GUIDO
+We're working on it now, FLIGHT.
+
+[58 10 36 - 58 10 45] FLIGHT
+Now - my question really is: when can I turn the CMC off? Are we that far enough inthe procedures that we can turn it off? Yes or no, that's all I'm -
+
+[58 10 45 - 58 10 46] GUIDO
+Roger, FLIGHT. We are, FLIGHT.
+
+[58 10 47] FLIGHT
+You are.
+
+[58 10 47] GUIDO
+Right.
+
+[58 10 48] FLIGHT
+Okay.
+
+[58 10 49] INCO
+FLIGHT, INCO.
+
+[58 10 50] FLIGHT
+Go.
+
+[58 10 50 - 58 10 52] INCO
+If you get us that COMMAND RESET we'll get some data; we're blind here.
+
+[58 10 53 - 58 10 54] FLIGHT
+Okay. Well - in the CSM, you mean?
+
+[58 10 55] INCO
+That's affirmative.
+
+[58 10 55 - 58 10 57] FLIGHT
+We're turning it down anyway, right now, Ed.
+
+[58 10 59 - 58 11 05] FLIGHT
+CONTROL and GUIDANCE, one more time. You've got everything you need through to fine align and we can proceed to power down the IMU in the CSM, correct?
+
+[58 11 06] GUIDO
+That's affirmative, FLIGHT.
+
+[58 11 06] CONTROL
+That's affirmative, FLIGHT.
+
+[58 11 07 - 58 11 10] FLIGHT
+Okay, and we'll leave the heaters on. Heater power circuit breaker on in the CSM.
+
+[58 11 10 - 58 11 12] CONTROL
+Check LM LDG RDR heater breaker also.
+
+[58 11 13 - 58 11 32] FLIGHT
+Yeah. CAPCOM, for the CSM. We've got the fine align data and everything is set up so therefore we can start powering down the CMC, the IMU. For now leave the heater circuit breaker on, and the BATTERY A on the bus like it is. We're running that IMU heater to ground to see whether we need to leave that on or not. And here's the - paper -
+
+[58 11 32] GNC
+FLIGHT, GNC.
+
+[58 11 33] EECOM
+FLIGHT, EECOM. 
+
+[58 11 34 - 58 11 36] GNC
+We got the go ahead to turn the heater power off.
+
+[58 11 36] FLIGHT
+Say again?
+
+[58 11 37 - 58 11 38] GNC
+IMU HEATER power to OFF.
+
+[58 11 38 - 58 11 39] FLIGHT
+And we'll still have it?
+
+[58 11 40 - 58 11 43] GNC
+That's right. We feel that we have a real good chance of bringing the platform up in good shape.
+
+[58 11 43 - 58 11 46] FLIGHT
+Now, do you want more time to debate it? I'm willing to give you 0.8 of an amp.
+
+[58 11 47 - 58 11 50] GNC
+I don't really know how much debate really needs to be done on that.
+
+[58 11 51 - 58 11 56] EECOM
+FLIGHT, EECOM. We need some data. We need to get the LOW BIT RATE - I think we need COMMAND RESET.
+
+[58 11 57 - 58 12 05] FLIGHT
+CS - CAPCOM, CSM COMMAND RESET, and then give them those instructions. We've got enough, we might as well save what we can on the battery now, and power down.
+
+[58 12 05 - 58 12 07] CAPCOM
+You want the CMC and IMU powered down?
+
+[58 12 07] FLIGHT
+Yup.
+
+[58 12 08 - 58 12 11] CAPCOM
+And heater circuit breaker - heaters off. Off on the -
+
+[58 12 11 - 58 12 12] FLIGHT
+And all the heaters, etc.
+
+[58 12 13] EECOM
+And COMMAND RESET.
+
+[58 12 14 - 58 12 15] FLIGHT
+And COMMAND RESET before they -
+
+[58 12 16] CAPCOM
+And you want BAT A, huh?
+
+[58 12 17] FLIGHT
+Yeah.
+
+[58 13 04] TELMU
+FLIGHT, TELMU.
+
+[58 13 05] FLIGHT
+Go.
+
+[58 13 05 - 58 13 16] TELMU
+Okay, we've been watching glycol temps and I guess we'd better go ahead and crank up the water boiler. This is Activation 20 - - Activation -
+
+[58 13 16] FLIGHT
+Listen. Listen.
+
+[58 13 18 - 58 13 19] TELMU
+And Activation 21 step 3.
+
+[58 13 36 - 58 13 38] FLIGHT
+Do you want to leave BATTERY A on? EECOM? Is that still the story? For how long?
+
+[58 13 39 - 58 13 40] EECOM
+That's affirmative, FLIGHT.
+
+[58 13 40 - 58 13 41] FLIGHT
+How long will you want to do that?
+
+[58 13 42 - 58 13 43] EECOM
+Until we get squared away with the LM.
+
+[58 13 43] EECOM2
+FLIGHT, EECOM.
+
+[58 13 43] FLIGHT
+Okay.
+
+[58 13 44 - 58 13 48] EECOM2
+All RCS AUTOs OFF, the 16 plus the 2 FDAIs OFF.
+> Overlooked is that between turning the CMC, IMU, and RCS all off, the spacecraft loses all attitude maintenance as the LM systems are not yet fully activated.
+
+[58 13 48 - 58 13 49] FLIGHT
+Yeah. Got that, CAPCOM?
+
+[58 13 51] ??
+That'll be it, John. (??)
+
+[58 13 52] FLIGHT
+Alright.
+
+[58 14 03 - 58 14 09] FLIGHT
+Yeah. Before we turn his thrusters off in the CSM, CAPCOM, you'd better verify they've got some control in the LM.
+
+[58 14 10] CONTROL
+FLIGHT -
+
+[58 14 10 - 58 14 14] FLIGHT
+Plus, they need to bring up the water boiler. Go ahead, calling, FLIGHT.
+
+[58 14 15 - 58 14 19] CONTROL
+This is CONTROL. You mentioned them powering up the RCS; is that right?
+
+[58 14 20] FLIGHT
+Well -
+
+[58 14 21 - 58 14 22] CONTROL
+We're going to have to do that.
+
+[58 14 23] FLIGHT
+Yeah, okay.
+
+[58 14 30 - 58 14 31] ???
+CSM data - CSM data, FLIGHT
+
+[58 14 38] EECOM
+FLIGHT, EECOM.
+
+[58 14 38] FLIGHT
+Go ahead.
+
+[58 14 39 - 58 14 40] EECOM
+Heaters, fans, O2 TANK 1 off.
+
+[58 14 42] FLIGHT
+CAPCOM, all TANK 1 off.
+
+[58 14 47] EECOM
+FLIGHT, EECOM.
+
+[58 14 47] FLIGHT
+Go ahead.
+
+[58 14 51] EECOM
+Disregard, FLIGHT.
+
+[58 14 52 - 58 14 53] FLIGHT
+Yeah, have him go and get that stuff off.
+
+[58 15 01] FLIGHT
+Okay.
+
+[58 15 09 - 58 15 12] FLIGHT
+AUTO - all the AUTO RCS and the heaters in TANK 1. 
+
+[58 15 44] EECOM
+FLIGHT, EECOM.
+
+[58 15 45] FLIGHT
+Go ahead.
+
+[58 15 46 - 58 15 47] EECOM
+They've got to get the power off when they can.
+
+[58 15 48 - 58 15 49] FLIGHT
+Yeah. Well, we just handed it to CAPCOM.
+
+[58 16 05] TELMU
+FLIGHT, TELMU.
+
+[58 16 06] FLIGHT
+Go ahead.
+
+[58 16 06 - 58 16 09] TELMU
+Okay, did you copy we need to crank up the glycol loop?
+
+[58 16 10] FLIGHT
+Yeah -
+
+[58 16 10] TELMU
+Activation 20.
+
+[58 16 11] FLIGHT
+Activation 20?
+
+[58 16 13 - 58 16 18] TELMU
+On the glycol loop activation. And Activation 21 step 3.
+
+[58 16 20 - 58 16 21] FLIGHT
+Down to step 3 or step 3 only?
+
+[58 16 21 - 58 16 22] TELMU
+No. Step 3 only.
+
+[58 16 23 - 58 16 24] FLIGHT
+Activation 20 and Activation 21 step 3 only.
+
+[58 16 25] TELMU
+That's affirmative.
+
+[58 16 26] FLIGHT
+Okay.
+
+[58 16 48] FLIGHT
+20 amps.
+
+[58 17 06 - 58 17 09] FLIGHT
+CAPCOM, FLIGHT. For the LM, he needs to get his sublimator up -
+
+[58 17 12] FLIGHT
+Yeah.
+
+[58 17 15] EECOM
+FLIGHT, EECOM.
+
+[58 17 15 - 58 17 21] FLIGHT
+Jack, the LM needs to get the sublimator up. Activation 20, and 21. For 21, step 3 only. Go ahead, EECOM.
+
+[58 17 22 - 58 17 25] EECOM
+You can go ahead and get those O2 TANK 1 heaters off soon. That's a {big chunk}.
+1> Of the 20 amps still being drawn.
+
+[58 17 25] FLIGHT
+Yeah, O2 -
+
+[58 17 28 - 58 17 29] CAPCOM
+You want O2 TANK heaters off -
+
+[58 17 30] FLIGHT
+Yeah.
+
+[58 17 32 - 58 17 35] CAPCOM
+Okay. And Activation 20 and 21 step 3.
+
+[58 17 35 - 58 17 36] FLIGHT
+Yup. Get the sublimator up.
+
+[58 17 39] CONTROL
+FLIGHT, CONTROL.
+
+[58 17 39] FLIGHT
+Go ahead.
+
+[58 17 40 - 58 17 44] CONTROL
+We need to get our RCS heaters on. Start those warming up.
+
+[58 17 44 - 58 17 50] GNC??
+And get the RCS system pressurized, if we're going to be going out of CSM control here very shortly.
+
+[58 17 51] FLIGHT
+Yeah, we are.
+
+[58 17 52 - 58 17 53] GNC??
+That needs to be taken care of, first, first.
+
+[58 17 55] FLIGHT
+Okay.
+
+[58 18 01] TELMU
+That's affirmative.
+
+[58 18 25] FLIGHT
+CAPCOM -
+
+[58 18 26 - 58 18 27] EECOM
+O2 TANK 1 heaters and fans.
+
+[58 18 28] FLIGHT
+Yeah. O2 TANK 1.
+
+[58 18 33] FLIGHT
+TANK 1.
+
+[58 18 49] EECOM2
+FLIGHT, EECOM.
+
+[58 18 50 - 58 18 53] FLIGHT
+Go ahead - that was to the - that was for the CSM, that FDAI.
+> FLIGHT (incorrectly) thinks the crew misinterpreted the circuit breaker pull request as an instruction for the LM. In fact, the given abbreviated procedures never power up the LM FDAI in the first place.
+
+[58 19 04 - 58 19 13] FLIGHT
+And for the LM, CAPCOM, we need RCS heaters on, they need to pressurize the RCS to have control. And for the water sublimator, Activation 20 and 21 step 3.
+
+[58 19 13 -] CAPCOM
+Okay. I gave them 20 and 21 step 3 already -
+
+[58 19 15] FLIGHT
+Okay.
+
+[- 58 19 17] CAPCOM
+- and you want RCS heaters on in -
+
+[58 19 19 - 58 19 22] FLIGHT
+Yeah, RCS pressurize - we didn't tell him to pull the FDAI in the LM.
+
+[58 19 23] CAPCOM
+No, that was the CSM.
+
+[58 19 24 - 58 19 26] FLIGHT
+Yeah. Does he understand that? Does that - Jim, does - has he -
+
+[58 19 48 - 58 19 51] FLIGHT
+CONTROL, do you want them to power the balls up and RCS?
+
+[58 19 52 - 58 19 53] CONTROL
+Definitely the RCS, FLIGHT.
+
+[58 19 54 - 58 19 55] FLIGHT
+Well, they need the ball to tell where they are.
+
+[58 19 56] CONTROL
+Roger.
+
+[58 19 56 - 58 20 00] FLIGHT
+CAPCOM, yeah, get a ball up in - one ball up and RCS heaters. And {press}.
+1> Pressure.
+
+[58 20 01 - 58 20 08] CONTROL
+And they need to have all of the circuit breakers in for the ISOL VALVES and the main SOVs, FLIGHT. On panels 11 and 16.
+
+[58 20 09] FLIGHT
+Okay.
+
+[58 20 11 - 58 20 13] CAPCOM
+Okay, in an orderly fashion, please. Ready. What you want, FLIGHT?
+
+[58 20 15 - 58 20 18] FLIGHT
+Okay, how's the CSM? Anything for the CSM?
+
+[58 20 20] EECOM
+FLIGHT, EECOM.
+
+[58 20 20] FLIGHT
+Go.
+
+[58 20 21 - 58 20 23] EECOM2
+I think we're ready to power the main buses down. If everybody's ready.
+
+[58 20 24 - 58 20 26] GUIDO?
+They have no control in the LM, FLIGHT.
+
+[58 20 26 - 58 20 31] FLIGHT
+Let's be sure we have control in the LM. Although he's probably out of jets right now. GNC, you got anything for the CSM?
+
+[58 20 32] GNC
+Negative, FLIGHT.
+
+[58 20 33 - 58 20 43] FLIGHT
+Okay, CAPCOM. For the LM, we think he ought to have an eight-ball, and we ought to get his RCS heaters on, his RCS pressurized, and he needs to get all his circuit breakers on 11 and 16 closed for control.
+
+[58 20 44 - 58 20 52] CONTROL
+Yeah, and Jack, what we're talking about is the QUAD HEATER breakers and MAIN SOVs, and ISOL VALVE breakers on panels 11 and 16.
+
+[58 20 53 - 58 20 56] CAPCOM
+Don't you have an Activation page I can just tell them to turn to?
+
+[58 20 57 - 58 21 04] CONTROL
+Yeah, if you want to close all those dadgum breakers. On that page. And then we can go back and open them all up later as long as he doesn't need them. That's Activation 22 and 23.
+
+[58 21 22 - 58 21 23] FLIGHT
+EECOM, GNC, copy his question?
+
+[58 21 25] EECOM
+Negative, FLIGHT.
+
+[58 21 28 - 58 21 31] FLIGHT
+Jack wants to know how we wanted to proceed with the SCS. Go ahead, John.
+
+[58 21 45 - 58 21 48] FLIGHT
+CONTROL, FLIGHT, you giving us something for getting your RCS up?
+
+[58 21 48] CONTROL
+Yes sir, FLIGHT.
+
+[58 21 49] FLIGHT
+Hurry up, will you please?
+
+[58 21 50] CONTROL
+Yeah.
+
+[58 21 51 - 58 21 52] FLIGHT
+We've just got a lot of traffic for the CAPCOM.
+
+[58 21 52] CONTROL
+Wilco.
+
 
