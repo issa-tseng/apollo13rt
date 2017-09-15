@@ -1661,3 +1661,42 @@ Odyssey, Houston. All you have to do is close the REACs valve on fuel cell 2.
 [58 38 48 - 58 38 51] CMP
 Okay. CB REACs and vent REAC valves all closed.
 
+[58 40 08 - 58 40 09] CDR
+Houston, Aquarius.
+
+[58 40 11] CAPCOM
+Go ahead, Aquarius.
+
+[58 40 14 - 58 40 18] CDR
+Okay, Odyssey is completely powered down according to the procedure that you read to Jack.
+
+[58 40 23 - 58 40 25] CAPCOM
+Roger, we copy. That's where we want to be, Jim.
+
+[58 40 39 - 58 40 41] LMP
+And Jack, have you all got good LM data down there now?
+
+[58 40 50] CAPCOM
+That's affirmative, Fred. We're getting good LM data.
+
+[58 40 55 - 58 41 01] LMP
+Okay. In that case, I think I'll pull out some display breakers and just let you all keep an eye on things.
+
+[58 41 05] CAPCOM
+Roger.
+
+[58 41 06 - 58 41 07] CDR
+He's turning his lights off now, too.
+
+[58 41 08] CAPCOM
+Standby 1 on that, Fred.
+
+[58 41 20] LMP
+Okay.
+
+[58 42 43] CDR
+We don't want to lose COMM with him.
+
+[58 42 47] LMP
+I'm watching it.
+

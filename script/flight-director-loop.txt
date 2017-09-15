@@ -6106,7 +6106,8 @@ Roger, FLIGHT, we're doing pretty good. I've got to get with you in a little whi
 Okay.
 
 [58 35 20] TELMU
-- our SNO2 pressure.
+- high {SNO2 pressure}.
+1> ???
 
 [58 35 21 - 58 35 23] FLIGHT
 Yeah, okay. GUIDANCE, you okay in the LM?
@@ -6191,4 +6192,110 @@ Hurry up.
 
 [58 39 01 - 58 39 03] FLIGHT
 We just lost data in the building, gentlemen. It's the CPs. Standby.
+
+[58 39 10] FLIGHT
+TELMU, FLIGHT.
+
+[58 39 12] TELMU
+Go, FLIGHT.
+
+[58 39 12 - 58 39 18] FLIGHT
+My problem, next, when I get around to it with you guys, is going to be what configuration to power down to.
+
+[58 39 19] TELMU
+Roger.
+
+[58 39 20 - 58 39 23] FLIGHT
+At the present time I'm thinking I'd like to keep the LM IMU up through {the burn} -
+1> The PC+2 burn around the far side of the Moon.
+
+[58 39 29 - 58 39 38] FLIGHT
+- we're up on the CPs. But that's about as far as I've got it through. Everybody's running power profiles, and Jimmy ??'s people have those set of numbers right now.
+
+[58 39 40 - 58 39 41] TELMU
+Okay, FLIGHT, we'll work on it.
+
+[58 40 01 - 58 40 02] FLIGHT
+EECOM, are you all the way down yet?
+
+[58 40 04 - 58 40 05] EECOM
+Looks like the inverter went off, FLIGHT.
+
+[58 40 06 - 58 40 07] FLIGHT
+So he's in the process. Alright.
+
+[58 40 21 - 58 40 22] FLIGHT
+Copy, CAPCOM. Thank you.
+
+[58 40 36 - 58 40 38] FLIGHT
+Okay, look, gentlemen -
+
+[58 40 43 - 58 40 46] FLIGHT
+We - good LM data? EECOM? TELMU.
+
+[58 40 47] TELMU
+That's affirmative, FLIGHT.
+
+[58 40 48] NETWORK??
+- here it is.
+
+[58 40 48 - 58 40 49] FLIGHT
+Yeah, we have it.
+
+[58 40 49] INCO
+FLIGHT, INCO, we've got a problem.
+
+[58 41 02 - 58 41 04] FLIGHT
+We going to have good data here for a while?
+
+[58 41 05 - 58 41 19] INCO
+In and out, FLIGHT. We've got a different problem. By turning off the CSM, we end up without any good tracking data. There's no way we can get any tracking data. That LM data is biased because of the uplink shift, and data select cannot use that tracking data.
+> Normally, the telemetry signal carries a frequency whose doppler shift can be read to help track the spacecraft. But they had to shift that frequency -
+
+[58 41 21 - 58 41 25] INCO
+Consequently, at some point here we're going to have to bring up some kind of tracking on the CSM again.
+
+[58 41 26] FLIGHT
+FDO, FLIGHT.
+
+[58 41 27] FDO
+Go, FLIGHT.
+
+[58 41 28 - 58 41 32] FLIGHT
+Would you figure that out? We're well clear now of the Moon, right?
+
+[58 41 33 - 58 41 35] FDO
+Roger that. As far as we can tell we are, FLIGHT.
+
+[58 41 36 - 58 41 42] FLIGHT
+And we need to - why can't we track this LM? ?? this LM interference - this IU interference -
+> - because the radios on the LM and the IU on the S-IVB boost stage (also on its way to the Moon) operate on very similar frequencies. Normally, the LM would not be powered up until the S-IVB was out of range (in this case, it would have impacted the Moon) so this would not be a problem.
+
+[58 41 42 - 58 41 47] INCO
+That's right, because we had to bias off that frequency to change it down, making a bias in the data; that data's no good.
+> Ultimately, this frequency shift allows communication but precludes that tracking methodology.
+
+[58 41 48 - 58 41 50] FLIGHT
+Is it possible to go back to the original and just leave this -
+
+[58 41 51 - 58 41 53] INCO
+We already tried it, FLIGHT. We tried it already. Doesn't work.
+
+[58 41 54] FLIGHT
+Okay, Ed. Thank you.
+
+[58 41 58] FLIGHT
+Mrrh. Okay.
+
+[58 42 01 - 58 42 43] FLIGHT
+Okay, everybody, look. We've got a number of long-range problems right now. We have the burn to do, which is at about 79 hours, 28 hours from now. And that's one business. We have to get the track up as we need it to take care of that burn. Hopefully we won't need to do too much with that, although I don't know how many amps that's going to take. However, right now, I want to be sure that we get the whole situation stabilized with the LM and the CSM. We've got to start bringing the LM power down some, and get any non-required stuff off the line so we don't use up any of these amp-hours that we don't need to give away. And I want you to pay attention to the configuration we're currently in and get the people offline working on the longer-range problems, especially the lifeboat problems now associated with the LM.
+
+[58 42 46] FLIGHT
+LiOH, etc.
+
+[58 42 49 - 58 42 56] FLIGHT
+Let's get all that configured. But right now I want the guys who are in the room to concentrate on keeping this thing right now going along all right, and watching it.
+
+[58 42 59] FLIGHT
+Alright.
 
