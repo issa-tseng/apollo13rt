@@ -1442,3 +1442,222 @@ Okay, Jack. Tell me there - we need to know when we're getting close to gimbal l
 [58 22 07 - 58 22 14] CAPCOM
 Okay. We want you to power up your eight-ball. We want you to get your RCS heaters on. Pressurize the RCS and open up the MAIN SOVs. Over.
 
+[58 22 24 - 58 22 40] LMP
+Okay Jack, I've got two commander FDAI breakers in, AC and DC, and the two GASTA breakers in AC and DC. And next you'll want the RCS heaters all on with the - pressurize the RCS and then the MAIN SOVs open. And I think they're already open.
+
+[58 22 41] CAPCOM
+Roger.
+
+[58 22 51 - 58 22 54] CAPCOM
+And Freddo, get the TCA breakers in last, please.
+
+[58 23 01 - 58 23 06] LMP
+Alright, Jim. I'm holding off on those until you give me a further word anyway. I'm just going to pressurize right now.
+
+[58 23 08 - 58 23 10] CDR
+Jack, are you reading LM gimbal angles?
+
+[58 24 17 - 58 24 26] CAPCOM
+Okay, Aquarius. I have some gyro torquing angles and the Odyssey is powered down, attitude-control-wise, so LM's got attitude control now.
+
+[58 25 14] CAPCOM
+Aquarius, Houston.
+
+[58 25 23] LMP
+Go ahead, Jack.
+
+[58 25 25 - 58 25 35] CAPCOM
+Okay. We want you to know that we got some gyro torquing angles for you. And we want you to tell us when you got attitude control in the LM.
+
+[58 25 39 - 58 25 43] LMP
+Okay. We're still working on the pressurization. I'm getting Jim on the horn here so he can help out there.
+
+[58 25 44] CAPCOM
+Roger.
+
+[58 26 10] CMP
+Wonder why.
+
+[58 26 15] LMP
+We got to get this pressurized.
+
+[58 26 56] CDR
+Houston, Aquarius.
+
+[58 26 59 - 58 27 08] CAPCOM
+Standby 1, Aquarius. Odyssey, we'd like you to go DIRECT RCS and hold your present attitude out the window until the LM gets RCS powered up. Go ahead, Jim.
+
+[58 27 13 - 58 27 29] CDR
+Well, that's my question. We're not - our {16 20} doesn't match our eight-ball here. We went FDAIs ON, but we don't have our balls completely powered up. There may be a bellyband to get our - the angles don't look the same and we don't want to go into gimbal lock.
+1> VERB 16 NOUN 20, which monitors the computer's understanding of the IMU data (ICDU).
+> Essentially, Lovell is explaining that with the present configuration they don't have a lot of confidence in even being able to monitor where gimbal lock would be.
+
+[58 27 30 - 58 27 34] CAPCOM
+Roger. How far are you from RCS power up - RCS pressurization?
+
+[58 27 46 - 58 27 57] LMP
+Okay, Jack. I'm right up to where it's MASTER ARM ON; RCS FIRE; both LOGIC POWERs out, that isn't closing the normal circuit breakers. You didn't have me do that. Do you want A in and then I'll fire them?
+
+[58 28 01 - 58 28 03] CAPCOM
+Okay 13, you're both talking at once. One at a time, please.
+
+[58 28 11] CMP
+Okay, who's first?
+
+[58 28 12 - 58 28 15] CAPCOM
+Close LOGIC POWER A and B, Fred, and pressurize RCS.
+
+[58 28 18] LMP
+Okay.
+
+[58 28 25] CAPCOM
+Go ahead, Odyssey.
+
+[58 28 30 - 58 28 35] CMP
+Okay, I'm going to try to do the best I can. I've got one attitude reference I'm going to fly according to the lunar terminator.
+> He can fly by sight using the shadow on the Moon as a reference.
+
+[58 28 38 - 58 28 40] CAPCOM
+Roger, Jack. Just maintain attitude.
+
+[58 29 05 - 58 29 15] CMP
+What am I doing? I can't do that anyway. Let's see - crossfeed. Nope. Now, and - -
+
+[58 29 26 - 58 29 46] CAPCOM
+Aquarius, Houston. We'll have to get some AC up so you can get a ball reading. Close your BUS TIE INVERTER circuit breakers, all four of them on panel 11. Close your AC BUS VOLT circuit breaker on panel 11. On panel 16, INVERTER 2, CLOSE. Select inverter 2. Over.
+
+[58 29 50 - 58 29 51] CDR
+That's been completed, Jack.
+
+[58 29 59 - 58 30 01] LMP
+Okay, the RCS is pressurized now.
+
+[58 30 40 - 58 30 48] LMP
+Okay, Jack. Do you want us to proceed right on down the line with the RCS checkout and Activation 37 now?
+
+[58 30 52] CAPCOM
+Standby, Fred.
+
+[58 31 04] LMP
+Hell, is he still firing up there?
+
+[58 31 16 - 58 31 27] CAPCOM
+Okay, Fred. Negative on the Activation on page 37. We want your RCS pressurized and then get your TCA breakers in and go to PGNCS ATTITUDE HOLD.
+
+[58 31 55] CDR
+Okay, Jack, how do you read?
+
+[58 31 58 - 58 32 02] CAPCOM
+Okay, this is Houston. We want you to load the DAP with 30120.
+
+[58 32 07 - 58 32 12] CDR
+Load the DAP with 30120. Complete.
+
+[58 32 18 - 58 32 19] LMP
+Okay, we need to change that CSM weight.
+
+[58 32 26 - 58 32 29] CAPCOM
+Okay, Aquarius. Your CSM weight is 63400.
+
+[58 32 52 - 58 32 56] CDR
+And Jack's alive to take control of the LM to stay away from gimbal lock. Over.
+
+[58 33 00 - 58 33 02] CAPCOM
+Affirmative. Take control of the LM. PGNCS ATTITUDE HOLD.
+
+[58 33 07] LMP
+We are.
+
+[58 33 08 - 58 33 14] CAPCOM
+And Odyssey, request you coordinate with Aquarius on attitude control.
+
+[58 33 17] CMP
+Okay.
+
+[58 33 18] CDR
+Roger.
+
+[58 33 20 - 58 33 23] CDR
+Okay, let's see if we can fire these things, or if we have - hello?
+
+[58 33 28] CDR
+Are you firing anything?
+
+[58 33 29] CMP
+I don't think so.
+
+[58 33 55] CDR
+Okay, I've got DIRECT.
+
+[58 34 05 - 58 34 09] CAPCOM
+And Aquarius, check your ATCA PGNCS breaker on panel 11 in.
+
+[58 34 14] CDR
+Say again?
+
+[58 34 16 - 58 34 19] CAPCOM
+Close, on panel 11, circuit breaker ATCA (PGNS).
+
+[58 34 22 - 58 34 25] CDR
+ATAC (PGNS). Come on, let's take it easy now.
+
+[58 34 31 - 58 34 32] CDR
+Okay, we've got ATCA (PGNS) closed.
+
+[58 34 55] CDR
+Okay, shut it down!
+
+[58 34 59] LMP
+Okay, Jack. We got it.
+
+[58 35 23 - 58 35 24] CAPCOM
+Okay, Jim. How's the attitude control?
+
+[58 35 29 - 58 35 34] CDR
+Okay, Jack. We've got attitude control now in the LM. We're going to try to rotate up through the bellyband.
+
+[58 35 35] CAPCOM
+Roger.
+
+[58 36 00 - 58 36 02] CAPCOM
+Odyssey, Houston. I've got a procedure for you.
+
+[58 36 06] CMP
+Okay, Jack, I'm -
+
+[58 36 09] CDR
+Well, I want to go this way to get away from that - 
+
+[58 36 34] CDR
+Check your antenna?
+
+[58 36 38 - 58 36 40] CMP
+Okay, Jack. Odyssey is ready to copy.
+
+[58 36 41 - 58 37 10] CAPCOM
+Okay, Jack. What we want you to do is close the reactants valve on fuel cell 2. Power down your inverters. Power down your battery relay bus. Battery ties off. And pull your entry circuit breakers - entry battery circuit breakers A, B, and C.
+
+[58 37 18 - 58 37 19] CDR
+Check the control, and make sure we don't go to gimbal lock, Fred.
+
+[58 37 23 - 58 37 39] CMP
+Okay, Jack. Understand. Close REAC valve circuit breakers in fuel cell 2. Power down inverters. Power down BAT relay bus. BAT TIES OFF. Power entry and both running circuit breakers A, B, and C. All off.
+
+[58 37 42 - 58 37 49] CAPCOM
+That's affirmative, Jack, and - close the reactant valve on fuel cell 2, there.
+
+[58 37 53 - 58 37 55] CDR
+Okay. I can do that, and Jack will do the rest.
+
+[58 38 04 - 58 38 06] CAPCOM
+Okay, Jack. On fuel cell 2, open-circuit it.
+
+[58 38 20 - 58 38 27] CMP
+Okay, fuel cell 2 is open-circuited. Do you want me to go through the standard shutdown procedure for the REAC valves and -
+
+[58 38 39 - 58 38 43] CAPCOM
+Odyssey, Houston. All you have to do is close the REACs valve on fuel cell 2.
+
+[58 38 48 - 58 38 51] CMP
+Okay. CB REACs and vent REAC valves all closed.
+

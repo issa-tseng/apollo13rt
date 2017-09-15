@@ -3189,7 +3189,7 @@ What do you think of that? GUIDANCE?
 Go ahead, FLIGHT.
 
 [57 26 39 - 57 26 48] FLIGHT
-CONTROL. Question is, do you want to do a quick P52 on the CSM so that we can do an align to the LM? I don't know if we want to keep the LM platform up all that time anyway.
+CONTROL. Question is, do you want to do a quick P52 on the CSM so that we can do an align to the LM? I don't know if we want to keep that LM platform up all that time anyway.
 
 [57 26 47 - 57 26 51] CONTROL
 That's too much power in my mind, FLIGHT, to keep that thing running for all that time.
@@ -5644,7 +5644,7 @@ Yeah, and Jack, what we're talking about is the QUAD HEATER breakers and MAIN SO
 Don't you have an Activation page I can just tell them to turn to?
 
 [58 20 57 - 58 21 04] CONTROL
-Yeah, if you want to close all those dadgum breakers. On that page. And then we can go back and open them all up later as long as he doesn't need them. That's Activation 22 and 23.
+Yeah, if you want to close all those dadgum breakers. On that page. And then we can go back and open them all up later, the ones he doesn't need. That's Activation 22 and 23.
 
 [58 21 22 - 58 21 23] FLIGHT
 EECOM, GNC, copy his question?
@@ -5673,4 +5673,522 @@ We've just got a lot of traffic for the CAPCOM.
 [58 21 52] CONTROL
 Wilco.
 
+[58 22 17 - 58 22 21] GNC
+Okay, FLIGHT, GNC. The CMC and the IMU are completely powered down at this time.
+
+[58 22 21] FLIGHT
+Okay.
+
+[58 22 42] FLIGHT
+Copy all that, CONTROL?
+
+[58 22 43 - 58 22 46] CONTROL
+FLIGHT, put the TCA breakers in last. The TCA breakers in last.
+
+[58 22 48 - 58 22 50] FLIGHT
+Okay. TCA breakers in last.
+
+[58 23 07] FLIGHT
+Yup. That works.
+
+[58 23 08] CONTROL
+Copy, FLIGHT.
+
+[58 23 33 - 58 23 36] FLIGHT
+Okay. CONTROL, do you understand the configuration we're getting into?
+
+[58 23 37] CONTROL
+Say again, FLIGHT?
+
+[58 23 38 - 58 23 40] FLIGHT
+Do you understand the configuration we're getting into?
+
+[58 23 41 -] CONTROL
+Right now, as I understand it, we're getting into a PGNCS ATTITUDE CONTROL mode -
+
+[58 23 45] FLIGHT
+Okay -
+
+[- 58 23 46] CONTROL
+- with an ATTITUDE HOLD.
+
+[58 23 47 - 58 23 56] FLIGHT
+Okay. My point is - let's be careful with what we're telling the CAPCOM to do here; try to give him as clear instructions as possible. Which is Activation pages as we can, okay? Now -
+
+[58 23 57 -] CONTROL
+Okay, but the circuit breakers -
+
+[58 23 58] FLIGHT
+I know.
+
+[- 58 24 00] CONTROL
+are all botched together on these charts, FLIGHT -
+
+[58 24 00 - 58 24 06] FLIGHT
+I know. Okay, you're ready to power down the inverters, the BATTERY RELAY BUS, and you're ready to pull the entry battery off.
+
+[58 24 07 - 58 24 15] EECOM2
+That's right. Now, that's not all completely configured to do it, but I think we've got to get off entry battery and then do it with voice, FLIGHT. Through the LM. COMM. Just got to kill COMM and everything.
+
+[58 24 16 - 58 24 20] FLIGHT
+Yeah. You're ready to do that. Is everybody ready to kill COMM in the CSM? GNC?
+
+[58 24 21] GNC
+Go, FLIGHT.
+
+[58 24 22 - 58 24 23] FLIGHT
+You ready to kill COMM in the CSM?
+
+[58 24 23] GNC
+Roger, FLIGHT.
+
+[58 24 24 - 58 24 25] FLIGHT
+GNC. GUIDANCE?
+
+[58 24 27] GUIDO
+Go, FLIGHT.
+
+[58 24 29 - 58 24 30] FLIGHT
+We're going to turn down the CSM.
+
+[58 24 31] GUIDO
+Roger.
+
+[58 24 36 - 58 24 42] FLIGHT
+Yeah; I want to be sure we've got control somewhere. I'm not satisfied we do yet. Attitude control.
+
+[58 24 49] CAPCOM
+FLIGHT, CAPCOM.
+
+[58 24 50] FLIGHT
+Go ahead.
+
+[58 24 51 - 58 24 56] CAPCOM
+Okay. We've got ourselves into a position here where we have no attitude control in either vehicle, have we?
+
+[58 24 57 - 58 25 05] FLIGHT
+I'm waiting to see when we get attitude control in the LM. Did they - would you ask them to call us when they have attitude control in the LM, and then we'll power the inverters, etc down in the CSM?
+
+[58 25 07] CONTROL
+FLIGHT, CONTROL.
+
+[58 25 08] FLIGHT
+Go ahead.
+
+[58 25 08 - 58 25 13] CONTROL
+Okay, once they get control established, we're going to do some setup work as far as loading the DAP to get his -
+
+[58 25 12 - 58 25 13] FLIGHT
+Oh, yeah, yeah. Okay.
+
+[58 25 15 - 58 25 16] FLIGHT
+I just want to get attitude control first.
+
+[58 25 17 - 58 25 20] CONTROL
+Roger.  He's had to put his PGNCS MODE control switch to ATT HOLD.
+
+[58 25 21] FLIGHT
+Oh yeah. Okay.
+
+[58 25 38] FLIGHT (off loop)
+Say again?
+
+[58 25 46 - 58 25 50] CAPCOM
+Hey FLIGHT, they don't have attitude control in the - we don't have CM/SM -
+
+[58 25 50 - 58 25 53] FLIGHT
+Yeah. Okay. Well, they're trying to get it up, right?
+
+[58 25 54] GUIDO
+Yeah, they are.
+
+[58 25 55 - 58 25 58] FLIGHT (off loop)
+Okay. I just - what you want to know - pardon -
+
+[58 26 15] CONTROL
+FLIGHT, CONTROL.
+
+[58 26 16] FLIGHT
+Go.
+
+[58 26 16 - 58 26 21] CONTROL
+We're getting pretty close into gimbal lock, as I understand it. We need to get that RCS pressurized and on the line -
+
+[58 26 21 - 58 26 23] FLIGHT
+Yeah, well, they're on the way of doing it.
+
+[58 26 29] FLIGHT (off loop)
+He didn't have a ball to do it with.
+
+[58 26 31] CONTROL
+He's got the DSKY, FLIGHT.
+
+[58 26 35 - 58 26 36] FLIGHT
+No - who he? CSM or the LM?
+
+[58 26 37] GUIDO
+The LM.
+
+[58 26 40] GNC
+FLIGHT, GNC.
+
+[58 26 41 - 58 26 46] FLIGHT
+Go ahead - wait a minute, GNC. Yeah, we're having a control problem. What's the best way to get it; are you saying the LM, CAPCOM?
+
+[58 26 49] FLIGHT
+Alright.
+
+[58 26 52] GUIDO
+He can go DIRECT RCS, FLIGHT.
+
+[58 26 53 - 58 26 56] FLIGHT
+CAPCOM, have him go DIRECT RCS and hold attitude in the CSM.
+
+[58 27 37] TELMU
+FLIGHT, TELMU.
+
+[58 27 38] FLIGHT
+Can you wait a minute?
+
+[58 27 40 - 58 27 41] TELMU
+We're going to have to have AC here, for this.
+
+[58 27 42] FLIGHT
+For what?
+
+[58 27 44] TELMU
+For the balls.
+
+[58 27 45] FLIGHT
+CAPCOM, they need AC.
+
+[58 28 00] TELMU
+Both of them go in, FLIGHT.
+> LOGIC POWER
+
+[58 28 06] FLIGHT
+Did you copy TELMU?
+
+[58 28 07 - 58 28 09] TELMU
+Roger, his LOGIC POWER breakers should be in. A and B.
+
+[58 28 10] FLIGHT
+A and B LOGIC should be in.
+
+[58 28 40] CONTROL
+RCS is pressurized.
+
+[58 28 42] FLIGHT
+Alright.
+
+[58 28 46 - 58 28 50] TELMU
+Okay, FLIGHT, we've got a procedure here for the AC coming at you.
+
+[58 28 59 - 58 29 07] FLIGHT
+CAP - he needs AC for the eight-ball - CAPCOM. We need to get AC powered up in the LM. I'm sure they have a procedure, but there it is.
+
+[58 29 20] FLIGHT
+TELMU, FLIGHT.
+
+[58 29 21] TELMU
+Go, FLIGHT.
+
+[58 29 22 - 58 29 23] FLIGHT
+What's our current level in the LM?
+
+[58 29 24] TELMU
+41 amps.
+
+[58 29 26] TELMU
+Okay, FLIGHT, TELMU.
+
+[58 29 30] TELMU
+FLIGHT, TELMU.
+
+[58 29 31] FLIGHT
+Go.
+
+[58 29 32 - 58 29 34] TELMU
+We show him still armed. We'd ask him to go MASTER ARM off.
+
+[58 29 35] FLIGHT
+Okay.
+
+[58 29 59 - 58 30 01] TELMU
+Okay, we've got AC, FLIGHT. Looks good.
+
+[58 30 03] FLIGHT
+Okay.
+
+[58 30 15 - 58 30 17] TELMU
+We see the pyros are disarmed now, FLIGHT.
+
+[58 30 18] FLIGHT
+Okay.
+
+[58 30 48 - 58 30 49] FLIGHT
+TELMU - er, CONTROL?
+
+[58 30 50 - 58 30 51] CONTROL
+Go ahead. I copy.
+
+[58 30 52] FLIGHT
+Do you want to do that?
+
+[58 30 53 - 58 30 56] CONTROL
+The checkout? There's no need for it, FLIGHT. All we need to do is -
+
+[58 30 57 - 58 30 59] CAPCOM
+He wants to know if you want him to go down Activation 37.
+
+[58 31 00] CONTROL
+Negative.
+
+[58 31 01 - 58 31 03] FLIGHT
+Is he - has he got control now?
+
+[58 31 04 - 58 31 06] CONTROL
+Negative, he does not. I don't think he has his TCA breakers in yet.
+
+[58 31 07 - 58 31 08] FLIGHT
+Okay. But what do you want him to do?
+
+[58 31 09 - 58 31 15] CONTROL
+I want to get his TCA breakers in after he's got everything else configured, and then he can be in - he'll be in PGNCS ATTITUDE HOLD.
+
+[58 31 16] FLIGHT
+Okay, there's no -
+
+[58 31 17] CONTROL
+5 degree deadband.
+
+[58 31 31 - 58 31 33] FLIGHT
+Anything needs to be done in the DAP?
+
+[58 31 34 - 58 31 35] CONTROL
+Yeah, we're going to have to load the DAP, FLIGHT.
+> This trickle of piecemeal this-then-that is why FLIGHT indicated a preference for the prewritten procedures.
+
+[58 31 36 - 58 31 42] FLIGHT
+Well, do we want to be in PGNCS ATTITUDE HOLD? Before we load it? Come on, now -
+
+[58 31 43 - 58 31 46] CONTROL
+We've got the TCAs in now, and everything looks real good right now, FLIGHT. We can load the DAP with no problem.
+
+[58 31 46 - 58 31 48] FLIGHT
+Okay, what numbers you want them to put to get it?
+
+[58 31 48 - 58 31 52] CONTROL
+DAP data load is for - this configuration is for 30120.
+
+[58 31 54] FLIGHT
+30120.
+
+[58 31 55 - 58 32 00] CONTROL
+Right. And we'll have to give you some weights; we don't have those yet.
+
+[58 32 04] FLIGHT
+Approximately.
+
+[58 32 14 - 58 32 16] FLIGHT
+Do we need a weight to go in there?
+
+[58 32 20 - 58 32 21] CAPCOM
+What do we have on weight?
+
+[58 32 22 - 58 32 23] CONTROL
+CSM weight: 63400.
+
+[58 32 24] FLIGHT
+63400.
+
+[58 32 25] CONTROL
+That's CSM weight.
+
+[58 32 25] FLIGHT
+CSM.
+
+[58 32 45 - 58 32 47] CAPCOM
+Okay, are we ready to go to PGNCS ATTITUDE HOLD now?
+
+[58 32 47] FLIGHT
+CONTROL?
+
+[58 32 48] CONTROL
+Go ahead, FLIGHT.
+
+[58 32 49 - 58 32 50] FLIGHT
+You ready for PGNCS attitude control now?
+
+[58 32 51 - 58 32 54] CONTROL
+He's in P00 now, he - he's in ATTITUDE HOLD right now, FLIGHT.
+
+[58 32 58] CAPCOM
+How about it?
+
+[58 32 58] FLIGHT
+Yeah.
+
+[58 33 05 - 58 33 07] FLIGHT
+Tell - be sure he tells Jack that.
+
+[58 33 32] CONTROL
+FLIGHT, CONTROL.
+
+[58 33 33] FLIGHT
+Go.
+
+[58 33 33 - 58 33 36] CONTROL
+Couldn't really copy - he may be having a problem firing his jets?
+
+[58 33 37 - 58 33 38] FLIGHT
+I don't know. I didn't hear.
+
+[58 33 40] FLIGHT
+He's asking if he's firing.
+
+[58 33 42 - 58 33 44] CONTROL
+Need to - make sure his ATCA (PGNS) circuit breaker is in.
+
+[58 33 48 - 58 33 50] CAPCOM
+Okay, what other control circuit breakers do you want in?
+
+[58 33 50 - 58 33 52] FLIGHT
+If he's having trouble, check his ATCA (PGNS) circuit breaker.
+
+[58 33 53 - 58 33 57] CONTROL
+ATCA (PGNS) breaker on panel 11, row 3.
+
+[58 34 00] CAPCOM
+ATCA (PGNS) and what else?
+
+[58 34 01 - 58 34 04] CONTROL
+And the ATTITUDE DIRECT control breaker - he's got that if he's got DIRECT right now.
+
+[58 34 33 - 58 34 34] FLIGHT
+Okay. That must have been what it was.
+
+[58 34 35] CONTROL
+That should have it.
+
+[58 34 43 - 58 34 50] CAPCOM
+Okay, can we check the switch configuration circuit breakers and the black boxes to make sure everything's configured correctly for attitude control?
+
+[58 34 49 - 58 34 55] FLIGHT
+Yeah. I'd like to be sure the LM is okay while we power the CSM down, now.
+
+[58 35 01] FLIGHT
+Okay.
+
+[58 35 01 - 58 35 02] CAPCOM
+Okay - yeah, I heard him holler up the tunnel.
+
+[58 35 02 - 58 35 03] FLIGHT
+Yeah. CONTROL, are you okay?
+
+[58 35 04 - 58 35 05] CONTROL
+Yeah, we've got one TCP switch configured - (??)
+> ????
+
+[58 35 06 - 58 35 07] FLIGHT
+Okay. But are you okay?
+
+[58 35 08 - 58 35 13] CONTROL
+Well, we look okay now, and we'll need another DSKY entry here very shortly to inhibit our upward-firing jets.
+
+[58 35 13 - 58 35 14] FLIGHT
+Alright. TELMU, are you okay?
+
+[58 35 16 -] TELMU
+Roger, FLIGHT, we're doing pretty good. I've got to get with you in a little while on -
+
+[58 35 18] FLIGHT
+Okay.
+
+[58 35 20] TELMU
+- our SNO2 pressure.
+
+[58 35 21 - 58 35 23] FLIGHT
+Yeah, okay. GUIDANCE, you okay in the LM?
+
+[58 35 23] GUIDO
+We're good, FLIGHT.
+
+[58 35 25 - 58 35 27] FLIGHT
+Okay. GNC and EECOM. We're going to power down. You ready?
+
+[58 35 27] GNC
+We're ready, FLIGHT.
+
+[58 35 28] EECOM
+EECOM. Go.
+
+[58 35 37 - 58 35 40] CAPCOM
+Okay, FLIGHT. They've got attitude control in the LM now. What do you want to do with the CSM?
+
+[58 35 41 - 58 35 44] FLIGHT
+Okay, here it is, right behind you, Jack. For powering it down. There's the paper.
+
+[58 36 11] FLIGHT
+EECOM, FLIGHT.
+
+[58 36 12] EECOM
+Go, FLIGHT.
+
+[58 36 13 - 58 36 17] FLIGHT
+Are there any switches you want in the off position before we power down? Like, for example, compressors or anything?
+
+[58 36 18 - 58 36 19] EECOM2
+No, FLIGHT. Let's just power - this down, we'll fix it later -
+
+[58 36 19 - 58 36 20] FLIGHT
+Okay. Okay.
+
+[58 37 55] FLIGHT
+TELMU, FLIGHT.
+
+[58 37 57] TELMU
+Go, FLIGHT.
+
+[58 37 57 - 58 37 59] CAPCOM
+You want them to open-circuit fuel cell 2, right?
+
+[58 38 00 - 58 38 01] EECOM2
+That's affirm, if he hasn't done it.
+
+[58 38 02] TELMU
+FLIGHT, TELMU.
+
+[58 38 15] FLIGHT
+CAPCOM, FLIGHT.
+
+[58 38 17] CAPCOM
+Go, FLIGHT.
+
+[58 38 18 - 58 38 19] FLIGHT
+We okay there with them? Right now?
+
+[58 38 23] CAPCOM
+Okay, open -
+
+[58 38 29 - 58 38 30] EECOM2
+Just close the REAC valves, FLIGHT.
+
+[58 38 32 - 58 38 34] FLIGHT
+Just close them. Just close the REACs.
+
+[58 38 54] NETWORK
+FLIGHT, NETWORK.
+
+[58 38 55] FLIGHT
+Go.
+
+[58 38 55 - 58 38 57] NETWORK
+We lost both CPs. We'll be up in a minute.
+
+[58 38 58] FLIGHT
+Hurry up.
+
+[58 39 01 - 58 39 03] FLIGHT
+We just lost data in the building, gentlemen. It's the CPs. Standby.
 
