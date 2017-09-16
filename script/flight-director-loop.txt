@@ -6250,7 +6250,7 @@ We going to have good data here for a while?
 
 [58 41 05 - 58 41 19] INCO
 In and out, FLIGHT. We've got a different problem. By turning off the CSM, we end up without any good tracking data. There's no way we can get any tracking data. That LM data is biased because of the uplink shift, and data select cannot use that tracking data.
-> Normally, the telemetry signal carries a frequency whose doppler shift can be read to help track the spacecraft. But they had to shift that frequency -
+> Normally, the telemetry signal carries a frequency whose doppler shift can be read to help track the spacecraft through a ranging system. But they had to shift that base frequency -
 
 [58 41 21 - 58 41 25] INCO
 Consequently, at some point here we're going to have to bring up some kind of tracking on the CSM again.
@@ -6269,7 +6269,7 @@ Roger that. As far as we can tell we are, FLIGHT.
 
 [58 41 36 - 58 41 42] FLIGHT
 And we need to - why can't we track this LM? ?? this LM interference - this IU interference -
-> - because the radios on the LM and the IU on the S-IVB boost stage (also on its way to the Moon) operate on very similar frequencies. Normally, the LM would not be powered up until the S-IVB was out of range (in this case, it would have impacted the Moon) so this would not be a problem.
+> - because the radios on the LM and the IU on the S-IVB boost stage (also on its way to the Moon) operate on very similar frequencies, which caused interference. Normally, the LM would not be powered up until the S-IVB was out of range (in this case, it would have impacted the Moon) so this would not be a problem.
 
 [58 41 42 - 58 41 47] INCO
 That's right, because we had to bias off that frequency to change it down, making a bias in the data; that data's no good.
@@ -6280,6 +6280,7 @@ Is it possible to go back to the original and just leave this -
 
 [58 41 51 - 58 41 53] INCO
 We already tried it, FLIGHT. We tried it already. Doesn't work.
+> If you want more background on this problem, [this Honeysuckle Creek article](https://honeysucklecreek.net/msfn_missions/Apollo_13_mission/hl_apollo13.html) starting about halfway down the page is an excellent, detailed account. The rest of it is worth reading as well, generally speaking.
 
 [58 41 54] FLIGHT
 Okay, Ed. Thank you.
@@ -6298,4 +6299,508 @@ Let's get all that configured. But right now I want the guys who are in the room
 
 [58 42 59] FLIGHT
 Alright.
+
+[58 43 02] CAPCOM
+FLIGHT, CAPCOM.
+
+[58 43 02] FLIGHT
+Go ahead.
+
+[58 43 03 - 58 43 05] CAPCOM
+Okay, my gyro torquing angles still good?
+
+[58 43 06 - 58 43 08] FLIGHT
+GUIDANCE, are those gyro torques still good?
+
+[58 43 09] GUIDO
+Roger, FLIGHT.
+
+[58 43 10] FLIGHT
+And the crew wants those?
+
+[58 43 11 - 58 43 13] GUIDO
+Roger. We ought to go ahead and fine align the platform.
+
+[58 43 14] FLIGHT
+There you go, CAPCOM.
+
+[58 43 15 - 58 43 23] CAPCOM
+Okay, and on these - Fred asked the question, he'd like to pull some circuit breakers on displays and has us watch them; is he clear to do that?
+
+[58 43 24 - 58 43 25] FLIGHT
+CONTROL and TELMU.
+
+[58 43 25] CONTROL
+Go ahead, FLIGHT.
+
+[58 43 26 - 58 43 29] FLIGHT
+Do you have good data there, and we can pull the display circuit breakers in the cockpit?
+
+[58 43 31] CONTROL
+Roger, FLIGHT. Just about ready.
+
+[58 43 32 - 58 43 33] FLIGHT
+Okay. Yes, gentlemen.
+
+[58 43 33 - 58 43 44] CAPCOM
+They want you to tell me what circuit breakers to pull, and I want them - defined as to panel and so forth, just like we did in the TCP, so there's no misunderstanding there. Okay?
+
+[58 43 45] FLIGHT
+CONTROL?
+
+[58 43 46] CONTROL
+Yeah, we copy.
+
+[58 43 47] FLIGHT
+Once you get them, TELMU.
+
+[58 44 22 - 58 44 24] CONTROL
+That's Activation 40, FLIGHT.
+
+[58 44 24 - 58 44 25] FLIGHT
+Activation 40, Jack.
+
+[58 45 31 - 58 45 35] CAPCOM
+Okay, FLIGHT. Do you want them to proceed with IMU fine align as outlined on page 40?
+
+[58 45 36] FLIGHT
+GUIDANCE?
+
+[58 45 36 - 58 45 37] GUIDO
+Roger, FLIGHT. That's what we want them to do.
+
+[58 45 38] FLIGHT
+Affirm.
+
+[58 45 52 - 58 45 54] FLIGHT
+TELMU, FLIGHT. Did you up with those circuit breaker labels?
+
+[58 45 55 - 58 45 56] TELMU
+FLIGHT, we're working on them right now.
+
+[58 45 57 - 58 45 59] FLIGHT
+What do you mean? Don't you know what the circuit breaker numbers - names are?
+
+[58 46 00 -] TELMU
+Yeah, there's a whole slew of them -
+
+[58 46 02] FLIGHT
+Oh, okay.
+
+[- 58 46 03] TELMU
+- what we're going to do is just give you a page of them with -
+
+[58 46 04] FLIGHT
+Okay.
+
+[58 46 04 - 58 46 05] TELMU
+- breakers: open circled.
+
+[58 46 06 - 58 46 11] CAPCOM
+Okay, I'm looking for panel - system - breaker name.
+
+[58 46 11 -] FLIGHT
+Yeah, they're going to give you a picture of the panel with -
+
+[58 46 13 - 58 46 14] TELMU
+We're just going to give you a picture -
+
+[- 58 46 15] FLIGHT
+- the circled - with the breakers circled.
+
+[58 46 17] CAPCOM
+Beautiful.
+
+[58 46 19 - 58 46 21] CAPCOM
+Do it just like TCP if you can.
+
+[58 46 26] FLIGHT
+TELMU, FLIGHT.
+
+[58 46 27] TELMU
+Go, FLIGHT.
+
+[58 46 27 - 58 46 32] FLIGHT
+While you're doing that, have somebody else figuring out what we might take off here to save some current.
+
+[58 46 33] TELMU
+Okay.
+
+[58 46 35 - 58 46 36] FLIGHT
+CONTROL, same with you.
+
+[58 46 37] CONTROL
+Go ahead, FLIGHT.
+
+[58 46 38 - 58 46 40] FLIGHT
+Same with you - we're going to want to save some power here, so -
+
+[58 46 41] CONTROL
+Right. We're working on it.
+
+[58 46 42] FLIGHT
+Figure out some suggestions.
+
+[58 47 30 - 58 47 31] FLIGHT
+CAPCOM, FLIGHT.
+
+[58 47 32] CAPCOM
+Go, FLIGHT.
+
+[58 47 33 - 58 47 39] FLIGHT
+Jack, would you let me the conclusion of whatever discussions you guys had about - alignments? When you get - kind of one?
+
+[58 47 39] CAPCOM
+Yessir.
+
+[58 47 40] FLIGHT
+Thank you.
+
+[58 47 42] FLIGHT (off loop)
+Okay. I'll wait until you -
+
+[58 49 22 - 58 49 23] RECOVERY
+FLIGHT, RECOVERY. Did you call?
+
+[58 49 24] FLIGHT
+No.
+
+[58 50 39] GUIDO
+FLIGHT, GUIDANCE.
+
+[58 50 40] FLIGHT
+Go.
+
+[58 50 41 - 58 50 43] GUIDO
+Okay, we'd like to have a (??) up for the LM, FLIGHT.
+
+[58 50 44] FLIGHT
+Okay.
+
+[58 50 45 - 58 50 46] GUIDO
+Yeah, we're ready for it at the site.
+
+[58 50 47 - 58 50 48] FLIGHT
+Okay. We'll let - give them a little while, here.
+
+[58 50 49] TELMU
+FLIGHT, TELMU.
+
+[58 50 50] FLIGHT
+Go ahead.
+
+[58 50 51 - 58 50 53] TELMU
+Okay, we're tracking a little problem here on ASCENT O2 TANK 2 -
+
+[58 50 53 - 58 50 55] FLIGHT
+GUIDANCE, remind of that in a little bit.
+
+[58 50 55] GUIDO
+Yessir.
+
+[58 50 56] FLIGHT
+TANK 2, what is -
+
+[58 50 57 - 58 51 03] TELMU
+The pressure is up higher than it should be, what we need to do is open ASCENT -
+
+[58 51 04 - 58 51 06] FLIGHT
+Before you go through the valves, what are you trying to accomplish?
+
+[58 51 07 - 58 51 11] TELMU
+We're trying to use the ASCENT TANK 2 pressure instead of the descent tank.
+
+[58 51 12] FLIGHT
+Is it close to venting?
+> Most of the tanks had a rupture disc that would blow out at a high pressure, in a way that would be more controlled than the tank bursting entirely.
+
+[58 51 14 - 58 51 16] TELMU
+No, it doesn't - it's not venting, yeah.
+
+[58 51 18] FLIGHT
+Is it close to venting?
+
+[58 51 20 - 58 51 21] TELMU
+It can't vent. Unless it's broken.
+
+[58 51 22] FLIGHT
+Yeah.
+
+[58 51 22 - 58 51 37] TELMU
+And it's not broken. What we're trying to do is relieve the pressure in that tank, so we want to close the DESCENT O2 TANK VALVE and open ASCENT O2 TANK 2.
+
+[58 51 38 - 58 51 39] FLIGHT
+O2, tank 2 - how high is it?
+
+[58 51 40 - 58 51 41] TELMU
+It's up to {901}.
+1> psi.
+
+[58 51 42] FLIGHT
+What's it at normally?
+
+[58 51 43 - 58 51 44] TELMU
+Around 830.
+
+[58 51 45 -] FLIGHT
+And you just want to use some of that and then we'll go back -
+
+[58 51 47] TELMU
+That's right.
+
+[- 58 51 48] FLIGHT
+- to normal configuration, huh?
+
+[58 51 54 - 58 51 56] FLIGHT
+Okay. Got that, Jack?
+
+[58 51 59] CAPCOM
+Okay -
+
+[58 52 00 - 58 52 03] FLIGHT
+TANK 2 looks a little high, so they want to use some of it.
+
+[58 52 03 - 58 52 04] CAPCOM
+Okay. I got that.
+
+[58 52 04 - 58 52 05] FLIGHT
+ASCENT TANK 2 -
+
+[58 52 05 - 58 52 07] CAPCOM
+Close the DESCENT O2 and open ASCENT -
+
+[58 52 08] FLIGHT
+O2 tank number 2.
+
+[58 52 09] CAPCOM
+Number 2; right.
+
+[58 52 30] FLIGHT
+TELMU, FLIGHT.
+
+[58 52 32] TELMU
+Go ahead, FLIGHT.
+
+[58 52 32 - 58 52 34] FLIGHT
+Is it a good idea to close the DESCENT O2 VALVE now?
+
+[58 52 35] TELMU
+Yeah, it's okay.
+
+[58 52 41 - 58 52 42] TELMU
+He had to go that way, FLIGHT.
+
+[58 52 43 - 58 52 46] FLIGHT
+Yeah, I know that, but I'm worried about it coming back open.
+
+[58 52 58] FLIGHT
+Did we copy?
+
+[58 53 06] CONTROL
+FLIGHT, CONTROL.
+
+[58 53 06] FLIGHT
+Go.
+
+[58 53 07 - 58 53 20] CONTROL
+FAO pointed out here - we are drifting around here on his middle gimbal angle - he's in MIN IMPULSE right now, and I'm assuming that's where he wants to be, but if he doesn't watch it close he can get himself into gimbal lock again real easy.
+
+[58 53 23 - 58 53 26] CONTROL
+He's not in an automatic ATTITUDE HOLD mode right now, he's in a drifting flight mode.
+
+[58 53 28 - 58 53 30] FLIGHT
+Yeah. He may be looking for stars -
+
+[58 53 30 - 58 53 37] CONTROL
+Okay, but it might be worth a confirmation - okay, he knows that he's in there because he's hitting the ACA right now. Okay.
+
+[58 53 38 - 58 53 39] FLIGHT
+Okay. How's he doing on the middle gimbal?
+
+[58 53 41 - 58 53 43] FLIGHT
+Okay. Alright. Is he away from it?
+
+[58 53 44] CONTROL
+Yes.
+
+[58 53 45 - 58 53 46] FLIGHT
+Okay. Well, keep your eye on it, Alan. That's good.
+
+[58 53 46] CONTROL
+Okay.
+
+[58 53 48 - 58 53 50] FLIGHT
+Just sing out if you think he's getting close and we'll pass it up.
+
+[58 53 50] CONTROL
+Roger.
+
+[58 53 56] CONTROL
+FLIGHT, CONTROL.
+
+[58 53 57] FLIGHT
+Go.
+
+[58 53 58 - 58 53 59] CONTROL
+If you get a minute, I've got one little item here.
+
+[58 54 00 - 58 54 04] FLIGHT
+Okay. How many amps are we taking out there - standby.
+
+[58 54 26] FLIGHT
+Okay.
+
+[58 56 03 - 58 56 04] FLIGHT
+CONTROL, did you have something for me?
+
+[58 56 05 - 58 56 36] CONTROL
+Yes, sir. When we pressurized the RCS here, we noticed we got some - about 5 psi of change in the ASCENT OX and FUEL tank pressures - an increase, okay? We noticed that shortly thereafter. And what we'd like to do is to make sure they've got the ASCENT FEED VALVEs actually seated in the closed position. And when they get time, it'll - close two circuit breakers and cycle the switches for us to the closed position to make sure they are closed.
+
+[58 56 36 - 58 56 37] FLIGHT
+Would you write down the procedure?
+
+[58 56 37] CONTROL
+Roger.
+
+[58 56 38] FLIGHT
+Bring it over, please.
+
+[58 56 38] CONTROL
+Okay.
+
+[58 56 42 - 58 56 45] FLIGHT
+They're talking about display circuit breakers right now. We'll let that get settled.
+
+[58 56 46 - 58 56 58] CAPCOM
+They're having to go up and look up some data books, but how about stowage-wise, FLIGHT? Do we have to worry about passing some gear back and forth? Maybe FAO ought to think about that.
+
+[58 56 59 - 58 57 01] FLIGHT
+Bob? FAO? You got people working on that?
+
+[58 57 02 - 58 57 03] FAO
+Say again, FLIGHT. Working on what?
+
+[58 57 05 - 58 57 09] FLIGHT
+Stowage - what might want to get passed to the LM? Or from the LM to the CSM?
+
+[58 57 10] FAO
+We'll have it.
+
+[58 57 57] FAO
+FLIGHT, I've got -
+
+[58 58 12] CAPCOM
+FLIGHT, CAPCOM.
+
+[58 58 13] FLIGHT
+Go ahead.
+
+[58 58 14 - 58 58 24] CAPCOM
+Okay, I have this abort PAD, and I've got some gimbal trim angles. Pitch and roll are - are these the ones that were preset, or are we going to have to jimmy these around?
+
+[58 58 25 - 58 58 28] FLIGHT
+The preset ones probably were from docked. But let me check. RETRO?
+
+[58 58 33] FLIGHT
+RETRO?
+
+[58 58 35] FLIGHT
+FLIGHT.
+
+[58 58 36] RETRO
+Go ahead, FLIGHT.
+
+[58 58 38 - 58 58 42] FLIGHT
+These LM DPS trims, are they different than the ones in the vehicle right now?
+
+[58 58 42 -] RETRO
+That's affirm. This is based on -
+
+[58 58 44] FLIGHT
+Docked burn?
+
+[- 58 58 45] RETRO
+Docked burn.
+
+[58 58 46 - 58 58 47] FLIGHT
+And the ones they have on board are undocked, right?
+
+[58 58 48] RETRO
+That's affirm. For PDI.
+
+[58 58 49] FLIGHT
+Okay.
+
+[58 58 50 - 58 58 51] CONTROL
+FLIGHT, CONTROL. We've got some updates on those trims.
+
+[58 58 52 - 58 58 55] FLIGHT
+Oh. Okay. Well, come on in with them.
+
+[58 58 56 - 58 58 57] CONTROL
+Okay, I can give them to you right now.
+
+[58 58 58 - 58 59 08] CAPCOM
+This is a coordination problem on these gimbal angles - I guess we're going to have to think of a procedure to coordinate the setting of those angles.
+
+[58 59 08] GUIDO
+FLIGHT, GUIDANCE.
+
+[58 59 10 -] FLIGHT
+CAPCOM, you talking to me? I don't know what you mean -
+
+[58 59 12] CAPCOM
+Affirm.
+
+[- 58 59 13] FLIGHT
+- which gimbal angles?
+
+[58 59 14 - 58 59 15] CAPCOM
+The DPS trim angles.
+
+[58 59 15] FLIGHT
+Yeah.
+
+[58 59 16 - 58 59 25] CAPCOM
+Okay, they can't - they can't read them out on board - set them on board. They have to run them and then have us verify down on the ground. Right?
+
+[58 59 27 - 58 59 30] FLIGHT
+Yeah, well we can watch them trim it. I'm not sure I know what you're asking me, Jack.
+
+[58 59 31 - 58 59 36] CAPCOM
+We're going to have to, say - tweak it a little more and then we're going to have to, say -
+
+[58 59 37 - 58 59 39] FLIGHT
+No. They can trim it automatically, then load it. And run it through the program.
+
+[58 59 40 - 58 59 42] CAPCOM
+But we have to verify because there's a different time that -
+
+[58 59 42 - 58 59 43] FLIGHT
+Oh yeah. Yeah, we can verify the number.
+
+[58 59 44] CAPCOM
+Okay.
+
+[58 59 45 - 58 59 47] FLIGHT
+And we're getting some new ones, so hold up on those - GUIDANCE, you calling me?
+
+[58 59 48 - 58 59 49] GUIDO
+Roger. The middle gimbal angle's getting big, FLIGHT.
+
+[58 59 51] FLIGHT
+Getting close?
+> To gimbal lock.
+
+[58 59 52] GUIDO
+About 60 degrees.
+
+[58 59 53 - 58 59 54] FLIGHT
+CAPCOM, have him watch his gimbal angle.
+
+[58 59 56 - 58 59 58] CAPCOM
+Okay, I think I hear him doing that. What do you want him to do, just -
+
+[58 59 59 - 59 00 00] FLIGHT
+Well, in case he hadn't noticed, it's getting close.
 

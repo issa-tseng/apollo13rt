@@ -1700,3 +1700,156 @@ We don't want to lose COMM with him.
 [58 42 47] LMP
 I'm watching it.
 
+[58 43 54 - 58 44 01] CAPCOM
+Aquarius, Houston. Standby on opening your circuit breakers for displays. We're going to let you know what they are, and I have some gyro torquing angles for you.
+
+[58 44 10 - 58 44 13] LMP
+Okay. What page is that there gyro torquing?
+
+[58 44 13 - 58 44 17] CDR
+Okay, what page is the, do we write the gyro torquing angles on, Jack?
+
+[58 44 19] CAPCOM
+Standby.
+
+[58 44 20 - 58 44 24] LMP
+Okay. We're there now, Jim. Jim's got it. Go ahead with the gyro torquing angles.
+
+[58 44 26 - 58 44 43] CAPCOM
+Okay. We'd like you to proceed with the fine align and your gyro torquing angles are X +003.30, Y +024.80, Z -015.10. Over.
+
+[58 44 50 - 58 45 07] CDR
+Okay, I read the gyro torquing angles as +003.30, Y is plus 023 - I only have four numbers for Y, you'll have to give that one to me again - and Z is -015.10. Read Y again, please.
+
+[58 45 08 - 58 45 13] CAPCOM
+Okay, Jim. X and Z are correct, and Y is +024.80.
+
+[58 45 21 - 58 45 29] CDR
+Okay. We read Y as +024.80. We'll proceed on Activation 40 to fine align the platform.
+
+[58 45 30] CAPCOM
+Roger.
+
+[58 45 39 - 58 45 43] CAPCOM
+Okay, Aquarius, proceed as on page 40 with the IMU fine align.
+
+[58 47 04] CDR
+Okay, the way to do that -
+
+[58 47 43 - 58 47 46] CAPCOM
+Aquarius, Houston. Can you see any stars out the LM window?
+
+[58 47 55 - 58 47 59] LMP
+We'll have to wipe them off, Jack. They're coated with water right now.
+
+[58 48 01] CDR
+Can I get a towel?
+
+[58 48 03 - 58 48 12] CAPCOM
+Roger. As soon as you get a chance to - or in a position to - take a look, we'd like to know if you can see stars for alignment purposes.
+
+[58 48 17 - 58 48 22] LMP
+Okay. Jim's going to be in trouble in our present attitude out his side.
+
+[58 48 23] CDR
+The Sun's there.
+
+[58 48 27] CDR
+Wait 1.
+
+[58 48 38 - 58 48 47] LMP
+What have you got? How much you got left in battery A? Okay. I wish I knew what the hell they were thinking right now -
+
+[58 48 53 - 58 48 57] CDR
+They're talking about powering down and doing a P51 here?
+
+[58 48 58 - 58 49 01] LMP
+No, they were just thinking about P52 -
+
+[58 49 02 - 58 49 19] CAPCOM
+Aquarius, Houston, negative on the P51. We want to stay just like we are, but we'd like to be able to correlate what you're doing with some simulator work we're going to crank up. And so if you can give us information as to what stars you can see out the window, we can make that correlation.
+
+[58 49 24 - 58 49 27] CDR
+Would you say that one more time? Give me the top tier - the top tier.
+
+[58 49 35 - 58 50 01] CAPCOM
+Jim, what we want you to do is go with your current fine align and disregard the P51. What we're attempting to do is to crank up some LMS simulations to correlate what we can get out your window with what we can get out the LMS window to see if that will help us any. So when you can see some stars, if you can - you think you can recognize them and recognize constellations, please let us know.
+
+[58 50 04 - 58 50 05] CDR
+Okay, we'll check. Standby.
+
+[58 50 18] CDR
+Okay, watch the -
+
+[58 52 14 - 58 52 28] CAPCOM
+Aquarius, Houston. We notice that the O2 pressure in ASCENT TANK O2 is a little high, so we want to use some of it. So close DESCENT O2 and open ASCENT O2 TANK 2. Over.
+
+[58 52 47 - 58 52 54] LMP
+Okay, Jack. Switched now on ASCENT number 2 O2 tank. DESCENT O2 is closed.
+
+[58 52 55] CAPCOM
+Roger, Fred.
+
+[58 54 03 - 58 54 05] CDR
+Okay. Houston, Aquarius. How do you read?
+
+[58 54 06 - 58 54 08] CAPCOM
+Reading you five square, Jim. Go ahead.
+
+[58 54 11 - 58 54 25] CDR
+Okay. I'm looking out of Fred's window. I see a lot of particles out there, but a lot of that stuff is still drifting away from us; so a lot of it is flashing in the local vicinity, and I don't recognize any constellations right now in this particular attitude.
+
+[58 54 36 - 58 54 39] CAPCOM
+Okay, Jim. If that status changes, please let us know.
+
+[58 54 47 - 58 54 48] CDR
+Roger. We're continuing to drift.
+
+[58 54 50 - 58 54 51] CDR
+Okay, get your TTCAs to roll.
+
+[58 55 10 - 58 55 18] CAPCOM
+And Aquarius, Houston, I've got some circuit breakers you can open to power down displays. In addition, I have a P30 maneuver PAD. Over.
+
+[58 55 21 - 58 55 25] CDR
+Roger. Stand by, Houston. Get the CS - get the PAD book.
+
+[58 55 30 - 58 55 32] LMP
+Get the LM data - get the LM - book.
+
+[58 55 34 - 58 55 37] CDR
+And, say - we're getting the PAD book now, Jack - and say the first power down?
+
+[58 55 40 - 58 55 43] CAPCOM
+Okay, I have some circuit breakers that you can open up in order to power down displays.
+
+[58 55 47 - 58 55 50] CDR
+Okay. Standby 1, Jack. I'm going to get my COMM carrier on.
+
+[58 55 52 - 58 56 01] CDR
+No, no, no, Get the - get the command module PAD book - hey, get all the LM stuff. Give me the LM stuff right now. Jack, give me the LM stuff.
+
+[58 57 08] CDR
+Alright, Jack.
+
+[58 57 13] CDR
+Hey, what do you need out of here?
+
+[58 57 15 - 58 57 16] CMP
+Can you give us the ?? data?
+
+[58 57 21] CDR
+Here.
+
+[58 58 23 - 58 58 24] CDR
+Looks like I'm cross-coupling here. I might as well -
+
+[58 58 24] LMP
+Yes, you are.
+
+[58 58 32 - 58 58 33] CDR
+Well, I want to get out of this roll.
+
+[58 58 39] CDR
+What if I go to -
+
