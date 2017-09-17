@@ -6250,7 +6250,7 @@ We going to have good data here for a while?
 
 [58 41 05 - 58 41 19] INCO
 In and out, FLIGHT. We've got a different problem. By turning off the CSM, we end up without any good tracking data. There's no way we can get any tracking data. That LM data is biased because of the uplink shift, and data select cannot use that tracking data.
-> Normally, the telemetry signal carries a frequency whose doppler shift can be read to help track the spacecraft through a ranging system. But they had to shift that base frequency -
+> Normally, the telemetry signal carries a base frequency whose doppler shift can be read to help track the spacecraft through a ranging system. But they had to shift that base frequency -
 
 [58 41 21 - 58 41 25] INCO
 Consequently, at some point here we're going to have to bring up some kind of tracking on the CSM again.
@@ -6269,7 +6269,7 @@ Roger that. As far as we can tell we are, FLIGHT.
 
 [58 41 36 - 58 41 42] FLIGHT
 And we need to - why can't we track this LM? ?? this LM interference - this IU interference -
-> - because the radios on the LM and the IU on the S-IVB boost stage (also on its way to the Moon) operate on very similar frequencies, which caused interference. Normally, the LM would not be powered up until the S-IVB was out of range (in this case, it would have impacted the Moon) so this would not be a problem.
+> - because the radios on the LM and the IU on the S-IVB boost stage (also on its way to the Moon) operated on very similar frequencies, which caused interference. Normally, the LM would not be powered up until the S-IVB was out of range (in this case, it would have impacted the Moon) so this would not be a problem.
 
 [58 41 42 - 58 41 47] INCO
 That's right, because we had to bias off that frequency to change it down, making a bias in the data; that data's no good.
@@ -6280,7 +6280,7 @@ Is it possible to go back to the original and just leave this -
 
 [58 41 51 - 58 41 53] INCO
 We already tried it, FLIGHT. We tried it already. Doesn't work.
-> If you want more background on this problem, [this Honeysuckle Creek article](https://honeysucklecreek.net/msfn_missions/Apollo_13_mission/hl_apollo13.html) starting about halfway down the page is an excellent, detailed account. The rest of it is worth reading as well, generally speaking.
+> If you want more background on this problem, [this Honeysuckle Creek article](https://honeysucklecreek.net/msfn_missions/Apollo_13_mission/hl_apollo13.html) starting about halfway down the page is an excellent, detailed account. The rest of it is worth reading as well, generally speaking. As well, [this article](https://honeysucklecreek.net/msfn_missions/Apollo_13_mission/a13_interviews.html#1) goes into some more of the technical specifics.
 
 [58 41 54] FLIGHT
 Okay, Ed. Thank you.
@@ -6803,4 +6803,751 @@ Okay, I think I hear him doing that. What do you want him to do, just -
 
 [58 59 59 - 59 00 00] FLIGHT
 Well, in case he hadn't noticed, it's getting close.
+
+[59 01 21 - 59 01 22] FLIGHT
+Could I get the people in the room to be quiet?
+
+[59 01 24 - 59 01 25] FLIGHT
+CAPCOM's talking.
+
+[59 01 34 - 59 01 37] FLIGHT
+CAPCOM - standby, CAPCOM. Hey TELMU, he's talking.
+
+[59 01 39 - 59 01 40] CAPCOM
+We have any on panel 16?
+
+[59 02 55] FLIGHT
+CONTROL, FLIGHT.
+
+[59 02 57] CONTROL
+Go ahead, FLIGHT.
+
+[59 02 58 - 59 03 00] FLIGHT
+Hope you've got somebody working on a PTC procedure.
+
+[59 03 00 - 59 03 03] CONTROL
+Right. We've already got one worked out, but it's an AGS-type procedure, FLIGHT.
+
+[59 03 03] FLIGHT
+That's okay.
+
+[59 03 07 - 59 03 09] FLIGHT
+I see - yeah, we don't have the trim angle yet, but okay.
+
+[59 03 13] CAPCOM
+Got some angles?
+
+[59 03 15] TELMU
+FLIGHT, TELMU.
+
+[59 03 16] FLIGHT
+Go.
+
+[59 03 17 - 59 03 24] TELMU
+The CAPCOM read up the circuit breakers to open on panel 11; I don't believe he turned the page over. There's some more of them. Panel 16 also.
+
+[59 03 25 - 59 03 33] FLIGHT
+Just a minute, TELMU. RETRO and CONTROL, FLIGHT. The COAS angle you have N/A, are they not - fine align available?
+
+[59 03 34] FLIGHT
+RETRO, FLIGHT.
+
+[59 03 36] RETRO
+Go, FLIGHT.
+
+[59 03 36 - 59 03 38] FLIGHT
+What does this N/A mean? For the COAS?
+
+[59 03 40 - 59 03 41] RETRO
+FDO said it was not available.
+
+[59 03 44 - 59 03 45] FLIGHT
+What do you mean, not available?
+
+[59 03 45 - 59 03 49] RETRO
+Not - not applicable. He said not available.
+
+[59 03 51 - 59 03 54] RETRO
+You'll have to talk with GUIDO if you want more verification on that.
+
+[59 03 55] FLIGHT
+GUIDANCE?
+
+[59 04 00] FLIGHT
+GUIDANCE, FLIGHT.
+
+[59 04 01] GUIDO
+Go, FLIGHT.
+
+[59 04 02 - 59 04 06] FLIGHT
+Don't you want to add a COAS star to this PC+2? The CAPCOM asked why not.
+
+[59 04 13 - 59 04 16] GUIDO
+FLIGHT, we have to know which axis that thing's mounted along for that to happen.
+
+[59 04 17 - 59 04 20] FLIGHT
+Okay. You don't have enough data to figure that out, is that right, right now?
+
+[59 04 21 - 59 04 23] GUIDO
+Well, I don't know if he's got it mounted along the Z-axis or the X-axis, FLIGHT.
+
+[59 04 24 - 59 04 25] FLIGHT
+Okay. That's what I said. Okay.
+
+[59 04 34 - 59 04 38] FLIGHT
+TELMU, write down what you want us to do, please, on the circuit breaker - I didn't hear you last time.
+
+[59 04 39 - 59 04 48] TELMU
+The CAPCOM only read one side of that circuit breaker - we gave him a sheet, there's circuit breakers on panel 11 and 16 to open.
+
+[59 04 48] FLIGHT
+Okay.
+
+[59 04 49] TELMU
+He only read up one side.
+
+[59 04 50] FLIGHT
+He only read up panel 11?
+
+[59 04 51] TELMU
+Yes.
+
+[59 04 52] FLIGHT
+Okay.
+
+[59 04 53] GUIDO
+FLIGHT, GUIDANCE.
+
+[59 04 54] FLIGHT
+Go ahead.
+
+[59 04 54 - 59 05 00] GUIDO
+We can go ahead and compute one for along the Z-axis and if it's not mounted here he can move it and mount the COAS over on the Z-axis.
+
+[59 05 01] FLIGHT
+Okay. Go ahead.
+
+[59 05 54 - 59 05 57] FLIGHT
+CONTROL, FLIGHT. Do you copy what happened? ???
+
+[59 05 59 - 59 06 01] FLIGHT
+Do we see any venting in the LM?
+
+[59 06 03 - 59 06 06] CONTROL
+Negative. We've got a lot of drops in and out of data.
+
+[59 06 08 - 59 06 10] FLIGHT
+Okay. He's having some difficulty with it. Let's look for reasons why.
+
+[59 06 11] CONTROL
+Roger.
+
+[59 06 31 - 59 06 34] FLIGHT
+It's 133 hours. To AOL, to the Atlantic.
+> In the end, it would be closer to 143 hours.
+
+[59 06 35 - 59 06 37] FLIGHT
+You might let them know we're talking about that, too, Jack.
+
+[59 07 33] FLIGHT
+GUIDANCE, FLIGHT.
+
+[59 07 34 - 59 07 37] GUIDO
+We have a load, FLIGHT, but INCO says we can't COMMAND.
+
+[59 07 38 - 59 07 39] FLIGHT
+Why not? INCO?
+
+[59 07 40 - 59 07 41] INCO
+We can COMMAND if we go to LOW BITRATE.
+
+[59 07 42 - 59 07 44] FLIGHT
+Let's give them the numbers, and they'll punch them in.
+
+[59 07 45] INCO
+Sorry?
+
+[59 07 46 - 59 07 47] FLIGHT
+At least give them the numbers to punch in.
+
+[59 07 47 - 59 07 48] GUIDO
+We'll read it up to him, FLIGHT.
+
+[59 07 49] FLIGHT
+Yeah.
+
+[59 08 39] CONTROL
+FLIGHT, CONTROL.
+
+[59 08 40] FLIGHT
+Go.
+
+[59 08 41 - 59 08 43] CONTROL
+Okay, I've got this list of stuff here for the ascent feed.
+
+[59 08 44 - 59 08 45] FLIGHT
+Okay. Bring it over. Have somebody hand it on.
+
+[59 08 52 - 59 08 56] CAPCOM
+And FLIGHT, did we come up with something with regards to his - uplinking a time?
+
+[59 08 57 - 59 09 02] FLIGHT
+We're having trouble uplinking the time. We'd have to go to LOW BITRATE - can he easily punch it in the DSKY there, GUIDANCE?
+
+[59 09 03] PROCEDURES
+FLIGHT, PROCEDURES.
+
+[59 09 04] FLIGHT
+Go ahead.
+
+[59 09 05 -] PROCEDURES
+Okay, stand by on that. We're trying an uplink mode that might give us COMMAND -
+
+[59 09 07] FLIGHT
+Okay.
+
+[- 59 09 08] PROCEDURES
+- and VOICE and HIGH BITRATE.
+
+[59 09 09] FLIGHT
+Alright.
+
+[59 09 10] FLIGHT
+CAPCOM, FLIGHT.
+
+[59 09 11] CAPCOM
+Go.
+
+[59 09 12 - 59 09 20] FLIGHT
+For your information, the problem is that we've deviate some of the frequencies because of the proximity of the IU frequency, and that thing's still alive. Copy?
+
+[59 09 21] CAPCOM
+Okay.
+
+[59 09 22 - 59 09 24] FLIGHT
+And that's - so it's a little bit nonstandard in that regard.
+
+[59 09 26] CAPCOM
+Okay.
+
+[59 09 26 - 59 09 32] FLIGHT
+But they're seeing what they can do. Why don't you give them a GET hack, though, eh? And let them know we're reading that VOX.
+
+[59 09 41] PROCEDURES
+FLIGHT, PROCEDURES.
+
+[59 09 42] FLIGHT
+Go ahead.
+
+[59 09 42 - 59 09 45] PROCEDURES
+Roger. We're on a COMMAND UPLINK mode along with VOICE, and we've got HIGH BITRATE data.
+
+[59 09 46 - 59 09 50] FLIGHT
+Okay. Pull in data and we can give him a time - wait a minute. GUIDANCE, you ready to give them a time?
+
+[59 09 50 - 59 09 51] GUIDO
+Roger, FLIGHT. We've got the load.
+
+[59 09 52] FLIGHT
+Okay.
+
+[59 09 55 - 59 09 56] FLIGHT
+We're ready to go, Jack.
+
+[59 10 00] INCO
+FLIGHT, INCO.
+
+[59 10 01] FLIGHT
+Go ahead.
+
+[59 10 02 - 59 10 04] INCO
+He's got his UPDATA LINK OFF.
+
+[59 10 16] FLIGHT
+CAPCOM.
+
+[59 10 24 - 59 10 26] GUIDO
+FLIGHT, GUIDANCE. We've got the load to go ahead and do it now.
+
+[59 10 27] INCO
+FLIGHT, INCO.
+
+[59 10 28 - 59 10 29] FLIGHT
+Yeah, I know. We've got another problem. Go ahead, INCO.
+
+[59 10 30 - 59 10 32] INCO
+I think it would be better if we go to FORWARD OMNI on the LM now. This uplink.
+
+[59 10 43] FLIGHT
+You want FORWARD OMNI?
+
+[59 10 44] INCO
+Roger.
+
+[59 10 49] FLIGHT
+CAPCOM, FLIGHT.
+
+[59 10 52] INCO
+Hurry.
+
+[59 10 55 - 59 10 58] FLIGHT
+CAPCOM, you need to - going to need to get FORWARD OMNI in the LM.
+
+[59 11 00 - 59 11 01] INCO
+I believe he's already done it, FLIGHT.
+
+[59 11 02 - 59 11 04] FLIGHT
+Okay. Oh, it's already done. Hm. Okay.
+
+[59 11 05 - 59 11 10] CAPCOM
+Okay, and he's going to write a mission time into the LGC.
+
+[59 11 15 - 59 11 16] FLIGHT
+Can you do this when you don't have a DSKY? Time?
+
+[59 11 28 - 59 11 30] FLIGHT
+That'll give him his clock, will it, RETRO?
+
+[59 11 32] RETRO
+That's affirmative.
+
+[59 11 32] FLIGHT
+Okay.
+
+[59 11 33] CONTROL
+FLIGHT, CONTROL.
+
+[59 11 34] FLIGHT
+Go ahead.
+
+[59 11 35 - 59 11 40] CONTROL
+Okay, if he wants to turn his inverters off, we can monitor his middle gimbal angle here for him. One other suggestion I have is that he -
+
+[59 11 41 - 59 11 43] FLIGHT
+Wait, wait a minute. Let me - let me hear the COMM, here.
+
+[59 12 44 - 59 12 46] RETRO
+FLIGHT, RETRO. We've got a good clock update.
+
+[59 12 47] FLIGHT
+Okay.
+
+[59 12 54] INCO
+FLIGHT, INCO.
+
+[59 12 55] FLIGHT
+Go ahead.
+
+[59 12 55 - 59 13 09] INCO
+We've got a chance here, we'd like to take and change our offset on the two vehicles, on how we're getting telemetry, to try to solve this tracking problem. To do that we're going to have to drop the LM uplink and break lock for maybe 5 to 10, 20 seconds, there.
+> INCO and his team want to move the S-IVB IU frequency below the LM frequency to solve the tracking problem. The frequencies could be changed by dragging them with a emitted signal from the ground once the link was locked in. But if the signals dragged across each other, both would snap together and become inseparable, and the S-IVB link couldn't be restarted remotely, so the LM had to discontinue their link while the other signal passed through its range.
+
+[59 13 10] FLIGHT
+Okay. Well, let's just standby on that.
+
+[59 13 11] INCO
+Okay.
+
+[59 13 16 - 59 13 17] FLIGHT
+Okay. Now, before we get into that one -
+
+[59 13 26] GUIDO
+FLIGHT, GUIDANCE.
+
+[59 13 27] FLIGHT
+Go ahead.
+
+[59 13 28 - 59 13 30] GUIDO
+We'd like to have a VERB 74 some time when they can skip the DSKY.
+
+[59 13 31 - 59 13 38] FLIGHT
+Okay, GUIDANCE. CAPCOM, we're reading for an E-MEMORY dump. They'll give us a VERB 74, that's what you're talking about, isn't it, GUIDANCE?
+
+[59 13 38] GUIDO
+Roger, FLIGHT.
+
+[59 13 39] FLIGHT
+We're getting an E-MEMORY dump.
+
+[59 13 49 - 59 13 52] FLIGHT
+CONTROL, FLIGHT. You saw an increase in the ascent tanks, is that right? Pressure?
+
+[59 13 53] CONTROL
+Yes.
+
+[59 13 54 - 59 13 56] FLIGHT
+And you want to be sure, what, that the ascent feeds are closed -
+
+[59 13 56 - 59 14 01] CONTROL
+Yeah. Pull those breakers and cycle those valves closed. Do not cycle to the open position, just to the close position.
+
+[59 14 03] CAPCOM (off loop)
+- when he pressurized the -
+
+[59 14 04 - 59 14 10] FLIGHT
+Yeah, RCS. And we want to do an E-MEMORY dump whenever they can get around to it, we're all ready to receive it.
+
+[59 14 11 - 59 14 12] CONTROL
+Okay, I've got one item, FLIGHT.
+
+[59 14 13] FLIGHT
+Say again?
+
+[59 14 14 -] CONTROL
+This is CONTROL. We want to power down his inverters -
+
+[59 14 19] CAPCOM
+Coming at you.
+
+[- 59 14 33] CONTROL
+- and in order to do that, we're going to have to look at his middle gimbal angle for him on the ground. And to make it easier, he needs to get out of this MIN IMPULSE mode. He needs to go to - PNGS MODE CONTROL to AUTO when he gets to an attitude that he likes.
+
+[59 14 34 - 59 14 35] FLIGHT
+That's - yeah. Okay.
+
+[59 14 37 - 59 14 48] FLIGHT
+But now, wait a minute. Before we do any of that, I want to hear what it is control configuration we're going to be in, and whether we can keep the PNGS up or whether we're going to bring the AGS up, etc.
+
+[59 14 49] CONTROL
+Okay.
+
+[59 14 50 - 59 14 52] FLIGHT
+I want to get the holes dug before we start doing more things.
+
+[59 14 52] CONTROL
+Roger.
+
+[59 14 55 - 59 15 07] FLIGHT
+Let me see if - have you heard that one of the suggestions is to align the AGS to the PNGS, power the PNGS down, use the AGS, and bring the PNGS back up and do a P52 for the burn?
+> The AGS was limited but sufficient for maintaining the platform and less power-hungry than the PNGS.
+
+[59 15 08] CONTROL
+That's right, FLIGHT.
+
+[59 15 09 - 59 15 15] FLIGHT
+Okay. Well, I'd like to get that whole complex of control modes and what we're going to do in currents sorted out before we start changing things.
+
+[59 15 16] CONTROL
+Okay.
+
+[59 15 17 - 59 15 19] FLIGHT
+Or we'll be doing this all night. Okay, Hal?
+
+[59 15 20] CONTROL
+Roger.
+
+[59 15 21 - 59 15 25] FLIGHT
+And I'm open to any suggestions here as to what the reasonable course of action - the last I heard from -
+
+[59 15 28 - 59 15 31] FLIGHT
+- staff is that they're going to try to run that again in the simulator, I believe.
+
+[59 15 33] CONTROL
+Okay.
+
+[59 16 20] PROCEDURES
+FLIGHT, PROCEDURES.
+
+[59 16 22] FLIGHT
+Go ahead.
+
+[59 16 22 - 59 16 24] PROCEDURES
+Roger, we're going to have to write a restart. 10 second loss of data.
+
+[59 16 26 - 59 16 28] FLIGHT
+Okay, everybody. Stand by for 10 second loss of data.
+
+[59 17 03 - 59 17 04] FLIGHT
+- yeah. CONTROL, FLIGHT.
+
+[59 17 06 - 59 17 07] FLIGHT
+Hal? CONTROL, FLIGHT.
+
+[59 17 10] CONTROL
+Go ahead, FLIGHT.
+
+[59 17 11 - 59 17 14] FLIGHT
+Hal, Tom Stafford's coming over. Would you chat with him about this thing?
+
+[59 17 15 - 59 17 16] CONTROL
+On the - PNGS/AGS?
+
+[59 17 17] FLIGHT
+Yeah.
+
+[59 17 17] CONTROL
+Roger.
+
+[59 17 18] GUIDO
+FLIGHT, GUIDANCE.
+
+[59 17 19] FLIGHT
+Go ahead.
+
+[59 17 19 - 59 17 20] GUIDO
+We got a good E-MOD, FLIGHT.
+
+[59 17 21 - 59 17 27] FLIGHT
+Okay, CAPCOM. We got a good E-MOD. Do they need to terminate anything, GUIDANCE, or does it terminate? Oh, it terminates.
+
+[59 17 27] GUIDO
+No, it's okay.
+
+[59 17 28] FLIGHT
+Okay.
+
+[59 18 15 - 59 18 18] FLIGHT
+And that's the Atlantic, too, Jack, for their info. That's the Atlantic.
+
+[59 18 34 - 59 18 38] FLIGHT
+Yeah - we haven't made our mind we want to go there, but that's the PAD - that's the abort data he has in board.
+
+[59 18 45 - 59 18 46] FLIGHT
+It's the minimum return.
+
+[59 18 50] FLIGHT
+Yeah.
+
+[59 18 56] GUIDO
+FLIGHT, GUIDANCE.
+
+[59 18 57] FLIGHT
+Go ahead.
+
+[59 18 58 - 59 19 02] GUIDO
+We'd like to send him a REFSMMAT sometime, FLIGHT. If he gives P00 and ACCEPT.
+
+[59 19 03] FLIGHT
+What kind of REFSMMAT?
+
+[59 19 04 - 59 19 13] GUIDO
+It's the one that they're aligned to. They were carrying one pre - prelaunch, and it's not the one that they're aligned to right now. We're going to give them the right matrix.
+
+[59 19 16 - 59 19 17] FLIGHT
+Okay, and then what does he do? Align to it?
+
+[59 19 18 - 59 19 20] GUIDO
+No, no. He's fine. We just need to get it in there.
+
+[59 19 21 - 59 19 22] FLIGHT
+Oh, so he has it on board?
+
+[59 19 23] GUIDO
+Right.
+
+[59 19 26 - 59 19 28] FLIGHT
+Okay. Okay, CAPCOM - are you ready to do that now?
+
+[59 19 28] GUIDO
+Roger, FLIGHT.
+
+[59 19 29 - 59 19 30] FLIGHT
+Do you want to send them a state vector, too? By the -
+
+[59 19 31 - 59 19 32] GUIDO
+Negative, FLIGHT. We want to hold off on that.
+
+[59 19 32] FLIGHT
+Okay.
+
+[59 19 33 - 59 19 38] GUIDO
+I'm not sure what the LM will do with it. We're having MIT run the hybrid, and see what it would do with this kind of -
+
+[59 19 38 - 59 19 39] FLIGHT
+Oh, that's right, because it doesn't navigate out here.
+
+[59 19 40 - 59 19 42] GUIDO
+That's right. So, we're having them run it on the hybrid, and check it out -
+
+[59 19 42 - 59 19 47] FLIGHT
+The REFSMMAT - I'm not - GUIDANCE, say one more time why you want them to have a REFSMMAT, because he doesn't have one -
+
+[59 19 48 -] GUIDO
+He doesn't have the one he's aligned to right now, FLIGHT -
+
+[59 19 50] FLIGHT
+Okay.
+
+[- 59 19 52] GUIDO
+- he aligned to the PTC and he was carrying another one.
+
+[59 19 53] FLIGHT
+Okay.
+
+[59 19 56 - 59 19 57] FLIGHT
+Yeah. We want him to have the one he's aligned to.
+
+[59 19 58 - 59 20 00] GUIDO
+And we're also going to stick a TFN in, FLIGHT.
+
+[59 20 03 - 59 20 05] CAPCOM
+Alright, you want P00 and DATA now? You ready to go?
+
+[59 20 05 - 59 20 06] GUIDO
+That's affirm. We're ready.
+
+[59 20 33] FLIGHT
+Go ahead, GUIDANCE.
+
+[59 20 34] GUIDO
+Roger, FLIGHT. We're picking up.
+
+[59 20 53] INCO
+FLIGHT, INCO.
+
+[59 20 54] FLIGHT
+Go.
+
+[59 20 54 - 59 20 55] INCO
+Can we try that procedure now?
+
+[59 20 58 -] FLIGHT
+Just a minute, Ed. Let me see what else is cooking, I don't have any -
+
+[59 21 01] GUIDO
+FLIGHT, GUIDANCE.
+
+[- 59 21 03] FLIGHT
+- reason why not to. Go ahead, GUIDANCE.
+
+[59 21 03 - 59 21 06] GUIDO
+We don't have the DUA. He gave us P00, but he didn't give us the DUA.
+
+[59 21 10 - 59 21 11] FLIGHT
+Okay, we need the DATA position, right?
+
+[59 21 12] INCO
+Roger.
+
+[59 21 12] GUIDO
+Roger.
+
+[59 21 13 - 59 21 15] FLIGHT
+CAPCOM. CAPCOM, FLIGHT.
+
+[59 21 16] CAPCOM
+Go, FLIGHT.
+
+[59 21 17 - 59 21 21] FLIGHT
+We got program 00 but he needs to go to DATA first to get the load in.
+
+[59 21 29 - 59 21 30] FLIGHT
+Okay. We're loading the REFSMMAT -
+
+[59 21 39] INCO
+That's probably what it is, FLIGHT.
+
+[59 21 40] FLIGHT
+Okay.
+
+[59 21 42] FLIGHT (off loop)
+Yeah, they'll have to.
+
+[59 21 51] INCO
+We've got it, FLIGHT.
+
+[59 21 52] FLIGHT
+Okay.
+
+[59 21 53] GUIDO
+We're picking up, FLIGHT.
+
+[59 21 57 - 59 22 04] FLIGHT
+Okay. We're loading the REFSMMAT. We've got the VERB 74. CONTROL, FLIGHT, did you see him cycle the valves on the ascent feed?
+
+[59 22 05] CONTROL
+Go ahead, FLIGHT.
+
+[59 22 06 - 59 22 08] FLIGHT
+Did he cycle the valves on the ascent feed? Jack says he did it.
+
+[59 22 09 - 59 22 11] CONTROL
+Okay, we can't see that he did it, FLIGHT, on TM.
+
+[59 22 12] FLIGHT
+Okay, but he did do it.
+
+[59 22 13] CONTROL
+Okay, FLIGHT, thank you.
+
+[59 22 14 - 59 22 15] FLIGHT
+Okay. He cycled the ascent feeds - -
+
+[59 22 22 - 59 22 32] FLIGHT
+Okay, now, we're working on what we're going to do with the configuration. We need to get some kind of PTC going for us here, and we need to decide what we want to do with our control configuration - you're working all that, huh, CONTROL?
+
+[59 22 33] CONTROL
+Trying my best to, FLIGHT.
+
+[59 22 34] FLIGHT
+Okay.
+
+[59 22 36 - 59 22 38] INCO
+FLIGHT, INCO. We're coming up on AFT OMNI for the LM.
+
+[59 22 39] FLIGHT
+Do you want us to switch now?
+
+[59 22 40] INCO
+Right.
+
+[59 22 41] FLIGHT
+We're right in the middle of a load.
+
+[59 22 42 - 59 22 44] INCO
+Okay, we won't - hold as long as we can.
+
+[59 22 48 - 59 22 49] INCO
+He got it pretty quick on there anyway.
+
+[59 27 40] GUIDO
+FLIGHT, GUIDANCE.
+
+[59 27 41] FLIGHT
+Go.
+
+[59 27 41 - 59 27 42] GUIDO
+We're through COMMANDing to the LM.
+
+[59 27 43] FLIGHT
+Through COMMANDing, CAPCOM.
+
+[59 27 47] TELMU
+FLIGHT, TELMU.
+
+[59 27 48] FLIGHT
+Go.
+
+[59 27 49 - 59 27 50] TELMU
+I'd like to go ahead and get that DUA off the line.
+
+[59 27 51 - 59 27 55] FLIGHT
+Okay. We're through COMMANDing, CAPCOM, and they can take that circuit breaker - the DUA circuit breaker out again.
+
+[59 27 56] TELMU
+And FLIGHT, TELMU.
+
+[59 27 57] FLIGHT
+Go.
+
+[59 27 59 - 59 28 05] TELMU
+We'd like to get as much gear off here as we can. We'd like for you to think about turning this inverter off.
+
+[59 28 06 - 59 28 07] FLIGHT
+Again, here? Which inverter?
+
+[59 28 08 - 59 28 09] TELMU
+The LM inverter. Inverter 2.
+
+[59 28 10 - 59 28 17] FLIGHT
+It's running the eight-ball. Yeah, I need to tie that together with how we're going to fly this thing, Merlin - I'm waiting to get this whole thing.
+
+[59 28 18] TELMU
+Understand, but -
+
+[59 28 19] FLIGHT
+I understand what you're saying.
+
+[59 28 20] TELMU
+Okay.
 

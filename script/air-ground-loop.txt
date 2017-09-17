@@ -1853,3 +1853,422 @@ Well, I want to get out of this roll.
 [58 58 39] CDR
 What if I go to -
 
+[58 59 53] CDR
+Hello Houston, Aquarius.
+
+[58 59 57] CMP
+Back on? Yes.
+
+[59 00 06 - 59 00 10] CAPCOM
+Aquarius, Houston. You're watching your middle gimbal there, aren't you? Go ahead, Aquarius.
+
+[59 00 14 - 59 00 16] LMP
+Okay. Go ahead with the breakers first, Jack.
+
+[59 00 17 - 59 00 18] CAPCOM
+Okay. You watching your middle gimbal there?
+
+[59 00 22] CDR
+Tell them we are.
+
+[59 00 25 - 59 00 27] CMP
+Your attitude is just straight pitch down, Jim.
+
+[59 00 35] CMP
+Okay, you're moving away.
+
+[59 00 50 - 59 00 52] CAPCOM
+Okay, Fred. I've got six circuit breakers for you.
+
+[59 00 55 - 59 00 56] LMP
+Okay. Go ahead.
+
+[59 00 58 - 59 01 06] CAPCOM
+Okay, they're all on panel 11. Row 1, under AC BUS B, open HELIUM PQGS for PROPELLANT DISPLAY.
+
+[59 01 09] LMP
+It's OPEN.
+
+[59 01 10 - 59 01 24] CAPCOM
+On row 2. FLIGHT DISPLAYS, open THRUST, open MISSION TIMER, open RNG/RNG RT/ALT/ALT RT, and open the AC BUS A RNG/RNG RT/ALT/ALT RT.
+
+[59 01 27] LMP
+They're OPEN.
+
+[59 01 28] CDR
+Okay, they're all OPEN.
+
+[59 01 29 - 59 01 32] CAPCOM
+Okay. On row 4, PNGS, SIGNAL STRENGTH DISPLAY.
+
+[59 01 40] CDR
+It's OPEN.
+
+[59 01 41] LMP
+It's OPEN.
+
+[59 01 43 - 59 01 50] CAPCOM
+Okay, that concludes the power down of displays. And I have a P30 PAD for you.
+
+[59 01 55] LMP
+Okay, go ahead.
+
+[59 01 58 - 59 03 13] CAPCOM
+Okay, the purpose is a pericynthion plus 2 hours DPS abort. NOUN 33: {079:25:26.48}. {+1633.0, -0014.5, -0751.5}. {Apogee not applicable, perigee is +0020.5, 1797.7}, {8:35}. {268, 264}. {+1641.0, -0014.5, -0733.8}. COAS is N/A.
+> The PAD page [provided here](#overview-propulsion) is for the CSM, but it is approximately the same as [what the crew are filling out](https://www.hq.nasa.gov/alsj/a15/A15DC016.GIF).
+1> NOUN 33: time of burn
+2> NOUN 81: change in velocity (∆V in fps)
+3> NOUN 42: apogee, perigee, total ∆V
+4> Burn time
+5> FDAI roll and pitch
+6> NOUN 86: change in velocity (∆V in fps) in the AGS coordinate space
+
+[59 03 20 - 59 03 35] CAPCOM
+And I have two gimbal trim angles for you which will be updated. Right now, however, we want you to go with pitch 5.86, roll 6.75. Over.
+
+[59 03 39] LMP
+What was that for?
+
+[59 03 41 - 59 03 42] CDR
+Pitch and yaw, maybe, huh?
+
+[59 03 43 - 59 03 48] LMP
+Okay. What was the last two this you gave me, a pitch and roll angle for what?
+
+[59 03 49 - 59 03 50] CAPCOM
+That's for your DPS trim.
+
+[59 03 51 - 59 03 54] CDR
+Those were gimbal angles for - pitch and yaw.
+
+[59 03 55 - 59 03 57] LMP
+Ah, Roger. GDAs.
+
+[59 03 58] CAPCOM
+Yeah, that's what I mean. Sorry.
+
+[59 03 59 - 59 04 42] LMP
+Pericynthion plus 2. Okay, DPS pericynthion plus 2, at 079:25:026.48. +1633.0, -0114.5, -0751.5. HA N/A, HP +0020.5, 1797.7. 8:35. 268, 264. +1641.0, -0014.5, -0733.8 -
+
+[59 04 44 - 59 04 45] CDR
+Did we lose water in the -
+
+[59 04 45 - 59 04 56] LMP
+N/A on the COAS, and you gave me GDA angles of: pitch 5.86, and you want roll 6.75.
+
+[59 04 57 - 59 04 58] CAPCOM
+Good readback, Fred.
+
+[59 05 01 - 59 05 03] CDR
+Yes, lose - get all the little bags you can with water.
+
+[59 05 07 - 59 05 09] CAPCOM
+Aquarius, Houston. Say again, please.
+
+[59 05 14 - 59 05 18] LMP
+Okay, we didn't answer back there, Jack. Check to see if you're on VOX.
+
+[59 05 21] CDR
+No.
+
+[59 05 22 - 59 05 23] LMP
+Neither am I. Okay.
+> Clearly one of them is indeed on VOX.
+
+[59 05 31 - 59 05 33] LMP
+Why the hell are we maneuvering at all now? Are we still venting?
+
+[59 05 35 - 59 05 38] CDR
+Well, we're at ATT HOLD for one thing - I mean, we're at MIN IMPULSE.
+
+[59 05 40 - 59 05 42] LMP
+No, I mean why can't you null them out somewhere?
+
+[59 05 42 - 59 05 50] CDR
+Every time I try to - I can't take that doggone roll out. I got to wait until we get a little into the bellyband.
+
+[59 05 51 - 59 06 05] LMP
+Wait a minute. Do you - you fight roll by using the TTCA left/right. That's what you need to play with.
+
+[59 06 05 - 59 06 11] CDR
+Okay, we'll try that. Let me get around though. Let's roll. Let it roll all the way.
+
+[59 06 12 - 59 06 13] LMP
+Yeah, you can't let it roll all the way!
+
+[59 06 14 - 59 06 16] CDR
+I know. I know. But I mean -
+
+[59 06 17 - 59 06 19] LMP
+Okay, until it's upside down at least, huh?
+
+[59 06 19] CDR
+Yup.
+
+[59 06 20 - 59 06 30] LMP
+Okay. Well, should I ask him what the {return time} on that one is? Or are you interested?
+1> Splashdown
+
+[59 06 32 - 59 06 33] CDR
+Let's get the first things first.
+
+[59 06 44 - 59 06 57] LMP
+Oh, you don't want to hear. Let me figure some times out, here. That's at 79, and what are we at now? About - do we - do we - we don't even have computer time, do we?
+
+[59 06 58] CDR
+Nope.
+
+[59 07 01 - 59 07 07] LMP
+Hey, Jack? Do you still have a mission timer? You don't? Okay.
+
+[59 07 08 - 59 07 18] CDR
+Okay, let's ask - let's ask Houston to give us a mission timer - computer time. They can uplink it to us. Yeah, hold it.
+
+[59 07 19] LMP
+Go ahead.
+
+[59 07 21] CDR
+Houston, Aquarius.
+
+[59 07 22] CAPCOM
+Go ahead, Aquarius.
+
+[59 07 26 - 59 07 31] CDR
+You know, we don't have a - I don't think we have a computer clock going, and why don't you uplink that stuff to us?
+
+[59 07 32] CAPCOM
+Roger.
+
+[59 07 41 - 59 07 45] CAPCOM
+And Freddo, I got some fast circuit breakers on panel 16 for you.
+
+[59 07 50] LMP
+Okay, go ahead.
+
+[59 07 52 - 59 08 01] CAPCOM
+Okay. On row 1 under FLIGHT DISPLAYS, SYSTEM ENGINEER X-POINTER, OPEN. Under RCS B -
+
+[59 08 01] LMP
+It's OPEN.
+
+[59 08 02 - 59 08 06] CAPCOM
+Open the TEMP/PRESS DISPLAY FLAGS and PQGS/DISPLAYS.
+
+[59 08 11 - 59 08 12] LMP
+Okay. They're both OPEN.
+
+[59 08 13 - 59 08 17] CAPCOM
+Okay, Fred. On row 3 under COMM, open DISPLAYS and under ECS, open DIPLAYS.
+
+[59 08 25 - 59 08 28] LMP
+Okay. COMM DISPLAYS, ECS DISPLAYS - both OPEN.
+
+[59 08 29 - 59 08 33] CAPCOM
+Okay, and two more. In row 4 under HEATERS, open DISPLAYS and under EPS, open DISPLAYS.
+
+[59 08 41 - 59 08 49] LMP
+Okay. HEADERS DISPLAY, EPS DISPLAY OPEN. And I've long since had all the lights off; floods, etc.
+
+[59 08 56 - 59 09 01] CDR
+Where are those bags? Where are those bags for weighing water in the PLSS?
+
+[59 09 03] LMP
+Why?
+
+[59 09 04 - 59 09 06] CDR
+We're going to fill up command module water.
+
+[59 09 10] LMP
+Hell, do you need a QD -
+
+[59 09 15 - 59 09 17] LMP
+- Jim. No way to get ours in there, I don't think.
+
+[59 09 38] LMP
+Hey, Jim -
+
+[59 09 45 - 59 09 52] CDR
+I wonder if one of our water - jet is - okay, let's control -
+
+[59 09 58 - 59 09 59] CDR
+What else can we fill up there?
+
+[59 10 01 - 59 10 23] CAPCOM
+Aquarius, Houston. We're not going to be able to uplink your time because of the IU, and we have a frequency problem there. But what I'd like to do is give you a time to set up on your mission timer and give you a mark and then you can put it into the DSKY from there. Over.
+
+[59 10 26 - 59 10 27] CDR
+Okay, standby.
+
+[59 10 28 - 59 10 31] LMP
+Wait a minute. Why do we need a mission timer right now, anyway? I mean, that bad - they'd tell us.
+
+[59 10 33 - 59 10 37] CDR
+Well, I'd rather have a timer going so that we - then we can put it in the DSKY. Until we shut down the mission timer.
+
+[59 10 38] LMP
+Oh, is that what you want to do?
+
+[59 10 39 - 59 10 41] CDR
+Yeah. Hey. OMNI.
+
+[59 10 48 - 59 10 52] CDR
+{Switch them.} Okay, let's fire up the mission timer.
+1> Lovell is a step ahead of mission control here; the antenna gets switched before the request makes it up.
+
+[59 11 00 - 59 11 01] CAPCOM
+Aquarius, Houston, we need FORWARD OMNI.
+
+[59 11 06] CDR
+FORWARD OMNI.
+
+[59 11 08] LMP
+Say again, Jack.
+
+[59 11 10] CDR
+FORWARD OMNI.
+
+[59 11 12] LMP
+I am.
+
+[59 11 21 - 59 11 24] LMP
+Okay, Houston. If that call was an OMNI switch, I'm in FORWARD now.
+
+[59 11 30 - 59 11 33] CDR
+Okay, Freddo. how do I get the mission timer up? Gotta get the mission timer cranked in.
+
+[59 11 34] LMP
+You got it on?
+
+[59 11 35 - 59 11 36] CDR
+I got the mission timer circuit breaker in.
+
+[59 11 39 - 59 11 45] LMP
+Okay, we're going to probably need NUMERICS LIGHTING. There you go, you got it.
+
+[59 11 48 - 59 11 51] CAPCOM
+Aquarius, Houston. I think we've got a better way of getting your mission time up.
+
+[59 11 57] CDR
+Go ahead with it.
+
+[59 12 00 - 59 12 25] CAPCOM
+Okay, we can do a VERB 55, ENTER. And then put an R1 -00088. In R2 -00059. R3 -03274.
+
+[59 12 29 - 59 12 30] LMP
+Watch the crappin' attitude.
+
+[59 12 32] CDR
+We're okay.
+
+[59 12 38 - 59 12 39] CMP
+God damn; I wish you'd get to something I know.
+
+[59 12 42 - 59 12 44] CDR
+Well, as soon as you get over here, we'll stop it with the TTCA.
+
+[59 12 45] CMP
+Okay.
+
+[59 12 47 - 59 12 50] CAPCOM
+And Aquarius, Houston. We've got you both on VOX.
+> Perhaps the salty language motivated CAPCOM on this item.
+
+[59 12 55] LMP
+They've got what?
+
+[59 12 57 - 59 12 58] CDR
+You want us on VOX, Jack?
+
+[59 12 59 - 59 13 03] CAPCOM
+We have you on VOX. We're reading you loud and clear and the clock took good.
+
+[59 13 18 - 59 13 21] LMP
+Okay. Looks like we're on the FDA route there, Jack.
+
+[59 13 39 - 59 13 41] LMP
+Okay, Jack. How do you read me on NORMAL VOICE now?
+
+[59 13 43 - 59 13 44] CAPCOM
+Hearing you 5 square, Fred.
+
+[59 13 47] LMP
+Okay.
+
+[59 14 12 - 59 14 15] CAPCOM
+And Aquarius, we're ready for a VERB 74 when you can give it to us.
+
+[59 14 24] LMP
+You got it.
+
+[59 14 25] CAPCOM
+Okay. And one other thing we noticed: when you pressurized the RCS, we got an increase in pressure in the ascent tanks, and so we want to have you verify that the ascent feeds are closed. In order to do that, on panel 11, close the ASCENT FEED 1 and 2 circuit breakers - and cycle the Parker valves, and then open the ASCENT FEED circuit breakers on panel 11.
+
+[59 15 09] CDR
+Completed, Houston.
+
+[59 15 12] CAPCOM
+Okay, Jim. Thank you.
+
+[59 17 54 - 59 18 00] LMP
+And Jack, Aquarius. What kind of return time is this maneuver give us?
+
+[59 18 03 - 59 18 08] CAPCOM
+That puts you back in the water at 133 hours.
+
+[59 18 12 - 59 18 13] LMP
+133, eh?
+
+[59 18 13] CAPCOM
+Affirm.
+
+[59 18 25 - 59 18 26] CAPCOM
+And that's an Atlantic landing site.
+
+[59 18 32 - 59 18 33] LMP
+Atlantic landing?
+
+[59 18 37 -] CAPCOM
+Affirmative. That's the PAD we've given you, but we may change our minds later on. We want you to have this info for now. And that's the minimum -
+
+[59 18 48] LMP
+Okay.
+
+[- 59 18 50] CAPCOM
+minimum time return.
+
+[59 20 10 - 59 20 18] CAPCOM
+Aquarius, Houston. We've got to change the REFSMMAT to the one to which you're aligned. So we'd like to have P00 and DATA and we'll ship that up to you.
+
+[59 20 22] CDR
+Roger.
+
+[59 20 31 - 59 20 32] LMP
+Okay, you got it, Jack.
+
+[59 20 34] CAPCOM
+Roger. Coming up.
+
+[59 21 23 - 59 21 24] CAPCOM
+Aquarius, could you give us DATA, please?
+
+[59 21 33 - 59 21 34] CDR
+Okay, Jack, you got it.
+
+[59 21 33 - 59 21 37] LMP
+He's got the updata link - the DUA breaker may not be in, Jack.
+
+[59 21 45 - 59 21 46] CAPCOM
+Okay, Fred, and close the DUA breaker.
+
+[59 21 52] CDR
+It's in now, Jack.
+
+[59 21 55 - 59 21 56] CAPCOM
+Okay, Jim, and it's coming up now. Thank you.
+
+[59 28 05 - 59 28 12] CAPCOM
+Aquarius, Houston. We're finished with the uplink. The computer's yours. We'd like to power down the DUA, so pull the DUA circuit breaker please.
+
+[59 28 15 - 59 28 17] LMP
+Okay. Updata link breaker's coming OPEN.
+
