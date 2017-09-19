@@ -2272,3 +2272,108 @@ Aquarius, Houston. We're finished with the uplink. The computer's yours. We'd li
 [59 28 15 - 59 28 17] LMP
 Okay. Updata link breaker's coming OPEN.
 
+[59 36 27 - 59 36 42] CAPCOM
+Aquarius, Houston. We'd like to have AFT OMNI, and we're going to lose contact with you for about a minute here while we try to establish tracking. And our latest data shows that your closest approach to the Moon is going to be 60 miles perigeee, over.
+
+[59 36 46 - 59 36 49] LMP
+Okay. Closest approach, 60 miles, and I'm sitting on AFT OMNI now.
+
+[59 36 52 - 59 36 54] CAPCOM
+Roger, we'll probably be going off the air here for about a minute.
+
+[59 41 14] CDR
+Houston, Aquarius. Over.
+
+[59 41 16] CAPCOM
+Go ahead, Aquarius.
+
+[59 41 21 - 59 41 25] CDR
+Okay, we're thinking of rigging up the urine dump to the side hatch.
+
+[59 41 31 - 59 41 36] CDR
+We're thinking of rigging up the urine dump to the side hatch to save urine heater power. What do you think?
+
+[59 41 38] CAPCOM
+Standby 1.
+
+[59 41 44 - 59 41 47] CDR
+Better still so we can - won't freeze up our urine dump.
+
+[59 41 50 - 59 41 53] CAPCOM
+Roger, that sounds like a good plan, Jim. Why don't you go ahead with that one?
+
+[59 43 01 - 59 43 39] CAPCOM
+Okay, Aquarius. Down here we're getting regrouped, trying to work on your control modes and trying to set up something for PTC and taking a look at consumables as opposed to flight plan, and so forth. And as soon as we get all that information, we'll pass it up to you. We also have the 14 backup crew over in the simulators looking at docked burns and also trying to see what kind of alignment procedures they can come up with for looking at stars out the window. So if you ever are able to see any stars out there and think you can do an alignment out the window, why let us know.
+
+[59 43 43 - 59 44 04] CDR
+Okay, Jack. Right now we're not able to. The sunlight's reflecting off the thrusters and whatever debris came away at the time of the mishap is still with us, such that the stars are hard to find. And why - what respect do you want us to do the stars out the window - just to check the LMS run, is that correct?
+
+[59 44 06 - 59 44 14] CAPCOM
+That's affirm. We'd like to correlate the information we get with yours, so that if we can use it to update the platform, we can.
+
+[59 44 24 - 59 44 30] CAPCOM
+What we're really trying to do, Jim, is see if we can do a COAS align so we can power down the platform.
+
+[59 45 26 - 59 45 31] CDR
+Houston, Aquarius. We're getting an awful lot of static on the uplink now, and we're not reading you at all.
+
+[59 45 42 - 59 45 45] CDR
+I have good signal strength and I'm on AFT OMNI.
+
+[59 45 54] CAPCOM
+How do you read now, Aquarius?
+
+[59 47 08 - 59 47 23] CAPCOM2
+Hey, Jim, do you suppose that you could orient the LM so that the Service Module would be between you and the Sun? I believe you could see - recognize constellations out your front windows then.
+> This is likely Tom Stafford (??) passing up advice learned on Apollo 10.
+
+[59 47 50 - 59 47 51] CAPCOM
+Aquarius, Houston. Radio check.
+
+[59 48 17 - 59 48 18] CDR
+Okay, Jack. How do you read now?
+
+[59 48 19 - 59 48 38] CAPCOM
+Okay, hearing you 5 square now, Jim. And the question we have: is there some way you can orient the spacecraft so that the Service Module is between the LM and the Sun so you can recognize constellations out the window? And secondly, can you see anything out the AOT?
+
+[59 49 30 - 59 49 31] CAPCOM
+Aquarius, Houston. How do you read?
+
+[59 53 49 - 59 53 50] CAPCOM
+Aquarius, how are you reading me now?
+
+[59 56 59] CAPCOM
+Aquarius, Houston. How do you read?
+
+[59 57 11 - 59 57 12] CAPCOM
+Aquarius, request FORWARD OMNI, please.
+
+[59 58 25 - 59 58 27] CAPCOM
+Aquarius, Houston. Request FORWARD OMNI. How do you read?
+
+[59 59 08 - 59 59 10] LMP
+Okay, Houston, Aquarius. How do you read?
+
+[59 59 10 - 59 59 12] CAPCOM
+Hello there, Aquarius. Loud and clear. How do you read me?
+
+[59 59 17] CDR
+There's an awful lot of background -
+
+[59 59 18 - 59 59 23] LMP
+Okay, we've got a lot of background static, Jack. You're down in the mud. You having a ground problem?
+
+[59 59 25 - 59 59 41] CAPCOM
+What we tried to do was to get the IU frequency shifted off a little bit so that we'd have less interference. I think it'll come up - what we want you to do is turn on your descent oxygen and turn off your ascent oxygen. Over. And request FORWARD OMNI.
+
+[59 59 45 - 59 59 53] LMP
+You're unreadable, Jack. We've got our signal strength meter - right now it keeps wavering up and down. The best I'm getting is about 2.4 AGC.
+> Apparently, the crew have popped back in their COMM DISPLAY breaker to resolve the COMM issue, which means -
+
+[59 59 55 - 59 59 57] CAPCOM
+Roger. Request FORWARD OMNI.
+
+[60 00 00 - 60 00 03] LMP
+I am on FORWARD OMNI. I've been on FORWARD OMNI.
+> - that they already knew to be on FORWARD OMNI. This in turn means that INCO's diagnosis of the problem wasn't quite right.
+
