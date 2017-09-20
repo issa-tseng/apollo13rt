@@ -2325,7 +2325,7 @@ How do you read now, Aquarius?
 
 [59 47 08 - 59 47 23] CAPCOM2
 Hey, Jim, do you suppose that you could orient the LM so that the Service Module would be between you and the Sun? I believe you could see - recognize constellations out your front windows then.
-> This is likely Tom Stafford (??) passing up advice learned on Apollo 10.
+> This is (yet another NASA legend) John Young passing up advice learned on Apollo 10.
 
 [59 47 50 - 59 47 51] CAPCOM
 Aquarius, Houston. Radio check.
@@ -2376,4 +2376,90 @@ Roger. Request FORWARD OMNI.
 [60 00 00 - 60 00 03] LMP
 I am on FORWARD OMNI. I've been on FORWARD OMNI.
 > - that they already knew to be on FORWARD OMNI. This in turn means that INCO's diagnosis of the problem wasn't quite right.
+
+[60 00 45 - 60 00 46] LMP
+Okay, how do you read, Jack?
+
+[60 00 48 - 60 00 49] CAPCOM
+I'm hearing you 5 square, Fred. How me?
+
+[60 01 15 - 60 01 16] CAPCOM
+Aquarius, Houston. How do you read?
+
+[60 02 05 - 60 02 06] CAPCOM
+Aquarius, Houston. Radio check.
+
+[60 02 12 - 60 02 18] LMP
+Okay, every time you try to transmit, Jack, the AGC starts to drop off and the static level turns up.
+
+[60 02 20 - 60 02 21] CAPCOM
+Okay, Fred. You're loud and clear.
+
+[60 02 26 - 60 02 27] LMP
+I wish you were.
+
+[60 02 32 - 60 02 33] CAPCOM
+Fred, go to DESCENT O2.
+
+[60 02 37 - 60 02 38] LMP
+DESCENT O2. Roger.
+
+[60 04 07 - 60 04 08] CDR
+Hello Houston, Aquarius.
+
+[60 04 09 - 60 04 11] CAPCOM
+Hello there, Aquarius. How do you read me now?
+
+[60 04 25] CDR
+Hello Houston, Aquarius.
+
+[60 04 28] CAPCOM
+Aquarius, Houston. Go.
+
+[60 04 32 - 60 04 40] CDR
+Okay. That's the first clear word we've heard from you, Jack. Do you think it could be my pitch attitude that's breaking up your incoming? I guess you've been hearing us.
+
+[60 04 43 - 60 04 48] CAPCOM
+We have been hearing you, and the problem is on the ground. I hope we have it corrected now.
+
+[60 04 52 - 60 04 53] CDR
+Okay. That sounds good.
+
+[60 04 54 - 60 05 11] CAPCOM
+We're considering powering down the PGNS but we want to know what capability you have to do a coarse and fine align. We read your conversation about being unable to see out the window very good. How about out the AOT?
+
+[60 05 27 - 60 05 28] LMP
+He's looking now.
+
+[60 05 30 - 60 05 38] CAPCOM
+Okay, and the other thing we thought you might try is to put the Service Module between you and the Sun, and then to see if you can see anything out the window in that attitude.
+
+[60 05 44 - 60 05 56] CAPCOM
+The reason that we think that that would work is that it worked on Apollo 10. It made the constellations all recognizable when we put the Service Module - in our case the LM, between us and the Sun.
+> Once again, this is Apollo 10 CMP John Young.
+
+[60 06 00 - 60 06 01] CAPCOM
+AFT OMNI, Fred.
+
+[60 06 07 - 60 06 13] LMP
+You're down in the mud again, {Jack}. And it appears that some other circuit is feeding through on there with you.
+1> Enough so that Fred couldn't even tell that it wasn't Jack speaking.
+
+[60 06 15 - 60 06 16] CAPCOM
+Roger. AFT OMNI.
+
+[60 06 42 - 60 06 43] CAPCOM
+Aquarius, AFT OMNI.
+
+[60 07 30 - 60 07 33] LMP
+Okay, you're down in the mud again, Jack. Lots of background static.
+
+[60 08 10 - 60 08 11] CAPCOM
+AFT OMNI, Aquarius.
+
+[60 09 00] CAPCOM
+Aquarius, Houston.
+
+[60 11 18] CAPCOM
+Okay. Houston, Aquarius. How do you read?
 

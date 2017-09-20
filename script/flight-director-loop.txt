@@ -8501,3 +8501,363 @@ Okay, let me just try one more thing, we'll be with you.
 [60 00 24] FLIGHT
 Alright. Hurry.
 
+[60 00 33] FLIGHT
+CAPCOM, FLIGHT.
+
+[60 00 35] CAPCOM
+Go, FLIGHT.
+
+[60 00 36 - 60 00 48] FLIGHT
+Look. When we get them, you get the O2 business straightened out. But tell them that we have to, very soon, decide to bring the AGS up, and do things with that.
+
+[60 01 04] FLIGHT
+INCO -
+
+[60 01 22 - 60 01 23] FLIGHT
+INCO, FLIGHT. What are we getting?
+
+[60 01 28] FLIGHT
+What are we getting?
+
+[60 01 54 -] FLIGHT
+INCO, FLIGHT. Are we going to get COMM back? I'm going to knock off the tracking here in a minute. That 30 seconds -
+
+[60 01 59 - 60 02 00] INCO
+That's - FLIGHT, we're -
+
+[- 60 02 01] FLIGHT
+- is long past, we've run too long.
+
+[60 02 01 - 60 02 02] INCO
+Right. We're going back to the normal mode. Standby.
+
+[60 02 12] FLIGHT
+CONTROL, you write -
+
+[60 02 36 - 60 02 37] FLIGHT
+And close ASCENT. Yeah.
+
+[60 02 48 - 60 02 52] FLIGHT
+CAPCOM, does he have anything to say about stars and P52 yet?
+
+[60 02 57 - 60 03 00] CAPCOM
+No, I haven't heard any word. I can't ask him a question because he can't read me.
+
+[60 03 00 - 60 03 01] FLIGHT
+Yeah. INCO, have we reconfigured yet?
+
+[60 03 11] INCO
+Go ahead, FLIGHT.
+
+[60 03 12] FLIGHT
+We reconfigured yet?
+
+[60 03 12] INCO
+Negative.
+
+[60 03 13] FLIGHT
+How long?
+
+[60 03 14 - 60 03 15] INCO
+No estimate. I'll get it for you soon as we can.
+
+[60 03 32 - 60 03 33] INCO
+FLIGHT, we have a 2 minute estimate.
+
+[60 03 35] FLIGHT
+Okay.
+
+[60 04 39] INCO
+Negative, FLIGHT.
+
+[60 04 40 - 60 04 41] FLIGHT
+It was us, Jack.
+
+[60 04 43 - 60 04 44] FLIGHT
+It was the ground configuration.
+
+[60 05 32 - 60 05 33] INCO
+FLIGHT, INCO. We need AFT OMNI.
+
+[60 05 58] INCO
+FLIGHT, INCO. AFT OMNI.
+
+[60 05 59] FLIGHT
+CAPCOM, AFT OMNI.
+
+[60 06 03] FAO
+And FLIGHT, FAO.
+
+[60 06 04] FLIGHT
+Go ahead.
+
+[60 06 04 - 60 06 08] FAO
+If he wants to try the method John's been talking about, we can give them an attitude to go to.
+
+[60 06 15 - 60 06 18] INCO
+FLIGHT, that's the IU frequency. Just say AFT OMNI and we'll be in there, I think.
+
+[60 06 31 - 60 06 33] FLIGHT
+CONTROL, FLIGHT. How you doing?
+
+[60 06 33 - 60 06 36] CONTROL
+We're just about there, FLIGHT, on this AGS turn-on procedure.
+
+[60 06 37] FLIGHT
+Okay. Okay.
+
+[60 06 38] TELMU
+FLIGHT, TELMU.
+
+[60 06 39] FLIGHT
+Go ahead.
+
+[60 06 40 - 60 06 41] TELMU
+Can we go ahead and get the POWER AMPL off?
+
+[60 06 44 - 60 06 48] FLIGHT
+I'm afraid to do anything to the COMM right now, until we have this discussion with them about what we want them to do, Merlin.
+
+[60 06 56 - 60 06 59] FLIGHT
+- I sure do. And I want to get it off as bad as you do.
+
+[60 07 20 - 60 07 21] FLIGHT
+Can - TELMU, FLIGHT.
+
+[60 07 24] FLIGHT
+TELMU, FLIGHT.
+
+[60 07 25] FLIGHT
+TELMU, FLIGHT.
+
+[60 07 27 - 60 07 28] FLIGHT
+TELMU, FLIGHT.
+
+[60 07 35] FLIGHT
+TELMU, FLIGHT.
+
+[60 07 36] TELMU
+Go, FLIGHT.
+
+[60 07 37 - 60 07 41] FLIGHT
+Is there much of a difference to you to operate on the AGS, with the PGNS down? Water-wise?
+
+[60 07 42 - 60 07 54] TELMU
+Well, it's about - about 3 amps, but primarily the AGS does run a little cooler, and you'd be bringing up a {new piece of gear}. So, it'd be a different thermal load, there.
+1> That hasn't been running and is therefore starting cold.
+
+[60 07 54 - 60 07 56] FLIGHT
+Yeah. Well, I want to get into this configuration and try it.
+
+[60 07 56] TELMU
+Yeah.
+
+[60 07 57 - 60 07 58] FLIGHT
+Has he said anything about the stars yet? Jack?
+
+[60 08 00 - 60 08 04] CAPCOM
+No, he hasn't. We can't even ask him a good question. Is he still on FORWARD OMNI?
+
+[60 08 05] FLIGHT
+FORWARD OMNI, INCO?
+
+[60 08 07 - 60 08 08] INCO
+No. AFT OMNI, FLIGHT.
+
+[60 08 10 - 60 08 11] INCO
+But you're not going to get through.
+
+[60 08 13] INCO
+FLIGHT, INCO.
+
+[60 08 14] FLIGHT
+Go ahead.
+
+[60 08 15 - 60 08 19] INCO
+They're having trouble grabbing ahold of the S-IVB to push it out of the way, is what the problem is.
+> Somewhere in their frequency tuning, they managed to get both spacecraft tangled together. Unfortunately, the fallback frequencies both craft default to when a link can't be established are also very close to each other. So the only way to separate them is to use a dish precise enough to physically target just one with its beam -
+
+[60 08 20 - 60 08 22] FLIGHT
+Okay, well, we had COMM before. Can we get back to there?
+
+[60 08 22 - 60 08 35] INCO
+That's what they're trying to do. We're not having any luck. There's one suggestion we can do. We can turn the LM transceiver completely off for about {2 to 3 minutes}, and let them grab ahold of the S-IVB, push it out of the way, and then bring it back up.
+> - or, to turn the LM COMM completely off and talk just to the S-IVB to move it aside on the frequency band.
+1> FLIGHT must be wary of these time estimates by now.
+
+[60 08 38 - 60 08 41] FLIGHT
+Is that what we have to do now? We can't talk to them to tell them to do that.
+
+[60 08 41 - 60 08 53] INCO
+That's right. But if we can get up ?? here, turn your transceiver off for 3 minutes. Then turn it back on. And I'll try to give you a call if I think you can get through.
+
+[60 08 55] FLIGHT
+Okay.
+
+[60 09 13 - 60 09 17] FLIGHT
+What's the proper terminology over there? On the switch.
+
+[60 09 17 - 60 09 18] CAPCOM
+You want the TRANSMITTER/RECEIVER?
+
+[60 09 17 - 60 09 20] INCO
+TRANSMITTER/RECEIVER to OFF. Panel 12.
+
+[60 09 21] FLIGHT
+For 3 minutes.
+
+[60 09 28 - 60 09 30] CAPCOM
+You want S-BAND XMTR/RCVR OFF?
+
+[60 09 30 - 60 09 31] FLIGHT
+Is that our best step here, INCO?
+
+[60 09 33 - 60 09 35] FLIGHT
+INCO, FLIGHT. Is that our best step to get COMM back?
+
+[60 09 41] FLIGHT
+INCO, FLIGHT.
+
+[60 09 42] INCO
+Go ahead.
+
+[60 09 43 - 60 09 44] FLIGHT
+Is that our best step now to get COMM back?
+
+[60 09 45 - 60 09 46] INCO
+That's our best step. Right.
+
+[60 09 46 - 60 09 48] FLIGHT
+CAPCOM, give them that. We'll try.
+
+[60 09 48 - 60 09 49] INCO
+He's not going to hear you, FLIGHT, right now.
+
+[60 10 07] FLIGHT
+CONTROL, FLIGHT.
+
+[60 10 08] CONTROL
+Go ahead.
+
+[60 10 10 - 60 10 16] FLIGHT
+Now, how close are you to having this thing - you proposing an AGS PTC mode and a -
+
+[60 10 15 - 60 10 22] CONTROL
+Well, we just got input - what I'm going to do you - with right now, is a procedure for turning the AGS on and aligning it to the PGNS, so we can turn the PGNS off.
+
+[60 10 23] FLIGHT
+Yes.
+
+[60 10 23 - 60 10 25] CONTROL
+And that'll leave us in an AGS ATTITUDE HOLD mode.
+
+[60 10 25] FLIGHT
+Yes.
+
+[60 10 26 - 60 10 36] CONTROL
+And I just got word from SPAN, the procedure we had for the PTC in AGS, Carter (??) analyzed, he's - it's not going to work. He's working feverishly to get one that will. Just got that input
+
+[60 10 39 - 60 10 48] CONTROL
+You might be able to handle it without the PTC, saves the attitude that we at - are now at, and then just change attitudes over some time schedule.
+> This ended up being the approach, after the end of this audio record.
+
+[60 10 49] FLIGHT
+Okay.
+
+[60 10 50 - 60 10 54] CAPCOM
+Do you recommend we simulate this procedure over in the LMS before we ship it up?
+
+[60 10 56 - 60 11 02] FLIGHT
+Which procedure, Jack? What we're proposing is an AGS ATTITUDE HOLD that we change periodically.
+
+[60 11 04 - 60 11 06] FLIGHT
+Since they don't have a PTC, as such, that works.
+
+[60 11 06 -] CAPCOM
+Well, that's what I mean -
+
+[60 11 08] FLIGHT
+Yes.
+
+[- 60 11 11] CAPCOM
+- we've got a procedure that will give us PTC in AGS, try it in the simulator first.
+
+[60 11 12 -] FLIGHT
+They - they don't have a procedure to get a PTC in AGS. They had one -
+
+[60 11 15] CONTROL
+We had one -
+
+[- 60 11 19] FLIGHT
+- it doesn't work. Somebody thinks it won't, so we're not going to try it.
+
+[60 11 19 - 60 11 20] CONTROL
+Unless you want to try that one, there, FLIGHT.
+
+[60 11 22] FLIGHT
+Standby.
+
+[60 11 24 - 60 11 25] FLIGHT
+I would say no on that.
+
+[60 13 00 - 60 13 03] INCO
+They're trying to bring up an uplink carrier to the LM so we can get them voice down.
+
+[60 13 33] FDO
+FLIGHT, FDO.
+
+[60 13 34] FLIGHT
+Go ahead.
+
+[60 13 35 - 60 13 36] FDO
+I'll bring you up to speed on what I've been doing down here. 
+
+[60 13 37] FLIGHT
+Say again?
+
+[60 13 37 - 60 13 49] FDO
+I'll bring you up to speed on what I've been doing down here. Looking at a maneuver in the vicini - that doesn't - time range, and on the vector that I've got now, looking at about a 16 feet per second to get free return.
+> What FDO is talking about here is the plan to be shortly executed. Rather than wait all the way around the Moon to get the spacecraft back on track to return to Earth, they will initiate a burn with a ∆V of 16fps (11mph; 17.5km/h) very soon, after which they can power down the PGNS and feel good about being roughly on track.
+
+[60 13 50 - 60 13 52] FLIGHT
+Yeah; that's what I'm hearing over here in my other ear, Bill.
+
+[60 13 52 - 60 13 59] FDO
+Alright. And, I've got the selects down here working on a vector right now. This is on the CSM doppler after the glitches.
+
+[60 13 59] FLIGHT
+Mmhmm.
+
+[60 14 00 - 60 14 03] FDO
+And we're not sure whether it's going to be any better than what we've got right now.
+
+[60 14 04] FLIGHT
+Uh huh.
+
+[60 14 05 - 60 14 20] FDO
+So, I guess what I've got to say is that in about 10 minutes, I can have the maneuver ready - I'll be able to compute a maneuver; time range of 61:30. And we can make that decision with that - ∆V will be around, like I said, about 16, 17 feet per second.
+
+[60 14 20 - 60 14 21] FLIGHT
+And that's a free return.
+
+[60 14 21 - 60 14 24] FDO
+That's affirm. So you can work with that number.
+
+[60 14 25] FLIGHT
+Thank you.
+
+[60 14 28] GUIDO
+FLIGHT, GUIDANCE.
+
+[60 14 29] FLIGHT
+Go ahead.
+
+[60 14 30 -] GUIDO
+Okay, we've got a good G&N now, if we - probably get a real good burn off now. Go ahead and do it with this good G&N - 
+
+[60 14 35] FLIGHT
+Uh huh.
+
+[- 60 14 36] GUIDO
+- get a free return.
+
