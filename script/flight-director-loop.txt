@@ -7893,7 +7893,7 @@ Okay, INCO. We've told them. Go ahead.
 Thank you, FLIGHT.
 
 [59 39 51 - 59 41 24] (note)
-<< An off-loop conversation is partially caught here, which appears to pertain to powering some elements of the CSM off the LM, possibly to use its life support system. Additional conversation discusses a burn - possibly the one that occurs in the final chapter of this audio to bring the crew back onto a free return trajectory to Earth as soon as possible, rather than waiting until PC+2 at 79 hours. >>
+<< An off-loop conversation is partially caught here, which appears to pertain to powering some elements of the CSM off the LM, possibly to use its life support system. Additional conversation discusses a burn - possibly the one that occurs in the final chapter of this audio to bring the crew back onto a free-return trajectory to Earth as soon as possible, rather than waiting until PC+2 at 79 hours. >>
 
 [59 41 38] FLIGHT
 EECOM, you copy that?
@@ -8816,7 +8816,7 @@ I'll bring you up to speed on what I've been doing down here.
 Say again?
 
 [60 13 37 - 60 13 49] FDO
-I'll bring you up to speed on what I've been doing down here. Looking at a maneuver in the vicini - that doesn't - time range, and on the vector that I've got now, looking at about a 16 feet per second to get free return.
+I'll bring you up to speed on what I've been doing down here. Looking at a maneuver in the vicini - that doesn't - time range, and on the vector that I've got now, looking at about a 16 feet per second to get free-return.
 > What FDO is talking about here is the plan to be shortly executed. Rather than wait all the way around the Moon to get the spacecraft back on track to return to Earth, they will initiate a burn with a ∆V of 16fps (11mph; 17.5km/h) very soon, after which they can power down the PGNS and feel good about being roughly on track.
 
 [60 13 50 - 60 13 52] FLIGHT
@@ -8838,7 +8838,7 @@ Uh huh.
 So, I guess what I've got to say is that in about 10 minutes, I can have the maneuver ready - I'll be able to compute a maneuver; time range of 61:30. And we can make that decision with that - ∆V will be around, like I said, about 16, 17 feet per second.
 
 [60 14 20 - 60 14 21] FLIGHT
-And that's a free return.
+And that's a free-return.
 
 [60 14 21 - 60 14 24] FDO
 That's affirm. So you can work with that number.
@@ -8859,5 +8859,1348 @@ Okay, we've got a good G&N now, if we - probably get a real good burn off now. G
 Uh huh.
 
 [- 60 14 36] GUIDO
-- get a free return.
+- get a free-return.
+
+[60 15 59] FLIGHT
+FDO, FLIGHT.
+
+[60 16 00] FDO
+Go, FLIGHT.
+
+[60 16 01 - 60 16 06] FLIGHT
+Can we - how long would it take you to get a free-return maneuver - could you get one at 61 hours?
+> Lunney is anxious to get the PGNS off.
+
+[60 16 08 - 60 16 11] FDO
+Roger that. I can. It's just a question of which vector we want to do it on, FLIGHT.
+
+[60 16 12 - 60 16 14] FLIGHT
+Well, get one at 61 on the best vector you have.
+
+[60 16 15] FDO
+Roger that.
+
+[60 17 15 - 60 17 16] FLIGHT
+EECOM, FLIGHT - TELMU, FLIGHT.
+
+[60 17 17] EECOM
+Go ahead, FLIGHT.
+
+[60 17 18] TELMU
+Go, FLIGHT.
+
+[60 17 18 - 60 17 22] FLIGHT
+Merlin, how much water does it cost us to keep the PGNS up for another hour?
+
+[60 17 24] TELMU
+How much water -
+
+[60 17 25] FLIGHT
+You got an hourly rate on it?
+
+[60 17 27] TELMU
+Standby.
+
+[60 18 15 - 60 18 16] INCO
+FLIGHT, I think you've got COMM.
+
+[60 18 17 - 60 18 18] FLIGHT
+Jack, we have COMM.
+
+[60 18 36] TELMU
+FLIGHT, TELMU.
+
+[60 18 37] FLIGHT
+Go ahead.
+
+[60 18 37 - 60 18 40] TELMU
+Just about - cost you about 3 pounds of water.
+
+[60 18 40 - 60 18 41] FLIGHT
+3 pounds of water to keep it up for another hour.
+
+[60 18 42] TELMU
+Right.
+
+[60 18 42 - 60 18 43] FLIGHT
+Out of how many pounds?
+
+[60 18 44 - 60 18 45] TELMU
+About 230.
+
+[60 18 47 - 60 18 49] FLIGHT
+That's - seems to me to be worth it.
+
+[60 18 49 - 60 18 50] ?? (off loop)
+Yeah, right, I think we gotta keep it up.
+
+[60 18 50] TELMU
+Okay.
+
+[60 18 51 - 60 18 52] ?? (off loop)
+Keep it up through the maneuver and then power it down -
+
+[60 18 52 - 60 18 56] FLIGHT
+Yup. Then power it down, let it drift, and we'll do what we want to tomorrow.
+
+[60 18 56 - 60 18 58] TELMU
+Okay, but can we go ahead and turn the POWER AMPL off?
+
+[60 19 00 - 60 19 01] FLIGHT
+POWER AMPL. What will that do to my COMM?
+
+[60 19 02] INCO
+FLIGHT, INCO.
+
+[60 19 02] FLIGHT
+Go ahead.
+
+[60 19 03 - 60 19 04] INCO
+We lost it again. Standby.
+> Lunney loses his cool a bit off loop here.
+
+[60 19 08 - 60 19 41] FLIGHT
+Gentlemen, we're going to proceed to do a free-return maneuver here. At 61 hours, assume that; as soon as we get COMM with the crew we'll see how they feel about doing it there. It's going to be about 16 feet a second, Jack. We want to get on a free-return so we can get powered down. And we'll still {kick it} at PC+2, if - all - if we can get everything back up and aligned properly. But, with the way it is, we want to get back on free-return; cost us an hour's time here with the PGNS powered up, that's 3 pounds of water and we'll spend that. Okay?
+1> Speed up the return with another burn.
+
+[60 19 42 - 60 19 44] FLIGHT
+Now, FDO, get me a PAD, pronto.
+
+[60 19 45] FDO
+Copy.
+
+[60 19 46 - 60 19 55] FLIGHT
+And we'll run a couple of them in case we get behind on time, here. GUIDANCE, what do we need - how do we need to burn this thing? We don't have a vector in there; it's not going to be a guided burn, is it?
+> The LM's computer, despite having identical hardware, was not set up in software to perform calculated maneuvers outside the Lunar reference frame.
+
+[60 19 56 -] GUIDO
+FLIGHT, I'm going to MIT run it in a hybrid and see if it can take a vector, if it'll work alright -
+
+[60 20 00] FLIGHT
+If it can't, how do we do it?
+
+[- 60 20 04] GUIDO
+- that's what I'm working on right now. If it can't, we'll do it in ATTITUDE HOLD. 247.
+
+[60 20 05 - 60 20 09] FLIGHT
+Alright. I think that's the way we want to do it anyway, that mode will get you all that -
+
+[60 20 08 - 60 20 11] GUIDO
+Yeah, that's what we know will work right now, I think. But we're going to look at the other.
+
+[60 20 27 - 60 20 29] FLIGHT
+INCO, let me know as soon as we get COMM, will you?
+
+[60 20 30] INCO
+Roger.
+
+[60 20 51 - 60 20 53] FLIGHT
+INCO, what do you think my chances are getting COMM back here shortly are?
+
+[60 20 56 - 60 20 57] INCO
+Starting to look a little better here, FLIGHT.
+
+[60 20 58 - 60 21 00] FLIGHT
+Okay. FDO, you got an estimate on that PAD?
+
+[60 21 01] FDO
+Say again, FLIGHT?
+
+[60 21 01 - 60 21 03] FLIGHT
+You got an estimate on that PAD?
+
+[60 21 04] FDO
+5 minutes, FLIGHT.
+
+[60 21 05] FLIGHT
+Thank you.
+
+[60 21 08 - 60 21 19] FLIGHT
+And while you're at it, and get - while you get that one out, run a couple more at 15 minute increments. Run one at 60:45, and run one at 61:15, etc. Okay?
+
+[60 21 19] FDO
+Copy.
+
+[60 21 20 - 60 21 22] FLIGHT
+But get the 61 hour one out pronto.
+
+[60 21 23] FDO
+Roger.
+
+[60 21 26 - 60 21 28] FLIGHT
+CONTROL, FLIGHT. You copying me?
+
+[60 21 28] CONTROL
+Go ahead, FLIGHT.
+
+[60 21 29 -] FLIGHT
+We're going to do a little burn here, 16 feet a second and get back on free-return -
+
+[60 21 33] CONTROL
+Roger.
+
+[- 60 21 36] FLIGHT
+- as soon as we can get COMM, we're shooting for 61 hours.
+
+[60 21 37] CONTROL
+Roger.
+
+[60 21 40 - 60 22 01] FLIGHT
+GUIDANCE is doing something to see how the equations are going to work, but I'm inclined to say we ought to do it in ATT HOLD PGNS. Consider that, and consider everything else you want to think about and tell me any changes you'd want to make. And where we ought to pick up the checklist, etc; and let's refer to the - as best we can from the pilot's books, Hal. Tell them where to pick up from where they are now.
+
+[60 22 02] CONTROL
+Roger.
+
+[60 22 42] INCO
+FLIGHT, INCO.
+
+[60 22 44] FLIGHT
+Go ahead.
+
+[60 22 45] INCO
+Looks like you've got it.
+
+[60 22 46 - 60 22 52] FLIGHT
+COMM, Jack. Okay, everybody, let's be quiet. We have COMM. We've got a lot of business to do.
+
+[60 23 29] FLIGHT
+Figure something out.
+
+[60 23 38 - 60 23 39] FLIGHT
+After the midcourse.
+
+[60 24 15] FLIGHT (off loop)
+No, I don't - wait a minute!
+
+[60 24 16 - 60 24 23] FLIGHT
+We can give them another 15 minute if - yeah, we can give another - get a suggestion from him. We can figure it out whenever he wants it.
+
+[60 24 25 - 60 24 30] FLIGHT
+Get a suggested Tig time from him, Jack, that he's comfortable with. Yeah, it's not going to cost us much water.
+
+[60 25 00 - 60 25 02] FLIGHT
+FDO, stand by on a Tig time.
+
+[60 25 08 - 60 25 13] FLIGHT
+61:20. Is that okay? 61:25.
+
+[60 25 15] CAPCOM
+How about 61:30?
+
+[60 25 16] FLIGHT
+Okay.
+
+[60 25 31] FLIGHT
+That's right.
+
+[60 25 35 - 60 25 36] FLIGHT
+Okay, FDO. You got that Tig?
+
+[60 25 41 - 60 25 43] FDO
+Go, FLIGHT. FLIGHT, FDO.
+
+[60 25 46] CONTROL
+Affirmative.
+
+[60 25 46] FLIGHT
+Affirmative.
+
+[60 25 48 - 60 25 49] FLIGHT
+FDO, you got the Tig time?
+
+[60 25 51 - 60 25 52] FDO
+Copy. 61 +30.
+
+[60 25 52 - 60 25 53] FLIGHT
+Okay. Proceed.
+
+[60 26 39] FLIGHT
+Okay.
+
+[60 27 14 - 60 27 20] FLIGHT
+Okay. CAPCOM, I don't think he ought to do any special maneuvering to find this out right now, do you? Don't talk them into it.
+
+[60 27 40 - 60 27 42] FLIGHT
+Okay. Let's concentrate on the burn.
+
+[60 28 22 - 60 28 24] FLIGHT
+I didn't hear all of his question. CAPCOM?
+
+[60 28 25 - 60 28 26] CAPCOM
+How much can he use the TTCA?
+
+[60 28 30 - 60 28 32] FLIGHT
+FDO, FLIGHT. Have you got tracking on the LM?
+
+[60 28 33 - 60 28 34] FDO
+Standby, FLIGHT.
+
+[60 28 42] FDO
+That's affirm, FLIGHT.
+
+[60 28 43 - 60 28 48] FLIGHT
+Okay. Are you seeing anything? He's using his translation control for attitude control. With the stack. You understand?
+
+[60 28 49] FDO
+Accurate.
+
+[60 28 50 - 60 28 54] FLIGHT
+And now are you seeing that in the trajectory? Have you got a good, solid trajectory?
+
+[60 28 55] FDO
+I'll check now.
+
+[60 29 02 - 60 29 03] FLIGHT
+GNC, FLIGHT - CONTROL, FLIGHT.
+
+[60 29 05] CONTROL
+CONTROL here.
+
+[60 29 06] FLIGHT
+GNC?
+
+[60 29 09] GNC
+Go ahead, FLIGHT.
+
+[60 29 11 - 60 29 18] FLIGHT
+Consider doing a 16 foot-a-second with the Command Module RCS. Service Module RCS - tell me what that means to me.
+
+[60 29 19] CAPCOM
+FLIGHT.
+
+[60 29 20] FLIGHT
+Go ahead.
+
+[60 29 20 -] CAPCOM
+Okay, he's wanting us to follow him through on the 2-hour activation. And so I want some people -
+
+[60 29 26] FLIGHT
+Okay.
+
+[- 60 29 27] CAPCOM
+- standing by to go with it on me.
+
+[60 29 28 - 60 29 29] FLIGHT
+CONTROL, TELMU, GUIDANCE. FLIGHT.
+
+[60 29 30] CONTROL
+Go.
+
+[60 29 30] TELMU
+Go.
+
+[60 29 30] FLIGHT
+Stand by on the loop here -
+
+[60 29 31] GUIDO
+Go, FLIGHT.
+
+[60 29 32] FLIGHT
+- we're going to follow through the activation.
+
+[60 29 32] TELMU
+Okay.
+
+[60 29 32 - 60 29 35] CAPCOM
+Okay, are we - down through 1. Step 1 on page 1.
+
+[60 29 44] INCO
+FLIGHT, INCO.
+
+[60 29 47] FLIGHT
+Go ahead.
+
+[60 29 48 - 60 29 51] INCO
+I'd like you to ask him to manage the OMNIs as he's talking.
+
+[60 29 52 - 60 29 53] FLIGHT
+Does he have his meter up?
+
+[60 29 53 - 60 29 57] INCO
+Yeah, it seems as though he still has that display breaker in, so the meter must be up.
+
+[60 29 58] FLIGHT
+Okay.
+
+[60 29 58 - 60 30 00] INCO
+It appears from my cal curve that he's up.
+
+[60 30 01 - 60 30 07] CAPCOM
+Okay. Let's go. He's gotta hurry to get this 2-hour Activation done in 1 hour. So why don't we -
+
+[60 30 07 -] FLIGHT
+Okay, everybody. Quiet in the room, please, and let's walk through with Jack on the Activation. Everybody got their book out, ready to follow. CONTROL, TELMU -
+
+[60 30 15] CONTROL
+Roger, FLIGHT.
+
+[- 60 30 16] FLIGHT
+- GUIDANCE. Go, Jack.
+
+[60 30 17 - 60 30 20] CAPCOM
+Okay. We're on page 1, step 1. And he's going to be talking back.
+
+[60 30 41] TELMU
+TELMU. Concur.
+
+[60 30 59 - 60 31 00] TELMU
+Concur. Okay.
+
+[60 31 12] TELMU
+FLIGHT, TELMU.
+
+[60 31 14 - 60 31 15] FLIGHT
+Go ahead, TELMU.
+
+[60 31 17 - 60 31 19] TELMU
+Okay, we do not want to INVERTER 1 CLOSED.
+
+[60 31 19] FLIGHT
+You what?
+
+[60 31 21] FLIGHT
+Say again, TELMU?
+
+[60 31 22 - 60 31 24] TELMU
+We do not want INVERTER 1 breaker CLOSED in step 5, here.
+
+[60 31 25 - 60 31 29] FLIGHT
+Okay. CAPCOM, we do not want INVERTER 1 circuit breaker CLOSED in step 5.
+
+[60 31 30] TELMU
+Do not.
+
+[60 31 37] TELMU
+And omit step 6.
+
+[60 31 38 - 60 31 39] FLIGHT
+And omit step 6.
+
+[60 32 16] TELMU
+Roger.
+
+[60 32 24 - 60 32 26] TELMU
+FLIGHT, we recommend leaving the caution/warning off.
+
+[60 32 26 - 60 32 30] FLIGHT
+Caution - recommend that, huh? He says recommend leaving caution and warning off, Jack.
+
+[60 32 58] TELMU
+We got the time.
+
+[60 33 01] TELMU
+We got the time, there.
+
+[60 33 04] FLIGHT
+You got it?
+
+[60 33 04] TELMU
+We got it.
+
+[60 33 12] CONTROL
+FLIGHT, CONTROL.
+
+[60 33 13] FLIGHT
+Go ahead.
+
+[60 33 14 - 60 33 19] CONTROL
+Okay, on step 1 did I understand he left the - that he did close ENGINE CONTROL breaker?
+
+[60 33 21] FLIGHT
+What is your question?
+
+[60 33 22 - 60 33 27] CONTROL
+Did he activ - did he close the ENGINE CONTROL breaker under item 1, page 3? Last entry.
+
+[60 33 28] FLIGHT
+I don't know.
+
+[60 33 39] RETRO
+FLIGHT, RETRO.
+
+[60 33 40 - 60 33 41] INCO
+FLIGHT, INCO. We need AFT OMNI.
+
+[60 33 53] RETRO
+FLIGHT, RETRO.
+
+[60 33 54 - 60 33 55] FLIGHT
+Can you wait a minute, RETRO?
+
+[60 34 03] FLIGHT
+Satisfied, CONTROL?
+
+[60 34 04 - 60 34 05] CONTROL
+That's not it, FLIGHT. That's not it.
+
+[60 34 10] INCO
+AFT OMNI, FLIGHT.
+
+[60 34 11 - 60 34 12] FLIGHT
+And we need an AFT OMNI, Jack. We'll lose COMM.
+
+[60 34 24] CONTROL
+We got it, FLIGHT.
+
+[60 34 28] FLIGHT
+Okay, CONTROL?
+
+[60 34 29] CONTROL
+Roger.
+
+[60 34 43] CAPCOM
+Okay, you want the circuit breaker -
+
+[60 34 46 - 60 34 47] FLIGHT
+Okay. Copy these, guys.
+
+[60 34 56] TELMU
+That's good.
+
+[60 35 03] CONTROL
+Break, break.
+
+[60 35 15 - 60 35 17] FLIGHT
+Okay. Have him standby right there, Jack. What is it, CONTROL?
+
+[60 35 17 - 60 35 19] CONTROL
+Okay. On row 1, we need -
+
+[60 35 23 - 60 35 24] FLIGHT
+Circle it, and we'll get it at the end.
+
+[60 36 43 - 60 36 45] FLIGHT
+Okay, standby, we have a comment. CONTROL, you have a comment.
+
+[60 36 45 - 60 36 50] CONTROL
+Yes, on row 1, DECA GIMBAL under AC BUS A needs to be closed.
+
+[60 36 51 - 60 36 58] CAPCOM
+Hey, there's a lot of breakers that aren't closed that we have called out in the checklist here. Do you want them to close all of it - outline?
+
+[60 37 07 - 60 37 08] CONTROL
+We'll catch the DECA POWER later on.
+
+[60 37 11] CONTROL
+We'll catch that later.
+
+[60 37 12 - 60 37 13] FLIGHT
+We'll remind him of that later.
+
+[60 37 13 - 60 37 14] CONTROL
+It's in the procedure.
+
+[60 37 15 - 60 37 17] FLIGHT
+It'll come up in the procedure later, Jack.
+
+[60 37 22 - 60 37 32] CAPCOM
+How about the rest of these breakers? You want them to close them and open them as outlined in the checklist, here, or you going to have them hold up? Looks like we're going to screw up our procedure here if we don't do it just the way it's outlined.
+> CAPCOM doesn't like the seat-of-the-pants verification that's happening.
+
+[60 37 35 - 60 37 37] FLIGHT
+I didn't hear you, Jack, I was getting other input.
+
+[60 37 37 - 60 37 40] ??? (off loop)
+They're really going to give you a lot of data you don't need - displays and stuff you're not going to get.
+
+[60 37 41] CAPCOM (off loop)
+You rather -
+
+[60 37 44] FLIGHT (off loop)
+Yes.
+
+[60 37 50] FLIGHT (off loop)
+Yes.
+
+[60 37 50 -] CAPCOM (off loop)
+- they're supposed to be in that are not now in -
+
+[60 37 52] FLIGHT (off loop)
+Yes.
+
+[60 37 52 - 60 37 53] CAPCOM (off loop)
+- aren't we going to call those out now?
+
+[60 37 53 - 60 37 57] FLIGHT
+TELMU and CONTROL, do you want these that aren't closed to be closed?
+
+[60 37 59] FLIGHT
+TELMU and CONTROL?
+
+[60 38 00 - 60 38 01] TELMU
+No. TELMU.
+
+[60 38 03] FLIGHT
+Say again?
+
+[60 38 04 - 60 38 06] TELMU
+Negative from TELMU.
+
+[60 38 06 - 60 38 07] FLIGHT
+CONTROL, how about you?
+
+[60 38 07 - 60 38 08] CONTROL
+Negative from us, FLIGHT.
+
+[60 38 09 - 60 38 11] FLIGHT
+Well, why are you saying that? Why don't we just do it by the book?
+
+[60 38 11 - 60 38 15] CONTROL
+Well - that's the quickest thing in my mind, to do it - just do it by the book.
+
+[60 38 15 - 60 38 16] FLIGHT
+Well, why aren't we doing that?
+
+[60 38 18 - 60 38 22] CONTROL
+Well. It may take a little more power than what we need - that what we've got to spare.
+
+[60 38 24 - 60 38 25] FLIGHT
+Well, I'm willing to spend that right now.
+
+[60 38 26] CONTROL
+Okay.
+
+[60 38 27 - 60 38 28] CAPCOM
+Use the reviewed procedures? We want to -
+
+[60 38 28 - 60 38 31] FLIGHT
+Yeah. I think we'd better stick with what we know works.
+
+[60 38 31 - 60 38 33] CAPCOM
+- be clear to stick to the procedure as-written.
+
+[60 38 34 - 60 38 35] FLIGHT
+Yup. I agree, Jack. Let's go ahead.
+
+[60 38 36 -] CAPCOM
+You want me to tell them to push them in as -
+
+[60 38 39] FLIGHT
+As on the list.
+
+[- 60 38 40] CAPCOM
+- outlined on the checklist.
+
+[60 38 40 - 60 38 43] FLIGHT
+Yes. I don't want to take any chances with this.
+
+[60 39 19 - 60 39 21] FLIGHT
+Okay, everybody, stick with him now. We're going to be moving on to the next step.
+
+[60 39 26 - 60 39 30] FLIGHT
+GUIDANCE, FLIGHT. I want you to have somebody looking ahead. We're going to do this burn in P47. Right?
+
+[60 39 31 - 60 39 36] GUIDO
+FLIGHT, GUIDANCE, I don't think we can do it in 47. I don't think we have TVC control in 47.
+
+[60 39 38 - 60 39 39] FLIGHT
+What are we going to do it in?
+
+[60 39 39 - 60 39 40] GUIDO
+We'll have to do it in 40.
+
+[60 39 42 - 60 39 43] FLIGHT
+It doesn't - do we know it works?
+
+[60 39 45 - 60 39 46] GUIDO
+We're having MIT run it.
+
+[60 39 47 - 60 39 48] FLIGHT
+We have to get them a vector then, up. Do we?
+
+[60 39 49] GUIDO
+That's affirm.
+
+[60 39 51 - 60 39 53] FLIGHT
+I don't really care for that - that's all we can do?
+
+[60 39 55 - 60 39 58] GUIDO
+Well, we haven't talked to CONTROL about using the AGS possibly.
+
+[60 39 59 - 60 40 00] FLIGHT
+The AGS are not up!
+
+[60 40 00 - 60 40 04] CONTROL
+The AGS's not up, and that's strictly a manual operation - that'd be even worse than a 47, probably.
+
+[60 40 05 - 60 40 07] CAPCOM
+The procedure as written calls for P40.
+
+[60 40 08 - 60 40 15] FLIGHT
+Yeah. The concern, Jack, is that the LM computer, with these {funny vectors}, we have to verify, see -
+1> Again, because the spacecraft is not in the reference frame of the Moon at the moment.
+
+[60 40 19] CONTROL
+Yes.
+
+[60 40 22 - 60 40 23] GUIDO
+Leave the RCS TCAs in.
+
+[60 40 24] FLIGHT
+Yes.
+
+[60 40 27] FLIGHT
+GUIDANCE, FLIGHT.
+
+[60 40 28] GUIDO
+Go, FLIGHT.
+
+[60 40 29 - 60 40 34] FLIGHT
+When will the answer come in if it's okay - when are you going to put a vector in, etc?
+
+[60 40 38 - 60 40 40] GUIDO
+They're on schedule right now for 61:30?
+
+[60 40 40] FLIGHT
+Yes.
+
+[60 40 41 - 60 40 53] GUIDO
+Okay. We'll - roger. We've got a vector, I think now, that we could go ahead and - but let's standby get - see if we could get an answer here in the next few minutes. It might be close to there on the hybrid right now.
+
+[60 40 54 - 60 40 59] FLIGHT
+Yeah, okay. When am I going to get the answer? Do they know I need it in - you know, 10 or 15 minutes?
+
+[60 40 59] GUIDO
+Yes, FLIGHT.
+
+[60 41 00] FLIGHT
+We don't have all night.
+
+[60 41 01] GUIDO
+They know you need it.
+
+[60 41 02] FLIGHT
+Alright.
+
+[60 41 09 - 60 41 15] CAPCOM
+Okay. And now we can go through this list and see if there are a couple odds and ends we can yank out. Like the tape recorders, he suggests.
+
+[60 41 16 - 60 41 17] FLIGHT
+Okay with the tape recorders, TELMU?
+
+[60 41 18] TELMU
+Roger.
+
+[60 41 19] FLIGHT
+Yes.
+
+[60 41 20] CAPCOM
+And any others like that?
+
+[60 41 21 - 60 41 22] FLIGHT
+Anything else that's essentially trivial?
+
+[60 41 23 -] CONTROL
+We'd recommend opening the RENDEZVOUS RADAR HEATER -
+
+[60 41 27] TELMU
+They're already opened.
+> But the checklist wants them closed.
+
+[- 60 41 31] CONTROL
+- and the LGC. LANDING - excuse me, LANDING RADAR.
+
+[60 41 31 - 60 41 32] FLIGHT
+Yeah, that's open too.
+
+[60 41 32] CONTROL
+Okay.
+
+[60 41 33 - 60 41 37] FLIGHT
+All we've got, then, is the recorder, Jack. We agree with that. The others are all okay.
+
+[60 41 39] CAPCOM
+Okay.
+
+[60 42 14] FLIGHT
+CONTROL, FLIGHT.
+
+[60 42 17] FLIGHT
+CONTROL, FLIGHT.
+
+[60 42 18] CONTROL
+Go, FLIGHT.
+
+[60 42 19 - 60 42 35] FLIGHT
+While you're doing that, could you have somebody work with GUIDANCE on - even without TVC, if we trim this gimbal up right, and don't throttle up for 40 feet a second, we ought to be able to have a pretty good controlled burn.
+
+[60 42 35] CONTROL
+That's right.
+
+[60 42 36 - 60 42 39] FLIGHT
+Work that problem in case thing from MIT comes out negative.
+
+[60 42 39 - 60 42 40] CONTROL
+Okay. You talking about doing it in 47?
+
+[60 42 41] FLIGHT
+Yeah.
+
+[60 42 42] CONTROL
+Okay.
+
+[60 42 46 - 60 42 48] CAPCOM
+How about VHF A and B? We want that left off?
+
+[60 42 49] INCO
+Off.
+
+[60 42 49] FLIGHT
+VHF A and B.
+
+[60 42 50] INCO
+Off.
+
+[60 42 50] FLIGHT
+Off.
+
+[60 42 51] CAPCOM
+OPEN?
+
+[60 42 52] INCO
+OPEN, yes.
+
+[60 42 52] FLIGHT
+OPEN.
+
+[60 43 05] INCO
+Negative.
+
+[60 43 05] FLIGHT
+Negative.
+
+[60 43 20 - 60 43 21] INCO
+When we need it - when we want it we'll tell him.
+
+[60 43 21 - 60 43 23] FLIGHT
+Leave it OPEN; we'll call for it when we want it.
+
+[60 44 18] FLIGHT
+PROCEDURES, FLIGHT.
+
+[60 44 20] PROCEDURES
+Go ahead.
+
+[60 44 20 - 60 44 21] FLIGHT
+61:30.
+
+[60 44 22] PROCEDURES
+Roger that. Thank you.
+
+[60 44 23] FLIGHT
+You're squeaking.
+
+[60 44 27 - 60 44 30] FLIGHT
+CAPCOM, FLIGHT, they're going back over the panel, are they? Okay.
+
+[60 44 33 - 60 44 34] FLIGHT
+CONTROL, TELMU, and GUIDANCE, and INCO.
+
+[60 44 34] CONTROL
+CONTROL here.
+
+[60 44 35 - 60 44 39] FLIGHT
+Look ahead a little bit, now, in this thing, and anticipate what you want to be deleted.
+
+[60 44 41] CONTROL
+Roger.
+
+[60 44 50 - 60 44 52] CONTROL
+Negative. Not - negative on the PQGS. Standby.
+
+[60 44 53 - 60 44 55] FLIGHT
+Negative on the PQGS. We're checking the REGs.
+
+[60 45 04 - 60 45 05] CONTROL
+And negative on the ASCENT HELIUM REGs.
+
+[60 45 06 - 60 45 07] FLIGHT
+And how about the SYSTEM ENGINEER X-POINTER?
+
+[60 45 09] CONTROL
+X-POINTER negative.
+
+[60 45 10 - 60 45 11] FLIGHT
+X-POINTER negative.
+
+[60 45 25] TELMU
+Roger.
+
+[60 45 39] TELMU
+Negative.
+
+[60 45 39 - 60 45 40] FLIGHT
+TELMU, you said no, didn't you?
+
+[60 45 40] TELMU
+Negative.
+
+[60 45 40] FLIGHT
+Negative.
+
+[60 45 51 - 60 45 55] FLIGHT
+FAO, let me how we're doing on time, will you? How are we doing?
+
+[60 45 56 - 60 45 58] FAO
+Roger, FLIGHT, we will. Standby.
+
+[60 45 59 - 60 46 01] FLIGHT
+I want you to monitor us here, and see if we're on time.
+
+[60 46 02] FAO
+Roger.
+
+[60 46 13 - 60 46 14] FLIGHT
+CONTROL, no AGS, right?
+
+[60 46 15] CONTROL
+No AGS.
+
+[60 46 15] FLIGHT
+No AGS.
+
+[60 46 19 - 60 46 20] CONTROL
+We need the ATCA breaker, but no AGS.
+
+[60 46 27] FLIGHT
+FDO, FLIGHT.
+
+[60 46 28] FDO
+Go, FLIGHT.
+
+[60 46 29 - 60 46 30] FLIGHT
+Now run one for 61:45.
+
+[60 46 31] FDO
+Copy.
+
+[60 46 41] CONTROL
+It's for the gimbals, FLIGHT.
+> Correcting the LMP.
+
+[60 46 45] CONTROL
+Negative.
+
+[60 46 49 - 60 46 50] FLIGHT
+ATCA AGS? Is that what he said?
+
+[60 46 51] CONTROL
+Affirmative.
+
+[60 46 52] FLIGHT
+Okay.
+
+[60 46 52 - 60 46 54] CONTROL
+He's only reading out the ones he's leaving open, is that right?
+
+[60 46 57 - 60 47 02] CAPCOM
+That's affirmative. The ones that are black in the checklist, which he is deviating, he is calling out.
+
+[60 47 03 - 60 47 07] CONTROL
+Yeah. Okay. I assume the other ones he didn't mention are closed, if they are blacked in.
+
+[60 47 08] FLIGHT
+Yes. By the book.
+
+[60 47 16] TELMU
+No. Close that one.
+
+[60 47 17 - 60 47 18] FLIGHT
+You want that one closed?
+
+[60 47 19] TELMU
+Yeah. It doesn't pull any current.
+
+[60 47 20 - 60 47 21] FLIGHT
+CAPCOM, want that closed, it doesn't take any current.
+
+[60 47 37] FLIGHT
+Yeah.
+
+[60 48 02] FLIGHT
+INCO?
+
+[60 48 03] INCO
+Roger.
+
+[60 48 03] FLIGHT
+INCO?
+
+[60 48 04 - 60 48 05] INCO
+Which circuit breaker is he talking about?
+
+[60 48 06 - 60 48 09] FLIGHT
+He said can we leave the steerable off, and operate off the OMNIs?
+
+[60 48 09 - 60 48 11] INCO
+That's true. We want the heater circuit breaker left in, though.
+
+[60 48 13 - 60 48 14] FLIGHT
+Okay. Are you listening to the loop?
+
+[60 48 14] INCO
+Yes.
+
+[60 48 15 - 60 48 17] FLIGHT
+Yeah, we want the heater circuit breaker in, but we'll stick with the OMNIs.
+
+[60 48 18] INCO
+Right.
+
+[60 48 19] FLIGHT
+CAPCOM.
+
+[60 48 47] GUIDO
+FLIGHT, GUIDANCE.
+
+[60 48 48] FLIGHT
+Go.
+
+[60 48 48 - 60 48 52] GUIDO
+Okay, we've got a LOAD ready to go, here, FLIGHT. We want to load {a vector} and {external ∆V}.
+1> This is the current ground-based tracking information of spacecraft position and velocity.
+2> And this is the burn specification.
+
+[60 48 53 - 60 48 58] FLIGHT
+Okay. Have the loads been verified, yet? Is this the same vector that's being run on a hybrid?
+
+[60 49 00 - 60 49 01] GUIDO
+Close to it, FLIGHT. Essentially the same thing.
+
+[60 49 03] FLIGHT
+You're sure of that?
+
+[60 49 03] GUIDO
+Roger.
+
+[60 49 05] FLIGHT
+Alright.
+
+[60 49 09 - 60 49 11] FLIGHT
+And when they run it and say it's okay, we can assume it is? Is that right?
+
+[60 49 12] GUIDO
+That's affirm, FLIGHT.
+
+[60 49 13 - 60 49 18] FLIGHT
+Alright. Is it the same vector we would have used for this DPS +2 - LI +2 hours, or is it a different one?
+
+[60 49 21 - 60 49 25] GUIDO
+Well, it's FDO's present vector, FLIGHT. The only problem that we're worried about is the integration problem on board -
+
+[60 49 25] FLIGHT
+Yeah. Mmhmm.
+
+[60 49 26] GUIDO
+Okay -
+
+[60 49 26 - 60 49 28] FLIGHT
+And the scaling, and all that business.
+
+[60 49 29 - 60 49 32] GUIDO
+Yeah, but the vector doesn't really matter all that much what vector it is.
+
+[60 49 38 -] GUIDO
+This is - this is essentially one. We need to load this, though. Even if we do a P47 -
+
+[60 49 42] FLIGHT
+Okay.
+
+[- 60 49 43] GUIDO
+- we need to load this vector.
+
+[60 49 49] TELMU
+Negative.
+
+[60 49 50 - 60 49 51] FLIGHT
+Say again, TELMU? Negative?
+
+[60 49 51] TELMU
+Negative.
+
+[60 49 52] FLIGHT
+Negative?
+
+[60 49 56 - 60 50 02] FLIGHT
+And, CAPCOM, if we get P00 and DATA, we will put a state vector and target LOAD in for him.
+
+[60 50 18] FLIGHT
+Yes.
+
+[60 50 22 - 60 50 23] FLIGHT
+GUIDANCE, you should have it.
+
+[60 50 23 - 60 50 29] GUIDO
+Okay, FLIGHT. We'll have to wait until they get the uplink configured. INCO's working on it.
+
+[60 50 32] FLIGHT
+ORDEAL?
+
+[60 50 33] GUIDO
+Negative. You don't need it.
+
+[60 50 34] FLIGHT
+Negative.
+
+[60 50 43] TELMU
+FLIGHT, TELMU.
+
+[60 50 44] FLIGHT
+Go.
+
+[60 50 45 - 60 50 49] TELMU
+Before we burn here, we should deploy the landing gear so that we don't get any control problems.
+
+[60 50 50 - 60 50 52] FLIGHT
+Does that come up somewhere in the procedure?
+
+[60 50 53] CONTROL
+It comes up, FLIGHT.
+
+[60 50 54] FLIGHT
+Say again?
+
+[60 50 54] CONTROL
+It comes up -
+
+[60 50 55] TELMU
+Yes, it does.
+
+[60 50 57 - 60 50 58] FLIGHT
+I didn't hear his question, Jack.
+
+[60 50 59 - 60 51 01] CAPCOM
+ASCENT ECA breaker on panel 11, we want it open or closed?
+
+[60 51 02] TELMU
+Open.
+
+[60 51 02] FLIGHT
+TELMU?
+
+[60 51 02] TELMU
+Open.
+
+[60 51 03] FLIGHT
+Open.
+
+[60 51 15 - 60 51 18] CAPCOM
+Okay. Are we happy with the circuit breaker configuration? Do we want them to press on?
+
+[60 51 18 - 60 51 20] FLIGHT
+Circuit breaker panel. CONTROL, go or no go?
+
+[60 51 21 - 60 51 22] CONTROL
+CONTROL is okay.
+
+[60 51 23] FLIGHT
+TELMU?
+
+[60 51 23] TELMU
+Go.
+
+[60 51 24] FLIGHT
+GUIDANCE?
+
+[60 51 25] GUIDO
+We're go.
+
+[60 51 26] FLIGHT
+INCO?
+
+[60 51 27] INCO
+Go.
+
+[60 51 27 - 60 51 28] FLIGHT
+Go, CAPCOM.
+
+[60 51 34] CAPCOM
+What about the landing gear?
+
+[60 51 36 - 60 51 37] FLIGHT
+They'll come to that in the checklist, apparently.
+
+[60 51 37] CAPCOM
+Okay.
+
+[60 52 38 - 60 52 40] FAO
+FLIGHT, FAO. We concur with that.
+
+[60 52 40] CAPCOM
+We concur.
+
+[60 52 43] FLIGHT
+FAO concurs.
+
+[60 52 46 - 60 52 48] FLIGHT
+INCO, do you have the OMNI for the burn attitude?
+
+[60 52 48 - 60 52 50] GUIDO
+FLIGHT, GUIDANCE, we're in the middle of a LOAD right now.
+
+[60 52 50 - 60 52 54] FLIGHT
+Oh. Okay. CAP - what do you mean? You don't want them to maneuver?
+
+[60 52 54 - 60 52 55] GUIDO
+That's right. Let's hold it.
+
+[60 52 55 - 60 52 57] FLIGHT
+CAPCOM, could he hold his maneuver until we finish the LOAD, please?
+
+[60 53 14] CONTROL
+FLIGHT, CONTROL.
+
+[60 53 15] FLIGHT
+Go.
+
+[60 53 16 - 60 53 22] CONTROL
+MIT recommendation for the maneuver to attitude is to use the TTCA rather than the auto-maneuver. Hand controller.
+
+[60 53 24 - 60 53 25] FLIGHT
+Okay. He's been doing that. We'll give it to him.
+
+[60 53 26] CONTROL
+Okay.
+
+[60 55 33 - 60 55 34] GUIDO
+FLIGHT, we're through with the LOAD. They can maneuver.
+
+[60 55 34] FLIGHT
+Okay.
+
+[60 55 38 - 60 55 43] FLIGHT
+And you want TTCAs, right? CONTROL? For the maneuver?
+
+[60 55 45] CONTROL
+Go, FLIGHT.
+
+[60 55 46 - 60 55 47] FLIGHT
+You want TTCAs for the maneuver, right?
+
+[60 55 48 - 60 55 49] CONTROL
+To the burn attitude. That's affirm.
+
+[60 55 51] CONTROL
+That is affirm, FLIGHT.
+
+[60 56 24 - 60 56 31] FLIGHT
+CAPCOM, FLIGHT. We're through with the LOADing. He can go ahead with his maneuver. We recommend he uses TTCA.
+
+[60 56 32 - 60 56 34] FLIGHT
+We recommend that, and we're through with the LOAD.
+
+[60 56 49 - 60 56 51] FLIGHT
+Okay. Everybody in the room, we're back on the checklist.
+
+[60 56 57] FLIGHT
+Do we want to -
+
+[60 56 57 - 60 56 59] CAPCOM
+Are you with us now, on the checklist?
+
+[60 56 59 - 60 57 01] FLIGHT
+Do we want to do the self-test? GUIDANCE?
+
+[60 57 05 - 60 57 07] GUIDO
+FLIGHT, we did check the E-MOD, his E-MEMORY was GO.
+
+[60 57 08 - 60 57 09] FLIGHT
+Do you want to do the self-test?
+
+[60 57 12 - 60 57 13] FLIGHT
+Page 6, Activation.
+
+[60 57 15] GUIDO
+The 2-hour Activation.
+
+[60 57 16 - 60 57 18] FLIGHT
+On the 2-hour Activation. Do you want to do the self-test?
+
+[60 57 18 - 60 57 20] FAO
+FLIGHT, FAO, you'll get behind if you do it.
+
+[60 57 20 - 60 57 21] GUIDO
+It's not - it's not required, FLIGHT.
+
+[60 57 22] FLIGHT
+Negative.
+
+[60 57 22 - 60 57 23] CAPCOM
+Okay, let's go. Let's get in and -
+
+[60 57 23 - 60 57 25] FLIGHT
+Let's go. Let's listen to the loop, and answer their questions.
+
+[60 57 26] CAPCOM
+Answer up on the checklist.
+
+[60 57 27] FLIGHT
+Negative, CAPCOM.
+
+[60 57 38] FLIGHT
+Page 7.
+
+[60 57 54] TELMU
+Affirmative.
+
+[60 57 58] FLIGHT
+Mmhmm.
+
+[60 58 06 - 60 58 08] CAPCOM
+Okay, everybody. We have - we're on page 9 now, right?
+
+[60 58 09 - 60 58 14] FLIGHT
+Yup. We scratched the VH - VHF. How about this LGC CMC clock sync T-ephems there, GUIDANCE?
+
+[60 58 15 - 60 58 16] GUIDO
+We've already taken care of that, FLIGHT.
+
+[60 58 17] FLIGHT
+Okay, already done.
+
+[60 58 29] FAO
+FLIGHT. FAO.
+
+[60 58 30] FLIGHT
+Go.
+
+[60 58 30 - 60 58 32] FAO
+They can pick up at the landing gear deploy at the bottom of 10.
+
+[60 58 33 - 60 58 36] FLIGHT
+Okay. Well, let's walk through it one piece at a time.
+
+[60 58 42 - 60 58 44] FLIGHT
+That's good, Spence, but I don't want to skip anything. Let's just let them go through it.
+
+[60 58 45 - 60 58 46] CAPCOM
+We need that landing gear out?
+
+[60 58 47] FLIGHT
+Yes. They want it out.
+
+[60 58 53 - 60 58 54] CAPCOM
+And we don't want the {steerable}.
+1> Antenna.
+
+[60 59 04 - 60 59 05] FLIGHT
+CONTROL, you want that done, right?
+
+[60 59 06] CONTROL
+Affirmative.
+
+[60 59 06] ??
+Affirmative.
+
+[60 59 10 - 60 59 11] FLIGHT
+Okay. Standby for landing gear.
+
+[60 59 41 - 60 59 45] FLIGHT
+Okay, let's watch the power when the - landing gear, there, gentlemen.
+
+[60 59 47 - 60 59 48] TELMU
+Okay, powers are fine.
+
+[60 59 57 - 60 59 59] TELMU
+It looks like landing gear deployed from here, FLIGHT.
 

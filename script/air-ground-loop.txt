@@ -2460,6 +2460,496 @@ AFT OMNI, Aquarius.
 [60 09 00] CAPCOM
 Aquarius, Houston.
 
-[60 11 18] CAPCOM
+[60 11 18] LMP
 Okay. Houston, Aquarius. How do you read?
+
+[60 18 22 - 60 18 23] CAPCOM
+Aquarius, Houston. How do you read?
+
+[60 22 48 - 60 22 49] LMP
+Hello Houston, Aquarius. How do you read?
+
+[60 22 50 - 60 22 52] CAPCOM
+Hello there, Aquarius. Loud and clear. How me, now?
+
+[60 22 56 - 60 22 58] CDR
+Okay, we're reading you loud and clear, Jack. I hope it stays this time.
+
+[60 22 58 - 60 23 37] CAPCOM
+Okay. We'd like to brief you on what our plan is. We're, at this time, water critical in the LM. So we'd like to use as little as possible. To do this, we're going to plan to make a free-return maneuver of 16 feet per second at 61 hours, which is 37 minutes from now. Then we're going to power down the PGNS, and then we'll - at 79 hours, we'll go ahead and make another abort maneuver to kick what we've got. But we'd like to get that PGNS powered down as soon as possible.
+
+[60 23 40 - 60 23 47] CAPCOM
+That would be after the midcourse and - so, how do you feel about making a 16 foot-per-second burn in 37 minutes?
+
+[60 23 51 - 60 23 58] CDR
+Well we'll give it a try, Jack, if that's all we've got. That's a 16 foot-per-second DPS burn in 37 minutes?
+
+[60 23 59 - 60 24 03] CAPCOM
+Roger. We're working up a PAD for it, but we want to know what you think about doing it at that time.
+
+[60 24 09 - 60 24 11] CDR
+Well, we'll do it. Could you give us a little bit more time?
+
+[60 24 32 - 60 24 45] CAPCOM
+Okay, Jim. We'd like to get a suggested time from you. We can figure out a free-return maneuver for any time you want to give us, so if you'll give us the time you'd like to shoot for, we'll figure out a PAD.
+
+[60 24 49 - 60 24 54] CDR
+Okay, that sounds good. I think if we have a little bit more time - we want to do it right. Standby 1.
+
+[60 25 06 - 60 25 08] CDR
+Let's shoot for an hour if we can, Jack. How's that?
+> Prepping for a midcourse burn was normally scheduled for around 75 minutes, and that's with the ready-to-go SM SPS. The LM DPS normally took 2 hours to activate, so even an hour is rather compressed.
+
+[60 25 17 - 60 25 21] CAPCOM
+Okay, Jim. How about 61 hours and 30 minutes? That's an hour and 5 from now.
+
+[60 25 26 - 60 25 30] CDR
+Okay. We'll do it and we want to be sure we talk back and forth to make sure we get this burn off right.
+
+[60 25 32] CAPCOM
+Affirm.
+
+[60 25 36 - 60 25 45] LMP
+Okay. In the interim, Jack, I looked around again and I saw that we have a radar and a landing-radar heater breaker in. Can I pull those out?
+> CONTROL noticed these around 58:02 and 58:11, but the instruction never made it up to pull them.
+
+[60 25 47 - 60 25 48] CAPCOM
+Affirmative. Pull them both out.
+
+[60 25 54 - 60 26 12] CAPCOM
+And now we want to ask you a question about alignments and so forth: we wanted to know if you can see any stars out of the AOT. We also wanted to know if you could use the Service Module to cast a shadow on the LM windows and then look out the windows to see stars for a P51 COAS alignment.
+
+[60 26 16 - 60 26 38] CDR
+Okay, in this attitude, Jack, that we're pitching around, I cannot use the AOT to see stars. We - we're just not able to see them at all. Now, we may be able to maneuver off in yaw or - and/or roll, and see stars. Right now, we haven't been able to. The AOT is useless. The Command Module structure is just radiating too much light into the - into the telescope.
+
+[60 26 43 - 60 26 52] CAPCOM
+Okay. And how about using the Service Module to cast a shadow on the commander's window? If you do that, can you see stars for a COAS alignment?
+
+[60 26 56 - 60 27 11] CDR
+We could give that a try, Jack, although I don't know how successful it will be. We tried to do it; the light shines off our quads which makes it difficult to see stars. We do have the Earth and Moon, if that can be of assistance.
+
+[60 27 20 - 60 27 36] LMP
+Another problem: right now, Jack, I'm looking out the right window and it's pretty dark out that window but there are about a thousand or so false stars out here from - left over from some of the debris. It's hard to discern what's real and not real.
+
+[60 27 40 - 60 27 57] FLIGHT
+Okay. That's good information. And during the time that we see you're continuing to pitch, if you ever get in a position where you think the AOT might be of some use, we'd like you to periodically look out of it and see if you can see some stars that would enable us to get a P52.
+
+[60 28 00 - 60 28 19] CDR
+Okay, will do. And also, let me ask you a question: in this configuration, docked, we have to use the TTCA to control pitch and roll. And just how much can we use that without really changing our trajectory? We only have 60 miles to play with.
+> Lovell is concerned, because with the weight of the CSM attached to the LM the controls normally used to rotate the spacecraft don't do much (imaging twiddling a long stick between two fingers at its middle as opposed to at its ends), so he has to use the controls normally used to strafe the spacecraft around. But this has the potential to alter the trajectory of the spacecraft, and this close to the Moon very small adjustments can turn into miles of difference at the very far point.
+
+[60 28 24 - 60 28 25] CAPCOM
+Roger. We'll put that to them.
+
+[60 28 47 - 60 28 54] LMP
+Okay, Jack. Are you ready to go to work with me on the 2-hour DPS activation and contingency book, page 1?
+
+[60 28 56 - 60 28 57] CAPCOM
+Roger. We're ready to go.
+
+[60 29 07] LMP
+Okay, item 1 we can - 1 through 5 we can scratch off as done. Is that correct?
+
+[60 29 17] CAPCOM
+Standby 1, Fred.
+
+[60 30 21 - 60 30 24] CAPCOM
+Okay, Fred. Let's go ahead. Step 1, page 1. Everybody's listening.
+
+[60 30 30 - 60 30 40] LMP
+Okay. I've looked around, and I've essentially done steps 1 through 5 with the exception of floodlights and utility lights, and I think we'll just do without those.
+
+[60 30 42] CAPCOM
+Roger. Your choice.
+
+[60 30 49 - 60 30 57] LMP
+Okay. On EPS activation, we're through step - we're through that - bottom of that page. That's all done.
+
+[60 31 00 - 60 31 01] CAPCOM
+We concur. Page 2.
+
+[60 31 15 - 60 31 25] LMP
+Okay, in essence, we've circumvented step 4, and we're not sitting with all 4 acs - descent BATs on high-voltage taps, so I'll scratch off step 4.
+
+[60 31 30 - 60 31 34] CAPCOM
+Roger, and in step 5 we want to leave INVERTER 1 circuit breaker OPEN.
+
+[60 31 40 - 60 31 42] LMP
+Roger. In step 5, we'll leave INVERTER 1 CB OPEN.
+
+[60 31 43] CAPCOM
+Omit step 6.
+
+[60 31 56 - 60 32 04] LMP
+Okay. For the time being, our mission timer is the computer. So mission timer activation - scratch off.
+
+[60 32 07] CAPCOM
+Roger.
+
+[60 32 12 - 60 32 15] LMP
+Okay. We've done the primary glycol loop activation.
+
+[60 32 17] CAPCOM
+We verify it.
+
+[60 32 31 - 60 32 34] CAPCOM
+Aquarius, we recommend you leave the caution and warning off on page 3.
+
+[60 32 38 - 60 32 59] LMP
+Okay, I was going to say that next. Page 3 we'll just scratch item 1. And item 2, I've already got the RCS heaters on. And I don't know if I gave you the time or you got the time on the PRIMARY EVAP FLOW number 1 OPEN.
+
+[60 33 05] CAPCOM
+We got the time.
+
+[60 33 12 - 60 33 14] LMP
+Okay. Let's go to the CB pages now.
+
+[60 33 31 - 60 33 34] CAPCOM
+Freddo, did you close the engine control breaker on panel 11?
+
+[60 33 40 - 60 33 41] LMP
+What control was that, Jack?
+
+[60 33 43 - 60 33 50] CAPCOM
+Did you close the {S/C} ENGINE CONTROL breaker on panel 11? As we got step 1 there on page 3.
+1> STAB/CONT; stabilization and control.
+
+[60 33 51] LMP
+Okay, the -
+
+[60 33 57 - 60 34 02] LMP
+Okay, yes. The EPS DESCENT ECA CONTROL breaker is CLOSED on 11.
+
+[60 34 03 - 60 34 09] CAPCOM
+Roger, and how about the - on panel 11, S/C ENGINE CONTROL, CLOSED?
+
+[60 34 13] CAPCOM
+AFT OMNI, Fred.
+
+[60 34 18] LMP
+Okay.
+
+[60 34 22 - 60 34 25] LMP
+We're AFT OMNI, and we have the S/C ENGINE CONTROL breaker CLOSED.
+
+[60 34 26 - 60 34 30] CAPCOM
+Roger. Let's go on with the circuit breaker panel checkout.
+
+[60 34 37 - 60 34 40] LMP
+Okay. I'll just give you - I think it'll be easier, here, to give you what I got in.
+
+[60 34 44 - 60 34 54] LMP
+Okay, in the top row on 11, we have the four AC BUS TIE breakers IN and the AC BUS VOLTS breaker IN, and that's it.
+
+[60 34 58 - 60 35 15] LMP
+Second row, we have the four TCA breakers IN. We have the GASTA under FLIGHT DISPLAYS and COMMANDER's FDAI. And likewise under AC BUS A, we have a GASTA and a COMMANDER FDAI breaker IN. That's it.
+
+[60 35 19 - 60 35 42] LMP
+On row 3, we have a SIGNAL CONDITIONER 1. We have the ATCA (PGNS). We have the ENGINE CONTROL breaker, ATTITUDE DIRECT CONTROL breaker, and the - under LIGHTING, ANUN/DOCK/COMPONENT breaker IN. And one other: ED LOGIC POWER A - ED LOGIC POWER A is also IN.
+
+[60 35 43] CAPCOM
+Copy.
+
+[60 35 47 - 60 35 56] LMP
+Okay, under the fourth - fourth row, we got all the QUAD HEATER breakers IN. SUIT FAN 1. Under ECS, GLYCOL 1 and 2.
+
+[60 36 04 - 60 36 13] LMP
+And under COMM we have COMMANDER AUDIO IN. And PGNS LGC/DSKY, IMU STANDBY, IMU OPERATE, and that's it.
+
+[60 36 18 - 60 36 39] LMP
+Okay. In the bottom row: EPS, we have the BAT FEED TIE both IN, and we have the CROSS TIE BALANCE LOADS IN, the X-LUNAR BUS TIE, DESCENT ECA CONTROL, DESCENT ECA, and the DC BUS VOLTs breaker.
+
+[60 36 41] CAPCOM
+Roger, we copy.
+
+[60 36 41 - 60 36 42] CMP
+That completes it for panel 11.
+
+[60 36 43] CAPCOM
+Okay, standby.
+
+[60 36 47] LMP
+Okay.
+
+[60 36 56 -] LMP
+As I see it, some of the checklist are - we need the DECA GIMBAL IN sooner or later -
+
+[60 37 02 - 60 37 04] CAPCOM
+That's affirm. Close the DECA GIMBAL.
+
+[- 60 37 11] LMP
+- and probably - okay, DECA GIMBAL - and sooner or later, we're going to need DECA POWER, I guess also.
+
+[60 37 18 - 60 37 20] CAPCOM
+Alright, DECA POWER will come up later in the procedure, Freddo.
+
+[60 37 23] LMP
+Okay.
+
+[60 38 44 - 60 38 54] CAPCOM
+Aquarius, Houston. On your circuit breaker checklist, on panel 11 and 16, we want you to configure the panels as outlined in the checklist.
+
+[60 39 00 - 60 39 05] LMP
+Okay. You want us to configure as per checklist. Okay, we'll do that.
+
+[60 39 05 - 60 39 09] CAPCOM
+That's right. Close the black ones and open the white ones.
+
+[60 39 14 - 60 39 15] LMP
+Yeah, I think we can manage that.
+
+[60 39 21 - 60 39 23] CDR
+With the Activation power-up, we're starting right now.
+
+[60 40 15 - 60 40 17] CDR
+Houston, we might as well leave our RCS TCAs IN, right?
+
+[60 40 25 - 60 40 28] CAPCOM
+Affirmative, Jim. Leave your RCS TCAs in on panel 11
+
+[60 40 32 - 60 40 36] LMP
+Yeah, I used my Pentel pen and made those white ones black ones.
+
+[60 40 37] CAPCOM
+Roger. Same on 16, Fred.
+
+[60 40 48 - 60 40 51] CDR
+And you might look there, Houston, to see what circuit breakers aren't required, like the tape recorder.
+
+[60 40 55] CAPCOM
+We're looking.
+
+[60 41 43 - 60 41 53] CAPCOM
+Okay, Jim. On panel 11 over there, you can also leave open the RENDEZVOUS RADAR HEATER breaker and the LANDING RADAR HEATER breaker, in addition to the tape recorder.
+
+[60 41 57] CDR
+They're out.
+
+[60 42 06 - 60 42 13] CDR
+I'm leaving a few in, Jack, too, like the SUIT FAN 1 is still IN, RCS SYSTEM is still IN, the TCAs.
+
+[60 42 15 - 60 42 16] CDR
+ATTITUDE DIRECT CONTROL is IN.
+
+[60 42 20] CAPCOM
+Roger.
+
+[60 42 35 - 60 42 37] CDR
+How about if I leave the VHF A and B OFF?
+
+[60 42 43 - 60 42 44] LMP
+I switched to FORWARD OMNI.
+
+[60 42 54 - 60 42 57] CAPCOM
+Okay, we can leave the VHF powered down too.
+
+[60 43 03 - 60 43 04] CDR
+And do you want the SECONDARY S-BAND?
+
+[60 43 07 - 60 43 09] CAPCOM
+Negative on SECONDARY S-BAND. Leave them open.
+
+[60 43 16 - 60 43 18] CDR
+UP DATA LINK is IN. Do you want that in or out?
+
+[60 43 24 - 60 43 26] CAPCOM
+Leave the UP DATA LINK OPEN. We'll call for it when you want to put it in.
+
+[60 44 38 - 60 44 49] LMP
+Okay, Jack. On panel 11 on the top row, do you really want the PROPULSION PQGS and ASCENT HELIUM REGs IN?
+
+[60 44 56 - 60 44 59] LMP
+And also the SYSTEM ENGINEER X-POINTER breaker.
+
+[60 45 01 - 60 45 12] CAPCOM
+Roger. Negative on the PQGS. Negative on the ASCENT HELIUM REG. And negative on the X-POINTER.
+
+[60 45 20 - 60 45 22] LMP
+Okay. On the second row, I'm going to leave the FLOODLIGHT breaker open.
+
+[60 45 26] CAPCOM
+Concur.
+
+[60 45 33 - 60 45 37] LMP
+And we're again up to - do you want the CWEA enabled?
+
+[60 45 41 - 60 45 42] CAPCOM
+Negative on the CWEA.
+
+[60 45 47] LMP
+Okay.
+
+[60 46 04 - 60 46 12] LMP
+Okay, since we're - are we going to power up the AGS or should I concern myself with the ATCA breaker?
+
+[60 46 17] CAPCOM
+Negative on the AGS.
+
+[60 46 21 - 60 46 23] CAPCOM
+However, Fred, we need the ATCA breaker IN.
+
+[60 46 31 - 60 46 32] LMP
+Okay, ATCA breakers IN.
+
+[60 46 37 - 60 46 38] LMP
+Yeah - I guess for the backup power supply.
+
+[60 46 43 - 60 46 44] LMP
+Hey, how about ATCA AGS?
+
+[60 46 46 - 60 46 47] CAPCOM
+Negative on ATCA AGS.
+
+[60 47 07 - 60 47 10] LMP
+And I'm leaving the SUIT FLOW CONTROL breaker OPEN.
+
+[60 47 22 -] CAPCOM
+Let's close the SUIT FLOW CONTROL, Freddo -
+
+[60 47 23 - 60 47 24] CDR
+And Jack, OMNIs going now -
+
+[- 60 47 25] CAPCOM
+- it doesn't take any current.
+
+[60 47 32 - 60 47 35] LMP
+Okay. Without suits it doesn't do us much good either, though.
+
+[60 47 54 - 60 48 00] LMP
+Okay, and are we going to continue to be able to operate off the OMNIs, Jack? So can I leave the S-BAND antenna powered down?
+
+[60 48 20 - 60 48 32] CAPCOM
+Okay, Freddo, we don't plan to use the steerable antenna, although we want to leave the heaters on. So it looks like you ought to open up COMM S-BAND ANTENNA, but leave S-BAND ANTENNA HEATERS closed.
+
+[60 48 35 - 60 48 39] LMP
+Roger. COMM S-BAND is OPEN, and S-BAND HEATER breaker is still CLOSED.
+
+[60 49 28 - 60 49 47] LMP
+And on the bottom row, Jack, I'm going to leave the HEATER DISPLAY breaker out, which we had pulled before, and EPS DISPLAY. But I question: do we want the ASCENT ECA breaker in, as prescribed?
+
+[60 49 49] CAPCOM
+Standby.
+
+[60 49 53 - 60 49 56] CAPCOM
+That's a negative on the ASCENT ECA breaker, leave it open.
+
+[60 50 04 -] CAPCOM
+And Aquarius, we need P00 and DATA -
+
+[60 50 05] LMP
+And that's a -
+
+[- 60 50 09] CAPCOM
+- and we'll give you a state vector and target load.
+
+[60 50 14 - 60 50 16] LMP
+Okay. We need the UP LINK breaker in, then, now.
+
+[60 50 19] CAPCOM
+That's affirmative.
+
+[60 50 25 - 60 50 31] CDR
+Okay. And Jack, will you give us that - how about the ORDEAL breaker? Can I pull that? We don't need that, do we?
+
+[60 50 34 - 60 50 35] CAPCOM
+Negative on the ORDEAL. Leave it open.
+
+[60 50 50 - 60 50 55] LMP
+And how about the ASCENT ECA breaker on panel 11? Jim has it in over there.
+
+[60 51 03 - 60 51 05] CAPCOM
+And on panel 11, ASCENT ECA can be open.
+
+[60 51 09] CDR
+It's open.
+
+[60 51 29 - 60 51 32] CAPCOM
+Okay, Aquarius. We're GO on the circuit breaker configuration as you have it now.
+
+[60 51 38] LMP
+Roger.
+
+[60 52 06 - 60 52 13] CAPCOM
+And Aquarius, tests in the simulator just showed that if you want to let the PGNS DAP hold your attitude for you, it will.
+
+[60 52 18] CDR
+Okay, very well.
+
+[60 52 32 - 60 52 38] CDR
+And Jack, because it will take quite a while to get back to the attitude, I think we ought to think about going there very shortly.
+
+[60 52 40] CAPCOM
+Roger. I have a PAD for you.
+
+[60 52 44 - 60 52 45] CAPCOM
+I have a P30 maneuver PAD.
+
+[60 52 51 - 60 52 52] CDR
+Roger - standby.
+
+[60 53 00 - 60 53 06] CAPCOM
+Okay, we want you to hold your maneuver until we finish making the LOAD. We haven't completed it yet. Are you ready to copy P30 maneuver PAD?
+
+[60 53 09] CDR
+That's affirm.
+
+[60 53 11 - 60 54 42] CAPCOM
+Okay, here we go. The purpose is midcourse correction for free-return. NOUN 33: {061:29:42.84}. {-0021.3, +0004.1, -0031.2}. {HA and HP are N/A, ∆V 0038.0}. {0:31}. {120, 298}. {-0021.3, +0004.1, -0031.2}. COAS N/A. And I have your LM GDA angles: pitch 5.86, roll 6.75. Your DPS throttling: 5 seconds at 10%, burn the rest at 40%. Your ullage will be 2 jets for 10 seconds.
+1> NOUN 33: time of burn
+2> NOUN 81: change in velocity (∆V in fps)
+3> NOUN 42: apogee, perigee, total ∆V
+4> Burn time
+5> FDAI roll and pitch
+6> NOUN 86: change in velocity (∆V in fps) in the AGS coordinate space
+
+[60 54 58 - 60 56 02] LMP
+Okay, Jack. We have a P30 maneuver PAD, a midcourse for free-return. NOUN 33: 061:29:42.84. -0021.3, +004.1, -0031.2. HA and NP N/A, ∆VR 0038.0. 0:31. 120, 298. -0021.3, +0004.1, -0031.2. DPS throttle 5 seconds at 10%, burn the rest at 40%. And we need a 2-jet, 10 second ullage.
+
+[60 56 03 - 60 56 11] CAPCOM
+That's a good readback, Fred. I'd like to verify, however, in NOUN 81 in VY, it's plus three balls 41.
+
+[60 56 16 - 60 56 22] LMP
+Okay. NOUN 81, VY is +0004.1.
+
+[60 56 23 - 60 56 26] CAPCOM
+Good readback. Let's press on with the checklist.
+
+[60 56 29 - 60 56 32] CDR
+Okay. And Jack, find out about using TTCA to maneuver with.
+
+[60 56 34 - 60 56 39] CAPCOM
+Okay. We're finished with the computer, it's yours. And we recommend using the TTCA to maneuver with.
+
+[60 56 42] CDR
+Roger.
+
+[60 56 44 - 60 56 55] LMP
+Okay, I'm back on the checklist, page 6, Jack. Under PGNS turn-on and self-test, we've done everything except the self-test here on this page. Do you want to do that at this time?
+
+[60 57 30 - 60 57 33] CAPCOM
+Okay, Aquarius. Negative on the PGNS self-test. Page 7.
+
+[60 57 38 - 60 57 56] LMP
+Okay. I'll scratch page 6. And on page 7, we're not going to activate the - or rather, we had the S-BAND activated, ECS Activation I have all done. And at the bottom of the page, the docked IMU coarse align is done.
+
+[60 58 05] CAPCOM
+Roger.
+
+[60 58 17 - 60 58 21] LMP
+We've - okay, we've also completed, I guess in essence, all of page 8.
+
+[60 58 23 - 60 58 28] CAPCOM
+That's affirmative, and page 9 to boot. Scratch VHF; we've done the T-ephems.
+
+[60 58 38 - 60 58 40] LMP
+Okay, you've updated it, that's right. We cranked in the time.
+
+[60 58 54 - 60 58 58] CDR
+And Houston, let's go to Activation - or get into page 10 and see what we do there.
+
+[60 59 00 - 60 59 02] CAPCOM
+Okay. The only item on page 10 is to deploy the landing gear.
+
+[60 59 07 - 60 59 08] CDR
+Okay. We'll do that now.
 
