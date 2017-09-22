@@ -1899,7 +1899,7 @@ They're OPEN.
 Okay, they're all OPEN.
 
 [59 01 29 - 59 01 32] CAPCOM
-Okay. On row 4, PNGS, SIGNAL STRENGTH DISPLAY.
+Okay. On row 4, PGNS, SIGNAL STRENGTH DISPLAY.
 
 [59 01 40] CDR
 It's OPEN.
@@ -2952,4 +2952,255 @@ Okay. The only item on page 10 is to deploy the landing gear.
 
 [60 59 07 - 60 59 08] CDR
 Okay. We'll do that now.
+
+[61 00 11 - 61 00 20] LMP
+Okay. The landing gear are down and locked, Jack, and looking ahead now at page 11, we've done all of that.
+
+[61 00 25 - 61 00 27] CAPCOM
+We verify that. Page 12.
+
+[61 00 32 - 61 00 39] LMP
+Okay, and I assume in amongst all those numbers you pumped up, we got a REFSMMAT and STATE VECTOR, is that correct?
+
+[61 00 40 - 61 00 44] CAPCOM
+That's affirmative. You've got that, so you can delete page 12.
+
+[61 00 52 - 61 00 57] LMP
+Hey, on 13, you've read us up the fine align angles and we've cranked those in.
+
+[61 01 02] CAPCOM
+Affirmative.
+
+[61 01 09 - 61 01 14] LMP
+Okay, so now we're up to - we've got to do a DAP set, the gimbal/throttle test.
+
+[61 01 14] CAPCOM
+That's -
+
+[61 01 21 - 61 01 31] CAPCOM
+Okay, Aquarius. We recommend omitting the DAP set, gimbal/throttle test. Just make sure the gimbal - DECA POWER and DECA GIMBAL circuit breakers are closed.
+
+[61 01 35 - 61 01 40] LMP
+Okay. We're going to proceed now with the DAP set, gimbal/throttle test, is that correct? Or did you say delete it?
+
+[61 01 41 - 61 01 47] CAPCOM
+Aquarius, delete the DAP set, gimbal/throttle test. Just ensure that the DECA POWER and the DECA GIMBAL are closed.
+
+[61 01 51 - 61 01 54] CDR
+Okay, Houston. DECA POWER is OPEN at this time. Do you want me to close it?
+
+[61 01 56 - 61 01 58] CAPCOM
+Affirmative, Jim. Close the DECA POWER.
+
+[61 02 01 - 61 02 02] CDR
+It's CLOSED. We deleted that.
+
+[61 02 28 - 61 02 33] LMP
+Okay. Also out of that list, Jack, we need the COMMANDER'S THROTTLE set to THROTTLE and MIN.
+
+[61 02 58] LMP
+Houston -
+
+[61 03 02 - 61 03 10] LMP
+if I recall the launch set of the gimbals, the GDAs are not correct here, and where are we going to get those set for the burn?
+
+[61 03 33 - 61 03 44] CAPCOM
+Okay, here's the word on the DAP set, gimbal/throttle test. Let's do step 1 and step 2, and that'll get our gimbal set.
+
+[61 04 21 - 61 04 35] LMP
+Okay, Jack. We're going to have to back up on this if we're going to follow the procedure here, which has us go MODE CONTROL PGNS AUTO. We're going to have to pull the TCA breakers to keep from firing jets.
+
+[61 04 53 - 61 04 54] CAPCOM
+Standby, Fred.
+
+[61 05 29 - 61 05 31] CAPCOM
+Standby on step 1, Fred. We're getting the word for you.
+
+[61 05 34] CAPCOM
+How do you like this sim?
+
+[61 05 42] CDR
+It's a beauty.
+
+[61 06 10 - 61 06 17] CAPCOM
+Okay, Aquarius, we recommend you do the DAP set and gimbal/throttle test as per the checklist. Go PGNS AUTO and proceed.
+
+[61 06 21 - 61 06 27] CDR
+Well, we're going to fire our thrusters as soon as we go to AUTO because we've got those thrusters in - the thruster circuit breakers. Do you want us to do that and stop?
+
+[61 06 51 - 61 06 56] CAPCOM
+Okay, Aquarius, we're recommending you go to AUTO, let the thrusters fire and settle down, and proceed with the test.
+
+[61 07 06 - 61 07 07] CDR
+We're in PGNS AUTO.
+
+[61 07 09 - 61 07 11] CAPCOM
+Roger. Your DAP is set, you're in wide deadband; that ought to do the trick.
+
+[61 07 15] CDR
+Roger.
+
+[61 07 20 - 61 07 22] CAPCOM
+Okay, we're looking at it, Aquarius; we're ready to proceed with the test.
+
+[61 07 26 - 61 07 27] LMP
+Okay, we're proceeding.
+
+[61 07 52 - 61 07 53] LMP
+Okay, and Houston, you -
+
+[61 07 55 - 61 07 57] LMP
+- you're looking at the weights now. Those are still good, right?
+
+[61 08 01] CAPCOM
+You're GO on the weights.
+
+[61 09 05 - 61 09 13] CAPCOM
+Aquarius, Houston. We'd like you to recycle on the DAP load and change your DAP to 32021. Over.
+
+[61 11 05 - 61 11 14] CAPCOM
+Okay, Aquarius. We're looking at your gimbal and we notice that we've got a 4-jet ullage loaded in the DAP and we gave you 2 jets on the PAD. But let's go with what we've got loaded. It'll be a 4-jet ullage.
+
+[61 11 18] LMP
+Okay.
+
+[61 11 41 - 61 11 43] LMP
+Okay, Houston. How does the GDAs look now?
+
+[61 11 45 - 61 11 46] CAPCOM
+The GDAs are GO as they are. Press on.
+
+[61 12 09 - 61 12 11] CDR
+Okay, Houston. We're going to do the DPS pressurization and checkout.
+
+[61 12 16] CAPCOM
+Standby 1.
+
+[61 12 34 - 61 12 38] CAPCOM
+Okay, your gimbals are within 0.3 and we're ready for the DPS pressurization and checkout.
+
+[61 13 33 - 61 13 44] LMP
+Okay, Houston. Do you want to follow up on page 15 with RCS checkout? In essence, we've kind of already done that.
+
+[61 13 47 - 61 13 49] CAPCOM
+You're right, Aquarius. Let's delete the RCS checkout.
+
+[61 13 52] CAPCOM
+And the DPS looks GO.
+
+[61 15 42 - 61 15 44] CDR
+Houston, we're going to do a PGNS AUTO maneuver to the attitude.
+
+[61 15 47] CAPCOM
+Standby on that.
+
+[61 15 52 - 61 15 58] CAPCOM
+Aquarius, we recommend driving it around there manually with a TTCA.
+
+[61 15 59 - 61 16 01] CDR
+Okay, we have to use the TTCA. Roger.
+
+[61 21 08 - 61 21 11] CDR
+We're going to AUTO now, Houston, to try to damp the rates. We're at the attitude.
+
+[61 21 21 - 61 21 22] CAPCOM
+Roger, Jim. We verify the attitude.
+
+[61 21 26] CDR
+Roger.
+
+[61 23 36 - 61 23 41] LMP
+And Houston, we'd like to confirm: do you want the VERB 65 ENTER in there?
+
+[61 23 43 - 61 23 44] CAPCOM
+Affirmative on the VERB 65.
+
+[61 23 48] LMP
+Okay.
+
+[61 24 11 - 61 24 21] LMP
+Okay, Jack. I've got another question on page 18. At 1 minute, I concur with MASTER ARM ON, but I wonder why I have to have the ABORT STAGE breaker in.
+
+[61 24 26 - 61 24 27] LMP
+We sure don't want any staging now.
+> This would drop the descent stage of the LM, which they need for getting home, as in addition to the better engine it contained consumables.
+
+[61 24 37 - 61 24 40] CAPCOM
+Aquarius, delete the ABORT STAGE circuit breaker CLOSE. Leave it open.
+
+[61 24 45 - 61 24 46] LMP
+Roger. Will delete.
+
+[61 24 54 - 61 25 00] LMP
+Okay. Also, Jack, since we have 4-jet ullage versus 2, do you want - still want 10 seconds ullage or do you want 5 now?
+
+[61 25 08 - 61 25 11] CAPCOM
+Okay, Aquarius, we'll use automatic ullage.
+
+[61 25 17 - 61 25 20] LMP
+Okay. We'll just let the 7.5 second AUTO ullage do it.
+
+[61 25 22 - 61 25 30] CAPCOM
+Roger, and we'd like to do this in manual throttle, so on page 17 about two-thirds of the way down, THROTTLE CONTROL, MANUAL - vice AUTO.
+
+[61 25 33 - 61 25 35] LMP
+Okay. We're set to MANUAL.
+
+[61 25 57 - 61 25 58] CDR
+What's the 203 -
+
+[61 26 05] CAPCOM
+ENTER on the 203, Jim.
+
+[61 26 10 - 61 26 12] CDR
+We've got 203 on the DSKY now and it looks as though it requires work. Can we pass it?
+
+[61 26 15 - 61 26 16] CAPCOM
+Aquarius, ENTER on the 203.
+
+[61 26 21] CDR
+We hit ENTER.
+
+[61 26 50 - 61 26 53] CAPCOM
+Aquarius, we'd like to verify that your throttle is in the MIN position.
+
+[61 26 57] CDR
+That's affirm.
+
+[61 26 59 - 61 27 11] CAPCOM
+And in the event that you have to do a manual takeover, turn the ENGINE GIMBAL OFF, MODE CONTROL to ATTITUDE HOLD, and use the hand - use the TTCA.
+
+[61 28 13 - 61 28 14] LMP
+Okay, 1 +30 to burn.
+
+[61 28 20] CAPCOM
+Roger.
+
+[61 28 45] LMP
+Okay. MASTER ARM's ON. 1 minute.
+
+[61 28 52 - 61 28 53] CAPCOM
+Roger, Aquarius. You're GO for the burn.
+
+[61 29 54] CDR
+40 percent.
+
+[61 30 03 - 61 30 04] CAPCOM
+Okay, Aquarius. You're looking good.
+
+[61 30 24 - 61 30 25] CDR
+AUTO SHUTDOWN.
+
+[61 30 40 - 61 30 41] LMP
+Okay, you're looking at {16 85} now, Jack.
+1> VERB 16 NOUN 85, which displays the control axis information (??).
+
+[61 30 46 - 61 30 48] CAPCOM
+Okay, you're GO on the residuals; proceed.
+
+[61 30 54 - 61 30 58] LMP
+Okay, when you say GO on the residuals, you mean don't trim them. Is that right?
+
+[61 30 59 - 61 31 01] CAPCOM
+That's affirmative. No trim required.
 

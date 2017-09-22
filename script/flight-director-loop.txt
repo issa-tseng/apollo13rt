@@ -10204,3 +10204,1411 @@ Okay, powers are fine.
 [60 59 57 - 60 59 59] TELMU
 It looks like landing gear deployed from here, FLIGHT.
 
+[61 00 23 - 61 00 24] CONTROL
+CONTROL concurs.
+
+[61 00 28] CAPCOM
+How about AGS?
+
+[61 00 29 -] CONTROL
+Delete AGS activation and self-test -
+
+[61 00 31] FLIGHT
+Okay.
+
+[- 61 00 31] CONTROL
+- ?? complete.
+
+[61 00 39] FLIGHT
+That's correct.
+
+[61 00 42] FLIGHT
+And a target, right, GUIDANCE?
+
+[61 00 45] FLIGHT
+GUIDANCE, FLIGHT.
+
+[61 00 47 - 61 00 48] FLIGHT
+You got the target loaded also, right?
+
+[61 00 49] GUIDO
+Roger. He's got it.
+
+[61 00 52] GUIDO
+He's got it, FLIGHT.
+
+[61 01 03 - 61 01 04] CAPCOM
+How about you guys keeping ahead, here?
+
+[61 01 08] CAPCOM
+How about AGS align, FLIGHT?
+
+[61 01 09 - 61 01 10] FLIGHT
+We don't need that. No AGS align.
+
+[61 01 14 - 61 01 16] CONTROL
+Recommend we don't do that, FLIGHT. All we'd do is just close the DECA POWER breaker.
+
+[61 01 17 - 61 01 18] FLIGHT
+Okay. You don't want to do the test.
+
+[61 01 19] CONTROL
+Negative.
+
+[61 01 49 - 61 01 50] CAPCOM
+You ready for DPS pressurization and checkout?
+
+[61 01 52] GUIDO
+FLIGHT, GUIDANCE.
+
+[61 01 55] CONTROL
+Affirmative.
+
+[61 01 55] FLIGHT
+Yes.
+
+[61 01 56 - 61 01 57] GUIDO
+We need to configure the throttle.
+
+[61 01 58] FLIGHT
+What - what do you need?
+
+[61 01 59 - 61 02 00] GUIDO
+With what we read on the PAD.
+
+[61 02 01] FLIGHT
+Okay, does he - he doesn't do that, here?
+
+[61 02 02 - 61 02 03] GUIDO
+Step 2. Step 2.
+
+[61 02 04 - 61 02 07] FLIGHT
+Wait a minute. Step 2. Okay, yeah. Okay, page 14.
+
+[61 02 09] CAPCOM
+Okay.
+
+[61 02 14 - 61 02 15] FLIGHT
+Page 14. Okay.
+
+[61 02 18 - 61 02 21] FLIGHT
+How about 3, 4, 5, and 6, there? CONTROL? Although they -
+
+[61 02 21 - 61 02 23] CONTROL
+We don't need it. That's - part of - that's what we're deleting.
+
+[61 02 25 - 61 02 26] FLIGHT
+Steps 3, 4, 5, and 6?
+
+[61 02 27] CONTROL
+Right.
+
+[61 02 34 - 61 02 38] FLIGHT
+Wait. Wait a minute. We need to do step 2, right, GUIDANCE? Oh, okay. TTCA.
+
+[61 02 39] GUIDO
+Roger, FLIGHT.
+
+[61 02 39 - 61 02 41] CONTROL
+That's caught later on, FLIGHT. The TTCA to MIN.
+
+[61 02 41 - 61 02 43] FLIGHT
+Well - okay, but do we do it here? If we do it here, let's do it here.
+
+[61 02 44] CONTROL
+Okay, fine.
+
+[61 02 45] FLIGHT
+Yes, CAPCOM.
+
+[61 02 46 - 61 02 48] CAPCOM
+You want steps 2 and 3 on page 14.
+
+[61 02 48 - 61 02 51] FLIGHT
+No. Nope. They were discussing the last thing on page 13.
+
+[61 02 52] CAPCOM
+Oh, okay.
+
+[61 02 52 - 61 02 54] FLIGHT
+TTCA both throttle to MIN.
+
+[61 02 55] CAPCOM
+Okay.
+
+[61 02 56] CONTROL
+FLIGHT, CONTROL.
+
+[61 02 57 - 61 02 58] CAPCOM
+Looks like they've got step 3, too.
+
+[61 03 01] CONTROL
+FLIGHT, CONTROL.
+
+[61 03 02] FLIGHT
+Go ahead.
+
+[61 03 03] CONTROL
+Okay - standby -
+
+[61 03 07 - 61 03 09] CONTROL
+Affirmative, FLIGHT. He needs to trim the gimbal, not the throttle.
+
+[61 03 11 - 61 03 20] CONTROL
+To trim the gimbal, FLIGHT, if you want to make it simple, just - you can do the DAP set, gimbal/throttle test steps 1, 2, and you've got it.
+
+[61 03 22 - 61 03 24] FLIGHT
+Okay. Do you want to do all of step 1 now, is that what you're saying?
+
+[61 03 24 - 61 03 26] CONTROL
+That just sets you up for step 2, that's affirm, FLIGHT.
+
+[61 03 26 - 61 03 31] FLIGHT
+Okay. CAPCOM, correction. They want to do all of step 1 and step 2.
+
+[61 03 34 - 61 03 35] FLIGHT
+Is that right, now, CONTROL?
+
+[61 03 35] CONTROL
+That's affirm, FLIGHT.
+
+[61 03 36 - 61 03 38] FLIGHT
+GUIDANCE, we're going to do all of step 1 and step 2. Got it?
+
+[61 03 39] GUIDO
+Roger.
+
+[61 03 44 - 61 03 48] CONTROL
+Okay. One other comment, FLIGHT. Down in step 5, he de-arms the DPS, okay?
+
+[61 03 49] FLIGHT
+Yes?
+
+[61 03 50 - 61 03 51] CONTROL
+He has to do that particular item.
+
+[61 03 52 - 61 03 59] FLIGHT
+Okay. We - we're just getting there, we'll going through them one at a time, 1 and 2. Okay? Watch him do step 2, there, GUIDANCE. When he gets to it.
+
+[61 04 37 - 61 04 39] CONTROL
+We can just go to PGNS MODE CONTROL to OFF.
+
+[61 04 41] FLIGHT
+To OFF?
+
+[61 04 42] CONTROL
+Yeah. It'll do the same thing.
+
+[61 04 45 - 61 04 50] CONTROL
+He's in MIN IMPULSE now, he shouldn't be firing any jets. Except when he hits the ACA.
+
+[61 04 51 - 61 04 53] FLIGHT
+Okay. Why can't he do it in AUTO? Why is this -
+
+[61 04 53 - 61 04 56] CONTROL
+Okay. If he goes to AUTO, he goes to an ATTITUDE HOLD mode.
+
+[61 04 58 - 61 05 05] CONTROL
+He'll fire jets to go to the attitude. Hold out the attitude he's in right now. Okay, that's no problem.
+
+[61 05 05 - 61 05 08] FLIGHT
+What do you want us to do? CONTROL? What do you want us to do?
+
+[61 05 09 - 61 05 10] CAPCOM
+You want an OMNI?
+
+[61 05 11] CONTROL
+Standby 1.
+
+[61 05 17 - 61 05 19] FLIGHT
+We're still hung up on step 1, near as I can tell.
+
+[61 05 41 - 61 05 42] CONTROL
+FLIGHT, CONTROL.
+
+[61 05 43] FLIGHT
+Go ahead.
+
+[61 05 44 - 61 05 45] CONTROL
+Let's go to AUTO per the checklist.
+
+[61 05 45 - 61 05 46] FLIGHT
+Per the checklist, CAPCOM.
+
+[61 05 50 - 61 05 54] CAPCOM
+Okay. You want them to pull his TCA breakers so that he doesn't get any red flags - jets firing, that is?
+
+[61 05 56 - 61 05 57] CONTROL
+Well, what's the problem with jets firing?
+
+[61 05 59 - 61 06 01] CONTROL
+I don't see any problem with it. He's in a 5 degree deadband.
+
+[61 06 03 - 61 06 04] FLIGHT
+And the note expects it.
+
+[61 06 05] CONTROL
+Yeah.
+
+[61 06 05 - 61 06 06] FLIGHT
+And if he gets them it's okay.
+
+[61 06 06 - 61 06 08] CONTROL
+Yeah. Just do it per the checklist.
+
+[61 06 08] FLIGHT
+Okay.
+
+[61 06 28] FLIGHT
+CONTROL?
+
+[61 06 29] CONTROL
+Do that and stop.
+
+[61 06 32 - 61 06 33] CONTROL
+Go to AUTO and then stop, we'll take a look at it.
+
+[61 06 34 - 61 06 35] FLIGHT
+Go to AUTO and then what?
+
+[61 06 35 - 61 06 38] CONTROL
+And then stop. That's the question he asked. So he just wants to go to AUTO and then take a look at it.
+
+[61 06 39] FLIGHT
+Okay.
+
+[61 06 41 - 61 06 42] FLIGHT
+And then he gets the thruster firing, and then what?
+
+[61 06 43 - 61 06 46] CONTROL
+Okay, you see it - watch it settle down, and then - and then we proceed on to test.
+
+[61 06 47 - 61 06 48] FLIGHT
+Alright. That's what you want to do.
+
+[61 06 49] CONTROL
+Roger.
+
+[61 06 50] FLIGHT
+Got it, Jack?
+
+[61 06 57 - 61 07 00] FLIGHT
+Will they stabilize with the docked configuration all right?
+
+[61 07 01 - 61 07 03] CONTROL
+It should, FLIGHT. We've got the DAP set up, FLIGHT.
+
+[61 07 04 - 61 07 06] FLIGHT
+Okay. Okay, let's watch it.
+
+[61 07 12 - 61 07 13] CONTROL
+We've got no firings, FLIGHT.
+
+[61 07 14] FLIGHT
+Okay.
+
+[61 07 15 - 61 07 16] CONTROL
+Proceed on the test.
+
+[61 07 17 - 61 07 18] FLIGHT
+We're ready to proceed.
+
+[61 07 37 - 61 07 38] CONTROL
+Got a little thruster activity.
+
+[61 07 40 - 61 07 41] FLIGHT
+Y'all, GUIDANCE, down there, FLIGHT.
+
+[61 07 42] GUIDO
+Go.
+
+[61 07 42 - 61 07 43] FLIGHT
+You getting that go, yet?
+
+[61 07 45 - 61 07 46] GUIDO
+Negative. We haven't received it yet, FLIGHT.
+
+[61 07 47 - 61 07 48] FLIGHT
+What's your estimate on it? We need it for the burn.
+
+[61 07 49 - 61 07 50] GUIDO
+We're getting it right now, FLIGHT.
+
+[61 07 52 - 61 07 53] CAPCOM
+Okay, you watch his loading?
+
+[61 07 58] FLIGHT
+GUIDANCE?
+
+[61 07 59] GUIDO
+Roger.
+
+[61 08 00] FLIGHT
+Go.
+
+[61 08 07 - 61 08 09] CAPCOM
+Okay, he's loading his gimbal now, let's watch him.
+
+[61 08 10 - 61 08 11] FLIGHT
+Okay, watch the gimbal trim there.
+
+[61 08 13] CONTROL
+Roger.
+
+[61 08 25] FDO
+FLIGHT, FDO.
+
+[61 08 26] FLIGHT
+Go ahead.
+
+[61 08 26 - 61 08 28] FDO
+Closest approach will be {136.5}.
+1> miles.
+
+[61 08 29] FLIGHT
+Thank you.
+
+[61 08 42] CONTROL
+FLIGHT, CONTROL.
+
+[61 08 43] FLIGHT
+Go.
+
+[61 08 44 - 61 08 53] CONTROL
+He needs to - on step 2, there, when he loads VERB 48 NOUN 46, the DAP load 32021, that was not correct on the DAP. He's got our old DAP mode in right now, he didn't put that in.
+
+[61 08 54] FLIGHT
+What do you want us to do?
+
+[61 08 55 - 61 08 56] CONTROL
+He should go per the checklist, 32021.
+
+[61 08 58 - 61 08 59] FLIGHT
+What - okay, where is that?
+
+[61 09 00] CONTROL
+Step 2, second line.
+
+[61 09 01] FLIGHT
+Okay.
+
+[61 09 02] CONTROL
+Page 14.
+
+[61 09 03 - 61 09 04] FLIGHT
+CAPCOM, you got that?
+
+[61 09 14] CONTROL
+Per the book.
+
+[61 09 19 - 61 09 20] CONTROL
+He can do that after he gets through the test, no problem.
+
+[61 09 22 - 61 09 23] FLIGHT
+Well, okay, but it's there for some reason.
+
+[61 09 29 - 61 09 30] FLIGHT
+FAO, how are we doing on time?
+
+[61 09 31 - 61 09 38] FAO
+FLIGHT, we are sitting alright. The only other thing we've got left is the DPS press. And -
+
+[61 09 39 - 61 09 40] FLIGHT
+And then we go into the 6 minute?
+
+[61 09 41] FAO
+That's right.
+
+[61 09 41] FLIGHT
+Alright.
+
+[61 09 44 - 61 09 45] FLIGHT
+Keep - keep track of us, here. Spencer, about -
+
+[61 09 45] CAPCOM
+Okay, you ready for the gimbal?
+
+[61 09 46] FAO
+Okay.
+
+[61 09 47] CONTROL
+Ready.
+
+[61 09 48] FLIGHT
+Ready for the gimbal.
+
+[61 09 49] CONTROL
+Right.
+
+[61 09 54] CONTROL
+Got DPS arm.
+
+[61 09 57] CONTROL
+And we're driving.
+
+[61 10 00 - 61 10 06] CAPCOM
+Okay, and one other point that's brought out here, we've got a 4-jet ullage loaded in the DAP, and we've got 2 in the PAD.
+
+[61 10 09] FLIGHT
+CONTROL?
+
+[61 10 10] CONTROL
+That's right, FLIGHT.
+
+[61 10 11] FLIGHT
+What do you want us to do?
+
+[61 10 13] CONTROL
+Standby on that.
+
+[61 10 27 - 61 10 31] CONTROL
+Okay, to get - to make it agree with the PAD, the DAP load would be changed to be 31021.
+
+[61 10 32 - 61 10 34] FLIGHT
+Well. Do you want to - why don't we just leave it the way it is?
+
+[61 10 35 - 61 10 36] CONTROL
+As far as I'm concerned we can leave it the way it is.
+
+[61 10 37 - 61 10 38] FLIGHT
+RETRO, FDO, you copy that?
+
+[61 10 39] RETRO
+Say again, FLIGHT?
+
+[61 10 40 - 61 10 43] FLIGHT
+You copy that? We're going to do a 4-jet. That's what we've got loaded. That alright with you?
+
+[61 10 44] RETRO
+Roger.
+
+[61 10 46] FDO
+Go with the way it is, then.
+
+[61 10 47 - 61 10 54] FLIGHT
+Yeah. CAPCOM, mention that to him so he doesn't think of it later and get confused. We're going with the 4-jet, vice the 2-jet on the PAD.
+
+[61 10 55 - 61 10 57] CAPCOM
+Okay. Are we seeing his gimbal go where it's supposed to?
+
+[61 10 57 - 61 10 59] CONTROL
+Yes. It's over against the stop and coming back now.
+
+[61 11 00] FLIGHT
+Still on our way.
+
+[61 11 01] CAPCOM
+Okay.
+
+[61 11 33] CONTROL
+We're GO on the trim.
+
+[61 11 38] CONTROL
+FLIGHT, CONTROL.
+
+[61 11 39] FLIGHT
+Go ahead.
+
+[61 11 39 - 61 11 40] CONTROL
+Trim looks okay.
+
+[61 11 40] FLIGHT
+Okay.
+
+[61 11 44] FLIGHT
+Looks good.
+
+[61 12 03 - 61 12 04] CAPCOM
+What numbers did we actually read up?
+
+[61 12 05 - 61 12 06] FLIGHT
+How close were they?
+
+[61 12 07 - 61 12 08] CONTROL
+We're within about 0.3. We're - from the -
+
+[61 12 12] CONTROL
+Roger. We're ready.
+
+[61 12 13 - 61 12 15] FLIGHT
+The what? Wait a minute, didn't you want the engine arm off?
+
+[61 12 17] CONTROL
+It is off.
+
+[61 12 17 - 61 12 20] FLIGHT
+Okay. Everything else is okay? Steps 3, 4, 5, and 6?
+
+[61 12 21 - 61 12 22] CONTROL
+From what I can see, it is.
+
+[61 12 26 - 61 12 27] CAPCOM
+Alright. You're ready for pressurization -
+
+[61 12 27 - 61 12 28] FLIGHT
+You don't have any question about that, then, do you? CONTROL?
+
+[61 12 29] CONTROL
+No. Looks fine.
+
+[61 12 30 - 61 12 31] FLIGHT
+Alright. Yeah, we're ready.
+
+[61 12 34 - 61 12 35] FLIGHT
+Are we coming up on another OMNI?
+
+[61 13 11] CONTROL
+Pressurized, FLIGHT.
+
+[61 13 13] FLIGHT
+Okay. Keep your eye on it, okay?
+
+[61 13 19] CONTROL
+Looks good.
+
+[61 13 21] FLIGHT
+Okay.
+
+[61 13 38 - 61 13 39] CONTROL
+Delete that, FLIGHT.
+
+[61 13 40 - 61 13 41] FLIGHT
+Delete all of it?
+
+[61 13 41] CONTROL
+Affirmative.
+
+[61 13 45 - 61 13 46] FLIGHT
+Yeah. Delete it all, CAPCOM.
+
+[61 13 50] CAPCOM
+How's the DPS look?
+
+[61 13 51] CONTROL
+Looks fine.
+
+[61 14 05 - 61 14 09] FLIGHT
+Okay, everybody. We are holding at about the 6 minute point in the checklist.
+
+[61 14 09 - 61 14 13] CAPCOM
+Okay, at the bottom of page 15, we've got a new DAP. We've got 31021. You want that in there?
+
+[61 14 14 - 61 14 18] CONTROL
+That's what put us in a 2-jet boot, FLIGHT. That will put us in 2-jet system boot for the ullage.
+
+[61 14 19 - 61 14 20] FLIGHT
+Okay. But -
+
+[61 14 20 - 61 14 21] CONTROL
+Just leave it alone.
+
+[61 14 22 - 61 14 23] FLIGHT
+Yeah. We'll leave it where it is, Jack.
+
+[61 14 23] CONTROL
+Roger.
+
+[61 14 24 - 61 14 25] FLIGHT
+We told him 4 jets, that's what he's got.
+
+[61 14 26] CAPCOM
+Roger.
+
+[61 14 27 - 61 14 29] FLIGHT
+And we - we - has he passed page 15?
+
+[61 14 30] AFD (??) (off loop)
+Yeah. He's right here -
+
+[61 14 30 -] FLIGHT
+He's on 16 now, right? Yeah, he's into it. GUIDANCE, FLIGHT -
+
+[61 14 34] GUIDO
+Go ahead.
+
+[- 61 14 35] FLIGHT
+- I'm waiting for that GO.
+
+[61 14 36 - 61 14 37] GUIDO
+We watched his P30 here, it looks good.
+
+[61 14 38 - 61 14 39] FLIGHT
+Yeah, I know. But have you got somebody talking to MIT?
+
+[61 14 40 - 61 14 42] GUIDO
+They're still talking to them, haven't got an estimate yet.
+
+[61 14 43 - 61 14 44] FLIGHT
+Well, we have 15 minutes to the burn.
+
+[61 14 46] FLIGHT
+CONTROL, FLIGHT.
+
+[61 14 47] CONTROL
+Go.
+
+[61 14 47 - 61 14 51] FLIGHT
+How do I do this burn if I get a NO GO on - DAP control?
+
+[61 14 52 - 61 14 55] CONTROL
+Okay, standby 1, I'll give you a rundown on that, FLIGHT, put my thoughts together.
+
+[61 14 56] FLIGHT
+Yeah.
+
+[61 14 57] GUIDO
+FLIGHT, GUIDANCE.
+
+[61 14 58] FLIGHT
+Go.
+
+[61 14 59 - 61 15 03] GUIDO
+I'd recommend going ahead and doing this burn if we don't hear from MIT. They feel it'll work, without the run.
+
+[61 15 11 - 61 15 12] GUIDO
+Everybody feels that it will work.
+
+[61 15 15 - 61 15 18] FLIGHT
+Okay, well what do we do during it if it looks funny, is my question?
+
+[61 15 23] GUIDO
+During the burn?
+
+[61 15 24] FLIGHT
+Yeah.
+
+[61 15 41] FLIGHT
+CONTROL, FLIGHT.
+
+[61 15 42] CONTROL
+Go ahead.
+
+[61 15 45 - 61 15 47] FLIGHT
+PGN - okay, you want to do a PGNS AUTO or TTCA?
+
+[61 15 48] CONTROL
+TTCA, FLIGHT.
+
+[61 15 49 - 61 15 52] FLIGHT
+TTCA, CAPCOM. We recommend TTCA to the attitude.
+
+[61 15 56] FLIGHT
+With a TTCA.
+
+[61 16 04 - 61 16 06] FLIGHT
+INCO, what's our OMNI for this burn attitude?
+
+[61 16 08] INCO
+FORWARD.
+
+[61 16 09 - 61 16 10] FLIGHT
+Does he have it on there now?
+
+[61 16 10] INCO
+He's there now.
+
+[61 16 11] FLIGHT
+Okay.
+
+[61 16 13 - 61 16 16] CAPCOM
+That attitude doesn't look like what I've got on the PAD, here.
+
+[61 16 23] GUIDO
+FLIGHT?
+
+[61 16 24] FLIGHT
+Yeah.
+
+[61 16 24] CAPCOM
+You like that attitude?
+
+[61 16 25 - 61 16 26] FLIGHT
+I'm looking at it. Standby.
+
+[61 16 33 - 61 16 34] FLIGHT
+GUIDANCE, FLIGHT. You copying that?
+
+[61 16 36] GUIDO
+What's on the ball right now?
+
+[61 16 39 - 61 16 41] FLIGHT
+What angle is he looking at, CAPCOM? You looking at the ball angles?
+
+[61 16 43 - 61 16 50] CAPCOM
+I'm looking at all of them. I'm looking at what he's got on the {50 18} on the DSKY, and also what he's got on the FCDU -
+1> NOUN 50, VERB 18, the auto-maneuvering command.
+
+[61 16 51 - 61 16 58] GUIDO
+FLIGHT, the pitch and roll look great. The yaw - the only reason it looks different is just because he's sitting there right now.
+
+[61 16 58] FLIGHT
+Sitting where?
+
+[61 17 01 - 61 17 06] GUIDO
+With the attitude he's at presently. The pitch and yaw - and roll are correct.
+
+[61 17 07 - 61 17 09] FLIGHT
+Yeah. On the DSKY. Is that right?
+
+[61 17 10] GUIDO
+Right.
+
+[61 17 11 - 61 17 12] FLIGHT
+Yeah. The FDAI is different.
+
+[61 17 14 - 61 17 15] GUIDO
+FLIGHT, we're looking at the FCDUs and they're correct.
+
+[61 17 16 - 61 17 20] FLIGHT
+Mmhmm. How about yaw? That's the one that's out yet? And is he moving in that axis?
+
+[61 17 21 - 61 17 23] GUIDO
+Yaw doesn't matter, FLIGHT, that's about this thrust vector. That's just where he happens to be.
+
+[61 17 24 -] CAPCOM
+Okay, are we ready -
+
+[61 17 25 - 61 17 27] GUIDO
+It's not constrained - it's not constrained in yaw.
+
+[- 61 17 27] CAPCOM
+- for him to maneuver in the attitude we gave him in the -
+
+[61 17 28] FLIGHT
+Yup.
+
+[61 17 29 - 61 17 30] FLIGHT
+Do you want him to go to a particular yaw?
+
+[61 17 33] FLIGHT
+GUIDANCE?
+
+[61 17 34] GUIDO
+Negative, FLIGHT.
+
+[61 17 36 - 61 17 37] FLIGHT
+We okay on the OMNI? That we're on?
+
+[61 17 44 - 61 17 45] FLIGHT
+INCO, we okay on this OMNI?
+
+[61 17 45 - 61 17 46] INCO
+Yes. The OMNI they're on will be good.
+
+[61 17 47 - 61 17 48] FLIGHT
+Okay. GUIDANCE and CONTROL, FLIGHT.
+
+[61 17 49] GUIDO
+Go ahead.
+
+[61 17 49] CONTROL
+Go, FLIGHt.
+
+[61 17 50 - 61 17 55] FLIGHT
+I still have a question as to what you want me to do if somehow or other something turns up in the guidance during this burn.
+
+[61 17 56 - 61 17 57] GUIDO
+Okay, I have a recommendation, FLIGHT.
+
+[61 17 58] FLIGHT
+And it is?
+
+[61 17 59 - 61 18 09] GUIDO
+Okay, with tur - setting up the burn, we would turn the ENGINE GIMBAL switch to OFF, we'd go to PGNS ATT HOLD, MIN IMPULSE on the - on the -
+
+[61 18 09 - 61 18 12] FLIGHT
+Wait a minute. ENGINE GIMBAL - this - wait a minute. We're in the burn, and this is what you -
+
+[61 18 12 - 61 18 14] GUIDO
+Oh. This is during the burn you're talking about?
+
+[61 18 14] FLIGHT
+Well -
+
+[61 18 14] GUIDO
+Okay.
+
+[61 18 15 - 61 18 16] FLIGHT
+That's when this started. What do you want me to do for -
+
+[61 18 17 - 61 18 25] GUIDO
+Okay. If he's in the burn, they'd go ENGINE GIMBAL off and just use the TTCA to hold attitude. And then as he can, to turn the MODE CONTROL switch to ATT HOLD.
+> It's exactly the same advice.
+
+[61 18 33 - 61 18 34] FLIGHT
+MODE CONTROL to ATT HOLD.
+
+[61 18 35] GUIDO
+Roger.
+
+[61 18 44] FLIGHT
+In that order?
+
+[61 18 46 - 61 18 51] GUIDO
+Yeah. ENGINE GIMBAL off, MODE CONTROL to ATT HOLD, and utilize the TTCA.
+
+[61 18 52 - 61 18 53] FLIGHT
+Okay. So you changed the order.
+
+[61 18 55 - 61 19 04] GUIDO
+Well, this MODE CONTROL to ATT HOLD, he can do that - he should do that as soon as he can, but that - the most important thing is he get attitude control, and he has to do that with the TTCA. So it'll probably be a simultaneous thing.
+
+[61 19 06] FLIGHT
+Okay.
+
+[61 19 06 - 61 19 08] CAPCOM
+Okay, FLIGHT. Now, you verify his attitude?
+
+[61 19 09 - 61 19 10] FLIGHT
+GUIDANCE? You verify his attitude is okay?
+
+[61 19 14 - 61 19 16] GUIDO
+He's not at attitude yet, FLIGHT.
+
+[61 19 17] FLIGHT
+Is he moving?
+
+[61 19 18 - 61 19 20] GUIDO
+Roger. He is moving. When he gets there, he'll be in good shape.
+
+[61 19 21 - 61 19 24] FLIGHT
+Is there any way we can check this now, is there a star out of his window or anything?
+
+[61 19 24 - 61 19 30] GUIDO
+We're running this - right now, we're running to see if there is a star available at the attitude he's maneuvering to.
+
+[61 19 30] FLIGHT
+Alright. Hurry up.
+
+[61 19 31 - 61 19 33] GUIDO
+There wasn't at the other - previous one that we had.
+
+[61 19 34] FLIGHT
+Alright.
+
+[61 19 35 - 61 19 38] GUIDO
+But he's at a different - going to a different yaw, so we're checking it.
+
+[61 20 23] FAO
+FLIGHT, FAO.
+
+[61 20 24] FLIGHT
+Go.
+
+[61 20 25 - 61 20 29] FAO
+If we don't get the attitude soon, we're going to be running behind here.
+
+[61 20 30 - 61 20 31] FLIGHT
+Okay. How far away are we?
+
+[61 20 33 - 61 20 35] FAO
+I'm in the same boat as -
+
+[61 20 36 - 61 20 39] FLIGHT
+GUIDANCE, what are the DP - IMU attitudes that are on the DSKY that we're looking for?
+
+[61 20 41] FLIGHT
+GUIDANCE?
+
+[61 20 42] GUIDO
+The IMU?
+
+[61 20 44 - 61 20 47] FLIGHT
+What attitude will you read on the DSKY when he's in-attitude?
+
+[61 20 49] FLIGHT
+CDU.
+
+[61 20 49 - 61 20 57] GUIDO
+15.47 is yaw. Pitch is 178.1, and roll is 4.47.
+
+[61 20 58 - 61 20 59] FLIGHT
+How far away is he?
+
+[61 21 00 - 61 21 01] GUIDO
+He's just about there. He's right there now, FLIGHT.
+
+[61 21 04 - 61 21 05] CAPCOM
+We got any physical reference he can use?
+
+[61 21 06 - 61 21 07] FLIGHT
+Okay. Have you seen any star yet?
+
+[61 21 12] FLIGHT
+Okay.
+
+[61 21 14] CAPCOM
+Verify the attitude?
+
+[61 21 16] FLIGHT
+GUIDANCE, you like the attitude?
+
+[61 21 18 - 61 21 19] GUIDO
+Looks good, FLIGHT. The attitude looks good.
+
+[61 21 26 - 61 21 29] FLIGHT
+Sun is out the forward window. That pretty much obscures a star.
+
+[61 21 34] FLIGHT
+GUIDANCE, FLIGHT.
+
+[61 21 35] GUIDO
+FLIGHT, GUIDANCE.
+
+[61 21 36 - 61 21 38] FLIGHT
+Have you got anything on confirming the attitude?
+> It's important to remember that the crew still have not been able to perform any kind of alignment on the LM, so they are still counting on the previous platform alignment they transferred over from the CSM, which may have drifted for about a dozen reasons.
+
+[61 21 40 - 61 21 43] GUIDO
+Negative, FLIGHT. The only star available is star 86, there.
+
+[61 21 47 - 61 21 48] GUIDO
+FLIGHT, MIT will not have a run on this thing.
+
+[61 21 50 - 61 21 53] FLIGHT
+Okay, now - but it's the judgement that it is okay to use?
+
+[61 21 53] GUIDO
+Roger.
+
+[61 21 55] FLIGHT
+It is. Alright.
+
+[61 21 56 - 61 21 58] GUIDO
+It's the judgement of the software people it's GO - it's good.
+
+[61 22 00] GUIDO
+It'll be alright.
+
+[61 22 12] GUIDO (off loop)
+That's right.
+
+[61 22 18] CONTROL
+FLIGHT, CONTROL.
+
+[61 22 19] FLIGHT
+Go.
+
+[61 22 20 - 61 22 26] CONTROL
+Okay. Could we possibly look ahead here and get some of these done so it doesn't get too crowded right at the start of the burn? There's a couple of items that need to be taken care of.
+
+[61 22 27] FLIGHT
+Like what?
+
+[61 22 28 - 61 22 35] CONTROL
+Well, we need to get THROTTLE CONTROL to MANUAL; he's in AUTO right now. It's over right - in the 4 minute segment. And we need to get VERB 65 in.
+
+[61 22 38 - 61 22 39] FLIGHT
+Okay, what's the matter with him going through the nominal checklist?
+
+[61 22 40] CONTROL
+Okay.
+
+[61 22 41 -] FLIGHT
+He's in attitude, we're at the 6-minute point -
+
+[61 22 42] CONTROL
+Okay. Very good.
+
+[- 61 22 45] FLIGHT
+- that's comfortable. I don't want to change anything, Hal.
+
+[61 22 45] CONTROL
+Okay.
+
+[61 23 08] FLIGHT
+CAPCOM, FLIGHT.
+
+[61 23 12] FLIGHT
+CAPCOM, FLIGHT.
+
+[61 23 13] CAPCOM
+Go.
+
+[61 23 13 - 61 23 25] FLIGHT
+Jack, your opinion: think it would be worth reviewing that if he sees any kind of rates or anything to go ENGINE GIMBAL OFF, MODE CONTROL ATT CONTROL - ATTITUDE HOLD, and TTCA? You think it's worth reviewing with him?
+
+[61 23 27] FLIGHT
+To finish the burn?
+
+[61 23 33 - 61 23 34] CAPCOM
+I don't think it would hurt to talk it over with him.
+
+[61 23 35] FLIGHT
+Okay.
+
+[61 23 42] GUIDO
+That's affirm.
+
+[61 23 43] FLIGHT
+Affirmative.
+
+[61 23 53] TELMU
+FLIGHT, TELMU.
+
+[61 23 54] FLIGHT
+Go.
+
+[61 23 55 - 61 23 57] TELMU
+For your information, our water rate's dropped down a little in our favor.
+
+[61 23 59] FLIGHT
+Thank you.
+
+[61 24 01 - 61 24 02] CAPCOM
+FLIGHT? CAPCOM.
+
+[61 24 04 - 61 24 05] FLIGHT
+Yeah, I just mentioned it to him.
+
+[61 24 07] FLIGHT
+Who's calling?
+
+[61 24 08 -] CAPCOM
+CAPCOM, on -
+
+[61 24 09] FLIGHT
+Yeah.
+
+[61 24 09 - 61 24 11] FLIGHT
+- I noticed on page 17, MANUAL THROTTLE -
+
+[61 24 23] FLIGHT
+CONTROL?
+
+[61 24 24 - 61 24 25] CONTROL
+Standby 1, FLIGHT.
+
+[61 24 26] FLIGHT
+Top of page 18.
+
+[61 24 32] CAPCOM
+He's right.
+
+[61 24 33] CONTROL
+Negative, FLIGHT.
+
+[61 24 34 - 61 24 35] FLIGHT
+No need for that, Jack.
+
+[61 24 41 -] CONTROL
+FLIGHT, while he's going through that, you might flag him on page 17 -
+
+[61 24 44] FLIGHT
+Yes?
+
+[- 61 24 47] CONTROL
+- THROTTLE CONTROL AUTO should be THROTTLE CONTROL MANUAL.
+
+[61 24 48] FLIGHT
+Okay.
+
+[61 24 49 - 61 24 50] CONTROL
+And you can delete PQGS turned on at the bottom.
+
+[61 24 51 - 61 24 54] FLIGHT
+Okay. CAPCOM, you got that? THROTTLE CONTROL in the middle of that stuff at 4 minutes -
+
+[61 24 59] GUIDO
+FLIGHT, GUIDANCE.
+
+[61 25 01 - 61 25 02] FLIGHT
+How much - how much you want ullage?
+
+[61 25 04 - 61 25 05] CONTROL
+We can just let it go ahead and start ullage automatically now, FLIGHT.
+
+[61 25 06 - 61 25 07] FLIGHT
+Let it go automatically, Jack.
+
+[61 25 07] GUIDO
+FLIGHT, GUIDANCE.
+
+[61 25 08] FLIGHT
+Go.
+
+[61 25 08 - 61 25 11] GUIDO
+He needs to go ahead and hit ENTER on his program if we're proceeding on a P40.
+
+[61 25 12 - 61 25 16] FLIGHT
+Okay. He needs to do an ENTER and proceed on, CAPCOM.
+
+[61 25 17 - 61 25 19] GUIDO
+There's still time yet, FLIGHT. Just a minute.
+
+[61 25 21] GUIDO
+Oh, he did it, FLIGHT.
+
+[61 25 22] FLIGHT
+Standby.
+
+[61 25 37 - 61 25 40] FLIGHT
+And propellant quantity down at the bottom, don't worry about it. It's not on.
+
+[61 25 40] CAPCOM
+No big deal.
+
+[61 25 41] FLIGHT
+Yeah.
+
+[61 25 47 - 61 25 49] FLIGHT
+CAPCOM, would you read them up that takeover?
+
+[61 25 51 - 61 25 53] FLIGHT
+If you have it, there. Here it is if you don't.
+
+[61 26 01] CONTROL
+ENTER, FLIGHT.
+
+[61 26 02 - 61 26 03] FLIGHT
+You ready to ENTER?
+
+[61 26 03 - 61 26 04] CONTROL
+Right. Do an ENTER.
+
+[61 26 04] FLIGHT
+ENTER.
+
+[61 26 08 - 61 26 09] CAPCOM
+He said, "what is it?"
+
+[61 26 14] FLIGHT
+What did he say?
+
+[61 26 18] CAPCOM
+He said, "what is it?"
+
+[61 26 19] FLIGHT
+What is it, GUIDANCE?
+
+[61 26 20] GUIDO
+It's for AUTO THROTTLE, FLIGHT.
+
+[61 26 21 - 61 26 25] FLIGHT
+It's for AUTO THROTTLE. That doesn't say much to me, GUIDANCE, but -
+
+[61 26 28 - 61 26 29] FLIGHT
+We burn MANUAL, you know, GUIDANCE.
+
+[61 26 30 - 61 26 31] GUIDO
+He's gotta manual-throttle the thing, FLIGHT.
+
+[61 26 31] FLIGHT
+Yes.
+
+[61 26 33 - 61 26 35] GUIDO
+He needs to put his throttle to MIN, also, FLIGHT.
+
+[61 26 37 - 61 26 38] FLIGHT
+Throttle to MIN.
+
+[61 26 39 - 61 26 40] GUIDO
+Yes. He's at 29% now, roughly.
+
+[61 26 42 - 61 26 43] FLIGHT
+Okay. CAPCOM, he needs to put his -
+
+[61 26 43 - 61 26 44] GUIDO
+Standby, disregard that.
+
+[61 26 44] FLIGHT
+Okay.
+
+[61 26 44 - 61 26 48] GUIDO
+I can't tell; he hasn't armed the DPS yet, but he needs to confirm that he does have it at MIN.
+
+[61 26 49] FLIGHT
+Okay.
+
+[61 27 12] FLIGHT
+Won't that - CONTROL, FLIGHT.
+
+[61 27 14 - 61 27 16] FLIGHT
+ATTITUDE HOLD and TTCA, won't that fight itself?
+
+[61 27 17 - 61 27 19] CONTROL
+Negative. He's in MIN IMPULSE, FLIGHT. He goes ATT HOLD, it turns the jets off.
+
+[61 27 20] FLIGHT
+Alright.
+
+[61 27 28 - 61 27 30] CAPCOM
+Okay. How are you set up for 2 minutes?
+
+[61 27 32 - 61 27 35] FLIGHT
+What's that Tig counting down to, GUIDANCE, the ullage?
+
+[61 27 37 - 61 27 38] GUIDO
+Negative, FLIGHT. Engine ignition.
+
+[61 27 40 - 61 27 42] FLIGHT
+Okay. What is - why is that clock counting a different number up there?
+
+[61 27 43 -] GUIDO
+Time delay, FLIGHT, from -
+
+[61 27 45] FLIGHT
+That's an awful big one.
+
+[- 61 27 45] GUIDO
+- you're reading his DSKY one.
+
+[61 27 48] GUIDO
+Plus, he's ahead of us.
+
+[61 27 54 - 61 27 59] RETRO
+FLIGHT, RETRO. I've got an ignition time of 1:47. 1:45.
+
+[61 28 00 - 61 28 01] FLIGHT
+Is he loaded correctly?
+
+[61 28 06 - 61 28 09] FLIGHT
+Say again? GUIDANCE or RETRO? Is he loaded correctly?
+
+[61 28 11] FLIGHT
+That's the question.
+
+[61 28 12] ?? (off loop)
+The Tig is right.
+
+[61 28 12 - 61 28 13] GUIDO
+Tig is right, FLIGHT.
+
+[61 28 13 - 61 28 14] FLIGHT
+On board. Thank you.
+
+[61 28 16] GUIDO
+Wall clock is wrong, FLIGHT.
+
+[61 28 17] FLIGHT
+Thank you.
+
+[61 28 22 - 61 28 24] CAPCOM
+Okay, how do you like his configuration at 1 +30?
+
+[61 28 25] FLIGHT
+CONTROL, everything okay with you?
+
+[61 28 26 - 61 28 29] CONTROL
+We haven't seen the VERB 65, but that's okay if he doesn't get it.
+
+[61 28 32 - 61 28 34] FLIGHT
+You satisfied with the throttle, or is he not armed yet?
+
+[61 28 34 - 61 28 35] CONTROL
+He's not armed yet, FLIGHT.
+
+[61 28 36] FLIGHT
+Alright.
+
+[61 28 40] FLIGHT
+GUIDANCE, okay?
+
+[61 28 41] GUIDO
+We're good, FLIGHT.
+
+[61 28 42] FLIGHT
+CONTROL. Okay?
+
+[61 28 43 - 61 28 44] CONTROL
+We're okay, FLIGHT.
+
+[61 28 44] FLIGHT
+TELMU?
+
+[61 28 45] TELMU
+We're GO, FLIGHT.
+
+[61 28 46] FLIGHT
+INCO, okay?
+
+[61 28 48] INCO
+We're good, FLIGHT.
+
+[61 28 49 - 61 28 50] FLIGHT
+All good here at 1 minute.
+
+[61 29 12 - 61 29 14] CONTROL
+Still on VERB 65, FLIGHT.
+
+[61 29 16] FLIGHT
+Do you want to tell them?
+
+[61 29 18 - 61 29 22] CONTROL
+Yes. Tell him we need ENGINE ARM. He's got it. We're at low throttle point.
+
+[61 29 23 - 61 29 24] FLIGHT
+We need a VERB 65 ENTER.
+
+[61 29 24] CONTROL
+- -
+
+[61 29 25 - 61 29 26] FLIGHT
+Is that what you're telling me, CONTROL?
+
+[61 29 26] CONTROL
+Disregard.
+
+[61 29 27] FLIGHT
+Thank you.
+
+[61 29 40] CONTROL
+We have ullage.
+
+[61 29 49 - 61 29 50] CONTROL
+We have ignition, low throttle point.
+
+[61 29 56] CONTROL
+40 percent.
+
+[61 29 57] CONTROL
+Rates look good.
+
+[61 29 58] FLIGHT
+Rates are holding good, huh?.
+
+[61 30 00] CONTROL
+Looking okay, FLIGHT.
+
+[61 30 01] FLIGHT
+Okay.
+
+[61 30 16] CONTROL
+Still looking good.
+
+[61 30 22] CONTROL
+Shutdown.
+
+[61 30 23] FLIGHT
+Yeah.
+
+[61 30 26 - 61 30 27] CAPCOM
+Okay, how about what's left over?
+
+[61 30 29 - 61 30 30] FLIGHT
+Any requirement to trim?
+
+[61 30 33] GUIDO
+- - trim, FLIGHT.
+
+[61 30 34] FLIGHT
+Trim to what?
+
+[61 30 36] GUIDO
+0.2.
+
+[61 30 40] FLIGHT
+Well. Kind of hard to do that.
+
+[61 30 42 - 61 30 43] FLIGHT
+That's good, isn't it?
+
+[61 30 44] GUIDO
+That's good now.
+
+[61 30 44] FLIGHT
+Good, CAPCOM.
+
+[61 30 58] FLIGHT
+Yes.
+
