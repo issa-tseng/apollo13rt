@@ -3204,3 +3204,150 @@ Okay, when you say GO on the residuals, you mean don't trim them. Is that right?
 [61 30 59 - 61 31 01] CAPCOM
 That's affirmative. No trim required.
 
+[61 32 17 - 61 32 19] CAPCOM
+Aquarius, check your MASTER ARM OFF, please.
+
+[61 32 44 - 61 32 50] CDR
+Okay, Houston. Burn's complete. Now we have to talk about powerdown, and what you want us to do with the PGNS.
+
+[61 32 52 - 61 32 55] CAPCOM
+Roger. We're looking at that right now, and you'll be the first one to get the word.
+
+[61 33 19 - 61 33 39] CDR
+And Houston, it's doubtful right now whether we'll be able to see the stars in this configuration. The only way we could possibly get alignment is with the Earth and the terminator or the Moon and its terminator and I'd sure like to have you look at a powerdown - keeping the PGNS if at all possible.
+
+[61 33 48 - 61 33 50] CAPCOM
+Roger, Jim. We'll get the word for you.
+
+[61 35 24 - 61 35 27] CDR
+And Houston, we're in an ATT HOLD mode. Can we turn off the buses?
+
+[61 35 40] CAPCOM
+Standby on that one, Jim.
+
+[61 38 13 - 61 38 29] CAPCOM
+Okay, Aquarius. We're working on what's going to happen next. In the meantime, we'd like to take some high-power items off the line; so on panel 11, open DECA POWER and open DECA GIMBAL. On 16, open the ATCA breaker.
+
+[61 38 36 - 61 38 42] LMP
+Okay. On 11, we've got DECA POWER, DECA GIMBAL OPEN. On 16, we've got the ATCA breaker OPEN.
+
+[61 39 38 - 61 39 49] CDR
+And Houston, while you're thinking, see if you can come up with a procedure of perhaps using the Command Module optics with manual drive to look for stars.
+
+[61 39 51] CAPCOM
+Roger.
+
+[61 41 24 - 61 41 39] CDR
+And Jack, Aquarius. While you're thinking - before we had our COMM problems, we were wanting to know what to - whether we should hook up the side hatch urine dump system. So we wouldn't freeze up the normal urine dump feed.
+
+[61 41 45 - 61 41 51] CAPCOM
+Roger. We gave you a GO on that earlier. Sorry, you must have missed it. Use the side hatch for urine dump.
+
+[61 41 55] CDR
+Okay.
+
+[61 41 56 - 61 41 59] CAPCOM
+And how are the stars out the window now?
+
+[61 42 13 - 61 42 33] CDR
+Well, I'll look again, Jack, but at this attitude the Sun is reflecting off of - off of Quad 4 so bright that it's ruining any night vision. And we've still got particles floating around us. I'll have to take a long look and see if I can see any star patterns.
+
+[61 42 34] CAPCOM
+Roger.
+
+[61 42 43 - 61 42 55] CAPCOM
+And Aquarius, we're going to have to hand you over to a different site now, and we think maybe things will work better if this time we turn off the S-BAND TRANSMITTER/RECEIVER, and bring it back up in 5 minutes. You copy?
+
+[61 42 59 - 61 43 00] CDR
+Okay, standby 1.
+
+[61 43 10 - 61 43 14] CDR
+Okay, I understand you want us to turn off the S-BAND TRANSMITTER/RECEIVER and bring it up in 5 minutes. Is that correct?
+
+[61 43 16] CAPCOM
+That's affirmative.
+
+[61 43 20] CDR
+Tell us when.
+
+[61 43 42 - 61 43 43] CDR
+And you want us to maintain attitude control?
+
+[61 43 46 - 61 43 47] CAPCOM
+Affirmative on the attitude control.
+
+[61 43 47 - 61 43 53] CDR
+That's AUTO attitude control. Okay. We'll maintain AUTO attitude control.
+
+[61 43 56] LMP
+Okay, Jack. I'm back on the line now. On the S-BAND, you want me to turn off the TRANSMITTER/RECEIVER and the POWER AMPL to off for 5 minutes. Is that - when you give me the word - is that what you want?
+
+[61 44 10 - 61 44 15] CAPCOM
+Aquarius, leave the POWER AMPLIFIER the way it is. Turn the TRANSMITTER/RECEIVER OFF for 5 minutes. Now.
+
+[61 44 17] CAPCOM
+Now.
+
+[61 44 19 - 61 44 20] LMP
+Okay, you tell me - you tell me when.
+
+[61 44 22 - 61 44 24] CAPCOM
+Okay, turn it off now. See you in 5 minutes.
+
+[61 44 25 - 61 44 29] LMP
+Okay, it's gone off. It's gone off for 5 minutes.
+
+[61 51 05] LMP
+- -
+
+[61 52 44 - 61 52 46] CAPCOM
+Aquarius, Houston. How do you read?
+
+[61 52 52 - 61 52 53] LMP
+Okay, you're loud and clear there, Jack.
+
+[61 52 54 - 61 52 57] CAPCOM
+Roger, same here. We're all - we're still discussing the next move.
+
+[61 53 04 - 61 53 09] LMP
+I figured it. Let's just make it a good one.
+
+[61 53 18 - 61 54 12] CAPCOM
+We're looking real close at water usage profiles, and right now things are kind of swinging toward leaving the IMU powered up and powering down the LGC. But we'll have more word for you shortly. And we recommend for sleeping that you leave one guy on watch. We recommend you don't make any urine dumps if you can help it, because it'll make the debris problem worse than it is now. And we have some items that you might want to transfer to the LM: some towels, some penlights, fecal bags, UTS. And do you have any more items that we can help you out with at the moment?
+
+[61 54 18 - 61 54 33] LMP
+Okay. Stand by on your latter list there, Jack. I understand no urine dumps; I guess we'll work through the UCD and all the bags we got. And real quick there, can you give a DAP load that we want in here now to conserve the RCS?
+
+[61 55 21 - 61 55 31] CAPCOM
+Okay. For attitude control, we're recommending manual control VERB 76 and watch your middle gimbal angle. Your DAP load that you have now looks good.
+
+[61 55 38 - 61 55 47] LMP
+Okay, it's ATT HOLD VERB 76 for the guy on watch. And the DAP load we've got right now is okay.
+
+[61 58 17 - 61 58 33] CAPCOM
+Aquarius, our decision for this time is to leave the IMU powered up, power down the LGC, and power down other nonessential items. We'll be coming up with a more precise checklist as soon as we can get it. Over.
+
+[61 58 37 - 61 58 45] LMP
+Okay. The decision is to keep the platform, power down the computer, and we'll be standing by for further word on the powerdown, Jack.
+
+[61 58 47] CAPCOM
+Roger.
+
+[61 59 33 - 61 59 39] CAPCOM
+And Aquarius, for your information, we now have a 136 mile perigee.
+
+[61 59 42 - 61 59 43] CAPCOM
+Confirmed by doppler.
+
+[61 59 47 - 61 59 52] LMP
+Okay, 136 mile perigee now. That's very nice.
+
+[62 00 09 - 62 00 12] LMP
+Oh. Wait a minute, Jack. Did you say {pericynthion} or {perigee}?
+1> Closest approach to Moon.
+2> Closest approach to Earth.
+> You can see why he'd be concerned about this.
+
+[62 00 14 - 62 00 15] CAPCOM
+I meant pericynthion.
+
