@@ -16,14 +16,14 @@ One of the tools Flight had in managing their relatively sizable team was a set 
 Electrical, Environmental, and Consumables Manager (EECOM)
 ----------------------------------------------------------
 
-As the poor sap in charge of the electrical and cryogenic gas systems that got literally blown up during Apollo 13, EECOM is the flight controller from whom you will hear the most, particularly in the early stages of diagnosis. EECOM's purview included both electrical power and life support systems, as these systems were intertwined in their reliance upon the same cryogenic gasses. These systems included gas storage and distribution, the fuel cells, batteries, alternators, and electrical buses, and the various life support and regulator valves that maintained a habitable environment within the spacecraft. As implied by the name, monitoring and managing the consumption of the consumable gas (and therefore electrical) resources were also EECOM's charge.
+As the poor sap in charge of the electrical and cryogenic gas systems that got literally blown up during Apollo 13, EECOM is the flight controller from whom you will hear the most in the early stages of diagnosis. EECOM's purview included both electrical power and life support systems, as these systems were intertwined in their reliance upon the same cryogenic gasses. These systems included gas storage and distribution, the fuel cells, batteries, alternators, and electrical buses, and the various life support and regulator valves that maintained a habitable environment within the spacecraft. As implied by the name, monitoring and managing the consumption of the consumable gas (and therefore electrical) resources were also EECOM's charge.
 
 During Kranz's shift and the initial incident, you will hear EECOM Sy Liebergot, who at one early point was described as staring at his telemetry readouts with a two-handed death grip on the handles of his display. Clint Burton takes over as part of Lunney's team&mdash;he oversees most of the power-down procedure of the CSM.
 
 Guidance, Navigation, and Controls Systems Engineer (GNC)
 ---------------------------------------------------------
 
-GNC managed all of the go-there systems: the propulsion hardware, the propellant to be burned, and the navigation instruments and software, including the guidance computer. The explosion broke many things loose, jarred many valves open or shut, and knocked one of the two main electrical buses offline, and so GNC makes frequent appearances in the first hour or so following the incident to try to find a combination of RCS thrusters that are trustworthy to put on the working electrical bus, and to shut down errant thrusters which were pushing the craft about.
+GNC managed all of the go-there systems: the propulsion hardware, the RCS attitude thrusters, the propellant to be burned, and the navigation instruments and software, including the guidance computer. The explosion broke many things loose, jarred many valves open or shut, and knocked one of the two main electrical buses offline, and so GNC makes frequent appearances in the first hour or so following the incident to try to find a combination of RCS thrusters that are trustworthy to put on the working electrical bus, and to shut down errant thrusters which were pushing the craft about.
 
 Said appearances are made by Bill Strable, who is then relieved by Jack Kamman with Lunney's Black team.
 
@@ -62,7 +62,7 @@ Control Officer (CONTROL)
 
 Where TELMU is effectively the EECOM of the Lunar Module, CONTROL is effectively the GNC. In addition to overseeing the navigation and propulsion systems during powerup and the lunar-bound correction burn following the accident, the heavy debate had by Lunney's team on maintaining platform control on a low electricity budget hinged on the navigation systems overseen by CONTROL.
 
-During Kranz's shift, CONTROL was Larry Strimple. He was relieved by ??? for Lunney's shift.
+During Kranz's shift, CONTROL was Larry Strimple. He was relieved by Hal Loden for Lunney's shift.
 
 Capsule Communicator (CAPCOM)
 -----------------------------
