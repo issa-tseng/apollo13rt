@@ -20,7 +20,7 @@ Okay. Will do.
 One other request, we'd like you to verify your high gain configuration. We'd like to know what track mode, what SERVO, and what beam width.
 
 [55 49 25 - 55 50 00] CMP
-Okay, Jack. During the TV we were AUTO TRACK, NARROW BEAM WIDTH, and the PRIMARY ELECTRONICS. And we had a good lockup. Just after we started the maneuver, I was able to lock you up and get real good signal strength, and it just seemed that right there at about 239 degrees in yaw, that the signal strength would just drop off and yaw would go to zero and pitch would go to 90.
+Okay, Jack. During the TV we were AUTO TRACK, NARROW BEAM WIDTH, and the PRIMARY ELECTRONICS. And we had a good lockup. Just after we started the maneuver, I was able to lock you up and get real good signal strength, and it just seemed that right there at about 239° in yaw, that the signal strength would just drop off and yaw would go to zero and pitch would go to 90.
 
 [55 50 05 - 55 50 09] CAPCOM
 Roger. We copy, and the TV show was great.
@@ -35,7 +35,7 @@ And 13, we'd like you to check C-4 thruster.
 Okay, Jack. The battery charge has been terminated on battery B.
 
 [55 51 36 - 55 51 49] CAPCOM
-Roger. We see it, Jack. And we've got a reading of minus 2 degrees on the docking index. We'd like to know if that's 2.0 precise or if it's 2.1 or 1.9.
+Roger. We see it, Jack. And we've got a reading of -2° on the docking index. We'd like to know if that's 2.0 precise or if it's 2.1 or 1.9.
 
 [55 51 52 - 55 51 55] CMP
 No. It's minus 2.0 precisely.
@@ -52,7 +52,7 @@ Okay.
 [- 55 53 07] CAPCOM
 - for looking at Comet Bennett, if you need it.
 
-[55 53 09] CMP
+[55 53 10 - 55 53 11] CMP
 Okay. Standby.
 
 [55 55 19] LMP
@@ -78,10 +78,10 @@ Okay, standby, 13. We're looking at it.
 [55 56 09 - 55 56 32] LMP
 Okay. Right now, Houston the voltage is looking good. And we had a pretty large bang associated with the CAUTION AND WARNING there. And as I recall, MAIN B was the one that had an amp spike on it once before.
 
-[55 56 40] CAPCOM
+[55 56 39] CAPCOM
 Roger, Fred.
 
-[55 56 54 - 55 56 57] LMP
+[55 56 53 - 55 56 57] LMP
 In the interim here, we're starting to go ahead and button up the tunnel again.
 
 [55 57 00] CAPCOM
@@ -115,8 +115,8 @@ We got a MAIN BUS A UNDERVOLT now too, showing.
 MAIN A UNDERVOLT.
 
 [55 58 32 - 55 58 37] LMP
-It's reading about {25 and a half}. MAIN B is reading zip right now.
-1> volts
+It's reading about {25.5}. MAIN B is reading zip right now.
+1> volts. 29 volts was nominal.
 
 [55 59 33] CDR
 And Houston, Odyssey.
@@ -136,7 +136,7 @@ We copy.
 [56 03 17 - 56 03 19] LMP
 Okay, Houston. Are you still reading - 13?
 
-[56 03 20 - 56 03 26] CAPCOM
+[56 03 20 - 56 03 24] CAPCOM
 That's affirmative, we're reading you. We're trying to come up with some good ideas here for you.
 
 [56 03 29 - 56 03 36] LMP
@@ -254,7 +254,7 @@ Okay. Got it.
 OMNI Bravo.
 
 [56 16 08 - 56 16 19] CAPCOM
-Okay, 13, this is Houston. We'd like you to go to your GNC checklist, the pink pages, 1-5. Do powerdown until we get a delta of 10 amps. Over.
+Okay, 13, this is Houston. We'd like you to go to your GNC checklist, the pink pages, 1-5. Do a powerdown until we get a delta of 10 amps. Over.
 
 [56 16 21 - 56 16 24] LMP
 Alright. Roger.
@@ -418,7 +418,7 @@ BATTERY A OFF. Roger.
 [56 37 09 - 56 37 13] CAPCOM
 13, Houston. We'd like you to isolate your O2 surge tank. Over.
 
-[56 37 21] CMP
+[56 37 21 - 56 37 22] CMP
 Surge tank off now, Jack.
 
 [56 37 24 - 56 37 29] CMP
@@ -456,7 +456,7 @@ Roger, we realize that. We feel we can stand 5 more amps on it.
 [56 39 58] CMP
 Okay.
 
-[56 40 02 - 56 40 04] CMP
+[56 40 02 - 56 40 04] CDR
 Okay, heater on TANK 1's ON.
 
 [56 41 55 - 56 42 03] CAPCOM
@@ -467,11 +467,12 @@ Okay. Bring up the fans on O2 TANK 1.
 
 [56 44 35 - 56 44 50] CAPCOM
 13, Houston. We'd like you to check some circuit breakers on panel 226. CRYO O2 HEATER number 1, MAIN A. And check the three CRYO FAN MOTORS, TANK 1, three phases.
+> A diagram of Panel 226 is available on the [CM Auxiliary Panels](#ref-panel-cm-aux) reference page.
 
 [56 44 56 - 56 45 11] LMP
 Okay, Jack. 226 is configured just like it should be. I got three {REAC breakers} and three {RAD breakers} open. All the rest are closed.
 1> The valves that closed the fuel cell reactant valves were electrically actuated. To prevent accidental closing, the circuit breakers to those valves were normally pulled.
-2> Fuel cell radiator breakers ??
+2> Fuel cell radiator
 
 
 [56 45 13 - 56 45 14] CAPCOM
@@ -511,31 +512,31 @@ Okay. We'll start with display number 1.
 Okay, Jack. On MDC 1, there's nothing abnormal. All the rate indicators are zero. Ball number 2 is frozen, of course: we lost MAIN B.
 
 [56 48 45 - 56 48 54] CMP
-I've got - ball number 1 appears to be working normally.  Right now I'm sitting at roll 0, pitch 180, and yaw about 13 degrees.
+I've got - ball number 1 appears to be working normally.  Right now I'm sitting at roll 0, pitch 180, and yaw about 13°.
 
 [56 49 00 - 56 49 04] CMP
 I'm going to try and hold 0, 180, and 0.
 
 [56 49 10 - 56 49 32] CDR
-Okay, Houston. The center panel - I'm looking at the RCS indicator A. We have a package temperature of 180. Our helium pressure is 3900. I'm looking at fuel pressure of about 180 and percentage of about, I'd say 85 percent.
+Okay, Houston. The center panel - I'm looking at the RCS indicator A. We have a package temperature of 180. Our helium pressure is 3900. I'm looking at fuel pressure of about 180 and percentage of about, I'd say 85%.
 
-[56 49 32 - 56 49 54] CDR
+[56 49 34 - 56 49 54] CDR
 B is about the same, except that that package pressure is 190. On quad C, we're looking about the same, except that the package temperature is 100. On quad D, we're looking at package temperature of 160. All other indications are about the same.
 
 [56 49 56 - 56 50 09] CDR
 CM pressure - RCS pressure is looking nominal. Helium pressure's up around 4000. And package temperature is about - a little less than 80 on ring 1 and about the same on ring 2.
 
-[56 50 14 - 56 50 32] CDR
+[56 50 15 - 56 50 32] CDR
 And the - talkbacks on the SM RCS, I've got HELIUM 1 now are all grey. HELIUM 2 are all grey. PRIMARY PROPELLANT all grey. SECONDARY PROPELLANT, I've got two barber poles - A is barber pole, B grey, C barber pole, and D grey.
 
-[56 50 40 - 56 50 52] CDR
+[56 50 41 - 56 50 52] CDR
 Okay. On the ECS RADIATORS, ?? is grey. On the - on the ECS, PRIMARY INDICATOR.
 
 [56 50 58 - 56 51 34] LMP
 Okay, Jack. Starting at the top. Okay. The CRYO TANKS: H2 1 is reading 230 and the same for 2. Our O2 CRYO TANK 1 is - looks like it's barely holding its own at 300. And, CRYO TANK 2 is reading zip. Our quantities: H2 1 is reading 73, 2, 74.
 
 [56 51 36 - 56 52 11] LMP
-On the O2 side, we're reading O2 1 at quantity 76. O2 2 pegged to full scale high. RAD TEMPs PRIMARY INLET we're reading about 55; RAD OUT is reading about 30, and the SECONDARY OUTLET is reading - reading 52 degrees.
+On the O2 side, we're reading O2 1 at quantity 76. O2 2 pegged to full scale high. RAD TEMPs PRIMARY INLET we're reading about 55; RAD OUT is reading about 30, and the SECONDARY OUTLET is reading - reading 52°.
 
 [56 52 13 - 56 53 04] LMP
 And the EVAP OUT TEMP is 45, STEAM PRESSURE 0.17, and GLYCOL DISCHARGE 48. SUIT COMPRESSOR is reading zip. The ACCUM is reading 30; H2O WASTE is reading about 34; POTABLE's reading about 98; SECONDARY RAD INLET is reading about 71; and the RAD OUT is about 30; GLYCOL EVAP TEMP is reading 65, STEAM PRESSURE pegged full scale high; DISCHARGE PRESSURE 9 psi.
@@ -556,16 +557,16 @@ Okay.
 - my last copy is SECONDARY RAD IN.
 
 [56 53 28 - 56 53 59] LMP
-Okay. Your SECONDARY RAD IN, I gave to you 70 - about 72 degrees; the RAD OUT is about 30; the GLYCOL EVAP TEMP is reading about 65; STEAM PRESSURE full scale high, GLYCOL DISCHARGE PRESSURE about 9 psi. The ACCUM - SECONDARY ACCUMULATOR is about 30 - 34 percent.
+Okay. Your SECONDARY RAD IN, I gave to you 70 - about 72°; the RAD OUT is about 30; the GLYCOL EVAP TEMP is reading about 65; STEAM PRESSURE full scale high, GLYCOL DISCHARGE PRESSURE about 9 psi. The ACCUM - SECONDARY ACCUMULATOR is about 30 - 34 percent.
 
 [56 54 01 - 56 54 19] LMP
-Our temperatures: SUITS showing about 52 degrees; CABIN about 58 degrees; pressures, SUIT reading 4.1, CABIN at 5. PARTIAL PRESSURE CO2 is up to a little over 1, about 1.1.
+Our temperatures: SUITS showing about 52°; CABIN about 58°; pressures, SUIT reading 4.1, CABIN at 5. PARTIAL PRESSURE CO2 is up to a little over 1, about 1.1.
 
 [56 54 21 - 56 54 47] LMP
-On the SPS side of the house, the temperature is 72 degrees, helium's reading 3500; N2 A is reading 2300; N2 B about 2450. And our ullage pressures: FUEL is reading about 165; OXIDIZER 170.
+On the SPS side of the house, the temperature is 72°, helium's reading 3500; N2 A is reading 2300; N2 B about 2450. And our ullage pressures: FUEL is reading about 165; OXIDIZER 170.
 
 [56 54 52 - 56 55 32] LMP
-Fuel cells: FUEL CELL 1, both CLOSED, they're zip; SKIN TEMP 405 degrees; CONDENSE EXHAUST is lower scale. FUEL CELL 2 - right now we've got an O2 - an H2 FLOW reading of 0.13 to 0.14, and the O2 FLOW is right now pegged full scale high although it has been varying depending on thruster activity which has also {given us MAIN BUS A undervolts} from a steady reading of about 1.1 up to full scale high.
+Fuel cells: FUEL CELL 1, both CLOSED, they're zip; SKIN TEMP 405°; CONDENSER EXHAUST is lower scale. FUEL CELL 2 - right now we've got an O2 - an H2 FLOW reading of 0.13 to 0.14, and the O2 FLOW is right now pegged full scale high although it has been varying depending on thruster activity which has also {given us MAIN BUS A undervolts} from a steady reading of about 1.1 up to full scale high.
 1> As thrusters used power when they fired and each load drops the voltage, the thrusters could trigger undervolt warnings when they engaged.
 
 [56 55 34 - 56 56 03] LMP
@@ -584,7 +585,7 @@ Houston, 13.
 Hello, Houston; Apollo 13. How do you read?
 
 [56 57 08 - 56 57 21] CAPCOM
-Okay, 13. This is Houston. It apears to us that we're losing O2 flow through FUEL CELL 3. So, we want you to close the REAC valve on FUEL CELL 3. It looks like FUEL CELL 1 and 2 are trying to hold up okay. You copy?
+Okay, 13. This is Houston. It appears to us that we're losing O2 flow through FUEL CELL 3. So, we want you to close the REAC valve on FUEL CELL 3. It looks like FUEL CELL 1 and 2 are trying to hold up okay. You copy?
 
 [56 57 26 - 56 57 39] LMP
 Are you saying FUEL CELL 1 and 2 - 1 and 2 are trying to hold up but we're leaking O2 out of FUEL CELL 3? And you want me to shut the REAC valve on FUEL CELL 3? Did I hear you right?
@@ -697,7 +698,7 @@ Okay Jack, 1-A is reading - lower scale. 0. 1-B is reading 3.45. Okay. You only 
 [57 11 11 - 57 11 12] CAPCOM
 Roger, is that 2 Bravo, Fred?
 
-[57 11 16 - 57 11 23] LMP
+[57 11 17 - 57 11 23] LMP
 That's 2 Bravo is reading - oh, about 0.25 to 0.3.
 
 [57 11 41 - 57 11 44] LMP
@@ -826,7 +827,7 @@ Standby.
 [57 22 06] CMP
 Coming down at you.
 
-[57 23 55 - 57 24 01] CMP
+[57 23 56 - 57 24 01] CMP
 Okay, Jack. It looks like O2 tank 1 pressure is just a hair over 200.
 
 [57 24 03 - 57 24 05] CAPCOM
@@ -840,6 +841,7 @@ It's slowly going to zero, and we're starting to think about the LM lifeboat.
 
 [57 24 22 - 57 24 43] CMP
 Yeah, that's what we're thinking about too. You want me to do a quick P52? It kind of looks like - we've been talking it over, and it kind of looks like we'd probably align our plats - LM platform with our platform and then power down the CM, and keep the LM powered up doing a DPS - whatever DPS burns you give us?
+> Remarkably accurate.
 
 [57 24 55 - 57 25 10] CAPCOM
 13, we're not going to concern ourselves at the moment with a DPS burn; it's going to be some time before we'd get to that. But we're working on other procedures to give you, which will allow us to use the LM systems. Over.
@@ -874,10 +876,10 @@ Okay Jack, let's keep the water; no need for a dump right now.
 [57 30 44] CMP
 Alright.
 
-[57 31 16 - 57 31 25] CAPCOM
+[57 32 16 - 57 32 25] CAPCOM
 13, Houston. We see the PROP ISOL valve on RCS Quad Charlie closed, so we'd like to also disable AUTO RCS feature in Quad Charlie.
 
-[57 31 31 - 57 31 34] CDR
+[57 32 31 - 57 32 34] CDR
 You want us to isolate the AUTO RCS features in Quad Charlie?
 
 [57 32 35] CAPCOM
@@ -893,7 +895,7 @@ Okay, we just tried it and Quad Alpha and Charlie barber poles are showing.
 Standby, Jim.
 
 [57 33 04 - 57 33 11] CMP
-Okay, Jack. That's the secondary propellant barber poles on Alpha and Charlie.
+Okay, Jack. That's the secondary propellant are barber poles on Alpha and Charlie.
 
 [57 34 48 - 57 35 06] CAPCOM
 13, Houston. It won't do any good to try to power the propellant valves on A and C, so we want you to disable the AUTO on RCS Charlie. And we have a procedure for getting power from the LM we'd like you to copy down.
@@ -925,8 +927,8 @@ Standby.
 [57 36 41] LMP
 Go ahead.
 
-[57 36 43 - 57 37 05] CAPCOM
-Okay. In the CSM on panel 5, circuit breakers LM POWER 1 and 2, OPEN. Then LM POWER switch, reset and release. In the LM, on panel 11 and panel 16, TRANSLUNAR BUS TIE, both circuit breakers CLOSE. On panel 16, circuit breaker ASCENT ECA CONTROL, CLOSE. On 16, DESCENT ECA CONTROL, CLOSE. On panel 14, put your BAT 5 NORMAL feed ON. BATs 1, 2, 3, and 4 LOW VOLTAGE taps, ON. BAT 5 NORMAL feed, OFF. ASCENT ECA CONTROL, OPEN. You copy?
+[57 36 43 - 58 37 05] CAPCOM
+Okay. In the CSM on panel 5, circuit breakers LM POWER 1 and 2, OPEN. Then LM POWER switch, reset and release. In the LM, on panel 11 and panel 16, XLUNAR BUS TIE, both circuit breakers CLOSE. On panel 16, circuit breaker ASCENT ECA CONTROL, CLOSE. On 16, DESCENT ECA CONTROL, CLOSE. On panel 14, put your BAT 5 NORMAL feed ON. BATs 1, 2, 3, and 4 LOW VOLTAGE taps, ON. BAT 5 NORMAL feed, OFF. ASCENT ECA CONTROL, OPEN. You copy?
 > You can find these controls on the [CSM Auxiliary](#ref-panel-cm-aux) and [Lunar Module](#ref-panel-lm) control panel diagrams.
 
 [57 38 10] LMP
@@ -964,6 +966,9 @@ Fred and Jim are in the LM.
 
 [57 41 45 - 57 41 46] CAPCOM
 Okay, Jack. Thank you.
+
+[57 42 53 - 57 42 54] CMP
+Okay, you still with us, Houston?
 
 [57 43 06 - 57 43 07] CMP
 Okay, Houston. You read, 13?
@@ -1182,10 +1187,10 @@ Roger.
 Okay, VERB 41, NOUN 20. Okay.
 
 [58 02 42 - 58 02 55] LMP
-You want plus? Plus or minus? Plus 302.43? Is that right?
+You want plus? Plus or minus? +302.43? Is that right?
 
 [58 03 12 - 58 03 40] LMP
-Okay, let me enter it. Okay, what's the next one? Plus 347.78. 347.78. Okay. 081.3. Is that right? ENTER. Okay.
+Okay, let me enter it. Okay, what's the next one? +347.78. 347.78. Okay. 081.3. Is that right? ENTER. Okay.
 
 [58 03 54 - 58 03 56] CAPCOM
 Odyssey, Houston, BATTERY A on.
@@ -1197,20 +1202,20 @@ BATTERY A on now.
 Go ahead, Aquarius.
 
 [58 04 03 - 58 04 25] CDR
-Houston - okay, I want you to double check my arithmetic to make sure we got a good coarse align. {The roll CAL angle} was -2 degrees. The command module angles were 355.57, 167.78, 351.87.
+Houston - okay, I want you to double check my arithmetic to make sure we got a good coarse align. {The roll CAL angle} was -2°. The Command Module angles were 355.57, 167.78, 351.87.
 > This the docking angle index from the very beginning of this audio.
 
 [58 04 37 - 58 04 46] CAPCOM
-Okay, Jim. We copy the roll CAL at minus 2.0. Command module is 355.57, 167.78, 351.87.
+Okay, Jim. We copy the roll CAL at minus 2.0. Command Module is 355.57, 167.78, 351.87.
 
 [58 05 23 - 58 05 25] LMP
 VERB 41, we've done that. Okay.
 
 [58 05 28 - 58 05 30] CAPCOM
-Aquarius, Houston. Request high bit rate, please.
+Aquarius, Houston. Request HIGH BIT RATE, please.
 
 [58 05 36] LMP
-You want high bit rate?
+You want HIGH BIT RATE?
 
 [58 05 38 - 58 05 40] CAPCOM
 That's affirmative, Fred. Won't cost us anything.
@@ -1242,28 +1247,28 @@ Get the GET; we need the GET. What is it? What's that? 58? 58:07?
 [58 08 15] CMP
 58 what?
 
-[58 09 17] CDR
+[58 09 17 - 58 09 18] CDR
 Houston, Aquarius.
 
 [58 09 19] CAPCOM
 Go ahead, Aquarius.
 
 [58 09 23 - 58 09 46] CDR
-Here are the gimbal angles. Command module, 356.69, 163.42, 346.67. Aquarius is 302.26, 345.92, 011.79. Over.
+Here are the gimbal angles. Command Module, 356.69, 163.42, 346.67. Aquarius is 302.26, 345.92, 011.79. Over.
 
 [58 09 48 - 58 10 03] CAPCOM
-Okay, Jim. I got command module 356.69, 163.42, 346.67. Aquarius, 302.26, 345.92, 011.78.
+Okay, Jim. I got Command Module 356.69, 163.42, 346.67. Aquarius, 302.26, 345.92, 011.78.
 
-[58 11 08 - 58 11 09] CDR
+[58 10 08 - 58 10 09] CDR
 That's 011.79.
 
-[58 11 12] CAPCOM
+[58 10 12] CAPCOM
 Say again, please.
 
-[58 11 18 - 58 11 21] CDR
+[58 10 18 - 58 10 21] CDR
 The LM middle gimbal is 011.79.
 
-[58 11 23 - 58 11 24] CAPCOM
+[58 10 23 - 58 10 24] CAPCOM
 011.79. Got it.
 
 [58 12 20 - 58 12 37] CAPCOM
@@ -1296,14 +1301,14 @@ That's just about 80 - in fact, 82 hours out of the two primary cartridges. That
 [58 14 42] CAPCOM
 Odyssey, Houston.
 
-[58 14 43] CMP
+[58 14 44] CMP
 They can stand it.
 
 [58 14 46] CMP
 Go ahead?
 
 [58 14 47 - 58 14 50] CAPCOM
-Yeah, Jack, did you copy down about the CMC IMU?
+Yeah, Jack, did you copy down about the CMC and IMU?
 
 [58 14 53 - 58 15 07] CMP
 Yeah, Jack; I read it back twice to you. COMMAND RESET, which I've done. I'm about to power down the IMU, power down the CMC, turn the IMU heaters off, leave BAT A on.
@@ -1333,7 +1338,7 @@ Odyssey, Houston. Couple circuit breakers for you. On panel 276, on your INSTRUM
 [58 16 34 - 58 16 38] CMP
 Okay, Houston. Panel 276, INSTRUMENTATION out and reset -
 
-[58 16 38] LMP
+[58 16 38 - 58 16 39] LMP
 - you got a lot of light -
 
 [58 16 39 - 58 16 41] CMP
@@ -1342,7 +1347,7 @@ CB 3 and CB 4 are open.
 [58 16 46] CMP
 What?
 
-[58 16 48 - 58 17 03] CAPCOM
+[58 16 48 - 58 17 02] CAPCOM
 That's affirmative, Odyssey. And also get your SCS electronics package and power off, and your FDAI POWER/GPI off, and your AUTO jet SELECT, all 16 off.
 
 [58 17 09 - 58 17 12] CMP
@@ -1363,11 +1368,11 @@ Roger. Activation 20 and Activation page 21, step 3, sublimator.
 [58 18 00] CAPCOM
 Roger.
 
-[58 18 01] LMP
+[58 18 01 - 58 18 02] LMP
 That's Activation, page 20?
 
 [58 18 10 - 58 18 21] CMP
-Okay, Jack. Now I have to power down my IMU. I have no control at all. I'm going to turn by 16 jets off. Say again the other things you wanted?
+Okay, Jack. Now I have powered down my IMU. I have no control at all. I'm going to turn my 16 jets off. Say again the other things you wanted?
 
 [58 18 29 - 58 18 38] CAPCOM
 Okay, Jack. We'd like you to turn off your O2 TANK 2 heaters and fans. Correction - TANK 1. Turn the fans and heaters off.
@@ -1514,7 +1519,7 @@ Okay.
 Go ahead, Odyssey.
 
 [58 28 30 - 58 28 35] CMP
-Okay, I'm going to try to do the best I can. I've got one attitude reference I'm going to fly according to the lunar terminator.
+Okay, I'm going to try to do the best I can. I've got one attitude reference: I'm going to fly according to the lunar terminator.
 > He can fly by sight using the shadow on the Moon as a reference.
 
 [58 28 38 - 58 28 40] CAPCOM
@@ -1524,7 +1529,7 @@ Roger, Jack. Just maintain attitude.
 What am I doing? I can't do that anyway. Let's see - crossfeed. Nope. Now, and - -
 
 [58 29 26 - 58 29 46] CAPCOM
-Aquarius, Houston. We'll have to get some AC up so you can get a ball reading. Close your BUS TIE INVERTER circuit breakers, all four of them on panel 11. Close your AC BUS VOLT circuit breaker on panel 11. On panel 16, INVERTER 2, CLOSE. Select inverter 2. Over.
+Aquarius, Houston. We'll have to get some AC up so you can get a ball reading. Close your BUS TIE INVERTER circuit breakers, all four of them on panel 11. Close your AC BUS VOLT circuit breaker on panel 11. On panel 16, INVERTER 2, CLOSE. Select INVERTER 2. Over.
 
 [58 29 50 - 58 29 51] CDR
 That's been completed, Jack.
@@ -1550,8 +1555,11 @@ Okay, Jack, how do you read?
 [58 31 58 - 58 32 02] CAPCOM
 Okay, this is Houston. We want you to load the DAP with 30120.
 
-[58 32 07 - 58 32 12] CDR
-Load the DAP with 30120. Complete.
+[58 32 08 - 58 32 09] CDR
+Load the DAP with 30120.
+
+[58 32 13] CDR
+Complete.
 
 [58 32 18 - 58 32 19] LMP
 Okay, we need to change that CSM weight.
@@ -1578,7 +1586,7 @@ Okay.
 Roger.
 
 [58 33 20 - 58 33 23] CDR
-Okay, let's see if we can fire these things, or if we have - hello?
+Okay, let's see if we can fire these things, or if we have - ATT HOLD?
 
 [58 33 28] CDR
 Are you firing anything?
@@ -1590,7 +1598,7 @@ I don't think so.
 Okay, I've got DIRECT.
 
 [58 34 05 - 58 34 09] CAPCOM
-And Aquarius, check your ATCA PGNCS breaker on panel 11 in.
+And Aquarius, check your ATCA (PGNS) breaker on panel 11 IN.
 
 [58 34 14] CDR
 Say again?
@@ -1599,7 +1607,7 @@ Say again?
 Close, on panel 11, circuit breaker ATCA (PGNS).
 
 [58 34 22 - 58 34 25] CDR
-ATAC (PGNS). Come on, let's take it easy now.
+ATCA (PGNS). Come on, let's take it easy now.
 
 [58 34 31 - 58 34 32] CDR
 Okay, we've got ATCA (PGNS) closed.
@@ -1625,8 +1633,8 @@ Odyssey, Houston. I've got a procedure for you.
 [58 36 06] CMP
 Okay, Jack, I'm -
 
-[58 36 09] CDR
-Well, I want to go this way to get away from that - 
+[58 36 09 - 58 36 10] CDR
+Well, I want to go up this way to get away from that - 
 
 [58 36 34] CDR
 Check your antenna?
@@ -1724,7 +1732,7 @@ Okay, I read the gyro torquing angles as +003.30, Y is plus 023 - I only have fo
 [58 45 08 - 58 45 13] CAPCOM
 Okay, Jim. X and Z are correct, and Y is +024.80.
 
-[58 45 21 - 58 45 29] CDR
+[58 45 22 - 58 45 29] CDR
 Okay. We read Y as +024.80. We'll proceed on Activation 40 to fine align the platform.
 
 [58 45 30] CAPCOM
@@ -1748,7 +1756,7 @@ Can I get a towel?
 [58 48 03 - 58 48 12] CAPCOM
 Roger. As soon as you get a chance to - or in a position to - take a look, we'd like to know if you can see stars for alignment purposes.
 
-[58 48 17 - 58 48 22] LMP
+[58 48 18 - 58 48 22] LMP
 Okay. Jim's going to be in trouble in our present attitude out his side.
 
 [58 48 23] CDR
@@ -1811,8 +1819,8 @@ Okay, get your TTCAs to roll.
 [58 55 10 - 58 55 18] CAPCOM
 And Aquarius, Houston, I've got some circuit breakers you can open to power down displays. In addition, I have a P30 maneuver PAD. Over.
 
-[58 55 21 - 58 55 25] CDR
-Roger. Stand by, Houston. Get the CS - get the PAD book.
+[58 55 22 - 58 55 25] CDR
+Roger. Standby, Houston. Get the CS - get the PAD book.
 
 [58 55 30 - 58 55 32] LMP
 Get the LM data - get the LM - book.
@@ -1823,7 +1831,7 @@ And, say - we're getting the PAD book now, Jack - and say the first power down?
 [58 55 40 - 58 55 43] CAPCOM
 Okay, I have some circuit breakers that you can open up in order to power down displays.
 
-[58 55 47 - 58 55 50] CDR
+[58 55 47 - 58 55 50] LMP
 Okay. Standby 1, Jack. I'm going to get my COMM carrier on.
 
 [58 55 52 - 58 56 01] CDR
@@ -1878,9 +1886,9 @@ Your attitude is just straight pitch down, Jim.
 Okay, you're moving away.
 
 [59 00 50 - 59 00 52] CAPCOM
-Okay, Fred. I've got six circuit breakers for you.
+Okay, Fred. I've got 6 circuit breakers for you.
 
-[59 00 55 - 59 00 56] LMP
+[59 00 56] LMP
 Okay. Go ahead.
 
 [59 00 58 - 59 01 06] CAPCOM
@@ -1913,15 +1921,15 @@ Okay, that concludes the power down of displays. And I have a P30 PAD for you.
 [59 01 55] LMP
 Okay, go ahead.
 
-[59 01 58 - 59 03 13] CAPCOM
+[59 01 58 - 59 03 10] CAPCOM
 Okay, the purpose is a pericynthion plus 2 hours DPS abort. NOUN 33: {079:25:26.48}. {+1633.0, -0014.5, -0751.5}. {Apogee not applicable, perigee is +0020.5, 1797.7}, {8:35}. {268, 264}. {+1641.0, -0014.5, -0733.8}. COAS is N/A.
 > The PAD page [provided here](#overview-propulsion) is for the CSM, but it is approximately the same as [what the crew are filling out](https://www.hq.nasa.gov/alsj/a15/A15DC016.GIF).
 1> NOUN 33: time of burn
-2> NOUN 81: change in velocity (∆V in fps)
+2> NOUN 81: change in velocity X, Y, Z (∆V in feet/sec)
 3> NOUN 42: apogee, perigee, total ∆V
 4> Burn time
 5> FDAI roll and pitch
-6> NOUN 86: change in velocity (∆V in fps) in the AGS coordinate space
+6> NOUN 86: change in velocity (∆V in feet/sec) in the AGS coordinate space
 
 [59 03 20 - 59 03 35] CAPCOM
 And I have two gimbal trim angles for you which will be updated. Right now, however, we want you to go with pitch 5.86, roll 6.75. Over.
@@ -1965,15 +1973,18 @@ Yes, lose - get all the little bags you can with water.
 [59 05 07 - 59 05 09] CAPCOM
 Aquarius, Houston. Say again, please.
 
-[59 05 14 - 59 05 18] LMP
-Okay, we didn't answer back there, Jack. Check to see if you're on VOX.
+[59 05 14 - 59 05 16] LMP
+Okay, we didn't answer back there, Jack.
+
+[59 05 17 - 59 05 18] LMP
+Check to see if you're on VOX.
 
 [59 05 21] CDR
 No.
 
 [59 05 22 - 59 05 23] LMP
 Neither am I. Okay.
-> Clearly one of them is indeed on VOX.
+> Clearly at least one of them is indeed on VOX.
 
 [59 05 31 - 59 05 33] LMP
 Why the hell are we maneuvering at all now? Are we still venting?
@@ -1984,7 +1995,7 @@ Well, we're at ATT HOLD for one thing - I mean, we're at MIN IMPULSE.
 [59 05 40 - 59 05 42] LMP
 No, I mean why can't you null them out somewhere?
 
-[59 05 42 - 59 05 50] CDR
+[59 05 43 - 59 05 50] CDR
 Every time I try to - I can't take that doggone roll out. I got to wait until we get a little into the bellyband.
 
 [59 05 51 - 59 06 05] LMP
@@ -2005,8 +2016,11 @@ Okay, until it's upside down at least, huh?
 [59 06 19] CDR
 Yup.
 
-[59 06 20 - 59 06 30] LMP
-Okay. Well, should I ask him what the {return time} on that one is? Or are you interested?
+[59 06 20] LMP
+Okay.
+
+[59 06 24 - 59 06 30] LMP
+Well, should I ask him what the {return time} on that one is? Or are you interested?
 1> Splashdown
 
 [59 06 32 - 59 06 33] CDR
