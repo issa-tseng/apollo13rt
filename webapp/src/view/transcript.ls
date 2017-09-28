@@ -52,19 +52,23 @@ class TranscriptView extends DomView
     # watch for autoscroll rising edge and trip scroll.
     transcript.watch(\auto_scroll).reactLater((auto) -> scroll-top-line() if auto)
 
-    # track whether the browser is getting resized, and suppress autoscroll disengagement.
+    # track whether the browser is getting resized or is blurred, and suppress autoscroll disengagement.
     # TODO: this seems like a common pattern. perhaps the stdlib utils should have some automatic
     # inner-varying management system.
-    is-resizing-inner = new Varying(false)
-    is-resizing = sticky( true: 50 )(is-resizing-inner)
+    is-resizing = new Varying(false)
+    is-blurred = new Varying(false)
     $(window).on(\resize, ->
-      bump(is-resizing-inner)
+      bump(is-resizing)
       scroll-top-line()
-    )
+    ).on(\blur, -> is-blurred.set(true)).on(\focus, -> is-blurred.set(false))
+    suppress-disengagement = sticky( true: 100 )(Varying.pure(is-resizing, is-blurred, (or)))
+    suppress-disengagement.react(->) # TODO: reed to subscribe to this to make it work.
 
     # turn off auto-scrolling as intelligently as we can.
     line-container.on(\scroll, ->
-      transcript.set(\auto_scroll, false) if get-time() > (relinquished + 200) and not is-resizing.get() # complete fires early
+      # buffer by 200 ms on relinquished, as complete often fires early.
+      if (get-time() > (relinquished + 200)) and not suppress-disengagement.get()
+        transcript.set(\auto_scroll, false)
     )
     line-container.on(\wheel, ->
       line-container.finish()
@@ -86,7 +90,7 @@ class TranscriptView extends DomView
       $(event.target).attr(\target, \_blank) if event.target.host isnt window.location.host
     )
 
-
+    # return to autoscroll when sync icon is clicked.
     indicator.on(\click, (event) ->
       event.preventDefault()
       transcript.set(\auto_scroll, true)
