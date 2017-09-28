@@ -27,7 +27,7 @@ module.exports = util =
     ss: epoch % 60
   }
   hash-to-hms: (hash) ->
-    if (hms = /^(..):(..):(..)$/.exec(hash))?
+    if (hms = /^#?(..):(..):(..)$/.exec(hash))?
       [ _, hh, mm, ss ] = [ parse-int(x) for x in hms ]
       { hh, mm, ss }
     else

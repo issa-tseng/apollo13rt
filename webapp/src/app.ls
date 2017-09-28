@@ -162,17 +162,9 @@ $document.on(\touchstart, '.glossary-term', (event) ->
   )
 )
 
-# handle hash changes.
-$window.on(\hashchange, (event) ->
-  # first update our notion of what our own page url is.
-  global.set(\own_href, window.location.href)
-
-  # now see if we have some timecode navigation to do, and do it.
-  return if exhibit-mode is true
-  new-hash = window.location.hash?.slice(1)
-  return if is-blank(new-hash)
-
-  hms = hash-to-hms(new-hash)
+# handle timecode hashes.
+handle-timecode-hash = (hash) ->
+  hms = hash-to-hms(hash)
   return unless hms?
   { hh, mm, ss } = hms
   epoch = hms-to-epoch(hh, mm, ss)
@@ -184,6 +176,15 @@ $window.on(\hashchange, (event) ->
   player.epoch(epoch)
   player.get(\loops.flight).set(\auto_scroll, true)
   player.get(\loops.air_ground).set(\auto_scroll, true)
+
+# handle hash changes.
+$window.on(\hashchange, (event) ->
+  # first update our notion of what our own page url is.
+  global.set(\own_href, window.location.href)
+
+  # now see if we have some timecode navigation to do, and do it.
+  return if exhibit-mode is true
+  handle-timecode-hash(window.location.hash)
 )
 
 # handle internal exhibit links.
@@ -196,11 +197,18 @@ handle-exhibit-hash = (hash, event) ->
     global.set(\exhibit, exhibit)
     event?.preventDefault()
     return false
-$document.on(\click, 'a', (event) ->
-  return unless event.target.host is window.location.host
-  handle-exhibit-hash(event.target.hash, event)
-)
+
+# immediately trigger exhibit navigation if exhibit kiosk mode is on.
 handle-exhibit-hash(window.location.hash) if exhibit-mode is true
+
+# actually capture link clicks and pass off to above handlers:
+$document.on(\click, 'a', (event) ->
+  if this.host is window.location.host
+    if this.hash is window.location.hash
+      handle-timecode-hash(this.hash)
+    else
+      handle-exhibit-hash(this.hash, event)
+)
 
 # toplevel layout actions:
 # update social media links.
