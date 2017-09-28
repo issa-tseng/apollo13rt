@@ -82,6 +82,10 @@ class TranscriptView extends DomView
       if copy(window.location.href.replace(/(?:#.*)?$/, \# + line.startHms_())) is true
         $('#tooltip').text('Copied!')
     )
+    dom.on(\focus, 'a', (event) ->
+      $(event.target).attr(\target, \_blank) if event.target.host isnt window.location.host
+    )
+
 
     indicator.on(\click, (event) ->
       event.preventDefault()
