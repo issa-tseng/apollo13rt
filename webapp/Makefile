@@ -2,14 +2,12 @@ default: build
 
 JS_SRC = $(shell find src -name "*.ls" -type f | sort)
 JS_LIB = $(JS_SRC:src/%.ls=lib/%.js)
-ASSETS_SRC = $(shell find src/assets -name '*.ai' -prune -o -type f -print | sort)
-ASSETS_LIB = $(ASSETS_SRC:src/assets/%=lib/assets/%)
+ASSETS_SRC = $(shell find ../assets -name '*.ai' -prune -o -type f -print | sort)
+ASSETS_LIB = $(ASSETS_SRC:../assets/%=lib/assets/%)
 SCRIPT_SRC = $(shell find ../script -name '*.json' -maxdepth 1 -type f | sort)
 SCRIPT_LIB = $(SCRIPT_SRC:../script/%=lib/assets/%)
 EXHIBITS_SRC = $(shell find ../exhibits -name '*.html' -o -name '*.md' -maxdepth 1 -type f | sort)
 EXHIBITS_LIB = $(EXHIBITS_SRC:../exhibits/%=lib/content/%.part)
-EXHIBITS_JSON_SRC = $(shell find ../exhibits -name '*.json' | sort)
-EXHIBITS_JSON_LIB = $(EXHIBITS_STATIC_SRC:../exhibits/%=lib/content/%)
 LINES_SRC = $(shell find ../script -name '*loop.json' -maxdepth 1 -type f | sort)
 LINES_LIB = $(LINES_SRC:../script/%=lib/content/%.part)
 
@@ -40,16 +38,13 @@ lib/content/%.html.part: ../exhibits/%.html lib/content
 lib/content/%.json.part: ../script/%.json lib/content
 	node node_modules/livescript/bin/lsc build/script.ls $< > $@
 
-lib/index.html: src/index.html lib $(EXHIBITS_LIB) $(EXHIBITS_JSON_LIB) $(LINES_LIB)
+lib/index.html: src/index.html lib $(EXHIBITS_LIB) $(LINES_LIB)
 	find lib/content -name '*.part' -type f | xargs cat | awk 'BEGIN{ RS = "\f"; getline c < "-"; RS="\n" } /###/{ print c } 1' $< > $@
 
 lib/styles.css: src/styles.sass src/styles/*.sass lib
 	node node_modules/node-sass/bin/node-sass --output-style compressed $< > $@
 
-lib/assets: lib
-	@mkdir -p lib/assets
-
-lib/assets/%: src/assets/% lib/assets
+lib/assets/%: ../assets/%
 	@[[ -d "$(@D)" ]] || mkdir -p "$(@D)"
 	cp $< $@
 

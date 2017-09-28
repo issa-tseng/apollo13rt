@@ -10,7 +10,7 @@ $ = require(\jquery)
 
 class PanelVM extends Model
   @attribute(\lookup, class extends attribute.ReferenceAttribute
-    request: -> new BasicRequest('/exhibits/ref-panel.lookup.json')
+    request: -> new BasicRequest('/assets/ref-panel.lookup.json')
   )
 
   @attribute(\scale.mode, class extends attribute.EnumAttribute
