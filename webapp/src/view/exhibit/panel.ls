@@ -103,10 +103,6 @@ class PanelView extends DomView
     outer-wrapper = dom.find('.panel-wrapper')
     wrapper = dom.find('.panel-inner-wrapper')
 
-    # grab the total layout size and store it, as it is soon lost.
-    layout = dom.find('.panel-inner-wrapper img')
-    this.subject.set( all: { width: layout.width(), height: layout.height() })
-
     # respond to mouse events.
     mouse-pos = from-event($(document), \mousemove, (event) -> { x: event.screenX, y: event.screenY })
     wrapper.on(\mousedown, (event) ->
@@ -141,9 +137,19 @@ class PanelView extends DomView
         attach-floating-box(initiator, term-view)
     )
 
-    <- defer
-    # enable zoom transitions, but only after initial computation.
-    wrapper.addClass(\initialized)
+    # grab the total layout size and store it, as it is soon lost.
+    layout = dom.find('.panel-inner-wrapper img')
+
+    # try until we succeed. after we succeed, enable zoom transitions.
+    measure = ->
+      all = { width: layout.width(), height: layout.height() }
+      if all.height > 0
+        model.set({ all })
+        <- defer
+        wrapper.addClass(\initialized)
+      else
+        set-timeout(measure, 15)
+    measure()
 
 
 module.exports = { PanelView }
