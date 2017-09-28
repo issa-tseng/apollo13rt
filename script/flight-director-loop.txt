@@ -6984,7 +6984,7 @@ FLIGHT, CONTROL.
 Go.
 
 [59 08 41 - 59 08 43] CONTROL
-Okay, I've got this list of stuff here for the ascent feed.
+Okay, I've got this list of stuff here for this ascent feed.
 
 [59 08 44 - 59 08 45] FLIGHT
 Okay. Bring it over. Have somebody hand it on.
@@ -7044,10 +7044,10 @@ Go ahead.
 Roger. We're on a COMMAND UPLINK mode along with VOICE, and we've got HIGH BIT RATE data.
 
 [59 09 46 - 59 09 50] FLIGHT
-Okay. Pull in data and we can give him a time - wait a minute. GUIDANCE, you ready to give them a time?
+Okay. P00 and DATA and we can give him a time - wait a minute. GUIDANCE, you ready to give them a time?
 
 [59 09 50 - 59 09 51] GUIDO
-Roger, FLIGHT. We've got the load.
+Roger, FLIGHT. We've got the LOAD.
 
 [59 09 52] FLIGHT
 Okay.
@@ -7067,8 +7067,8 @@ He's got his UPDATA LINK OFF.
 [59 10 16] FLIGHT
 CAPCOM.
 
-[59 10 24 - 59 10 26] GUIDO
-FLIGHT, GUIDANCE. We've got the load to go ahead and do it now.
+[59 10 25 - 59 10 26] GUIDO
+FLIGHT, GUIDANCE. We've got the LOAD to go ahead and do it now.
 
 [59 10 27] INCO
 FLIGHT, INCO.
@@ -7143,13 +7143,13 @@ Go ahead.
 We've got a chance here, we'd like to take and change our offset on the two vehicles, on how we're getting telemetry, to try to solve this tracking problem. To do that we're going to have to drop the LM uplink and break lock for maybe 5 to 10, 20 seconds, there.
 > INCO and his team want to move the S-IVB IU frequency below the LM frequency to solve the tracking problem. The frequencies could be changed by dragging them with a emitted signal from the ground once the link was locked in. But if the signals dragged across each other, both would snap together and become inseparable, and the S-IVB link couldn't be restarted remotely, so the LM had to discontinue their link while the other signal passed through its range.
 
-[59 13 10] FLIGHT
-Okay. Well, let's just standby on that.
+[59 13 10 - 59 13 11] FLIGHT
+Okay. Well, let's just standby on that a minute.
 
 [59 13 11] INCO
 Okay.
 
-[59 13 16 - 59 13 17] FLIGHT
+[59 13 16 - 59 13 18] FLIGHT
 Okay. Now, before we get into that one -
 
 [59 13 26] GUIDO
@@ -7162,7 +7162,7 @@ Go ahead.
 We'd like to have a VERB 74 some time when they can skip the DSKY.
 
 [59 13 31 - 59 13 38] FLIGHT
-Okay, GUIDANCE. CAPCOM, we're reading for an E-MEMORY dump. They'll give us a VERB 74, that's what you're talking about, isn't it, GUIDANCE?
+Okay, GUIDANCE. CAPCOM, we're ready for an E-MEMORY dump. They'll give us a VERB 74, that's what you're talking about, isn't it, GUIDANCE?
 
 [59 13 38] GUIDO
 Roger, FLIGHT.
@@ -7219,7 +7219,7 @@ I want to get the holes dug before we start doing more things.
 Roger.
 
 [59 14 55 - 59 15 07] FLIGHT
-Let me see if - have you heard that one of the suggestions is to align the AGS to the PGNS, power the PGNS down, use the AGS, and bring the PGNS back up and do a P52 for the burn?
+Let me see if - have you heard that one of the suggestions is to align the AGS to the PGNS, power the PGNS down, use the AGS, and then bring the PGNS back up and do a P52 for the burn?
 > The AGS was limited but sufficient for maintaining the platform and generated less heat (and thus used less coolant) than the PGNS.
 
 [59 15 08] CONTROL
@@ -7343,7 +7343,7 @@ Okay. Okay, CAPCOM - are you ready to do that now?
 Roger, FLIGHT.
 
 [59 19 29 - 59 19 30] FLIGHT
-Do you want to send them a state vector, too? By the -
+Do you want to send them a state vector, too, by the way?
 
 [59 19 31 - 59 19 32] GUIDO
 Negative, FLIGHT. We want to hold off on that.
@@ -7355,7 +7355,8 @@ Okay.
 I'm not sure what the LM will do with it. We're having MIT run the hybrid, and see what it would do with this kind of -
 
 [59 19 38 - 59 19 39] FLIGHT
-Oh, that's right, because it doesn't navigate out here.
+Oh, that's right, because it doesn't navigate {out here}.
+1> Away from the moon.
 
 [59 19 40 - 59 19 42] GUIDO
 That's right. So, we're having them run it on the hybrid, and check it out -
@@ -7430,7 +7431,7 @@ CAPCOM. CAPCOM, FLIGHT.
 Go, FLIGHT.
 
 [59 21 17 - 59 21 21] FLIGHT
-We got program 00 but he needs to go to DATA first to get the load in.
+We got Program 00 but he needs to go to DATA first to get the load in.
 
 [59 21 29 - 59 21 30] FLIGHT
 Okay. We're loading the REFSMMAT -
@@ -7496,7 +7497,7 @@ Right.
 We're right in the middle of a load.
 
 [59 22 42 - 59 22 44] INCO
-Okay, we won't - hold as long as we can.
+Okay, we'll - hold as long as we can.
 
 [59 22 48 - 59 22 49] INCO
 He got it pretty quick on there anyway.
@@ -7561,11 +7562,11 @@ Well, we're pulling about 2 amps.
 [59 28 26] FLIGHT
 Okay.
 
-[59 28 26] TELMU
-I read a little bit ???. (??)
+[59 28 26 - 59 28 27] TELMU
+I read a little bit (??).
 
 [59 28 27 - 59 28 29] FLIGHT
-Well, I know. I'm there with you. (??)
+Well, I know. I agree with you.
 
 [59 28 30] TELMU
 Let me get -
@@ -7581,7 +7582,7 @@ The {water} rate right now, we're pulling about 7 pounds per hour. And at curren
 Say again?
 
 [59 28 44 - 59 28 46] TELMU
-About 34 hours of descent water at the present rate.
+About 34 hours on the descent water at the present rate.
 
 [59 28 53 -] FLIGHT
 Oh, okay. Okay, but we should be able to take the PGNS and and the IMU off -
@@ -7602,11 +7603,11 @@ RETRO, you up?
 [59 29 30 - 59 29 31] FLIGHT
 GUIDANCE, get RETRO up in the loop, will you please?
 
-[59 29 32] GUIDO
+[59 29 32] RETRO
 Go ahead.
 
 [59 29 33 - 59 29 58] FLIGHT
-Look. As I see it, we've got a number of things to do. No big hurry right now. We've gotta maintain COMM here, of course, with the LM. But we need to see what we need to do about setting up a PTC attitude and a range - a control mode. And what that means relative to the AGS and the PGNS configuration as to powering the AGS down, etc. Now, CONTROL, you're working that problem, right?
+Look. As I see it, we've got a number of things to do. No big hurry right now. We've gotta maintain COMM here, of course, with the LM. But we need to see what we need to do about setting up a PTC attitude and an arrange - a control mode. And what that means relative to the AGS and the PGNS configuration as to powering the AGS down, etc. Now, CONTROL, you're working that problem, right?
 
 [59 29 59] CONTROL
 Roger.
@@ -7637,7 +7638,7 @@ Not with this {water usage} right now, FLIGHT.
 1> Again, water/glycol coolant.
 
 [59 30 54 - 59 30 57] FLIGHT
-No, but if we go down to 25 amps that will help us, won't it?
+No, but if we go down to 25 amps all of that will help us, won't it?
 
 [59 31 00 - 59 31 01] FLIGHT
 Oh, I see what you're saying. 25 amps - not much.
@@ -7658,7 +7659,7 @@ From the point of view of the water now we've got to get down there -
 Yeah. About 15, I think.
 
 [59 31 18 - 59 31 20] FLIGHT
-Can we do that? Life support/COMM mode?
+Can we do that? In a life support/COMM mode?
 
 [59 31 21] TELMU
 Say again, FLIGHT?
@@ -7792,7 +7793,7 @@ Go, FLIGHT.
 [59 34 19 - 59 34 22] FLIGHT
 What closest approach are you estimating right now on the LM?
 
-[59 34 23 - 59 34 24] FDO
+[59 34 23 - 59 34 25] FDO
 Still looking at about 60 miles, FLIGHT.
 
 [59 34 25 - 59 34 26] FLIGHT
@@ -7817,7 +7818,7 @@ Okay, thank you.
 You can go back green, then, if you will. Okay - SURGEON, you have anything?
 
 [59 34 41 - 59 35 01] SURGEON
-Yeah, two things. We're figuring, looking at this CO2 problem with you - at one point in time we'd arrive at various levels of CO2 in the LM configuration. The other thing is, when we at some point in time we'd like to get that BIOMED switch on in the LM - it's in the OFF position.
+Yeah, two things. We're figuring, looking at this CO2 problem with you - at what point in time we'd arrive at various levels of CO2 in the LM configuration. The other thing is, when we - at some point in time we'd like to get that BIOMED switch on in the LM - it's in the OFF position.
 
 [59 35 02 - 59 35 06] FLIGHT
 Okay. Okay, you want to go back green, then? INCO, anything besides that COMM -
@@ -7860,9 +7861,9 @@ Okay. RECOVERY? You got anything?
 Negative, FLIGHT. Present efforts are to identify ships on the Atlantic and the Indian Ocean.
 
 [59 35 48 - 59 36 02] FLIGHT
-Okay. NETWORK, you want to go back green, then? Okay, there are the subjects, and we need to start getting some - closed out on some of them here, gentlemen. So. Let us bend our efforts to get it done.
+Okay. NETWORK, you want to go back green, then? Okay, there are the subjects, and we need to start getting some - closed out on some of them here, gentlemen. So. Let us bend our efforts to get that done.
 
-[59 36 05] INCO
+[59 36 05 - 59 36 06] INCO
 Got a go, FLIGHT?
 
 [59 36 07 - 59 36 13] FLIGHT
@@ -7948,8 +7949,8 @@ Okay. TELMU, go.
 We ought to - recommend turning the power off - POWER AMPL off, going to LOW BIT RATE, and getting his {AC} off, and probably bringing the AGS up on standby.
 1> In this context, the alternating current inverters, not air conditioning.
 
-[59 43 31 - 59 43 34] FLIGHT
-Okay, what consumable are you running into trouble with, TELMU?
+[59 43 32 - 59 43 34] FLIGHT
+Okay. What consumable are you running into trouble with, TELMU?
 
 [59 43 35 - 59 43 36] TELMU
 Water and electric power.
@@ -7958,13 +7959,13 @@ Water and electric power.
 Okay. Can you relate some facts to me, here?
 
 [59 43 44 - 59 43 48] TELMU
-Like I said, the water is - rate, we've only got 34 hours left.
+Like I said, the water is - present rate, we've only got 34 hours left.
 > With splashdown predicted for 133 hours, they would come up nearly 40 hours short here at the present rate of usage.
 
 [59 43 57 - 59 43 58] FLIGHT
 Go ahead. Power?
 
-[59 44 00] FLIGHT
+[59 44 00] TELMU
 Standby 1.
 
 [59 44 19 - 59 44 22] TELMU
@@ -7983,7 +7984,7 @@ At the present load, is that right?.
 That's right.
 
 [59 44 32 - 59 44 35] TELMU
-That's why I - I think we just need to get some things powered down ASAP.
+That's what I - I think we just need to get some things powered down ASAP.
 
 [59 44 37 - 59 44 38] FLIGHT
 Okay. Now what are you suggesting, again?
@@ -8000,13 +8001,13 @@ POWER AMPL. How much does that save?
 [59 44 45] FLIGHT
 Alright.
 
-[59 44 48 - 59 44 50] TELMU
+[59 44 49 - 59 44 50] TELMU
 And the AC, which is about 2 amps.
 
-[59 44 50 - 59 45 00] FLIGHT
+[59 44 51 - 59 45 00] FLIGHT
 Well, that loses his ball; then we don't have anything. Right? I mean, we don't have the data on the ground - do you have IMU data on the LOW BIT RATE there, CONTROL?
 
-[59 45 00 - 59 45 02] CONTROL
+[59 45 01 - 59 45 02] CONTROL
 All we'd have is resolvers. It's good enough.
 
 [59 45 03] FLIGHT
@@ -8021,7 +8022,7 @@ What control mode is he in now?
 [59 45 07 - 59 45 08] CONTROL
 He's in PGNS MIN IMPULSE.
 
-[59 45 08 - 59 45 10] FLIGHT
+[59 45 09 - 59 45 10] FLIGHT
 So he's still flying it around.
 
 [59 45 10] CONTROL
@@ -8029,10 +8030,10 @@ Yes.
 
 [59 45 15 - 59 45 19] FLIGHT
 I think it's kind of difficult to talk them through, isn't it?
-> What FLIGHT may be referring to here is: say the spacecraft is nearing gimbal lock. How do you describe the direction to rotate toward to avoid it?
+> What FLIGHT is referring to here is: say the spacecraft is nearing gimbal lock. How do you describe the direction to rotate toward to avoid it?
 
 [59 45 23 - 59 45 24] FLIGHT
-He'd have to bring the ball up to fly it, I think.
+He'd have to bring the ball up to fly it, I'd think.
 
 [59 45 25 - 59 45 31] TELMU
 Well, my thought if we go there, FLIGHT, was if he goes to an ATTITUDE HOLD mode now, and out of this drifting flight mode, he'll hold the attitude he's in now.
@@ -8076,7 +8077,7 @@ Do we know whether or not the - results of this star business in the simulator w
 [59 46 10 - 59 46 21] CONTROL
 That was a request I've got in to SPAN, FLIGHT, to measure drift rates on this particular platform to see what it would look like when we got out to 79 and a half hours.
 
-[59 46 21 - 59 46 23] FLIGHT
+[59 46 22 - 59 46 24] FLIGHT
 Okay. But if we can see stars, we can do a P52.
 
 [59 46 24 - 59 46 36] CONTROL
@@ -8095,13 +8096,13 @@ What are you getting out of the star sighting discussions?
 Well, the last thing I heard was that the sunlight reflected off the thrusters - made it so as they couldn't see the stars and they also had a lot of debris still floating around with them, so they are unable to -
 
 [59 46 52 - 59 46 54] FLIGHT
-Couldn't see them out of what? Out of the window? Out of the AOT?
+Couldn't see them out of what? Out of the window? Or out of the AOT?
 
 [59 46 56] CAPCOM
 Out of the window.
 
 [59 46 57 - 59 47 05] FLIGHT
-They tried the AOT yet, do you know? The reason I'm asking is that we're running low on water. I mean, we're going to run out of water in 34 hours at the current power level.
+Have they tried the AOT yet, do you know? The reason I'm asking is that we're running low on water. I mean, we're going to run out of water in 34 hours at the current power level.
 
 [59 47 36 - 59 47 40] FLIGHT
 How about going to LOW BIT RATE? The POWER AMPL OFF and the LOW BIT RATE? CONTROL? Can you do that now?
@@ -8145,7 +8146,7 @@ Right.
 [59 48 01] FLIGHT
 Okay.
 
-[59 48 02 - 59 48 03] CAPCOM
+[59 48 02 - 59 48 04] CAPCOM
 I don't have any COMM with them, FLIGHT.
 
 [59 48 07 - 59 48 08] FLIGHT
@@ -8155,7 +8156,7 @@ INCO, FLIGHT. Do we have no uplink right now?
 How come? We still - I thought that was only going to take 30 seconds.
 > Of course, 30 seconds would be if all went well. It didn't, and the LM and IU frequencies got accidentally locked together. It would take quite some time to get a narrower-beam antenna to target just the IU and control its frequency separately.
 
-[59 48 42 - 59 48 45] INCO
+[59 48 43 - 59 48 45] INCO
 FLIGHT, INCO. I don't think he's got an uplink COMM mode right now.
 
 [59 48 46] FLIGHT
@@ -8183,7 +8184,7 @@ I'll give you a call. It'll be back shortly.
 Alright. Okay, now the POWER AMPL.
 
 [59 49 09 - 59 49 17] INCO
-If we turn the POWER AMPL OFF, go to LOW BIT RATE and stay on an OMNI, we've gotta DOWNVOICE BACKUP; we may be able to make it. It'll be very close.
+If we turn the POWER AMPL OFF, go to LOW BIT RATE and stay on an OMNI, we've got to DOWNVOICE BACKUP; we may be able to make it. It'll be very close.
 
 [59 49 18] FLIGHT
 Make what?
@@ -8207,7 +8208,7 @@ I'd like to give it a try, though.
 Okay, well let's finish up your test. Are you finished with that test?
 
 [59 49 38 - 59 49 40] INCO
-No, they're not quite finished. Standby.
+No, they're not quite finished yet. Standby.
 
 [59 50 15] FLIGHT
 TELMU, FLIGHT.
@@ -8215,8 +8216,8 @@ TELMU, FLIGHT.
 [59 50 16] TELMU
 Go, FLIGHT.
 
-[59 50 16 - 59 50 28] FLIGHT
-Merlin and I got your problem, and I appreciate your concern. Right now we're trying to get the COMM back - we kind of have to get his assessment of this thing to see whether we can bring the PGNS down now.
+[59 50 17 - 59 50 28] FLIGHT
+Merlin, I've got your problem, and I appreciate your concern. Right now we're trying to get the COMM back - we kind of have to get his assessment of this thing to see whether we can bring the PGNS down now.
 
 [59 50 28 - 59 50 31] TELMU
 Okay. What about the AC? Did - you still kicking that around?
@@ -8275,7 +8276,7 @@ Alright.
 [59 52 12 - 59 52 15] FLIGHT
 CAPCOM, when you get COMM back, we can go back to DESCENT O2. You got that, Jack?
 
-[59 52 37 - 59 52 38] FLIGHT
+[59 52 37 - 59 52 38] FLIGHT (off loop)
 Is it the same procedure?
 
 [59 52 56 - 59 52 58] FLIGHT
@@ -8299,8 +8300,8 @@ FLIGHT, INCO.
 [59 53 30] FLIGHT
 Go ahead.
 
-[59 53 30 - 59 53 35] INCO
-It looks like we're getting it slowly, here. We're just about there. As soon as we get it, we'd like to go to FORWARD OMNI.
+[59 53 30 - 59 53 36] INCO
+It looks like we're getting it slowly, here. We're just about there. As soon as you get it, we'd like to go to FORWARD OMNI.
 
 [59 53 37] FLIGHT
 Okay.
@@ -8312,7 +8313,7 @@ TELMU, FLIGHT.
 Go, FLIGHT.
 
 [59 54 17 - 59 54 19] FLIGHT
-How many amps are we using with the LGC and the IMU?
+Merlin, how many amps are we using with the LGC and the IMU?
 
 [59 54 20] TELMU
 Just about 12 amps.
@@ -8339,10 +8340,10 @@ But they're the - they would be the big coolant items, wouldn't they?
 Yeah -
 
 [59 54 38 - 59 54 40] FLIGHT
-If I add them through the coolant picture (??), they're a heck of a lot more than 30 percent.
+That ought to improve the coolant picture a heck of a lot more than 30 percent.
 
 [59 54 41] TELMU
-Yeah.
+Yup.
 
 [59 55 40 - 59 55 41] FLIGHT
 INCO, can we talk yet?
@@ -8353,7 +8354,7 @@ Negative, FLIGHT. There's no uplink.
 [59 55 49 - 59 55 50] FLIGHT
 INCO, have I got an estimate?
 
-[59 55 51 -] INCO
+[59 55 52 -] INCO
 FLIGHT, let me tell you what's happened. While we were trying to lock it up, we drifted around into FORWARD OMNI country. So right now we're in FORWARD OMNI, we've got AFT selected, and he doesn't know because -
 
 [59 56 01] FLIGHT
@@ -8362,7 +8363,7 @@ How so?
 [- 59 56 08] INCO
 - he has his display breaker pulled. So if I can bear on your indulgence to wait until we swing all the way around to the AFT OMNI, then we can get this -
 
-[59 56 09] FLIGHT
+[59 56 09 - 59 56 10] FLIGHT
 We're not exactly swinging, you know?
 
 [59 56 10] INCO
@@ -8388,10 +8389,10 @@ Pitch? Kind of?
 Roll. LM Yaw.
 > The CM and the LM had different axis labels, as the CM flew "forward" with its nose, while the LM axes were optimized for the crew's vantage point while landing on the Moon.
 
-[59 56 25] ??
+[59 56 26] FLIGHT
 Command Module roll.
 
-[59 56 26 - 59 56 27] INCO
+[59 56 27] INCO
 Look at channel 32.
 
 [59 56 34 - 59 56 39] FLIGHT
@@ -8442,16 +8443,16 @@ I'll come up a minute.
 [59 57 04 - 59 57 05] FLIGHT
 Come ahead, Merlin.
 
-[59 57 08] INCO
+[59 57 08 - 59 57 09] INCO
 Jack, say FORWARD OMNI.
 
-[59 57 38 - 59 57 48] FLIGHT
+[59 57 39 - 59 57 48] FLIGHT
 CAPCOM, as soon as you get a hold of him, would you get him to say what he wants to say about the starfield? And you can tell him to go back to the DESCENT O2. CONTROL, from FLIGHT.
 
 [59 57 49] CONTROL
 Go ahead.
 
-[59 57 50 - 59 57 54] FLIGHT
+[59 57 49 - 59 57 54] FLIGHT
 I'm becoming convinced that we don't have any choice here, but that we've got to go to some kind of AGS mode, here.
 
 [59 57 54 - 59 57 55] CONTROL
@@ -8460,8 +8461,11 @@ That's right; I'm taking the procedure now.
 [59 57 56 - 59 57 57] FLIGHT
 Okay. You getting it all written up?
 
-[59 57 58 - 59 58 00] CONTROL
+[59 57 58 - 59 57 59] CONTROL
 I'm getting it - partly out of the Activation checklist.
+
+[59 58 00] FLIGHT
+Okay.
 
 [59 58 10 - 59 58 20] FLIGHT
 The - procedure - procedure is available from these - from CONTROL for the AGS PTC, and I think we're running out of choices. We're probably just going to have to -
@@ -8521,13 +8525,13 @@ INCO, FLIGHT. What are we getting?
 What are we getting?
 
 [60 01 54 -] FLIGHT
-INCO, FLIGHT. Are we going to get COMM back? I'm going to knock off the tracking here in a minute. That 30 seconds -
+INCO, FLIGHT. Are we going to get COMM back? I'm going to knock off the tracking here in a minute. That 30 second -
 
 [60 01 59 - 60 02 00] INCO
 That's - FLIGHT, we're -
 
-[- 60 02 01] FLIGHT
-- is long past, we've run too long.
+[- 60 02 00] FLIGHT
+- test has run too long.
 
 [60 02 01 - 60 02 02] INCO
 Right. We're going back to the normal mode. Standby.
@@ -8550,7 +8554,7 @@ Yeah. INCO, have we reconfigured yet?
 [60 03 11] INCO
 Go ahead, FLIGHT.
 
-[60 03 12] FLIGHT
+[60 03 11 - 60 03 12] FLIGHT
 We reconfigured yet?
 
 [60 03 12] INCO
@@ -8599,7 +8603,7 @@ If he wants to try the method John's been talking about, we can give them an att
 FLIGHT, that's the IU frequency. Just say AFT OMNI and we'll be in there, I think.
 
 [60 06 31 - 60 06 33] FLIGHT
-CONTROL, FLIGHT. How you doing?
+CONTROL, FLIGHT. How are you doing?
 
 [60 06 33 - 60 06 36] CONTROL
 We're just about there, FLIGHT, on this AGS turn-on procedure.
@@ -8622,6 +8626,9 @@ I'm afraid to do anything to the COMM right now, until we have this discussion w
 [60 06 56 - 60 06 59] FLIGHT
 - I sure do. And I want to get it off as bad as you do.
 
+[60 07 00] TELMU
+Right.
+
 [60 07 20 - 60 07 21] FLIGHT
 Can - TELMU, FLIGHT.
 
@@ -8631,7 +8638,7 @@ TELMU, FLIGHT.
 [60 07 25] FLIGHT
 TELMU, FLIGHT.
 
-[60 07 27 - 60 07 28] FLIGHT
+[60 07 28] FLIGHT
 TELMU, FLIGHT.
 
 [60 07 35] FLIGHT
@@ -8642,6 +8649,9 @@ Go, FLIGHT.
 
 [60 07 37 - 60 07 41] FLIGHT
 Is there much of a difference to you to operate on the AGS, with the PGNS down? Water-wise?
+
+[60 07 42] CAPCOM
+Are they still on FORWARD OMNI?
 
 [60 07 42 - 60 07 54] TELMU
 Well, it's about - about 3 amps, but primarily the AGS does run a little cooler, and you'd be bringing up a {new piece of gear}. So, it'd be a different thermal load, there.
@@ -8690,7 +8700,7 @@ That's what they're trying to do. We're not having any luck. There's one suggest
 Is that what we have to do now? We can't talk to them to tell them to do that.
 
 [60 08 41 - 60 08 53] INCO
-That's right. But if we can get up ?? here, turn your transceiver off for 3 minutes. Then turn it back on. And I'll try to give you a call if I think you can get through.
+That's right. But if we can get up ?? here, just say: "turn your transceiver off for 3 minutes. Then turn it back on." And I'll try to give you a call if I think you can get through.
 
 [60 08 55] FLIGHT
 Okay.
@@ -8741,7 +8751,7 @@ CONTROL, FLIGHT.
 Go ahead.
 
 [60 10 10 - 60 10 16] FLIGHT
-Now, how close are you to having this thing - you proposing an AGS PTC mode and a -
+Now, how close are you to having this thing - you're proposing an AGS PTC mode and a -
 
 [60 10 15 - 60 10 22] CONTROL
 Well, we just got input - what I'm going to do you - with right now, is a procedure for turning the AGS on and aligning it to the PGNS, so we can turn the PGNS off.
@@ -8756,7 +8766,7 @@ And that'll leave us in an AGS ATTITUDE HOLD mode.
 Yes.
 
 [60 10 26 - 60 10 36] CONTROL
-And I just got word from SPAN, the procedure we had for the PTC in AGS, Carter (??) analyzed, he's - it's not going to work. He's working feverishly to get one that will. Just got that input
+And I just got word from SPAN, the procedure we had for the PTC in AGS, Carter (??) analyzed, he's - it's not going to work. He's working feverishly to get one that will. Just got that input.
 
 [60 10 39 - 60 10 48] CONTROL
 You might be able to handle it without the PTC, saves the attitude that we at - are now at, and then just change attitudes over some time schedule.
@@ -8786,19 +8796,19 @@ Yes.
 [60 11 12 -] FLIGHT
 They - they don't have a procedure to get a PTC in AGS. They had one -
 
-[60 11 15] CONTROL
+[60 11 16 -] CONTROL
 We had one -
 
-[- 60 11 19] FLIGHT
-- it doesn't work. Somebody thinks it won't, so we're not going to try it.
+[- 60 11 16] FLIGHT
+- it doesn't work.
 
-[60 11 19 - 60 11 20] CONTROL
-Unless you want to try that one, there, FLIGHT.
+[- 60 11 19] CONTROL
+- but it doesn't work. Somebody thinks it won't, so we're not going to try it. Unless you want to try that one, there.
 
 [60 11 22] FLIGHT
 Standby.
 
-[60 11 24 - 60 11 25] FLIGHT
+[60 11 24] CONTROL
 I would say no on that.
 
 [60 13 00 - 60 13 03] INCO
@@ -8818,7 +8828,7 @@ Say again?
 
 [60 13 37 - 60 13 49] FDO
 I'll bring you up to speed on what I've been doing down here. Looking at a maneuver in the vicini - that doesn't - time range, and on the vector that I've got now, looking at about a 16 feet per second to get free-return.
-> What FDO is talking about here is the plan to be shortly executed. Rather than wait all the way around the Moon to get the spacecraft back on track to return to Earth, they will initiate a burn with a ∆V of 16fps (11mph; 17.5km/h) very soon, after which they can power down the PGNS and feel good about being roughly on track.
+> What FDO is talking about here is the plan to be shortly executed. Rather than wait all the way around the Moon to 79 hours (PC+2) to get the spacecraft back on track to return to Earth, they will initiate a burn with a ∆V of 16fps (11mph; 17.5km/h) very soon, after which they can power down the PGNS and feel good about being roughly on track.
 
 [60 13 50 - 60 13 52] FLIGHT
 Yeah; that's what I'm hearing over here in my other ear, Bill.
@@ -8836,7 +8846,7 @@ And we're not sure whether it's going to be any better than what we've got right
 Uh huh.
 
 [60 14 05 - 60 14 20] FDO
-So, I guess what I've got to say is that in about 10 minutes, I can have the maneuver ready - I'll be able to compute a maneuver; time range of 61:30. And we can make that decision with that - ∆V will be around, like I said, about 16, 17 feet per second.
+So, I guess what I've got to say is that in about 10 minutes, I can have a maneuver ready - I'll be able to compute a maneuver; time range of 61:30. And we can make that decision with that - ∆V will be around, like I said, about 16 or 17 feet per second.
 
 [60 14 20 - 60 14 21] FLIGHT
 And that's a free-return.
@@ -8899,7 +8909,7 @@ How much water -
 [60 17 25] FLIGHT
 You got an hourly rate on it?
 
-[60 17 27] TELMU
+[60 17 28] TELMU
 Standby.
 
 [60 18 15 - 60 18 16] INCO
@@ -8977,7 +8987,7 @@ And we'll run a couple of them in case we get behind on time, here. GUIDANCE, wh
 [60 19 56 -] GUIDO
 FLIGHT, I'm going to MIT run it in a hybrid and see if it can take a vector, if it'll work alright -
 
-[60 20 00] FLIGHT
+[60 20 01 - 60 20 02] FLIGHT
 If it can't, how do we do it?
 
 [- 60 20 04] GUIDO
@@ -9037,7 +9047,7 @@ Go ahead, FLIGHT.
 [60 21 29 -] FLIGHT
 We're going to do a little burn here, 16 feet a second and get back on free-return -
 
-[60 21 33] CONTROL
+[60 21 34] CONTROL
 Roger.
 
 [- 60 21 36] FLIGHT
@@ -9059,7 +9069,7 @@ FLIGHT, INCO.
 Go ahead.
 
 [60 22 45] INCO
-Looks like you've got it.
+It looks like you've got it.
 
 [60 22 46 - 60 22 52] FLIGHT
 COMM, Jack. Okay, everybody, let's be quiet. We have COMM. We've got a lot of business to do.
@@ -9115,34 +9125,34 @@ Copy. 61 +30.
 [60 25 52 - 60 25 53] FLIGHT
 Okay. Proceed.
 
-[60 26 39] FLIGHT
+[60 26 40] FLIGHT
 Okay.
 
 [60 27 14 - 60 27 20] FLIGHT
-Okay. CAPCOM, I don't think he ought to do any special maneuvering to find this out right now, do you? Don't talk them into it.
+Okay. CAPCOM, I don't think he ought to do any special maneuvering to find this out right now, do you? Don't talk them into that.
 
 [60 27 40 - 60 27 42] FLIGHT
 Okay. Let's concentrate on the burn.
 
-[60 28 22 - 60 28 24] FLIGHT
+[60 28 23 - 60 28 24] FLIGHT
 I didn't hear all of his question. CAPCOM?
 
-[60 28 25 - 60 28 26] CAPCOM
+[60 28 26 - 60 28 27] CAPCOM
 How much can he use the TTCA?
 
-[60 28 30 - 60 28 32] FLIGHT
+[60 28 31 - 60 28 32] FLIGHT
 FDO, FLIGHT. Have you got tracking on the LM?
 
-[60 28 33 - 60 28 34] FDO
+[60 28 34] FDO
 Standby, FLIGHT.
 
 [60 28 42] FDO
 That's affirm, FLIGHT.
 
-[60 28 43 - 60 28 48] FLIGHT
-Okay. Are you seeing anything? He's using his translation control for attitude control. With the stack. You understand?
+[60 28 43 - 60 28 49] FLIGHT
+Okay. Are you seeing anything? He's using his translation controller for attitude control. With the stack. You understand?
 
-[60 28 49] FDO
+[60 28 50] FDO
 Accurate.
 
 [60 28 50 - 60 28 54] FLIGHT
@@ -9160,7 +9170,7 @@ CONTROL here.
 [60 29 06] FLIGHT
 GNC?
 
-[60 29 09] GNC
+[60 29 10] GNC
 Go ahead, FLIGHT.
 
 [60 29 11 - 60 29 18] FLIGHT
@@ -9190,13 +9200,13 @@ Go.
 [60 29 30] TELMU
 Go.
 
-[60 29 30] FLIGHT
+[60 29 30 -] FLIGHT
 Stand by on the loop here -
 
 [60 29 31] GUIDO
 Go, FLIGHT.
 
-[60 29 32] FLIGHT
+[- 60 29 32] FLIGHT
 - we're going to follow through the activation.
 
 [60 29 32] TELMU
@@ -9217,7 +9227,7 @@ I'd like you to ask him to manage the OMNIs as he's talking.
 [60 29 52 - 60 29 53] FLIGHT
 Does he have his meter up?
 
-[60 29 53 - 60 29 57] INCO
+[60 29 54 - 60 29 57] INCO
 Yeah, it seems as though he still has that display breaker in, so the meter must be up.
 
 [60 29 58] FLIGHT
@@ -9250,7 +9260,7 @@ Concur. Okay.
 [60 31 12] TELMU
 FLIGHT, TELMU.
 
-[60 31 14 - 60 31 15] FLIGHT
+[60 31 15] FLIGHT
 Go ahead, TELMU.
 
 [60 31 17 - 60 31 19] TELMU
@@ -9286,11 +9296,11 @@ FLIGHT, we recommend leaving the caution/warning off.
 [60 32 26 - 60 32 30] FLIGHT
 Caution - recommend that, huh? He says recommend leaving caution and warning off, Jack.
 
-[60 32 58] TELMU
+[60 32 59] TELMU
 We got the time.
 
-[60 33 01] TELMU
-We got the time, there.
+[60 33 02] TELMU
+We got the time, here.
 
 [60 33 04] FLIGHT
 You got it?
@@ -9331,7 +9341,7 @@ Can you wait a minute, RETRO?
 [60 34 03] FLIGHT
 Satisfied, CONTROL?
 
-[60 34 04 - 60 34 05] CONTROL
+[60 34 04 - 60 34 06] CONTROL
 That's not it, FLIGHT. That's not it.
 
 [60 34 10] INCO
@@ -9349,13 +9359,13 @@ Okay, CONTROL?
 [60 34 29] CONTROL
 Roger.
 
-[60 34 43] CAPCOM
+[60 34 44] CAPCOM
 Okay, you want the circuit breaker -
 
 [60 34 46 - 60 34 47] FLIGHT
 Okay. Copy these, guys.
 
-[60 34 56] TELMU
+[60 34 57] TELMU
 That's good.
 
 [60 35 03] CONTROL
@@ -9398,7 +9408,7 @@ It'll come up in the procedure later, Jack.
 How about the rest of these breakers? You want them to close them and open them as outlined in the checklist, here, or you going to have them hold up? Looks like we're going to screw up our procedure here if we don't do it just the way it's outlined.
 > CAPCOM doesn't like the seat-of-the-pants verification that's happening.
 
-[60 37 35 - 60 37 37] FLIGHT
+[60 37 36 - 60 37 37] FLIGHT
 I didn't hear you, Jack, I was getting other input.
 
 [60 37 37 - 60 37 40] ??? (off loop)
@@ -9468,7 +9478,7 @@ Use the reviewed procedures? We want to -
 Yeah. I think we'd better stick with what we know works.
 
 [60 38 31 - 60 38 33] CAPCOM
-- be clear to stick to the procedure as-written.
+- I think we ought to stick to the procedure as-written.
 
 [60 38 34 - 60 38 35] FLIGHT
 Yup. I agree, Jack. Let's go ahead.
@@ -9486,21 +9496,21 @@ As on the list.
 Yes. I don't want to take any chances with this.
 
 [60 39 19 - 60 39 21] FLIGHT
-Okay, everybody, stick with him now. We're going to be moving on to the next step.
+Okay, everybody, stick with him now. We're going to be moving on to the next steps.
 
 [60 39 26 - 60 39 30] FLIGHT
 GUIDANCE, FLIGHT. I want you to have somebody looking ahead. We're going to do this burn in P47. Right?
 
-[60 39 31 - 60 39 36] GUIDO
+[60 39 32 - 60 39 36] GUIDO
 FLIGHT, GUIDANCE, I don't think we can do it in 47. I don't think we have TVC control in 47.
 
 [60 39 38 - 60 39 39] FLIGHT
 What are we going to do it in?
 
-[60 39 39 - 60 39 40] GUIDO
+[60 39 40] GUIDO
 We'll have to do it in 40.
 
-[60 39 42 - 60 39 43] FLIGHT
+[60 39 43 - 60 39 44] FLIGHT
 It doesn't - do we know it works?
 
 [60 39 45 - 60 39 46] GUIDO
@@ -9552,11 +9562,11 @@ When will the answer come in if it's okay - when are you going to put a vector i
 [60 40 38 - 60 40 40] GUIDO
 They're on schedule right now for 61:30?
 
-[60 40 40] FLIGHT
+[60 40 41] FLIGHT
 Yes.
 
-[60 40 41 - 60 40 53] GUIDO
-Okay. We'll - roger. We've got a vector, I think now, that we could go ahead and - but let's standby get - see if we could get an answer here in the next few minutes. It might be close to there on the hybrid right now.
+[60 40 42 - 60 40 53] GUIDO
+Okay. We'll - roger. We've got a vector, I think now, that we could go ahead and - but let's standby to get - see if we could get an answer here in the next few minutes. It might be close to there on the hybrid right now.
 
 [60 40 54 - 60 40 59] FLIGHT
 Yeah, okay. When am I going to get the answer? Do they know I need it in - you know, 10 or 15 minutes?
@@ -9579,14 +9589,14 @@ Okay. And now we can go through this list and see if there are a couple odds and
 [60 41 16 - 60 41 17] FLIGHT
 Okay with the tape recorders, TELMU?
 
-[60 41 18] TELMU
+[60 41 19] TELMU
 Roger.
 
-[60 41 19] FLIGHT
+[60 41 20] FLIGHT
 Yes.
 
 [60 41 20] CAPCOM
-And any others like that?
+Any others like that?
 
 [60 41 21 - 60 41 22] FLIGHT
 Anything else that's essentially trivial?
@@ -9661,7 +9671,7 @@ OPEN?
 [60 42 52] INCO
 OPEN, yes.
 
-[60 42 52] FLIGHT
+[60 42 53] FLIGHT
 OPEN.
 
 [60 43 05] INCO
@@ -9736,7 +9746,7 @@ TELMU, you said no, didn't you?
 [60 45 40] TELMU
 Negative.
 
-[60 45 40] FLIGHT
+[60 45 41] FLIGHT
 Negative.
 
 [60 45 51 - 60 45 55] FLIGHT
@@ -9745,19 +9755,19 @@ FAO, let me how we're doing on time, will you? How are we doing?
 [60 45 56 - 60 45 58] FAO
 Roger, FLIGHT, we will. Standby.
 
-[60 45 59 - 60 46 01] FLIGHT
-I want you to monitor us here, and see if we're on time.
+[60 46 00 - 60 46 01] FLIGHT
+I want you to monitor us here, and see that we're on time.
 
 [60 46 02] FAO
 Roger.
 
-[60 46 13 - 60 46 14] FLIGHT
+[60 46 14] FLIGHT
 CONTROL, no AGS, right?
 
 [60 46 15] CONTROL
 No AGS.
 
-[60 46 15] FLIGHT
+[60 46 16] FLIGHT
 No AGS.
 
 [60 46 19 - 60 46 20] CONTROL
@@ -9775,7 +9785,7 @@ Now run one for 61:45.
 [60 46 31] FDO
 Copy.
 
-[60 46 41] CONTROL
+[60 46 42] CONTROL
 It's for the gimbals, FLIGHT.
 > Correcting the LMP.
 
@@ -9806,7 +9816,7 @@ Yes. By the book.
 [60 47 16] TELMU
 No. Close that one.
 
-[60 47 17 - 60 47 18] FLIGHT
+[60 47 18] FLIGHT
 You want that one closed?
 
 [60 47 19] TELMU
@@ -9824,7 +9834,7 @@ INCO?
 [60 48 03] INCO
 Roger.
 
-[60 48 03] FLIGHT
+[60 48 04] FLIGHT
 INCO?
 
 [60 48 04 - 60 48 05] INCO
@@ -9836,13 +9846,13 @@ He said can we leave the steerable off, and operate off the OMNIs?
 [60 48 09 - 60 48 11] INCO
 That's true. We want the heater circuit breaker left in, though.
 
-[60 48 13 - 60 48 14] FLIGHT
+[60 48 14] FLIGHT
 Okay. Are you listening to the loop?
 
-[60 48 14] INCO
+[60 48 15] INCO
 Yes.
 
-[60 48 15 - 60 48 17] FLIGHT
+[60 48 16 - 60 48 18] FLIGHT
 Yeah, we want the heater circuit breaker in, but we'll stick with the OMNIs.
 
 [60 48 18] INCO
@@ -9858,20 +9868,20 @@ FLIGHT, GUIDANCE.
 Go.
 
 [60 48 48 - 60 48 52] GUIDO
-Okay, we've got a LOAD ready to go, here, FLIGHT. We want to load {a vector} and {external ∆V}.
+Okay, we've got a - our LOAD's ready to go, here, FLIGHT. We want to load {a vector} and {external ∆V}.
 1> This is the current ground-based tracking information of spacecraft position and velocity.
 2> And this is the burn specification.
 
-[60 48 53 - 60 48 58] FLIGHT
+[60 48 54 - 60 48 58] FLIGHT
 Okay. Have the loads been verified, yet? Is this the same vector that's being run on a hybrid?
 
-[60 49 00 - 60 49 01] GUIDO
+[60 49 00 - 60 49 02] GUIDO
 Close to it, FLIGHT. Essentially the same thing.
 
 [60 49 03] FLIGHT
 You're sure of that?
 
-[60 49 03] GUIDO
+[60 49 04] GUIDO
 Roger.
 
 [60 49 05] FLIGHT
@@ -9889,7 +9899,7 @@ Alright. Is it the same vector we would have used for this DPS +2 - LI +2 hours,
 [60 49 21 - 60 49 25] GUIDO
 Well, it's FDO's present vector, FLIGHT. The only problem that we're worried about is the integration problem on board -
 
-[60 49 25] FLIGHT
+[60 49 26] FLIGHT
 Yeah. Mmhmm.
 
 [60 49 26] GUIDO
@@ -9904,7 +9914,7 @@ Yeah, but the vector doesn't really matter all that much what vector it is.
 [60 49 38 -] GUIDO
 This is - this is essentially one. We need to load this, though. Even if we do a P47 -
 
-[60 49 42] FLIGHT
+[60 49 43] FLIGHT
 Okay.
 
 [- 60 49 43] GUIDO
@@ -9913,7 +9923,7 @@ Okay.
 [60 49 49] TELMU
 Negative.
 
-[60 49 50 - 60 49 51] FLIGHT
+[60 49 51] FLIGHT
 Say again, TELMU? Negative?
 
 [60 49 51] TELMU
@@ -9922,7 +9932,7 @@ Negative.
 [60 49 52] FLIGHT
 Negative?
 
-[60 49 56 - 60 50 02] FLIGHT
+[60 49 56 - 60 50 01] FLIGHT
 And, CAPCOM, if we get P00 and DATA, we will put a state vector and target LOAD in for him.
 
 [60 50 18] FLIGHT
@@ -9937,7 +9947,7 @@ Okay, FLIGHT. We'll have to wait until they get the uplink configured. INCO's wo
 [60 50 32] FLIGHT
 ORDEAL?
 
-[60 50 33] GUIDO
+[60 50 33] CONTROL
 Negative. You don't need it.
 
 [60 50 34] FLIGHT
@@ -9967,11 +9977,11 @@ It comes up -
 [60 50 55] TELMU
 Yes, it does.
 
-[60 50 57 - 60 50 58] FLIGHT
+[60 50 58] FLIGHT
 I didn't hear his question, Jack.
 
 [60 50 59 - 60 51 01] CAPCOM
-ASCENT ECA breaker on panel 11, we want it open or closed?
+ASCENT ECA breaker on panel 11, we want it OPEN or CLOSED?
 
 [60 51 02] TELMU
 Open.
@@ -9989,7 +9999,7 @@ Open.
 Okay. Are we happy with the circuit breaker configuration? Do we want them to press on?
 
 [60 51 18 - 60 51 20] FLIGHT
-Circuit breaker panel. CONTROL, go or no go?
+Circuit breaker panel. CONTROL, GO or NO GO?
 
 [60 51 21 - 60 51 22] CONTROL
 CONTROL is okay.
@@ -9998,22 +10008,22 @@ CONTROL is okay.
 TELMU?
 
 [60 51 23] TELMU
-Go.
+GO.
 
 [60 51 24] FLIGHT
 GUIDANCE?
 
 [60 51 25] GUIDO
-We're go.
+We're GO.
 
 [60 51 26] FLIGHT
 INCO?
 
 [60 51 27] INCO
-Go.
+GO.
 
 [60 51 27 - 60 51 28] FLIGHT
-Go, CAPCOM.
+GO, CAPCOM.
 
 [60 51 34] CAPCOM
 What about the landing gear?
@@ -10024,28 +10034,28 @@ They'll come to that in the checklist, apparently.
 [60 51 37] CAPCOM
 Okay.
 
-[60 52 38 - 60 52 40] FAO
+[60 52 39 - 60 52 40] FAO
 FLIGHT, FAO. We concur with that.
 
-[60 52 40] CAPCOM
+[60 52 41] CAPCOM
 We concur.
 
-[60 52 43] FLIGHT
+[60 52 43 - 60 52 44] FLIGHT
 FAO concurs.
 
-[60 52 46 - 60 52 48] FLIGHT
+[60 52 46 - 60 52 47] FLIGHT
 INCO, do you have the OMNI for the burn attitude?
 
 [60 52 48 - 60 52 50] GUIDO
 FLIGHT, GUIDANCE, we're in the middle of a LOAD right now.
 
-[60 52 50 - 60 52 54] FLIGHT
+[60 52 51 - 60 52 53] FLIGHT
 Oh. Okay. CAP - what do you mean? You don't want them to maneuver?
 
 [60 52 54 - 60 52 55] GUIDO
 That's right. Let's hold it.
 
-[60 52 55 - 60 52 57] FLIGHT
+[60 52 56 - 60 52 58] FLIGHT
 CAPCOM, could he hold his maneuver until we finish the LOAD, please?
 
 [60 53 14] CONTROL
@@ -10093,10 +10103,10 @@ We recommend that, and we're through with the LOAD.
 [60 56 49 - 60 56 51] FLIGHT
 Okay. Everybody in the room, we're back on the checklist.
 
-[60 56 57] FLIGHT
+[60 56 58] FLIGHT
 Do we want to -
 
-[60 56 57 - 60 56 59] CAPCOM
+[60 56 58 - 60 56 59] CAPCOM
 Are you with us now, on the checklist?
 
 [60 56 59 - 60 57 01] FLIGHT
@@ -10147,7 +10157,7 @@ Affirmative.
 [60 57 58] FLIGHT
 Mmhmm.
 
-[60 58 06 - 60 58 08] CAPCOM
+[60 58 07 - 60 58 09] CAPCOM
 Okay, everybody. We have - we're on page 9 now, right?
 
 [60 58 09 - 60 58 14] FLIGHT
@@ -10159,16 +10169,16 @@ We've already taken care of that, FLIGHT.
 [60 58 17] FLIGHT
 Okay, already done.
 
-[60 58 29] FAO
-FLIGHT. FAO.
+[60 58 29 -] FAO
+FLIGHT, FAO -
 
 [60 58 30] FLIGHT
 Go.
 
-[60 58 30 - 60 58 32] FAO
-They can pick up at the landing gear deploy at the bottom of 10.
+[- 60 58 32] FAO
+- they can pick up at the landing gear deploy at the bottom of 10.
 
-[60 58 33 - 60 58 36] FLIGHT
+[60 58 34 - 60 58 36] FLIGHT
 Okay. Well, let's walk through it one piece at a time.
 
 [60 58 42 - 60 58 44] FLIGHT
@@ -10193,10 +10203,10 @@ Affirmative.
 [60 59 06] ??
 Affirmative.
 
-[60 59 10 - 60 59 11] FLIGHT
+[60 59 10 - 60 59 12] FLIGHT
 Okay. Standby for landing gear.
 
-[60 59 41 - 60 59 45] FLIGHT
+[60 59 42 - 60 59 45] FLIGHT
 Okay, let's watch the power when the - landing gear, there, gentlemen.
 
 [60 59 47 - 60 59 48] TELMU
@@ -10205,22 +10215,25 @@ Okay, powers are fine.
 [60 59 57 - 60 59 59] TELMU
 It looks like landing gear deployed from here, FLIGHT.
 
-[61 00 23 - 61 00 24] CONTROL
+[61 00 19] CONTROL
+Scratch that.
+
+[61 00 24] CONTROL
 CONTROL concurs.
 
 [61 00 28] CAPCOM
 How about AGS?
 
-[61 00 29 -] CONTROL
-Delete AGS activation and self-test -
+[61 00 30 - 61 00 31] CONTROL
+Delete AGS activation and self-test.
 
-[61 00 31] FLIGHT
+[61 00 32] FLIGHT
 Okay.
 
-[- 61 00 31] CONTROL
+[61 00 32] CAPCOM
 - ?? complete.
 
-[61 00 39] FLIGHT
+[61 00 40] FLIGHT
 That's correct.
 
 [61 00 42] FLIGHT
@@ -10241,7 +10254,7 @@ He's got it, FLIGHT.
 [61 01 03 - 61 01 04] CAPCOM
 How about you guys keeping ahead, here?
 
-[61 01 08] CAPCOM
+[61 01 08 - 61 01 09] CAPCOM
 How about AGS align, FLIGHT?
 
 [61 01 09 - 61 01 10] FLIGHT
@@ -10250,40 +10263,40 @@ We don't need that. No AGS align.
 [61 01 14 - 61 01 16] CONTROL
 Recommend we don't do that, FLIGHT. All we'd do is just close the DECA POWER breaker.
 
-[61 01 17 - 61 01 18] FLIGHT
+[61 01 18 - 61 01 19] FLIGHT
 Okay. You don't want to do the test.
 
-[61 01 19] CONTROL
+[61 01 20] CONTROL
 Negative.
 
 [61 01 49 - 61 01 50] CAPCOM
 You ready for DPS pressurization and checkout?
 
-[61 01 52] GUIDO
+[61 01 53] GUIDO
 FLIGHT, GUIDANCE.
 
 [61 01 55] CONTROL
 Affirmative.
 
-[61 01 55] FLIGHT
+[61 01 56] FLIGHT
 Yes.
 
 [61 01 56 - 61 01 57] GUIDO
-We need to configure the throttle.
+We need to configure the DAP.
 
-[61 01 58] FLIGHT
+[61 01 59] FLIGHT
 What - what do you need?
 
 [61 01 59 - 61 02 00] GUIDO
 With what we read on the PAD.
 
-[61 02 01] FLIGHT
+[61 02 02 - 61 02 03] FLIGHT
 Okay, does he - he doesn't do that, here?
 
-[61 02 02 - 61 02 03] GUIDO
+[61 02 03 - 61 02 04] GUIDO
 Step 2. Step 2.
 
-[61 02 04 - 61 02 07] FLIGHT
+[61 02 05 - 61 02 07] FLIGHT
 Wait a minute. Step 2. Okay, yeah. Okay, page 14.
 
 [61 02 09] CAPCOM
@@ -10295,13 +10308,13 @@ Page 14. Okay.
 [61 02 18 - 61 02 21] FLIGHT
 How about 3, 4, 5, and 6, there? CONTROL? Although they -
 
-[61 02 21 - 61 02 23] CONTROL
+[61 02 22 - 61 02 23] CONTROL
 We don't need it. That's - part of - that's what we're deleting.
 
 [61 02 25 - 61 02 26] FLIGHT
 Steps 3, 4, 5, and 6?
 
-[61 02 27] CONTROL
+[61 02 28] CONTROL
 Right.
 
 [61 02 34 - 61 02 38] FLIGHT
@@ -10361,10 +10374,10 @@ To trim the gimbal, FLIGHT, if you want to make it simple, just - you can do the
 [61 03 22 - 61 03 24] FLIGHT
 Okay. Do you want to do all of step 1 now, is that what you're saying?
 
-[61 03 24 - 61 03 26] CONTROL
+[61 03 25 - 61 03 26] CONTROL
 That just sets you up for step 2, that's affirm, FLIGHT.
 
-[61 03 26 - 61 03 31] FLIGHT
+[61 03 27 - 61 03 31] FLIGHT
 Okay. CAPCOM, correction. They want to do all of step 1 and step 2.
 
 [61 03 34 - 61 03 35] FLIGHT
@@ -10379,7 +10392,7 @@ GUIDANCE, we're going to do all of step 1 and step 2. Got it?
 [61 03 39] GUIDO
 Roger.
 
-[61 03 44 - 61 03 48] CONTROL
+[61 03 45 - 61 03 48] CONTROL
 Okay. One other comment, FLIGHT. Down in step 5, he de-arms the DPS, okay?
 
 [61 03 49] FLIGHT
@@ -10389,9 +10402,9 @@ Yes?
 He has to do that particular item.
 
 [61 03 52 - 61 03 59] FLIGHT
-Okay. We - we're just getting there, we'll going through them one at a time, 1 and 2. Okay? Watch him do step 2, there, GUIDANCE. When he gets to it.
+Okay. Well, we're just getting there, we're going through them one at a time, 1 and 2. Okay? Watch him do step 2, there, GUIDANCE. When he gets to it.
 
-[61 04 37 - 61 04 39] CONTROL
+[61 04 38 - 61 04 39] CONTROL
 We can just go to PGNS MODE CONTROL to OFF.
 
 [61 04 41] FLIGHT
@@ -10406,16 +10419,16 @@ He's in MIN IMPULSE now, he shouldn't be firing any jets. Except when he hits th
 [61 04 51 - 61 04 53] FLIGHT
 Okay. Why can't he do it in AUTO? Why is this -
 
-[61 04 53 - 61 04 56] CONTROL
+[61 04 54 - 61 04 56] CONTROL
 Okay. If he goes to AUTO, he goes to an ATTITUDE HOLD mode.
 
-[61 04 58 - 61 05 05] CONTROL
+[61 04 59 - 61 05 05] CONTROL
 He'll fire jets to go to the attitude. Hold out the attitude he's in right now. Okay, that's no problem.
 
-[61 05 05 - 61 05 08] FLIGHT
-What do you want us to do? CONTROL? What do you want us to do?
+[61 05 06 - 61 05 09] FLIGHT
+What do you want us to do, CONTROL? What do you want us to do?
 
-[61 05 09 - 61 05 10] CAPCOM
+[61 05 10] CAPCOM
 You want an OMNI?
 
 [61 05 11] CONTROL
@@ -10424,8 +10437,8 @@ Standby 1.
 [61 05 17 - 61 05 19] FLIGHT
 We're still hung up on step 1, near as I can tell.
 
-[61 05 41 - 61 05 42] CONTROL
-FLIGHT, CONTROL.
+[61 05 42] CONTROL
+FLIGHT, from CONTROL.
 
 [61 05 43] FLIGHT
 Go ahead.
@@ -10433,7 +10446,7 @@ Go ahead.
 [61 05 44 - 61 05 45] CONTROL
 Let's go to AUTO per the checklist.
 
-[61 05 45 - 61 05 46] FLIGHT
+[61 05 46 - 61 05 47] FLIGHT
 Per the checklist, CAPCOM.
 
 [61 05 50 - 61 05 54] CAPCOM
@@ -10502,7 +10515,7 @@ It should, FLIGHT. We've got the DAP set up, FLIGHT.
 [61 07 04 - 61 07 06] FLIGHT
 Okay. Okay, let's watch it.
 
-[61 07 12 - 61 07 13] CONTROL
+[61 07 13 - 61 07 14] CONTROL
 We've got no firings, FLIGHT.
 
 [61 07 14] FLIGHT
@@ -10511,11 +10524,11 @@ Okay.
 [61 07 15 - 61 07 16] CONTROL
 Proceed on the test.
 
-[61 07 17 - 61 07 18] FLIGHT
+[61 07 18] FLIGHT
 We're ready to proceed.
 
 [61 07 37 - 61 07 38] CONTROL
-Got a little thruster activity.
+Getting a little thruster activity.
 
 [61 07 40 - 61 07 41] FLIGHT
 Y'all, GUIDANCE, down there, FLIGHT.
@@ -10523,8 +10536,9 @@ Y'all, GUIDANCE, down there, FLIGHT.
 [61 07 42] GUIDO
 Go.
 
-[61 07 42 - 61 07 43] FLIGHT
-You getting that go, yet?
+[61 07 43] FLIGHT
+You getting that GO, yet?
+> From MIT on the docked/hybrid burn configuration.
 
 [61 07 45 - 61 07 46] GUIDO
 Negative. We haven't received it yet, FLIGHT.
@@ -10545,12 +10559,12 @@ GUIDANCE?
 Roger.
 
 [61 08 00] FLIGHT
-Go.
+GO.
 
-[61 08 07 - 61 08 09] CAPCOM
+[61 08 08 - 61 08 09] CAPCOM
 Okay, he's loading his gimbal now, let's watch him.
 
-[61 08 10 - 61 08 11] FLIGHT
+[61 08 11] FLIGHT
 Okay, watch the gimbal trim there.
 
 [61 08 13] CONTROL
@@ -10608,10 +10622,10 @@ He can do that after he gets through the test, no problem.
 [61 09 22 - 61 09 23] FLIGHT
 Well, okay, but it's there for some reason.
 
-[61 09 29 - 61 09 30] FLIGHT
+[61 09 30 - 61 09 31] FLIGHT
 FAO, how are we doing on time?
 
-[61 09 31 - 61 09 38] FAO
+[61 09 32 - 61 09 38] FAO
 FLIGHT, we are sitting alright. The only other thing we've got left is the DPS press. And -
 
 [61 09 39 - 61 09 40] FLIGHT
@@ -10623,13 +10637,13 @@ That's right.
 [61 09 41] FLIGHT
 Alright.
 
-[61 09 44 - 61 09 45] FLIGHT
+[61 09 44 - 61 09 46] FLIGHT
 Keep - keep track of us, here. Spencer, about -
 
-[61 09 45] CAPCOM
+[61 09 46] CAPCOM
 Okay, you ready for the gimbal?
 
-[61 09 46] FAO
+[61 09 47] FAO
 Okay.
 
 [61 09 47] CONTROL
@@ -10647,7 +10661,7 @@ Got DPS arm.
 [61 09 57] CONTROL
 And we're driving.
 
-[61 10 00 - 61 10 06] CAPCOM
+[61 10 01 - 61 10 06] CAPCOM
 Okay, and one other point that's brought out here, we've got a 4-jet ullage loaded in the DAP, and we've got 2 in the PAD.
 
 [61 10 09] FLIGHT
@@ -10662,13 +10676,13 @@ What do you want us to do?
 [61 10 13] CONTROL
 Standby on that.
 
-[61 10 27 - 61 10 31] CONTROL
+[61 10 27 - 61 10 32] CONTROL
 Okay, to get - to make it agree with the PAD, the DAP load would be changed to be 31021.
 
-[61 10 32 - 61 10 34] FLIGHT
+[61 10 32 - 61 10 35] FLIGHT
 Well. Do you want to - why don't we just leave it the way it is?
 
-[61 10 35 - 61 10 36] CONTROL
+[61 10 36 - 61 10 37] CONTROL
 As far as I'm concerned we can leave it the way it is.
 
 [61 10 37 - 61 10 38] FLIGHT
@@ -10684,7 +10698,7 @@ You copy that? We're going to do a 4-jet. That's what we've got loaded. That alr
 Roger.
 
 [61 10 46] FDO
-Go with the way it is, then.
+Go with the way it is, then, FLIGHT.
 
 [61 10 47 - 61 10 54] FLIGHT
 Yeah. CAPCOM, mention that to him so he doesn't think of it later and get confused. We're going with the 4-jet, vice the 2-jet on the PAD.
@@ -10722,10 +10736,10 @@ Looks good.
 [61 12 03 - 61 12 04] CAPCOM
 What numbers did we actually read up?
 
-[61 12 05 - 61 12 06] FLIGHT
+[61 12 06] FLIGHT
 How close were they?
 
-[61 12 07 - 61 12 08] CONTROL
+[61 12 07 - 61 12 09] CONTROL
 We're within about 0.3. We're - from the -
 
 [61 12 12] CONTROL
@@ -10764,23 +10778,23 @@ Pressurized, FLIGHT.
 [61 13 13] FLIGHT
 Okay. Keep your eye on it, okay?
 
-[61 13 19] CONTROL
+[61 13 20] CONTROL
 Looks good.
 
 [61 13 21] FLIGHT
 Okay.
 
-[61 13 38 - 61 13 39] CONTROL
+[61 13 39 - 61 13 40] CONTROL
 Delete that, FLIGHT.
 
-[61 13 40 - 61 13 41] FLIGHT
+[61 13 41] FLIGHT
 Delete all of it?
 
 [61 13 41] CONTROL
 Affirmative.
 
 [61 13 45 - 61 13 46] FLIGHT
-Yeah. Delete it all, CAPCOM.
+Yeah. We delete it all, CAPCOM.
 
 [61 13 50] CAPCOM
 How's the DPS look?
@@ -10788,7 +10802,7 @@ How's the DPS look?
 [61 13 51] CONTROL
 Looks fine.
 
-[61 14 05 - 61 14 09] FLIGHT
+[61 14 06 - 61 14 08] FLIGHT
 Okay, everybody. We are holding at about the 6 minute point in the checklist.
 
 [61 14 09 - 61 14 13] CAPCOM
@@ -10797,16 +10811,16 @@ Okay, at the bottom of page 15, we've got a new DAP. We've got 31021. You want t
 [61 14 14 - 61 14 18] CONTROL
 That's what put us in a 2-jet boot, FLIGHT. That will put us in 2-jet system boot for the ullage.
 
-[61 14 19 - 61 14 20] FLIGHT
+[61 14 19 - 61 14 21] FLIGHT
 Okay. But -
 
-[61 14 20 - 61 14 21] CONTROL
+[61 14 21] CONTROL
 Just leave it alone.
 
 [61 14 22 - 61 14 23] FLIGHT
 Yeah. We'll leave it where it is, Jack.
 
-[61 14 23] CONTROL
+[61 14 24] CONTROL
 Roger.
 
 [61 14 24 - 61 14 25] FLIGHT
@@ -10824,8 +10838,8 @@ Yeah. He's right here -
 [61 14 30 -] FLIGHT
 He's on 16 now, right? Yeah, he's into it. GUIDANCE, FLIGHT -
 
-[61 14 34] GUIDO
-Go ahead.
+[61 14 35] GUIDO
+Go, FLIGHT.
 
 [- 61 14 35] FLIGHT
 - I'm waiting for that GO.
@@ -10833,13 +10847,13 @@ Go ahead.
 [61 14 36 - 61 14 37] GUIDO
 We watched his P30 here, it looks good.
 
-[61 14 38 - 61 14 39] FLIGHT
+[61 14 38 - 61 14 40] FLIGHT
 Yeah, I know. But have you got somebody talking to MIT?
 
-[61 14 40 - 61 14 42] GUIDO
+[61 14 41 - 61 14 42] GUIDO
 They're still talking to them, haven't got an estimate yet.
 
-[61 14 43 - 61 14 44] FLIGHT
+[61 14 43 - 61 14 45] FLIGHT
 Well, we have 15 minutes to the burn.
 
 [61 14 46] FLIGHT
@@ -10851,7 +10865,7 @@ Go.
 [61 14 47 - 61 14 51] FLIGHT
 How do I do this burn if I get a NO GO on - DAP control?
 
-[61 14 52 - 61 14 55] CONTROL
+[61 14 53 - 61 14 55] CONTROL
 Okay, standby 1, I'll give you a rundown on that, FLIGHT, put my thoughts together.
 
 [61 14 56] FLIGHT
@@ -10863,13 +10877,13 @@ FLIGHT, GUIDANCE.
 [61 14 58] FLIGHT
 Go.
 
-[61 14 59 - 61 15 03] GUIDO
+[61 14 59 - 61 15 04] GUIDO
 I'd recommend going ahead and doing this burn if we don't hear from MIT. They feel it'll work, without the run.
 
 [61 15 11 - 61 15 12] GUIDO
 Everybody feels that it will work.
 
-[61 15 15 - 61 15 18] FLIGHT
+[61 15 16 - 61 15 18] FLIGHT
 Okay, well what do we do during it if it looks funny, is my question?
 
 [61 15 23] GUIDO
@@ -10878,10 +10892,10 @@ During the burn?
 [61 15 24] FLIGHT
 Yeah.
 
-[61 15 41] FLIGHT
+[61 15 42] FLIGHT
 CONTROL, FLIGHT.
 
-[61 15 42] CONTROL
+[61 15 43] CONTROL
 Go ahead.
 
 [61 15 45 - 61 15 47] FLIGHT
@@ -10890,7 +10904,7 @@ PGN - okay, you want to do a PGNS AUTO or TTCA?
 [61 15 48] CONTROL
 TTCA, FLIGHT.
 
-[61 15 49 - 61 15 52] FLIGHT
+[61 15 49 - 61 15 53] FLIGHT
 TTCA, CAPCOM. We recommend TTCA to the attitude.
 
 [61 15 56] FLIGHT
@@ -10902,19 +10916,19 @@ INCO, what's our OMNI for this burn attitude?
 [61 16 08] INCO
 FORWARD.
 
-[61 16 09 - 61 16 10] FLIGHT
+[61 16 10] FLIGHT
 Does he have it on there now?
 
-[61 16 10] INCO
+[61 16 10 - 61 16 11] INCO
 He's there now.
 
 [61 16 11] FLIGHT
 Okay.
 
-[61 16 13 - 61 16 16] CAPCOM
+[61 16 14 - 61 16 16] CAPCOM
 That attitude doesn't look like what I've got on the PAD, here.
 
-[61 16 23] GUIDO
+[61 16 23] CAPCOM
 FLIGHT?
 
 [61 16 24] FLIGHT
@@ -10936,7 +10950,7 @@ What's on the ball right now?
 What angle is he looking at, CAPCOM? You looking at the ball angles?
 
 [61 16 43 - 61 16 50] CAPCOM
-I'm looking at all of them. I'm looking at what he's got on the {50 18} on the DSKY, and also what he's got on the FCDU -
+I'm looking at all of them. I'm looking at what he's got on the {50 18} on the DSKY, and also what he's got on the FCDUs -
 1> NOUN 50, VERB 18, the auto-maneuvering command.
 
 [61 16 51 - 61 16 58] GUIDO
@@ -10963,10 +10977,11 @@ FLIGHT, we're looking at the FCDUs and they're correct.
 [61 17 16 - 61 17 20] FLIGHT
 Mmhmm. How about yaw? That's the one that's out yet? And is he moving in that axis?
 
-[61 17 21 - 61 17 23] GUIDO
-Yaw doesn't matter, FLIGHT, that's about this thrust vector. That's just where he happens to be.
+[61 17 21 - 61 17 24] GUIDO
+Yaw doesn't matter, FLIGHT, that's about the thrust vector. That's just where he happens to be.
+> One will note, however, that the engine gimbal setting is probably particular to the yaw angle, particularly if they have no TVC.
 
-[61 17 24 -] CAPCOM
+[61 17 25 -] CAPCOM
 Okay, are we ready -
 
 [61 17 25 - 61 17 27] GUIDO
@@ -11003,7 +11018,7 @@ Okay. GUIDANCE and CONTROL, FLIGHT.
 Go ahead.
 
 [61 17 49] CONTROL
-Go, FLIGHt.
+Go, FLIGHT.
 
 [61 17 50 - 61 17 55] FLIGHT
 I still have a question as to what you want me to do if somehow or other something turns up in the guidance during this burn.
@@ -11020,21 +11035,21 @@ Okay, with tur - setting up the burn, we would turn the ENGINE GIMBAL switch to 
 [61 18 09 - 61 18 12] FLIGHT
 Wait a minute. ENGINE GIMBAL - this - wait a minute. We're in the burn, and this is what you -
 
-[61 18 12 - 61 18 14] GUIDO
+[61 18 13 - 61 18 14] GUIDO
 Oh. This is during the burn you're talking about?
 
 [61 18 14] FLIGHT
 Well -
 
-[61 18 14] GUIDO
+[61 18 15] GUIDO
 Okay.
 
-[61 18 15 - 61 18 16] FLIGHT
+[61 18 15 - 61 18 17] FLIGHT
 That's when this started. What do you want me to do for -
 
 [61 18 17 - 61 18 25] GUIDO
 Okay. If he's in the burn, they'd go ENGINE GIMBAL off and just use the TTCA to hold attitude. And then as he can, to turn the MODE CONTROL switch to ATT HOLD.
-> It's exactly the same advice.
+> It's exactly the same recommendation.
 
 [61 18 33 - 61 18 34] FLIGHT
 MODE CONTROL to ATT HOLD.
@@ -11051,7 +11066,7 @@ Yeah. ENGINE GIMBAL off, MODE CONTROL to ATT HOLD, and utilize the TTCA.
 [61 18 52 - 61 18 53] FLIGHT
 Okay. So you changed the order.
 
-[61 18 55 - 61 19 04] GUIDO
+[61 18 55 - 61 19 05] GUIDO
 Well, this MODE CONTROL to ATT HOLD, he can do that - he should do that as soon as he can, but that - the most important thing is he get attitude control, and he has to do that with the TTCA. So it'll probably be a simultaneous thing.
 
 [61 19 06] FLIGHT
@@ -11063,7 +11078,7 @@ Okay, FLIGHT. Now, you verify his attitude?
 [61 19 09 - 61 19 10] FLIGHT
 GUIDANCE? You verify his attitude is okay?
 
-[61 19 14 - 61 19 16] GUIDO
+[61 19 15 - 61 19 16] GUIDO
 He's not at attitude yet, FLIGHT.
 
 [61 19 17] FLIGHT
@@ -11075,14 +11090,14 @@ Roger. He is moving. When he gets there, he'll be in good shape.
 [61 19 21 - 61 19 24] FLIGHT
 Is there any way we can check this now, is there a star out of his window or anything?
 
-[61 19 24 - 61 19 30] GUIDO
+[61 19 25 - 61 19 30] GUIDO
 We're running this - right now, we're running to see if there is a star available at the attitude he's maneuvering to.
 
 [61 19 30] FLIGHT
 Alright. Hurry up.
 
 [61 19 31 - 61 19 33] GUIDO
-There wasn't at the other - previous one that we had.
+There wasn't at the other atti - previous one that we had.
 
 [61 19 34] FLIGHT
 Alright.
@@ -11096,10 +11111,10 @@ FLIGHT, FAO.
 [61 20 24] FLIGHT
 Go.
 
-[61 20 25 - 61 20 29] FAO
+[61 20 26 - 61 20 29] FAO
 If we don't get the attitude soon, we're going to be running behind here.
 
-[61 20 30 - 61 20 31] FLIGHT
+[61 20 31] FLIGHT
 Okay. How far away are we?
 
 [61 20 33 - 61 20 35] FAO
@@ -11114,49 +11129,49 @@ GUIDANCE?
 [61 20 42] GUIDO
 The IMU?
 
-[61 20 44 - 61 20 47] FLIGHT
+[61 20 45 - 61 20 47] FLIGHT
 What attitude will you read on the DSKY when he's in-attitude?
 
-[61 20 49] FLIGHT
+[61 20 50] FLIGHT
 CDU.
 
-[61 20 49 - 61 20 57] GUIDO
-15.47 is yaw. Pitch is 178.1, and roll is 4.47.
+[61 20 50 - 61 20 58] GUIDO
+15.7 is yaw. Pitch is 178.1, and roll is 4.47.
 
-[61 20 58 - 61 20 59] FLIGHT
+[61 20 59] FLIGHT
 How far away is he?
 
-[61 21 00 - 61 21 01] GUIDO
+[61 21 00 - 61 21 02] GUIDO
 He's just about there. He's right there now, FLIGHT.
 
-[61 21 04 - 61 21 05] CAPCOM
+[61 21 05 - 61 21 06] CAPCOM
 We got any physical reference he can use?
 
-[61 21 06 - 61 21 07] FLIGHT
+[61 21 07] FLIGHT
 Okay. Have you seen any star yet?
 
 [61 21 12] FLIGHT
 Okay.
 
-[61 21 14] CAPCOM
+[61 21 14 - 61 21 15] CAPCOM
 Verify the attitude?
 
-[61 21 16] FLIGHT
+[61 21 16 - 61 21 17] FLIGHT
 GUIDANCE, you like the attitude?
 
-[61 21 18 - 61 21 19] GUIDO
+[61 21 18 - 61 21 20] GUIDO
 Looks good, FLIGHT. The attitude looks good.
 
 [61 21 26 - 61 21 29] FLIGHT
 Sun is out the forward window. That pretty much obscures a star.
 
-[61 21 34] FLIGHT
+[61 21 35] FLIGHT
 GUIDANCE, FLIGHT.
 
-[61 21 35] GUIDO
+[61 21 36] GUIDO
 FLIGHT, GUIDANCE.
 
-[61 21 36 - 61 21 38] FLIGHT
+[61 21 37 - 61 21 39] FLIGHT
 Have you got anything on confirming the attitude?
 > It's important to remember that the crew still have not been able to perform any kind of alignment on the LM, so they are still counting on the previous platform alignment they transferred over from the CSM, which may have drifted for about a dozen reasons.
 
@@ -11167,19 +11182,19 @@ Negative, FLIGHT. The only star available is star 86, there.
 FLIGHT, MIT will not have a run on this thing.
 
 [61 21 50 - 61 21 53] FLIGHT
-Okay, now - but it's the judgement that it is okay to use?
+Okay, now - but it is the judgement that it is okay to use?
 
 [61 21 53] GUIDO
 Roger.
 
-[61 21 55] FLIGHT
+[61 21 55 - 61 21 56] FLIGHT
 It is. Alright.
 
 [61 21 56 - 61 21 58] GUIDO
 It's the judgement of the software people it's GO - it's good.
 
 [61 22 00] GUIDO
-It'll be alright.
+That it'll be alright.
 
 [61 22 12] GUIDO (off loop)
 That's right.
@@ -11199,16 +11214,16 @@ Like what?
 [61 22 28 - 61 22 35] CONTROL
 Well, we need to get THROTTLE CONTROL to MANUAL; he's in AUTO right now. It's over right - in the 4 minute segment. And we need to get VERB 65 in.
 
-[61 22 38 - 61 22 39] FLIGHT
+[61 22 38 - 61 22 40] FLIGHT
 Okay, what's the matter with him going through the nominal checklist?
 
-[61 22 40] CONTROL
+[61 22 41] CONTROL
 Okay.
 
 [61 22 41 -] FLIGHT
 He's in attitude, we're at the 6-minute point -
 
-[61 22 42] CONTROL
+[61 22 42 - 61 22 43] CONTROL
 Okay. Very good.
 
 [- 61 22 45] FLIGHT
@@ -11232,7 +11247,7 @@ Jack, your opinion: think it would be worth reviewing that if he sees any kind o
 [61 23 27] FLIGHT
 To finish the burn?
 
-[61 23 33 - 61 23 34] CAPCOM
+[61 23 33 - 61 23 35] CAPCOM
 I don't think it would hurt to talk it over with him.
 
 [61 23 35] FLIGHT
@@ -11256,28 +11271,28 @@ For your information, our water rate's dropped down a little in our favor.
 [61 23 59] FLIGHT
 Thank you.
 
-[61 24 01 - 61 24 02] CAPCOM
+[61 24 02 - 61 24 03] CAPCOM
 FLIGHT? CAPCOM.
 
-[61 24 04 - 61 24 05] FLIGHT
+[61 24 05] FLIGHT
 Yeah, I just mentioned it to him.
 
 [61 24 07] FLIGHT
 Who's calling?
 
 [61 24 08 -] CAPCOM
-CAPCOM, on -
+CAPCOM's calling -
 
-[61 24 09] FLIGHT
+[61 24 08] FLIGHT
 Yeah.
 
-[61 24 09 - 61 24 11] FLIGHT
+[- 61 24 11] CAPCOM
 - I noticed on page 17, MANUAL THROTTLE -
 
 [61 24 23] FLIGHT
 CONTROL?
 
-[61 24 24 - 61 24 25] CONTROL
+[61 24 25] CONTROL
 Standby 1, FLIGHT.
 
 [61 24 26] FLIGHT
@@ -11310,17 +11325,17 @@ And you can delete PQGS turned on at the bottom.
 [61 24 51 - 61 24 54] FLIGHT
 Okay. CAPCOM, you got that? THROTTLE CONTROL in the middle of that stuff at 4 minutes -
 
-[61 24 59] GUIDO
+[61 25 00] GUIDO
 FLIGHT, GUIDANCE.
 
 [61 25 01 - 61 25 02] FLIGHT
 How much - how much you want ullage?
 
-[61 25 04 - 61 25 05] CONTROL
+[61 25 04 - 61 25 06] CONTROL
 We can just let it go ahead and start ullage automatically now, FLIGHT.
 
 [61 25 06 - 61 25 07] FLIGHT
-Let it go automatically, Jack.
+We'll let it go automatically, Jack.
 
 [61 25 07] GUIDO
 FLIGHT, GUIDANCE.
@@ -11331,7 +11346,7 @@ Go.
 [61 25 08 - 61 25 11] GUIDO
 He needs to go ahead and hit ENTER on his program if we're proceeding on a P40.
 
-[61 25 12 - 61 25 16] FLIGHT
+[61 25 13 - 61 25 16] FLIGHT
 Okay. He needs to do an ENTER and proceed on, CAPCOM.
 
 [61 25 17 - 61 25 19] GUIDO
@@ -11344,7 +11359,8 @@ Oh, he did it, FLIGHT.
 Standby.
 
 [61 25 37 - 61 25 40] FLIGHT
-And propellant quantity down at the bottom, don't worry about it. It's not on.
+And propellant quantity down at the bottom, don't worry about it. {It's} not on.
+1> The relevant display.
 
 [61 25 40] CAPCOM
 No big deal.
@@ -11352,7 +11368,7 @@ No big deal.
 [61 25 41] FLIGHT
 Yeah.
 
-[61 25 47 - 61 25 49] FLIGHT
+[61 25 48 - 61 25 49] FLIGHT
 CAPCOM, would you read them up that takeover?
 
 [61 25 51 - 61 25 53] FLIGHT
@@ -11385,10 +11401,10 @@ What is it, GUIDANCE?
 [61 26 20] GUIDO
 It's for AUTO THROTTLE, FLIGHT.
 
-[61 26 21 - 61 26 25] FLIGHT
+[61 26 22 - 61 26 25] FLIGHT
 It's for AUTO THROTTLE. That doesn't say much to me, GUIDANCE, but -
 
-[61 26 28 - 61 26 29] FLIGHT
+[61 26 29 - 61 26 30] FLIGHT
 We burn MANUAL, you know, GUIDANCE.
 
 [61 26 30 - 61 26 31] GUIDO
@@ -11397,25 +11413,25 @@ He's gotta manual-throttle the thing, FLIGHT.
 [61 26 31] FLIGHT
 Yes.
 
-[61 26 33 - 61 26 35] GUIDO
+[61 26 33 - 61 26 35] CONTROL
 He needs to put his throttle to MIN, also, FLIGHT.
 
-[61 26 37 - 61 26 38] FLIGHT
+[61 26 38] FLIGHT
 Throttle to MIN.
 
-[61 26 39 - 61 26 40] GUIDO
+[61 26 39 - 61 26 41] CONTROL
 Yes. He's at 29% now, roughly.
 
 [61 26 42 - 61 26 43] FLIGHT
 Okay. CAPCOM, he needs to put his -
 
-[61 26 43 - 61 26 44] GUIDO
+[61 26 43 - 61 26 44] CONTROL
 Standby, disregard that.
 
 [61 26 44] FLIGHT
 Okay.
 
-[61 26 44 - 61 26 48] GUIDO
+[61 26 44 - 61 26 48] CONTROL
 I can't tell; he hasn't armed the DPS yet, but he needs to confirm that he does have it at MIN.
 
 [61 26 49] FLIGHT
@@ -11433,7 +11449,7 @@ Negative. He's in MIN IMPULSE, FLIGHT. He goes ATT HOLD, it turns the jets off.
 [61 27 20] FLIGHT
 Alright.
 
-[61 27 28 - 61 27 30] CAPCOM
+[61 27 29 - 61 27 30] CAPCOM
 Okay. How are you set up for 2 minutes?
 
 [61 27 32 - 61 27 35] FLIGHT
@@ -11445,28 +11461,28 @@ Negative, FLIGHT. Engine ignition.
 [61 27 40 - 61 27 42] FLIGHT
 Okay. What is - why is that clock counting a different number up there?
 
-[61 27 43 -] GUIDO
+[61 27 44 -] GUIDO
 Time delay, FLIGHT, from -
 
 [61 27 45] FLIGHT
 That's an awful big one.
 
 [- 61 27 45] GUIDO
-- you're reading his DSKY one.
+- you're reading his DSKY.
 
-[61 27 48] GUIDO
+[61 27 48 - 61 27 49] FLIGHT
 Plus, he's ahead of us.
 
-[61 27 54 - 61 27 59] RETRO
+[61 27 55 - 61 27 59] RETRO
 FLIGHT, RETRO. I've got an ignition time of 1:47. 1:45.
 
 [61 28 00 - 61 28 01] FLIGHT
 Is he loaded correctly?
 
-[61 28 06 - 61 28 09] FLIGHT
+[61 28 07 - 61 28 09] FLIGHT
 Say again? GUIDANCE or RETRO? Is he loaded correctly?
 
-[61 28 11] FLIGHT
+[61 28 11 - 61 28 12] FLIGHT
 That's the question.
 
 [61 28 12] ?? (off loop)
@@ -11484,13 +11500,13 @@ Wall clock is wrong, FLIGHT.
 [61 28 17] FLIGHT
 Thank you.
 
-[61 28 22 - 61 28 24] CAPCOM
+[61 28 23 - 61 28 24] CAPCOM
 Okay, how do you like his configuration at 1 +30?
 
 [61 28 25] FLIGHT
 CONTROL, everything okay with you?
 
-[61 28 26 - 61 28 29] CONTROL
+[61 28 27 - 61 28 30] CONTROL
 We haven't seen the VERB 65, but that's okay if he doesn't get it.
 
 [61 28 32 - 61 28 34] FLIGHT
@@ -11508,7 +11524,7 @@ GUIDANCE, okay?
 [61 28 41] GUIDO
 We're good, FLIGHT.
 
-[61 28 42] FLIGHT
+[61 28 42 - 61 28 43] FLIGHT
 CONTROL. Okay?
 
 [61 28 43 - 61 28 44] CONTROL
@@ -11529,7 +11545,7 @@ We're good, FLIGHT.
 [61 28 49 - 61 28 50] FLIGHT
 All good here at 1 minute.
 
-[61 29 12 - 61 29 14] CONTROL
+[61 29 13 - 61 29 14] CONTROL
 Still on VERB 65, FLIGHT.
 
 [61 29 16] FLIGHT
@@ -11556,7 +11572,7 @@ Thank you.
 [61 29 40] CONTROL
 We have ullage.
 
-[61 29 49 - 61 29 50] CONTROL
+[61 29 50 - 61 29 51] CONTROL
 We have ignition, low throttle point.
 
 [61 29 56] CONTROL
@@ -11565,13 +11581,13 @@ We have ignition, low throttle point.
 [61 29 57] CONTROL
 Rates look good.
 
-[61 29 58] FLIGHT
+[61 29 58 - 61 29 59] FLIGHT
 Rates are holding good, huh?.
 
-[61 30 00] CONTROL
+[61 30 01] CONTROL
 Looking okay, FLIGHT.
 
-[61 30 01] FLIGHT
+[61 30 02] FLIGHT
 Okay.
 
 [61 30 16] CONTROL
@@ -11586,10 +11602,10 @@ Yeah.
 [61 30 26 - 61 30 27] CAPCOM
 Okay, how about what's left over?
 
-[61 30 29 - 61 30 30] FLIGHT
+[61 30 30] FLIGHT
 Any requirement to trim?
 
-[61 30 33] GUIDO
+[61 30 33 - 61 30 34] GUIDO
 - - trim, FLIGHT.
 
 [61 30 34] FLIGHT
@@ -11598,14 +11614,14 @@ Trim to what?
 [61 30 36] GUIDO
 0.2.
 
-[61 30 40] FLIGHT
+[61 30 38 - 61 30 40] FLIGHT
 Well. Kind of hard to do that.
 
 [61 30 42 - 61 30 43] FLIGHT
 That's good, isn't it?
 
 [61 30 44] GUIDO
-That's good now.
+That's good enough.
 
 [61 30 44] FLIGHT
 Good, CAPCOM.
@@ -11625,7 +11641,7 @@ Okay. Well now, he's got to go through a number of things, right?
 [61 31 12] CONTROL
 Roger.
 
-[61 31 20 - 61 31 30] FLIGHT
+[61 31 21 - 61 31 30] FLIGHT
 Okay, CONTROL. The next question is what control mode, if any, do you want to be in, here? Work with the back room. Do we want to try to set up some kind of PTC in AGS or are we just going to power down, let this thing drift?
 
 [61 31 31 - 61 31 33] CONTROL
@@ -11655,25 +11671,25 @@ Just a minute.
 [61 32 05] INCO
 Okay.
 
-[61 32 06] CONTROL
+[61 32 06 - 61 32 07] CONTROL
 FLIGHT, from CONTROL.
 
-[61 32 08 - 61 32 10] FLIGHT
+[61 32 09 - 61 32 10] FLIGHT
 How are we doing? Are we getting configured MASTER ARM?
 
 [61 32 11 - 61 32 12] TELMU
 No. We've still got the MASTER ARM ON.
 
-[61 32 13 - 61 32 16] FLIGHT
+[61 32 13 - 61 32 17] FLIGHT
 Yeah, you'd better have them take the MASTER ARM OFF. CONTROL, anything for configuration?
 
 [61 32 17 - 61 32 22] CONTROL
 The only thing I might recommend, if he wants to - the VERB 76 but I'm happy with the way it is right now.
 
-[61 32 23 - 61 32 25] FLIGHT
+[61 32 23 - 61 32 26] FLIGHT
 Okay. We're going to turn the PGNS down here, pronto.
 
-[61 32 26 - 61 32 28] CONTROL
+[61 32 26 - 61 32 29] CONTROL
 Yeah, we've got to get the AGS turned up, though - and I've got the procedure here to give -
 
 [61 32 29 - 61 32 31] FLIGHT
@@ -11682,7 +11698,7 @@ Well, now, do we? Have to get it turned up?
 [61 32 34] CONTROL
 Standby.
 
-[61 32 35] FLIGHT
+[61 32 36] FLIGHT
 How about just drifting?
 
 [61 32 37] CONTROL
@@ -11691,10 +11707,10 @@ If that's -
 [61 32 38 - 61 32 39] FLIGHT
 Well, that's what I'm asking you to check.
 
-[61 32 40 - 61 32 43] CONTROL
+[61 32 40 - 61 32 44] CONTROL
 Yeah, okay. But let's not turn the PGNS off right quick-like. Let me check for you.
 
-[61 32 51 - 61 32 52] FLIGHT
+[61 32 52] FLIGHT
 That's what we're going through right now.
 
 [61 33 04] INCO
@@ -11703,14 +11719,14 @@ FLIGHT, INCO.
 [61 33 05] FLIGHT
 Go ahead.
 
-[61 33 05 - 61 33 12] INCO
+[61 33 06 - 61 33 12] INCO
 If you're going to do something with powering down, you'd better do it quick, because I'm going to have to make you do {a handover} here, and it's probably going to cost you COMM for at least 5 minutes.
 1> Between MSFN ground stations, as the Earth rotates.
 
-[61 33 13 - 61 33 15] FLIGHT
+[61 33 14 - 61 33 15] FLIGHT
 How soon? Are you going to have to hand over?
 
-[61 33 16 - 61 33 19] INCO
+[61 33 16 - 61 33 20] INCO
 Well, the handover's going to have to go on here in about - 12, 13 minutes.
 
 [61 33 20] FLIGHT
@@ -11746,7 +11762,7 @@ CONTROL, FLIGHT.
 [61 34 24] CONTROL
 Go ahead, FLIGHT.
 
-[61 34 25 - 61 34 26] FLIGHT
+[61 34 25 - 61 34 27] FLIGHT
 Do we now have a procedure that people think might work in AGS?
 
 [61 34 27 - 61 34 28] CONTROL
@@ -11755,7 +11771,7 @@ Negative. Do not.
 [61 34 28 - 61 34 29] FLIGHT
 We don't have a procedure?
 
-[61 34 30 - 61 34 31] CONTROL
+[61 34 30 - 61 34 32] CONTROL
 Not right now. In AGS, for PTC.
 
 [61 34 35 - 61 34 39] FLIGHT
@@ -11780,9 +11796,9 @@ Okay, well, we'll wait and see in a minute. If that's so, there's no need in pow
 That's right.
 
 [61 34 57 - 61 34 58] FLIGHT
-We'll wait for them.
+We're waiting for them.
 
-[61 35 01 - 61 35 12] FLIGHT
+[61 35 02 - 61 35 12] FLIGHT
 Okay, and if that's the case, then we'll go ahead down. The only reason I'm delaying powering the PGNS down is to be sure we don't need the AGS. It sounds like we don't know how to use it anyway, but I - give them 2 minutes and we ought to know for sure.
 
 [61 35 13] CONTROL
@@ -11800,7 +11816,7 @@ Say again?
 [61 35 18 - 61 35 19] CONTROL
 Are we doing another burn at 79 hours?
 
-[61 35 20 - 61 35 21] FLIGHT
+[61 35 20 - 61 35 22] FLIGHT
 Plan on that. Yes. I don't know whether we are or not -
 
 [61 35 22 - 61 35 23] CONTROL
@@ -11845,7 +11861,7 @@ FAO, when is the shadow of the Moon that we might get a P51 and 2?
 [61 36 00 - 61 36 01] FAO
 Okay, FLIGHT. Standby and we'll look at that.
 
-[61 36 03 - 61 36 09] FLIGHT
+[61 36 04 - 61 36 09] FLIGHT
 TELMU, FLIGHT. How much does it cost me to keep the AGS up, as a coarse reference?
 
 [61 36 10] TELMU
@@ -11854,10 +11870,10 @@ That's going to cost -
 [61 36 10 - 61 36 12] FLIGHT
 How many pounds of water? And how many amps?
 
-[61 36 14] FLIGHT
+[61 36 14 - 61 36 15] FLIGHT
 Say again? Ed?
 
-[61 36 54] CONTROL
+[61 36 55] CONTROL
 FLIGHT, CONTROL.
 
 [61 36 57] FLIGHT
@@ -11872,19 +11888,19 @@ Now wait a minute. We don't want to be out of attitude control, do we?
 [61 37 08 - 61 37 09] CONTROL
 That won't - I won't put you out of attitude control.
 
-[61 37 12 - 61 37 13] FLIGHT
+[61 37 13 - 61 37 14] FLIGHT
 Okay. That's right. That's the -
 
-[61 37 13 - 61 37 18] CONTROL
+[61 37 14 - 61 37 18] CONTROL
 If you - if you want to save some power right now. We may have to put them back in later when we go to AGS, but -
 
 [61 37 21] FLIGHT
 Okay, which ones were they?
 
-[61 37 22 - 61 37 29] CONTROL
+[61 37 22 - 61 37 30] CONTROL
 The ATCA on CB 16, and the DECA GIMBAL and DECA POWER.
 
-[61 37 31 - 61 37 32] FLIGHT
+[61 37 32 - 61 37 33] FLIGHT
 Yeah. We can sure turn those off.
 
 [61 37 33 - 61 37 35] CONTROL
@@ -11947,13 +11963,13 @@ Go, FLIGHT.
 [61 39 24 - 61 39 33] FLIGHT
 Can you give us a star - ball angles, I should say, for a COAS star check in the shadow?
 
-[61 39 34] GUIDO
+[61 39 35] GUIDO
 Yeah.
 
 [61 39 35] FLIGHT
 Pronto.
 
-[61 39 36 - 61 39 37] GUIDO
+[61 39 37] GUIDO
 In the Moon shadow?
 
 [61 39 38 - 61 39 40] FLIGHT
@@ -11968,7 +11984,7 @@ How about - how about the idea he just gave us about using the Command Module op
 [61 40 07 - 61 40 11] FLIGHT
 Well, we can do that now - what's our objective here, to check the platform again?
 
-[61 40 16 - 61 40 19] FLIGHT
+[61 40 17 - 61 40 19] FLIGHT
 I mean, we can do a lot of things. I want to know why we want to do something.
 
 [61 40 39] INCO
@@ -11987,28 +12003,28 @@ Yeah. I know.
 Well, we've got to do a handoff over here. We don't have any choice. To try to make it as quick as possible, I want to turn down the transceiver for 5 minutes, let us push the IU out of the way, and then bring up the {carrier} after 5 minutes, when it comes on we'll be able to distinguish the LM. That's the quickest way we know how to try to do it. And we hope it works better than last time.
 1> This is the base frequency that the transceiver locks onto.
 
-[61 41 06 - 61 41 07] FLIGHT
+[61 41 07 - 61 41 08] FLIGHT
 Okay. Well you gotta hand over now, do you?
 
 [61 41 08 - 61 41 13] INCO
 We don't have any choice. It's going to be one way or another - it's either going to be the hard way or the easy way. I can't guarantee either way.
 
-[61 41 15 - 61 41 19] FLIGHT
+[61 41 15 - 61 41 20] FLIGHT
 Okay. I wish I knew what we wanted to do, here, before we lost COMM.
 
-[61 41 20] CONTROL
+[61 41 20 - 61 41 21] CONTROL
 FLIGHT, CONTROL.
 
 [61 41 22] FLIGHT
 Go ahead.
 
-[61 41 22] CONTROL
+[61 41 23] CONTROL
 I've got a recommendation.
 
-[61 41 23] FLIGHT
+[61 41 24] FLIGHT
 Go ahead.
 
-[61 41 40 - 61 41 44] FLIGHT
+[61 41 41 - 61 41 44] FLIGHT
 EECOM? We gave him a GO on that, didn't we? He probably didn't hear it. Hook up the side hatch urine dump.
 
 [61 41 46 - 61 41 47] EECOM
@@ -12029,7 +12045,7 @@ What do you want him to use?
 [61 42 01 - 61 42 04] EECOM
 Use the normal procedure. Let - - let me explain that.
 
-[61 42 05 - 61 42 07] INCO
+[61 42 06 - 61 42 07] INCO
 FLIGHT, INCO. I've got {a degree left}. That's it.
 1> Before the current dish hits its tracking limit.
 
@@ -12051,10 +12067,10 @@ CAPCOM, have him turn off the S-BAND transmitter/receiver.
 [61 42 25] FLIGHT
 5 minutes.
 
-[61 42 26] CONTROL
+[61 42 27] CONTROL
 FLIGHT, CONTROL.
 
-[61 42 28 - 61 42 29] FLIGHT
+[61 42 29] FLIGHT
 Can you wait, CONTROL?
 
 [61 42 29] CONTROL
@@ -12084,7 +12100,7 @@ Roger.
 [61 43 03 - 61 43 04] FLIGHT
 Unless you've got a problem.
 
-[61 43 04 - 61 43 05] FDO
+[61 43 04] FDO
 No problem.
 
 [61 43 15] INCO
@@ -12099,13 +12115,13 @@ Go ahead, FLIGHT.
 [61 43 45] CONTROL
 Affirmative.
 
-[61 43 49 - 61 43 50] CONTROL
+[61 43 50 - 61 43 51] CONTROL
 That's good enough. That's real good.
 
 [61 43 50 - 61 43 51] CAPCOM
 You ready for the TRANSMITTER/RECEIVER?
 
-[61 43 52 - 61 43 54] FLIGHT
+[61 43 53 - 61 43 54] FLIGHT
 You ready for that? They're ready.
 
 [61 43 55] INCO
@@ -12117,7 +12133,7 @@ On - turn it off now?
 [61 43 56] INCO
 Roger.
 
-[61 43 56] FLIGHT
+[61 43 56 - 61 43 57] FLIGHT
 Go ahead, for 5 minutes.
 
 [61 44 07 - 61 44 10] INCO
@@ -12138,10 +12154,10 @@ Yeah, we can come up with one, FLIGHT.
 [61 44 59 - 61 45 03] FLIGHT
 Could I have - could I ask for a little quiet in the room, please? It's getting awful noisy in here.
 
-[61 45 04 - 61 45 07] CONTROL
+[61 45 05 - 61 45 07] CONTROL
 We can work on that, but I've got something in my mind here, that I think we ought to do first.
 
-[61 45 08] FLIGHT
+[61 45 08 - 61 45 09] FLIGHT
 Okay. And that is?
 
 [61 45 09 - 61 45 14] CONTROL
@@ -12150,13 +12166,13 @@ And that is to bring the PGNS - bring the AGS up, take the PGNS alignment to it,
 [61 45 14] FLIGHT
 Yeah.
 
-[61 45 15 - 61 45 16] CONTROL
+[61 45 16] CONTROL
 We're eating power.
 
 [61 45 16] FLIGHT
 Yeah.
 
-[61 45 17 - 61 45 18] CONTROL
+[61 45 18] CONTROL
 We can do that now.
 
 [61 45 19 - 61 45 20] FLIGHT
@@ -12220,13 +12236,13 @@ We've got a gamut entry interface of -6.53.
 Okay. I'm - with - that's all coming on nominal, then.
 
 [61 49 08 - 61 49 13] FDO
-That's roger. What's even better is that {the doppler} is within 7 cycles.
+Roger. What's even better is that {the doppler} is within 7 cycles.
 1> From the ground tracking station.
 
 [61 49 14 - 61 49 15] FLIGHT
 So you think the doppler confirms it.
 
-[61 49 15 - 61 49 18] FDO
+[61 49 16 - 61 49 18] FDO
 The doppler says that we're - we did the right things, that's affirm.
 
 [61 49 18] FLIGHT
@@ -12245,7 +12261,7 @@ Hold on a second now, Jack.
 [61 51 16 - 61 51 17] FLIGHT
 What's the conclusion? We can keep the IMU up?
 
-[61 51 26 - 61 51 27] FLIGHT
+[61 51 27 - 61 51 28] FLIGHT
 And we've got the water?
 
 [61 51 32 - 61 51 33] ?? (off loop)
@@ -12266,13 +12282,13 @@ Are you involved in all that?
 [61 52 13 - 61 52 18] TELMU
 Yeah. I have to leave the total load, there, of course. We've been kind of involved with the EPS concern.
 
-[61 52 18 -] FLIGHT
+[61 52 19 -] FLIGHT
 Bill Peters has been in - Bill, would you, quick, tag in now -
 
-[61 52 21] Gold TELMU
+[61 52 22] Gold TELMU
 Okay.
 
-[- 61 52 23] FLIGHT
+[- 61 52 24] FLIGHT
 - I'd like, quickly, to know what you want done.
 
 [61 52 41] INCO
@@ -12300,7 +12316,7 @@ FLIGHT, CONTROL.
 Okay. Go ahead. Calling, FLIGHT.
 
 [61 54 14 - 61 54 21] CONTROL
-One - CONTROL. One thing to consider, Glynn, is if we do this, we're going to have to have - implement a method to keep them out of gimbal lock.
+One - CONTROL. One thing to consider, Glynn, is if we do this, we're going to have to have - implement a method of keeping them out of gimbal lock.
 
 [61 54 23] FLIGHT
 I guess they're just going to have to watch it.
@@ -12309,18 +12325,18 @@ I guess they're just going to have to watch it.
 He's got nothing to watch on board. We're powering everything down.
 
 [61 54 27 - 61 54 28] FLIGHT
-Now, how are we going to leave the IMU up?
+No, we're going to leave the IMU up.
 
 [61 54 29 - 61 54 30] CONTROL
 Okay. Got to leave the inverters up, then.
 
-[61 54 31 - 61 54 33] FLIGHT
+[61 54 32 - 61 54 33] FLIGHT
 Okay, well that's what I'm waiting for TELMU to tell me.
 
-[61 54 34 - 61 54 36] CAPCOM
+[61 54 35 - 61 54 36] CAPCOM
 We need a DAP load to conserve RCS.
 
-[61 54 38 - 61 54 40] FLIGHT
+[61 54 39 - 61 54 40] FLIGHT
 A DAP load to conserve RCS, CONTROL.
 
 [61 54 43 - 61 54 45] CONTROL
@@ -12338,7 +12354,7 @@ FLIGHT, CONTROL.
 [61 55 03] FLIGHT
 Go ahead.
 
-[61 55 03 - 61 55 08] CONTROL
+[61 55 04 - 61 55 08] CONTROL
 Recommend he goes VERB 76 MIN IMPULSE, and then keep his eye on the middle gimbal angle.
 
 [61 55 09 - 61 55 10] FLIGHT
@@ -12347,22 +12363,22 @@ Okay. Is that all you've got to tell them for the DAP?
 [61 55 10 - 61 55 14] CONTROL
 Yeah, the DAP load's okay. But he needs to go MIN IMPULSE.
 
-[61 55 14] FLIGHT
+[61 55 15] FLIGHT
 Okay.
 
 [61 55 15 - 61 55 17] CONTROL
-VERB 76. Keep an eye on the middle gimbal angle.
+VERB 76. And keep an eye on the middle gimbal angle.
 
-[61 55 19] FLIGHT
+[61 55 20] FLIGHT
 TELMU, FLIGHT.
 
 [61 55 21] TELMU
 Go, FLIGHT.
 
-[61 55 21 -] FLIGHT
+[61 55 22 -] FLIGHT
 I guess I kind of need to know, here, as much as you do -
 
-[61 55 25] TELMU
+[61 55 26] TELMU
 Roger.
 
 [- 61 55 30] FLIGHT
@@ -12380,10 +12396,10 @@ Just a couple more minutes.
 [61 55 58 - 61 55 59] CAPCOM
 Do we have a PAD for 79 hours?
 
-[61 56 01] FLIGHT
+[61 56 01 - 61 56 02] FLIGHT
 Not yet, I'm sure.
 
-[61 56 20] FLIGHT
+[61 56 21 -] FLIGHT
 Okay, gentlemen. The proposal before the room right now is to turn down the LGC and to pick up all the rest of the smaller power items we can. Leave the IMU up; TELMU's within a few minutes of -
 
 [61 56 31] TELMU
@@ -12398,8 +12414,8 @@ We can - we can do that, FLIGHT, with the IMU up and the AC. It looks like it wo
 [61 56 38 - 61 56 40] FLIGHT
 The AC. You mean one ball. Okay. Is that what you mean?
 
-[61 56 40 - 61 56 50] TELMU
-Yeah. Inverter. Yeah. Looks like also it would probably be cheaper, power-wise, to turn the steerable on, if we could get COMMs attention here - INCO.
+[61 56 41 - 61 56 50] TELMU
+Yeah. Inverters. Yeah. Looks like also it would probably be cheaper, power-wise, to turn the steerable on, if we could get COMMs attention here - INCO.
 
 [61 56 50] FLIGHT
 INCO, you up?
@@ -12448,7 +12464,7 @@ He'll have to do it for us.
 We've got a guy awake anyway.
 
 [61 57 23] FLIGHT
-Well.
+Well -
 
 [61 57 26 - 61 57 28] FLIGHT
 Will we get high-gain coverage, and then we'll drop off, is that what'll happen?
@@ -12459,16 +12475,16 @@ Yeah, it'll go at the end of blockage or gimbal limits and he'll have to switch 
 [61 57 33 - 61 57 36] FLIGHT
 Recommend something to me, will you? How many amps do we save?
 
-[61 57 36 - 61 57 39] TELMU
-FLIGHT, we just save about an amp and a half, so it's not -
+[61 57 37 - 61 57 39] TELMU
+FLIGHT, we just save about an amp and a half, so it's not a -
 
 [61 57 40 - 61 57 41] FLIGHT
 And it's not a - it's not a coolant item. It's not a water item, is it?
 
-[61 57 41] TELMU
+[61 57 42] TELMU
 Yeah.
 
-[61 57 42 - 61 57 46] FLIGHT
+[61 57 43 - 61 57 46] FLIGHT
 Alright, I'm - let's let that go for tonight anyway. Maybe we'll figure something clever out tomorrow night.
 
 [61 57 47] TELMU
@@ -12501,7 +12517,7 @@ FLIGHT, GUIDANCE.
 [61 58 09] FLIGHT
 Go ahead.
 
-[61 58 10 - 61 58 21] GUIDO
+[61 58 10 - 61 58 22] GUIDO
 You asked a while ago about some stars. I've got some - I picked out some stars to look - if you - I don't know if he wants to do any maneuvering - the maneuver, it's 180 degrees from the Sun. To center the COAS.
 
 [61 58 22 - 61 58 23] FLIGHT
@@ -12516,16 +12532,16 @@ Yeah.
 [61 58 49 - 61 58 50] CONTROL
 Did we just tell him to power the computer down?
 
-[61 58 50 - 61 58 52] FLIGHT
+[61 58 51 - 61 58 52] FLIGHT
 No, we're just advising on what the plan's going to be.
 
 [61 58 52] CONTROL
 Oh, okay.
 
-[61 58 53] FLIGHT
+[61 58 53 - 61 58 54] FLIGHT
 But we're waiting.
 
-[61 58 54] CONTROL
+[61 58 54 - 61 58 55] CONTROL
 Yeah, okay.
 
 [61 59 56 - 61 59 58] FLIGHT
@@ -12537,13 +12553,13 @@ Roger, FLIGHT.
 [62 00 00] CONTROL
 Roger, FLIGHT.
 
-[62 00 00 - 62 00 01] FLIGHT
+[62 00 01 - 62 00 02] FLIGHT
 You're GO to power the LGC down?
 
-[62 00 00] CONTROL
+[62 00 01] CONTROL
 Right.
 
-[62 00 01 - 62 00 02] TELMU
+[62 00 02] TELMU
 Yeah. LGC and IMU.
 
 [62 00 03 - 62 00 04] FLIGHT
@@ -12582,7 +12598,7 @@ Negative! I do not want to power the computer down.
 [62 00 24] FLIGHT
 Now why not?
 
-[62 00 25 - 62 00 29] CONTROL
+[62 00 26 - 62 00 29] CONTROL
 I'm being told that we can leave it up for the sleep period and it will keep their attitude for them, keep them out of gimbal lock.
 > Lunney must be near the end of his rope here.
 
@@ -12613,11 +12629,11 @@ And what kind of control mode do you see them being in, here tonight?
 [62 00 54 - 62 00 57] CONTROL
 Okay, just in a 5 degree deadband ATTITUDE HOLD.
 
-[62 00 58 - 62 01 02] FLIGHT
+[62 00 59 - 62 01 02] FLIGHT
 Wait a minute. We don't want to be in ATTITUDE HOLD. We want to roll - oh, you want to let roll go?
 > FLIGHT's thinking about a PTC.
 
-[62 01 03 - 62 01 05] CONTROL
+[62 01 03 - 62 01 06] CONTROL
 You can't let roll go. It's going to be an ATT HOLD.
 
 [62 01 07 - 62 01 12] FLIGHT
@@ -12629,13 +12645,13 @@ I've got the question in, I haven't got an answer on it yet, FLIGHT.
 [62 01 18 - 62 01 20] CONTROL
 The tentative answer I got was we did not require any PTC.
 
-[62 01 24 - 62 01 32] CONTROL
+[62 01 25 - 62 01 32] CONTROL
 Yeah, the only problem, Glynn, if - in the other mode, if we just leave the platform up, we may drift through gimbal lock and that would defeat the purpose of leaving it up.
 
-[62 01 32 - 62 01 35] FLIGHT
+[62 01 33 - 62 01 35] FLIGHT
 We have a guy sitting there watching it! We're going to keep a guy up!
 
-[62 01 37 - 62 01 39] CONTROL
+[62 01 38 - 62 01 39] CONTROL
 Okay. And we're going to have to leave the inverters on also, then.
 
 [62 01 40] FLIGHT
