@@ -118,6 +118,11 @@ a
 
 // COMPONENTS
 
+@keyframes fade-out
+  0%
+    opacity: 1
+  100%
+    opacity: 0.1
 .player
   background-color: $color-box-bg
   border-bottom: 0.1em solid $color-light-border
@@ -256,12 +261,18 @@ a
 
   .player-bookmark
     $mark-color: #555
+    animation-duration: 150s
+    animation-name: fade-out
+    animation-iteration-count: 1
     border-left: 1px solid $mark-color
     height: 0.3em
     position: absolute
     top: 1em
     transition: 0.3s height
     width: 0
+
+    &:hover
+      animation-name: none
 
     &:before
       $hit-size: 2.4em
