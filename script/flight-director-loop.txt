@@ -6102,7 +6102,7 @@ Roger, FLIGHT, we're doing pretty good. I've got to get with you in a little whi
 [58 35 18] FLIGHT
 Okay.
 
-[58 35 20] TELMU
+[- 58 35 20] TELMU
 - high {SNO2 pressure}.
 1> ??
 
@@ -7995,7 +7995,7 @@ I'm suggesting POWER AMPL -
 [59 44 41 - 59 44 42] FLIGHT
 POWER AMPL. How much does that save?
 
-[59 44 41 - 59 44 45] TELMU
+[- 59 44 45] TELMU
 - and LOW BIT RATE - that's about 2.5 amps.
 
 [59 44 45] FLIGHT
@@ -9429,7 +9429,7 @@ Yes.
 [60 37 52] FLIGHT (off loop)
 Yes.
 
-[60 37 52 - 60 37 53] CAPCOM (off loop)
+[- 60 37 53] CAPCOM (off loop)
 - aren't we going to call those out now?
 
 [60 37 53 - 60 37 57] FLIGHT
