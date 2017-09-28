@@ -8,7 +8,7 @@ stdlib = require(\janus-stdlib)
 { from-event } = require(\janus-stdlib).util.varying
 
 { defer, hms-to-epoch, hash-to-hms, epoch-to-hms, attach-floating-box, load-assets, is-blank } = require('./util')
-{ max } = Math
+{ max, abs } = Math
 
 # determine application mode.
 kiosk-mode = window.location.search is '?kiosk'
@@ -175,8 +175,13 @@ $window.on(\hashchange, (event) ->
   hms = hash-to-hms(new-hash)
   return unless hms?
   { hh, mm, ss } = hms
-  player.bookmark()
-  player.epoch(hms-to-epoch(hh, mm, ss))
+  epoch = hms-to-epoch(hh, mm, ss)
+
+  if (player.get(\timestamp.epoch) - epoch |> abs) > 90
+    # only bookmark for somewhat significant leaps.
+    player.bookmark()
+
+  player.epoch(epoch)
   player.get(\loops.flight).set(\auto_scroll, true)
   player.get(\loops.air_ground).set(\auto_scroll, true)
 )
