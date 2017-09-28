@@ -477,12 +477,21 @@ a
       font-size: 0.5em
       vertical-align: super
 
-    ~ .token-annotation:after
-      content: '2'
-      ~ .token-annotation:after
-        content: '3'
-        ~ .token-annotation:after
-          content: '4'
+    ~ .token-annotation
+      &:after
+        content: '2'
+      ~ .token-annotation
+        &:after
+          content: '3'
+        ~ .token-annotation
+          &:after
+            content: '4'
+          ~ .token-annotation
+            &:after
+              content: '5'
+            ~ .token-annotation
+              &:after
+                content: '6'
 
   &:hover .line-heading a
     display: inline
@@ -495,7 +504,7 @@ a
       padding-top: 0.3em
 
     .line-token-annotations
-      @for $idx from 1 through 4
+      @for $idx from 1 through 6
         li:nth-child(#{$idx})
           span:before
             content: '#{$idx}'
