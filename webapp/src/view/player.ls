@@ -13,11 +13,11 @@ class PlayerView extends DomView
       <audio/>
       <div class="player-chrome">
         <div class="player-controls">
-          <button class="player-leapback" title="Back 15 seconds"/>
-          <button class="player-hopback" title="Back 6 seconds"/>
+          <button class="player-leapback" title="Back 15 seconds (&#8679;J)"/>
+          <button class="player-hopback" title="Back 6 seconds (J)"/>
           <button class="player-playpause"/>
-          <button class="player-hopforward" title="Forward 6 seconds"/>
-          <button class="player-leapforward" title="Forward 15 seconds"/>
+          <button class="player-hopforward" title="Forward 6 seconds (L)"/>
+          <button class="player-leapforward" title="Forward 15 seconds (&#8679;L)"/>
         </div>
         <div class="player-right">
           <div class="player-timestamp">
@@ -158,6 +158,17 @@ class PlayerView extends DomView
     from(crossed-threshold).and(player.watch(\base_height)).all.plain().map((is-fixed, base-height) ->
       if is-fixed then chrome-height + base-height else \auto
     ).reactLater(-> container.css(\height, it))
+
+    # keyboard audio navigation.
+    body.on(\keydown, (event) ->
+      increment = if event.shiftKey is true then 15 else 6
+      if event.which is 74
+        audio-raw.currentTime -= increment
+      else if event.which is 76
+        audio-raw.currentTime += increment
+      else if event.which is 75
+        if audio-raw.paused is true then audio-raw.play() else audio-raw.pause()
+    )
 
 
 module.exports = {
