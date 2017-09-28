@@ -137,7 +137,7 @@ class Transcript extends Model
   ))
 
   # now that we have the cued idx, we potentially migrate backwards until we have
-  # one of the earliest still-playing line or the next line to be played, in that
+  # one of the earliest still-playing line or the last line that was played, in that
   # order of preference.
   @bind(\target_idx, from(\lines).and(\cued_idx).and(\player).watch(\timestamp.epoch).all.map((lines, idx, epoch) ->
     return unless idx? # implies existence of lines.
@@ -171,51 +171,6 @@ class Transcript extends Model
     return [] unless ids? and lookup?
     [ term for id in ids when (l = lookup.get(id))? for term in l.list ]
   ))
-
-  _initialize: ->
-    transcript = this
-
-    do
-      # when our target_idx changes, push active state down into lines.
-      # but we can't do that until we have a player:
-      (player) <- transcript.watch(\player).react()
-      return unless player?
-
-      # now watch idx, but also update on epoch-change:
-      was-active = {}
-      active-ids = {}
-      last-idx = -1
-      from(transcript.watch(\target_idx)).and(player.watch(\timestamp.epoch)).all.plain().react(([ idx, epoch ]) ->
-        return unless idx? and epoch?
-        return if idx is last-idx
-
-        # first clear out active primary lines that are no longer.
-        for wa-idx, line of was-active when line._start? and not line.contains_(epoch)
-          line.set(\active, false)
-          delete was-active[wa-idx]
-          delete active-ids[line._id]
-
-        # now clear out active secondary lines that are no longer.
-        for wa-idx, line of was-active when not active-ids[line._id]
-          line.set(\active, false)
-          delete was-active[wa-idx]
-
-        # now add lines that should be active. go until we have four inactive in a row.
-        lines = transcript.get(\lines).list
-        misses = 0
-        while misses < 4 and idx < lines.length
-          line = lines[idx]
-          if line.contains_(epoch) or active-ids[line._id] is true
-            unless was-active[idx]?
-              line.set(\active, true)
-              was-active[idx] = line
-              active-ids[line._id] = true
-          else
-            misses += 1
-          idx += 1
-
-        last-idx := idx
-      )
 
   bindToPlayer: (player) -> this.set(\player, player)
 

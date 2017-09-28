@@ -49,8 +49,8 @@ data-paths = <[ flight-director-loop flight-director-loop.lookup air-ground-loop
 unless exhibit-mode is true
   player = new Player(
     loops:
-      flight: Transcript.deserialize( lines: data['flight-director-loop'], name: 'Flight Director\'s Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/flight-director-loop.txt', lookup: Lookup.deserialize(data['flight-director-loop.lookup']) )
-      air_ground: Transcript.deserialize( lines: data['air-ground-loop'], name: 'Air-Ground Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/air-ground-loop.txt', lookup: Lookup.deserialize(data['air-ground-loop.lookup']) )
+      flight: Transcript.deserialize( lines: data['flight-director-loop'], markup: \#script-flight-director-loop, name: 'Flight Director\'s Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/flight-director-loop.txt', lookup: Lookup.deserialize(data['flight-director-loop.lookup']) )
+      air_ground: Transcript.deserialize( lines: data['air-ground-loop'], markup: \#script-air-ground-loop, name: 'Air-Ground Loop', edit_url: 'https://github.com/clint-tseng/apollo13rt/edit/master/script/air-ground-loop.txt', lookup: Lookup.deserialize(data['air-ground-loop.lookup']) )
     glossary: Glossary.deserialize(data.glossary, data['glossary.lookup'])
     audio: { src: 'assets/full.m4a' }
     timestamp: { offset: 200774 }

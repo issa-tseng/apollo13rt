@@ -8,55 +8,6 @@ copy = require(\clipboard-copy)
 { pct, pad, get-time, max-int, bump } = require('../util')
 
 
-class LineView extends DomView
-  # custom render methodology for better perf; render immutable text once only.
-  _render: ->
-    line = this.subject
-    fragment = $("
-      <div>
-        <div class=\"line line-#{line._id}\">
-          #{("<a class=\"line-timestamp\" href=\"##{line.startHms_()}\">
-              <span class=\"hh\">#{line.get(\start.hh)}</span>
-              <span class=\"mm\">#{line.get(\start.mm) |> pad}</span>
-              <span class=\"ss\">#{line.get(\start.ss) |> pad}</span>
-            </a>" if line._start?) ? ''}
-          <div class=\"line-heading\">
-            <span class=\"line-source\">#{line.get(\source)}</span>
-            <a class=\"line-edit\" href=\"\#L#{line.get(\line)}\" target=\"_blank\" title=\"Suggest an edit\"/>
-            #{("<a class=\"line-link\" title=\"Share link to this line\"/>" if line._start?) ? ''}
-          </div>
-          <div class=\"line-contents\">#{line.get(\message)}</div>
-          <div class=\"line-annotations\">
-            <div class=\"line-token-annotations\"/>
-            <div class=\"line-whole-annotations\"/>
-          </div>
-        </div>
-      </div>
-    ")
-
-    # now kick off bindings as usual.
-    this._bindings = LineView._template(fragment)((x) ~> LineView.point(x, this))
-    fragment.children()
-
-  # these commented templating lines are now integrated directly above.
-  @_template = template(
-    #find('.line').classGroup(\line-, from(\id))
-    find('.line').classed(\active, from(\active))
-
-    #find('.line-timestamp').classed(\hide, from(\start.epoch).map((x) -> !x?))
-    #find('.hh').text(from(\start.hh))
-    #find('.mm').text(from(\start.mm).map(pad))
-    #find('.ss').text(from(\start.ss).map(pad))
-
-    #find('.line-edit').attr(\href, from(\line).map((line) -> "\#L#line"))
-
-    #find('.line-source').text(from(\source))
-    #find('.line-contents').html(from(\message))
-
-    find('.line-token-annotations').render(from(\tokens))
-    find('.line-whole-annotations').render(from(\annotations))
-  )
-
 class TranscriptView extends DomView
   @_dom = -> $('
     <div class="script">
@@ -69,7 +20,7 @@ class TranscriptView extends DomView
   ')
   @_template = template(
       find('p .name').text(from(\name))
-      find('.script-lines').render(from(\lines))
+      find('.script-lines').html(from(\markup).map((id) -> $("#id")[0].innerHTML))
       find('.script-scroll-indicator').classed(\active, from(\auto_scroll).map (not))
   )
   _wireEvents: ->
@@ -137,11 +88,52 @@ class TranscriptView extends DomView
       transcript.set(\auto_scroll, true)
     )
 
+    # when our target_idx changes, push active state down into lines.
+    # but we can't do that until we have a player:
+    transcript.watch(\player).react((player) ->
+      return unless player?
+
+      # now watch idx, but also update on epoch-change:
+      was-active = {}
+      active-ids = {}
+      last-idx = -1
+      from(transcript.watch(\target_idx)).and(player.watch(\timestamp.epoch)).all.plain().react(([ idx, epoch ]) ->
+        return unless idx? and epoch?
+        return if idx is last-idx
+
+        # first clear out active primary lines that are no longer.
+        for wa-idx, line of was-active when line._start? and not line.contains_(epoch)
+          dom.find(".line-#{line._id}").removeClass(\active)
+          delete was-active[wa-idx]
+          delete active-ids[line._id]
+
+        # now clear out active secondary lines that are no longer.
+        for wa-idx, line of was-active when not active-ids[line._id]
+          dom.find(".line-#{line._id}").removeClass(\active)
+          delete was-active[wa-idx]
+
+        # now add lines that should be active. go until we have four inactive in a row.
+        lines = transcript.get(\lines).list
+        misses = 0
+        while misses < 4 and idx < lines.length
+          line = lines[idx]
+          if line.contains_(epoch) or active-ids[line._id] is true
+            unless was-active[idx]?
+              dom.find(".line-#{line._id}").addClass(\active)
+              was-active[idx] = line
+              active-ids[line._id] = true
+          else
+            misses += 1
+          idx += 1
+
+        last-idx := idx
+      )
+    )
+
 
 module.exports = {
-  LineView, TranscriptView
+  TranscriptView
   registerWith: (library) ->
-    library.register(Line, LineView)
     library.register(Transcript, TranscriptView)
 }
 
