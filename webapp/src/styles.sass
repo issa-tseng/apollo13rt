@@ -522,6 +522,18 @@ a
             font-weight: bold
             padding-right: 0.3em
 
+  &.post-gap .line-timestamp
+    color: $color-accent-text
+    &:after
+      @include icon
+      content: $icon-leapforward
+      display: block
+      font-size: 2em
+      height: 0
+      margin-left: 1.55em
+    &:hover
+      text-decoration: none
+
 .term
   max-height: 0
   overflow: hidden

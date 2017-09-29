@@ -1,5 +1,5 @@
 $ = require(\jquery)
-{ floor, abs, max } = Math
+{ floor, abs, max, min } = Math
 
 { Model, attribute, from, List, Set, Varying, types } = require(\janus)
 { Request, Store } = require(\janus).store
@@ -135,6 +135,7 @@ class Transcript extends Model
       last-idx := idx
     )
   ))
+  @bind(\cued_epoch, from(\lines).and(\cued_idx).all.flatMap((lines, idx) -> lines?.watch(idx)).map((line) -> line?._start))
 
   # now that we have the cued idx, we potentially migrate backwards until we have
   # one of the earliest still-playing line or the last line that was played, in that
@@ -265,6 +266,16 @@ class Player extends Model
   ))
 
   @bind(\nearby_terms, from(\loops.flight).watch(\nearby_terms).and(\loops.air_ground).watch(\nearby_terms).all.map (++))
+
+  @bind(\post_gap_script, from(\timestamp.epoch).and(\loops.flight).and(\loops.air_ground).all.map((now, flight, air-ground) ->
+    # get these statically as they can't change unless timestamp changes anyway.
+    flight-epoch = flight.get(\cued_epoch)
+    air-ground-epoch = air-ground.get(\cued_epoch)
+    if (now + 20) < min(flight-epoch, air-ground-epoch)
+      if air-ground-epoch < flight-epoch then air-ground else flight
+    else
+      false
+  ))
 
   _initialize: ->
     player = this
