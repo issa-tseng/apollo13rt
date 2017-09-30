@@ -5,7 +5,7 @@ $ = require(\jquery)
 { Request, Store } = require(\janus).store
 { throttle } = require(\janus-stdlib).util.varying
 
-{ defer, clamp, pad, get-time, epoch-to-hms, hash-to-hms, hms-to-epoch } = require('./util')
+{ defer, clamp, pad, get-time, epoch-to-hms, hash-to-hms, hms-to-epoch, epoch-to-hms } = require('./util')
 
 
 
@@ -277,6 +277,13 @@ class Player extends Model
       false
   ))
 
+  @bind(\event_timer.model, from(\timers).and.self().all.flatMap((timers, player) ->
+    epoch = player.watch(\timestamp.epoch)
+    timers.filter((.contains(epoch))).watchAt(0)
+  ))
+  @bind(\event_timer.delta, from(\timestamp.epoch).and(\event_timer.model).watch(\zero).all.map (-))
+  @bind(\event_timer.parts, from(\event_timer.delta).map(epoch-to-hms))
+
   _initialize: ->
     player = this
 
@@ -335,6 +342,16 @@ class Player extends Model
 
 
 ########################################
+# TIMER MODEL
+
+class Timer extends Model
+  contains: (epoch) ->
+    Varying.pure(epoch, this.watch(\start), this.watch(\end), (epoch, start, end) ->
+      start <= epoch <= end
+    )
+
+
+########################################
 # EXHIBIT MODELS
 
 class ExhibitArea extends Model
@@ -369,7 +386,7 @@ module.exports = {
   Global, Splash,
   Line, Lines, Transcript,
   Term, Lookup, Glossary,
-  Player,
+  Player, Timer,
   ExhibitArea, Topic, Exhibit, Graphic,
   BasicRequest, BasicStore,
 

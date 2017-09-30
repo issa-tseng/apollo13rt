@@ -3,7 +3,7 @@ $ = require(\jquery)
 { Varying } = require(\janus)
 stdlib = require(\janus-stdlib)
 { from-event-now } = stdlib.util.varying
-{ min, max, floor } = Math
+{ min, max, floor, abs } = Math
 
 
 module.exports = util =
@@ -21,11 +21,15 @@ module.exports = util =
   if-extant: (f) -> (x) -> f(x) if x?
 
   hms-to-epoch: (hh, mm, ss) -> (hh * 60 * 60) + (mm * 60) + ss
-  epoch-to-hms: (epoch) -> {
-    hh: epoch / 3600 |> floor
-    mm: epoch % 3600 / 60 |> floor
-    ss: epoch % 60
-  }
+  epoch-to-hms: (epoch) ->
+    sign = if epoch < 0 then \- else \+
+    epoch = abs(epoch)
+    {
+      sign
+      hh: epoch / 3600 |> floor
+      mm: epoch % 3600 / 60 |> floor
+      ss: epoch % 60
+    }
   hash-to-hms: (hash) ->
     if (hms = /^#?(..):(..):(..)$/.exec(hash))?
       [ _, hh, mm, ss ] = [ parse-int(x) for x in hms ]

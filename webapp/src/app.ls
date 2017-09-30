@@ -4,7 +4,7 @@ $ = window.jQuery = window.$ = require(\jquery)
 { Varying, List } = require(\janus)
 { Library, App } = require(\janus).application
 stdlib = require(\janus-stdlib)
-{ Splash, Global, Glossary, Lookup, Player, Transcript, ExhibitArea, Topic, Exhibit } = require('./model')
+{ Splash, Global, Glossary, Lookup, Player, Timer, Transcript, ExhibitArea, Topic, Exhibit } = require('./model')
 { from-event } = require(\janus-stdlib).util.varying
 
 { defer, hms-to-epoch, hash-to-hms, epoch-to-hms, attach-floating-box, load-assets, is-blank } = require('./util')
@@ -55,6 +55,15 @@ unless exhibit-mode is true
     audio: { src: 'assets/full.m4a' }
     timestamp: { offset: 200774 }
     accident: { epoch: 201293 }
+    timers: new List([
+      new Timer( start: 204_519, zero: 211_359, end: 206_650, caption: 'Predicted fuel cell depletion' ),
+      new Timer( start: 206_650, zero: 209_050, end: 206_942, caption: 'Predicted fuel cell depletion', hot: new List([ new Timer( start: 206_650, end: 206_654 ) ])
+      ),
+      new Timer( start: 206_942, zero: 208_022, end: 207_917, caption: 'Predicted fuel cell depletion', hot: new List([ new Timer( start: 206_941, end: 206_945 ) ]) ),
+      new Timer( start: 207_917, zero: 208_157, end: 209_031, caption: 'Predicted fuel cell depletion', hot: new List([ new Timer( start: 207_917, end: 207_921 ), new Timer( start: 208_097, end: 209_030 ) ]) ),
+
+      new Timer( start: 217_526, zero: 221_388, end: 221_422, caption: 'Free-return trajectory engine burn', hot: new List([ new Timer( start: 221_328, end: 221_419 ) ]) )
+    ])
   )
   global.set(\player, player)
   window.player = player

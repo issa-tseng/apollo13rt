@@ -1,6 +1,6 @@
 $ = require(\jquery)
 
-{ DomView, template, find, from } = require(\janus)
+{ DomView, template, find, from, Varying } = require(\janus)
 { from-event } = require(\janus-stdlib).util.varying
 
 { Player } = require('../model')
@@ -28,6 +28,12 @@ class PlayerView extends DomView
             <div class="player-timestamp-accident">
               <p class="player-timestamp-label">Time <span class="accident-direction"/> accident</p>
               <p class="player-timestamp-time"><span class="hh"/><span class="mm"/><span class="ss"/></p>
+            </div>
+            <div class="player-timestamp-event-wrapper">
+              <div class="player-timestamp-event">
+                <p class="player-timestamp-label"></p>
+                <p class="player-timestamp-time"><span class="sign"/><span class="hh"/><span class="mm"/><span class="ss"/></p>
+              </div>
             </div>
           </div>
           <div class="player-scrubber">
@@ -67,6 +73,19 @@ class PlayerView extends DomView
     find('.player-timestamp-accident .hh').text(from(\accident.delta_hh).map(pad))
     find('.player-timestamp-accident .mm').text(from(\accident.delta_mm).map(pad))
     find('.player-timestamp-accident .ss').text(from(\accident.delta_ss).map(pad))
+
+    find('.player-timestamp-event-wrapper').classed(\active, from.self().and(\event_timer.model).all.flatMap((view, timer) ->
+      Varying.pure(view.subject.watch(\timestamp.epoch), timer.watch(\end), (now, end) -> (end - now) > 0) if timer?
+    ))
+    find('.player-timestamp-event .player-timestamp-label').text(from(\event_timer.model).watch(\caption))
+    find('.player-timestamp-event .sign').text(from(\event_timer.parts.sign))
+    find('.player-timestamp-event .hh').text(from(\event_timer.parts.hh).map(pad))
+    find('.player-timestamp-event .mm').text(from(\event_timer.parts.mm).map(pad))
+    find('.player-timestamp-event .ss').text(from(\event_timer.parts.ss).map(pad))
+    find('.player-timestamp-event').classed(\hot, from.self().and(\event_timer.model).watch(\hot).all.flatMap((view, hot) ->
+      epoch = view.subject.watch(\timestamp.epoch)
+      hot?.filter((.contains(epoch))).watchLength().map (> 0)
+    ))
 
     find('.player-playhead').css(\right, from(\timestamp.timecode).and(\audio.length).all.map ((/) >> (-> 1 - it) >> pct))
 

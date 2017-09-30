@@ -209,6 +209,25 @@ a
       opacity: 0.3
       position: relative
 
+    .player-timestamp-event-wrapper
+      float: right
+      overflow: hidden
+      transition: 1s width
+      width: 0
+      &.active
+        width: 30em
+      .player-timestamp-event
+        width: 30em
+        .player-timestamp-time
+          margin-left: -0.35em
+          transition: 0.5s color
+          .sign
+            font-size: 0.5em
+            font-weight: bold
+            vertical-align: super
+        &.hot .player-timestamp-time
+          color: #e31
+
   .player-scrubber
     margin-top: -0.4em // extend the hit-zone
     padding: 0 1.3em
