@@ -307,6 +307,9 @@ class Player extends Model
     # attach transcripts to this player.
     for _, transcript of player.get(\loops)
       transcript.bindToPlayer(player)
+    # attach chapters to this player.
+    for chapter in player.get(\chapters).list
+      chapter.bindToPlayer(player)
 
     # set mouse start and player height on mouse down and mouse up.
     player.watch(\resize.mouse.clicking).reactLater((clicking) ->
@@ -342,13 +345,17 @@ class Player extends Model
 
 
 ########################################
-# TIMER MODEL
+# PLAYER MISC MODELS
 
 class Timer extends Model
   contains: (epoch) ->
     Varying.pure(epoch, this.watch(\start), this.watch(\end), (epoch, start, end) ->
       start <= epoch <= end
     )
+
+class Chapter extends Model
+  @bind(\duration, from(\end).and(\start).all.map (-))
+  bindToPlayer: (player) -> this.set(\player, player)
 
 
 ########################################
@@ -386,7 +393,7 @@ module.exports = {
   Global, Splash,
   Line, Lines, Transcript,
   Term, Lookup, Glossary,
-  Player, Timer,
+  Player, Timer, Chapter,
   ExhibitArea, Topic, Exhibit, Graphic,
   BasicRequest, BasicStore,
 

@@ -3,7 +3,7 @@ $ = require(\jquery)
 { DomView, template, find, from, Varying } = require(\janus)
 { from-event } = require(\janus-stdlib).util.varying
 
-{ Player } = require('../model')
+{ Player, Chapter } = require('../model')
 { clamp, px, pct, pad, click-touch } = require('../util')
 { min } = Math
 
@@ -38,6 +38,7 @@ class PlayerView extends DomView
           </div>
           <div class="player-scrubber">
             <div class="player-scrubber-area">
+              <div class="player-chapters"/>
               <div class="player-playbar"/>
               <div class="player-playhead"/>
               <div class="player-bookmark">
@@ -48,7 +49,6 @@ class PlayerView extends DomView
                 <span class="hh"/><span class="mm"/><span class="ss"/>
               </div>
             </div>
-            <div class="player-chapters"/>
           </div>
         </div>
       </div>
@@ -99,6 +99,9 @@ class PlayerView extends DomView
 
     find('.player-bookmark').classed(\hide, from(\bookmark.epoch).map(-> !it?))
     find('.player-bookmark').css(\right, from(\bookmark.timecode).and(\audio.length).all.map ((/) >> (-> 1 - it) >> pct))
+
+    find('.player-chapters').classed(\active, from(\scrubber.mouse.over))
+    find('.player-chapters').render(from(\chapters))
 
     find('.player-scripts').css(\height, from(\height).map (px))
     find('.player-scripts').classed(\inactive, from(\height).map (< 35))
@@ -190,8 +193,34 @@ class PlayerView extends DomView
     )
 
 
+class ChapterView extends DomView
+  @_dom = -> $('
+    <div class="chapter">
+      <div class="chapter-inner">
+        <p class="title" />
+        <p class="description" />
+      </div>
+    </div>
+  ')
+  @_template = template(
+    find('.chapter').css(\left, from(\start).and(\player).watch(\timestamp.offset).and(\player).watch(\audio.length).all.map((start, offset, length) ->
+      (start - offset) / length |> pct
+    ))
+    find('.chapter').css(\width, from(\duration).and(\player).watch(\audio.length).all.map((chapter-length, audio-length) ->
+      chapter-length / audio-length |> pct
+    ))
+
+    find('.chapter').classed(\active, from(\start).and(\end).and(\player).watch(\scrubber.mouse.epoch).all.map((start, end, cursor) -> start <= cursor <= end))
+
+    find('.title').text(from(\title))
+    find('.description').text(from(\description))
+  )
+
+
 module.exports = {
-  PlayerView
-  registerWith: (library) -> library.register(Player, PlayerView)
+  PlayerView, ChapterView
+  registerWith: (library) ->
+    library.register(Player, PlayerView)
+    library.register(Chapter, ChapterView)
 }
 

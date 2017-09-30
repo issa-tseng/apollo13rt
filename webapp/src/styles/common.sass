@@ -41,12 +41,12 @@ $ease-extreme-out: cubic-bezier(.05, .9, 0, 1)
 
 // UTIL
 
-@mixin fill
-  bottom: 0
-  left: 0
+@mixin fill($margin: 0)
+  bottom: $margin
+  left: $margin
   position: absolute
-  top: 0
-  right: 0
+  top: $margin
+  right: $margin
 
 @mixin reify
   content: ''

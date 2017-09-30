@@ -235,7 +235,7 @@ a
     .player-scrubber-area
       height: 4em
       position: relative
-      z-index: 1
+      z-index: 10
 
       $playbar-height: 0.3em
       $playbar-top: 1em
@@ -380,6 +380,56 @@ a
 
       .glossary > p
         @include bottom-header
+
+  .player-chapters
+    @include fill
+    bottom: auto
+    height: 0
+    top: 1.3em
+
+    .chapter
+      max-height: 0
+      overflow: hidden
+      position: absolute
+      transition: 0.3s max-height
+
+      .chapter-inner
+        background-color: $color-box-bg
+        margin: 0.1em
+        padding: 0.4em
+        transition: 0.3s background-color
+
+      &:before
+        @include reify
+        @include fill(0.1em)
+        background-color: #bbb
+        bottom: 0
+        height: 0.2em
+        top: auto
+        transition: 0.3s background-color
+
+      p
+        font-size: 1.1em
+      .title
+        font-weight: bold
+        padding-bottom: 0.3em
+
+    &.active .chapter
+      max-height: 2.3em
+
+      &.active
+        cursor: default
+        max-height: 18em
+        &:before
+          background-color: $color-accent
+        .chapter-inner
+          background-color: #fff
+
+    li:nth-child(2n)
+      .chapter:before
+        background-color: #999
+      .chapter.active:before
+        background-color: $color-accent
 
   .player-resize
     @include fill
