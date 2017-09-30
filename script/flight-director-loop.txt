@@ -312,20 +312,20 @@ FLIGHT, INCO.
 Go, INCO.
 
 [55 56 09 - 55 56 11] INCO
-We switched to WIDE BEAM about the time we had the problem.
+We switched to WIDE BEAM width about the time we had the problem.
 > A red herring, but a believable one if the problem were instrumentation or telemetry.
 
 [55 56 33] FLIGHT
 Okay.
 
 [55 56 42 - 55 56 44] FLIGHT
-INCO, you say you went to wide beam with that?
+INCO, you say you went to WIDE BEAM with that?
 
 [55 56 44] INCO
 Yes.
 
 [55 56 49 - 55 56 53] FLIGHT
-Let's see if we can correlate those times. Get the time when you went wide beam, INCO.
+Let's see if we can correlate those times. Get the time when you went WIDE BEAM, INCO.
 
 [55 56 55] INCO
 Okay.
@@ -349,7 +349,7 @@ EECOM, you see any AC problems? Looks like -
 FLIGHT, EECOM.
 
 [- 55 58 17] FLIGHT
-we have a lot of instrumentation problems here. Go ahead.
+- we have a lot of instrumentation problems here. Go ahead.
 
 [55 58 18 - 55 58 22] EECOM
 That's affirm. {He's flipping the fuel cells around, FLIGHT.}
@@ -5708,7 +5708,7 @@ Right now, as I understand it, we're getting into a PGNCS ATTITUDE CONTROL mode 
 Okay -
 
 [- 58 23 46] CONTROL
-- with an ATTITUDE HOLD.
+- it'll be ATTITUDE HOLD.
 
 [58 23 47 - 58 23 56] FLIGHT
 Okay. My point is - let's be careful with what we're telling the CAPCOM to do here; try to give him as clear instructions as possible. Which is Activation pages as we can, okay? Now -
@@ -5797,7 +5797,7 @@ Hey FLIGHT, they don't have attitude control in the - we don't have CM/SM -
 [58 25 50 - 58 25 53] FLIGHT
 Yeah. Okay. Well, they're trying to get it up, right?
 
-[58 25 54] GUIDO
+[58 25 54] CAPCOM
 Yeah, they are.
 
 [58 25 55 - 58 25 58] FLIGHT (off loop)
@@ -5806,7 +5806,7 @@ Okay. I just - what you want to know - pardon -
 [58 26 15] CONTROL
 FLIGHT, CONTROL.
 
-[58 26 16] FLIGHT
+[58 26 15] FLIGHT
 Go.
 
 [58 26 16 - 58 26 21] CONTROL
@@ -5861,8 +5861,8 @@ For the balls.
 CAPCOM, they need AC.
 
 [58 28 00] TELMU
-Both of them go in, FLIGHT.
-> LOGIC POWER
+{Both of them} go in, FLIGHT.
+1> LOGIC POWER
 
 [58 28 06] FLIGHT
 Did you copy, TELMU?
@@ -8827,7 +8827,7 @@ I'll bring you up to speed on what I've been doing down here.
 Say again?
 
 [60 13 37 - 60 13 49] FDO
-I'll bring you up to speed on what I've been doing down here. Looking at a maneuver in the vicini - that doesn't - time range, and on the vector that I've got now, looking at about a 16 feet per second to get free-return.
+I'll bring you up to speed on what I've been doing down here. Looking at a maneuver in the vicini - in the present time range, and on the vector that I've got now, looking at about a 16 feet per second to get free-return.
 > What FDO is talking about here is the plan to be shortly executed. Rather than wait all the way around the Moon to 79 hours (PC+2) to get the spacecraft back on track to return to Earth, they will initiate a burn with a ∆V of 16fps (11mph; 17.5km/h) very soon, after which they can power down the PGNS and feel good about being roughly on track.
 
 [60 13 50 - 60 13 52] FLIGHT

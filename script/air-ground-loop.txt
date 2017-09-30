@@ -97,10 +97,10 @@ Roger.
 And Houston, we had a RESTART on our computer. We have PGNCS light and RESTART RESET.
 
 [55 57 37 - 55 57 42] CAPCOM
-Roger. RESTART and a PGNCS light. RESET on a PNGCS, RESET -
+Roger. RESTART and a PGNCS light. RESTART and a PNGCS RESET -
 
 [55 57 42 - 55 58 04] CDR
-And now looking at our SERVICE MODULE RCS HELIUM 1, we have B is barber poled and D is barber poled. HELIUM 2, D is barber pole. And SECONDARY PROPELLANTS I have A and C barber pole. BMAG temperatures?
+And now looking at our SERVICE MODULE RCS HELIUM 1, we have B is barber poled and D is barber poled. HELIUM 2, D is barber pole. And SECONDARY PROPELLANTS I have A and C barber pole. BMAG temperatures.
 
 [55 58 07 - 55 58 11] LMP
 Okay, AC 2 is showing zip. I'm going to try to reconfigure on that, Jack.
@@ -1457,7 +1457,7 @@ Roger.
 And Freddo, get the TCA breakers in last, please.
 
 [58 23 01 - 58 23 06] LMP
-Alright, Jim. I'm holding off on those until you give me a further word anyway. I'm just going to pressurize right now.
+Alright, Jim. I'm holding off on those until you give me further word anyway. I'm just going to pressurize right now.
 
 [58 23 08 - 58 23 10] CDR
 Jack, are you reading LM gimbal angles?
