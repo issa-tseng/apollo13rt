@@ -385,9 +385,11 @@ a
     @include fill
     bottom: auto
     height: 0
+    pointer-events: none
     top: 1.3em
 
     .chapter
+      border-left: 1px solid #999
       max-height: 0
       overflow: hidden
       position: absolute
@@ -395,27 +397,19 @@ a
 
       .chapter-inner
         background-color: $color-box-bg
-        margin: 0.1em
+        margin-right: 0.1em
         padding: 0.4em
         transition: 0.3s background-color
 
-      &:before
-        @include reify
-        @include fill(0.1em)
-        background-color: #bbb
-        bottom: 0
-        height: 0.2em
-        top: auto
-        transition: 0.3s background-color
-
-      p
-        font-size: 1.1em
       .title
         font-weight: bold
         padding-bottom: 0.3em
 
+      .description
+        font-size: 1.1em
+
     &.active .chapter
-      max-height: 2.3em
+      max-height: 2.1em
 
       &.active
         cursor: default
@@ -423,13 +417,7 @@ a
         &:before
           background-color: $color-accent
         .chapter-inner
-          background-color: #fff
-
-    li:nth-child(2n)
-      .chapter:before
-        background-color: #999
-      .chapter.active:before
-        background-color: $color-accent
+          background-color: #f4f4f4
 
   .player-resize
     @include fill
