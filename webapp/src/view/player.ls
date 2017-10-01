@@ -74,6 +74,7 @@ class PlayerView extends DomView
     find('.player-timestamp-accident .mm').text(from(\accident.delta_mm).map(pad))
     find('.player-timestamp-accident .ss').text(from(\accident.delta_ss).map(pad))
 
+    find('.player-timestamp-event-wrapper').classed(\has-model, from(\event_timer.model).map (?))
     find('.player-timestamp-event-wrapper').classed(\active, from.self().and(\event_timer.model).all.flatMap((view, timer) ->
       Varying.pure(view.subject.watch(\timestamp.epoch), timer.watch(\end), (now, end) -> (end - now) > 0) if timer?
     ))

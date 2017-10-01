@@ -213,7 +213,10 @@ a
       float: right
       overflow: hidden
       transition: 1s width
+      visibility: hidden
       width: 0
+      &.has-model
+        visibility: visible
       &.active
         width: 30em
       .player-timestamp-event

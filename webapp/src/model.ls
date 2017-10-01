@@ -279,7 +279,7 @@ class Player extends Model
 
   @bind(\event_timer.model, from(\timers).and.self().all.flatMap((timers, player) ->
     epoch = player.watch(\timestamp.epoch)
-    timers.filter((.contains(epoch))).watchAt(0)
+    timers.filter((.contains(epoch))).watchAt(-1)
   ))
   @bind(\event_timer.delta, from(\timestamp.epoch).and(\event_timer.model).watch(\zero).all.map (-))
   @bind(\event_timer.parts, from(\event_timer.delta).map(epoch-to-hms))
