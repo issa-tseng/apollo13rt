@@ -283,7 +283,8 @@ a
 
   .player-bookmark
     $mark-color: #555
-    animation-duration: 150s
+    animation-duration: 60s
+    animation-fill-mode: forwards
     animation-name: fade-out
     animation-iteration-count: 1
     border-left: 1px solid $mark-color
@@ -307,39 +308,21 @@ a
       width: $hit-size
 
     .player-bookmark-icon
-      right: -1.15em
+      bottom: -0.35em
+      right: -0.85em
       padding: 0.3em
         bottom: 0.7em
       position: absolute
-      top: 0.3em
       transition: 0.3s transform
       &:before
         @include reify
         @include icon
-        color: $color-accent-text
-        content: $icon-hopback
-        font-size: 1.8em
-
-    .player-bookmark-label
-      color: $mark-color
-      font-size: 1.1em
-      overflow: hidden
-      padding: 0.5em 0
-      position: absolute
-      right: 0.3em
-      top: 0.3em
-      transition: 0.3s width
-      white-space: nowrap
-      width: 0
+        color: #444
+        content: $icon-bookmark
+        font-size: 1.2em
 
     &:hover
-      height: 1.9em
       cursor: pointer
-      .player-bookmark-icon
-        transform: translateX(-13.5em)
-      .player-bookmark-label
-        width: 11.1em
-
       ~ .player-scrubber-bubble
         display: none
 
@@ -412,7 +395,7 @@ a
         font-size: 1.1em
 
     &.active .chapter
-      max-height: 2.1em
+      max-height: 2em
 
       &.active
         cursor: default
