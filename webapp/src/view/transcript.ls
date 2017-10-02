@@ -82,9 +82,10 @@ class TranscriptView extends DomView
       this.href = transcript.get(\edit_url) + this.hash
     )
     dom.on(\click, '.line-link', (event) ->
-      line = $(event.target).closest('.line').data(\view).subject
-      if copy(window.location.href.replace(/(?:#.*)?$/, \# + line.startHms_())) is true
+      if copy($(event.target).closest('.line').find('.line-timestamp').get(0)?.href) is true
         $('#tooltip').text('Copied!')
+      else
+        $('#tooltip').text('Right-click to copy address.')
     )
     dom.on(\focus, 'a', (event) ->
       $(event.target).attr(\target, \_blank) if event.target.host isnt window.location.host
