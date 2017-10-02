@@ -140,7 +140,7 @@ $document.on(\mouseenter, '[title]', ->
   tooltip.show()
 
   # reflect if necessary. detect because it has wrapped.
-  if tooltip.height() > 16
+  if target.hasClass(\reverse-tooltip) or (tooltip.height() > 16)
     tooltip.addClass(\mirrored)
     tooltip.css(\left, 0) # move away for full measurement.
     tooltip.css(\left, offset.left + (outer-width / 2) - tooltip.outerWidth())

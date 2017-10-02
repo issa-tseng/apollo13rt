@@ -42,7 +42,7 @@ class PlayerView extends DomView
               <div class="player-playbar"/>
               <div class="player-playhead"/>
               <div class="player-bookmark">
-                <div class="player-bookmark-icon" title="Back to previous position"/>
+                <div class="player-bookmark-icon reverse-tooltip" title="Back to previous position"/>
               </div>
               <div class="player-scrubber-bubble">
                 <span class="hh"/><span class="mm"/><span class="ss"/>
