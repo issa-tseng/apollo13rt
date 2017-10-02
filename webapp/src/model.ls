@@ -165,6 +165,7 @@ class Transcript extends Model
     lines?.watchAt(idx).flatMap (?._id)
   ))
   @bind(\top_line, from(\lines).and(\target_idx).all.flatMap((lines, idx) -> lines?.watchAt(idx)))
+  @bind(\is_active, from(\top_line).and(\player).watch(\timestamp.epoch).all.map((line, epoch) -> line?.contains_(epoch)))
 
   # these two work on primitives as they're only ever used as direct lookups.
   @bind(\nearby_ids, from(\target_id).flatMap((id = 0) -> [ x for x from id - 2 til id + 2 ]))
@@ -268,11 +269,14 @@ class Player extends Model
   @bind(\nearby_terms, from(\loops.flight).watch(\nearby_terms).and(\loops.air_ground).watch(\nearby_terms).all.map (++))
 
   @bind(\post_gap_script, from(\timestamp.epoch).and(\loops.flight).and(\loops.air_ground).all.map((now, flight, air-ground) ->
-    # get these statically as they can't change unless timestamp changes anyway.
-    flight-epoch = flight.get(\cued_epoch)
-    air-ground-epoch = air-ground.get(\cued_epoch)
-    if (now + 20) < min(flight-epoch, air-ground-epoch)
-      if air-ground-epoch < flight-epoch then air-ground else flight
+    # compute these point-in-time as they can't change unless timestamp changes anyway.
+    threshold = now + 20
+    air-ground-cue = air-ground.get(\cued_epoch)
+    air-ground-gap = !air-ground.get(\is_active) and (threshold < air-ground-cue)
+    flight-cue = air-ground.get(\cued_epoch)
+    flight-gap = !flight.get(\is_active) and (threshold < flight-cue)
+    if air-ground-gap is true and flight-gap is true
+      if air-ground-cue < flight-cue then air-ground else flight
     else
       false
   ))

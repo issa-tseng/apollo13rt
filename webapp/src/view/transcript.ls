@@ -97,20 +97,14 @@ class TranscriptView extends DomView
     )
 
     # if we are the next transcript after a gap, mark the line.
-    is-active = Varying.pure(player.watch(\timestamp.epoch), transcript.watch(\top_line), (epoch, line) ->
-      epoch <= line._end
-    )
-    transcript.watch(\player).react((player) ->
-      return unless player?
-      Varying.pure(player.watch(\post_gap_script), transcript.watch(\cued_idx), is-active, (script, idx, active) ->
-        if !active and script is transcript
-          transcript.get(\lines).at(idx)._id
-        else
-          null
-      ).react((gap-id) ->
-        dom.find('.post-gap').removeClass(\post-gap)
-        dom.find(".line-#gap-id").addClass(\post-gap) if gap-id?
+    transcript.watch(\player).flatMap((player) ->
+      return null unless player?
+      Varying.pure(player.watch(\post_gap_script), transcript.watch(\cued_idx), (script, idx) ->
+        if script is transcript then transcript.get(\lines).at(idx)._id else null
       )
+    ).react((gap-id) ->
+      dom.find('.post-gap').removeClass(\post-gap)
+      dom.find(".line-#gap-id").addClass(\post-gap) if gap-id?
     )
 
     # when our target_idx changes, push active state down into lines.
