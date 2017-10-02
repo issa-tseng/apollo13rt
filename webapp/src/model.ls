@@ -17,7 +17,7 @@ class Global extends Model
 
 class Splash extends Model
   @bind(\progress.adjusted, from(\progress.epoch).and(\progress.mtime).all.map((epoch, mtime) ->
-    return if Number.isNaN(epoch) or Number.isNaN(epoch)
+    return if Number.isNaN(epoch) or Number.isNaN(mtime)
     diff = get-time() - mtime
     if diff > 60 * 60 * 1000 # over an hour
       epoch - 15
@@ -35,7 +35,7 @@ class Splash extends Model
     # load attributes from various known locations.
     new Splash({
       progress: { epoch: localStorage.getItem(\progress_epoch) |> parse-int, mtime: localStorage.getItem(\progress_mtime) |> parse-int }
-      hash: { raw: window.location.hash?.slice(1) }
+      hash: { raw: window.location.hash }
     })
 
 
