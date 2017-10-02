@@ -19,6 +19,8 @@ class SplashView extends DomView
     find('#start-url .hh').text(from(\hash.parts.hh))
     find('#start-url .mm').text(from(\hash.parts.mm).map(if-extant pad))
     find('#start-url .ss').text(from(\hash.parts.ss).map(if-extant pad))
+
+    find('.start-options').classed(\loading, from.app(\global).watch(\loaded).map (not))
   )
 
   _wireEvents: ->

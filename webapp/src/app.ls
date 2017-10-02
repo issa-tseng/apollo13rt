@@ -124,6 +124,9 @@ if player?
   if window-height < 900
     player.set(\height, max(window-height - 550, 250))
 
+# done with expensive loading operations; clear flag.
+set-timeout((-> global.set(\loaded, true)), 250)
+
 # other generic actions:
 # automatically tooltip if a title is hovered.
 tooltip = $('#tooltip')

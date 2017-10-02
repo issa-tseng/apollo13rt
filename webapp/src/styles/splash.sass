@@ -40,6 +40,22 @@
   .start-options
     padding-top: 1.5em
 
+    &.loading
+      pointer-events: none
+
+      &:before
+        color: #666
+        content: 'Loading…'
+        display: block
+        font-family: $serif
+        font-size: 1.6em
+        font-style: italic
+        padding: 0.6em 0.4em
+        position: absolute
+
+      button
+        opacity: 0.03
+
   button
     background: $color-accent-dark
     border: none
@@ -53,6 +69,7 @@
     margin-right: 0.6em
     padding: 0.6em
       right: 1em // the icon does weird things
+    transition: 0.3s opacity
 
     &:hover
       cursor: pointer
