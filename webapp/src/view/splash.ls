@@ -47,10 +47,6 @@ class SplashView extends DomView
       global.watch(\player).react(start-at(splash.get(\hash.epoch)))
     )
 
-    dom.on(\focus, 'a', (event) ->
-      $(event.target).attr(\target, \_blank) if event.target.host isnt window.location.host
-    )
-
   destroy: ->
     $('body').removeClass(\init)
     this.artifact().addClass(\destroying)

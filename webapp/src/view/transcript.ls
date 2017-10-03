@@ -87,9 +87,6 @@ class TranscriptView extends DomView
       else
         $('#tooltip').text('Right-click to copy address.')
     )
-    dom.on(\focus, 'a', (event) ->
-      $(event.target).attr(\target, \_blank) if event.target.host isnt window.location.host
-    )
 
     # return to autoscroll when sync icon is clicked.
     indicator.on(\click, (event) ->

@@ -136,11 +136,6 @@ class ExhibitView extends DomView
         view.wireEvents()
     )
 
-    # open links in a new tab if they go somewhere external.
-    dom.on(\focus, 'a', (event) ->
-      $(event.target).attr(\target, \_blank) if event.target.host isnt window.location.host
-    )
-
     dom.find('.prev').on(\click, ~> global.set(\exhibit, this.subject.get(\prev)))
     dom.find('.next').on(\click, ~> global.set(\exhibit, this.subject.get(\next)))
 

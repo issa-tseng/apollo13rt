@@ -183,6 +183,11 @@ $document.on(\touchstart, '.glossary-term', (event) ->
   )
 )
 
+# open external links in a new window.
+$document.on(\focus, 'a[href]', (event) ->
+  $(this).attr(\target, \_blank) if this.host isnt window.location.host
+)
+
 # handle timecode hashes.
 handle-timecode-hash = (hash) ->
   hms = hash-to-hms(hash)
