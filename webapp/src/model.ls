@@ -273,7 +273,7 @@ class Player extends Model
     threshold = now + 20
     air-ground-cue = air-ground.get(\cued_epoch)
     air-ground-gap = !air-ground.get(\is_active) and (threshold < air-ground-cue)
-    flight-cue = air-ground.get(\cued_epoch)
+    flight-cue = flight.get(\cued_epoch)
     flight-gap = !flight.get(\is_active) and (threshold < flight-cue)
     if air-ground-gap is true and flight-gap is true
       if air-ground-cue < flight-cue then air-ground else flight
