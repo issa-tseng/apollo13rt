@@ -33,24 +33,27 @@ class SplashView extends DomView
       this.stop()
       player.epoch(at)
       player.play()
-      splash.destroy()
 
     dom.find('#start-beginning').on(\click, ->
       player.play()
-      splash.destroy()
     )
     dom.find('#resume-saved').on(\click, ->
       global.watch(\player).react(start-at(splash.get(\progress.adjusted)))
     )
     dom.find('#start-url').on(\click, ->
-      console.log(splash.get(\hash))
       global.watch(\player).react(start-at(splash.get(\hash.epoch)))
+    )
+
+    global.watch(\player).flatMap((?.watch(\audio.playing))).react((is-playing) ->
+      if is-playing is true
+        splash.destroy()
+        this.stop()
     )
 
   destroy: ->
     $('body').removeClass(\init)
     this.artifact().addClass(\destroying)
-    <~ wait(500)
+    <~ wait(500) # for the animation.
     DomView.prototype.destroy.call(this)
 
 

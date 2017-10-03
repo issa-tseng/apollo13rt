@@ -76,6 +76,7 @@ unless exhibit-mode is true
   )
   global.set(\player, player)
   window.player = player
+  $('#skiplink-start').one(\click, player~play)
 
 # set up exhibit data.
 unless kiosk-mode is true
