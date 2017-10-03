@@ -367,6 +367,73 @@ a
       .glossary > p
         @include bottom-header
 
+    > .player-postscript
+      background-color: #555
+      bottom: 1em
+      float: none
+      height: auto
+      left: 0.5em
+      margin: 0
+      opacity: 0
+      pointer-events: none
+      position: absolute
+      right: 0.5em
+      top: 8.5em
+      transition: 1s opacity
+      width: auto
+
+      &:before
+        @include reify
+        border: 1em solid transparent
+          right: none
+          top: none
+        border-bottom-color: #555
+        bottom: 100%
+        position: absolute
+        right: 0.75em
+
+      &.active
+        opacity: 1
+        pointer-events: auto
+        transition-duration: 5s
+
+      .article
+        @include fill
+        @include custom-scrollbar
+        color: #eee
+        overflow-y: auto
+        padding: 2em 3em
+
+        &::-webkit-scrollbar
+          background: #666
+
+        h1, p, li
+          font-family: $serif
+          font-size: 1.5em
+          line-height: 1.2em
+
+          li
+            font-size: 1em
+
+          a
+            color: $color-accent
+
+        h1
+          font-size: 2em
+          padding-bottom: 0.5em
+
+        p
+          padding-bottom: 1.2em
+
+        ul
+          padding-left: 2em
+          li
+            display: list-item
+            list-style-type: circle
+            padding-bottom: 0.8em
+            ul
+              padding-top: 1em
+
   .player-chapters
     @include fill
     bottom: auto

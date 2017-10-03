@@ -55,6 +55,7 @@ class PlayerView extends DomView
         <div class="player-script-air-ground"/>
         <div class="player-script-flight"/>
         <div class="player-glossary"/>
+        <div class="player-postscript"/>
       </div>
       <div class="player-resize"/>
     </div>
@@ -109,6 +110,8 @@ class PlayerView extends DomView
     find('.player-script-flight').render(from(\loops.flight))
     find('.player-script-air-ground').render(from(\loops.air_ground))
     find('.player-glossary').render(from(\glossary))
+
+    find('.player-postscript').classed(\active, from(\timestamp.timecode).and(\audio.length).all.map (>=))
   )
   _wireEvents: ->
     dom = this.artifact()
@@ -118,6 +121,9 @@ class PlayerView extends DomView
 
     # feed audio element back into player.
     player.set(\audio.player, audio)
+
+    # drop postscript content in.
+    dom.find('.player-postscript').append($('#markup > #postscript').detach())
 
     # feed scrubber mouse events into model.
     scrubber = dom.find('.player-scrubber-area')
