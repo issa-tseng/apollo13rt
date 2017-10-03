@@ -3121,7 +3121,7 @@ That's affirmative.
 Yes.
 
 [57 24 16 - 57 24 18] EECOM
-Like to get battery 1 charged, FLIGHT.
+Like to get battery A on charge, FLIGHT.
 
 [57 24 21] FLIGHT
 Now -
@@ -4985,7 +4985,7 @@ Go ahead.
 
 [58 03 50 - 58 03 52] Maroon EECOM
 O2 to N2 ∆P is dropping; let's turn BATTERY A on.
-> Nitrogen was used to regulate differential pressures in the fuel cell. The difference dropping indicates the oxygen supply pressure is failing.
+> [Nitrogen was used](#ref-panel-eps) to regulate differential pressures in the fuel cell. The difference dropping indicates the oxygen supply pressure is failing.
 
 [58 03 52] FLIGHT
 CAPCOM, BATTERY A on.
@@ -8210,7 +8210,7 @@ Okay, well let's finish up your test. Are you finished with that test?
 [59 49 38 - 59 49 40] INCO
 No, they're not quite finished yet. Standby.
 
-[59 50 15] FLIGHT
+[59 50 14 - 59 50 15] FLIGHT
 TELMU, FLIGHT.
 
 [59 50 16] TELMU
@@ -10832,7 +10832,7 @@ Roger.
 [61 14 27 - 61 14 29] FLIGHT
 And we - we - has he passed page 15?
 
-[61 14 30] AFD (??) (off loop)
+[61 14 30] AFD (off loop)
 Yeah. He's right here -
 
 [61 14 30 -] FLIGHT
