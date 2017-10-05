@@ -4,7 +4,7 @@ $ = require(\jquery)
 { from-event } = require(\janus-stdlib).util.varying
 { Term, BasicRequest } = require('../../model')
 
-{ defer, clamp, px, size-of, attach-floating-box } = require('../../util')
+{ defer, clamp, px, size-of, attach-floating-box, get-touch-x, get-touch-y } = require('../../util')
 { min, max } = Math
 
 
@@ -102,9 +102,18 @@ class PanelView extends DomView
     model = this.subject
     outer-wrapper = dom.find('.panel-wrapper')
     wrapper = dom.find('.panel-inner-wrapper')
+    $document = $(document)
 
     # respond to mouse events.
-    mouse-pos = from-event($(document), \mousemove, (event) -> { x: event.screenX, y: event.screenY })
+    outer-wrapper.on(\dblclick, (event) ->
+      event.preventDefault()
+      scale-factor = model.get(\scale.factor)
+      model.zoom()
+      model.focusScreenXY(event.pageX, event.pageY - outer-wrapper.offset().top, scale-factor)
+      false
+    )
+
+    mouse-pos = from-event($document, \mousemove, (event) -> { x: event.screenX, y: event.screenY })
     wrapper.on(\mousedown, (event) ->
       return if event.button is 2 # ignore right clicks.
 
@@ -115,18 +124,10 @@ class PanelView extends DomView
       model.set(\mouse.now, { x: event.screenX, y: event.screenY })
       tracker = mouse-pos.reactLater(-> model.set(\mouse.now, it))
 
-      $(document).one(\mouseup, ->
+      $document.one(\mouseup, ->
         model.set(\mouse.clicking, false)
         tracker.stop()
       )
-    )
-
-    outer-wrapper.on(\dblclick, (event) ->
-      event.preventDefault()
-      scale-factor = model.get(\scale.factor)
-      model.zoom()
-      model.focusScreenXY(event.pageX, event.pageY - outer-wrapper.offset().top, scale-factor)
-      false
     )
 
     wrapper.on('mouseenter mouseup', '[id]:not(.active)', (event) ->
@@ -135,6 +136,32 @@ class PanelView extends DomView
         term = new Term({ term: info.title, definition: info.description }) # for now at least reuse glossary.
         term-view = app.vendView(term)
         attach-floating-box(initiator, term-view)
+    )
+
+    # respond to touch events:
+    # TODO: someday support pinch zoom.
+    event-to-coords = (event) -> { x: get-touch-x(event), y: get-touch-y(event) }
+    touch-pos = from-event($document, \touchmove, event-to-coords)
+    wrapper.on(\touchstart, (event) ->
+      event.preventDefault() # stop default scroll operations.
+
+      coords = event-to-coords(event)
+      model.set(\mouse.clicking, true)
+      model.set(\mouse.now, coords)
+
+      # some setup is for the first finger only; bail otherwise.
+      return if event.touches.length > 1
+
+      model.set(\mouse.down, coords)
+      tracker = touch-pos.reactLater(-> model.set(\mouse.now, it))
+
+      $document.on('touchend.panel', (event) ->
+        return if event.touches.length > 0
+
+        $document.off('touchend.panel')
+        model.set(\mouse.clicking, false)
+        tracker.stop()
+      )
     )
 
     # grab the total layout size and store it, as it is soon lost.

@@ -5,7 +5,7 @@ copy = require(\clipboard-copy)
 { debounce, sticky } = require(\janus-stdlib).util.varying
 
 { Line, Transcript } = require('../model')
-{ pct, pad, get-time, max-int, bump } = require('../util')
+{ pct, pad, get-time, max-int, bump, click-touch } = require('../util')
 
 
 class TranscriptView extends DomView
@@ -89,7 +89,7 @@ class TranscriptView extends DomView
     )
 
     # return to autoscroll when sync icon is clicked.
-    indicator.on(\click, (event) ->
+    click-touch(indicator, (event) ->
       event.preventDefault()
       transcript.set(\auto_scroll, true)
     )

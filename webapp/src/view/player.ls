@@ -4,7 +4,7 @@ $ = require(\jquery)
 { from-event } = require(\janus-stdlib).util.varying
 
 { Player, Chapter } = require('../model')
-{ clamp, px, pct, pad, click-touch } = require('../util')
+{ clamp, px, pct, pad, click-touch, get-touch-x, get-touch-y } = require('../util')
 { min } = Math
 
 class PlayerView extends DomView
@@ -119,44 +119,60 @@ class PlayerView extends DomView
     audio = dom.find('audio')
     audio-raw = audio.get(0)
 
+    # cache dom elements.
+    scrubber = dom.find('.player-scrubber-area')
+    resizer = dom.find('.player-resize')
+
     # feed audio element back into player.
     player.set(\audio.player, audio)
 
     # drop postscript content in.
     dom.find('.player-postscript').append($('#markup > #postscript').detach())
 
-    # feed scrubber mouse events into model.
-    scrubber = dom.find('.player-scrubber-area')
+    # util for touch/click handling:
+    x-to-pct = (x) -> ((x - left-offset) / scrubber.width()) |> clamp(0, 1)
+
+    # feed mouse events into model.
     left-offset = scrubber.offset().left # unlikely to change; cache for perf.
     scrubber.on(\mouseenter, -> player.set(\scrubber.mouse.over, true))
-    scrubber.on(\touchstart, -> player.set(\scrubber.mouse.over, true))
     scrubber.on(\mouseleave, -> player.set(\scrubber.mouse.over, false))
-    scrubber.on(\touchend,  -> player.set( 'scrubber.mouse.over': false, 'scrubber.clicking': false ))
-    scrubber.on('mousedown touchstart', (event) ->
+    scrubber.on(\mousedown, (event) ->
       player.set(\scrubber.clicking, true)
       event.preventDefault()
     )
-    scrubber.on(\touchmove, (event) ->
-      scrubber-width = scrubber.width()
-      player.set(\scrubber.mouse.at, min.apply(null, [ (touch.pageX - left-offset) / scrubber-width |> clamp(0, 1) for touch in event.targetTouches ]))
-    )
-
-    # feed resizer mouse events into model.
-    resizer = dom.find('.player-resize')
     resizer.on(\mousedown, (event) ->
       player.set(\resize.mouse.clicking, true)
       event.preventDefault()
     )
 
+    # feed touch events into model.
+    scrubber.on(\touchstart, (event) ->
+      # we have to handle touchstart separately, as we don't know where the finger is til it touches.
+      player.set( 'scrubber.mouse.over': true, 'scrubber.clicking': true )
+      player.set(\scrubber.mouse.at, event |> get-touch-x |> x-to-pct)
+      event.preventDefault()
+    )
+    resizer.on(\touchstart, (event) ->
+      player.set(\resize.mouse.y, get-touch-y(event))
+      player.set(\resize.mouse.clicking, true)
+      event.preventDefault()
+    )
+    scrubber.on(\touchend, -> player.set( 'scrubber.mouse.over': false, 'scrubber.clicking': false ))
+
     # feed body mouse events into model.
     body = $(document)
     body.on(\mousemove, (event) ->
-      player.set(\scrubber.mouse.at, ((event.pageX - left-offset) / scrubber.width()) |> clamp(0, 1))
+      player.set(\scrubber.mouse.at, x-to-pct(event.pageX))
       player.set(\resize.mouse.y, event.pageY)
     )
-    body.on(\mouseup, ->
+    body.on(\touchmove, (event) ->
+      player.set(\scrubber.mouse.at, event |> get-touch-x |> x-to-pct)
+      player.set(\resize.mouse.y, get-touch-y(event))
+    )
+    body.on('mouseup touchend', ->
       player.set(\scrubber.clicking, false)
       player.set(\resize.mouse.clicking, false)
+      true # don't swallow touchends.
     )
 
     # point-in-time mouse reactions.

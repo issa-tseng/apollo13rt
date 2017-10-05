@@ -55,6 +55,9 @@ module.exports = util =
         $('#tooltip').addClass(\fading)
     )
 
+  get-touch-y: (event) -> min(...[ touch.pageY for touch in event.touches ])
+  get-touch-x: (event) -> min(...[ touch.pageX for touch in event.touches ])
+
   bump: (varying) ->
     varying.set(true)
     <- util.defer
