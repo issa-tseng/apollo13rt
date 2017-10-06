@@ -220,6 +220,8 @@ class ChapterView extends DomView
     <div class="chapter">
       <div class="chapter-inner">
         <p class="title" />
+      </div>
+      <div class="chapter-bubble">
         <p class="description" />
       </div>
     </div>

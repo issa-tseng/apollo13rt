@@ -441,40 +441,64 @@ a
   .player-chapters
     @include fill
     bottom: auto
-    height: 0
+    //height: 0
     pointer-events: none
     top: 1.3em
 
     .chapter
-      border-left: 1px solid #999
-      max-height: 0
-      overflow: hidden
       position: absolute
-      transition: 0.3s max-height
 
       .chapter-inner
         background-color: $color-box-bg
+        border-left: 1px solid #999
         margin-right: 0.1em
-        padding: 0.4em
-        transition: 0.3s background-color
+        height: 0
+        overflow: hidden
+        position: relative
+        transition: 0.2s background-color, 0.2s height
 
-      .title
-        font-weight: bold
-        padding-bottom: 0.3em
+        .title
+          bottom: 0.1em
+          font-weight: bold
+          left: 0.6em
+          padding-bottom: 0.3em
+          position: absolute
 
-      .description
-        font-size: 1.1em
+      .chapter-bubble
+        @include bubble
+        background-color: $color-definition-bg
+        left: 0
+        max-width: 25em
+        opacity: 0
+        position: absolute
+        padding: 0.8em 1em 0.6em
+        text-align: left
+        top: 0.6em
+        transition: 0.2s opacity, 0.2s transform
 
-    &.active .chapter
-      max-height: 2em
+        &:after
+          border-bottom-color: $color-definition-bg
+          border-bottom-width: 0.4em
+          border-top-width: 0
+          bottom: 100%
+          top: auto
 
-      &.active
-        cursor: default
-        max-height: 18em
-        &:before
-          background-color: $color-accent
+    &.active
+      .chapter-inner
+        height: 2em
+
+      .chapter-bubble
+        transform: translateY(2em)
+
+      .chapter.active
+        background-color: #f4f4f4
+
         .chapter-inner
-          background-color: #f4f4f4
+          background: #f4f4f4
+
+        .chapter-bubble
+          display: block
+          opacity: 1
 
   .player-resize
     @include fill
