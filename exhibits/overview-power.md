@@ -5,13 +5,13 @@ The combined Command Module/Service Module (CSM) stack was powered by three fuel
 Fuel Cells
 ----------
 
-At a very high level, fuel cells look very similar to batteries. They involve a metallic cathode and anode, and an electrolyte medium immersing and connecting the two just like a battery does. However, where a battery becomes deplete over time due to the static nature of these three components, a fuel cell avoids this problem by deriving its electric potential from constantly flowing and thus replenished chemicals on the porous cathode and anode ends.
+At a very high level, fuel cells look very similar to batteries. They involve a metallic cathode and anode, and an electrolyte medium immersing and connecting the two just like a battery does. However, where a battery becomes depleted over time due to the static nature of these three components, a fuel cell avoids this problem by deriving its electric potential from constantly flowing and thus replenished chemicals on the porous cathode and anode ends.
 
 {{figure:eps-thumbnail}}
 
 The Apollo Fuel Cell design is known as an Alkaline or a Bacon Fuel Cell, and consumes pure hydrogen and oxygen gas fed from cryogenic tanks in the Service Module, with a static potassium hydroxide (KOH) electrolyte mediating the two, and produces electricity, heat, and potable water. On the anode side, the hydrogen gas reacts with spare hydroxide ions to produce water and electrons (2H&#8322; + 4OH&#8315; &rarr; 4H&#8322;O + 4e&#8315;), whilst on the cathode side oxygen gas and electrons returning from their circuit through the various powered components on the spacecraft would interact to form hydroxide ions (O&#8322; + 2H&#8322;O + 4e&#8315; &rarr; 4OH&#8315;). The electrolyte would carry the hydroxide ions across from the cathode to the anode to complete the sustained reaction loop.
 
-While excess hydrogen could to some extent be separated from the water byproduct and recycled through the system, the oxygen gas was consumed as-needed, and any excess was simply vented out of the spacecraft. Indeed, both halves of the fuel cell gas subsystems would be periodically purged of stale gas to ensure their ongoing purity.
+While excess hydrogen could to some extent be separated from the water byproduct (which was potable and consumed by the crew) and recycled through the system, the oxygen gas was consumed as-needed, and any excess was simply vented out of the spacecraft. Indeed, both halves of the fuel cell gas subsystems would be periodically purged of stale gas to ensure their ongoing purity.
 
 {{figure:o2-thumbnail}}
 
