@@ -160,7 +160,7 @@ class Transcript extends Model
         # even earlier line is still playing.
         for walkback from 5 to 1
           walkback-line = lines.list[candidate-idx - walkback]
-          if walkback-line._end? and walkback-line._end >= epoch
+          if walkback-line?._end? and walkback-line._end >= epoch
             idx = candidate-idx - walkback
             candidate-idx = idx - 1
             break
