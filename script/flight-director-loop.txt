@@ -4679,7 +4679,7 @@ Okay. Roger.
 
 [57 57 18 - 57 57 19] FLIGHT
 That's academic!
-> Given the LM batteries stored a total of 296 amp-hours each, running the heaters at 10 amps for even 60 hours (10 amps × 60 hours = 600 amp-hours) is a complete nonstarter, let alone through to CSM powerup.
+> Given the LM had a total battery capacity of around 2,250 amp-hours, running the heaters at 10 amps for 80 hours (10 amps × 80 hours = 800 amp-hours) was too much to even consider.
 
 [57 57 19] GNC
 I understand.

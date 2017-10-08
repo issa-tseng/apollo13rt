@@ -1,6 +1,6 @@
 Along with breathable air, potable water, and propellant, perhaps the most critical spacecraft-supplied consumable resource was electricity. Suffice it to say that Apollo 13 could not have made it home without power, and the nature of the accident meant that power was in very short supply indeed.
 
-The combined Command Module/Service Module (CSM) stack was powered by three fuel cells located in the Service Module, as well as five batteries located in the Command Module. The Lunar Module, on the other hand, had aboard only two batteries to support its mission. Typically, it relied on power supplied over an umbilical from the CSM whenever attached, so as not to needlessly drain its batteries.
+The combined Command Module/Service Module (CSM) stack was powered by three fuel cells located in the Service Module, as well as five batteries located in the Command Module. The Lunar Module, on the other hand, had aboard only five batteries to support its mission. Typically, it relied on power supplied over an umbilical from the CSM whenever attached, so as not to needlessly drain its batteries.
 
 Fuel Cells
 ----------
@@ -53,7 +53,7 @@ Any of the three AC inverters could then be output onto either or both of the tw
 Lunar Module batteries
 ----------------------
 
-The Lunar Module was equipped with only batteries for operation. The two LM batteries were the same silver oxide-zinc batteries as found in the Command Module, but were each a much larger 296 amp-hour capacity instead. As a result, they weighed a fairly significant 57kg (125lb) each.
+The Lunar Module was equipped with only batteries for operation. The five LM batteries were the same silver oxide-zinc batteries as found in the Command Module, but were much larger: the descent stage, intended to be left behind on the Moon, had four batteries worth 415 amp-hours each, while the two ascent stage batteries had a 296 amp-hour capacity. As a result the higher capacity, they weighed a fairly significant 57-61kg (125-135lb) each.
 
 They could be charged off of the Command/Service Module power system via an umbilical that fed through the interior of the docking tunnel between the two modules. Typically, the Lunar Module wasn't powered up at all until the Apollo spacecraft was already in stable lunar orbit, at which point the fuel cell could easily sustain both craft for the short duration before undocking and lunar landing. The umbilical was not meant to send power in reverse to the Command/Service Module, a limitation that would end up being overcome over the course of Apollo 13.
 
