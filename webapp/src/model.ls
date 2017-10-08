@@ -148,14 +148,23 @@ class Transcript extends Model
       break if candidate-idx < 0
 
       candidate-end = lines.list[candidate-idx]._end
-      if !candidate-end?
+      if !candidate-end? # if we have a partial, migrate upward until we have the root.
         search-id = lines.list[candidate-idx]._id
         until (lines.list[candidate-idx]._id is search-id) and lines.list[candidate-idx]._end?
           candidate-idx -= 1
-      else if candidate-end >= epoch
+      else if candidate-end >= epoch # this line is still playing.
         idx = candidate-idx
         candidate-idx = idx - 1
       else
+        # we think we have it, but we need to walk back a couple more just to see if an
+        # even earlier line is still playing.
+        for walkback from 5 to 1
+          walkback-line = lines.list[candidate-idx - walkback]
+          if walkback-line._end? and walkback-line._end >= epoch
+            idx = candidate-idx - walkback
+            candidate-idx = idx - 1
+            break
+
         break
 
     idx -= 1 unless (idx is 0) or (lines.list[idx]._start <= epoch)
