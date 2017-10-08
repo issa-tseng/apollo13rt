@@ -3259,7 +3259,7 @@
 59:47:53               INCO  Well, why don't you let us get ourselves swung in, here, and see how we're
                              going to work out with this problem? We're -
 59:47:58             FLIGHT  What just happened?
-                       INCO  - in the middle of that procedure, there.
+                       INCO  - in the midst of that procedure, there.
 59:47:59             FLIGHT  Oh, okay. You're still in the middle of that.
 59:48:00               INCO  Right.
 59:48:01             FLIGHT  Okay.
@@ -3278,8 +3278,8 @@
                              have COMM. Is it coming back shortly?
 59:49:06               INCO  I'll give you a call. It'll be back shortly.
 59:49:08             FLIGHT  Alright. Okay, now the POWER AMPL.
-59:49:09               INCO  If we turn the POWER AMPL OFF, go to LOW BIT RATE and stay on an OMNI, we've
-                             got to DOWN VOICE BACKUP; we may be able to make it. It'll be very close.
+59:49:09               INCO  If we turn the POWER AMPL OFF, go to LOW BIT RATE and stay on an OMNI, if we go
+                             to DOWN VOICE BACKUP; we may be able to make it. It'll be very close.
 59:49:18             FLIGHT  Make what?
 59:49:19               INCO  Voice.
 59:49:22             FLIGHT  Up or down?
@@ -3303,15 +3303,15 @@
 59:50:58             FLIGHT  Are his attitudes moving around some? Or is he essentially fixed?
 59:51:03            CONTROL  Essentially static in attitude.
 59:51:07            CONTROL  He's moving just a little bit but not a heck of a lot.
-59:51:40              TELMU  FLIGHT, TELMU. Sup -
-59:51:41             FLIGHT  Go ahead.
-59:51:42              TELMU  This ASCENT TANK 2 pressure has gone back down to a nominal value. We'd like to
+59:51:41              TELMU  FLIGHT, TELMU.
+59:51:42             FLIGHT  Sup - go ahead.
+59:51:43              TELMU  This ASCENT TANK 2 pressure has gone back down to a nominal value. We'd like to
                              go back to the DESCENT O₂.
 59:51:50             FLIGHT  Okay.
 59:51:51              TELMU  Close TANK 2 and open DESCENT TANK.
 59:51:53             FLIGHT  Okay. CAP - INCO, are we anywhere near back in COMM yet?
 59:51:58               INCO  FLIGHT, if you just hang on a couple of more seconds here, maybe we can get
-                             this thing squared away as we get the tracking data that FDO needs. That's what
+                             this thing squared away so we get the tracking data that FDO needs. That's what
                              we're after, here.
 59:52:06             FLIGHT  I understand that.
 59:52:07               INCO  No, we're not - we don't have a good COMM mode at this time.
@@ -3344,11 +3344,11 @@
 59:54:38             FLIGHT  That ought to improve the coolant picture a heck of a lot more than 30 percent.
 59:54:41              TELMU  Yup.
 59:55:40             FLIGHT  INCO, can we talk yet?
-59:55:45               INCO  Negative, FLIGHT. There's no uplink.
+59:55:45            NETWORK  That's a negative, FLIGHT. There's no uplink.
 59:55:49             FLIGHT  INCO, have I got an estimate?
-59:55:52               INCO  FLIGHT, let me tell you what's happened. While we were trying to lock it up, we
-                             drifted around into FORWARD OMNI country. So right now we're in FORWARD OMNI,
-                             we've got AFT selected, and he doesn't know because -
+59:55:52               INCO  FLIGHT, let me tell you what's happened. While we were trying to lock it up,
+                             we've drifted around into FORWARD OMNI country. So right now we're in FORWARD
+                             OMNI, we've got AFT selected, and he doesn't know because -
 59:56:01             FLIGHT  How so?
                        INCO  - he has his display breaker pulled. So if I can bear on your indulgence to
                              wait until we swing all the way around to the AFT OMNI, then we can get this -
@@ -3419,8 +3419,9 @@
                      FLIGHT  - test has run too long.
 60:02:01               INCO  Right. We're going back to the normal mode. Standby.
 60:02:12             FLIGHT  CONTROL, you write -
-60:02:36             FLIGHT  And close ASCENT. Yeah.
-60:02:48             FLIGHT  CAPCOM, does he have anything to say about stars and P52 yet?
+60:02:36              TELMU  And close ASCENT.
+60:02:37             FLIGHT  Yeah.
+60:02:49             FLIGHT  CAPCOM, does he have anything to say about stars and P52 yet?
 60:02:57             CAPCOM  No, I haven't heard any word. I can't ask him a question because he can't read
                              me.
 60:03:00             FLIGHT  Yeah. INCO, have we reconfigured yet?
@@ -3510,9 +3511,9 @@
 60:10:23             FLIGHT  Yes.
 60:10:23            CONTROL  And that'll leave us in an AGS ATTITUDE HOLD mode.
 60:10:25             FLIGHT  Yes.
-60:10:26            CONTROL  And I just got word from SPAN, the procedure we had for the PTC in AGS, Carter
-                             (??) analyzed, he's - it's not going to work. He's working feverishly to get
-                             one that will. Just got that input.
+60:10:26            CONTROL  And I just got word from SPAN, the procedure we had for the PTC in AGS, Carlton
+                             Hanaway (??) has been, he's - it's not going to work. He's working feverishly
+                             to get one that will. Just got that input.
 60:10:39            CONTROL  You might be able to handle it without the PTC, saves the attitude that we at -
                              are now at, and then just change attitudes over some time schedule.
 60:10:49             FLIGHT  Okay.
@@ -3530,7 +3531,7 @@
                      FLIGHT  - it doesn't work.
                     CONTROL  - but it doesn't work. Somebody thinks it won't, so we're not going to try it.
                              Unless you want to try that one, there.
-60:11:22             FLIGHT  Standby.
+60:11:22             CAPCOM  ??
 60:11:24            CONTROL  I would say no on that.
 60:13:00               INCO  They're trying to bring up an uplink carrier to the LM so we can get them voice
                              down.
@@ -3540,13 +3541,12 @@
 60:13:37             FLIGHT  Say again?
 60:13:37                FDO  I'll bring you up to speed on what I've been doing down here. Looking at a
                              maneuver in the vicini - in the present time range, and on the vector that I've
-                             got now, looking at about a 16 feet per second to get free-return.
+                             got now, looking at about 16 feet per second to get free-return.
 60:13:50             FLIGHT  Yeah; that's what I'm hearing over here in my other ear, Bill.
 60:13:52                FDO  Alright. And, I've got the selects down here working on a vector right now.
                              This is on the CSM doppler after the glitches.
 60:13:59             FLIGHT  Mmhmm.
-60:14:00                FDO  And we're not sure whether it's going to be any better than what we've got
-                             right now.
+60:14:00                FDO  And we're not sure whether it's going to be any better than what we've got now.
 60:14:04             FLIGHT  Uh huh.
 60:14:05                FDO  So, I guess what I've got to say is that in about 10 minutes, I can have a
                              maneuver ready - I'll be able to compute a maneuver; time range of 61:30. And
@@ -3593,7 +3593,7 @@
 60:18:56              TELMU  Okay, but can we go ahead and turn the POWER AMPL off?
 60:19:00             FLIGHT  POWER AMPL. What will that do to my COMM?
 60:19:02               INCO  FLIGHT, INCO.
-60:19:02             FLIGHT  Go ahead.
+60:19:03             FLIGHT  Go ahead.
 60:19:03               INCO  We lost it again. Standby.
 60:19:08             FLIGHT  Gentlemen, we're going to proceed to do a free-return maneuver here. At 61
                              hours, assume that; as soon as we get COMM with the crew we'll see how they
@@ -3612,7 +3612,7 @@
                              it'll work alright -
 60:20:01             FLIGHT  If it can't, how do we do it?
                       GUIDO  - that's what I'm working on right now. If it can't, we'll do it in ATTITUDE
-                             HOLD. 247.
+                             HOLD. P47.
 60:20:05             FLIGHT  Alright. I think that's the way we want to do it anyway, that mode will get you
                              all that -
 60:20:08              GUIDO  Yeah, that's what we know will work right now, I think. But we're going to look
@@ -3673,7 +3673,7 @@
 60:27:14             FLIGHT  Okay. CAPCOM, I don't think he ought to do any special maneuvering to find this
                              out right now, do you? Don't talk them into that.
 60:27:40             FLIGHT  Okay. Let's concentrate on the burn.
-60:28:23             FLIGHT  I didn't hear all of his question. CAPCOM?
+60:28:23             FLIGHT  I didn't hear all of his question. John?
 60:28:26             CAPCOM  How much can he use the TTCA?
 60:28:31             FLIGHT  FDO, FLIGHT. Have you got tracking on the LM?
 60:28:34                FDO  Standby, FLIGHT.
@@ -3711,7 +3711,7 @@
 60:29:54               INCO  Yeah, it seems as though he still has that display breaker in, so the meter
                              must be up.
 60:29:58             FLIGHT  Okay.
-60:29:58               INCO  It appears from my cal curve that he's up.
+60:29:58               INCO  It appears from my CAL curve that he's up.
 60:30:01             CAPCOM  Okay. Let's go. He's gotta hurry to get this 2-hour Activation done in 1 hour.
                              So why don't we -
 60:30:07             FLIGHT  Okay, everybody. Quiet in the room, please, and let's walk through with Jack on
@@ -3727,8 +3727,8 @@
 60:31:19             FLIGHT  You what?
 60:31:21             FLIGHT  Say again, TELMU?
 60:31:22              TELMU  We do not want INVERTER 1 breaker CLOSED in step 5, here.
-60:31:25             FLIGHT  Okay. CAPCOM, we do not want INVERTER 1 circuit breaker CLOSED in step 5.
-60:31:30              TELMU  Do not.
+60:31:25             FLIGHT  Okay. CAPCOM, we do not want INVERTER 1 circuit breaker CLOSED in step 5. Do
+                             not.
 60:31:37              TELMU  And omit step 6.
 60:31:38             FLIGHT  And omit step 6.
 60:32:16              TELMU  Roger.
@@ -3746,7 +3746,7 @@
 60:33:21             FLIGHT  What is your question?
 60:33:22            CONTROL  Did he activ - did he close the ENGINE CONTROL breaker under item 1, page 3?
                              Last entry.
-60:33:28             FLIGHT  I don't know.
+60:33:29             FLIGHT  I don't know.
 60:33:39              RETRO  FLIGHT, RETRO.
 60:33:40               INCO  FLIGHT, INCO. We need AFT OMNI.
 60:33:53              RETRO  FLIGHT, RETRO.
@@ -3797,7 +3797,7 @@
 60:38:09             FLIGHT  Well, why are you saying that? Why don't we just do it by the book?
 60:38:11            CONTROL  Well - that's the quickest thing in my mind, to do it - just do it by the book.
 60:38:15             FLIGHT  Well, why aren't we doing that?
-60:38:18            CONTROL  Well. It may take a little more power than what we need - that what we've got
+60:38:18            CONTROL  Well. It may take a little more power than what we need - than what we've got
                              to spare.
 60:38:24             FLIGHT  Well, I'm willing to spend that right now.
 60:38:26            CONTROL  Okay.
@@ -3895,7 +3895,7 @@
 60:44:34            CONTROL  CONTROL here.
 60:44:35             FLIGHT  Look ahead a little bit, now, in this thing, and anticipate what you want to be
                              deleted.
-60:44:41            CONTROL  Roger.
+60:44:41              GUIDO  Roger.
 60:44:50            CONTROL  Negative. Not - negative on the PQGS. Standby.
 60:44:53             FLIGHT  Negative on the PQGS. We're checking the REGs.
 60:45:04            CONTROL  And negative on the ASCENT HELIUM REGs.
@@ -4013,7 +4013,7 @@
 60:51:36             FLIGHT  They'll come to that in the checklist, apparently.
 60:51:37             CAPCOM  Okay.
 60:52:39                FAO  FLIGHT, FAO. We concur with that.
-60:52:41             CAPCOM  We concur.
+60:52:41             FLIGHT  We concur.
 60:52:43             FLIGHT  FAO concurs.
 60:52:46             FLIGHT  INCO, do you have the OMNI for the burn attitude?
 60:52:48              GUIDO  FLIGHT, GUIDANCE, we're in the middle of a LOAD right now.
@@ -4226,14 +4226,14 @@
                              press. And -
 61:09:39             FLIGHT  And then we go into the 6 minute?
 61:09:41                FAO  That's right.
-61:09:41             FLIGHT  Alright.
+61:09:42             FLIGHT  Alright.
 61:09:44             FLIGHT  Keep - keep track of us, here. Spencer, about -
 61:09:46             CAPCOM  Okay, you ready for the gimbal?
 61:09:47                FAO  Okay.
 61:09:47            CONTROL  Ready.
 61:09:48             FLIGHT  Ready for the gimbal.
 61:09:49            CONTROL  Right.
-61:09:54            CONTROL  Got DPS arm.
+61:09:55            CONTROL  Got DPS arm.
 61:09:57            CONTROL  And we're driving.
 61:10:01             CAPCOM  Okay, and one other point that's brought out here, we've got a 4-jet ullage
                              loaded in the DAP, and we've got 2 in the PAD.
@@ -4338,7 +4338,7 @@
 61:16:25             FLIGHT  I'm looking at it. Standby.
 61:16:33             FLIGHT  GUIDANCE, FLIGHT. You copying that?
 61:16:36              GUIDO  What's on the ball right now?
-61:16:39             FLIGHT  What angle is he looking at, CAPCOM? You looking at the ball angles?
+61:16:39             FLIGHT  What angles are you looking at, CAPCOM? You looking at the ball angles?
 61:16:43             CAPCOM  I'm looking at all of them. I'm looking at what he's got on the 50 18 on the
                              DSKY, and also what he's got on the FCDUs -
 61:16:51              GUIDO  FLIGHT, the pitch and roll look great. The yaw - the only reason it looks
@@ -4404,9 +4404,9 @@
 61:19:35              GUIDO  But he's at a different - going to a different yaw, so we're checking it.
 61:20:23                FAO  FLIGHT, FAO.
 61:20:24             FLIGHT  Go.
-61:20:26                FAO  If we don't get the attitude soon, we're going to be running behind here.
+61:20:26                FAO  If we don't get to attitude soon, we're going to be running behind here.
 61:20:31             FLIGHT  Okay. How far away are we?
-61:20:33                FAO  I'm in the same boat as -
+61:20:34                FAO  I'm in the same boat as -
 61:20:36             FLIGHT  GUIDANCE, what are the DP - IMU attitudes that are on the DSKY that we're
                              looking for?
 61:20:41             FLIGHT  GUIDANCE?
@@ -4437,7 +4437,7 @@
 61:22:18            CONTROL  FLIGHT, CONTROL.
 61:22:19             FLIGHT  Go.
 61:22:20            CONTROL  Okay. Could we possibly look ahead here and get some of these done so it
-                             doesn't get too crowded right at the start of the burn? There's a couple of
+                             doesn't get too crowded right by the start of the burn? There's a couple of
                              items that need to be taken care of.
 61:22:27             FLIGHT  Like what?
 61:22:28            CONTROL  Well, we need to get THROTTLE CONTROL to MANUAL; he's in AUTO right now. It's
@@ -4455,7 +4455,7 @@
                              of rates or anything to go ENGINE GIMBAL OFF, MODE CONTROL ATT CONTROL -
                              ATTITUDE HOLD, and TTCA? You think it's worth reviewing with him?
 61:23:27             FLIGHT  To finish the burn?
-61:23:33             CAPCOM  I don't think it would hurt to talk it over with him.
+61:23:33             CAPCOM  I don't think it would hurt it to talk it over with him.
 61:23:35             FLIGHT  Okay.
 61:23:42              GUIDO  That's affirm.
 61:23:43             FLIGHT  Affirmative.
@@ -4464,7 +4464,7 @@
 61:23:55              TELMU  For your information, our water rate's dropped down a little in our favor.
 61:23:59             FLIGHT  Thank you.
 61:24:02             CAPCOM  FLIGHT? CAPCOM.
-61:24:05             FLIGHT  Yeah, I just mentioned it to him.
+61:24:05  FLIGHT (off loop)  Yeah, I just mentioned it to him.
 61:24:07             FLIGHT  Who's calling?
 61:24:08             CAPCOM  CAPCOM's calling -
 61:24:08             FLIGHT  Yeah.
@@ -4488,11 +4488,10 @@
 61:25:06             FLIGHT  We'll let it go automatically, Jack.
 61:25:07              GUIDO  FLIGHT, GUIDANCE.
 61:25:08             FLIGHT  Go.
-61:25:08              GUIDO  He needs to go ahead and hit ENTER on his program if we're proceeding on a P40.
+61:25:08              GUIDO  He needs to go ahead and hit ENTER on his program and proceed on the P40.
 61:25:13             FLIGHT  Okay. He needs to do an ENTER and proceed on, CAPCOM.
 61:25:17              GUIDO  There's still time yet, FLIGHT. Just a minute.
-61:25:21              GUIDO  Oh, he did it, FLIGHT.
-61:25:22             FLIGHT  Standby.
+61:25:21              GUIDO  Oh, he did it, FLIGHT. Standby.
 61:25:37             FLIGHT  And propellant quantity down at the bottom, don't worry about it. It's not on.
 61:25:40             CAPCOM  No big deal.
 61:25:41             FLIGHT  Yeah.
@@ -4527,7 +4526,7 @@
 61:27:29             CAPCOM  Okay. How are you set up for 2 minutes?
 61:27:32             FLIGHT  What's that Tig counting down to, GUIDANCE, the ullage?
 61:27:37              GUIDO  Negative, FLIGHT. Engine ignition.
-61:27:40             FLIGHT  Okay. What is - why is that clock counting a different number up there?
+61:27:40             FLIGHT  Okay. What is - why is our clock counting a different number up there?
 61:27:44              GUIDO  Time delay, FLIGHT, from -
 61:27:45             FLIGHT  That's an awful big one.
                       GUIDO  - you're reading his DSKY.
@@ -4591,7 +4590,7 @@
 61:31:21             FLIGHT  Okay, CONTROL. The next question is what control mode, if any, do you want to
                              be in, here? Work with the back room. Do we want to try to set up some kind of
                              PTC in AGS or are we just going to power down, let this thing drift?
-61:31:31            CONTROL  Okay. Let me throw my thoughts together for a minute, Glynn.
+61:31:31            CONTROL  Okay. Let me pull my thoughts together for a minute, Glynn.
 61:31:34             FLIGHT  Yeah. Okay, but you have somebody work that -
 61:31:36            CONTROL  Yes. Roger.
                      FLIGHT  - I want you to watch to configuration, here.
@@ -4663,7 +4662,7 @@
 61:35:18            CONTROL  Are we doing another burn at 79 hours?
 61:35:20             FLIGHT  Plan on that. Yes. I don't know whether we are or not -
 61:35:22            CONTROL  How are we going to get alignment?
-61:35:23             FLIGHT  Plan on it.
+61:35:24             FLIGHT  Plan on that.
 61:35:29             FLIGHT  Can you turn off the thrusters -
 61:35:31            CONTROL  Affirmative, then he can go MODE CONTROL OFF, whatever he desires.
 61:35:35            CONTROL  Stand - standby on that, FLIGHT. Standby on that.
@@ -4715,8 +4714,8 @@
 61:39:21             FLIGHT  GUIDANCE, FLIGHT.
 61:39:23             FLIGHT  GUIDANCE -
 61:39:23              GUIDO  Go, FLIGHT.
-61:39:24             FLIGHT  Can you give us a star - ball angles, I should say, for a COAS star check in
-                             the shadow?
+61:39:24             FLIGHT  Can you give us star - ball angles, I should say, for a COAS star check in the
+                             shadow?
 61:39:35              GUIDO  Yeah.
 61:39:35             FLIGHT  Pronto.
 61:39:37              GUIDO  In the Moon shadow?
@@ -4732,12 +4731,11 @@
 61:40:40             FLIGHT  Go ahead.
 61:40:40               INCO  Okay, look, I'm running out of time.
 61:40:42             FLIGHT  Yeah. I know.
-61:40:43               INCO  Well, we've got to do a handoff over here. We don't have any choice. To try to
-                             make it as quick as possible, I want to turn down the transceiver for 5
-                             minutes, let us push the IU out of the way, and then bring up the carrier after
-                             5 minutes, when it comes on we'll be able to distinguish the LM. That's the
-                             quickest way we know how to try to do it. And we hope it works better than last
-                             time.
+61:40:43               INCO  Well, we've got to do a handover here. We don't have any choice. To try to make
+                             it as quick as possible, I want to turn down the transceiver for 5 minutes, let
+                             us push the IU out of the way, and then bring up the carrier after 5 minutes,
+                             when it comes on we'll be able to distinguish the LM. That's the quickest way
+                             we know how to try to do it. And we hope it works better than last time.
 61:41:07             FLIGHT  Okay. Well you gotta hand over now, do you?
 61:41:08               INCO  We don't have any choice. It's going to be one way or another - it's either
                              going to be the hard way or the easy way. I can't guarantee either way.
@@ -4777,7 +4775,7 @@
 61:43:03             FLIGHT  Unless you've got a problem.
 61:43:04                FDO  No problem.
 61:43:15               INCO  That's affirmative.
-61:43:29             FLIGHT  CONTROL, FLIGHT.
+61:43:30             FLIGHT  CONTROL, FLIGHT.
 61:43:31            CONTROL  Go ahead, FLIGHT.
 61:43:45            CONTROL  Affirmative.
 61:43:50            CONTROL  That's good enough. That's real good.
@@ -4819,13 +4817,13 @@
 61:48:45             FLIGHT  Go ahead.
 61:48:46                FDO  Would you like some post-burn data?
 61:48:49             FLIGHT  Yes.
-61:48:50                FDO  Okay. The closest approach 136.75.
-61:48:54             FLIGHT  That's based on tho confirmed maneuver?
+61:48:50                FDO  Okay. Closest approach 136.75.
+61:48:54             FLIGHT  That's based on the confirmed maneuver?
 61:48:56                FDO  That's affirm.
 61:48:57             FLIGHT  From the PGNS.
 61:48:58                FDO  That's affirm.
 61:49:00                FDO  We've got a gamut entry interface of -6.53.
-61:49:05             FLIGHT  Okay. I'm - with - that's all coming on nominal, then.
+61:49:05             FLIGHT  Okay. I'm - with - that's all coming out nominal, then.
 61:49:08                FDO  Roger. What's even better is that the doppler is within 7 cycles.
 61:49:14             FLIGHT  So you think the doppler confirms it.
 61:49:16                FDO  The doppler says that we're - we did the right things, that's affirm.
@@ -4998,4 +4996,4 @@
                              best we can like we did for Apollo 8.
 62:01:49            CONTROL  Okay. If he does it that way, he'll have to use hard-over command on the ACA to
                              stop any perturbations, then.
-62:01:57            CONTROL  ATTITUDE DIRECT CONTROL breaker has to be in. Yes, he's hard over on the ACA.
+62:01:57            CONTROL  ATTITUDE DIRECT CONTROL breaker has to be in. Yes, use hard over on the ACA.

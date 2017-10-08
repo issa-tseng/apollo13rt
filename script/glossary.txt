@@ -104,11 +104,17 @@ Recall that by the Ideal Gas Law (PV=nRT) the same amount of gas at a higher tem
 CSM
 Command/Service Module, the name for the mated Command and Sevice Modules. These formed two-thirds of the Apollo spacecraft system, along with the Lunar Module.
 
+CWEA
+Caution and Warning Electronics Assembly.
+
 DC electrical bus (MAIN A, MAIN B)
 The CSM was wired with two direct current electrical loops to its components to supply power to them. Not every component was on both buses. Each could be powered by up to two of the fuel cells.
 
 Deadband
 A small range around a target attitude within which the spacecraft would be kept. When flying with automated systems, the size of the deadband could be configured.
+
+Descent Engine Control Assembly (DECA)
+The systems that managed the propellant flow, throttle, gimbal thrust vectoring, etc of the DPS.
 
 Descent Stage (Descent)
 This stage of the Lunar Module contained the legs and the large Descent Propulsion System engine, along with batteries and consumable tanks for use before arrival upon and departure from the Moon. It was usually left behind on the Moon, so the weight did not have to be carried back up.
@@ -140,7 +146,7 @@ The rechargeable CM batteries A through C were designated for use during re-entr
 Full scale
 This term was applied to gauges whose needles were pinned to the top of their dial: the implication was that the reading was _at least_ maximum.
 
-Glycol
+Glycol (Water, Coolant)
 A water/glycol mix was circulated around the spacecraft to heat-producing components such as the computer as a cooling system. A combination of heat transfer to cryogenic O₂ and evaporation was used to dissipate the heat. Glycol was added to the water as an antifreeze.
 
 Display/Keyboard (DSKY)
@@ -163,6 +169,9 @@ Similar to an aircraft's artificial horizon, the FDAI displayed the spacecraft a
 
 Flows
 A slang term for electrical current.
+
+Free-return
+A trajectory that, without any further maneuvering whatsoever, returns to Earth. Apollo 13 was the first Apollo mission whose approach toward the Moon was not on free-return, as the desired landing site was further afield than the previous two landings.
 
 Fuel cell (Fuel cells)
 A clever system which reacted H₂ and O₂ to produce water and electricity. It is essentially like a battery, with a cathode and anode, but with flowing rather than static reactants. There were three on board Apollo, each supplying 31 volts.
@@ -212,6 +221,9 @@ The AGC that lived in the LM. It was identical to the CMC, but it had a few diff
 LM Heater
 A number of heaters in the Lunar Module kept components from freezing over on the long trip to the Moon. After the CSM/LM docking maneuver, power was sent from the CSM to the LM to fire up these heaters.
 
+LMS
+Lunar Module Simulator
+
 Lunar Module (LM)
 The Lunar Module was the lightweight standalone component which actually descended to the Moon. It had two propulsion systems, an RCS system, navigation equipment and computers independent of the Command Module, and batteries and oxygen tanks for power and air.
 
@@ -236,8 +248,8 @@ Oxygen gas. This was stored in cryogenic tanks and used along with O₂ in the f
 Odyssey
 The given name of the Apollo 13 Command Module.
 
-Omnidirectional antenna (OMNIs, OMNI Alpha, OMNI Bravo, OMNI Charlie, Aft OMNI, Forward OMNI)
-The omnidirectional antennas weren't as performant as the steerable antenna at its best, but weren't as fidgety. Multiple were still required, as the spacecraft itself would block signal. Switching between them was manual.
+Omnidirectional antenna (OMNI, OMNIs, OMNI Alpha, OMNI Bravo, OMNI Charlie, Aft OMNI, Forward OMNI)
+The omnidirectional antennas weren't as performant as the steerable antenna at its best, but weren't as fidgety. Multiple were required, as the spacecraft itself would block signal as it rotated. Switching between them was manual.
 
 Open-circuit
 To break a circuit entirely so it no longer forms a loop. This was as much as one could do to ensure an electrical bus was entirely offline.
@@ -249,7 +261,13 @@ P00 (Program 00)
 An idle program for the AGC. Pronounced "poo." The AGC was never completely idle, but this was as close as it got, and it ensured the AGC wouldn't try to goof up any numbers while the ground controllers were uplinking data to the spacecraft.
 
 P30
-Automated burn program. Given a good platform, a slew of numbers representing the desired ∆V, Tig, and other parameters, the computer could manage all the necessary components of a burn.
+External ∆V burn program. Given a good platform, a slew of numbers representing the desired ∆V, Tig, and other parameters, the computer could prepare for the necessary components of a burn.
+
+P40
+Automated DPS burn program. Once set up, the computer could manage all the controls and times required for the burn.
+
+P47
+A passive burn program which allowed the crew to monitor the state of a burn being executed outside the computer's control, like the S-IVB TLI or a manual ignition and burn.
 
 P51
 The name of an alignment program in the AGC. It was a colloquially used term for executing a star-sighting fine alignment using the AOT. Where a P52 assumes the spacecraft was close to aligned, a P51 would be done "from scratch."
@@ -317,6 +335,9 @@ These valves allowed cryogenic oxygen and hydrogen to each fuel cell. Because th
 Reference to Stable Member Matrix (REFSMMAT)
 Oversimplistically, the REFSMMAT was a numerical matrix that oriented the navigation system (in particular the IMU and FDAI) such that they made sense relative to their current operation: for instance, having the zero origin point along the axis of a burn or PTC. New REFSMMATs could be uplinked to the spacecraft from the ground.
 
+Resolvers
+The sensors in the IMU gimbal system that read the angle of each gimbal ring.
+
 Roll
 One of three measures of a spacecraft's attitude. Think of a sausage turning on a spit.
 
@@ -326,17 +347,17 @@ Five mainframes lived here, which amongst other things processed the data that w
 Repress Package (REPRESS pack)
 This set of three 1lb oxygen tanks were primarily reserved to help repressurize the cabin in an emergency, as well as supply oxygen to face masks in that event. You can find them on the [oxygen subsystem diagram](#ref-panel-o2).
 
-S-Band Antenna (high-gain)
-The steerable S-Band Antenna could point in a particular direction and focus a high-powered signal at it. This greatly improved power efficiency and communications quality with ground systems. The computer on-board could typically aim it automatically.
-
-Unified S-Band (S-Band)
-The "S-Band Antenna" referred to the steerable high-gain antenna, but all air-ground communications were done on the Unified S-Band, a microwave frequency range in the neighborhood of 2100-2300 Mhz, which was chosen and engineered to allow telemetry, tracking, and voice to all carry over one set of transmission systems.
-
 S-IVB
 The final stage of the Saturn V, the S-IVB performed Trans-lunar Injection and in the case of Apollo 13 traveled to the Moon near Apollo, with the goal of impacting it for seismograph measurements by a package left by Apollo 12.
 
 Service Module (SM)
 This was the long cylindrical section attached to the Command Module which included, amongst other things, the SPS and its propellant, cryogenic oxygen and hydrogen tanks, the fuel cells, and an RCS system.
+
+Service Propulsion System (SPS)
+This was the hypergolic main engine on the Service Module. It burned Aerozine with nitrogen tetroxide, and normally did all the work of getting to and from lunar orbit.
+
+SIG SENSOR
+There was a circuit breaker labeled "SIG SENSOR," and so this became a general name for the instrumentation systems on the spacecraft.
 
 SOV (SOVs)
 Shut-off valve.
@@ -347,17 +368,20 @@ The SCS monitored the spacecraft attitude and rates, and could automatically con
 Staging
 The act and process of jettisoning a stage of the spacecraft.
 
-SIG SENSOR
-There was a circuit breaker labeled "SIG SENSOR," and so this became a general name for the instrumentation systems on the spacecraft.
-
-Service Propulsion System (SPS)
-This was the hypergolic main engine on the Service Module. It burned Aerozine with nitrogen tetroxide, and normally did all the work of getting to and from lunar orbit.
+Steerable Antenna (S-Band Antenna, steerable, high-gain)
+The Steerable S-Band Antenna could point in a particular direction and focus a high-powered signal at it. This greatly improved power efficiency and communications quality with ground systems. The computer on-board could typically aim it automatically.
 
 Surge Tank
 A reserve tank of pressurized O₂ on the CM itself. This meant it stayed on-board and could be used through Earth re-entry. You can find it on the [oxygen subsystem diagram](#ref-panel-o2).
 
+Spacecraft Analysis Room (SPAN)
+The SPAN room was a support room that provided a liaison between the NASA flight controllers and the engineers at the private contractors that actually designed and manufactured the various spacecraft components.
+
 SSR
 Special subroutine procedure checklist. In other contexts, SSR can also mean the Staff Support Room in Mission Control, where each flight controller's team worked with them over their own loop.
+
+State Vector
+The mathematical vectors that describe exactly where the spacecraft is in the universe, and its momentary velocity in that position.
 
 Systems test
 Not every measurement was available directly on a panel gauge or to the telemetry systems. Some readings had to be taken manually off a panel-mounted voltmeter one at a time.
@@ -374,13 +398,16 @@ Trans-lunar coast. The period during which the spacecraft's orbit takes between 
 Telemetry (TM)
 Most, but not all, of the critical instrument readings on Apollo were sent over radio to ground stations on a PCM code. These were then relayed over an extensive ground communications network to Houston for display.
 
-Thrust Chamber Assembly (TCA)
+Thrust Chamber Assembly (TCA, TCAs)
 The "business end" of the RCS system.
 
 Thrust/Translation Control Assembly (TTCA, TTCAs, THC)
 This control joystick commanded the spacecraft to translate (shift without rotation) around in any directional axis. Also known as the Translation Hand Controller (THC).
 
-Trans-lunar Injection
+Thrust Vectoring Control (TVC)
+Many booster and spacecraft engines have the ability to gimbal the engine by a few degrees, and thus direct the outputted thrust off-axis to turn the craft.
+
+Trans-lunar Injection (TLI)
 The big burn that took the spacecraft from a near-circular Earth orbit to a highly elliptical orbit calculated to coincide with the Moon in its orbit.
 
 Tunnel
@@ -391,6 +418,9 @@ Fuel [doesn't sit neatly](https://www.youtube.com/watch?v=u656se4e34M#t=1m04) (v
 
 Undervolt
 An electrical supply or bus that is providing less voltage than expected is undervolting. You can see this in the batteries you use at home: as they get used up, the voltage they put out drops. Low enough voltage, and they no longer power your device.
+
+Unified S-Band (S-Band)
+The "S-Band Antenna" colloquially referred to the steerable high-gain antenna, but all air-ground communications were done on the Unified S-Band, a microwave frequency range in the neighborhood of 2100-2300 Mhz, which was chosen and engineered to allow telemetry, tracking, and voice to all carry over one set of transmission systems.
 
 Quad (Quads)
 A pack of four RCS thrusters. The letters A-D (and sometimes phonetic names thereof) referred to different quads on the CSM.
@@ -407,14 +437,23 @@ VERB 06 was a request to display a value stored in the computer's memory at the 
 VERB 16 NOUN 20 (16 NOUN 20)
 Whereas VERB 06 displayed a computer value once, VERB 16 monitored it continuously. NOUN 20 was the CDU angles of the IMU as read and understood by the computer.
 
+VERB 16 NOUN 85 (16 85)
+Continuously monitored the velocity residuals (essentially, burn error).
+
 VERB 49
 A command issued to autopilot the spacecraft to a new desired attitude.
 
 VERB 55
 Incremented the computer time by a given delta.
 
+VERB 65
+Disabled some particular RCS thrusters during DPS burns.
+
 VERB 74 (E-MOD, E-MOD DUMP)
 Initiates a dump of the erasable memory (E-Memory) over the downlink to Earth for analysis, verification, and safekeeping. The resulting artifact was called an E-DUMP or E-MOD.
+
+VERB 76
+Activates MIN IMPULSE control mode.
 
 Very High Frequency (VHF)
 No different than the VHF radios used on aircraft and maritime vessels today, VHF was used by the CM, LM, and spacewalking astronauts for simple and reliable close-range communications.

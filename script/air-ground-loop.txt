@@ -2446,7 +2446,7 @@ We have been hearing you, and the problem is on the ground. I hope we have it co
 Okay. That sounds good.
 
 [60 04 54 - 60 05 11] CAPCOM
-We're considering powering down the PGNS but we want to know what capability you have to do a coarse and fine align. We read your conversation about being unable to see out the window very good. How about out the AOT?
+We're considering powering down the PGNS but we want to know what capability you have to do a coarse and fine align. And we read your conversation about being unable to see out the window very good. How about out the AOT?
 
 [60 05 27] LMP
 He's looking now.
@@ -2530,7 +2530,7 @@ Okay. We'll do it and we want to be sure we talk back and forth, now, to make su
 Affirm.
 
 [60 25 36 - 60 25 45] LMP
-Okay. In the interim, Jack, I looked around again and I saw that we have a radar and a landing-radar heater breaker in. Can I pull those out?
+Okay. In the interim, Jack, I looked around again and I saw that we have a radar and a landing radar heater breaker in. Can I pull those out?
 > CONTROL noticed these around 58:02 and 58:11, but the instruction never made it up to pull them.
 
 [60 25 47 - 60 25 48] CAPCOM
@@ -2543,7 +2543,7 @@ And now we want to ask you a question about alignments and so forth: we wanted t
 Okay, in this attitude, Jack, that we're pitching around, I cannot use the AOT to see stars. We - we're just not able to see them at all. Now, we may be able to maneuver off in yaw or - and/or roll, and see stars. Right now, we haven't been able to. The AOT is useless. The Command Module structure is just radiating too much light into the - into the telescope.
 
 [60 26 43 - 60 26 52] CAPCOM
-Okay. And how about using the Service Module to cast a shadow on the commander's window? If you do that, can you see stars for a COAS alignment?
+Okay. And how about using the Service Module to cast a shadow on the Commander's window? If you do that, can you see stars for a COAS alignment?
 
 [60 26 57 - 60 27 11] CDR
 We could give that a try, Jack, although I don't know how successful it will be. We tried to do it; the light shines off our quads which makes it difficult to see stars. We do have the Earth and Moon, if that can be of assistance.
@@ -2551,18 +2551,19 @@ We could give that a try, Jack, although I don't know how successful it will be.
 [60 27 20 - 60 27 36] LMP
 Another problem: right now, Jack, I'm looking out the right window and it's pretty dark out that window but there are about a thousand or so false stars out here from - left over from some of the debris. It's hard to discern what's real and not real.
 
-[60 27 41 - 60 27 57] FLIGHT
+[60 27 41 - 60 27 57] CAPCOM
 Okay. That's good information. And during the time that we see you're continuing to pitch, if you ever get in a position where you think the AOT might be of some use, we'd like you to periodically look out of it and see if you can see some stars that would enable us to get a P52.
 
 [60 28 00 - 60 28 19] CDR
 Okay, will do. And also, let me ask you a question: in this configuration, docked, we have to use the TTCA to control pitch and roll. And just how much can we use that without really changing our trajectory? We only have 60 miles to play with.
-> Lovell is concerned, because with the weight of the CSM attached to the LM the controls normally used to rotate the spacecraft don't do much (imaging twiddling a long stick between two fingers at its middle as opposed to at its ends), so he has to use the controls normally used to strafe the spacecraft around. But this has the potential to alter the trajectory of the spacecraft, and this close to the Moon very small adjustments can turn into miles of difference at the very far point.
+> Lovell is concerned, because with the weight of the CSM attached to the LM the controls normally used to rotate the spacecraft don't do much (imaging twiddling a long stick between two fingers at its middle as opposed to at its ends), so he has to use the controls normally used to shift the spacecraft in space. But this has the potential to alter the trajectory of the spacecraft, and this close to the Moon very small adjustments can turn into miles of difference at the very far point.
 
 [60 28 24 - 60 28 25] CAPCOM
 Roger. We'll put that to them.
 
 [60 28 47 - 60 28 54] LMP
 Okay, Jack. Are you ready to go to work with me on the 2-hour DPS activation and contingency book, page 1?
+> If anybody has this activation checklist, please send it our way!
 
 [60 28 56 - 60 28 57] CAPCOM
 Roger. We're ready to go.
@@ -2589,7 +2590,7 @@ Okay. On EPS activation, we're through step - we're through that - bottom of tha
 We concur. Page 2.
 
 [60 31 15 - 60 31 25] LMP
-Okay, in essence, we've circumvented step 4, and we're not sitting with all 4 acs - descent BATs on high-voltage taps, so I'll scratch off step 4.
+Okay, in essence, we've circumvented step 4, and we're not sitting with all 4 acs - descent BATs on high voltage taps, so I'll scratch off step 4.
 
 [60 31 30 - 60 31 34] CAPCOM
 Roger, and in step 5 we want to leave INVERTER 1 circuit breaker OPEN.
@@ -2625,7 +2626,7 @@ We got the time.
 Okay. Let's go to the CB pages now.
 
 [60 33 31 - 60 33 35] CAPCOM
-Freddo, did you close the engine control breaker on panel 11?
+Freddo, did you close the ENGINE CONTROL breaker on panel 11?
 
 [60 33 40 - 60 33 41] LMP
 What control was that, Jack?
@@ -2703,7 +2704,7 @@ That's affirm. Close the DECA GIMBAL.
 [60 37 18 - 60 37 20] CAPCOM
 Alright, DECA POWER will come up later in the procedure, Freddo.
 
-[60 37 23] LMP
+[60 37 24] LMP
 Okay.
 
 [60 38 44 - 60 38 54] CAPCOM
@@ -2725,7 +2726,7 @@ With the Activation power-up, we're starting right now.
 Houston, we might as well leave our RCS TCAs IN, right?
 
 [60 40 25 - 60 40 28] CAPCOM
-Affirmative, Jim. Leave your RCS TCAs in on panel 11
+Affirmative, Jim. Leave your RCS TCAs in on panel 11.
 
 [60 40 32 - 60 40 36] LMP
 Yeah, I used my Pentel pen and made those white ones black ones.
@@ -2832,7 +2833,7 @@ And Jack, OMNIs going now -
 [- 60 47 25] CAPCOM
 - it doesn't take any current.
 
-[60 47 32 - 60 47 35] LMP
+[60 47 32 - 60 47 36] LMP
 Okay. Without suits it doesn't do us much good either, though.
 
 [60 47 54 - 60 48 00] LMP
@@ -2923,7 +2924,7 @@ Okay, here we go. The purpose is midcourse correction for free-return. NOUN 33: 
 6> NOUN 86: change in velocity (∆V in fps) in the AGS coordinate space
 
 [60 54 59 - 60 56 02] LMP
-Okay, Jack. We have a P30 maneuver PAD, a midcourse for free-return. NOUN 33: 061:29:42.84. -0021.3, +004.1, -0031.2. HA and NP N/A, ∆VR 0038.0. 0:31. 120, 298. -0021.3, +0004.1, -0031.2. DPS throttle 5 seconds at 10%, burn the rest at 40%. And we need a 2-jet, 10 second ullage.
+Okay, Jack. We have a P30 maneuver PAD, a midcourse for free-return. NOUN 33: 061:29:42.84. -0021.3, +004.1, -0031.2. HA and HP N/A, ∆VR 0038.0. 0:31. 120, 298. -0021.3, +0004.1, -0031.2. COAS N/A. GDA angles, pitch 5.86, roll 6.75. DPS throttle 5 seconds at 10%, burn the rest at 40%. And we need a 2-jet, 10 second ullage.
 
 [60 56 03 - 60 56 11] CAPCOM
 That's a good readback, Fred. I'd like to verify, however, in NOUN 81 in VY, it's plus three balls 41.
@@ -2992,7 +2993,7 @@ Hey, on 13, you've read us up the fine align angles and we've cranked those in.
 Affirmative.
 
 [61 01 09 - 61 01 14] LMP
-Okay, so now we're up to - we've got to do a DAP set, the gimbal/throttle test.
+Okay, so now we're up to - we've got to do the DAP set, the gimbal/throttle test.
 
 [61 01 14] CAPCOM
 That's -
@@ -3079,7 +3080,7 @@ You're GO on the weights.
 [61 09 06 - 61 09 13] CAPCOM
 Aquarius, Houston. We'd like you to recycle on the DAP load and change your DAP to 32021. Over.
 
-[61 11 05 - 61 11 14] CAPCOM
+[61 11 05 - 61 11 15] CAPCOM
 Okay, Aquarius. We're looking at your gimbal and we notice that we've got a 4-jet ullage loaded in the DAP and we gave you 2 jets on the PAD. But let's go with what we've got loaded. It'll be a 4-jet ullage.
 
 [61 11 18] LMP
@@ -3214,7 +3215,7 @@ AUTO SHUTDOWN.
 
 [61 30 40 - 61 30 41] LMP
 Okay, you're looking at {16 85} now, Jack.
-1> VERB 16 NOUN 85, which displays the control axis information (??).
+1> VERB 16 NOUN 85
 
 [61 30 46 - 61 30 48] CAPCOM
 Okay, you're GO on the residuals; proceed.
@@ -3241,7 +3242,7 @@ And Houston, it's doubtful right now whether we'll be able to see the stars in t
 Roger, Jim. We'll get the word for you.
 
 [61 35 24 - 61 35 27] CDR
-And Houston, we're in an ATT HOLD mode. Can we turn off the buses?
+And Houston, we're in an ATT HOLD mode. Can we turn off the thrusters?
 
 [61 35 40 - 61 35 42] CAPCOM
 Standby on that one, Jim.
@@ -3273,7 +3274,7 @@ And how are the stars out the window now?
 [61 42 13 - 61 42 33] CDR
 Well, I'll look again, Jack, but at this attitude the Sun is reflecting off of - off of Quad 4 so bright that it's ruining any night vision. And we've still got particles floating around us. I'll have to take a long look and see if I can see any star patterns.
 
-[61 42 34] CAPCOM
+[61 42 35] CAPCOM
 Roger.
 
 [61 42 43 - 61 42 55] CAPCOM
@@ -3371,4 +3372,7 @@ Oh. Wait a minute, Jack. Did you say {pericynthion} or {perigee}?
 
 [62 00 14 - 62 00 15] CAPCOM
 I meant pericynthion.
+
+[62 00 19] LMP
+That's better!
 

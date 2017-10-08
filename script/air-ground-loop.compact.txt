@@ -1128,8 +1128,8 @@
                              corrected now.
 60:04:52                CDR  Okay. That sounds good.
 60:04:54             CAPCOM  We're considering powering down the PGNS but we want to know what capability
-                             you have to do a coarse and fine align. We read your conversation about being
-                             unable to see out the window very good. How about out the AOT?
+                             you have to do a coarse and fine align. And we read your conversation about
+                             being unable to see out the window very good. How about out the AOT?
 60:05:27                LMP  He's looking now.
 60:05:30             CAPCOM  Okay, and the other thing we thought you might try is to put the Service Module
                              between you and the Sun, and then to see if you can see anything out the window
@@ -1175,7 +1175,7 @@
                              sure we get this burn off right.
 60:25:33             CAPCOM  Affirm.
 60:25:36                LMP  Okay. In the interim, Jack, I looked around again and I saw that we have a
-                             radar and a landing-radar heater breaker in. Can I pull those out?
+                             radar and a landing radar heater breaker in. Can I pull those out?
 60:25:47             CAPCOM  Affirmative. Pull them both out.
 60:25:54             CAPCOM  And now we want to ask you a question about alignments and so forth: we wanted
                              to know if you can see any stars out of the AOT. We also wanted to know if you
@@ -1187,7 +1187,7 @@
                              been able to. The AOT is useless. The Command Module structure is just
                              radiating too much light into the - into the telescope.
 60:26:43             CAPCOM  Okay. And how about using the Service Module to cast a shadow on the
-                             commander's window? If you do that, can you see stars for a COAS alignment?
+                             Commander's window? If you do that, can you see stars for a COAS alignment?
 60:26:57                CDR  We could give that a try, Jack, although I don't know how successful it will
                              be. We tried to do it; the light shines off our quads which makes it difficult
                              to see stars. We do have the Earth and Moon, if that can be of assistance.
@@ -1195,7 +1195,7 @@
                              pretty dark out that window but there are about a thousand or so false stars
                              out here from - left over from some of the debris. It's hard to discern what's
                              real and not real.
-60:27:41             FLIGHT  Okay. That's good information. And during the time that we see you're
+60:27:41             CAPCOM  Okay. That's good information. And during the time that we see you're
                              continuing to pitch, if you ever get in a position where you think the AOT
                              might be of some use, we'd like you to periodically look out of it and see if
                              you can see some stars that would enable us to get a P52.
@@ -1218,7 +1218,7 @@
                              that page. That's all done.
 60:31:00             CAPCOM  We concur. Page 2.
 60:31:15                LMP  Okay, in essence, we've circumvented step 4, and we're not sitting with all 4
-                             acs - descent BATs on high-voltage taps, so I'll scratch off step 4.
+                             acs - descent BATs on high voltage taps, so I'll scratch off step 4.
 60:31:30             CAPCOM  Roger, and in step 5 we want to leave INVERTER 1 circuit breaker OPEN.
 60:31:40                LMP  Roger. In step 5, we'll leave INVERTER 1 CB OPEN.
 60:31:43             CAPCOM  Omit step 6.
@@ -1233,7 +1233,7 @@
                              or you got the time on the PRIMARY EVAP FLOW number 1 OPEN.
 60:33:05             CAPCOM  We got the time.
 60:33:12                LMP  Okay. Let's go to the CB pages now.
-60:33:31             CAPCOM  Freddo, did you close the engine control breaker on panel 11?
+60:33:31             CAPCOM  Freddo, did you close the ENGINE CONTROL breaker on panel 11?
 60:33:40                LMP  What control was that, Jack?
 60:33:43             CAPCOM  Did you close the S/C ENGINE CONTROL breaker on panel 11? As we got step 1
                              there on page 3.
@@ -1273,7 +1273,7 @@
                         LMP  - and probably - okay, DECA GIMBAL - and sooner or later, we're going to need
                              DECA POWER, I guess also.
 60:37:18             CAPCOM  Alright, DECA POWER will come up later in the procedure, Freddo.
-60:37:23                LMP  Okay.
+60:37:24                LMP  Okay.
 60:38:44             CAPCOM  Aquarius, Houston. On your circuit breaker checklist, on panel 11 and 16, we
                              want you to configure the panels as outlined in the checklist.
 60:39:00                LMP  Okay. You want us to configure as per checklist. Okay, we'll do that.
@@ -1281,7 +1281,7 @@
 60:39:14                LMP  Yeah, I think we can manage that.
 60:39:22                CDR  With the Activation power-up, we're starting right now.
 60:40:15                CDR  Houston, we might as well leave our RCS TCAs IN, right?
-60:40:25             CAPCOM  Affirmative, Jim. Leave your RCS TCAs in on panel 11
+60:40:25             CAPCOM  Affirmative, Jim. Leave your RCS TCAs in on panel 11.
 60:40:32                LMP  Yeah, I used my Pentel pen and made those white ones black ones.
 60:40:37             CAPCOM  Roger. Same on 16, Fred.
 60:40:48                CDR  And you might look there, Houston, to see what circuit breakers aren't
@@ -1367,9 +1367,10 @@
                              pitch 5.86, roll 6.75. Your DPS throttling: 5 seconds at 10%, burn the rest at
                              40%. Your ullage will be 2 jets for 10 seconds.
 60:54:59                LMP  Okay, Jack. We have a P30 maneuver PAD, a midcourse for free-return. NOUN 33:
-                             061:29:42.84. -0021.3, +004.1, -0031.2. HA and NP N/A, ∆VR 0038.0. 0:31. 120,
-                             298. -0021.3, +0004.1, -0031.2. DPS throttle 5 seconds at 10%, burn the rest at
-                             40%. And we need a 2-jet, 10 second ullage.
+                             061:29:42.84. -0021.3, +004.1, -0031.2. HA and HP N/A, ∆VR 0038.0. 0:31. 120,
+                             298. -0021.3, +0004.1, -0031.2. COAS N/A. GDA angles, pitch 5.86, roll 6.75.
+                             DPS throttle 5 seconds at 10%, burn the rest at 40%. And we need a 2-jet, 10
+                             second ullage.
 60:56:03             CAPCOM  That's a good readback, Fred. I'd like to verify, however, in NOUN 81 in VY,
                              it's plus three balls 41.
 60:56:16                LMP  Okay. NOUN 81, VY is +0004.1.
@@ -1401,7 +1402,8 @@
 61:00:40             CAPCOM  That's affirmative. You've got that, so you can delete page 12.
 61:00:52                LMP  Hey, on 13, you've read us up the fine align angles and we've cranked those in.
 61:01:02             CAPCOM  Affirmative.
-61:01:09                LMP  Okay, so now we're up to - we've got to do a DAP set, the gimbal/throttle test.
+61:01:09                LMP  Okay, so now we're up to - we've got to do the DAP set, the gimbal/throttle
+                             test.
 61:01:14             CAPCOM  That's -
 61:01:21             CAPCOM  Okay, Aquarius. We recommend omitting the DAP set, gimbal/throttle test. Just
                              make sure the gimbal - DECA POWER and DECA GIMBAL circuit breakers are closed.
@@ -1511,7 +1513,7 @@
                              Earth and the terminator or the Moon and its terminator and I'd sure like to
                              have you look at a powerdown - keeping the PGNS if at all possible.
 61:33:48             CAPCOM  Roger, Jim. We'll get the word for you.
-61:35:24                CDR  And Houston, we're in an ATT HOLD mode. Can we turn off the buses?
+61:35:24                CDR  And Houston, we're in an ATT HOLD mode. Can we turn off the thrusters?
 61:35:40             CAPCOM  Standby on that one, Jim.
 61:38:13             CAPCOM  Okay, Aquarius. We're working on what's going to happen next. In the meantime,
                              we'd like to take some high-power items off the line; so on panel 11, open DECA
@@ -1533,7 +1535,7 @@
                              - off of Quad 4 so bright that it's ruining any night vision. And we've still
                              got particles floating around us. I'll have to take a long look and see if I
                              can see any star patterns.
-61:42:34             CAPCOM  Roger.
+61:42:35             CAPCOM  Roger.
 61:42:43             CAPCOM  And Aquarius, we're going to have to hand you over to a different site now, and
                              we think maybe things will work better if this time we turn off the S-BAND
                              TRANSMITTER/RECEIVER, and bring it back up in 5 minutes. You copy?
@@ -1585,3 +1587,4 @@
 61:59:47                LMP  Okay, 136 mile perigee now. That's very nice.
 62:00:09                LMP  Oh. Wait a minute, Jack. Did you say pericynthion or perigee?
 62:00:14             CAPCOM  I meant pericynthion.
+62:00:19                LMP  That's better!

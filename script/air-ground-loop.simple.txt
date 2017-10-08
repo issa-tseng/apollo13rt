@@ -2607,7 +2607,7 @@ CDR
 Okay. That sounds good.
 
 CAPCOM
-We're considering powering down the PGNS but we want to know what capability you have to do a coarse and fine align. We read your conversation about being unable to see out the window very good. How about out the AOT?
+We're considering powering down the PGNS but we want to know what capability you have to do a coarse and fine align. And we read your conversation about being unable to see out the window very good. How about out the AOT?
 
 60:05:27
 LMP
@@ -2699,7 +2699,7 @@ CAPCOM
 Affirm.
 
 LMP
-Okay. In the interim, Jack, I looked around again and I saw that we have a radar and a landing-radar heater breaker in. Can I pull those out?
+Okay. In the interim, Jack, I looked around again and I saw that we have a radar and a landing radar heater breaker in. Can I pull those out?
 
 CAPCOM
 Affirmative. Pull them both out.
@@ -2712,7 +2712,7 @@ CDR
 Okay, in this attitude, Jack, that we're pitching around, I cannot use the AOT to see stars. We - we're just not able to see them at all. Now, we may be able to maneuver off in yaw or - and/or roll, and see stars. Right now, we haven't been able to. The AOT is useless. The Command Module structure is just radiating too much light into the - into the telescope.
 
 CAPCOM
-Okay. And how about using the Service Module to cast a shadow on the commander's window? If you do that, can you see stars for a COAS alignment?
+Okay. And how about using the Service Module to cast a shadow on the Commander's window? If you do that, can you see stars for a COAS alignment?
 
 CDR
 We could give that a try, Jack, although I don't know how successful it will be. We tried to do it; the light shines off our quads which makes it difficult to see stars. We do have the Earth and Moon, if that can be of assistance.
@@ -2721,7 +2721,7 @@ We could give that a try, Jack, although I don't know how successful it will be.
 LMP
 Another problem: right now, Jack, I'm looking out the right window and it's pretty dark out that window but there are about a thousand or so false stars out here from - left over from some of the debris. It's hard to discern what's real and not real.
 
-FLIGHT
+CAPCOM
 Okay. That's good information. And during the time that we see you're continuing to pitch, if you ever get in a position where you think the AOT might be of some use, we'd like you to periodically look out of it and see if you can see some stars that would enable us to get a P52.
 
 60:28:00
@@ -2762,7 +2762,7 @@ CAPCOM
 We concur. Page 2.
 
 LMP
-Okay, in essence, we've circumvented step 4, and we're not sitting with all 4 acs - descent BATs on high-voltage taps, so I'll scratch off step 4.
+Okay, in essence, we've circumvented step 4, and we're not sitting with all 4 acs - descent BATs on high voltage taps, so I'll scratch off step 4.
 
 CAPCOM
 Roger, and in step 5 we want to leave INVERTER 1 circuit breaker OPEN.
@@ -2800,7 +2800,7 @@ LMP
 Okay. Let's go to the CB pages now.
 
 CAPCOM
-Freddo, did you close the engine control breaker on panel 11?
+Freddo, did you close the ENGINE CONTROL breaker on panel 11?
 
 LMP
 What control was that, Jack?
@@ -2906,7 +2906,7 @@ CDR
 Houston, we might as well leave our RCS TCAs IN, right?
 
 CAPCOM
-Affirmative, Jim. Leave your RCS TCAs in on panel 11
+Affirmative, Jim. Leave your RCS TCAs in on panel 11.
 
 LMP
 Yeah, I used my Pentel pen and made those white ones black ones.
@@ -3112,7 +3112,7 @@ Okay, here we go. The purpose is midcourse correction for free-return. NOUN 33: 
 
 60:54:59
 LMP
-Okay, Jack. We have a P30 maneuver PAD, a midcourse for free-return. NOUN 33: 061:29:42.84. -0021.3, +004.1, -0031.2. HA and NP N/A, ∆VR 0038.0. 0:31. 120, 298. -0021.3, +0004.1, -0031.2. DPS throttle 5 seconds at 10%, burn the rest at 40%. And we need a 2-jet, 10 second ullage.
+Okay, Jack. We have a P30 maneuver PAD, a midcourse for free-return. NOUN 33: 061:29:42.84. -0021.3, +004.1, -0031.2. HA and HP N/A, ∆VR 0038.0. 0:31. 120, 298. -0021.3, +0004.1, -0031.2. COAS N/A. GDA angles, pitch 5.86, roll 6.75. DPS throttle 5 seconds at 10%, burn the rest at 40%. And we need a 2-jet, 10 second ullage.
 
 60:56:03
 CAPCOM
@@ -3187,7 +3187,7 @@ CAPCOM
 Affirmative.
 
 LMP
-Okay, so now we're up to - we've got to do a DAP set, the gimbal/throttle test.
+Okay, so now we're up to - we've got to do the DAP set, the gimbal/throttle test.
 
 CAPCOM
 That's -
@@ -3456,7 +3456,7 @@ Roger, Jim. We'll get the word for you.
 
 61:35:24
 CDR
-And Houston, we're in an ATT HOLD mode. Can we turn off the buses?
+And Houston, we're in an ATT HOLD mode. Can we turn off the thrusters?
 
 CAPCOM
 Standby on that one, Jim.
@@ -3597,4 +3597,7 @@ Oh. Wait a minute, Jack. Did you say pericynthion or perigee?
 
 CAPCOM
 I meant pericynthion.
+
+LMP
+That's better!
 
