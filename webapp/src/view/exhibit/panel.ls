@@ -91,7 +91,8 @@ class PanelView extends DomView
       "translateX(#{x}px) translateY(#{y}px) scale(#factor)"))
     find('.panel-inner-wrapper').css(\width, from(\all.width).map(px))
     find('.panel-inner-wrapper').classed(\dragging, from(\mouse.clicking))
-    find('.panel-controls').render(from.attribute(\scale.mode)).context(\edit).criteria( attributes: { style: \list } )
+    find('.panel-expand').attr(\href, from(\subject).watch(\subject).watch(\lookup).map(-> "/?exhibit##it"))
+    find('.panel-zoom').render(from.attribute(\scale.mode)).context(\edit).criteria( attributes: { style: \list } )
   )
   @withFragment = (dom) ->
     class AttachedPanelView extends PanelView

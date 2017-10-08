@@ -42,6 +42,30 @@ $color-lamp: #e4e1da
     z-index: 1
   .panel-controls
     top: 0
+
+    .panel-expand
+      border-right: 1px solid $color-light-border
+      color: #000
+      display: block
+      float: left
+      margin-right: 0.8em
+      padding-right: 0.8em
+      text-align: center
+      text-decoration: none
+
+      &:before
+        @include icon
+        content: $icon-expand
+        display: block
+        font-size: 1.6em
+        line-height: 0.8em
+
+      .exhibit-mode &
+        display: none
+
+    .panel-zoom
+      float: left
+
     ul
       overflow: hidden
       li

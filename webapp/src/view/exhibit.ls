@@ -73,7 +73,7 @@ class TopicView extends DomView
 
 class ExhibitTitleView extends DomView
   @_dom = -> $('
-    <a class="exhibit-title">
+    <a class="exhibit-title passthrough">
       <p class="name"/>
       <p class="description"/>
     </a>
@@ -120,6 +120,7 @@ class ExhibitView extends DomView
   _wireEvents: ->
     dom = this.artifact()
     app = this.options.app
+    exhibit = this.subject
     global = app.get(\global)
 
     dom.find('.exhibit-close').on(\click, ~> global.unset(\exhibit))
@@ -129,7 +130,7 @@ class ExhibitView extends DomView
 
     # rig up zoom controls if we are a panel display.
     dom.find('.panel').each(->
-      view = new (PanelView.withFragment(this))(null, { app })
+      view = new (PanelView.withFragment(this))(exhibit, { app })
       view.wireEvents()
     )
 
