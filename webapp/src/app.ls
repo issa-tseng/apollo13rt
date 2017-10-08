@@ -229,7 +229,7 @@ handle-exhibit-hash = (hash, event) ->
 handle-exhibit-hash(window.location.hash) if exhibit-mode is true
 
 # actually capture link clicks and pass off to above handlers:
-$document.on(\click, 'a', (event) ->
+$document.on(\click, 'a:not(".exhibit-title")', (event) ->
   if this.host is window.location.host
     if this.hash is window.location.hash
       handle-timecode-hash(this.hash)

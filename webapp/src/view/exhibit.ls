@@ -29,7 +29,11 @@ class ExhibitAreaView extends DomView
     dom = this.artifact()
     global = this.options.app.get(\global)
 
-    dom.on(\click, '.exhibit-title', -> global.set(\exhibit, $(this).data(\view).subject))
+    dom.on(\click, '.exhibit-title', (event) ->
+      unless event.ctrlKey or event.shiftKey or event.altKey or event.metaKey
+        global.set(\exhibit, $(this).data(\view).subject)
+        event.preventDefault()
+    )
     global.watch(\exhibit).react((active) ->
       if active?
         $('body').animate({ scrollTop: $('header').height() })
@@ -69,12 +73,13 @@ class TopicView extends DomView
 
 class ExhibitTitleView extends DomView
   @_dom = -> $('
-    <div class="exhibit-title">
+    <a class="exhibit-title">
       <p class="name"/>
       <p class="description"/>
-    </div>
+    </a>
   ')
   @_template = template(
+    find('.exhibit-title').attr(\href, from(\lookup).map(-> "/?exhibit##it"))
     find('.exhibit-title').classed(\active, from.app(\global).watch(\exhibit).and.self().map(-> it.subject).all.map (is))
     find('.name').text(from(\title))
     find('.description').text(from(\description))
