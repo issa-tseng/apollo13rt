@@ -1,21 +1,21 @@
 [technical]
 210 (210s)
-This referred to big 210-foot antennas on the ground, which were sensitive enough to receive high-bitrate data from the weaker omnidirectional antennas.
+Shorthand term for the big 210-foot antennas on the ground, which were sensitive enough to receive high bit rate data from the weaker omnidirectional antennas.
 
 Abort Guidance System (AGS)
-A backup navigation system and computer in the LM which could take over if something happened to the main AGC or PGNS. It was less featureful than the main system, but more than sufficient to return to Lunar orbit and rendezvous with the CM.
+A backup navigation system and computer in the LM which could take over if something happened to the main AGC or PGNS. It was less featureful than the main system, but more than sufficient to return to Lunar orbit and rendezvous with the CSM.
 
 Acceleration Command (ACCEL CMD)
 Similar to but independent from DIRECT in that the ACA stick would fire the thrusters for those axes, thus changing the attitude rates. When the stick was let go, the thrusters would stop and any rotation would continue. Unlike DIRECT, ACCEL CMD operated proportionally, and relied on the SCS ECA.
 
 AC electrical bus (AC bus, AC buses, AC BUS 1, AC BUS 2, AC BUS 3, AC 1, AC 2, AC 3)
-There were three inverters connected to the two DC electrical buses in the CSM which transformed the DC power into AC for some of the spacecraft systems. Motors, for instance, are far easier to engineer with AC rather than DC power.
+There were three inverters connected to the two DC electrical buses in the CSM which transformed the DC power into AC for some of the spacecraft systems. Two inverters were present in the LM.
 
 Amp-hours
 Essentially a measure of remaining electrical juice. The compound unit is instructive: given 10 amp-hours, one could run at 1 amp for 10 hours, or 5 amps for 2 hours, for instance.
 
 Attitude Control Assembly (ACA, RHC)
-Also known as the Rotational Hand Controller (RHC), the ACA was a small joystick that allowed control of the attitude rates of the spacecraft. It could manipulate all three axes, and had multiple modes of control operation.
+Also known as the Rotational Hand Controller (RHC), the ACA was a small joystick that allowed control of the attitude rates of the spacecraft. It could manipulate all three axes, and filtered through the SCS had multiple modes of control operation.
 
 Attitude & Translation Control Assembly (ATCA)
 Collectively, the ACA and TTCA joysticks that allowed control of the spacecraft.
@@ -30,13 +30,13 @@ Alignment Optical Telescope (AOT)
 [This instrument](https://www.hq.nasa.gov/alsj/aot.htm), present on both the CM and the LM, was a mounted telescope which could be pointed at stars as part of a P51 or P52 alignment process to measure the attitude of the spacecraft.
 
 Apollo Guidance Computer (AGC)
-The main computer managing navigation, autopilot, and other miscellenia. The same hardware and software were used in both the CM and the LM. The primary interface to the AGC was the DSKY.
+The main computer managing navigation, autopilot, and other miscellenia. The same hardware and some of the same software were used in both the CM and the LM. The primary interface to the AGC was the DSKY.
 
 Ascent Stage (Ascent)
 This stage of the Lunar Module encompassed most of the spacecraft, and typically was all that left the surface of the Moon: the cabin and the ascent engine were in this stage.
 
 Automatic Gain Control (AGC)
-An automated system for managing signal strength, and the resulting signal strength reading put out onto the panel.
+An automated system for managing signal strength, as well as the resulting signal strength reading put out onto the panel.
 
 Aquarius
 The given name of the Apollo 13 Lunar Module.
@@ -69,7 +69,7 @@ Body Mounted Attitude Gyro (BMAG, BMAGs)
 These two gyros served as a backup system to the IMU, tracking the spacecraft attitude. They didn't work the same way as the IMU, and provided only rates (ie like an accelerometer), not absolute attitude.
 
 Checkpoint
-A tape of the data coming down from Apollo would be periodically recorded for safekeeping.
+Tapes of the data coming down from Apollo would be periodically recorded for safekeeping.
 
 Circuit Breaker (Circuit Breakers, CB, CBs)
 Just like the ones in your house, the circuit breakers protected the electrical components in case of a surge or a short. But they were also actively and frequently opened or closed to power on or off various systems.
@@ -120,7 +120,7 @@ Descent Stage (Descent)
 This stage of the Lunar Module contained the legs and the large Descent Propulsion System engine, along with batteries and consumable tanks for use before arrival upon and departure from the Moon. It was usually left behind on the Moon, so the weight did not have to be carried back up.
 
 Delog
-Upon special request, the telemetry data previously received from the spacecraft could be read back and printed on a given time interval onto (many) pages for review.
+Upon special request, the telemetry data previously received from the spacecraft could be read back from a given time range, typically on 1-second intervals, and printed onto (many) pages for review.
 
 Descent Propulsion System (DPS)
 The Lunar Module had two engines, both of which burned the same Aerozine/nitrogen tetroxide combination as the other Apollo engines. The DPS was part of the descent stage of the Lunar Module, and was left behind on the Moon to save weight. It was unique in that it could throttle down to 10% of full thrust.
@@ -147,7 +147,7 @@ Full scale
 This term was applied to gauges whose needles were pinned to the top of their dial: the implication was that the reading was _at least_ maximum.
 
 Glycol (Water, Coolant)
-A water/glycol mix was circulated around the spacecraft to heat-producing components such as the computer as a cooling system. A combination of heat transfer to cryogenic O₂ and evaporation was used to dissipate the heat. Glycol was added to the water as an antifreeze.
+A water/glycol mix was circulated around the spacecraft to heat-producing components such as the computer as a cooling system. A combination of heat transfer to cryogenic O₂, radiation, and evaporation was used to dissipate the heat. Glycol was added to the water as an antifreeze.
 
 Display/Keyboard (DSKY)
 Pronounced "diskey." This was the primary interface between the crew and the Apollo Guidance Computer.
@@ -222,7 +222,7 @@ LM Heater
 A number of heaters in the Lunar Module kept components from freezing over on the long trip to the Moon. After the CSM/LM docking maneuver, power was sent from the CSM to the LM to fire up these heaters.
 
 LMS
-Lunar Module Simulator
+Lunar Module Simulator.
 
 Lunar Module (LM)
 The Lunar Module was the lightweight standalone component which actually descended to the Moon. It had two propulsion systems, an RCS system, navigation equipment and computers independent of the Command Module, and batteries and oxygen tanks for power and air.
@@ -252,7 +252,7 @@ Omnidirectional antenna (OMNI, OMNIs, OMNI Alpha, OMNI Bravo, OMNI Charlie, Aft 
 The omnidirectional antennas weren't as performant as the steerable antenna at its best, but weren't as fidgety. Multiple were required, as the spacecraft itself would block signal as it rotated. Switching between them was manual.
 
 Open-circuit
-To break a circuit entirely so it no longer forms a loop. This was as much as one could do to ensure an electrical bus was entirely offline.
+To break a circuit physically so it no longer forms a loop. This was as much as one could do to ensure an electrical circuit was entirely offline.
 
 Orbital Rate Display Earth and Lunar (ORDEAL)
 Where the FDAI normally aligned against an absolute frame of reference against the universe given a REFSMMAT, the ORDEAL mode shifted its zero origin to mimick an aircraft's artificial horizon when orbiting the Earth or Moon, which was helpful for test pilots used to flying aircraft.
@@ -264,16 +264,16 @@ P30
 External ∆V burn program. Given a good platform, a slew of numbers representing the desired ∆V, Tig, and other parameters, the computer could prepare for the necessary components of a burn.
 
 P40
-Automated DPS burn program. Once set up, the computer could manage all the controls and times required for the burn.
+Automated DPS burn program. Once set up, the computer could manage all the controls and timing required for the burn.
 
 P47
 A passive burn program which allowed the crew to monitor the state of a burn being executed outside the computer's control, like the S-IVB TLI or a manual ignition and burn.
 
 P51
-The name of an alignment program in the AGC. It was a colloquially used term for executing a star-sighting fine alignment using the AOT. Where a P52 assumes the spacecraft was close to aligned, a P51 would be done "from scratch."
+The name of an alignment program in the AGC. It would prompt the crew to execute a two-star sighting with the AOT to determine spacecraft attitude relative to the IMU, assuming nothing about the current attitude.
 
 P52
-The name of an alignment program in the AGC. It was a colloquially used term for executing a star-sighting fine alignment using the AOT. The computer could read the AOT orientation automatically once the astronaut found the relevant star.
+The name of an alignment program in the AGC. It would orient the telescope to a previously known star sighting for visual confirmation by the crew, and if the alignment was still good would reorient the IMU Stable Member to a desired angle relative to that platform, typically to best-avoid gimbal lock.
 
 Passive Thermal Control (PTC)
 The Sun is incredibly harsh in space: the difference between the lighted and shadowed side of the spacecraft was as much as 300˚C. To deal with this, Apollo was often put into a slow roll, and thrusters were disengaged (hence, passive). This was called a PTC.
@@ -303,7 +303,7 @@ Pre-Advisory Data (PAD)
 The Flight Plan carried by the crew on board contained forms to be filled in with data read up over voice to, among other things, set the spacecraft up for a burn.
 
 Probe and Drogue
-The CM and LM docked along the access tunnel the crew use to transit the two. This means that the guidepost (probe) and dish (drogue) you remember from the docking sequence in the film end up inside the tunnel, and thus had to be unmounted and moved aside.
+The CM and LM docked along the access tunnel the crew use to transit the two. This means that the guidepost (probe) and receptacle dish (drogue) end up inside the tunnel, and thus had to be unmounted and moved aside.
 
 Propellant Isolation (PROP ISOL)
 These valves entirely shut off propellant to their given thrusters or engines.
@@ -330,10 +330,10 @@ RCS SELECT (AUTO RCS)
 This row of switches on [panel 8](#ref-panel-cm-aux) toggled the RCS thrusters on and off for use with the various SCS control modes.
 
 Reactants valve (Reactant valves, REAC valve, REACs valve)
-These valves allowed cryogenic oxygen and hydrogen to each fuel cell. Because these valves required careful tuning to correctly balance the flows, they could not be reopened once closed. And because of this irreversibility, the control which turned them off was normally kept unpowered on the circuit breaker panel.
+These valves allowed cryogenic oxygen and hydrogen to each fuel cell. Because these valves required careful tuning to correctly balance the flows, they could not be reopened once closed. And because of this irreversibility, the actuator which turned them off was normally kept unpowered on the circuit breaker panel.
 
 Reference to Stable Member Matrix (REFSMMAT)
-Oversimplistically, the REFSMMAT was a numerical matrix that oriented the navigation system (in particular the IMU and FDAI) such that they made sense relative to their current operation: for instance, having the zero origin point along the axis of a burn or PTC. New REFSMMATs could be uplinked to the spacecraft from the ground.
+Oversimplistically, the REFSMMAT was a numerical matrix that converted the navigation coordinate system (in particular for the IMU and FDAI) such that they made sense relative to their current operation: for instance, having the zero origin point along the axis of a burn or PTC. New REFSMMATs could be uplinked to the spacecraft from the ground.
 
 Resolvers
 The sensors in the IMU gimbal system that read the angle of each gimbal ring.
@@ -345,10 +345,10 @@ Real-time Computing Complex (RTCC)
 Five mainframes lived here, which amongst other things processed the data that was displayed in Mission Control.
 
 Repress Package (REPRESS pack)
-This set of three 1lb oxygen tanks were primarily reserved to help repressurize the cabin in an emergency, as well as supply oxygen to face masks in that event. You can find them on the [oxygen subsystem diagram](#ref-panel-o2).
+This set of three 1lb oxygen tanks were primarily reserved to help repressurize the cabin in an emergency, as well as to supply oxygen to face masks in that event. You can find them on the [oxygen subsystem diagram](#ref-panel-o2).
 
 S-IVB
-The final stage of the Saturn V, the S-IVB performed Trans-lunar Injection and in the case of Apollo 13 traveled to the Moon near Apollo, with the goal of impacting it for seismograph measurements by a package left by Apollo 12.
+The final stage of the Saturn V, the S-IVB performed Trans-lunar Injection and in the case of Apollo 13 traveled to the Moon near Apollo, with the goal of impacting the surface for seismograph measurements by a package left by Apollo 12.
 
 Service Module (SM)
 This was the long cylindrical section attached to the Command Module which included, amongst other things, the SPS and its propellant, cryogenic oxygen and hydrogen tanks, the fuel cells, and an RCS system.
@@ -475,7 +475,7 @@ AFD
 The Assistant Flight Director worked with FLIGHT on whatever was required at the time, allowing the Flight Director to offload tasks and focus on managing the mission.
 
 CAPCOM
-The Capsule Commander was, with rare exception, the only person allowed to speak directly to the crew. CAPCOMs were nearly always members of the astronaut pool.
+The Capsule Communicator was, with rare exception, the only person allowed to speak directly to the crew. CAPCOMs were nearly always members of the astronaut pool.
 
 CONTROL
 The Control Officer was essentially the GNC for the Lunar Module, in charge of the navigational systems and software, as well as the propulsion hardware and fuel.
@@ -490,7 +490,7 @@ FDO
 The Flight Dynamics Officer managed the spacecraft trajectory, understanding its current path and managing changes to it to deliver the spacecraft to its destination.
 
 GNC
-The Guidance, Navigation, and Controls Systems Engineer monitored the hardware systems that ultimately sent the spacecraft where it had to go: the propulsion and fuel thereof, the navigation computer hardware.
+The Guidance, Navigation, and Controls Systems Engineer monitored the low-level systems that ultimately sent the spacecraft where it had to go: the propulsion and fuel thereof, the navigation computer hardware and software, and more.
 
 GUIDO
 Where GNC managed the navigation and propulsion systems themselves, the Guidance Officer was in charge of their use, as well as the computer software, and tracking the position and orientation of the spacecraft.
@@ -499,7 +499,7 @@ INCO
 The Integrated Communications Officer managed the communications and telemetry systems of both the CSM and LM. This included the uplink of data to the spacecraft computer.
 
 NETWORK
-An oft-ignored but massive system of ground and sea stations were required to maintain round-the-clock communications with the spacecraft. The Network officer managed this process.
+An oft-underappreciated but massive system of ground and sea stations were required to maintain round-the-clock communications with the spacecraft. The Network officer managed this process.
 
 PROCEDURES
 The Organization & Procedures Officer ensured that best practices were followed and things were done by the book. This may sound like a trivial job, but the smallest errors can lead to major disasters in spaceflight.
@@ -512,4 +512,13 @@ The Retrofire Officer was in charge of any plans and maneuvers necessary to get 
 
 TELMU
 The Telemetry, Electrical, and EVA Mobility Unit Officer was essentially the EECOM of the Lunar Module, in charge of its electrical and environmental hardware systems.
+
+CDR
+The Commander was the ultimate authority amongst the crew, and helped operate both spacecraft, ultimately landing on the Moon. At the point of Apollo 13, veteran Commander Jim Lovell had logged more hours in space than anybody.
+
+CMP
+The Command Module Pilot was the primary expert and operator of the Command Module. CMP Jack Swigert was a last-minute addition to the crew, but this change may have been fortuitous, as he was known to be amongst those most familiar with the failure modes and abnormal operation procedures of the CM.
+
+LMP
+The Lunar Module Pilot was the primary expert and operator of the Lunar Module. LMP Fred Haise was to command the eventually-cancelled Apollo 19, and went on to particpate in many early Space Shuttle tests.
 
