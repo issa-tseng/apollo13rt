@@ -319,7 +319,7 @@ We switched to WIDE BEAM width about the time we had the problem.
 Okay.
 
 [55 56 42 - 55 56 44] FLIGHT
-INCO, you say you went to WIDE BEAM with that?
+INCO, you say you went to WIDE BEAM width there?
 
 [55 56 44] INCO
 Yes.
@@ -445,10 +445,10 @@ Quad Delta - HELIUM VALVE open, right?
 Right.
 
 [56 00 10 - 56 00 15] FLIGHT
-CAPCOM, do you want to verify quad Delta HELIUM VALVE is open, please.
+CAPCOM, do you want to verify the Quad Delta HELIUM VALVE is open, please.
 
 [56 00 16 - 56 00 18] FLIGHT
-Are there other problems in the RCS?
+Are there other problems in the RCS, Buck?
 
 [56 00 20 - 56 00 24] CAPCOM
 Okay, is that all we've come up with for them; have we got any other recommendations?
@@ -558,7 +558,7 @@ Okay. If we want to keep - - standby, he's changed configuration, we've got BATT
 Go ahead.
 
 [56 03 27 - 56 03 29] EECOM
-Sorry - I was going to ask you for the battery on, FLIGHT.
+That's what I was going to ask you for, to put the battery on, FLIGHT.
 
 [56 03 30] INCO
 FLIGHT, INCO.
@@ -580,7 +580,7 @@ Right.
 You don't think we're going to be able to get HIGH BIT RATE data here, do you? On the OMNIs.
 
 [56 03 53 - 56 03 54] INCO
-Well, maybe. We've got the 210s.
+We may be. We've got the 210s.
 
 [56 03 54 -] FLIGHT
 You've got the 210s -

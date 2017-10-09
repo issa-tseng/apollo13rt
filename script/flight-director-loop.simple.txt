@@ -325,7 +325,7 @@ FLIGHT
 Okay.
 
 FLIGHT
-INCO, you say you went to WIDE BEAM with that?
+INCO, you say you went to WIDE BEAM width there?
 
 INCO
 Yes.
@@ -452,10 +452,10 @@ GNC
 Right.
 
 FLIGHT
-CAPCOM, do you want to verify quad Delta HELIUM VALVE is open, please.
+CAPCOM, do you want to verify the Quad Delta HELIUM VALVE is open, please.
 
 FLIGHT
-Are there other problems in the RCS?
+Are there other problems in the RCS, Buck?
 
 CAPCOM
 Okay, is that all we've come up with for them; have we got any other recommendations?
@@ -566,7 +566,7 @@ FLIGHT
 Go ahead.
 
 EECOM
-Sorry - I was going to ask you for the battery on, FLIGHT.
+That's what I was going to ask you for, to put the battery on, FLIGHT.
 
 INCO
 FLIGHT, INCO.
@@ -587,7 +587,7 @@ FLIGHT
 You don't think we're going to be able to get HIGH BIT RATE data here, do you? On the OMNIs.
 
 INCO
-Well, maybe. We've got the 210s.
+We may be. We've got the 210s.
 
 FLIGHT
 You've got the 210s -

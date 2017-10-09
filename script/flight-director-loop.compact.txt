@@ -122,7 +122,7 @@
 55:56:08             FLIGHT  Go, INCO.
 55:56:09               INCO  We switched to WIDE BEAM width about the time we had the problem.
 55:56:33             FLIGHT  Okay.
-55:56:42             FLIGHT  INCO, you say you went to WIDE BEAM with that?
+55:56:42             FLIGHT  INCO, you say you went to WIDE BEAM width there?
 55:56:44               INCO  Yes.
 55:56:49             FLIGHT  Let's see if we can correlate those times. Get the time when you went WIDE
                              BEAM, INCO.
@@ -169,8 +169,8 @@
 56:00:01                GNC  Quad Delta.
 56:00:02             FLIGHT  Quad Delta - HELIUM VALVE open, right?
 56:00:05                GNC  Right.
-56:00:10             FLIGHT  CAPCOM, do you want to verify quad Delta HELIUM VALVE is open, please.
-56:00:16             FLIGHT  Are there other problems in the RCS?
+56:00:10             FLIGHT  CAPCOM, do you want to verify the Quad Delta HELIUM VALVE is open, please.
+56:00:16             FLIGHT  Are there other problems in the RCS, Buck?
 56:00:20             CAPCOM  Okay, is that all we've come up with for them; have we got any other
                              recommendations?
 56:00:25             FLIGHT  Yeah, we wanted to get FUEL CELL 1 configured to MAIN A, FUEL CELL 3 to MAIN B.
@@ -218,7 +218,7 @@
 56:03:14              EECOM  Okay. If we want to keep - - standby, he's changed configuration, we've got
                              BATTERY A on MAIN A.
 56:03:27             FLIGHT  Go ahead.
-56:03:27              EECOM  Sorry - I was going to ask you for the battery on, FLIGHT.
+56:03:27              EECOM  That's what I was going to ask you for, to put the battery on, FLIGHT.
 56:03:30               INCO  FLIGHT, INCO.
 56:03:31             FLIGHT  Go, INCO.
 56:03:31               INCO  We need OMNI Bravo. Our high-gain won't drive without AC 2.
@@ -226,7 +226,7 @@
 56:03:39               INCO  Right.
 56:03:48             FLIGHT  You don't think we're going to be able to get HIGH BIT RATE data here, do you?
                              On the OMNIs.
-56:03:53               INCO  Well, maybe. We've got the 210s.
+56:03:53               INCO  We may be. We've got the 210s.
 56:03:54             FLIGHT  You've got the 210s -
 56:03:56               INCO  Right.
                      FLIGHT  Okay, that'll save a bit of power. CAPCOM, recommend selection of OMNI Bravo,
