@@ -32,7 +32,7 @@ class ExhibitAreaView extends DomView
     dom.on(\click, '.exhibit-title', (event) ->
       unless event.ctrlKey or event.shiftKey or event.altKey or event.metaKey
         global.set(\exhibit, $(this).data(\view).subject)
-        event.preventDefault()
+        event.preventDefault() unless global.get(\mode.exhibit) is true
     )
     global.watch(\exhibit).react((active) ->
       if active?
