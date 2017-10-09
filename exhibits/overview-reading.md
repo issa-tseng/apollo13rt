@@ -1,13 +1,4 @@
-End of tape.
-============
-
-After six hours of continual crisis, Apollo 13 is now safely back on a trajectory towards Earth, with a stable configuration and no immediate dangers. The Command Module is completely dark, and the crew is preparing to bring Aquarius down to a minimal state. It would eventually transpire, after some on-board experimentation with different solutions, that because of the added cost of the inverter required to keep the navigation eight-ball running, it was cheaper in total to leave the whole PGNS system running in Attitude Hold mode to prevent gimbal lock rather than having the crew watch the drift manually. For thermal control, the crew were simply instructed every so often to manually move the stack around to different attitudes.
-
-Following the PC+2 past the far side of the Moon, even Aquarius would be powered down completely apart from COMM and life support, in order to conserve power. When a final midcourse correction was required after this, the infamous manual burn dramatized in the film was performed, as power could not be spared to power up the entire computer system.
-
-Over the next many hours and days, many more problems need to be solved: the LiOH canisters mentioned briefly by Glynn Lunney deplete, and a makeshift adapter has to be fashioned for spares from the Command Module to be used in order to prevent a buildup of carbon dioxide; extensive resource planning is done to stretch consumables far past their designed limit; the crew deals with hypothermic conditions and dangerously scant water rations while demanding tasks continue to be required; an entirely new hours-long Command Module power-up procedure must be developed, tested, and successfully read over voice to an exhausted Jack Swigert to ensure a successful re-entry, a process that by all rights should take weeks rather than days.
-
-Hopefully, you have not only enjoyed these six hours of audio, but as well gained a new appreciation and tactile understanding of what it was like to hurl Apollo through the heavens. If you wish to delve yet further into Apollo and spaceflight, you may be interested in the following ideas:
+If you wish to delve yet further into Apollo and spaceflight, you may be interested in the following ideas:
 
 * Read the entire [air-ground loop transcript](https://www.hq.nasa.gov/alsj/a13/AS13_TEC.PDF) for a detailed look at the rest of the mission. A partially complete [annotated version](https://history.nasa.gov/afj/ap13fj/index.html) is available at the excellent [Apollo Flight Journal](https://history.nasa.gov/afj/index.html).
 * Many books are available that chronicle Apollo in general, and Apollo 13 in particular.
@@ -22,5 +13,4 @@ Hopefully, you have not only enjoyed these six hours of audio, but as well gaine
     * [Kerbal Space Program](https://kerbalspaceprogram.com/) may not be an absolutely perfect simulation of spaceflight mechanics, but it is certainly close enough to engender within the player a highly tactile, practical understanding of everything from the rocket equation to orbital mechanics. Just remember every time you simply press `R` to toggle RCS on and off just how much effort that one keypress represented on the part of the Apollo astronauts.
     * Or, if you wish to exactly replicate that effort rather than imagine it, you can take a look at the [Project Apollo](http://nassp.sourceforge.net/wiki/Main_Page) add-on to the [Orbiter](http://orbit.medphys.ucl.ac.uk/) spaceflight simulator. Both are free and open-source projects, and take a little bit of wrangling to get up and running, but the resultant simulation is accurate enough that much of the research for this project was done from the documentation provided on the Project Apollo wiki.
 
-If you have feedback or questions, please don't hesitate to [send me a tweet](https://twitter.com/cxlt) or [file a GitHub issue](https://github.com/clint-tseng/apollo13rt/issues).
 

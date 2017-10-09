@@ -92,6 +92,7 @@ unless kiosk-mode is true
       new Exhibit( lookup: \overview-navigation, title: 'Navigating the Stars', description: 'An introduction to the navigation systems and processes.' ),
       new Exhibit( lookup: \overview-power, title: 'Powering the Spacecraft', description: 'A look at the electrical systems that become critical on 13.' ),
       new Exhibit( lookup: \overview-personnel, title: 'The Flight Controllers', description: 'An overview of relevant flight controller positions in Mission Control.' )
+      new Exhibit( lookup: \overview-reading, title: 'Further Reading', description: 'Books, video, and interactive resources for further exploration.' )
     ])),
     new Topic( title: 'reference', exhibits: new List([
       new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'High-resolution diagram of the main CM control panel.', reference: true ),
