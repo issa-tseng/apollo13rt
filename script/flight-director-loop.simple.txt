@@ -4026,7 +4026,7 @@ Until they get into the LM and keep their lights up and whatever they have to ha
 
 57:45:03
 GNC
-We don't want to store the IMU alignment in the CSM right now, so we've got to keep that up, I assume, until you get the LM aligned, right?
+We don't want to destroy the IMU alignment in the CSM right now, so we've got to keep that up, I assume, until you get the LM aligned, right?
 
 FLIGHT
 Mm. Okay.
@@ -4056,7 +4056,7 @@ FLIGHT
 Now, you think we really want to spend that to keep the platform on? We're using the entry batteries, too.
 
 EECOM
-But we'd take out a battery we won't get back.
+What we take out of the battery we won't get back.
 
 FLIGHT
 That's right.
@@ -7948,7 +7948,7 @@ FLIGHT
 FAO, you have anything you're working on - that's stowage, right?
 
 FAO
-That's affirmative.
+That's affirmative, FLIGHT.
 
 FLIGHT
 Any suggestions we might have as to what they might move to the LM, or move to the CSM.
