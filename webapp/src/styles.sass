@@ -401,6 +401,19 @@ a
         pointer-events: auto
         transition-duration: 5s
 
+      img
+        float: left
+        max-height: 100%
+        max-width: 33%
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+
+      .player-postscript-content
+        height: 100%
+        overflow: hidden
+        position: relative
+
       .article
         @include fill
         @include custom-scrollbar
@@ -959,6 +972,13 @@ header
       height: 15.5em
       margin-left: 7.5em
       margin-top: 1.5em
+
+    .player-postscript img
+      max-height: 50%
+      position: static
+      transform: none
+      + img
+        clear: left
 
 
 

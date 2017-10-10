@@ -55,7 +55,11 @@ class PlayerView extends DomView
         <div class="player-script-air-ground"/>
         <div class="player-script-flight"/>
         <div class="player-glossary"/>
-        <div class="player-postscript"/>
+        <div class="player-postscript">
+          <img src="/assets/postscript-crew.jpg" alt="The crew poses on board the USS Iwo Jima as sailors cheer."/>
+          <img src="/assets/postscript-mocr.jpg" alt="Gene Kranz and Deke Slayton celebrate in Mission Control."/>
+          <div class="player-postscript-content"/>
+        </div>
       </div>
       <div class="player-resize"/>
     </div>
@@ -127,7 +131,7 @@ class PlayerView extends DomView
     player.set(\audio.player, audio)
 
     # drop postscript content in.
-    dom.find('.player-postscript').append($('#markup > #postscript').detach())
+    dom.find('.player-postscript-content').append($('#markup > #postscript').detach())
 
     # util for touch/click handling:
     x-to-pct = (x) -> ((x - left-offset) / scrubber.width()) |> clamp(0, 1)
