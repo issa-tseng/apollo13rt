@@ -5553,7 +5553,7 @@ We need to get our RCS heaters on. Start those warming up. And get the RCS syste
 Yeah, we are.
 
 [58 17 52 - 58 17 53] CONTROL
-That needs to be taken care of, first, first.
+That needs to be taken care of before she goes.
 
 [58 17 55] FLIGHT
 Okay.
@@ -6465,7 +6465,7 @@ CAPCOM, FLIGHT.
 Go, FLIGHT.
 
 [58 47 33 - 58 47 39] FLIGHT
-Jack, would you let me the conclusion of whatever discussions you guys had about - alignments? When you get - kind of one?
+Jack, would you let me the conclusion of whatever discussions you guys had about - alignments? When you get - come to one?
 
 [58 47 39] CAPCOM
 Yessir.
@@ -6974,7 +6974,7 @@ It's 133 hours. To the AOL, to the Atlantic.
 > In the end, it would be closer to 143 hours.
 
 [59 06 35 - 59 06 37] FLIGHT
-You might let them know we're talking about that, too, Jack.
+You might let them know we're copying the VOX, too, Jack.
 
 [59 07 33] FLIGHT
 GUIDANCE, FLIGHT.

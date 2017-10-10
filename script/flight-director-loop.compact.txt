@@ -2196,7 +2196,7 @@
                              system pressurized, if we're going to be going out of CSM control here very
                              shortly.
 58:17:51             FLIGHT  Yeah, we are.
-58:17:52            CONTROL  That needs to be taken care of, first, first.
+58:17:52            CONTROL  That needs to be taken care of before she goes.
 58:17:55             FLIGHT  Okay.
 58:18:01              TELMU  That's affirmative.
 58:18:25             FLIGHT  CAPCOM -
@@ -2556,7 +2556,7 @@
 58:47:31             FLIGHT  CAPCOM, FLIGHT.
 58:47:32             CAPCOM  Go, FLIGHT.
 58:47:33             FLIGHT  Jack, would you let me the conclusion of whatever discussions you guys had
-                             about - alignments? When you get - kind of one?
+                             about - alignments? When you get - come to one?
 58:47:39             CAPCOM  Yessir.
 58:47:40             FLIGHT  Thank you.
 58:47:42  FLIGHT (off loop)  Okay. I'll wait until you -
@@ -2752,7 +2752,7 @@
 59:06:08             FLIGHT  Okay. He's having some difficulty with it, so look for reasons why.
 59:06:11            CONTROL  Roger.
 59:06:31             FLIGHT  It's 133 hours. To the AOL, to the Atlantic.
-59:06:35             FLIGHT  You might let them know we're talking about that, too, Jack.
+59:06:35             FLIGHT  You might let them know we're copying the VOX, too, Jack.
 59:07:33             FLIGHT  GUIDANCE, FLIGHT.
 59:07:34              GUIDO  We have a load, FLIGHT, but INCO says we can't COMMAND.
 59:07:38             FLIGHT  Why not? INCO?

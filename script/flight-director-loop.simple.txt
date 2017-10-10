@@ -5591,7 +5591,7 @@ FLIGHT
 Yeah, we are.
 
 CONTROL
-That needs to be taken care of, first, first.
+That needs to be taken care of before she goes.
 
 FLIGHT
 Okay.
@@ -6524,7 +6524,7 @@ CAPCOM
 Go, FLIGHT.
 
 FLIGHT
-Jack, would you let me the conclusion of whatever discussions you guys had about - alignments? When you get - kind of one?
+Jack, would you let me the conclusion of whatever discussions you guys had about - alignments? When you get - come to one?
 
 CAPCOM
 Yessir.
@@ -7044,7 +7044,7 @@ FLIGHT
 It's 133 hours. To the AOL, to the Atlantic.
 
 FLIGHT
-You might let them know we're talking about that, too, Jack.
+You might let them know we're copying the VOX, too, Jack.
 
 59:07:33
 FLIGHT

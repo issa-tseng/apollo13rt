@@ -267,7 +267,7 @@ P40
 Automated DPS burn program. Once set up, the computer could manage all the controls and timing required for the burn.
 
 P47
-A passive burn program which allowed the crew to monitor the state of a burn being executed outside the computer's control, like the S-IVB TLI or a manual ignition and burn.
+A passive burn program which allowed the crew to monitor the state of a burn being executed outside the computer's control, like the S-IVB TLI or the RCS-based post-burn residual trim.
 
 P51
 The name of an alignment program in the AGC. It would prompt the crew to execute a two-star sighting with the AOT to determine spacecraft attitude relative to the IMU, assuming nothing about the current attitude.
@@ -346,6 +346,9 @@ Five mainframes lived here, which amongst other things processed the data that w
 
 Repress Package (REPRESS pack)
 This set of three 1lb oxygen tanks were primarily reserved to help repressurize the cabin in an emergency, as well as to supply oxygen to face masks in that event. You can find them on the [oxygen subsystem diagram](#ref-panel-o2).
+
+Residuals (Residual)
+Given burn parameters, the computer could calculate the error between the desired effect of a burn and what was actually achieved. If the residuals were sufficiently large, a small follow-up burn (often with RCS) would correct them.
 
 S-IVB
 The final stage of the Saturn V, the S-IVB performed Trans-lunar Injection and in the case of Apollo 13 traveled to the Moon near Apollo, with the goal of impacting the surface for seismograph measurements by a package left by Apollo 12.
@@ -438,7 +441,7 @@ VERB 16 NOUN 20 (16 NOUN 20)
 Whereas VERB 06 displayed a computer value once, VERB 16 monitored it continuously. NOUN 20 was the CDU angles of the IMU as read and understood by the computer.
 
 VERB 16 NOUN 85 (16 85)
-Continuously monitored the velocity residuals (essentially, burn error).
+Continuously monitored the velocity residuals after a burn.
 
 VERB 49
 A command issued to autopilot the spacecraft to a new desired attitude.
