@@ -115,7 +115,7 @@ class PlayerView extends DomView
     find('.player-script-air-ground').render(from(\loops.air_ground))
     find('.player-glossary').render(from(\glossary))
 
-    find('.player-postscript').classed(\active, from(\timestamp.timecode).and(\audio.length).all.map (>=))
+    find('.player-postscript').classed(\active, from(\timestamp.timecode).and(\audio.length).all.map((now, all) -> all? and now >= all))
   )
   _wireEvents: ->
     dom = this.artifact()
