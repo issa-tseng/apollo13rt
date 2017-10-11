@@ -75,7 +75,7 @@ Circuit Breaker (Circuit Breakers, CB, CBs)
 Just like the ones in your house, the circuit breakers protected the electrical components in case of a surge or a short. But they were also actively and frequently opened or closed to power on or off various systems.
 
 Coarse Align (VERB 41)
-A coarse alignment acquired and kept the platform within 2 degrees of a desired attitude. Like fine alignment, it was done using star sightings.
+A method of readjusting the orientation of the IMU Stable Member in which it was torqued around quickly, taking 15 seconds. As this necessarily disengaged the inertial sensors, any drift in spacecraft attitude during the operation would result in errors in the resulting alignment.
 
 Command Module Computer (CMC)
 The AGC that lives in the CM.
@@ -161,8 +161,8 @@ The broad term encompassing an entire set of systems that provided breathable ai
 Evaporator (Sublimator, Boiler)
 While radiators helped cool the water/glycol coolant as a closed cycle, this was not always sufficient to carry away all excess heat. In this case, the evaporator (variously referred to as the sublimator or boiler) would bleed off the water as a gas: evaporating water carries heat away. Of course, this resulted in a loss of that water.
 
-Fine Align
-Usually using a P51 or P52, the astronauts could very precisely determine and control the attitude of the Apollo spacecraft. This was often done just before critical moments sensitive to attitude, like maneuver burns.
+Fine Align (VERB 42)
+A method of readjusting the orientation of the IMU Stable Member in which it was pulse-torqued slowly around, preserving the inertial sensors. This resulted in a very precise adjustment without risking invalidation of the alignment as with a coarse align, but it was quite slow.
 
 Flight Director Attitude Indicator (FDAI, Eight-ball, Ball, Balls)
 Similar to an aircraft's artificial horizon, the FDAI displayed the spacecraft attitude and rates in a tactile form. Unlike an artificial horizon, the orientation of its origin point could be configured. It was painted with a red zone where gimbal lock would occur.
@@ -270,10 +270,10 @@ P47
 A passive burn program which allowed the crew to monitor the state of a burn being executed outside the computer's control, like the S-IVB TLI or the RCS-based post-burn residual trim.
 
 P51
-The name of an alignment program in the AGC. It would prompt the crew to execute a two-star sighting with the AOT to determine spacecraft attitude relative to the IMU, assuming nothing about the current attitude.
+An alignment program in the AGC for acquiring spacecraft attitude. It would prompt the crew to execute a two-star sighting with the AOT to determine spacecraft attitude relative to the universe (and thus present IMU orientation), assuming nothing about the present attitude.
 
 P52
-The name of an alignment program in the AGC. It would orient the telescope to a previously known star sighting for visual confirmation by the crew, and if the alignment was still good would reorient the IMU Stable Member to a desired angle relative to that platform, typically to best-avoid gimbal lock.
+A realignment program in the AGC which repositioned the IMU Stable Member to a desired orientation selected by the crew, often to best-avoid gimbal lock. An IMU coarse align would be performed, after which the computer would point the AOT at a star for visual reconfirmation of the known attitude. An IMU fine align would then correct any small errors.
 
 Passive Thermal Control (PTC)
 The Sun is incredibly harsh in space: the difference between the lighted and shadowed side of the spacecraft was as much as 300˚C. To deal with this, Apollo was often put into a slow roll, and thrusters were disengaged (hence, passive). This was called a PTC.
@@ -333,7 +333,7 @@ Reactants valve (Reactant valves, REAC valve, REACs valve)
 These valves allowed cryogenic oxygen and hydrogen to each fuel cell. Because these valves required careful tuning to correctly balance the flows, they could not be reopened once closed. And because of this irreversibility, the actuator which turned them off was normally kept unpowered on the circuit breaker panel.
 
 Reference to Stable Member Matrix (REFSMMAT)
-Oversimplistically, the REFSMMAT was a numerical matrix that converted the navigation coordinate system (in particular for the IMU and FDAI) such that they made sense relative to their current operation: for instance, having the zero origin point along the axis of a burn or PTC. New REFSMMATs could be uplinked to the spacecraft from the ground.
+Oversimplistically, the REFSMMAT was a numerical matrix that converted the navigation coordinate system (in particular for the IMU and FDAI) such that they made sense relative to their ongoing operation: for instance, having the zero origin point along the axis of a burn or PTC. New REFSMMATs could be uplinked to the spacecraft from the ground.
 
 Resolvers
 The sensors in the IMU gimbal system that read the angle of each gimbal ring.
@@ -367,6 +367,9 @@ Shut-off valve.
 
 Stabilization and control system (SCS)
 The SCS monitored the spacecraft attitude and rates, and could automatically control the thrusters to maintain certain parameters. It also served as a backup to the PGNCS.
+
+Stable Member
+The [central unit in the IMU](#ref-panel-navigation) which stayed still as the spacecraft rotated around it, allowing for attitude measurement. It could be manually repositioned.
 
 Staging
 The act and process of jettisoning a stage of the spacecraft.
@@ -490,7 +493,7 @@ FAO
 The Flight Activities Officer generally managed and monitored procedures and schedules, and much of the prerequisites to get things done on schedule, such as crew and equipment movement.
 
 FDO
-The Flight Dynamics Officer managed the spacecraft trajectory, understanding its current path and managing changes to it to deliver the spacecraft to its destination.
+The Flight Dynamics Officer managed the spacecraft trajectory, understanding its ballistic path and managing changes to it to deliver the spacecraft to its destination.
 
 GNC
 The Guidance, Navigation, and Controls Systems Engineer monitored the low-level systems that ultimately sent the spacecraft where it had to go: the propulsion and fuel thereof, the navigation computer hardware and software, and more.
