@@ -142,8 +142,14 @@ class ExhibitView extends DomView
         view.wireEvents()
     )
 
-    dom.find('.prev').on(\click, ~> global.set(\exhibit, this.subject.get(\prev)))
-    dom.find('.next').on(\click, ~> global.set(\exhibit, this.subject.get(\next)))
+    dom.find('.prev').on(\click, (event) ~>
+      event.preventDefault()
+      global.set(\exhibit, this.subject.get(\prev))
+    )
+    dom.find('.next').on(\click, (event) ~>
+      event.preventDefault()
+      global.set(\exhibit, this.subject.get(\next))
+    )
 
 
 module.exports = {
