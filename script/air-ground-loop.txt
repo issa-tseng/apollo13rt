@@ -2410,7 +2410,7 @@ Aquarius, Houston. How do you read?
 Aquarius, Houston. Radio check.
 
 [60 02 12 - 60 02 18] LMP
-Okay, every time you try to transmit, Jack, the AGC starts to drop off and the static level turns up.
+Okay, every time you try to transmit, Jack, the AGC starts to drop off and the static level cranks up.
 
 [60 02 20 - 60 02 21] CAPCOM
 Okay, Fred. You're loud and clear.

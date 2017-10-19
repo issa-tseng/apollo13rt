@@ -1112,7 +1112,7 @@
 60:01:15             CAPCOM  Aquarius, Houston. How do you read?
 60:02:05             CAPCOM  Aquarius, Houston. Radio check.
 60:02:12                LMP  Okay, every time you try to transmit, Jack, the AGC starts to drop off and the
-                             static level turns up.
+                             static level cranks up.
 60:02:20             CAPCOM  Okay, Fred. You're loud and clear.
 60:02:26                LMP  I wish you were.
 60:02:32             CAPCOM  Fred, go to DESCENT O₂.

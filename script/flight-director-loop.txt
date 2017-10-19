@@ -8102,7 +8102,7 @@ Well -
 Do we know whether or not the - results of this star business in the simulator worked?
 
 [59 46 10 - 59 46 21] CONTROL
-That was a request I've got in to SPAN, FLIGHT, to measure drift rates on this particular platform to see what it would look like when we got out to 79 and a half hours.
+That was a request I've got in to SPAN, FLIGHT, to measure drift rates on this particular platform to see what it would look like when we got out to 79.5 hours.
 
 [59 46 22 - 59 46 24] FLIGHT
 Okay. But if we can see stars, we can do a P52.

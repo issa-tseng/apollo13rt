@@ -2570,7 +2570,7 @@ CAPCOM
 Aquarius, Houston. Radio check.
 
 LMP
-Okay, every time you try to transmit, Jack, the AGC starts to drop off and the static level turns up.
+Okay, every time you try to transmit, Jack, the AGC starts to drop off and the static level cranks up.
 
 CAPCOM
 Okay, Fred. You're loud and clear.

@@ -126,7 +126,7 @@ Descent Propulsion System (DPS)
 The Lunar Module had two engines, both of which burned the same Aerozine/nitrogen tetroxide combination as the other Apollo engines. The DPS was part of the descent stage of the Lunar Module, and was left behind on the Moon to save weight. It was unique in that it could throttle down to 10% of full thrust.
 
 Digital Autopilot (DAP)
-The DAP was the program and interface between the CMC and the RCS systems of the spacecraft. It could be set to maintain narrow or wide deadband, and configured with the DSKY to use particular sets of thrusters, especially if some had failed.
+The DAP was the software and hardware interface between the AGC and the RCS systems of the spacecraft. It could be set to maintain narrow or wide deadband, and configured with the DSKY to use particular sets of thrusters, especially if some had failed.
 
 DIRECT
 A setting for the joystick control assemblies. With this engaged, a spacecraft pilot could push the ACA control stick to near the limit of its tilt to directly engage the solenoids to fire the thrusters, bypassing the SCS electronics entirely.
