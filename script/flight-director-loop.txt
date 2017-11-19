@@ -846,7 +846,7 @@ He's - he's - never mind, he's straightening up a little bit.
 Okay.
 
 [56 10 46 - 56 11 22] FLIGHT
-Okay, now, let's everybody keep cool. We've got the LM still attached, the LM spacecraft is good, so {if} we need to get back home we've got a LM to do it with. Okay? Let's make sure we don't do anything that's going to blow our CSM electrical power with the batteries, or that will cause us to lose the MAIN - the FUEL CELL number 2. We want to keep the O₂ and that kind of stuff working, we'd like to have RCS. But we've got the {Command Module system}, so we're in good shape if we need to get home. Let's solve the problem, but let's not make it any worse by guessin'.
+Okay, now, let's everybody keep cool. We've got the LM still attached, the LM spacecraft is good, so {if} we need to get back home we've got a LM to do a good portion of it with. Okay? Let's make sure we don't do anything that's going to blow our CSM electrical power with the batteries, or that will cause us to lose the MAIN - the FUEL CELL number 2. We want to keep the O₂ and that kind of stuff working, we'd like to have RCS. But we've got the {Command Module system}, so we're in good shape if we need to get home. Let's solve the problem, but let's not make it any worse by guessin'.
 1> Note the repeated use of "if" here. The severity of the problem was not yet fully understood.
 2> As noted elsewhere, FLIGHT likely meant LM here.
 
