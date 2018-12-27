@@ -7589,7 +7589,7 @@ Well, we're pulling about 2 amps.
 Okay.
 
 [59 28 26 - 59 28 27] TELMU
-It'll run a little bit ??.
+Every little bit helps.
 
 [59 28 27 - 59 28 29] FLIGHT
 Well, I know. I agree with you.
