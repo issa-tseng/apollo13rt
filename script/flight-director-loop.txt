@@ -11501,6 +11501,9 @@ That's an awful big one.
 [61 27 48 - 61 27 49] FLIGHT
 Plus, he's ahead of us.
 
+[61 27 49 - 61 27 51] ?? GUIDO
+Yeh, he is ahead of us.
+
 [61 27 55 - 61 27 59] RETRO
 FLIGHT, RETRO. I've got an ignition time of 1:47. 1:45.
 
