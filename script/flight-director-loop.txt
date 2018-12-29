@@ -10540,7 +10540,7 @@ Got it, Jack?
 Will they stabilize with the docked configuration all right?
 
 [61 07 01 - 61 07 03] CONTROL
-It should, FLIGHT. We've got the DAP set up, FLIGHT.
+It should, FLIGHT. We've got the DAP set up for it.
 
 [61 07 04 - 61 07 06] FLIGHT
 Okay. Okay, let's watch it.
