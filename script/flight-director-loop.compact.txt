@@ -995,7 +995,7 @@
 57:08:36                GNC  Roger, FLIGHT. We concur.
 57:08:38             FLIGHT  Is that good? How are the rates?
 57:08:41             CAPCOM  You copy those, GNC?
-57:08:42                GNC  It's holding down around a tenth of a degree per second, FLIGHT. Isolating,
+57:08:42                GNC  It's holding down around a tenth of a degree per second, FLIGHT. Oscillating,
                              he's in ACCEL CMD, so -
 57:08:50             FLIGHT  ACCEL CMD?
 57:08:51                GNC  Right.
