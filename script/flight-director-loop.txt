@@ -7046,7 +7046,7 @@ CAPCOM, FLIGHT.
 Go.
 
 [59 09 12 - 59 09 20] FLIGHT
-For your information, the problem is that we've deviate some of the frequencies because of the proximity of the IU frequency, and that thing's still alive. Copy?
+For your information, the problem is that we've had to deviate some of the frequencies because of the proximity of the IU frequency, and that thing's still alive. Copy?
 
 [59 09 21] CAPCOM
 Okay.
