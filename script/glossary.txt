@@ -189,7 +189,7 @@ G&N
 Guidance and Navigation.
 
 Gyro Torquing Angles (Gyro Torques)
-??
+Manual positioning of the gimbals.
 
 H₂ (Hydrogen)
 Hydrogen gas. This was stored in cryogenic tanks and used along with O₂ in the fuel cells to produce power and water.
