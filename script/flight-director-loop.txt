@@ -6224,7 +6224,7 @@ At the present time I'm thinking I'd like to keep the LM IMU up through {the bur
 1> The PC+2 burn around the far side of the Moon.
 
 [58 39 29 - 58 39 38] FLIGHT
-- we're up on the CPs. But that's about as far as I've got it through. Everybody's running power profiles, and Jim McDivitt's people have those set of numbers right now.
+- we're up on the CPs. But that's about as far as I've thought it through. Everybody's running power profiles, and Jim McDivitt's people have those set of numbers right now.
 
 [58 39 40 - 58 39 41] TELMU
 Okay, FLIGHT, we're working on it.
