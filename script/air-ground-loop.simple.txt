@@ -108,7 +108,7 @@ CAPCOM
 Roger. RESTART and a PGNCS light. RESTART and a PNGCS RESET -
 
 CDR
-And now looking at our SERVICE MODULE RCS HELIUM 1, we have B is barber poled and D is barber poled. HELIUM 2, D is barber pole. And SECONDARY PROPELLANTS I have A and C barber pole. BMAG temperatures.
+And now looking at our SERVICE MODULE RCS HELIUM 1, we have B is barber poled and D is barber poled. HELIUM 2, D is barber pole. And SECONDARY PROPELLANTS I have A and C barber pole. BMAG temperatures -
 
 55:58:07
 LMP
@@ -1359,7 +1359,7 @@ CDR
 Here are the gimbal angles. Command Module, 356.69, 163.42, 346.67. Aquarius is 302.26, 345.92, 011.79. Over.
 
 CAPCOM
-Okay, Jim. I got Command Module 356.69, 163.42, 346.67. Aquarius, 302.26, 345.92, 011.78.
+Okay, Jim. I got Command Module 356.65, 163.42, 346.67. Aquarius, 302.26, 345.92, 011.78.
 
 58:10:08
 CDR

@@ -852,7 +852,7 @@ FLIGHT
 Okay.
 
 FLIGHT
-Okay, now, let's everybody keep cool. We've got the LM still attached, the LM spacecraft is good, so if we need to get back home we've got a LM to do it with. Okay? Let's make sure we don't do anything that's going to blow our CSM electrical power with the batteries, or that will cause us to lose the MAIN - the FUEL CELL number 2. We want to keep the O₂ and that kind of stuff working, we'd like to have RCS. But we've got the Command Module system, so we're in good shape if we need to get home. Let's solve the problem, but let's not make it any worse by guessin'.
+Okay, now, let's everybody keep cool. We've got the LM still attached, the LM spacecraft is good, so if we need to get back home we've got a LM to do a good portion of it with. Okay? Let's make sure we don't do anything that's going to blow our CSM electrical power with the batteries, or that will cause us to lose the MAIN - the FUEL CELL number 2. We want to keep the O₂ and that kind of stuff working, we'd like to have RCS. But we've got the Command Module system, so we're in good shape if we need to get home. Let's solve the problem, but let's not make it any worse by guessin'.
 
 56:11:47
 GNC
@@ -1178,7 +1178,7 @@ I'd like to firmly secure the high-gain before he starts getting into PTC.
 GNC
 That's affirmative, FLIGHT.
 
-CAPCOM
+FLIGHT
 GNC? What's firing now? You got something firing?
 
 GNC
@@ -1204,7 +1204,7 @@ FLIGHT
 INVERTER 1 on both AC.
 
 EECOM
-That's affirm, so I can get some AC BUS power back so I can have some insight into my AC BUS 2 telemetry, especially my cyros, maybe - the venting may be coming from that. And also, I think that the FUEL CELL 2 pumps are on AC 2, and this will take care of it without switching the pumps yet.
+That's affirm, so I can get some AC BUS power back so I can have some insight into my AC BUS 2 telemetry, especially my cryos, maybe - the venting may be coming from that. And also, I think that the FUEL CELL 2 pumps are on AC 2, and this will take care of it without switching the pumps yet.
 
 FLIGHT
 Say that again. You think your fuel cell pumps -
@@ -5305,7 +5305,7 @@ FLIGHT
 Go.
 
 INCO
-If you get us that COMMAND RESET we'll get some data; we're blind here.
+If you get us that COMMAND RESET we'll get some data; we're blank here.
 
 FLIGHT
 Okay. Well - in the CSM, you mean?
@@ -5434,7 +5434,7 @@ FLIGHT
 Yeah. Got that, CAPCOM?
 
 Maroon EECOM
-??
+I'll get it to him.
 
 FLIGHT
 Alright.
@@ -6279,7 +6279,7 @@ FLIGHT
 At the present time I'm thinking I'd like to keep the LM IMU up through the burn -
 
 FLIGHT
-- we're up on the CPs. But that's about as far as I've got it through. Everybody's running power profiles, and Jim McDivitt's people have those set of numbers right now.
+- we're up on the CPs. But that's about as far as I've thought it through. Everybody's running power profiles, and Jim McDivitt's people have those set of numbers right now.
 
 TELMU
 Okay, FLIGHT, we're working on it.
@@ -6357,7 +6357,10 @@ Mrrh. Okay.
 
 58:42:01
 FLIGHT
-Okay, everybody, look. We've got a number of long-range problems right now. We have the burn to do, which is at about 79 hours: 28 hours from now. And that's one business. We have to get the track up as we need it to take care of that burn. Hopefully we won't need to do too much with that, although I don't know how many amps that's going to take. However, right now, I want to be sure that we get the whole situation stabilized with the LM and the CSM. We've got to start bringing the LM power down some, and get any non-required stuff off the line so we don't use up any of these amp-hours that we don't need to give away. And I want you to pay attention to the configuration we're currently in and get the people offline working on the longer-range problems, especially the lifeboat problems now associated with the LM.
+Okay, everybody, look. We've got a number of long-range problems right now. We have the burn to do, which is at about 79 hours: 28 hours from now. And that's one business. We have to get the track up as we need it to take care of that burn. Hopefully we won't need to do too much with that, although I don't know how many amps that's going to take.
+
+FLIGHT
+However, right now, I want to be sure that we get the whole situation stabilized with the LM and the CSM. We've got to start bringing the LM power down some, and get any non-required stuff off the line so we don't use up any of these amp-hours that we don't need to give away. And I want you to pay attention to the configuration we're currently in and get the people offline working on the longer-range problems, especially the lifeboat problems now associated with the LM.
 
 FLIGHT
 You know, LiOH, etc.
@@ -6524,7 +6527,7 @@ CAPCOM
 Go, FLIGHT.
 
 FLIGHT
-Jack, would you let me the conclusion of whatever discussions you guys had about - alignments? When you get - come to one?
+Jack, would you let me know the conclusion of whatever discussions you guys had about - alignments? When you get - come to one?
 
 CAPCOM
 Yessir.
@@ -7119,7 +7122,7 @@ CAPCOM
 Go.
 
 FLIGHT
-For your information, the problem is that we've deviate some of the frequencies because of the proximity of the IU frequency, and that thing's still alive. Copy?
+For your information, the problem is that we've had to deviate some of the frequencies because of the proximity of the IU frequency, and that thing's still alive. Copy?
 
 CAPCOM
 Okay.
@@ -7674,7 +7677,7 @@ FLIGHT
 Okay.
 
 TELMU
-It'll run a little bit ??.
+Every little bit helps.
 
 FLIGHT
 Well, I know. I agree with you.
@@ -7788,7 +7791,7 @@ TELMU
 Right.
 
 FLIGHT
-And - and EECOM needs to - naw, he's going to do that over in his vehicle if we have to get into that. I've got a note up here that I don't quite understand, it says LM LiOH is 48 man-hours. That doesn't sound quite right to me.
+And - and EECOM needs to know how he's going to do that over in his vehicle if we have to get into that. I've got a note up here that I don't quite understand, it says LM LiOH is 48 man-hours. That doesn't sound quite right to me.
 
 TELMU
 That's on the cartridge - standby, we'll get you consumables.
@@ -10688,7 +10691,7 @@ Will they stabilize with the docked configuration all right?
 
 61:07:01
 CONTROL
-It should, FLIGHT. We've got the DAP set up, FLIGHT.
+It should, FLIGHT. We've got the DAP set up for it.
 
 FLIGHT
 Okay. Okay, let's watch it.
@@ -11661,6 +11664,9 @@ GUIDO
 FLIGHT
 Plus, he's ahead of us.
 
+GUIDO
+Yeah, he is ahead of us.
+
 RETRO
 FLIGHT, RETRO. I've got an ignition time of 1:47. 1:45.
 
@@ -11846,7 +11852,7 @@ CONTROL
 Yes. Roger.
 
 FLIGHT
-- I want you to watch to configuration, here.
+- I want you to watch the configuration, here.
 
 61:32:02
 INCO
@@ -12110,7 +12116,7 @@ CONTROL
 Okay.
 
 FLIGHT
-CAPCOM, while we're going through this subject, two items for power conversation would be the DECA GIMBAL and POWER circuit breakers on panel - 16? 11.
+CAPCOM, while we're going through this subject, two items for power conservation would be the DECA GIMBAL and POWER circuit breakers on panel - 16? 11.
 
 CONTROL
 11 for the DECA GIMBAL and DECA POWER. ATCA is on panel 16.
