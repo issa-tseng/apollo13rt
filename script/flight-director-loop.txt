@@ -2952,7 +2952,7 @@ Okay.
 How much - how many amps will that give us, EECOM?
 
 [57 20 35 - 57 20 42] EECOM
-About {1.3, 1.4 amps - - amp-hours per hour}. The cost is about 4.5 amps.
+About {1.3, 1.4 amps - - amp-hours per hour}. The cost is about 1 and 1/2 amps.
 1> The rate of battery charge.
 
 [57 20 43 - 57 20 44] FLIGHT
