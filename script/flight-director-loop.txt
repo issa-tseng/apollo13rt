@@ -1170,7 +1170,7 @@ I'd like to firmly secure the high-gain before he starts getting into PTC.
 [56 22 54] GNC
 That's affirmative, FLIGHT.
 
-[56 22 54 - 56 22 58] CAPCOM
+[56 22 54 - 56 22 58] FLIGHT
 GNC? What's firing now? You got something firing?
 
 [56 22 59 - 56 23 01] GNC
