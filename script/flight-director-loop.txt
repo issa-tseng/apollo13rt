@@ -1196,7 +1196,7 @@ I've got a little correction. Let's put INVERTER 1 on both AC buses, please.
 INVERTER 1 on both AC.
 
 [56 23 22 - 56 23 42] EECOM
-That's affirm, so I can get some AC BUS power back so I can have some insight into my AC BUS 2 telemetry, especially my cyros, maybe - the venting may be coming from that. And also, I think that the FUEL CELL 2 pumps are on AC 2, and {this will take care of it} without switching the pumps yet.
+That's affirm, so I can get some AC BUS power back so I can have some insight into my AC BUS 2 telemetry, especially my cryos, maybe - the venting may be coming from that. And also, I think that the FUEL CELL 2 pumps are on AC 2, and {this will take care of it} without switching the pumps yet.
 1> Presumably, he needed the pumps back on.
 
 [56 23 44 - 56 23 46] FLIGHT
