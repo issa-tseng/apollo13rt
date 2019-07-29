@@ -6465,7 +6465,7 @@ CAPCOM, FLIGHT.
 Go, FLIGHT.
 
 [58 47 33 - 58 47 39] FLIGHT
-Jack, would you let me the conclusion of whatever discussions you guys had about - alignments? When you get - come to one?
+Jack, would you let me know the conclusion of whatever discussions you guys had about - alignments? When you get - come to one?
 
 [58 47 39] CAPCOM
 Yessir.
