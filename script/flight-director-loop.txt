@@ -7703,7 +7703,7 @@ Alright. Now, we need to figure out something also for your CO₂ scrubbing, rig
 Right.
 
 [59 31 31 - 59 31 45] FLIGHT
-And - and EECOM needs to - naw, he's going to do that over in his vehicle if we have to get into that. I've got a note up here that I don't quite understand, it says LM LiOH is 48 man-hours. That doesn't sound quite right to me.
+And - and EECOM needs to know how he's going to do that over in his vehicle if we have to get into that. I've got a note up here that I don't quite understand, it says LM LiOH is 48 man-hours. That doesn't sound quite right to me.
 
 [59 31 46 - 59 31 50] TELMU
 That's on the cartridge - standby, we'll get you consumables.
