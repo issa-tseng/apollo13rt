@@ -6302,8 +6302,11 @@ Okay, Ed. Thank you.
 [58 41 57 - 58 41 58] FLIGHT
 Mrrh. Okay.
 
-[58 42 01 - 58 42 43] FLIGHT
-Okay, everybody, look. We've got a number of long-range problems right now. We have the burn to do, which is at about 79 hours: 28 hours from now. And that's one business. We have to get the track up as we need it to take care of that burn. Hopefully we won't need to do too much with that, although I don't know how many amps that's going to take. However, right now, I want to be sure that we get the whole situation stabilized with the LM and the CSM. We've got to start bringing the LM power down some, and get any non-required stuff off the line so we don't use up any of these amp-hours that we don't need to give away. And I want you to pay attention to the configuration we're currently in and get the people offline working on the longer-range problems, especially the lifeboat problems now associated with the LM.
+[58 42 01 - 58 42 19] FLIGHT
+Okay, everybody, look. We've got a number of long-range problems right now. We have the burn to do, which is at about 79 hours: 28 hours from now. And that's one business. We have to get the track up as we need it to take care of that burn. Hopefully we won't need to do too much with that, although I don't know how many amps that's going to take.
+
+[58 42 20 - 58 42 43] FLIGHT
+However, right now, I want to be sure that we get the whole situation stabilized with the LM and the CSM. We've got to start bringing the LM power down some, and get any non-required stuff off the line so we don't use up any of these amp-hours that we don't need to give away. And I want you to pay attention to the configuration we're currently in and get the people offline working on the longer-range problems, especially the lifeboat problems now associated with the LM.
 
 [58 42 45 - 58 42 46] FLIGHT
 You know, LiOH, etc.
