@@ -1259,7 +1259,7 @@ Go ahead, Aquarius.
 Here are the gimbal angles. Command Module, 356.69, 163.42, 346.67. Aquarius is 302.26, 345.92, 011.79. Over.
 
 [58 09 48 - 58 10 03] CAPCOM
-Okay, Jim. I got Command Module 356.69, 163.42, 346.67. Aquarius, 302.26, 345.92, 011.78.
+Okay, Jim. I got Command Module 356.65, 163.42, 346.67. Aquarius, 302.26, 345.92, 011.78.
 
 [58 10 08 - 58 10 09] CDR
 That's 011.79.
