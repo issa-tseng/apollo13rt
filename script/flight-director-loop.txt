@@ -11208,6 +11208,7 @@ Have you got anything on confirming the attitude?
 
 [61 21 40 - 61 21 43] GUIDO
 Negative, FLIGHT. The only star available is star 86, there.
+> The star list only went up to 50, including Sun, Earth, and Moon. This is likely be a tongue-in-cheek reference to something else.
 
 [61 21 47 - 61 21 48] GUIDO
 FLIGHT, MIT will not have a run on this thing.
