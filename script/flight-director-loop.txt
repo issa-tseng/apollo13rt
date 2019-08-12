@@ -5272,7 +5272,7 @@ FLIGHT, INCO.
 Go.
 
 [58 10 50 - 58 10 52] INCO
-If you get us that COMMAND RESET we'll get some data; we're blind here.
+If you get us that COMMAND RESET we'll get some data; we're blank here.
 
 [58 10 53 - 58 10 54] FLIGHT
 Okay. Well - in the CSM, you mean?
