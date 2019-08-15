@@ -336,10 +336,25 @@ class Player extends Model
     throttle(5_000, player.watch(\timestamp.epoch)).reactLater(this~setProgress)
 
   # starts playing the audio.
-  play: -> this.get(\audio.player).get(0).play()
+  play: !-> this.get(\audio.player).get(0).play()
 
   # navigates the player to a given epoch.
+  # will schedule the seek for after the audio is loaded if it isn't ready (#53).
   epoch: (epoch) !->
+    audio = this.get(\audio.player).get(0)
+    if isNaN(audio.duration)
+      # can't seek yet.
+      scheduled = this.get(\delayed-seek)?
+      this.set(\delayed-seek, epoch)
+      return if scheduled
+      <~ audio.addEventListener(\canplay)
+      this._seek(this.get(\delayed-seek))
+      this.unset(\delayed-seek)
+    else
+      this._seek(epoch)
+
+  # helper used by #epoch() to actually do the seek.
+  _seek: (epoch) !->
     this.get(\audio.player).get(0).currentTime = (epoch - this.get(\timestamp.offset))
     this.setProgress()
 
