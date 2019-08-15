@@ -8845,7 +8845,7 @@ We had one -
 I would say no on that.
 
 [60 13 00 - 60 13 03] INCO
-They're trying to bring up an uplink carrier to the LM so we can get them voice down.
+They're trying to bring up an uplink carrier to the LM so we can get some voice to them.
 
 [60 13 33] FDO
 FLIGHT, FDO.
