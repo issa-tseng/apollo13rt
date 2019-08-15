@@ -5,7 +5,7 @@ marked = require(\marked)
 { Term, Glossary } = require('../model')
 
 
-base-term-edit-url = "https://github.com/clint-tseng/apollo13rt/edit/master/script/glossary.txt"
+base-term-edit-url = "https://github.com/issa-tseng/apollo13rt/edit/master/script/glossary.txt"
 class TermView extends DomView
   @_dom = -> $('
     <div class="term">
