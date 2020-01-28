@@ -3950,7 +3950,6 @@ That's affirmative.
 
 [57 44 01 - 57 44 02] FLIGHT
 It's down to step 3.
-> The silly thing about this miscommunication is that Activation 1 only contains 3 steps to begin with.
 
 [57 44 03 - 57 44 04] FLIGHT
 Down to step 3.
@@ -4105,7 +4104,7 @@ We're going to put BATTERY A on - can you put it on while it's charging?
 
 [57 46 50 - 57 46 51] Maroon EECOM
 No. We'll have to take the charge off.
-> From here out, two EECOMs are active on the loop. Maroon EECOM is John Aaron.
+> Starting here, two EECOMs are active on the loop. Maroon EECOM is John Aaron.
 
 [57 46 51] EECOM
 Negative.
@@ -4113,7 +4112,7 @@ Negative.
 [57 46 52 - 57 46 53] FLIGHT
 We want to take -
 
-[57 46 54 - 57 46 56] Maroon EECOM
+[57 46 54 - 57 46 56] EECOM
 We'll have to power down the charger and put it on MAIN A.
 
 [57 46 56] FLIGHT
