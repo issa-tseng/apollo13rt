@@ -5,8 +5,7 @@ $ = require(\jquery)
 
 safe-marked = (x) -> marked(x) if x?
 
-class GraphicView extends DomView
-  @_dom = -> $('
+class GraphicView extends DomView.build($('
     <div class="graphic">
       <a class="graphic-expand" target="_blank"/>
       <img/>
@@ -15,8 +14,7 @@ class GraphicView extends DomView
         <span class="graphic-caption-text"/>
       </div>
     </div>
-  ')
-  @_template = template(
+  '), template(
     find('.graphic').classed(\down, from(\down))
 
     find('.graphic-expand').attr(\href, from(\expandable).and(\src).all.map((expands, src) -> src if expands))
@@ -31,7 +29,7 @@ class GraphicView extends DomView
     find('.graphic-caption').classed(\hide, from(\caption).map(-> !it?))
     find('.graphic-caption-text').html(from(\caption).map(safe-marked))
     find('.graphic-caption-number').text(from(\caption_number))
-  )
+))
 
 module.exports = { GraphicView }
 

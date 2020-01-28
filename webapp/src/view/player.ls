@@ -1,14 +1,13 @@
 $ = require(\jquery)
 
 { DomView, template, find, from, Varying } = require(\janus)
-{ from-event } = require(\janus-stdlib).util.varying
+{ from-event } = require(\janus-stdlib).varying
 
 { Player, Chapter } = require('../model')
 { clamp, px, pct, pad, click-touch, get-touch-x, get-touch-y } = require('../util')
 { min } = Math
 
-class PlayerView extends DomView
-  @_dom = -> $('
+class PlayerView extends DomView.build($('
     <div class="player">
       <audio/>
       <div class="player-chrome">
@@ -63,8 +62,7 @@ class PlayerView extends DomView
       </div>
       <div class="player-resize"/>
     </div>
-  ')
-  @_template = template(
+  '), template(
     find('audio').attr(\src, from(\audio.src))
 
     find('.player').classed(\playing, from(\audio.playing))
@@ -79,17 +77,17 @@ class PlayerView extends DomView
     find('.player-timestamp-accident .ss').text(from(\accident.delta_ss).map(pad))
 
     find('.player-timestamp-event-wrapper').classed(\has-model, from(\event_timer.model).map (?))
-    find('.player-timestamp-event-wrapper').classed(\active, from.self().and(\event_timer.model).all.flatMap((view, timer) ->
-      Varying.pure(view.subject.watch(\timestamp.epoch), timer.watch(\end), (now, end) -> (end - now) > 0) if timer?
-    ))
-    find('.player-timestamp-event .player-timestamp-label').text(from(\event_timer.model).watch(\caption))
+    find('.player-timestamp-event-wrapper').classed(\active, from(\timestamp.epoch).asVarying().and(\event_timer.model).get(\end).asVarying()
+      .all.flatMap((epoch, timer) -> Varying.mapAll(epoch, timer, (now, end) -> (end - now) > 0) if timer?)
+    )
+    find('.player-timestamp-event .player-timestamp-label').text(from(\event_timer.model).get(\caption))
     find('.player-timestamp-event .sign').text(from(\event_timer.parts.sign))
     find('.player-timestamp-event .hh').text(from(\event_timer.parts.hh).map(pad))
     find('.player-timestamp-event .mm').text(from(\event_timer.parts.mm).map(pad))
     find('.player-timestamp-event .ss').text(from(\event_timer.parts.ss).map(pad))
-    find('.player-timestamp-event').classed(\hot, from.self().and(\event_timer.model).watch(\hot).all.flatMap((view, hot) ->
-      epoch = view.subject.watch(\timestamp.epoch)
-      hot?.filter((.contains(epoch))).watchLength().map (> 0)
+    find('.player-timestamp-event').classed(\hot, from.self().and(\event_timer.model).get(\hot).all.flatMap((view, hot) ->
+      epoch = view.subject.get(\timestamp.epoch)
+      hot?.filter((.contains(epoch))).length.map (> 0)
     ))
 
     find('.player-playhead').css(\right, from(\timestamp.timecode).and(\audio.length).all.map ((/) >> (-> 1 - it) >> pct))
@@ -116,7 +114,7 @@ class PlayerView extends DomView
     find('.player-glossary').render(from(\glossary))
 
     find('.player-postscript').classed(\active, from(\timestamp.timecode).and(\audio.length).all.map((now, all) -> all? and now >= all))
-  )
+))
   _wireEvents: ->
     dom = this.artifact()
     player = this.subject
@@ -180,7 +178,7 @@ class PlayerView extends DomView
     )
 
     # point-in-time mouse reactions.
-    from(player.watch(\scrubber.clicking)).and(player.watch(\scrubber.mouse.timecode)).all.plain().reactLater(([ clicking, code ]) ->
+    Varying.all([ player.get(\scrubber.clicking), player.get(\scrubber.mouse.timecode) ]).react(false, (clicking, code) ->
       audio-raw.currentTime = code if clicking is true
       player.setProgress() # really, these two lines should be player.epoch() but oh well.
     )
@@ -192,35 +190,32 @@ class PlayerView extends DomView
     click-touch(dom.find('.player-leapforward'), -> audio-raw.currentTime += 15)
     dom.find('.player-bookmark').on('click', (event) ->
       event.stopPropagation() # so the standard mouse timecode handler does not fire.
-      player.epoch(player.get(\bookmark.epoch))
+      player.epoch(player.get_(\bookmark.epoch))
       player.unset(\bookmark)
     )
 
     # fixed player/scroll handling.
     container = $('#timeline')
     threshold = dom.position().top
-    chrome-height = dom.outerHeight() - player.get(\base_height)
-    crossed-threshold = from-event(body, \scroll, (.target.scrollingElement.scrollTop > threshold))
+    chrome-height = dom.outerHeight() - player.get_(\base_height)
+    crossed-threshold = from-event(body, \scroll, false, (.target.scrollingElement.scrollTop > threshold))
 
-    crossed-threshold.reactLater((is-fixed) -> container.toggleClass(\fixed-player, is-fixed is true))
-    from(crossed-threshold).and(player.watch(\base_height)).all.plain().map((is-fixed, base-height) ->
+    crossed-threshold.react(false, (is-fixed) -> container.toggleClass(\fixed-player, is-fixed is true))
+    Varying.all([ crossed-threshold, player.get(\base_height) ]).map((is-fixed, base-height) ->
       if is-fixed then chrome-height + base-height else \auto
-    ).reactLater(-> container.css(\height, it))
+    ).react(false, -> container.css(\height, it))
 
     # keyboard audio navigation.
     body.on(\keydown, (event) ->
       increment = if event.shiftKey is true then 15 else 6
-      if event.which is 74
-        audio-raw.currentTime -= increment
-      else if event.which is 76
-        audio-raw.currentTime += increment
+      if event.which is 74 then audio-raw.currentTime -= increment
+      else if event.which is 76 then audio-raw.currentTime += increment
       else if event.which is 75
         if audio-raw.paused is true then audio-raw.play() else audio-raw.pause()
     )
 
 
-class ChapterView extends DomView
-  @_dom = -> $('
+class ChapterView extends DomView.build($('
     <div class="chapter">
       <div class="chapter-inner">
         <p class="title" />
@@ -229,20 +224,19 @@ class ChapterView extends DomView
         <p class="description" />
       </div>
     </div>
-  ')
-  @_template = template(
-    find('.chapter').css(\left, from(\start).and(\player).watch(\timestamp.offset).and(\player).watch(\audio.length).all.map((start, offset, length) ->
+  '), template(
+    find('.chapter').css(\left, from(\start).and(\player).get(\timestamp.offset).and(\player).get(\audio.length).all.map((start, offset, length) ->
       (start - offset) / length |> pct
     ))
-    find('.chapter').css(\width, from(\duration).and(\player).watch(\audio.length).all.map((chapter-length, audio-length) ->
+    find('.chapter').css(\width, from(\duration).and(\player).get(\audio.length).all.map((chapter-length, audio-length) ->
       chapter-length / audio-length |> pct
     ))
 
-    find('.chapter').classed(\active, from(\start).and(\end).and(\player).watch(\scrubber.mouse.epoch).all.map((start, end, cursor) -> start <= cursor <= end))
+    find('.chapter').classed(\active, from(\start).and(\end).and(\player).get(\scrubber.mouse.epoch).all.map((start, end, cursor) -> start <= cursor <= end))
 
     find('.title').text(from(\title))
     find('.description').text(from(\description))
-  )
+))
 
 
 module.exports = {

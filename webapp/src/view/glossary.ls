@@ -6,8 +6,7 @@ marked = require(\marked)
 
 
 base-term-edit-url = "https://github.com/issa-tseng/apollo13rt/edit/master/script/glossary.txt"
-class TermView extends DomView
-  @_dom = -> $('
+class TermView extends DomView.build($('
     <div class="term">
       <div class="term-name">
         <span class="name"/>
@@ -17,29 +16,25 @@ class TermView extends DomView
       </div>
       <p class="term-definition"/>
     </div>
-  ')
-  @_template = template(
+  '), template(
     find('.term').classGroup(\category-, from(\category))
 
     find('.term').classed(\active,
       from(\hidden)
-        .and(\glossary).watch(\show.hidden)
+        .and(\glossary).get(\show.hidden)
         .and(\matches)
-        .and.app(\global).watch(\player).watch(\nearby_terms)
+        .and.app(\global).get(\player).get(\nearby_terms)
         .all.flatMap((hidden, show-hidden, f, terms) ->
-          if hidden and show-hidden
-            true
-          else if hidden
-            false
-          else
-            terms?.find(f)?
+          if hidden and show-hidden then true
+          else if hidden then false
+          else terms?.find(f)?
         )
     )
 
     find('.term-name .name').text(from(\term))
     find('.term-name .synonyms').render(
-      from(\synonyms).and.app(\global).watch(\player).all.map((synonyms, player) ->
-        synonyms.filter((term) -> player.watch(\nearby_terms).map((nearby) -> term in nearby))
+      from(\synonyms).and.app(\global).get(\player).all.map((synonyms, player) ->
+        synonyms.filter((term) -> player.get(\nearby_terms).map((nearby) -> term in nearby))
       )
     )
 
@@ -47,15 +42,14 @@ class TermView extends DomView
     find('.term-hide').classed(\active, from(\hidden))
     find('.term-hide').attr(\title, from(\hidden).map(-> if it then "Show this term" else "Don't show me again"))
     find('.term-definition').html(from(\definition).map (marked))
-  )
+))
   _wireEvents: ->
     dom = this.artifact()
     term = this.subject
 
-    dom.find('.term-hide').on(\click, -> term.set(\hidden, !term.get(\hidden)))
+    dom.find('.term-hide').on(\click, -> term.set(\hidden, !term.get_(\hidden)))
 
-class GlossaryView extends DomView
-  @_dom = -> $('
+class GlossaryView extends DomView.build($('
     <div class="glossary">
       <div class="glossary-items"/>
       <p>Glossary</p>
@@ -71,8 +65,7 @@ class GlossaryView extends DomView
         </label>
       </div>
     </div>
-  ')
-  @_template = template(
+  '), template(
     find('.glossary').classed(\hide-personnel, from(\show.personnel).map (not))
     find('.glossary').classed(\hide-technical, from(\show.technical).map (not))
 
@@ -86,7 +79,7 @@ class GlossaryView extends DomView
 
     find('.glossary-show-hidden').classed(\checked, from(\show.hidden))
     find('.glossary-show-hidden span').render(from.attribute(\show.hidden)).context(\edit)
-  )
+))
 
 
 module.exports = {

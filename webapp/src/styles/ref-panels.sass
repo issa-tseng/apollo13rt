@@ -65,41 +65,39 @@ $color-lamp: #e4e1da
 
     .panel-zoom
       float: left
-
-    ul
       overflow: hidden
-      li
+
+      .janus-literal
+        cursor: pointer
         float: left
         margin-right: 1.5em
-        &:last-child
-          margin-right: 0
+        position: relative
+        text-transform: capitalize
 
-        .janus-list-selectItem
-          position: relative
-          text-transform: capitalize
-          &:hover
-            color: #000
-            &:before
-              background-color: #000
-          &.checked:before
-            background-color: $color-accent
+        &:before
+          @include reify
+          background: #444
+          border-radius: 999px
+          height: 12px
+          margin: 0 auto
+          width: 12px
 
-          button
-            cursor: pointer
-
+        &:hover
+          color: #000
           &:before
-            @include reify
-            background: #444
-            border-radius: 999px
-            height: 12px
-            margin: 0 auto
-            width: 12px
+            background-color: #000
+
+        &.checked:before
+          background-color: $color-accent
 
         &:first-child
-          .janus-list-selectItem:before
+          &:before
             transform: scale(0.3)
-          + li .janus-list-selectItem:before
+          + .janus-literal:before
             transform: scale(0.6)
+
+        &:last-child
+          margin-right: 0
 
         button
           @include fill

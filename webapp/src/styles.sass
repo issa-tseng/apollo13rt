@@ -697,12 +697,11 @@ a
     font-size: 1.1em
     font-weight: bold
 
-    .synonyms ul
+    .synonyms .janus-list
       display: inline
       font-weight: normal
 
-      li
-        display: inline
+      span
         &:after
           content: ', '
         &:first-child
@@ -1010,14 +1009,12 @@ header
     margin-top: 2.4em
     padding: 0.6em 2em 1em
 
-    > ul > li
+    .topic
       float: left
-      margin-right: 2em
-      width: 33%
+      margin-right: 1em
+      width: calc(33% - 1em)
       &:first-child
-        margin-left: -0.6em
-        .topic, + li .topic
-          margin-right: -1.2em
+        margin-left: 0.5em
       &:last-child
         float: none
         margin-left: calc(67% + 2em)
@@ -1027,11 +1024,8 @@ header
           margin-left: 0
           margin-right: -0.6em
 
-  .has-exhibit .exhibit-toc > ul > li:first-child
+  .has-exhibit .exhibit-toc .topic:first-child
     margin-right: -0.1em
-    width: calc(33% + 2em)
-    .topic
-      margin-right: 0
 
 .exhibit-area
   .exhibit-wrapper

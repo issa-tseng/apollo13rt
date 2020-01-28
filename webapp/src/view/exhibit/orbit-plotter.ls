@@ -1,4 +1,4 @@
-{ DomView, template, find, from, Model } = require(\janus)
+{ DomView, template, find, from, Model, initial, bind } = require(\janus)
 { px } = require('../../util')
 
 
@@ -110,17 +110,17 @@ example = (target, r0, v0, dv, duration, limits) ->
 ########
 # VIEW
 
-class Orbit extends Model
-  @default(\width, 300)
-  @default(\height, 150)
+class Orbit extends Model.build(
+  initial(\width, 300)
+  initial(\height, 150)
 
-  @default(\earth, true)
-  @default(\moon, false)
+  initial(\earth, true)
+  initial(\moon, false)
 
-  @bind(\scaler, from(\hlimits).and(\width).and(\height).all.map(gen-scaler))
+  bind(\scaler, from(\hlimits).and(\width).and(\height).all.map(gen-scaler))
+)
 
-class OrbitView extends DomView
-  @_dom = -> $('
+class OrbitView extends DomView.build($('
     <div class="orbit">
       <canvas/>
       <div class="orbit-ship"/>
@@ -133,8 +133,7 @@ class OrbitView extends DomView
         <span class="orbit-caption-text"/>
       </p>
     </div>
-  ')
-  @_template = template(
+  '), template(
     find('canvas').css(\width, from(\width).map(px))
     find('canvas').css(\height, from(\height).map(px))
 
@@ -153,12 +152,12 @@ class OrbitView extends DomView
 
     find('.orbit-caption-number').text(from(\caption.number))
     find('.orbit-caption-text').text(from(\caption.text))
-  )
+))
   _wireEvents: ->
     dom = this.artifact()
     orbit = this.subject
 
-    dom.find('.orbit-playpause').on(\click, example(dom.find('canvas')[0], orbit.get(\r), orbit.get(\v), orbit.get(\dv), orbit.get(\t), orbit.get(\hlimits)))
+    dom.find('.orbit-playpause').on(\click, example(dom.find('canvas')[0], orbit.get_(\r), orbit.get_(\v), orbit.get_(\dv), orbit.get_(\t), orbit.get_(\hlimits)))
 
 
 module.exports = { Orbit, OrbitView, earth-radius }

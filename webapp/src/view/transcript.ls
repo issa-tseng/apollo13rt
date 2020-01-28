@@ -2,14 +2,13 @@ $ = require(\jquery)
 copy = require(\clipboard-copy)
 
 { DomView, template, find, from, Varying } = require(\janus)
-{ debounce, sticky } = require(\janus-stdlib).util.varying
+{ debounce, sticky } = require(\janus-stdlib).varying
 
 { Line, Transcript } = require('../model')
 { pct, pad, get-time, max-int, bump, click-touch } = require('../util')
 
 
-class TranscriptView extends DomView
-  @_dom = -> $('
+class TranscriptView extends DomView.build($('
     <div class="script">
       <div class="script-scroll-indicator-container">
         <a class="script-scroll-indicator" href="#" title="Sync with audio"/>
@@ -17,12 +16,11 @@ class TranscriptView extends DomView
       <div class="script-lines"/>
       <p><span class="leader">Transcript:</span><span class="name"/></p>
     </div>
-  ')
-  @_template = template(
+  '), template(
       find('p .name').text(from(\name))
       find('.script-lines').html(from(\markup).map((id) -> $("#id")[0].innerHTML))
       find('.script-scroll-indicator').classed(\active, from(\auto_scroll).map (not))
-  )
+))
   _wireEvents: ->
     dom = this.artifact()
     transcript = this.subject
@@ -35,22 +33,22 @@ class TranscriptView extends DomView
     scroll-to = (scroll-top) ->
       relinquished := max-int
       line-container.stop(true).animate({ scroll-top }, { complete: (-> relinquished := get-time()) })
-    scroll-top-line = -> id |> get-offset |> (- 50) |> scroll-to if (id = transcript.get(\top_line)?._id)?
+    scroll-top-line = -> id |> get-offset |> (- 50) |> scroll-to if (id = transcript.get_(\top_line)?._id)?
 
-    debounce(50, transcript.watch(\top_line)).reactLater((line) ->
+    debounce(50, transcript.get(\top_line)).react(false, (line) ->
       id = line?._id
       return unless id?
       offset = get-offset(id)
 
       # scroll to the top line if relevant.
-      scroll-to(offset - 50) if transcript.get(\auto_scroll) is true
+      scroll-to(offset - 50) if transcript.get_(\auto_scroll) is true
 
       # position the scroll indicator always.
       indicator.css(\top, offset / line-container.get(0).scrollHeight |> pct)
     )
 
     # watch for autoscroll rising edge and trip scroll.
-    transcript.watch(\auto_scroll).reactLater((auto) -> scroll-top-line() if auto)
+    transcript.get(\auto_scroll).react(false, (auto) -> scroll-top-line() if auto)
 
     # track whether the browser is getting resized or is blurred, and suppress autoscroll disengagement.
     # TODO: this seems like a common pattern. perhaps the stdlib utils should have some automatic
@@ -61,8 +59,8 @@ class TranscriptView extends DomView
       bump(is-resizing)
       scroll-top-line()
     ).on(\blur, -> is-blurred.set(true)).on(\focus, -> is-blurred.set(false))
-    suppress-disengagement = sticky( true: 100 )(Varying.pure(is-resizing, is-blurred, (or)))
-    suppress-disengagement.react(->) # TODO: reed to subscribe to this to make it work.
+    suppress-disengagement = sticky( true: 100 )(Varying.mapAll(is-resizing, is-blurred, (or)))
+    suppress-disengagement.react(->) # TODO: need to subscribe to this to make it work.
 
     # turn off auto-scrolling as intelligently as we can.
     line-container.on(\scroll, ->
@@ -79,7 +77,7 @@ class TranscriptView extends DomView
     # do these via delegate here once rather for each line for perf.
     dom.on(\mouseenter, '.line-edit', ->
       return if this.hostname isnt window.location.hostname
-      this.href = transcript.get(\edit_url) + this.hash
+      this.href = transcript.get_(\edit_url) + this.hash
     )
     dom.on(\click, '.line-link', (event) ->
       if copy($(event.target).closest('.line').find('.line-timestamp').get(0)?.href) is true
@@ -95,10 +93,10 @@ class TranscriptView extends DomView
     )
 
     # if we are the next transcript after a gap, mark the line.
-    transcript.watch(\player).flatMap((player) ->
+    transcript.get(\player).flatMap((player) ->
       return null unless player?
-      Varying.pure(player.watch(\post_gap_script), transcript.watch(\cued_idx), (script, idx) ->
-        if script is transcript then transcript.get(\lines).at(idx)._id else null
+      Varying.mapAll(player.get(\post_gap_script), transcript.get(\cued_idx), (script, idx) ->
+        if script is transcript then transcript.get_(\lines).at_(idx)._id else null
       )
     ).react((gap-id) ->
       dom.find('.post-gap').removeClass(\post-gap)
@@ -107,14 +105,14 @@ class TranscriptView extends DomView
 
     # when our target_idx changes, push active state down into lines.
     # but we can't do that until we have a player:
-    transcript.watch(\player).react((player) ->
+    transcript.get(\player).react((player) ->
       return unless player?
 
       # now watch idx, but also update on epoch-change:
       was-active = {}
       active-ids = {}
       last-idx = -1
-      from(transcript.watch(\target_idx)).and(player.watch(\timestamp.epoch)).all.plain().react(([ idx, epoch ]) ->
+      Varying.all([ transcript.get(\target_idx), player.get(\timestamp.epoch) ]).react((idx, epoch) ->
         return unless idx? and epoch?
         return if idx is last-idx
 
@@ -130,7 +128,7 @@ class TranscriptView extends DomView
           delete was-active[wa-idx]
 
         # now add lines that should be active. go until we have four inactive in a row.
-        lines = transcript.get(\lines).list
+        lines = transcript.get_(\lines).list
         misses = 0
         while misses < 4 and idx < lines.length
           line = lines[idx]

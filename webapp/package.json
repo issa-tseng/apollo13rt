@@ -1,11 +1,12 @@
 {
   "name": "apollo13-realtime",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "jquery": "~3.1",
-    "janus": "issa-tseng/janus#40f46705221025428e48bf5ebbda2b01c0491e82",
-    "janus-stdlib": "issa-tseng/janus-stdlib#c14bdabd46df3c13c409d9a3e33aa50257d7b761",
+    "jquery": "~3.4",
+    "janus": "~0.5",
+    "janus-inspect": "~0.5",
+    "janus-stdlib": "~0.5",
     "marked": "~0.3",
     "clipboard-copy": "~1"
   },

@@ -2,7 +2,7 @@ $ = require(\jquery)
 
 { Varying } = require(\janus)
 stdlib = require(\janus-stdlib)
-{ from-event-now } = stdlib.util.varying
+{ from-event, sticky } = stdlib.varying
 { min, max, floor, abs } = Math
 
 
@@ -39,7 +39,7 @@ module.exports = util =
 
   size-of: (selector) ->
     dom = $(selector)
-    from-event-now($(window), \resize, -> { width: dom.width(), height: dom.height() })
+    from-event($(window), \resize, -> { width: dom.width(), height: dom.height() })
 
   click-touch: (dom, f) ->
     dom.on('click touchstart', (event) ->
@@ -83,12 +83,12 @@ module.exports = util =
     targets.on(\mouseenter, -> is-hovered.set(true))
     targets.on(\mouseleave, -> is-hovered.set(false))
     initiator.on(\mousedown, -> is-hovered.set(false))
-    stdlib.util.varying.sticky( true: 100 )(is-hovered).reactLater((hovered) ->
+    sticky( true: 100 )(is-hovered).react(false, (hovered) ->
       return if hovered
       kill()
       this.stop()
     )
-    $('body').one(\touchend, -> kill())
+    $('body').one(\touchend, kill)
 
   load-assets: (assets, done) ->
     done() if !assets? or assets.length is 0

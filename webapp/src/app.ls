@@ -1,14 +1,16 @@
 
 # basic requires.
 $ = window.jQuery = window.$ = require(\jquery)
-{ Varying, List } = require(\janus)
-{ Library, App } = require(\janus).application
+{ Varying, List, Library, App } = require(\janus)
 stdlib = require(\janus-stdlib)
 { Splash, Global, Glossary, Lookup, Player, Timer, Chapter, Transcript, ExhibitArea, Topic, Exhibit } = require('./model')
-{ from-event } = require(\janus-stdlib).util.varying
+{ from-event } = require(\janus-stdlib).varying
 
 { defer, hms-to-epoch, hash-to-hms, epoch-to-hms, attach-floating-box, load-assets, is-blank } = require('./util')
 { max, abs } = Math
+
+# debugging.
+window.tap = (x) -> console.log(x); x
 
 # determine application mode.
 kiosk-mode = window.location.search is '?kiosk'
@@ -20,17 +22,17 @@ $window = $(window)
 
 # basic app setup.
 views = new Library()
-stdlib.view.registerWith(views)
+stdlib.view($).registerWith(views)
 require('./view/splash').registerWith(views)
 require('./view/player').registerWith(views)
 require('./view/transcript').registerWith(views)
 require('./view/glossary').registerWith(views)
 require('./view/exhibit').registerWith(views)
 require('./view/exhibit/package').registerWith(views)
-stores = new Library()
-require('./model').registerWith(stores)
+resolvers = new Library()
+require('./model').registerWith(resolvers)
 global = new Global( own_href: window.location.href, mode: { kiosk: kiosk-mode, exhibit: exhibit-mode } )
-app = new App({ views, stores, global })
+app = new App({ views, resolvers, global })
 
 # render splash screen.
 $ ->
@@ -38,7 +40,7 @@ $ ->
     $('body').removeClass(\init)
     $('html').addClass(\chromeless).toggleClass(\kiosk-mode, kiosk-mode).toggleClass(\exhibit-mode, exhibit-mode)
   else
-    splash-view = app.vendView(Splash.initialize())
+    splash-view = app.view(Splash.initialize())
     $('#splash').append(splash-view.artifact())
     splash-view.wireEvents()
 
@@ -110,11 +112,11 @@ unless kiosk-mode is true
 
 # create and append views.
 unless exhibit-mode is true
-  player-view = app.vendView(player)
+  player-view = app.view(player)
   $('#player').append(player-view.artifact())
 
 unless kiosk-mode is true
-  exhibit-area-view = app.vendView(exhibit-area)
+  exhibit-area-view = app.view(exhibit-area)
   $('#exhibits').append(exhibit-area-view.artifact())
 
 # wire all events after rendering is done so relayout does not occur.
@@ -164,12 +166,12 @@ $document.on(\mouseenter, '[title]', ->
 )
 
 # automatically define if a term is hovered.
-glossary = player?.get(\glossary)
+glossary = player?.get_(\glossary)
 pop-glossary = (initiator) ->
-  term = glossary.get("lookup.#{initiator.attr(\data-term)}")
+  term = glossary.get_("lookup.#{initiator.attr(\data-term)}")
   throw new Error("didn't find an expected term!") unless term?
 
-  term-view = app.vendView(term)
+  term-view = app.view(term)
   attach-floating-box(initiator, term-view)
   term-view.wireEvents()
 
@@ -198,13 +200,13 @@ handle-timecode-hash = (hash) ->
   { hh, mm, ss } = hms
   epoch = hms-to-epoch(hh, mm, ss)
 
-  if (player.get(\timestamp.epoch) - epoch |> abs) > 90
+  if (player.get_(\timestamp.epoch) - epoch |> abs) > 90
     # only bookmark for somewhat significant leaps.
     player.bookmark()
 
   player.epoch(epoch)
-  player.get(\loops.flight).set(\auto_scroll, true)
-  player.get(\loops.air_ground).set(\auto_scroll, true)
+  player.get_(\loops.flight).set(\auto_scroll, true)
+  player.get_(\loops.air_ground).set(\auto_scroll, true)
 
 # handle hash changes.
 $window.on(\hashchange, (event) ->
@@ -221,7 +223,7 @@ handle-exhibit-hash = (hash, event) ->
   target-hash = hash?.slice(1)
   return if is-blank(target-hash)
 
-  for exhibit in exhibit-area.get(\all_topics).list when exhibit.get(\lookup) is target-hash
+  for exhibit in exhibit-area.get_(\all_topics).list when exhibit.get_(\lookup) is target-hash
     $('#splash .splash').data(\view)?.subject.destroy()
     global.set(\exhibit, exhibit)
     event?.preventDefault()
@@ -243,17 +245,17 @@ $document.on(\click, 'a:not(".passthrough")', (event) ->
 # update social media links.
 fb-link = $('#share-fb')
 twitter-link = $('#share-twitter')
-global.watch(\own_href).react((href) ->
+global.get(\own_href).react((href) ->
   encoded = encodeURIComponent(href)
   fb-link.attr(\href, "https://www.facebook.com/sharer/sharer.php?u=#encoded")
   twitter-link.attr(\href, "https://twitter.com/home?status=Hear%20Apollo%2013%20happen%20in%20real%20time%3A%20#encoded")
 )
 
 # dumbest visual detail i've ever cared about:
-is-scrolled = from-event($(document), \scroll, (.target.scrollingElement.scrollTop > 30))
-global.watch(\exhibit)
+is-scrolled = from-event($(document), \scroll, false, (.target.scrollingElement.scrollTop > 30))
+global.get(\exhibit)
   .flatMap((exhibit) -> if exhibit? then is-scrolled else false)
-  .reactLater(-> $('html').toggleClass(\dark-canvas, it))
+  .react(false, -> $('html').toggleClass(\dark-canvas, it))
 
 # navigate to hash and start playing automatically if we are in kiosk mode:
 if kiosk-mode is true
