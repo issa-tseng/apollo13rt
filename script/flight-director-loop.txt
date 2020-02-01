@@ -119,7 +119,7 @@ Okay. Verify that they re- - you're showing that disabled, yes?
 Yes.
 
 [55 50 24 - 55 50 27] FLIGHT
-CAPCOM, restore CM C-4 thruster; disabled.
+CAPCOM, we're still seeing C-4 thruster disabled.
 
 [55 50 33] EECOM
 FLIGHT, EECOM.
@@ -128,14 +128,14 @@ FLIGHT, EECOM.
 Go EECOM.
 
 [55 50 34 - 55 50 36] EECOM
-You've got 40 amp-hours back in battery B now.
+We've got 40 amp-hours back in battery B now.
 
 [55 50 37] FLIGHT
 Okay.
 
-[55 50 42] EECOM
+[55 50 42] GNC
 You got it, FLIGHT.
-> Possibly in response to seeing BAT B charge disabled.
+> Possibly in response to seeing C-4 thruster reenabled.
 
 [55 50 43] FLIGHT
 Okay.
@@ -156,7 +156,7 @@ Negative. The LM heater current indicates that the LM was properly closed out. T
 Okay. So you're happy that you don't need them to verify that - what was it, activation 2-3, those pages we were on?
 
 [55 51 21 - 55 51 23] TELMU
-That's right. That was TLC 2, and we're happy.
+That's right. It was TLC 2, and we're happy.
 
 [55 51 24] FLIGHT
 Okay.
@@ -205,7 +205,7 @@ Go, GUIDANCE.
 We finally got a ∆H update. Do you want to just read it up to the crew or uplink it?
 
 [55 54 08 - 55 54 13] FLIGHT
-Let's see, now. Can we collapse deadbands and do all that good stuff if we uplink here?
+Uh, let's see, now. Can we collapse deadbands and do all that good stuff if we uplink here?
 
 [55 54 18 - 55 54 22] GUIDO
 Uh. Yeah. That - why don't we just read it up to them?
@@ -217,7 +217,7 @@ If they enter it through the DSKY are they gonna do it?
 Standby 1.
 
 [55 54 30 - 55 54 34] FLIGHT
-Now, we haven't stabled out at that attitude yet, so I don't think we're gonna have any problems.
+Now, we haven't stabled out on that attitude yet, so I don't think we're gonna have any problems.
 
 [55 54 34 - 55 54 36] GNC
 FLIGHT, I don't think there's any problem, they haven't opened up deadbands yet.
@@ -272,9 +272,16 @@ Go, GUIDANCE.
 
 [55 55 27 - 55 55 29] GUIDO
 We've had a hardware restart. I don't know what it was.
+> Hardware restarts occur as a result of an unexpected event in the system. This is the first indication on the ground that a problem has occurred in the Apollo spacecraft.
 
-[55 55 29 - 55 55 35] FLIGHT
-Okay. GNC, you want to look at it? See if you see any problems?
+[55 55 29 - 55 55 33] FLIGHT
+Okay. GNC, you want to look at it?
+
+[55 55 33] GNC
+Roger, flight.
+
+[55 55 34 - 55 55 35] FLIGHT
+See if you see any problems?
 
 [55 55 37 - 55 55 39] FLIGHT
 Roger. We're copying it, CAPCOM. We see a hardware restart.
@@ -291,7 +298,11 @@ I believe the crew reported it.
 [55 55 50 - 55 55 51] CAPCOM
 We've got a MAIN B UNDERVOLT.
 
-[55 55 51 - 55 55 54] EECOM
+[55 55 51] FLIGHT
+Oh, MAIN B.
+> FLIGHT corrects himself as he previously thought he heard "AC BUS UNDERVOLT".
+
+[55 55 52 - 55 55 54] EECOM
 Okay, FLIGHT, we've got some instrumentation funnies, let me add them up.
 > Having missed the pre-explosion pressure spike on tank 2, all EECOM has to work with now is a Christmas tree of bad data readout. So many numbers were off whack all of a sudden that EECOM assumes it has to be instrumentation. Lengthy discussion ensues on the EECOM loop.
 > Poor Sy had a "two-handed deathgrip" on his console by now.
@@ -331,7 +342,7 @@ Let's see if we can correlate those times. Get the time when you went WIDE BEAM,
 Okay.
 
 [55 57 02 - 55 57 03] CAPCOM
-Do we have the floodlights off right now?
+Do we have the floodlights off in there now?
 
 [55 57 04] TELMU
 That's affirmative, FLIGHT.
@@ -343,16 +354,16 @@ Yeah, we can determine that from the LM current.
 Roger, we copy that also.
 
 [55 58 13 -] FLIGHT
-EECOM, you see any AC problems? Looks like -
+EECOM, you were seeing any AC problems? Looks like -
 
 [55 58 15] EECOM
 FLIGHT, EECOM.
 
 [- 55 58 17] FLIGHT
-- we have a lot of instrumentation problems here. Go ahead.
+- you may have a lot of instrumentation problems here. Go ahead.
 
 [55 58 18 - 55 58 22] EECOM
-That's affirm. {He's flipping the fuel cells around, FLIGHT.}
+That's affirm. {He's flipping our fuel cells around, FLIGHT.}
 1> This ended up being a problem for the flight controllers. The astronauts were doing their own problem solving and configuration changes, so every time the controllers on the ground had a recommendation for them something would get changed and they'd have to start over.
 
 [55 58 23 - 55 58 26] FLIGHT
@@ -377,7 +388,7 @@ He's got fuel cells 1 and 3 are offline. We've got MAIN A volts, we have no MAIN
 Okay.
 
 [55 59 03 -] EECOM
-We just gotta -
+Let's just try that -
 
 [ - ] FLIGHT
 FUEL CELL 1 -
@@ -448,10 +459,10 @@ Right.
 CAPCOM, do you want to verify the Quad Delta HELIUM VALVE is open, please.
 
 [56 00 16 - 56 00 18] FLIGHT
-Are there other problems in the RCS, Buck?
+Any other problems in the RCS, Buck?
 
 [56 00 20 - 56 00 24] CAPCOM
-Okay, is that all we've come up with for them; have we got any other recommendations?
+Okay, is that all we can come up with for them; have we got any other recommendations?
 > CAPCOM is anxious.
 
 [56 00 25 - 56 00 31] FLIGHT
@@ -461,10 +472,10 @@ Yeah, we wanted to get FUEL CELL 1 configured to MAIN A, FUEL CELL 3 to MAIN B. 
 Let's attempt that, FLIGHT.
 
 [56 00 37 - 56 00 42] FLIGHT
-INCO, this seems to be an AC type problem, it may be tied into that high-gain thing you got.
+INCO, this seems to be AC type problems, and may be tied into that high-gain thing you got.
 
 [56 00 45 - 56 00 49] INCO
-We went to WIDE BEAM with - FLIGHT - at 55:55:04, best we can tell.
+We went to WIDE BEAM with - FLIGHT - at 55:55:04, the best we can tell.
 
 [56 00 49] FLIGHT
 Okay.
@@ -480,7 +491,8 @@ Is there any kind of leads we can give them? Are we looking at instrumentation o
 > The lack of answer here is telling. At some point here, steely-eyed missile man and NASA legend EECOM John Aaron had gotten called at home. He asked for some numbers to be read out, and while bolting out the door warned them that whatever it was, it _wasn't_ instrumentation.
 
 [56 01 34] EECOM
-FLIGHT, EECOM.
+Roger. FLIGHT, EECOM.
+> EECOM is in constant communication with his backroom engineers - George Bliss and Dick Brown - throughout the initial stages of his problem, rapidly swapping back and forth between the EECOM loop and the FLIGHT loop as they try to come up with diagnoses and solutions.
 
 [56 01 35] FLIGHT
 Go, EECOM.
@@ -659,7 +671,7 @@ FLIGHT, GUIDANCE.
 Go, GUIDANCE.
 
 [56 05 35 - 56 05 45] GUIDO
-When his hardware restart he was doing a clearly fine maneuver, and that should have killed it, but we're still moving. We ought to stop it.
+When his hardware restart he was doing a predefined maneuver, and that should have killed it, but we're still moving. We ought to stop it.
 
 [56 05 45] FLIGHT
 Are we using RCS now, Buck?
@@ -690,7 +702,7 @@ That's affirmative, we're going to have to switch some thrusters to MAIN A to ho
 Okay. How much RCS are we using?
 
 [56 06 22 - 56 06 25] GNC
-Oh, we've used - our guess 25 pounds.
+Oh, we've used - I would guess 25 pounds.
 
 [56 06 27 - 56 06 31] FLIGHT
 Okay. Give me minimum fuel usage configuration that'll keep me attitude.
@@ -712,6 +724,9 @@ Roger. Let's solve one problem at a time. Come back to me later on on it.
 
 [56 07 05] CAPCOM
 We confirming those numbers?
+
+[56 07 11] EECOM
+That's -
 
 [56 07 20 - 56 07 21] FLIGHT
 Buck, I need that RCS stuff as soon as you can get it.
