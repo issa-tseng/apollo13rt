@@ -671,7 +671,7 @@ FLIGHT, GUIDANCE.
 Go, GUIDANCE.
 
 [56 05 35 - 56 05 45] GUIDO
-When his hardware restart he was doing a predefined maneuver, and that should have killed it, but we're still moving. We ought to stop it.
+When his hardware restart he was doing a crew-defined maneuver, and that should have killed it, but we're still moving. We ought to stop it.
 
 [56 05 45] FLIGHT
 Are we using RCS now, Buck?
@@ -929,12 +929,12 @@ Could we go to a coarse align on the platform here, so we don't have to use any 
 Roger. I was going to recommend a P52 in a little bit anyway -
 
 [56 13 05 - 56 13 09] FLIGHT
-Well, it's going to take a while before we get to the point we're even thinking about a P52.
+Well, it's going to take a while before we get to the point we're even thinking of a P52.
 
 [56 13 09] GUIDO
 Yeah.
 
-[56 13 12 - 56 13 14] FLIGHT
+[56 13 12 - 56 13 14] FLIGHTh
 Yeah, it'll coarse align itself there, won't it?
 
 [56 13 18 -] GUIDO
@@ -1089,13 +1089,13 @@ Pardon?
 Well, do you expect that we're going to be in a thermal problem for the next many hours? EECOM?
 
 [56 17 44 - 56 17 46] EECOM
-Well, don't know where to say the sun is right now, FLIGHT.
+Well, I don't know where to say the sun is right now, FLIGHT.
 
 [56 17 47 - 56 17 49] GNC
-Well, it's pretty close to quad A right now. Are we -
+Well, it's pretty close to quad A right now.
 
 [56 17 51] EECOM
-By 90 degrees?
+Are we -- by 90 degrees?
 
 [56 17 54 - 56 17 56] GNC
 I don't know exactly where. It's between A and B, mostly on A.
@@ -1111,7 +1111,7 @@ GNC, from FLIGHT.
 GNC.
 
 [56 18 42 - 56 18 53] FLIGHT
-Buck, I'd prefer not making any unnecessary maneuvers now, or try to use any of the equipment's on board the spacecraft, such things as CMC, that type of stuff until we nail down what our problem is.
+Buck, I'd prefer not to make any unnecessary maneuvers now, or try to use any of the equipments on board the spacecraft, such things as CMC, that type of stuff until we nail down what our problem is.
 
 [56 18 55 - 56 18 59] GNC
 Well, that's why I was recommending PTC because we don't need any of that stuff then; {heaters} or anything else.
@@ -1121,13 +1121,13 @@ Well, that's why I was recommending PTC because we don't need any of that stuff 
 Yeah, but you gotta get the CMC on, and keep it online. And you need a rather precise period of time for redamping there.
 
 [56 19 10 - 56 19 14] GNC
-In the order of about 20 minutes to damp out and spin up and then we don't need any of that.
+In the order of about 20 minutes to damp out and then spin up and then we can do without any of that.
 
 [56 19 18 - 56 19 20] GNC
 If we get a good spinup going then we're stable -
 
 [56 19 19 - 56 19 34] FLIGHT
-Okay, that might be a good idea. That would buy us some time from a standpoint of reviewing the data. And it would get us back into the - as close to the normal flight plan as we could. How far are we out of attitude right now?
+Okay, that might be a good idea. That would buy us some more time from a standpoint of reviewing the data. And it would get us back into the - as close to the normal flight plan as we could. How far are we out of attitude right now?
 
 [56 19 38 - 56 19 43] GNC
 He's a fair ways out right now, FLIGHT. He'd do another VERB 49 and fly back and then stabilize there.
@@ -1180,7 +1180,7 @@ FLIGHT, INCO.
 Go ahead.
 
 [56 22 31 - 56 22 33] INCO
-I'd like to firmly secure the high-gain before he starts getting into PTC.
+I'd like for him to secure the high-gain before he starts into PTC.
 
 [56 22 54] GNC
 That's affirmative, FLIGHT.
@@ -1208,10 +1208,10 @@ I've got a little correction. Let's put INVERTER 1 on both AC buses, please.
 > Earlier he asks for INVERTER 3. Only 1 and 3 could pull power off of MAIN A, and MAIN B is dead.
 
 [56 23 21] FLIGHT
-INVERTER 1 on both AC.
+INVERTER 1 on both AC. Why?
 
 [56 23 22 - 56 23 42] EECOM
-That's affirm, so I can get some AC BUS power back so I can have some insight into my AC BUS 2 telemetry, especially my cryos, maybe - the venting may be coming from that. And also, I think that the FUEL CELL 2 pumps are on AC 2, and {this will take care of it} without switching the pumps yet.
+That's affirm, so I can get some AC BUS power back so I can have some insight into my AC BUS 2 telemetry, especially in my cryos, maybe - the venting may be coming from that. And also, I think that the FUEL CELL 2 pumps are on AC 2, and {this will take care of it} without switching the pumps yet.
 1> Presumably, he needed the pumps back on.
 
 [56 23 44 - 56 23 46] FLIGHT
@@ -1221,7 +1221,7 @@ Say that again. You think your fuel cell pumps -
 Yeah. FUEL CELL 2 pumps I think are on AC 2.
 
 [56 23 50 - 56 24 02] FLIGHT
-Okay, but according to the checklist, he should have powered - he should have turned those off, right? Now, he said he was down through BMAG number 2 is in WARM UP, so he's already gone through the fuel cell pump stuff.
+Okay, but according to the checklist, he should have powered - he should have turned those off, right? Now, he said he was down to BMAG number 2 is in WARM UP, so he's already gone through the fuel cell pump stuff.
 
 [56 24 01 - 56 24 02] EECOM
 Okay. Good enough.
@@ -1345,7 +1345,7 @@ Okay, I want another machine up in the RTCC and I want a bunch of guys capable o
 Roger that.
 
 [56 26 26 - 56 26 31] CAPCOM
-FLIGHT, did you hear them say he's getting some rates? We want to know if he's firing any thrusters?
+FLIGHT, did you hear him say he's getting some rates? We want to know if he's firing any thrusters?
 
 [56 26 32 - 56 26 34] FLIGHT
 Roger. GNC, watch those thrusters, will you?
@@ -1414,6 +1414,7 @@ It tells me that - well, just give me about 2 more minutes, FLIGHT.
 
 [56 28 04 - 56 28 05] FLIGHT
 Okay. Take your time.
+> FLIGHT, throughout the unfolding of this disaster, has become less brusque and impatient, and indeed more "gentle" with the flight controllers as they try to work out the complex problems - though as he notes later, there's not much they can do until they can get a hold of the delogs to determine what caused the catastrophe, save to prevent the mission from failing further.
 
 [56 28 48 - 56 28 49] FLIGHT
 Roger. Concur, CAPCOM.
@@ -1890,6 +1891,9 @@ The pressure in O₂ TANK 1 is all the way down to {297}, we'd better think abou
 {The heaters aren't working, now let's start thinking circuit breakers.} You got any circuit breakers you want to check, there?
 1> In other words, FLIGHT is wondering if the heater circuit breaker popped, so despite flipping the switch on, the heaters weren't actually running.
 
+[56 43 23 - 25] EECOM (off loop)
+Yeah, we've checked it.
+
 [56 43 27] EECOM
 We saw the current, FLIGHT.
 > EECOM doesn't think the circuit breaker theory is likely, since he saw the load on MAIN A increase by the expected amount for a heater to be running.
@@ -2116,6 +2120,7 @@ Why don't you show me where you think that problem is?
 
 [56 53 29] EECOM
 Okay. Clint's coming up.
+> This is, of course, Clint Burton, the EECOM on Glynn Lunney's team who takes over for Sy. Most of the black team controllers arrived early to get ready for their shift and to assist the white team controllers as much as they could.
 
 [56 55 16] EECOM
 FLIGHT, EECOM.
@@ -2438,10 +2443,10 @@ The crew reported he got barber pole whenever he threw the reactant switch, so t
 Okay, now the next question is: are you willing to do that on FUEL CELL number 1?
 
 [57 07 42 - 57 07 46] EECOM
-That's the question we're pondering, FLIGHT. We've got to come up with an answer on that one.
+That's the question we're pondering, FLIGHT. We've got to come up with an answer on that one. Soon.
 
 [57 07 47 - 57 07 49] FLIGHT
-Soon. FUEL CELL 2 is working okay.
+FUEL CELL 2 is working okay.
 
 [57 07 49] EECOM
 That's affirmative.
@@ -2500,6 +2505,7 @@ CAPCOM. Did you copy all those -
 
 [57 09 03 - 57 09 05] FLIGHT
 I didn't copy them all, Jack. GNC, did you copy them all?
+> Glynn seems to chuckle slightly at this. At this point, the MOCR is now a madhouse of activity, with several people clustered around FLIGHT's console, making it difficult for him to hear much of anything.
 
 [57 09 06 - 57 09 07] GNC
 That's affirmative, FLIGHT.
@@ -2955,7 +2961,7 @@ FLIGHT, EECOM.
 Go.
 
 [57 20 18] EECOM
-Let's charge BATTERY A.
+I'd like to charge BATTERY A.
 
 [57 20 19 - 57 20 25] FLIGHT
 Yeah, I was wondering about that. Do you - let me get the HIGH GAIN POWER off first, okay? Clint?
@@ -3798,9 +3804,11 @@ Go ahead.
 
 [57 41 09 - 57 41 13] EECOM
 Okay, we need to open up the surge tank. The manifold pressure is dropping.
+> If true, the level of breathable oxygen inside the spacecraft is falling, which would represent a severe life support emergency. The surge tank, which was strictly only meant to be used for re-entry and was isolated as such, now is needed to prevent this. Glynn would later describe this moment as "a punch in the stomach".
 
 [57 41 16 - 57 41 22] FLIGHT
 Uh - okay. Wouldn't you rather power that from the LM - pump that up from the LM?
+> Glynn would clearly rather use the LM's ECS systems rather than tap into the surge tank.
 
 [57 41 22 - 57 41 26] EECOM
 Well, we - - we've got to get into the LM first, FLIGHT.
@@ -3871,6 +3879,7 @@ Okay, how about ECS? Come on, I need some oxygen.
 
 [57 42 16 - 57 42 17] EECOM
 Disregard the surge tank request.
+> Thankfully, the drop in manifold pressure turns out to no longer be a concern, but FLIGHT's immediate concern is still to activate life support in the LM.
 
 [57 42 17] FLIGHT
 Alright.
