@@ -2,7 +2,7 @@ $ = require(\jquery)
 marked = require(\marked)
 
 { DomView, template, find, from } = require(\janus)
-{ Term, Glossary } = require('../model')
+{ Player, Term, Glossary } = require('../model')
 
 
 base-term-edit-url = "https://github.com/issa-tseng/apollo13rt/edit/master/script/glossary.txt"
@@ -33,9 +33,8 @@ class TermView extends DomView.build($('
 
     find('.term-name .name').text(from(\term))
     find('.term-name .synonyms').render(
-      from(\synonyms).and.app(\global).get(\player).all.map((synonyms, player) ->
-        synonyms.filter((term) -> player.get(\nearby_terms).map((nearby) -> term in nearby))
-      )
+      from(\synonyms).and.self().map((.closest_(Player))).flatMap((?.subject.get(\nearby_terms)))
+        .all.map((synonyms, terms) -> synonyms.filter((term) -> terms.map((nearby) -> term in nearby)))
     )
 
     find('.term-edit').attr(\href, from(\line).map(-> "#base-term-edit-url\#L#it"))

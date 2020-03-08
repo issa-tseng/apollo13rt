@@ -53,9 +53,7 @@ class Line extends Model.build(
 )
 
   @deserialize = (data) ->
-    data.start = { epoch: data.start }
-    data.end = { epoch: data.end }
-    super(data)
+    super(Object.assign({}, data, { start: { epoch: data.start }, end: { epoch: data.end } }))
 
   _initialize: ->
     # massage the description for annotations.
