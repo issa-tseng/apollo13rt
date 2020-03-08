@@ -19,9 +19,8 @@ class ExhibitAreaView extends DomView.build($('
     find('.exhibit-wrapper').render(from.app(\global).get(\exhibit))
 
     # need this to suppress spurious transitions.
-    find('.exhibit-area').classed(\has-exhibit-delayed, from.app(\global).flatMap((global) ->
-      sticky( false: 900 )(global.get(\exhibit).map((?)))
-    ))
+    find('.exhibit-area').classed(\has-exhibit-delayed,
+      from.app(\global).get(\exhibit).map((?)).pipe(sticky( false: 900 )))
 ))
   _wireEvents: ->
     dom = this.artifact()

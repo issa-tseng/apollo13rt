@@ -85,10 +85,9 @@ class PlayerView extends DomView.build($('
     find('.player-timestamp-event .hh').text(from(\event_timer.parts.hh).map(pad))
     find('.player-timestamp-event .mm').text(from(\event_timer.parts.mm).map(pad))
     find('.player-timestamp-event .ss').text(from(\event_timer.parts.ss).map(pad))
-    find('.player-timestamp-event').classed(\hot, from.self().and(\event_timer.model).get(\hot).all.flatMap((view, hot) ->
-      epoch = view.subject.get(\timestamp.epoch)
-      hot?.filter((.contains(epoch))).length.map (> 0)
-    ))
+    find('.player-timestamp-event').classed(\hot, from(\timestamp.epoch).asVarying()
+      .and(\event_timer.model).get(\hot)
+      .all.flatMap((epoch, hot) -> hot?.filter((.contains(epoch))).length.map (> 0)))
 
     find('.player-playhead').css(\right, from(\timestamp.timecode).and(\audio.length).all.map ((/) >> (-> 1 - it) >> pct))
 
