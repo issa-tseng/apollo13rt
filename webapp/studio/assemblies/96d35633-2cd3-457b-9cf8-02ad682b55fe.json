@@ -1,0 +1,25 @@
+{
+  "statements": [
+    {
+      "id": "3970a84d-5694-45d2-a489-38d09d2d72da",
+      "code": "app.view(player(), { context: 'small' })",
+      "name": "sp"
+    },
+    {
+      "id": "0f6a9bfb-502f-4176-bf53-bd6cbf3c175d"
+    }
+  ],
+  "stacks": [
+    {
+      "blocks": [
+        {
+          "to": "3970a84d-5694-45d2-a489-38d09d2d72da",
+          "panel": true
+        }
+      ]
+    }
+  ],
+  "base": "093ffb17-dd5e-400c-89b3-4629f3a6d0c7",
+  "name": "speakerid dev",
+  "id": "96d35633-2cd3-457b-9cf8-02ad682b55fe"
+}

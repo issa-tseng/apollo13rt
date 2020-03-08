@@ -1,0 +1,13 @@
+{
+  "name": "apollo 13 real-time",
+  "context": {
+    "init": "const { readFileSync } = require('fs');\nconst base = '/Users/cxlt/code/apollo13rt';\nconst data = [ 'flight-director-loop', 'flight-director-loop.lookup', 'air-ground-loop', 'air-ground-loop.lookup', 'glossary', 'glossary.lookup' ];\nconst assets = {};\nfor (const asset of data) assets[asset] = JSON.parse(readFileSync(`${base}/script/${asset}.json`));\nreturn { base, assets };",
+    "env": "const appBase = `${base}/webapp/lib`;\nconst { apper, playerer } = require(appBase + '/package');\nconst app = apper('/', false, false);\nconst player = _ => playerer(assets);\n\nconst models = require(appBase + '/model');\nreturn Object.assign({ app, player, playerer }, models);",
+    "reset": [ "/Users/cxlt/code/apollo13rt/webapp/lib" ],
+    "watch": {
+      "root": "/Users/cxlt/code/apollo13rt/webapp/lib",
+      "pattern": "**/*.js"
+    }
+  },
+  "stylesheet": "/Users/cxlt/code/apollo13rt/webapp/lib/styles.css"
+}

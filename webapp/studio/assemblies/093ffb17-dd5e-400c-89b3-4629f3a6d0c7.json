@@ -1,0 +1,33 @@
+{
+  "statements": [
+    {
+      "code": "str => {\n  const parse = (x => parseInt(x, 10));\n  const [ hh, mm, ss ] = str.split(':').map(parse);\n  return (60 * 60 * hh) + (60 * mm) + ss;\n}",
+      "name": "fromEpoch",
+      "id": "3a24c0a4-5ef0-443b-a528-147fa364604d"
+    },
+    {
+      "code": "x => (x < 10) ? `0${x}` : x",
+      "name": "pad",
+      "id": "d2760a13-d3eb-4bed-95a5-b5b5c94afdbd"
+    },
+    {
+      "code": "class SmallPlayer extends DomView.build(class extends Model.build(\n  attribute('jumps', attribute.List.withInitial())\n) {\n  _initialize() {\n    const jumps = this.get_('jumps');\n    const saved = localStorage.getItem('jumps');\n    if (saved) jumps.add(JSON.parse(saved));\n\n    this.reactTo(jumps.length, l => {\n      if (l > 8) jumps.removeAt(0);\n      localStorage.setItem('jumps', JSON.stringify(jumps.serialize()));\n    })\n  }\n}, $(`\n  <div class=\"smallplayer\">\n    <div class=\"timecode\">\n      <span class=\"hh\"/><span class=\"mm\"/><span class=\"ss\"/>\n    </div>\n    <div class=\"nav\">\n      <button class=\"navigate\">-15</button>\n      <button class=\"navigate\">-6</button>\n      <button class=\"navigate\">-3</button>\n      <button class=\"play\">play/pause</button>\n      <button class=\"navigate\">+3</button>\n      <button class=\"navigate\">+6</button>\n      <button class=\"navigate\">+15</button>\n    </div>\n    <div class=\"jumps\"/>\n    <input type=\"text\" class=\"jump\"/><button class=\"go\">go</button>\n    <audio src=\"assets/mixdown.aac\"/>\n    <style>\n      .timecode { font-size: 2em; }\n      .nav { margin: 1em 0; }\n      .jumps span { display: block; font-size: 1.2em; padding-bottom: 0.3em; }\n      .play { box-shadow: 0 0 0 3px #bbb; margin: 0 1em; }\n    </style>\n  </div>\n`), template(\n  find('.hh').text(from('timestamp.hh').map(pad)),\n  find('.mm').text(from('timestamp.mm').map(pad)),\n  find('.ss').text(from('timestamp.ss').map(pad)),\n  find('.play').on('click', (_, __, { audio_ }) => {\n    if (audio_.paused) audio_.play();\n    else audio_.pause();\n  }),\n  find('.jumps')\n    .render(from.vm('jumps'))\n    .on('click', 'span', (event, player) => {\n      player.epoch(fromEpoch($(event.target).text()));\n    }),\n  find('.navigate').on('click', (event, _, { audio_ }) => {\n    const button = $(event.currentTarget);\n    audio_.currentTime += parseInt(button.text());\n  }),\n  find('.go').on('click', (event, player, { vm }, dom) => {\n    const input = dom.find('.jump').val();\n    vm.get_('jumps').add(input);\n    player.epoch(fromEpoch(input));\n  })\n)) {\n  _wireEvents() {\n    const player = this.subject;\n    const dom = this.artifact();\n    this.audio = dom.find('audio')\n    this.audio_ = this.audio[0];\n    player.set('audio.player', this.audio);\n  }\n}",
+      "id": "d1e24074-fcfc-4072-9b4c-42d28e280647",
+      "name": "SmallPlayer"
+    },
+    {
+      "id": "dd66dac2-17e0-40b3-9101-20c582d9ab29",
+      "code": "app.views.register(Player, SmallPlayer, { context: 'small' })"
+    },
+    {
+      "id": "edc2de26-5714-4229-90f6-927f22a27772"
+    }
+  ],
+  "stacks": [],
+  "name": "smallplayer",
+  "id": "093ffb17-dd5e-400c-89b3-4629f3a6d0c7",
+  "pin": {
+    "to": "8a8c87fa-1838-4b03-a564-e5b636d10e62",
+    "panel": true
+  }
+}

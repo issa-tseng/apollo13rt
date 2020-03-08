@@ -1,0 +1,31 @@
+{
+  "statements": [
+    {
+      "code": "Object.assign({}, assets, {\n  'flight-director-loop': assets['flight-director-loop'].slice(0, 100),\n  'air-ground-loop': assets['air-ground-loop'].slice(0, 100)\n})",
+      "name": "miniassets",
+      "id": "560399ff-927a-4e6b-8c40-f88f7b035447"
+    },
+    {
+      "code": "_ => playerer(miniassets)",
+      "name": "miniplayer",
+      "id": "ef8c4d0b-7c5d-4330-be10-5cb2848d6fb0"
+    },
+    {
+      "code": "class MockTranscript extends Model {\n  _initialize() { this.set('nearby_terms', []); }\n  bindToPlayer() {}\n}",
+      "name": "MockTranscript",
+      "id": "57ddd334-94b1-41eb-9115-21154e2d75dc"
+    },
+    {
+      "id": "07bc2d4b-dfe2-45e3-b472-f037802f2223",
+      "code": "player => player.with({ loops: { flight: new MockTranscript(), air_ground: new MockTranscript() } })",
+      "name": "scriptless"
+    },
+    {
+      "id": "af4c3f67-9b27-401d-a9ff-9fec1b52b45b",
+      "code": ""
+    }
+  ],
+  "stacks": [],
+  "name": "base",
+  "id": "794db9d7-5d3b-4c7d-9598-a49d5ea71900"
+}

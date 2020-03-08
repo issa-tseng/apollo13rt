@@ -1,0 +1,37 @@
+{
+  "base": "794db9d7-5d3b-4c7d-9598-a49d5ea71900",
+  "statements": [
+    {
+      "code": "(_ => {\n  if ($('#font').length) return 'already injected';\n  const font = $('<style id=\"font\"/>').text('@font-face{font-family:webplayer;src:url(\"assets/webplayer.ttf?y7bu7b\") format(\"truetype\"),url(\"assets/webplayer.woff?y7bu7b\") format(\"woff\"),url(\"assets/webplayer.svg?y7bu7b#icomoon\") format(\"svg\");font-weight:normal;font-style:normal}');\n  $('body').append(font);\n  return 'icons';\n})()",
+      "id": "939a97ec-edec-43ed-9306-eb98d3778005"
+    },
+    {
+      "code": "(_ => {\n  if ($('#markup').length) return 'already injected';\n  const { readFileSync } = require('fs');\n  const index = readFileSync('/Users/cxlt/code/apollo13rt/webapp/lib/index.html');\n  const markup = $(index.toString('utf8')).filter('#markup').css('display', 'none');\n  $('body').append(markup);\n  return 'haha we hackin up our own shit already :/';\n})()",
+      "id": "1fd2623e-d152-43e0-a897-a850b6a1f13a"
+    },
+    {
+      "id": "9ffe77c5-a278-4d82-8d4e-1a71777506fb",
+      "code": "player()",
+      "name": "player"
+    },
+    {
+      "id": "df222d30-a6d1-4d71-b0f5-f9ab843bace4",
+      "code": "app.view(player)",
+      "name": "view"
+    },
+    {
+      "id": "2db1c275-6e1e-40da-8f4a-15be66aaab08",
+      "code": "view.wireEvents()"
+    },
+    {
+      "id": "14d19f77-382a-4e34-b295-8c607f87f36b"
+    }
+  ],
+  "stacks": [],
+  "name": "all-up",
+  "id": "2d70cd93-6cc3-4ec2-8561-1a0ef7778f59",
+  "pin": {
+    "to": "df222d30-a6d1-4d71-b0f5-f9ab843bace4",
+    "panel": true
+  }
+}
