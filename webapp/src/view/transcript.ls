@@ -2,7 +2,7 @@ $ = require(\jquery)
 copy = require(\clipboard-copy)
 
 { DomView, template, find, from, Varying } = require(\janus)
-{ debounce, sticky } = require(\janus-stdlib).varying
+{ debounce, sticky, zip-sequential } = require(\janus-stdlib).varying
 
 { Line, Transcript } = require('../model')
 { pct, pad, get-time, max-int, bump, click-touch } = require('../util')
@@ -103,46 +103,12 @@ class TranscriptView extends DomView.build($('
       dom.find(".line-#gap-id").addClass(\post-gap) if gap-id?
     )
 
-    # when our target_idx changes, push active state down into lines.
-    # but we can't do that until we have a player:
-    transcript.get(\player).react((player) ->
-      return unless player?
-
-      # now watch idx, but also update on epoch-change:
-      was-active = {}
-      active-ids = {}
-      last-idx = -1
-      Varying.all([ transcript.get(\target_idx), player.get(\timestamp.epoch) ]).react((idx, epoch) ->
-        return unless idx? and epoch?
-        return if idx is last-idx
-
-        # first clear out active primary lines that are no longer.
-        for wa-idx, line of was-active when line._start? and not line.contains_(epoch)
-          dom.find(".line-#{line._id}").removeClass(\active)
-          delete was-active[wa-idx]
-          delete active-ids[line._id]
-
-        # now clear out active secondary lines that are no longer.
-        for wa-idx, line of was-active when not active-ids[line._id]
-          dom.find(".line-#{line._id}").removeClass(\active)
-          delete was-active[wa-idx]
-
-        # now add lines that should be active. go until we have four inactive in a row.
-        lines = transcript.get_(\lines).list
-        misses = 0
-        while misses < 4 and idx < lines.length
-          line = lines[idx]
-          if line.contains_(epoch) or active-ids[line._id] is true
-            unless was-active[idx]?
-              dom.find(".line-#{line._id}").addClass(\active)
-              was-active[idx] = line
-              active-ids[line._id] = true
-          else
-            misses += 1
-          idx += 1
-
-        last-idx := idx
-      )
+    transcript.get(\active-ids).pipe(zip-sequential(false)).react(([ last-ids = [], ids ]) ->
+      for id of last-ids when !ids[id]?
+        dom.find(".line-#id").removeClass(\active)
+      for id of ids when !last-ids[id]?
+        dom.find(".line-#id").addClass(\active)
+      return
     )
 
 

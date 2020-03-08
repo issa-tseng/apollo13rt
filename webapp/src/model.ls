@@ -1,7 +1,7 @@
 $ = require(\jquery)
 { floor, abs, max, min } = Math
 
-{ Model, attribute, initial, bind, from, List, Set, Varying, types, Request } = require(\janus)
+{ Map, Model, attribute, initial, bind, from, List, Set, Varying, types, Request } = require(\janus)
 { throttle } = require(\janus-stdlib).varying
 
 { defer, clamp, pad, get-time, epoch-to-hms, hash-to-hms, hms-to-epoch, epoch-to-hms } = require('./util')
@@ -69,6 +69,9 @@ class Line extends Model.build(
   startHms_: -> "#{this.get_(\start.hh)}:#{this.get_(\start.mm) |> pad}:#{this.get_(\start.ss) |> pad}"
 
 class Lines extends List.of(Line)
+
+class Data
+  (data) -> Object.assign(this, data)
 
 class Transcript extends Model.build(
   attribute(\lines, class extends attribute.List.of(Lines).withInitial())
@@ -176,8 +179,49 @@ class Transcript extends Model.build(
   ))
 )
 
-  bindToPlayer: (player) -> this.set(\player, player)
+  bindToPlayer: (player) ->
+    this.set(\player, player)
 
+    # when our target_idx changes, push active state down into lines.
+    # but we can't do that until we have a player, so it's here.
+    # now watch idx, but also update on epoch-change:
+    transcript = this
+    was-active = {}
+    active-ids = {}
+    last-idx = -1
+    Varying.all([ transcript.get(\target_idx), player.get(\timestamp.epoch) ]).react((idx, epoch) ->
+      return unless idx? and epoch?
+      return if idx is last-idx
+
+      # first clear out active primary lines that are no longer.
+      for wa-idx, line of was-active when line._start? and not line.contains_(epoch)
+        #dom.find(".line-#{line._id}").removeClass(\active)
+        delete was-active[wa-idx]
+        delete active-ids[line._id]
+
+      # now clear out active secondary lines that are no longer.
+      for wa-idx, line of was-active when not active-ids[line._id]
+        #dom.find(".line-#{line._id}").removeClass(\active)
+        delete was-active[wa-idx]
+
+      # now add lines that should be active. go until we have four inactive in a row.
+      lines = transcript.get_(\lines).list
+      misses = 0
+      while misses < 4 and idx < lines.length
+        line = lines[idx]
+        if line.contains_(epoch) or active-ids[line._id] is true
+          unless was-active[idx]?
+            #dom.find(".line-#{line._id}").addClass(\active)
+            was-active[idx] = line
+            active-ids[line._id] = true
+        else
+          misses += 1
+        idx += 1
+
+      last-idx := idx
+
+      transcript.set(\active-ids, new Data(active-ids))
+    )
 
 
 ########################################
