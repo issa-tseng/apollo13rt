@@ -14,6 +14,7 @@ apper = (href, kiosk, exhibit) ->
   require('./view/player').registerWith(views)
   require('./view/transcript').registerWith(views)
   require('./view/glossary').registerWith(views)
+  require('./guide/comms').registerWith(views)
   require('./view/exhibit').registerWith(views)
   require('./view/exhibit/package').registerWith(views)
   resolvers = new Library()

@@ -1,12 +1,30 @@
 {
   "statements": [
     {
+      "code": "player()",
+      "name": "p",
+      "id": "580f1451-b003-4eb9-91dd-fb710046cd7a"
+    },
+    {
       "id": "3970a84d-5694-45d2-a489-38d09d2d72da",
-      "code": "app.view(player(), { context: 'small' })",
+      "code": "app.view(p, { context: 'small' })",
       "name": "sp"
     },
     {
-      "id": "0f6a9bfb-502f-4176-bf53-bd6cbf3c175d"
+      "code": "sp.wireEvents()",
+      "id": "fb8ed4c0-8e50-43d2-85e3-fa00cad1d51c"
+    },
+    {
+      "id": "1507a5fe-24c0-4ad6-ada6-84e0fc91d1c1",
+      "code": "new CommsDisplay({ groups: CommsDisplay.FlightDirectorLoop, transcript: p.get_('loops.flight') })",
+      "name": "comms"
+    },
+    {
+      "id": "aa543f78-d5be-4aa8-aa56-53c4d83fe8c9",
+      "code": "app.view(comms)"
+    },
+    {
+      "id": "75f94902-2a08-4bdf-acc1-4e18afc5ec70"
     }
   ],
   "stacks": [
@@ -16,7 +34,17 @@
           "to": "3970a84d-5694-45d2-a489-38d09d2d72da",
           "panel": true
         }
-      ]
+      ],
+      "name": "player"
+    },
+    {
+      "blocks": [
+        {
+          "to": "aa543f78-d5be-4aa8-aa56-53c4d83fe8c9",
+          "panel": true
+        }
+      ],
+      "name": "speaker id"
     }
   ],
   "base": "093ffb17-dd5e-400c-89b3-4629f3a6d0c7",
