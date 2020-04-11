@@ -339,7 +339,7 @@ class Player extends Model.build(
       dom-raw = dom.get(0)
       dom.on(\playing, -> player.set(\audio.playing, true))
       dom.on(\pause, -> player.set(\audio.playing, false))
-      dom.on(\durationchange, -> player.set(\audio.length, dom-raw.duration))
+      dom.on(\durationchange, -> player.set(\audio.length, floor(dom-raw.duration)))
 
       last-timecode = 0
       dom.on(\timeupdate, ->
