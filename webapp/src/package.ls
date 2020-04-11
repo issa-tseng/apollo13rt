@@ -30,7 +30,7 @@ playerer = (data) ->
       air_ground: Transcript.deserialize( lines: data['air-ground-loop'], markup: \#script-air-ground-loop, name: 'Air-Ground Loop', edit_url: 'https://github.com/issa-tseng/apollo13rt/edit/master/script/air-ground-loop.txt', lookup: Lookup.deserialize(data['air-ground-loop.lookup']) )
     glossary: Glossary.deserialize(data.glossary, data['glossary.lookup'])
     #audio: { src: 'assets/full.m4a' }
-    audio: { src: 'assets/mixdown.aac' }
+    audio: { src: 'assets/mixdown.m4a' }
     timestamp: { offset: 200_771 }
     accident: { epoch: 201_293 }
     timers: new List([
