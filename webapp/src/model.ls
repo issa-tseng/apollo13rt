@@ -192,17 +192,20 @@ class Transcript extends Model.build(
     Varying.all([ transcript.get(\target_idx), player.get(\timestamp.epoch) ]).react((idx, epoch) ->
       return unless idx? and epoch?
       return if idx is last-idx
+      changed = false
 
       # first clear out active primary lines that are no longer.
       for wa-idx, line of was-active when line._start? and not line.contains_(epoch)
         #dom.find(".line-#{line._id}").removeClass(\active)
         delete was-active[wa-idx]
         delete active-ids[line._id]
+        changed = true
 
       # now clear out active secondary lines that are no longer.
       for wa-idx, line of was-active when not active-ids[line._id]
         #dom.find(".line-#{line._id}").removeClass(\active)
         delete was-active[wa-idx]
+        changed = true
 
       # now add lines that should be active. go until we have four inactive in a row.
       lines = transcript.get_(\lines).list
@@ -214,13 +217,14 @@ class Transcript extends Model.build(
             #dom.find(".line-#{line._id}").addClass(\active)
             was-active[idx] = line
             active-ids[line._id] = true
+            changed = true
         else
           misses += 1
         idx += 1
 
       last-idx := idx
 
-      transcript.set(\active-ids, new Data(active-ids))
+      transcript.set(\active-ids, new Data(active-ids)) if changed
     )
 
 
