@@ -8,19 +8,22 @@ $ = require(\jquery)
 { get-exhibit-model } = require('./exhibit/package')
 
 
-class ExhibitAreaView extends DomView.build($('
+class ExhibitAreaView extends DomView.build(Model.build(
+  bind(\has-exhibit, from.app(\global).get(\guide)
+    .and.app(\global).get(\exhibit).map((guide, exhibit) -> (guide is true) or exhibit?))
+), $('
     <div class="exhibit-area">
       <div class="exhibit-toc"/>
       <div class="exhibit-wrapper"/>
     </div>
   '), template(
-    find('.exhibit-area').classed(\has-exhibit, from.app(\global).get(\exhibit).map (?))
+    find('.exhibit-area').classed(\has-exhibit, from.vm(\has-exhibit))
     find('.exhibit-toc').render(from(\topics))
     find('.exhibit-wrapper').render(from.app(\global).get(\exhibit))
 
     # need this to suppress spurious transitions.
     find('.exhibit-area').classed(\has-exhibit-delayed,
-      from.app(\global).get(\exhibit).map((?)).pipe(sticky( false: 900 )))
+      from.vm(\has-exhibit).pipe(sticky( false: 900 )))
 ))
   _wireEvents: ->
     dom = this.artifact()

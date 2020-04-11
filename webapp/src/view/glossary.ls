@@ -33,7 +33,7 @@ class TermView extends DomView.build($('
 
     find('.term-name .name').text(from(\term))
     find('.term-name .synonyms').render(
-      from(\synonyms).and.self().map((.closest_(Player))).flatMap((?.subject.get(\nearby_terms)))
+      from(\synonyms).and.app(\global).get(\player).get(\nearby_terms)
         .all.map((synonyms, terms) -> synonyms.filter((term) -> terms.map((nearby) -> term in nearby)))
     )
 
