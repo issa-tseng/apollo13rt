@@ -10,7 +10,8 @@ $ = require(\jquery)
 
 class ExhibitAreaView extends DomView.build(Model.build(
   bind(\has-exhibit, from.app(\global).get(\guide)
-    .and.app(\global).get(\exhibit).map((guide, exhibit) -> (guide is true) or exhibit?))
+    .and.app(\global).get(\exhibit)
+    .all.map((guide, exhibit) -> (guide is true) or exhibit?))
 ), $('
     <div class="exhibit-area">
       <div class="exhibit-toc"/>
