@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "livescript": "~1.5",
-    "node-sass": "~3",
+    "node-sass": "~4",
     "domino": "~2",
     "browserify": "~14",
     "uglify-js": "~3"
