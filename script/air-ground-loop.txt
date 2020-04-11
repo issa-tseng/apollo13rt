@@ -220,7 +220,7 @@ Okay, she's off the line.
 [56 12 48 - 56 13 02] CAPCOM
 13, Houston. We see you getting close to gimbal lock there. We'd like you to bring up all quad Cs on MAIN A, quad C-l, C-2, C-3, C-4 on MAIN A, and also bring B-3 and B-4 up on MAIN A.
 
-[56 13 15 - 56 13 16] CAPCOM
+[56 13 15] CAPCOM
 13, Houston. Do you read?
 
 [56 13 20] LMP
@@ -259,7 +259,7 @@ Okay, 13, this is Houston. We'd like you to go to your GNC checklist, the pink p
 [56 16 21 - 56 16 23] LMP
 Alright. Roger.
 
-[56 17 02 - 56 17 08] CDR
+[56 17 03 - 56 17 08] CDR
 Okay, Jack. Say again that - - for the power down - on the pink pages, the 1-5.
 
 [56 17 11 - 56 17 17] CAPCOM
@@ -278,7 +278,7 @@ Roger, Jack. We're - we're doing it right now.
 Yeah where - where did you say that was located, Jack?
 
 [56 18 03 - 56 18 06] CAPCOM
-That's in your system checklist, page 1-5.
+That's in your systems checklist, page 1-5.
 
 [56 18 27 - 56 18 38] CAPCOM
 And 13, you might also check for those pages in your launch checklist. They're emergency pages - pink pages, 1-5. And we'd like you to power down until you get -
@@ -450,7 +450,7 @@ Let's read you the lights we got on now: CRYO PRESS, FUEL CELL 1, FUEL CELL 3, M
 Roger, we copy them. And we'd like to build up the pressure in O₂ TANK 1, so turn the heaters on manually. {We'll watch the pressure for you.}
 1> Overriding the automated circuit meant the heater wouldn't disengage automatically, which could lead to overheating and damage.
 
-[56 39 45 - 56 39 48] CMP
+[56 39 44 - 56 39 48] CMP
 Okay, do you want to see - we're going to get a MAIN BUS A UNDERVOLT, probably.
 
 [56 39 50 - 56 39 53] CAPCOM
@@ -675,7 +675,7 @@ That's affirm. I watched it and it went barber pole as I threw the switch.
 [57 06 00] CAPCOM
 Roger.
 
-[57 08 00 - 57 08 29] CMP
+[57 08 01 - 57 08 29] CMP
 Okay. Jack. Let me give you a thruster configuration right now. Able 1, Charlie 1, Able 2 are OFF. Charlie 2, MAIN A, all the thrusters that I call that are ON are on MAIN A. Baker 1 OFF. Dog 1 ON, Baker 2 OFF, Dog 2 ON. Able 3, Charlie 3, Able 4, Charlie 4 on. Baker 3 OFF, Dog 3 ON, Baker 4 OFF, Dog 4 ON.
 > The seemingly disjointed order of callouts here is actually the order the switches appeared on [panel 8](#ref-panel-cm-aux).
 
@@ -703,7 +703,7 @@ Okay Jack, 1-A is reading - lower scale. 0. 1-B is reading 3.45. Okay. You only 
 [57 11 10 - 57 11 11] CAPCOM
 Roger, is that 2 Bravo, Fred?
 
-[57 11 14 - 57 11 21] LMP
+[57 11 15 - 57 11 21] LMP
 That's 2 Bravo is reading - oh, about 0.25 to 0.3.
 
 [57 11 39 - 57 11 42] LMP
@@ -838,7 +838,7 @@ Standby.
 [57 22 05] CMP
 Coming down at you.
 
-[57 23 54 - 57 24 00] CMP
+[57 23 55 - 57 24 00] CMP
 Okay, Jack. It looks like O₂ tank 1 pressure is just a hair over 200.
 
 [57 24 02 - 57 24 04] CAPCOM
@@ -954,10 +954,10 @@ Okay. In the CSM, on panel 5, we want CB LM POWER 1 and 2, OPEN. Then the LM POW
 [57 38 59] CAPCOM
 That's a good readback, Fred.
 
-[57 39 15 - 57 39 20] CAPCOM
+[57 39 15 - 57 39 19] CAPCOM
 And 13, Houston. As a final effort here, we'd like you to turn on the fans in tank 2. Over.
 
-[57 39 23 - 57 39 26] CDR
+[57 39 23 - 57 39 25] CDR
 Roger, understand. Turn on the fans in tank 2.
 
 [57 39 35 - 57 39 36] CDR
@@ -1032,7 +1032,7 @@ Okay, Jack, pressure in tank 1 is approaching 100psi. What's going to be the sym
 [57 44 52 - 57 44 53] CAPCOM
 Standby, Jack, we'll get the word on that.
 
-[57 44 59] CMP
+[57 44 56] CMP
 Okay.
 
 [57 45 06 - 57 45 11] CAPCOM
@@ -1065,7 +1065,7 @@ Omit the VHF.
 [57 48 17 - 57 48 35] CAPCOM
 Jack, this is Houston. We want you to keep the IMU up and keep the lights on so you can see in there, and leave battery off - BATTERY A off. And at the appropriate time, we'll put it on MAIN A. And we're going to keep the IMU up so as we can get a coarse align in the LM.
 
-[57 48 38 - 57 48 45] CDR
+[57 48 38 - 57 48 45] CMP
 Alright. Real good. Right now, we're charging BATTERY A. Do you want to discontinue that?
 
 [57 48 46 - 57 48 48] CAPCOM
@@ -1178,7 +1178,7 @@ Okay. What next, James?
 [58 00 55] LMP
 Coarse align?
 
-[58 00 57 - 58 00 59] CDR
+[58 00 57 - 58 00 59] LMP
 Do it right. Take your time.
 
 [58 01 32 - 58 01 41] CAPCOM
@@ -1315,7 +1315,7 @@ That's just about 80 - in fact, 82 hours out of the two primary cartridges. That
 [58 14 41] CAPCOM
 Odyssey, Houston.
 
-[58 14 42] CMP
+[58 14 43] CMP
 They can turn it -
 
 [58 14 46] CMP
@@ -1660,28 +1660,28 @@ Check your antenna?
 Okay, Jack. Odyssey is ready to copy.
 
 [58 36 41 - 58 37 09] CAPCOM
-Okay, Jack. What we want you to do is close the reactants valve on fuel cell 2. Power down your inverters. Power down your battery relay bus. Battery ties off. And pull your entry circuit breakers - entry battery circuit breakers A, B, and C.
+Okay, Jack. What we want you to do is close the reactants valve on FUEL CELL 2. Power down your inverters. Power down your battery relay bus. Battery ties off. And pull your entry circuit breakers - entry battery circuit breakers A, B, and C.
 
 [58 37 16 - 58 37 18] CDR
 Check the control, and make sure we don't go to gimbal lock, Fred.
 
 [58 37 21 - 58 37 37] CMP
-Okay, Jack. Understand. Close REAC valve circuit breakers in fuel cell 2. Power down inverters. Power down BAT relay bus. BAT TIES OFF. Power entry and both running circuit breakers A, B, and C. All off.
+Okay, Jack. Understand. Close REAC valve circuit breakers in FUEL CELL 2. Power down inverters. Power down BAT relay bus. BAT TIES OFF. Power entry and both running circuit breakers A, B, and C. All off.
 
 [58 37 41 - 58 37 47] CAPCOM
-That's affirmative, Jack, and - close the reactant valve on fuel cell 2, there.
+That's affirmative, Jack, and - close the reactant valve on FUEL CELL 2, there.
 
 [58 37 51 - 58 37 53] CDR
 Okay. I can do that, and Jack will do the rest.
 
 [58 38 02 - 58 38 04] CAPCOM
-Okay, Jack. On fuel cell 2, open-circuit it.
+Okay, Jack. On FUEL CELL 2, open-circuit it.
 
 [58 38 18 - 58 38 25] CDR
-Okay, fuel cell 2 is open-circuited. Do you want me to go through the standard shutdown procedure for the REAC valves and -
+Okay, FUEL CELL 2 is open-circuited. Do you want me to go through the standard shutdown procedure for the REAC valves and -
 
 [58 38 37 - 58 38 42] CAPCOM
-Odyssey, Houston. All you have to do is close the REACs valve on fuel cell 2.
+Odyssey, Houston. All you have to do is close the REACs valve on FUEL CELL 2.
 
 [58 38 46 - 58 38 49] CMP
 Okay. CB REACs and vent REAC valves all closed.
@@ -1693,7 +1693,7 @@ Houston, Aquarius.
 Go ahead, Aquarius.
 
 [58 40 13 - 58 40 16] CDR
-Okay, Odyssey is completely powered down according to the procedure that you read to Jack.
+Okay, Odyssey is completely powered down now according to the procedure that you read to Jack.
 
 [58 40 22 - 58 40 24] CAPCOM
 Roger, we copy. That's where we want to be, Jim.
@@ -1785,7 +1785,7 @@ Wait 1.
 [58 48 36 - 58 48 46] LMP
 What have you got? How much you got left in battery A? Okay. I wish I knew what the hell they were thinking. Right now -
 
-[58 48 52 - 58 48 56] CDR
+[58 48 51 - 58 48 56] CDR
 They're talking about powering down and doing a P51 here?
 
 [58 48 57 - 58 49 00] LMP
@@ -1803,14 +1803,14 @@ Jim, what we want you to do is go with your current fine align and disregard the
 [58 50 03] CDR
 Okay, we'll check. Standby.
 
-[58 50 16 - 58 50 17] CDR
+[58 50 17] CDR
 Okay, watch the -
 
 [58 52 13 - 58 52 27] CAPCOM
 Aquarius, Houston. We notice that the O₂ pressure in ASCENT TANK O₂ is a little high, so we want to use some of it. So close DESCENT O₂ and open ASCENT O₂ TANK 2. Over.
 
 [58 52 46 - 58 52 53] LMP
-Okay, Jack. Switched now on ASCENT number 2 O₂ tank. DESCENT O₂ is closed.
+Okay, Jack. Switched, now I'm on ASCENT number 2 O₂ tank. DESCENT O₂ is closed.
 
 [58 52 54] CAPCOM
 Roger, Fred.
@@ -1837,7 +1837,7 @@ Okay, use your TTCAs to roll.
 And Aquarius, Houston, I've got some circuit breakers you can open to power down displays. In addition, I have a P30 maneuver PAD. Over.
 
 [58 55 20 - 58 55 23] CDR
-Roger. Standby, Houston. Get the CS - get the PAD book.
+Roger. Standby. Get the CS - get the PAD book.
 
 [58 55 28 - 58 55 31] LMP
 Get the LM data - get the LM - book.
@@ -1852,7 +1852,7 @@ Okay, I have some circuit breakers that you can open up in order to power down d
 Okay. Standby 1, Jack. I'm going to get my COMM carrier on.
 
 [58 55 51 - 58 55 59] CDR
-No, no, no, Get the - get the Command Module PAD book - hey, get all the LM stuff. Give me the LM stuff right now. Jack, give me the LM stuff.
+No, no, no, Get the - get the Command Module PAD book - alright, tell you what, get all the LM stuff. Give me the LM stuff right now. Jack, give me the LM stuff.
 
 [58 57 08] CDR
 Alright, Jack.
@@ -2016,7 +2016,7 @@ Well, we're ATT HOLD for one thing - I mean, we're at MIN IMPULSE.
 No, I mean why can't you null them out somewhere?
 
 [59 05 42 - 59 05 49] CDR
-Every time I try to - I can't take that doggone roll out. I got to wait until we get a little into the bellyband.
+Every time I try to - I can't take that doggone roll out. I got to wait until we get around to the bellyband.
 
 [59 05 50 - 59 06 04] LMP
 Wait a minute. Do you - you fight roll by using the TTCA left/right. That's what you need to play with.
@@ -2265,7 +2265,7 @@ Affirmative. That's the PAD we've given you, but we may change our minds later o
 [59 18 47] LMP
 Okay.
 
-[- 59 18 50] CAPCOM
+[- 59 18 49] CAPCOM
 - minimum time return.
 
 [59 20 09 - 59 20 17] CAPCOM
@@ -2701,7 +2701,7 @@ Okay. In the bottom row: EPS, we have the BAT FEED TIE both IN, and we have the 
 [60 36 39] CAPCOM
 Roger, we copy.
 
-[60 36 39 - 60 36 42] CDR
+[60 36 39 - 60 36 40] LMP
 That completes it for panel 11.
 
 [60 36 41] CAPCOM
@@ -2908,7 +2908,7 @@ It's OPEN.
 [60 51 27 - 60 51 30] CAPCOM
 Okay, Aquarius. We're GO on the circuit breaker configuration as you have it now.
 
-[60 51 38] LMP
+[60 51 36] LMP
 Roger.
 
 [60 52 04 - 60 52 11] CAPCOM
@@ -3011,7 +3011,7 @@ Okay, and I assume in amongst all those numbers you pumped up, we got a REFSMMAT
 That's affirmative. You've got that, so you can delete page 12.
 
 [61 00 51 - 61 00 56] LMP
-Hey, on 13, you've read us up the fine align angles and we've cranked those in.
+Okay, on 13, you've read us up the fine align angles and we've cranked those in.
 
 [61 01 01] CAPCOM
 Affirmative.
@@ -3107,7 +3107,7 @@ You're GO on the weights.
 [61 09 06 - 61 09 13] CAPCOM
 Aquarius, Houston. We'd like you to recycle on the DAP load and change your DAP to 32021. Over.
 
-[61 11 07 - 61 11 15] CAPCOM
+[61 11 06 - 61 11 15] CAPCOM
 Okay, Aquarius. We're looking at your gimbal and we notice that we've got a 4-jet ullage loaded in the DAP and we gave you 2 jets on the PAD. But let's go with what we've got loaded. It'll be a 4-jet ullage.
 
 [61 11 19] LMP
@@ -3274,7 +3274,7 @@ And Houston, it's doubtful right now whether we'll be able to see the stars in t
 [61 33 49 - 61 33 50] CAPCOM
 Roger, Jim. We'll get the word for you.
 
-[61 35 23 - 61 35 28] CDR
+[61 35 25 - 61 35 28] CDR
 And Houston, we're in an ATT HOLD mode. Can we turn off the thrusters?
 
 [61 35 41 - 61 35 42] CAPCOM
@@ -3292,7 +3292,7 @@ And Houston, while you're thinking, see if you can come up with a procedure of p
 [61 39 52] CAPCOM
 Roger.
 
-[61 41 23 - 61 41 39] CDR
+[61 41 24 - 61 41 39] CDR
 And Jack, Aquarius. While you're thinking - before we had our COMM problems, we were wanting to know what to - whether we should hook up the side hatch urine dump system. So we wouldn't freeze up the normal urine dump feed.
 
 [61 41 45 - 61 41 51] CAPCOM
@@ -3388,7 +3388,7 @@ Okay. The decision is to keep the platform, power down the computer, and we'll b
 [61 58 47] CAPCOM
 Roger.
 
-[61 59 34 - 61 59 38] CAPCOM
+[61 59 33 - 61 59 38] CAPCOM
 And Aquarius, for your information, we now have a 136 mile perigee.
 
 [61 59 42 - 61 59 43] CAPCOM

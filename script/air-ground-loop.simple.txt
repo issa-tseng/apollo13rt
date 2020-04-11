@@ -278,7 +278,7 @@ Okay, 13, this is Houston. We'd like you to go to your GNC checklist, the pink p
 LMP
 Alright. Roger.
 
-56:17:02
+56:17:03
 CDR
 Okay, Jack. Say again that - - for the power down - on the pink pages, the 1-5.
 
@@ -299,7 +299,7 @@ Yeah where - where did you say that was located, Jack?
 
 56:18:03
 CAPCOM
-That's in your system checklist, page 1-5.
+That's in your systems checklist, page 1-5.
 
 CAPCOM
 And 13, you might also check for those pages in your launch checklist. They're emergency pages - pink pages, 1-5. And we'd like you to power down until you get -
@@ -726,7 +726,7 @@ That's affirm. I watched it and it went barber pole as I threw the switch.
 CAPCOM
 Roger.
 
-57:08:00
+57:08:01
 CMP
 Okay. Jack. Let me give you a thruster configuration right now. Able 1, Charlie 1, Able 2 are OFF. Charlie 2, MAIN A, all the thrusters that I call that are ON are on MAIN A. Baker 1 OFF. Dog 1 ON, Baker 2 OFF, Dog 2 ON. Able 3, Charlie 3, Able 4, Charlie 4 on. Baker 3 OFF, Dog 3 ON, Baker 4 OFF, Dog 4 ON.
 
@@ -902,7 +902,7 @@ CAPCOM
 CMP
 Coming down at you.
 
-57:23:54
+57:23:55
 CMP
 Okay, Jack. It looks like O₂ tank 1 pressure is just a hair over 200.
 
@@ -1148,7 +1148,7 @@ Omit the VHF.
 CAPCOM
 Jack, this is Houston. We want you to keep the IMU up and keep the lights on so you can see in there, and leave battery off - BATTERY A off. And at the appropriate time, we'll put it on MAIN A. And we're going to keep the IMU up so as we can get a coarse align in the LM.
 
-CDR
+CMP
 Alright. Real good. Right now, we're charging BATTERY A. Do you want to discontinue that?
 
 CAPCOM
@@ -1269,7 +1269,7 @@ Okay. What next, James?
 LMP
 Coarse align?
 
-CDR
+LMP
 Do it right. Take your time.
 
 58:01:32
@@ -1779,30 +1779,30 @@ CMP
 Okay, Jack. Odyssey is ready to copy.
 
 CAPCOM
-Okay, Jack. What we want you to do is close the reactants valve on fuel cell 2. Power down your inverters. Power down your battery relay bus. Battery ties off. And pull your entry circuit breakers - entry battery circuit breakers A, B, and C.
+Okay, Jack. What we want you to do is close the reactants valve on FUEL CELL 2. Power down your inverters. Power down your battery relay bus. Battery ties off. And pull your entry circuit breakers - entry battery circuit breakers A, B, and C.
 
 58:37:16
 CDR
 Check the control, and make sure we don't go to gimbal lock, Fred.
 
 CMP
-Okay, Jack. Understand. Close REAC valve circuit breakers in fuel cell 2. Power down inverters. Power down BAT relay bus. BAT TIES OFF. Power entry and both running circuit breakers A, B, and C. All off.
+Okay, Jack. Understand. Close REAC valve circuit breakers in FUEL CELL 2. Power down inverters. Power down BAT relay bus. BAT TIES OFF. Power entry and both running circuit breakers A, B, and C. All off.
 
 CAPCOM
-That's affirmative, Jack, and - close the reactant valve on fuel cell 2, there.
+That's affirmative, Jack, and - close the reactant valve on FUEL CELL 2, there.
 
 CDR
 Okay. I can do that, and Jack will do the rest.
 
 58:38:02
 CAPCOM
-Okay, Jack. On fuel cell 2, open-circuit it.
+Okay, Jack. On FUEL CELL 2, open-circuit it.
 
 CDR
-Okay, fuel cell 2 is open-circuited. Do you want me to go through the standard shutdown procedure for the REAC valves and -
+Okay, FUEL CELL 2 is open-circuited. Do you want me to go through the standard shutdown procedure for the REAC valves and -
 
 CAPCOM
-Odyssey, Houston. All you have to do is close the REACs valve on fuel cell 2.
+Odyssey, Houston. All you have to do is close the REACs valve on FUEL CELL 2.
 
 CMP
 Okay. CB REACs and vent REAC valves all closed.
@@ -1815,7 +1815,7 @@ CAPCOM
 Go ahead, Aquarius.
 
 CDR
-Okay, Odyssey is completely powered down according to the procedure that you read to Jack.
+Okay, Odyssey is completely powered down now according to the procedure that you read to Jack.
 
 CAPCOM
 Roger, we copy. That's where we want to be, Jim.
@@ -1942,7 +1942,7 @@ CAPCOM
 Aquarius, Houston. We notice that the O₂ pressure in ASCENT TANK O₂ is a little high, so we want to use some of it. So close DESCENT O₂ and open ASCENT O₂ TANK 2. Over.
 
 LMP
-Okay, Jack. Switched now on ASCENT number 2 O₂ tank. DESCENT O₂ is closed.
+Okay, Jack. Switched, now I'm on ASCENT number 2 O₂ tank. DESCENT O₂ is closed.
 
 CAPCOM
 Roger, Fred.
@@ -1971,7 +1971,7 @@ CAPCOM
 And Aquarius, Houston, I've got some circuit breakers you can open to power down displays. In addition, I have a P30 maneuver PAD. Over.
 
 CDR
-Roger. Standby, Houston. Get the CS - get the PAD book.
+Roger. Standby. Get the CS - get the PAD book.
 
 LMP
 Get the LM data - get the LM - book.
@@ -1986,7 +1986,7 @@ LMP
 Okay. Standby 1, Jack. I'm going to get my COMM carrier on.
 
 CDR
-No, no, no, Get the - get the Command Module PAD book - hey, get all the LM stuff. Give me the LM stuff right now. Jack, give me the LM stuff.
+No, no, no, Get the - get the Command Module PAD book - alright, tell you what, get all the LM stuff. Give me the LM stuff right now. Jack, give me the LM stuff.
 
 58:57:08
 CDR
@@ -2150,7 +2150,7 @@ LMP
 No, I mean why can't you null them out somewhere?
 
 CDR
-Every time I try to - I can't take that doggone roll out. I got to wait until we get a little into the bellyband.
+Every time I try to - I can't take that doggone roll out. I got to wait until we get around to the bellyband.
 
 LMP
 Wait a minute. Do you - you fight roll by using the TTCA left/right. That's what you need to play with.
@@ -2877,7 +2877,7 @@ Okay. In the bottom row: EPS, we have the BAT FEED TIE both IN, and we have the 
 CAPCOM
 Roger, we copy.
 
-CDR
+LMP
 That completes it for panel 11.
 
 CAPCOM
@@ -3204,7 +3204,7 @@ CAPCOM
 That's affirmative. You've got that, so you can delete page 12.
 
 LMP
-Hey, on 13, you've read us up the fine align angles and we've cranked those in.
+Okay, on 13, you've read us up the fine align angles and we've cranked those in.
 
 61:01:01
 CAPCOM
@@ -3308,7 +3308,7 @@ You're GO on the weights.
 CAPCOM
 Aquarius, Houston. We'd like you to recycle on the DAP load and change your DAP to 32021. Over.
 
-61:11:07
+61:11:06
 CAPCOM
 Okay, Aquarius. We're looking at your gimbal and we notice that we've got a 4-jet ullage loaded in the DAP and we gave you 2 jets on the PAD. But let's go with what we've got loaded. It'll be a 4-jet ullage.
 
@@ -3489,7 +3489,7 @@ And Houston, it's doubtful right now whether we'll be able to see the stars in t
 CAPCOM
 Roger, Jim. We'll get the word for you.
 
-61:35:23
+61:35:25
 CDR
 And Houston, we're in an ATT HOLD mode. Can we turn off the thrusters?
 
@@ -3510,7 +3510,7 @@ And Houston, while you're thinking, see if you can come up with a procedure of p
 CAPCOM
 Roger.
 
-61:41:23
+61:41:24
 CDR
 And Jack, Aquarius. While you're thinking - before we had our COMM problems, we were wanting to know what to - whether we should hook up the side hatch urine dump system. So we wouldn't freeze up the normal urine dump feed.
 
@@ -3616,7 +3616,7 @@ Okay. The decision is to keep the platform, power down the computer, and we'll b
 CAPCOM
 Roger.
 
-61:59:34
+61:59:33
 CAPCOM
 And Aquarius, for your information, we now have a 136 mile perigee.
 

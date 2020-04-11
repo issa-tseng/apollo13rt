@@ -124,7 +124,7 @@ GNC
 Yes.
 
 FLIGHT
-CAPCOM, restore CM C-4 thruster; disabled.
+CAPCOM, we're still seeing CM C-4 thruster disabled.
 
 EECOM
 FLIGHT, EECOM.
@@ -138,7 +138,7 @@ You've got 40 amp-hours back in battery B now.
 FLIGHT
 Okay.
 
-EECOM
+CONTROL
 You got it, FLIGHT.
 
 FLIGHT
@@ -158,7 +158,7 @@ TELMU
 Negative. The LM heater current indicates that the LM was properly closed out. They apparently have not closed the LM hatch yet.
 
 FLIGHT
-Okay. So you're happy that you don't need them to verify that - what was it, activation 2-3, those pages we were on?
+Okay. So you're happy that you don't need them to verify that - what was it, Activation 2-3, those pages we were on?
 
 TELMU
 That's right. That was TLC 2, and we're happy.
@@ -470,7 +470,7 @@ FLIGHT
 INCO, this seems to be an AC type problem, it may be tied into that high-gain thing you got.
 
 INCO
-We went to WIDE BEAM with - FLIGHT - at 55:55:04, best we can tell.
+We went to WIDE BEAM WIDTH - FLIGHT - at 55:55:04, best we can tell.
 
 FLIGHT
 Okay.
@@ -831,7 +831,7 @@ EECOM
 FLIGHT, say again?
 
 FLIGHT
-Have you called in your backup EECOMS now? See if we can get some more brain power on this thing?
+Have you called in your backup EECOMs now? See if we can get some more brain power on this thing?
 
 EECOM
 We got one here.
@@ -1122,7 +1122,7 @@ FLIGHT
 Okay, that might be a good idea. That would buy us some time from a standpoint of reviewing the data. And it would get us back into the - as close to the normal flight plan as we could. How far are we out of attitude right now?
 
 GNC
-He's a fair ways out right now, FLIGHT. He'd do another VERB 49 and fly back and then stabilize there.
+He's a fair ways out right now, FLIGHT. He'd have to do another VERB 49 and fly back and then stabilize there.
 
 56:20:56
 EECOM
@@ -1671,7 +1671,7 @@ FLIGHT
 But that would seem to be the opposite, if you want to keep the fuel cell going.
 
 EECOM
-The fuel cells are fed off the tanks in the Service Module, FLIGHT. The surge tank is in the Command Module. We want to save the surge tank and use it for re-entry.
+The fuel cells are fed off the tanks in the Service Module, FLIGHT. The surge tank is in the Command Module. We want to save the surge tank which we need for re-entry.
 
 FLIGHT
 Okay, I'm with you. I'm with you.
@@ -2204,7 +2204,7 @@ FLIGHT
 Inline heaters OFF on FUEL CELL 1.
 
 EECOM
-Roger, it'll cut the current requirement down, anyway.
+Roger, it'll cut the current requirement down that way.
 
 CAPCOM
 Their COMM holding up? Sounds like he's going out.
@@ -2244,7 +2244,7 @@ EECOM
 Let's go down the list as much of that INCO stuff as we can get, FLIGHT. I think that's about the one biggie right there.
 
 INCO
-Is that the only thing we can give up? We turn the POWER AMPL OFF, we won't get HIGH BIT RATE.
+I think that's about the only thing we can give up. We turn the POWER AMPL OFF, we won't get HIGH BIT RATE.
 
 FLIGHT
 CAPCOM, from FLIGHT.
@@ -2414,7 +2414,7 @@ Roger. And OMNI Charlie.
 CAPCOM
 FLIGHT, he wants to bring on A-4, he hasn't got any way to stop the pitch rate in DIRECT or AUTO.
 
-CAPCOM
+FLIGHT
 Go.
 
 GNC
@@ -2436,7 +2436,7 @@ Okay. All flight controllers, I'm handing over to Glynn. I assume the majority o
 FLIGHT
 And the delog is in way now. Roger.
 
-57:07:13
+57:07:12
 FLIGHT
 Okay, EECOM. Tell me about the latch. Do you think you've got the reactants latched?
 
@@ -2988,7 +2988,7 @@ FLIGHT
 How much - how many amps will that give us, EECOM?
 
 EECOM
-About 1.3, 1.4 amps - - amp-hours per hour. The cost is about 4.5 amps.
+About 1.3, 1.4 amps - - amp-hours per hour. The cost is about 1.5 amps.
 
 FLIGHT
 So it's no big deal on the amps.
@@ -3107,7 +3107,7 @@ TELMU
 Go, FLIGHT.
 
 FLIGHT
-Is there anything simple that we can refer the crew to to get them thinking about using the LM here? Have you got anything - checklist, paperwork that'll describe to them what your intentions are?
+Is there anything simple that we can refer the crew to to get them thinking about using the LM here? Have you got anything in the checklist, paperwork that'll describe to them what your intentions are?
 
 57:23:11
 TELMU
@@ -3243,7 +3243,7 @@ FLIGHT
 CONTROL. Question is, do you want to do a quick P52 on the CSM so that we can do an align to the LM? I don't know if we want to keep that LM platform up all that time anyway.
 
 CONTROL
-That's too much power in my mind, FLIGHT, to keep that thing running for all that time.
+Negative, that's too much power in my mind, FLIGHT, to keep that thing running for all that time.
 
 FLIGHT
 Okay, therefore you don't -
@@ -3556,7 +3556,7 @@ FLIGHT
 Alright.
 
 EECOM
-- out input is, here, that we'll have to live out at the LM.
+- our input is, here, that we'll have to live out at the LM.
 
 FLIGHT
 I understand.
@@ -3738,7 +3738,7 @@ FLIGHT
 Okay.
 
 FLIGHT
-GUIDANCE, CONTROL, and TELMU. The point is, should we, quick - if you guys can't run out the power steady, run out - align the - your IMU to the CSM while we study the problem? See what we got in the way of power?
+GUIDANCE, CONTROL, and TELMU. The point is, should we, quick - if you guys can't run out the power study, run out - align the - your IMU to the CSM while we study the problem? See what we got in the way of power?
 
 57:40:12
 FLIGHT
@@ -4443,13 +4443,13 @@ FLIGHT
 FUEL CELL 2 shutdown; that closes the reactants?
 
 EECOM
-I'm - I'm sorry. Standby. Standby for word.
+I'm - I'm sorry. STANDBY. STANDBY's the word.
 
 FLIGHT
 Yeah. Okay.
 
 FLIGHT
-You want me to put fuel cell number 2 on standby when? After we put BATTERY A on?
+You want me to put fuel cell number 2 on STANDBY when? After we put BATTERY A on?
 
 EECOM
 That's affirmative.
@@ -4749,7 +4749,7 @@ FLIGHT
 INCO, is that the COMM activation in the LM?
 
 INCO
-Negative, FLIGHT, the COMM activation is the same as you've got over there, except we want to change to normal VOICE when he gets squared away. I gave him some steerable angles in case we want to activate it. So I have it - and that's the procedure.
+Negative, FLIGHT, the COMM activation is the same as you've got over there, except we want to change to NORMAL VOICE when he gets squared away. I gave him some steerable angles in case we want to activate it. So I have it - and that's the procedure.
 
 FLIGHT
 Can we go on the OMNI right now?
@@ -4821,8 +4821,8 @@ Forever?
 FLIGHT
 Can you hack that out of the entry batteries?
 
-GUIDO
-FLIGHT, GUIDANCE.
+TELMU
+FLIGHT, TELMU.
 
 EECOM
 We might hack it transferring power back from the LM to the CSM, but we can't hack it on the batteries.
@@ -5025,7 +5025,7 @@ Okay.
 
 58:03:23
 CAPCOM
-Are we still waiting for the mark on BAT A?
+Are we still a ways from the mark on BAT A?
 
 FLIGHT
 I don't know. EECOM, how far away from BAT A?
@@ -5224,7 +5224,7 @@ FLIGHT
 Okay.
 
 FLIGHT
-As soon as we've got the alignment and we're finished with it we're going CMC OFF, IMU OFF, we'll leave the heater circuit breakers on powered from - BATTERY A. Until you tell me whether we need to keep them up or not.
+As soon as we've got the alignment and we're finished with it we're going CMC OFF, IMU OFF, we'll leave the heater circuit breakers on and power them from - BATTERY A. Until you tell me whether we need to keep them up or not.
 
 CAPCOM
 How come we're getting so much noise on the COMM?
@@ -6374,7 +6374,7 @@ FDO
 Roger that. As far as we can tell we are, FLIGHT.
 
 FLIGHT
-And we need to - why can't we track this LM? Why is this LM interference - this IU interference -
+And we need to - why can't we track this LM? Because of this LM interference - this IU interference -
 
 INCO
 That's right, because we had to bias off the up frequency to change it down, making a bias in the data; that data's no good.
@@ -6421,7 +6421,7 @@ FLIGHT
 Go ahead.
 
 CAPCOM
-Okay, my gyro torquing angles still good?
+Okay, are my gyro torquing angles still good?
 
 FLIGHT
 GUIDANCE, are those gyro torques still good?
@@ -6433,7 +6433,7 @@ FLIGHT
 And the crew wants those?
 
 GUIDO
-Roger. We ought to go ahead and fine align the platform.
+Roger. We ought to go ahead and fine align that platform.
 
 FLIGHT
 There you go, CAPCOM.
@@ -6489,7 +6489,7 @@ FLIGHT
 Affirm.
 
 FLIGHT
-TELMU, FLIGHT. Did you up with those circuit breaker labels?
+TELMU, FLIGHT. Did you come up with those circuit breaker labels?
 
 TELMU
 FLIGHT, we're working on them right now.
@@ -6601,7 +6601,7 @@ FLIGHT
 Okay.
 
 GUIDO
-Yeah, we're ready for it at the site.
+And we're ready for it at the site.
 
 FLIGHT
 Okay. We'll let - give them a little while, here.
@@ -6619,7 +6619,7 @@ FLIGHT
 GUIDANCE, remind me of that in a little bit.
 
 GUIDO
-Okay
+Okay.
 
 FLIGHT
 ASCENT TANK 2, what is -
@@ -6632,7 +6632,7 @@ FLIGHT
 Before you go through the valves, what are you trying to accomplish?
 
 TELMU
-We're trying to use the ASCENT TANK 2 pressure instead of the descent tank.
+We're trying to use the ASCENT TANK 2 pressure instead of the DESCENT tank.
 
 FLIGHT
 Is it close to venting?
@@ -6644,10 +6644,13 @@ FLIGHT
 Is it close to venting?
 
 TELMU
-It can't vent. Unless it's broken.
+It can't vent -
 
 FLIGHT
 Yeah, okay.
+
+TELMU
+- unless it's broken.
 
 TELMU
 And it's not broken. Okay, what we're trying to do is relieve the pressure in that tank, so we want to close the DESCENT O₂ TANK VALVE and open ASCENT O₂ TANK 2.
@@ -6783,7 +6786,7 @@ FLIGHT
 CONTROL, did you have something for me?
 
 CONTROL
-Yes, sir. When we pressurized the RCS here, we noticed we got some - about 5 psi of change in the ASCENT OX and FUEL tank pressures - an increase, okay? We noticed that shortly thereafter. And what we'd like to do is to make sure they've got the ASCENT FEED VALVEs actually seated in the closed position. And when they get time, it'll - close two circuit breakers and cycle the switches for us to the closed position to make sure they are closed.
+Yes, sir. When we pressurized the RCS here, we noticed we got some - about a 5 psi or so change in the ASCENT OX and FUEL tank pressures - an increase, okay? We noticed that shortly thereafter. And what we'd like to do is to make sure they've got the ASCENT FEED VALVEs actually seated in the closed position. And when they get time, it'll - close two circuit breakers and cycle the switches for us to the closed position to make sure they are closed.
 
 FLIGHT
 Would you write down the procedure and -
@@ -6962,7 +6965,7 @@ FLIGHT
 Hope you've got somebody working on a PTC procedure.
 
 CONTROL
-Right. We've already got one worked out, but it's an AGS-type procedure, FLIGHT.
+Right. We have one already worked out, but it's an AGS-type procedure, FLIGHT.
 
 59:03:02
 FLIGHT
@@ -6984,7 +6987,7 @@ TELMU
 The CAPCOM read up the circuit breakers to open on panel 11; I don't believe he turned the page over. There's some on Panel 16 also.
 
 FLIGHT
-Just a minute, TELMU. RETRO and CONTROL, FLIGHT. The COAS angle you have N/A, are they not - are they not available?
+Just a minute, TELMU. RETRO and CONTROL, FLIGHT. The COAS angles you have N/A, are they not - are they not available?
 
 FLIGHT
 RETRO, FLIGHT.
@@ -7073,6 +7076,9 @@ FLIGHT
 CONTROL, FLIGHT. You copying that?
 
 CONTROL
+Go ahead -
+
+CONTROL
 Just caught the tail end of it.
 
 FLIGHT
@@ -7108,7 +7114,7 @@ INCO
 We can COMMAND if we go to LOW BIT RATE.
 
 FLIGHT
-Let's give them the numbers, then they'll punch in.
+Let's give them the numbers, then they'll punch in, Jack.
 
 INCO
 Sorry?
@@ -7364,7 +7370,7 @@ CONTROL
 Okay.
 
 FLIGHT
-I want to get the holes dug before we start doing more things.
+I want to get the holes dug before we start doing more things to this.
 
 CONTROL
 Roger.
@@ -7377,7 +7383,7 @@ CONTROL
 That's right, FLIGHT.
 
 FLIGHT
-Okay. Well, I'd like to get that whole complex of control modes and what we're going to do in currents sorted out before we start changing things.
+Okay. Well, I'd like to get that whole complex of control modes and what we're going to do in currents sorted out before we do start changing things.
 
 CONTROL
 Okay.
@@ -7442,10 +7448,13 @@ GUIDO
 We got a good E-MOD, FLIGHT.
 
 FLIGHT
-Okay, CAPCOM. We got a good E-MOD. Do they need to terminate anything, GUIDANCE, or does it terminate? Oh, it terminates. Okay.
+Okay, CAPCOM. We got a good E-MOD. Do they need to terminate anything, GUIDANCE, or does it terminate?
 
 GUIDO
-No, it's okay.
+No, it terminates.
+
+FLIGHT
+Okay.
 
 59:18:14
 FLIGHT
@@ -7531,7 +7540,7 @@ FLIGHT
 Yeah. We want him to have the one he's aligned to.
 
 GUIDO
-And we're also going to stick a TFN in, FLIGHT.
+And we're also going to stick a T-ephem in, FLIGHT.
 
 59:20:03
 CAPCOM
@@ -7809,7 +7818,7 @@ TELMU
 Standby - I would think about 15 amps or so.
 
 FLIGHT
-From the point of view of the water now we've got to get down there -
+From the point of view of the water then we've got to get down that low -
 
 TELMU
 Yeah. About 15, I think.
@@ -7943,7 +7952,7 @@ CAPCOM
 I'd like to have a little more information upon the crew's trajectory with relation to the Moon that we could pass up.
 
 FLIGHT
-Yes, and INCO is gonna - at the end of this go-around the room, we're going to ask the crew to standby for about 25 seconds of COMM loss while we do some reconfiguring in an attempt to get tracking on the LM. Okay? But we still think they're close - FDO, FLIGHT? What -
+Yes, and INCO is gonna - at the end of this go-around the room, we're going to ask the crew to standby for about 25 seconds of COMM loss while we do some reconfiguring in an attempt to get tracking on the LM. Okay? But we still think they're still close - FDO, FLIGHT? What -
 
 59:34:17
 FDO
@@ -7977,7 +7986,7 @@ FLIGHT
 You can go back green, then, if you will. Okay - SURGEON, you have anything?
 
 SURGEON
-Yeah, two things. We're figuring, looking at this CO₂ problem with you - at what point in time we'd arrive at various levels of CO₂ in the LM configuration. The other thing is, when we - at some point in time we'd like to get that BIOMED switch on in the LM - it's in the OFF position.
+Yeah, two things. We're figuring, looking at this CO₂ problem with you - at what point in time we'd arrive at various levels of CO₂ in the LM configuration. The other thing is, Glynn, we - at some point in time we'd like to get that BIOMED switch on in the LM - it's in the OFF position.
 
 59:35:00
 FLIGHT
@@ -8199,7 +8208,7 @@ FLIGHT
 He'd have to bring the ball up to fly it, I'd think.
 
 TELMU
-Well, my thought if we go there, FLIGHT, was if he goes to an ATTITUDE HOLD mode now, and out of this drifting flight mode, he'll hold the attitude he's in now.
+Well, my thought on that a while ago, FLIGHT, was if he goes to an ATTITUDE HOLD mode now, and out of this drifting flight mode, he'll hold the attitude he's in now.
 
 CONTROL
 Okay, then you don't have to worry about it.
@@ -8239,7 +8248,7 @@ FLIGHT
 Do we know whether or not the - results of this star business in the simulator worked?
 
 CONTROL
-That was a request I've got in to SPAN, FLIGHT, to measure drift rates on this particular platform to see what it would look like when we got out to 79.5 hours.
+That was a request I've got in to SPAN, to extrapolate the measured drift rates on this particular platform to see what it would look like when we got out to 79.5 hours.
 
 FLIGHT
 Okay. But if we can see stars, we can do a P52.
@@ -8415,7 +8424,7 @@ TELMU
 FLIGHT, TELMU.
 
 FLIGHT
-Sup - go ahead.
+Suit - go ahead.
 
 TELMU
 This ASCENT TANK 2 pressure has gone back down to a nominal value. We'd like to go back to the DESCENT O₂.
@@ -8704,7 +8713,7 @@ FLIGHT
 INCO, FLIGHT. Are we going to get COMM back? I'm going to knock off the tracking here in a minute. That 30 second -
 
 INCO
-That's - FLIGHT, we're -
+That's - FLIGHT, we're going -
 
 FLIGHT
 - test has run too long.
@@ -8836,7 +8845,7 @@ FLIGHT
 Is there much of a difference to you to operate on the AGS, with the PGNS down? Water-wise?
 
 CAPCOM
-Are they still on FORWARD OMNI?
+Still want FORWARD OMNI?
 
 TELMU
 Well, it's about - about 3 amps, but primarily the AGS does run a little cooler, and you'd be bringing up a new piece of gear. So, it'd be a different thermal load, there.
@@ -8852,7 +8861,7 @@ Has he said anything about the stars yet? Jack?
 
 60:08:00
 CAPCOM
-No, he hasn't. We can't even ask him a good question. Is he still on FORWARD OMNI?
+No, he hasn't. We can't even ask him a good question. You still want FORWARD OMNI?
 
 FLIGHT
 FORWARD OMNI, INCO?
@@ -9147,7 +9156,7 @@ TELMU
 Okay.
 
 ?? (off loop)
-Keep it up through the maneuver and then power it down -
+Get into free return and then power it down -
 
 FLIGHT
 Yup. Then power it down, let it drift, and we'll do what we want to tomorrow.
@@ -9358,7 +9367,7 @@ FLIGHT
 Okay. Are you seeing anything? He's using his translation controller for attitude control. With the stack. You understand?
 
 FDO
-Accurate.
+I'll check.
 
 FLIGHT
 And now are you seeing that in the trajectory? Have you got a good, solid trajectory?
@@ -9584,7 +9593,7 @@ CONTROL
 Okay. On row 1, we need -
 
 FLIGHT
-Circle it, and we'll get it at the end.
+Circle it, we'll get it at the end.
 
 60:36:41
 FLIGHT
@@ -10200,16 +10209,16 @@ ASCENT ECA breaker on panel 11, we want it OPEN or CLOSED?
 
 60:51:00
 TELMU
-Open.
+OPEN.
 
 FLIGHT
 TELMU?
 
 TELMU
-Open.
+OPEN.
 
 FLIGHT
-Open.
+OPEN.
 
 CAPCOM
 Okay. Are we happy with the circuit breaker configuration? Do we want them to press on?
@@ -10601,7 +10610,7 @@ CONTROL
 Affirmative, FLIGHT. He needs to trim the gimbal, not the throttle.
 
 CONTROL
-To trim the gimbal, FLIGHT, if you want to make it simple, just - you can do the DAP set, gimbal/throttle test steps 1, 2, and you've got it.
+To trim the gimbal, in fact if you want to make it simple, just - you can do the DAP set, gimbal/throttle test steps 1, 2, and you've got it.
 
 FLIGHT
 Okay. Do you want to do all of step 1 now, is that what you're saying?
@@ -10979,7 +10988,7 @@ FLIGHT
 How close were they?
 
 CONTROL
-We're within about 0.3. We're - from the -
+We're within about 0.3. We're - plenty close.
 
 CONTROL
 Roger. We're ready.
@@ -11600,8 +11609,11 @@ He needs to go ahead and hit ENTER on his program and proceed on the P40.
 FLIGHT
 Okay. He needs to do an ENTER and proceed on, CAPCOM.
 
+FLIGHT
+At this time, or - ?
+
 GUIDO
-There's still time yet, FLIGHT. Just a minute.
+Just an ENTER, FLIGHT. Just an ENTER.
 
 GUIDO
 Oh, he did it, FLIGHT. Standby.
@@ -11836,7 +11848,7 @@ CONTROL
 Rates look good.
 
 FLIGHT
-Rates are holding good, huh?.
+Rates are holding good, huh?
 
 61:30:01
 CONTROL
@@ -12729,7 +12741,7 @@ FLIGHT
 Can you do it on the high-gain, or - you can't switch OMNIs anyway.
 
 FLIGHT
-Well, we've got a guy awake.
+But we've got a guy awake.
 
 INCO
 He'll have to do it for us.
@@ -12802,7 +12814,7 @@ CONTROL
 FLIGHT, from CONTROL.
 
 FLIGHT
-Yeah.
+Go.
 
 CONTROL
 Did we just tell him to power the computer down?
@@ -12826,11 +12838,10 @@ TELMU and CONTROL, have you got there yet?
 TELMU
 Roger, FLIGHT.
 
-62:59:59
 CONTROL
 Roger, FLIGHT.
 
-63:00:00
+62:00:00
 FLIGHT
 You're GO to power the LGC down?
 
@@ -12906,7 +12917,7 @@ Okay, just in a 5 degree deadband ATTITUDE HOLD.
 FLIGHT
 Wait a minute. We don't want to be in ATTITUDE HOLD. We want to roll - oh, you want to let roll go?
 
-63:01:02
+62:01:02
 CONTROL
 You can't let roll go. It's going to be an ATT HOLD.
 
@@ -12926,7 +12937,7 @@ FLIGHT
 We have a guy sitting there watching it! We're going to keep a guy up!
 
 CONTROL
-Okay. And we're going to have to leave the inverters on also, then.
+Okay. And we'll have to leave the inverters on also, then.
 
 FLIGHT
 Yeah!
@@ -12949,7 +12960,10 @@ Okay. If he does it that way, he'll have to use hard-over command on the ACA to 
 CONTROL
 ATTITUDE DIRECT CONTROL breaker has to be in. Yes, use hard over on the ACA.
 
-63:02:31
+62:02:27
+CONTROL
+FLIGHT, CONTROL.
+
 CONTROL
 FLIGHT, CONTROL.
 
@@ -12971,12 +12985,12 @@ Yeah.
 CONTROL
 - okay? But he's gotta watch his roll.
 
-63:03:01
+62:03:01
 FLIGHT
 He's gotta watch the middle gimbal.
 
 CONTROL
-Roger. The middle gimbal
+Roger. The middle gimbal.
 
 FLIGHT
 Yeah. Okay. Now is that the conclusion and is that - presumably good on the power profile and I want to see that profile by the way, TELMU? You copying what we're doing?
@@ -13029,12 +13043,12 @@ You're right. What do I want to pull to power down the LGC?
 CONTROL
 Okay, you need PROGRAM 6, and then pull the PNGS LGC/DSKY breaker on panel 11.
 
-63:04:05
+62:04:05
 FLIGHT
 You mean put it in PROGRAM 6 -
 
 CONTROL
-Yeah
+Yeah.
 
 FLIGHT
 - and pull the LGC/DSKY -
@@ -13046,7 +13060,7 @@ FLIGHT
 Okay.
 
 CONTROL
-And then pull, on CB11, the PNGS: LGC/DKSY breaker.
+And then pull, on CB11, the PNGS: LGC/DSKY breaker.
 
 FLIGHT
 Okay.
@@ -13069,7 +13083,7 @@ Would you check with SPAN one more time and be sure they're satisfied with what 
 TELMU
 Roger.
 
-63:05:07
+62:05:07
 FLIGHT
 GUIDANCE and FAO, FLIGHT.
 
@@ -13100,7 +13114,7 @@ Go, FLIGHT.
 FLIGHT
 Does SPAN know what you're doing and agree?
 
-63:06:01
+62:06:01
 TELMU
 I can't get in touch with them right now.
 
