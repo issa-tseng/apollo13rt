@@ -133,7 +133,7 @@ FLIGHT
 Go EECOM.
 
 EECOM
-You've got 40 amp-hours back in battery B now.
+We've got 40 amp-hours back in battery B now.
 
 FLIGHT
 Okay.
@@ -161,7 +161,7 @@ FLIGHT
 Okay. So you're happy that you don't need them to verify that - what was it, Activation 2-3, those pages we were on?
 
 TELMU
-That's right. That was TLC 2, and we're happy.
+That's right. It was TLC 2, and we're happy.
 
 FLIGHT
 Okay.
@@ -224,7 +224,7 @@ GUIDO
 Standby 1.
 
 FLIGHT
-Now, we haven't stabled out at that attitude yet, so I don't think we're gonna have any problems.
+Now, we haven't stabled out in that attitude yet, so I don't think we're gonna have any problems.
 
 GNC
 FLIGHT, I don't think there's any problem, they haven't opened up deadbands yet.
@@ -299,6 +299,9 @@ I believe the crew reported it.
 CAPCOM
 We've got a MAIN B UNDERVOLT.
 
+FLIGHT
+Oh, MAIN B.
+
 EECOM
 Okay, FLIGHT, we've got some instrumentation funnies, let me add them up.
 
@@ -351,7 +354,7 @@ Roger, we copy that also.
 
 55:58:14
 FLIGHT
-EECOM, you see any AC problems? Looks like -
+EECOM, you were seeing any AC problems? Looks like -
 
 EECOM
 FLIGHT, EECOM.
@@ -360,7 +363,7 @@ FLIGHT
 - we have a lot of instrumentation problems here. Go ahead.
 
 EECOM
-That's affirm. He's flipping the fuel cells around, FLIGHT.
+That's affirm. He's flipping out fuel cells around, FLIGHT.
 
 FLIGHT
 Well, let's get some recommendation here, Sy, if you've got any better ideas.
@@ -385,7 +388,7 @@ FLIGHT
 Okay.
 
 EECOM
-We'll just try to -
+Let's just try that -
 
 FLIGHT
 FUEL CELL 1 -
@@ -455,7 +458,7 @@ FLIGHT
 CAPCOM, do you want to verify the Quad Delta HELIUM VALVE is open, please.
 
 FLIGHT
-Are there other problems in the RCS, Buck?
+Any other problems in the RCS, Buck?
 
 CAPCOM
 Okay, is that all we've come up with for them; have we got any other recommendations?
@@ -486,7 +489,7 @@ CAPCOM
 Is there any kind of leads we can give them? Are we looking at instrumentation or have we got a real problem, or what?
 
 EECOM
-FLIGHT, EECOM.
+Roger. FLIGHT, EECOM.
 
 FLIGHT
 Go, EECOM.
@@ -667,7 +670,7 @@ FLIGHT
 Go, GUIDANCE.
 
 GUIDO
-When his hardware restart he was doing a clearly fine maneuver, and that should have killed it, but we're still moving. We ought to stop it.
+When his hardware restart he was doing a crew-defined maneuver, and that should have killed it, but we're still moving. We ought to stop it.
 
 FLIGHT
 Are we using RCS now, Buck?
@@ -921,7 +924,7 @@ GUIDO
 Roger. I was going to recommend a P52 in a little bit anyway -
 
 FLIGHT
-Well, it's going to take a while before we get to the point we're even thinking about a P52.
+Well, it's going to take a while before we get to the point we're even thinking of a P52.
 
 GUIDO
 Yeah.
@@ -1081,13 +1084,13 @@ FLIGHT
 Well, do you expect that we're going to be in a thermal problem for the next many hours? EECOM?
 
 EECOM
-Well, don't know where to say the sun is right now, FLIGHT.
+Well, I don't know where to say the sun is right now, FLIGHT.
 
 GNC
-Well, it's pretty close to quad A right now. Are we -
+Well, it's pretty close to quad A right now.
 
 EECOM
-By 90 degrees?
+Are we - by 90 degrees?
 
 GNC
 I don't know exactly where. It's between A and B, mostly on A.
@@ -1113,13 +1116,13 @@ Yeah, but you gotta get the CMC on, and keep it online. And you need a rather pr
 
 56:19:10
 GNC
-In the order of about 20 minutes to damp out and spin up and then we can do without any of that.
+In the order of about 20 minutes to damp out and then spin up and then we can do without any of that.
 
 GNC
 If we get a good spinup going then we're stable -
 
 FLIGHT
-Okay, that might be a good idea. That would buy us some time from a standpoint of reviewing the data. And it would get us back into the - as close to the normal flight plan as we could. How far are we out of attitude right now?
+Okay, that might be a good idea. That would buy us some more time from a standpoint of reviewing the data. And it would get us back into the - as close to the normal flight plan as we could. How far are we out of attitude right now?
 
 GNC
 He's a fair ways out right now, FLIGHT. He'd have to do another VERB 49 and fly back and then stabilize there.
@@ -1173,7 +1176,7 @@ FLIGHT
 Go ahead.
 
 INCO
-I'd like to firmly secure the high-gain before he starts getting into PTC.
+I'd like to - for him to secure the high-gain before he starts getting into PTC.
 
 GNC
 That's affirmative, FLIGHT.
@@ -1213,7 +1216,7 @@ EECOM
 Yeah. FUEL CELL 2 pumps I think are on AC 2.
 
 FLIGHT
-Okay, but according to the checklist, he should have powered - he should have turned those off, right? Now, he said he was down through BMAG number 2 is in WARM UP, so he's already gone through the fuel cell pump stuff.
+Okay, but according to the checklist, he should have powered - he should have turned those off, right? Now, he said he was down to BMAG number 2 is in WARM UP, so he's already gone through the fuel cell pump stuff.
 
 56:24:00
 EECOM
@@ -1342,7 +1345,7 @@ NETWORK
 Roger that.
 
 CAPCOM
-FLIGHT, did you hear them say he's getting some rates? We want to know if he's firing any thrusters?
+FLIGHT, did you hear him say he's getting some rates? We want to know if he's firing any thrusters?
 
 FLIGHT
 Roger. GNC, watch those thrusters, will you?
@@ -2453,10 +2456,10 @@ FLIGHT
 Okay, now the next question is: are you willing to do that on FUEL CELL number 1?
 
 EECOM
-That's the question we're pondering, FLIGHT. We've got to come up with an answer on that one.
+That's the question we're pondering, FLIGHT. We've got to come up with an answer on that one. Soon.
 
 FLIGHT
-Soon. FUEL CELL 2 is working okay.
+FUEL CELL 2 is working okay.
 
 EECOM
 That's affirmative.
@@ -2976,7 +2979,7 @@ FLIGHT
 Go.
 
 EECOM
-Let's charge BATTERY A.
+Like to charge BATTERY A.
 
 FLIGHT
 Yeah, I was wondering about that. Do you - let me get the HIGH GAIN POWER off first, okay? Clint?

@@ -128,7 +128,7 @@ FLIGHT, EECOM.
 Go EECOM.
 
 [55 50 35 - 55 50 37] EECOM
-You've got 40 amp-hours back in battery B now.
+We've got 40 amp-hours back in battery B now.
 
 [55 50 38] FLIGHT
 Okay.
@@ -156,7 +156,7 @@ Negative. The LM heater current indicates that the LM was properly closed out. T
 Okay. So you're happy that you don't need them to verify that - what was it, Activation 2-3, those pages we were on?
 
 [55 51 23 - 55 51 24] TELMU
-That's right. That was TLC 2, and we're happy.
+That's right. It was TLC 2, and we're happy.
 
 [55 51 25] FLIGHT
 Okay.
@@ -217,7 +217,7 @@ If they enter it through the DSKY are they gonna do it?
 Standby 1.
 
 [55 54 32 - 55 54 35] FLIGHT
-Now, we haven't stabled out at that attitude yet, so I don't think we're gonna have any problems.
+Now, we haven't stabled out in that attitude yet, so I don't think we're gonna have any problems.
 
 [55 54 35 - 55 54 37] GNC
 FLIGHT, I don't think there's any problem, they haven't opened up deadbands yet.
@@ -291,6 +291,9 @@ I believe the crew reported it.
 [55 55 51 - 55 55 52] CAPCOM
 We've got a MAIN B UNDERVOLT.
 
+[55 55 52] FLIGHT
+Oh, MAIN B.
+
 [55 55 52 - 55 55 55] EECOM
 Okay, FLIGHT, we've got some instrumentation funnies, let me add them up.
 > Having missed the pre-explosion pressure spike on tank 2, all EECOM has to work with now is a Christmas tree of bad data readout. So many numbers were off whack all of a sudden that EECOM assumes it has to be instrumentation. Lengthy discussion ensues on the EECOM loop.
@@ -343,7 +346,7 @@ Yeah, we can determine that from the LM current.
 Roger, we copy that also.
 
 [55 58 14 -] FLIGHT
-EECOM, you see any AC problems? Looks like -
+EECOM, you were seeing any AC problems? Looks like -
 
 [55 58 16] EECOM
 FLIGHT, EECOM.
@@ -352,7 +355,7 @@ FLIGHT, EECOM.
 - we have a lot of instrumentation problems here. Go ahead.
 
 [55 58 18 - 55 58 22] EECOM
-That's affirm. {He's flipping the fuel cells around, FLIGHT.}
+That's affirm. {He's flipping out fuel cells around, FLIGHT.}
 1> This ended up being a problem for the flight controllers. The astronauts were doing their own problem solving and configuration changes, so every time the controllers on the ground had a recommendation for them something would get changed and they'd have to start over.
 
 [55 58 24 - 55 58 26] FLIGHT
@@ -377,7 +380,7 @@ He's got fuel cells 1 and 3 are offline. We've got MAIN A volts, we have no MAIN
 Okay.
 
 [55 59 04 -] EECOM
-We'll just try to -
+Let's just try that -
 
 [ - ] FLIGHT
 FUEL CELL 1 -
@@ -448,7 +451,7 @@ Right.
 CAPCOM, do you want to verify the Quad Delta HELIUM VALVE is open, please.
 
 [56 00 17 - 56 00 18] FLIGHT
-Are there other problems in the RCS, Buck?
+Any other problems in the RCS, Buck?
 
 [56 00 21 - 56 00 24] CAPCOM
 Okay, is that all we've come up with for them; have we got any other recommendations?
@@ -480,7 +483,7 @@ Is there any kind of leads we can give them? Are we looking at instrumentation o
 > The lack of answer here is telling. At some point here, steely-eyed missile man and NASA legend EECOM John Aaron had gotten called at home. He asked for some numbers to be read out, and while bolting out the door warned them that whatever it was, it _wasn't_ instrumentation.
 
 [56 01 35] EECOM
-FLIGHT, EECOM.
+Roger. FLIGHT, EECOM.
 
 [56 01 36] FLIGHT
 Go, EECOM.
@@ -659,7 +662,7 @@ FLIGHT, GUIDANCE.
 Go, GUIDANCE.
 
 [56 05 35 - 56 05 44] GUIDO
-When his hardware restart he was doing a clearly fine maneuver, and that should have killed it, but we're still moving. We ought to stop it.
+When his hardware restart he was doing a crew-defined maneuver, and that should have killed it, but we're still moving. We ought to stop it.
 
 [56 05 45 - 56 05 46] FLIGHT
 Are we using RCS now, Buck?
@@ -913,7 +916,7 @@ Could we go to a coarse align on the platform here, so we don't have to use any 
 Roger. I was going to recommend a P52 in a little bit anyway -
 
 [56 13 05 - 56 13 09] FLIGHT
-Well, it's going to take a while before we get to the point we're even thinking about a P52.
+Well, it's going to take a while before we get to the point we're even thinking of a P52.
 
 [56 13 09] GUIDO
 Yeah.
@@ -1073,13 +1076,13 @@ Pardon?
 Well, do you expect that we're going to be in a thermal problem for the next many hours? EECOM?
 
 [56 17 44 - 56 17 46] EECOM
-Well, don't know where to say the sun is right now, FLIGHT.
+Well, I don't know where to say the sun is right now, FLIGHT.
 
 [56 17 47 - 56 17 49] GNC
-Well, it's pretty close to quad A right now. Are we -
+Well, it's pretty close to quad A right now.
 
-[56 17 50 - 56 17 51] EECOM
-By 90 degrees?
+[56 17 49 - 56 17 51] EECOM
+Are we - by 90 degrees?
 
 [56 17 53 - 56 17 55] GNC
 I don't know exactly where. It's between A and B, mostly on A.
@@ -1105,13 +1108,13 @@ Well, that's why I was recommending PTC because we don't need any of that stuff 
 Yeah, but you gotta get the CMC on, and keep it online. And you need a rather precise period of time for redamping there.
 
 [56 19 10 - 56 19 13] GNC
-In the order of about 20 minutes to damp out and spin up and then we can do without any of that.
+In the order of about 20 minutes to damp out and then spin up and then we can do without any of that.
 
 [56 19 17 - 56 19 19] GNC
 If we get a good spinup going then we're stable -
 
 [56 19 19 - 56 19 34] FLIGHT
-Okay, that might be a good idea. That would buy us some time from a standpoint of reviewing the data. And it would get us back into the - as close to the normal flight plan as we could. How far are we out of attitude right now?
+Okay, that might be a good idea. That would buy us some more time from a standpoint of reviewing the data. And it would get us back into the - as close to the normal flight plan as we could. How far are we out of attitude right now?
 
 [56 19 37 - 56 19 42] GNC
 He's a fair ways out right now, FLIGHT. He'd have to do another VERB 49 and fly back and then stabilize there.
@@ -1164,7 +1167,7 @@ FLIGHT, INCO.
 Go ahead.
 
 [56 22 30 - 56 22 32] INCO
-I'd like to firmly secure the high-gain before he starts getting into PTC.
+I'd like to - for him to secure the high-gain before he starts getting into PTC.
 
 [56 22 54] GNC
 That's affirmative, FLIGHT.
@@ -1205,7 +1208,7 @@ Say that again. You think your fuel cell pumps -
 Yeah. FUEL CELL 2 pumps I think are on AC 2.
 
 [56 23 50 - 56 24 00] FLIGHT
-Okay, but according to the checklist, he should have powered - he should have turned those off, right? Now, he said he was down through BMAG number 2 is in WARM UP, so he's already gone through the fuel cell pump stuff.
+Okay, but according to the checklist, he should have powered - he should have turned those off, right? Now, he said he was down to BMAG number 2 is in WARM UP, so he's already gone through the fuel cell pump stuff.
 
 [56 24 00 - 56 24 01] EECOM
 Okay. Good enough.
@@ -1332,7 +1335,7 @@ Okay, I want another machine up in the RTCC and I want a bunch of guys capable o
 Roger that.
 
 [56 26 25 - 56 26 30] CAPCOM
-FLIGHT, did you hear them say he's getting some rates? We want to know if he's firing any thrusters?
+FLIGHT, did you hear him say he's getting some rates? We want to know if he's firing any thrusters?
 
 [56 26 31 - 56 26 33] FLIGHT
 Roger. GNC, watch those thrusters, will you?
@@ -2436,11 +2439,11 @@ The crew reported he got barber pole whenever he threw the reactant switch, so t
 [57 07 35 - 57 07 39] FLIGHT
 Okay, now the next question is: are you willing to do that on FUEL CELL number 1?
 
-[57 07 40 - 57 07 44] EECOM
-That's the question we're pondering, FLIGHT. We've got to come up with an answer on that one.
+[57 07 40 - 57 07 45] EECOM
+That's the question we're pondering, FLIGHT. We've got to come up with an answer on that one. Soon.
 
-[57 07 45 - 57 07 47] FLIGHT
-Soon. FUEL CELL 2 is working okay.
+[57 07 46 - 57 07 47] FLIGHT
+FUEL CELL 2 is working okay.
 
 [57 07 48] EECOM
 That's affirmative.
@@ -2954,7 +2957,7 @@ FLIGHT, EECOM.
 Go.
 
 [57 20 16] EECOM
-Let's charge BATTERY A.
+Like to charge BATTERY A.
 
 [57 20 17 - 57 20 23] FLIGHT
 Yeah, I was wondering about that. Do you - let me get the HIGH GAIN POWER off first, okay? Clint?
