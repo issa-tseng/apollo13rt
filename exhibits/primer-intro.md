@@ -18,14 +18,14 @@ Copious reference material is provided here. If you are brand-new to Apollo, bro
 Creating Installations
 ----------------------
 
-It is easy to create a kiosk installation of this application, which adjusts the layout for optimal full-screen display on a television, or presents only the exhibit and reference material. For more information, see [the readme](https://github.com/clint-tseng/apollo13rt#kiosk-modes).
+It is easy to create a kiosk installation of this application, which adjusts the layout for optimal full-screen display on a television, or presents only the exhibit and reference material. For more information, see [the readme](https://github.com/issa-tseng/apollo13rt#kiosk-modes).
 
 Credits
 -------
 
 * **[NASA](https://nasa.gov)** flew Apollo, and provided transcription of the Air-Ground Loop.
-* **[John Stoll](https://archive.org/details/Apollo13Audio)** of NASA Johnson Space Center made this audio available.
-* **[ulysses777x](https://www.youtube.com/user/ulysses777x)** corrected the audio playback timing.
+* **[Ben Feist](https://twitter.com/benfeist)** did extensive work recovering the mission control audio.
+* **[Jeremy Cooper](https://twitter.com/ke6jjj)** corrected tape timing and noise.
 * **[Issa Marie Tseng](https://twitter.com/cxlt)** did transcription and programming, and made the explanations, graphics, and design.
-* The following contributors have provided valuable corrections and improvements to the transcript: [Brasten Sager](https://github.com/brasten), [Aaron Mandle](https://github.com/amandle), [Peter J Schuller](https://github.com/bignoter), [Aaron Gyes](https://github.com/floam), [Beo UK](https://github.com/beouk), [Mike Muszynski](https://github.com/mmuszynski), [Jesse Brown](https://github.com/jessebrownfl), [Vinicius Fonseca](https://github.com/viniciusvillas), [Dan Delaney](https://github.com/dandelany), and [Stephan E](https://github.com/seseiteu).
+* The following contributors have provided valuable corrections and improvements to the transcript: [Brasten Sager](https://github.com/brasten), [Aaron Mandle](https://github.com/amandle), [Peter J Schuller](https://github.com/bignoter), [Aaron Gyes](https://github.com/floam), [Beo UK](https://github.com/beouk), [Mike Muszynski](https://github.com/mmuszynski), [Jesse Brown](https://github.com/jessebrownfl), [Vinicius Fonseca](https://github.com/viniciusvillas), [Dan Delaney](https://github.com/dandelany), [Stephan E](https://github.com/seseiteu), and [maddogbv](https://github.com/maddogbv).
 

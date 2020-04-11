@@ -9,7 +9,7 @@ Over the next many hours and days, many more problems need to be solved: the LiO
 
 Hopefully, you have not only enjoyed these six hours of audio, but as well gained a new appreciation and tactile understanding of what it was like to hurl Apollo through the heavens. If you wish to delve yet further into Apollo and spaceflight, please take a look at the [further reading](#overview-reading) section.
 
-If you have feedback or questions, please don't hesitate to [send me a tweet](https://twitter.com/cxlt) or [file a GitHub issue](https://github.com/clint-tseng/apollo13rt/issues).
+If you have feedback or questions, please don't hesitate to [send me a tweet](https://twitter.com/cxlt) or [file a GitHub issue](https://github.com/issa-tseng/apollo13rt/issues).
 
 _[Photo Credit](https://www.hq.nasa.gov/alsj/a13/images13.html): NASA, with scans by Kipp Teague._
 
