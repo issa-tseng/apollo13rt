@@ -409,11 +409,12 @@ class Player extends Model.build(
 ########################################
 # PLAYER MISC MODELS
 
-class Timer extends Model
+class Interval extends Model
   contains: (epoch) ->
     Varying.mapAll(epoch, this.get(\start), this.get(\end), (epoch, start, end) ->
       start <= epoch <= end
     )
+class Timer extends Interval
 
 class Chapter extends Model.build(
   bind(\duration, from(\end).and(\start).all.map (-))
@@ -458,7 +459,7 @@ module.exports = {
   Global, Splash,
   Line, Lines, Transcript,
   Term, Lookup, Glossary,
-  Player, Timer, Chapter,
+  Player, Interval, Timer, Chapter,
   ExhibitArea, Topic, Exhibit, Graphic,
   BasicRequest, basicResolver,
 
