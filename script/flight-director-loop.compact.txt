@@ -756,7 +756,7 @@
                              breakers to check.
 56:43:37              EECOM  Okay, panel 226. CRYOGENIC O₂ HEATER 1, MAIN A circuit breaker.
 56:43:46             FLIGHT  I'm sorry, I didn't catch you there. CRYO O₂ TANK 1? Panel 226?
-56:43:51              EECOM  CYRO O₂ HEATER 1, MAIN A, panel 226.
+56:43:51              EECOM  CRYO O₂ HEATER 1, MAIN A, panel 226.
 56:43:54             FLIGHT  Roger.
 56:43:56              EECOM  Also, FLIGHT, let's check the FAN MOTOR circuit breakers TANK 1, on panel 226
                              also.

@@ -22,6 +22,7 @@ parse-file = (path) ->
       end = hms(end-hh, end-mm, end-ss)
       id = incr++
 
+      process.stderr.write("warning: duration > 20s (#{nr + 1} -> #line)\n") if (end - start) > 20
       throw new Error("Message goes back in time (#{nr + 1} -> #line)") if start > end
       throw new Error("Message predates predecessor (#{nr + 1} -> #line)") if start < last-start
       last-start := start
@@ -72,6 +73,7 @@ parse-file = (path) ->
       id = by-last-source[source].id
       by-id[id].end = hms(end-hh, end-mm, end-ss)
 
+      process.stderr.write("warning: duration > 20s (#{nr + 1} -> #line)\n") if (by-id[id].end - by-id[id].start) > 20
       throw new Error("Message goes back in time (#{nr + 1} -> #line) (start: #{by-id[id].start}; end: #{by-id[id].end})") if by-id[id].start > by-id[id].end
 
       current-source = source
