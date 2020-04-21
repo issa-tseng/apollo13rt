@@ -1,6 +1,6 @@
 { Library, App, List } = require(\janus)
 stdlib = require(\janus-stdlib)
-{ Global, Player, Transcript, Lookup, Glossary, Timer, Chapter } = require('./model')
+{ Global, Player, Transcript, Lookup, Glossary, Timer, Chapter, Topic, Exhibit } = require('./model')
 
 # determine application mode.
 kiosk-mode = window.location.search is '?kiosk'
@@ -14,12 +14,12 @@ apper = (href, kiosk, exhibit) ->
   require('./view/player').registerWith(views)
   require('./view/transcript').registerWith(views)
   require('./view/glossary').registerWith(views)
-  require('./guide/comms').registerWith(views)
+  require('./guide/conductor').registerWith(views)
   require('./view/exhibit').registerWith(views)
   require('./view/exhibit/package').registerWith(views)
   resolvers = new Library()
   require('./model').registerWith(resolvers)
-  global = new Global( own_href: href, mode: { kiosk, exhibit } )
+  global = new Global({ own_href: href, mode: { kiosk, exhibit }, +guide })
   new App({ views, resolvers, global })
 
 # player with seed data.
@@ -54,5 +54,31 @@ playerer = (data) ->
     ])
   )
 
-module.exports = { apper, playerer }
+# fixed list of exhibit topics for the toc.
+exhibiter = ->
+  new List([
+    new Topic( title: 'primer', exhibits: new List([
+      new Exhibit( lookup: \primer-intro, title: 'Apollo 13 Real-time', description: 'Get an overview of the real-time experience.' ),
+      new Exhibit( lookup: \primer-spaceflight, title: 'Spaceflight 101', description: 'Learn the basics of spaceflight and orbital mechanics.' ),
+      new Exhibit( lookup: \primer-apollo, title: 'Apollo Architecture', description: 'See how Apollo got to the Moon and back.' ),
+      new Exhibit( lookup: \primer-accident, title: 'The Accident', description: 'There\'s more to the story than "Houston, we\'ve had a problem."' )
+    ])),
+    new Topic( title: 'overview', exhibits: new List([
+      new Exhibit( lookup: \overview-propulsion, title: 'Getting to the Moon', description: 'A walkthrough of the propulsion and maneuvering systems.' ),
+      new Exhibit( lookup: \overview-navigation, title: 'Navigating the Stars', description: 'An introduction to the navigation systems and processes.' ),
+      new Exhibit( lookup: \overview-power, title: 'Powering the Spacecraft', description: 'A look at the electrical systems that become critical on 13.' ),
+      new Exhibit( lookup: \overview-personnel, title: 'The Flight Controllers', description: 'An overview of relevant flight controller positions in Mission Control.' )
+      new Exhibit( lookup: \overview-reading, title: 'Further Reading', description: 'Books, video, and interactive resources for further exploration.' )
+    ])),
+    new Topic( title: 'reference', exhibits: new List([
+      new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'High-resolution diagram of the main CM control panel.', reference: true ),
+      new Exhibit( lookup: \ref-panel-cm-aux, title: 'Command Module Auxiliary Panels', description: 'High-resolution diagram of additional CM panels.', reference: true ),
+      new Exhibit( lookup: \ref-panel-lm, title: 'Lunar Module Control Panels', description: 'High-resolution diagram of the Lunar Module panels.', reference: true ),
+      new Exhibit( lookup: \ref-panel-eps, title: 'Fuel Cell Systems', description: 'Annotated diagram of the EPS fuel cell systems.', reference: true ),
+      new Exhibit( lookup: \ref-panel-o2, title: 'Oxygen Subsystem', description: 'Annotated combined diagram of the EPS/ECS oxygen subsystems.', reference: true )
+    ]))
+  ])
+
+
+module.exports = { apper, playerer, exhibiter }
 

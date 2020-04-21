@@ -8,7 +8,7 @@ $ = window.jQuery = window.$ = require(\jquery)
 { defer, hms-to-epoch, hash-to-hms, epoch-to-hms, attach-floating-box, load-assets, is-blank } = require('./util')
 { max, abs } = Math
 
-{ apper, playerer } = require('./package')
+{ apper, playerer, exhibiter } = require('./package')
 
 # determine application mode, make application.
 kiosk-mode = window.location.search is '?kiosk'
@@ -23,16 +23,6 @@ $document = $(document)
 $window = $(window)
 global = app.get_(\global)
 
-# render splash screen.
-$ ->
-  if (kiosk-mode is true) or (exhibit-mode is true)
-    $('body').removeClass(\init)
-    $('html').addClass(\chromeless).toggleClass(\kiosk-mode, kiosk-mode).toggleClass(\exhibit-mode, exhibit-mode)
-  else
-    splash-view = app.view(Splash.initialize())
-    $('#splash').append(splash-view.artifact())
-    splash-view.wireEvents()
-
 # get and load player data. TODO: someday maybe merge these for perf?
 data-paths = <[ flight-director-loop flight-director-loop.lookup air-ground-loop air-ground-loop.lookup glossary glossary.lookup ]>
 (data) <- load-assets(if exhibit-mode then [] else data-paths)
@@ -43,34 +33,21 @@ unless exhibit-mode is true
   window.player = player
   $('#skiplink-start').one(\click, player~play)
 
-# set up exhibit data.
 unless kiosk-mode is true
-  topics = new List([
-    new Topic( title: 'primer', exhibits: new List([
-      new Exhibit( lookup: \primer-intro, title: 'Apollo 13 Real-time', description: 'Get an overview of the real-time experience.' ),
-      new Exhibit( lookup: \primer-spaceflight, title: 'Spaceflight 101', description: 'Learn the basics of spaceflight and orbital mechanics.' ),
-      new Exhibit( lookup: \primer-apollo, title: 'Apollo Architecture', description: 'See how Apollo got to the Moon and back.' ),
-      new Exhibit( lookup: \primer-accident, title: 'The Accident', description: 'There\'s more to the story than "Houston, we\'ve had a problem."' )
-    ])),
-    new Topic( title: 'overview', exhibits: new List([
-      new Exhibit( lookup: \overview-propulsion, title: 'Getting to the Moon', description: 'A walkthrough of the propulsion and maneuvering systems.' ),
-      new Exhibit( lookup: \overview-navigation, title: 'Navigating the Stars', description: 'An introduction to the navigation systems and processes.' ),
-      new Exhibit( lookup: \overview-power, title: 'Powering the Spacecraft', description: 'A look at the electrical systems that become critical on 13.' ),
-      new Exhibit( lookup: \overview-personnel, title: 'The Flight Controllers', description: 'An overview of relevant flight controller positions in Mission Control.' )
-      new Exhibit( lookup: \overview-reading, title: 'Further Reading', description: 'Books, video, and interactive resources for further exploration.' )
-    ])),
-    new Topic( title: 'reference', exhibits: new List([
-      new Exhibit( lookup: \ref-panel-cm-mdc, title: 'Command Module Main Display Console', description: 'High-resolution diagram of the main CM control panel.', reference: true ),
-      new Exhibit( lookup: \ref-panel-cm-aux, title: 'Command Module Auxiliary Panels', description: 'High-resolution diagram of additional CM panels.', reference: true ),
-      new Exhibit( lookup: \ref-panel-lm, title: 'Lunar Module Control Panels', description: 'High-resolution diagram of the Lunar Module panels.', reference: true ),
-      new Exhibit( lookup: \ref-panel-eps, title: 'Fuel Cell Systems', description: 'Annotated diagram of the EPS fuel cell systems.', reference: true ),
-      new Exhibit( lookup: \ref-panel-o2, title: 'Oxygen Subsystem', description: 'Annotated combined diagram of the EPS/ECS oxygen subsystems.', reference: true )
-    ]))
-  ])
+  topics = exhibiter()
   exhibit-area = new ExhibitArea({ topics })
 
 # wait for document ready.
 <- $
+
+# show the splash screen.
+if (kiosk-mode is true) or (exhibit-mode is true)
+  $('body').removeClass(\init)
+  $('html').addClass(\chromeless).toggleClass(\kiosk-mode, kiosk-mode).toggleClass(\exhibit-mode, exhibit-mode)
+else
+  splash-view = app.view(Splash.initialize())
+  $('#splash').append(splash-view.artifact())
+  splash-view.wireEvents()
 
 # create and append views.
 unless exhibit-mode is true
