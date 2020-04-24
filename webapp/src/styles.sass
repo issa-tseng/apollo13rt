@@ -1,5 +1,6 @@
 
 @import 'styles/common.sass'
+@import 'styles/keyframes.sass'
 
 // UTIL
 
@@ -121,11 +122,6 @@ a
 
 // COMPONENTS
 
-@keyframes fade-out
-  0%
-    opacity: 1
-  100%
-    opacity: 0.1
 .player
   background-color: $color-box-bg
   border-bottom: 0.1em solid $color-light-border
@@ -982,24 +978,6 @@ header
 
 
 // EXHIBIT LAYOUT
-
-@keyframes toc-down
-  0%
-    max-height: 12em
-  100%
-    max-height: 2em
-@keyframes toc-up
-  0%
-    transform: translateY(10em)
-  100%
-    transform: translateY(0)
-@keyframes article-appear
-  0%
-    opacity: 0.3
-    transform: translateY(1em)
-  100%
-    opacity: 1
-    transform: translateY(0)
 
 #exhibits
   .topic

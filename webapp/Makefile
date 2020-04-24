@@ -6,6 +6,8 @@ ASSETS_SRC = $(shell find ../assets -name '*.ai' -prune -o -type f -print | sort
 ASSETS_LIB = $(ASSETS_SRC:../assets/%=lib/assets/%)
 SCRIPT_SRC = $(shell find ../script -name '*.json' -maxdepth 1 -type f | sort)
 SCRIPT_LIB = $(SCRIPT_SRC:../script/%=lib/assets/%)
+GUIDE_SRC = $(shell find ../guide -name '*.json' -maxdepth 1 -type f | sort)
+GUIDE_LIB = $(GUIDE_SRC:../guide/%=lib/assets/%)
 EXHIBITS_SRC = $(shell find ../exhibits -name '*.html' -o -name '*.md' -maxdepth 1 -type f | sort)
 EXHIBITS_LIB = $(EXHIBITS_SRC:../exhibits/%=lib/content/%.part)
 LINES_SRC = $(shell find ../script -name '*loop.json' -maxdepth 1 -type f | sort)
@@ -51,10 +53,13 @@ lib/assets/%: ../assets/%
 lib/assets/%.json: ../script/%.json
 	cp $< $@
 
+lib/assets/%.json: ../guide/%.json
+	cp $< $@
+
 node_modules:
 	npm install
 
-build: $(JS_LIB) lib/apollo13rt.js lib/styles.css $(ASSETS_LIB) $(SCRIPT_LIB) lib/index.html
+build: $(JS_LIB) lib/apollo13rt.js lib/styles.css $(ASSETS_LIB) $(SCRIPT_LIB) $(GUIDE_LIB) lib/index.html
 
 production: build lib/apollo13rt.min.js
 

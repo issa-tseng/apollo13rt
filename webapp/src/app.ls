@@ -3,6 +3,7 @@
 $ = window.jQuery = window.$ = require(\jquery)
 { Varying, List, Library, App } = require(\janus)
 { Splash, Global, Glossary, Lookup, Player, Timer, Chapter, Transcript, ExhibitArea, Topic, Exhibit } = require('./model')
+{ Conductor } = require('./guide/conductor')
 { from-event } = require(\janus-stdlib).varying
 
 { defer, hms-to-epoch, hash-to-hms, epoch-to-hms, attach-floating-box, load-assets, is-blank } = require('./util')
@@ -13,7 +14,9 @@ $ = window.jQuery = window.$ = require(\jquery)
 # determine application mode, make application.
 kiosk-mode = window.location.search is '?kiosk'
 exhibit-mode = window.location.search is '?exhibit'
+shows-guide = exhibit-mode is false and kiosk-mode is false
 app = apper(window.location.href, kiosk-mode, exhibit-mode)
+window.app = app
 
 # debugging.
 window.tap = (x) -> console.log(x); x
@@ -24,7 +27,7 @@ $window = $(window)
 global = app.get_(\global)
 
 # get and load player data. TODO: someday maybe merge these for perf?
-data-paths = <[ flight-director-loop flight-director-loop.lookup air-ground-loop air-ground-loop.lookup glossary glossary.lookup ]>
+data-paths = <[ flight-director-loop flight-director-loop.lookup air-ground-loop air-ground-loop.lookup glossary glossary.lookup script ]>
 (data) <- load-assets(if exhibit-mode then [] else data-paths)
 
 unless exhibit-mode is true
@@ -36,6 +39,9 @@ unless exhibit-mode is true
 unless kiosk-mode is true
   topics = exhibiter()
   exhibit-area = new ExhibitArea({ topics })
+
+if shows-guide is true
+  conductor = Conductor.deserialize(data.script)
 
 # wait for document ready.
 <- $
@@ -58,9 +64,14 @@ unless kiosk-mode is true
   exhibit-area-view = app.view(exhibit-area)
   $('#exhibits').append(exhibit-area-view.artifact())
 
+if shows-guide is true
+  guide-area-view = app.view(conductor)
+  $('#guide').append(guide-area-view.artifact())
+
 # wire all events after rendering is done so relayout does not occur.
 player-view.wireEvents() unless exhibit-mode is true
 exhibit-area-view.wireEvents() unless kiosk-mode is true
+guide-area-view.wireEvents() if shows-guide is true
 
 # set initial player height to something sane, if necessary.
 if player?

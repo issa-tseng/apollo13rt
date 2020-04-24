@@ -1,2 +1,71 @@
 @import './common'
 
+#guide
+  margin: 1em 0
+    left: 1em
+
+.guide-box
+  background: linear-gradient(#f4f4f4, #e7e7e7)
+  box-shadow: 0 1em 4em rgba(0, 0, 0, 0.04) inset
+  padding: 1em
+  position: absolute
+
+.narration
+  // temp:
+  height: 30em
+  overflow: hidden
+  width: 40em
+
+  .narration-lines
+    bottom: 3em
+    left: 2em
+    position: absolute
+
+  .narration-line
+    padding-right: 2em
+    padding-top: 1.5em
+
+  .nl-epoch
+    color: #555
+    font-family: $monospace
+    font-size: 1.2em
+    padding-bottom: 0.3em
+
+  .nl-content
+    color: #555
+    font-family: $serif
+    font-size: 1.3em
+
+  .narration-line:last-child
+    animation-duration: 4s
+    animation-iteration-count: 1
+    animation-name: narration-appear
+    animation-timing-function: $ease-extreme-out
+
+    .nl-content
+      color: #333
+      font-size: 1.8em
+      line-height: 1.4em
+
+  .count-6 .narration-line:first-child
+    opacity: 0.5
+
+  .narration-next
+    background: #aaa
+    bottom: 2em
+    height: 0.2em
+    left: 2em
+    position: absolute
+    transform-origin: left top
+    transition: 0.5s opacity, 0.5s transform $ease-extreme-out
+    width: 1em
+    &.in-long
+      opacity: 0
+      transform: scaleX(12)
+      transition: none
+    @for $i from 5 through 1
+      &.in-#{$i}
+        transform: scaleX(#{$i})
+    &.in-0
+      transform: scaleX(0.2)
+
