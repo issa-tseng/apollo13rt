@@ -35,8 +35,10 @@ class NarrationLine extends Model
 
 class NarrationLineView extends DomView.build(
   Model.build(bind(\hms, from.subject(\epoch).map(epoch-to-hms)))
-  $('<div class="narration-line"><div class="nl-epoch"><span class="hh"/><span class="mm"/><span class="ss"/></div><div class="nl-content"/></div>')
+  $('<div class="narration-line"><a class="nl-epoch"><span class="hh"/><span class="mm"/><span class="ss"/></a><div class="nl-content"/></div>')
   template(
+    find('.nl-epoch').attr(\href, from.vm(\hms.hh).and.vm(\hms.mm).and.vm(\hms.ss)
+      .all.map((hh, mm, ss) -> "##hh:#mm:#ss"))
     find('.nl-epoch .hh').text(from.vm(\hms.hh))
     find('.nl-epoch .mm').text(from.vm(\hms.mm))
     find('.nl-epoch .ss').text(from.vm(\hms.ss))
