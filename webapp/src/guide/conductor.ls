@@ -1,7 +1,7 @@
 $ = require(\jquery)
 { Model, attribute, bind, from, DomView, template, find } = require(\janus)
 
-{ line-idx } = require('./util')
+{ event-idx } = require('./util')
 { Status } = require('./status')
 { Narration } = require('./narration')
 
@@ -25,8 +25,8 @@ box-layout = (name) ->
 class ConductorView extends DomView.build(
   Model.build(
     bind('epoch', from.app('global').get('player').get('timestamp.epoch'))
-    bind('line-idx', line-idx)
   ),
+    bind(\event-idx, event-idx)
   $('<div class="guide-main">
   <div class="guide-status"/>
   <div class="guide-narration"/>

@@ -1,20 +1,20 @@
 $ = require(\jquery)
 { List, Model, bind, DomView, template, find, from } = require(\janus)
-{ line-idx } = require('./util')
+{ event-idx } = require('./util')
 { clamp, epoch-to-hms } = require('../util')
 
 class Narration extends Model
 
 class NarrationView extends DomView.build(
   Model.build(
-    bind(\epoch, from.app(\global).get(\player).get(\timestamp.epoch))
-    bind(\line-idx, line-idx)
+    bind(\epoch, from.app(\epoch))
+    bind(\event-idx, event-idx)
 
-    bind(\next-epoch, from.subject(\events).and(\line-idx)
+    bind(\next-epoch, from.subject(\events).and(\event-idx)
       .all.map((events, idx) -> events[idx + 1]?.epoch))
     bind(\time-to-next, from(\next-epoch).and(\epoch).all.map((-)))
 
-    bind(\shown-lines, from.subject(\events).and(\line-idx).all.map((events, idx) ->
+    bind(\shown-lines, from.subject(\events).and(\event-idx).all.map((events, idx) ->
       return new List() unless idx?
       lines = events[clamp(0, Infinity, idx - 5) to idx]
       new List([ new NarrationLine(line) for line in lines ])
