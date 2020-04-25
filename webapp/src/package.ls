@@ -1,10 +1,14 @@
-{ Library, App, List } = require(\janus)
+{ Library, App, List, bind, from } = require(\janus)
 stdlib = require(\janus-stdlib)
 { Global, Player, Transcript, Lookup, Glossary, Timer, Chapter, Topic, Exhibit } = require('./model')
 
 # determine application mode.
 kiosk-mode = window.location.search is '?kiosk'
 exhibit-mode = window.location.search is '?exhibit'
+
+class Apollo extends App.build(
+  bind(\epoch, from(\global).get(\player).get(\timestamp.epoch))
+)
 
 # basic app setup.
 apper = (href, kiosk, exhibit) ->
@@ -21,7 +25,7 @@ apper = (href, kiosk, exhibit) ->
   resolvers = new Library()
   require('./model').registerWith(resolvers)
   global = new Global({ own_href: href, mode: { kiosk, exhibit }, +guide })
-  new App({ views, resolvers, global })
+  new Apollo({ views, resolvers, global })
 
 # player with seed data.
 playerer = (data) ->

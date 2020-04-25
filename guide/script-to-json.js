@@ -28,7 +28,7 @@ for (const line of text.split('\n')) {
     let panel;
     for (const token of tokens) {
       if (/\d/.test(token)) panel.size = parseFloat(token);
-      else target.panels.push(panel = { name: token });
+      else target.panels.push(panel = { name: token.toLowerCase() });
     }
   } else if (state === 'NARRATION') {
     if (!target.text) target.text = '';
@@ -48,11 +48,13 @@ for (const line of text.split('\n')) {
   }
 }
 
-// lowercase everything
+// lowercase everything and move things around
 for (const key of Object.keys(out)) {
-  out[key.toLowerCase()] = out[key];
+  out[key.toLowerCase()] = { events: out[key] };
   delete out[key];
 }
+out.events = out.layout.events;
+delete out.layout;
 
 writeFileSync(`${base}.json`, JSON.stringify(out), 'utf8');
 

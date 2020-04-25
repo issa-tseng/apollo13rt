@@ -1,20 +1,25 @@
 @import './common'
 
-#guide
-  margin: 1em 0
-    left: 1em
+.guide-main
+  left: 1em
+  margin-top: 1em
+  position: absolute
+  right: 1em
+  z-index: 1
 
 .guide-box
-  background: linear-gradient(#f4f4f4, #e7e7e7)
+  background: linear-gradient(#f7f7f7, #eee)
+  bottom: 0
   box-shadow: 0 1em 4em rgba(0, 0, 0, 0.04) inset
   padding: 1em
   position: absolute
+  top: 0
 
 .narration
   // temp:
-  height: 30em
-  overflow: hidden
   width: 40em
+
+  overflow: hidden
 
   .narration-lines
     bottom: 3em
@@ -35,7 +40,7 @@
       text-decoration: underline
 
   .nl-content
-    color: #555
+    color: #666
     font-family: $serif
     font-size: 1.3em
 
@@ -66,9 +71,9 @@
       opacity: 0
       transform: scaleX(12)
       transition: none
-    @for $i from 5 through 1
+    @for $i from 5 through 2
       &.in-#{$i}
-        transform: scaleX(#{$i})
-    &.in-0
+        transform: scaleX(#{$i - 1})
+    &.in-1
       transform: scaleX(0.2)
 
