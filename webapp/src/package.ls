@@ -22,6 +22,7 @@ apper = (href, kiosk, exhibit) ->
   require('./view/exhibit/package').registerWith(views)
   require('./guide/conductor').registerWith(views)
   require('./guide/narration').registerWith(views)
+  require('./guide/status').registerWith(views)
   resolvers = new Library()
   require('./model').registerWith(resolvers)
   global = new Global({ own_href: href, mode: { kiosk, exhibit }, +guide })

@@ -27,7 +27,7 @@ for (const line of text.split('\n')) {
     const tokens = line.split(' ');
     let panel;
     for (const token of tokens) {
-      if (/\d/.test(token)) panel.size = parseFloat(token);
+      if (/\d/.test(token)) panel.weight = atoi(token);
       else target.panels.push(panel = { name: token.toLowerCase() });
     }
   } else if (state === 'NARRATION') {

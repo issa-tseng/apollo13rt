@@ -7,18 +7,22 @@
   right: 1em
   z-index: 1
 
+.guide-wrapper
+  bottom: 0
+  position: absolute
+  top: 0
+  transition: 2s width $ease-extreme-out, 2s left $ease-extreme-out
+
 .guide-box
   background: linear-gradient(#f7f7f7, #eee)
   bottom: 0
   box-shadow: 0 1em 4em rgba(0, 0, 0, 0.04) inset
-  padding: 1em
+  left: 0
   position: absolute
+  right: 1em
   top: 0
 
 .narration
-  // temp:
-  width: 40em
-
   overflow: hidden
 
   .narration-lines
@@ -43,6 +47,9 @@
     color: #666
     font-family: $serif
     font-size: 1.3em
+
+    p + p
+      padding-top: 0.8em
 
   .narration-line:last-child
     animation-duration: 4s

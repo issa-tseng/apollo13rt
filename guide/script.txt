@@ -13,7 +13,7 @@ In the meantime, let's go over some basics and information about the Apollo spac
 If you would rather this narration go away, you can <a href="#ref-only">click here</a>.
 
 [55 46 40] LAYOUT
-STATUS 0.6 NARRATION
+STATUS 60 NARRATION
 
 # STATUS
 exploded
@@ -85,7 +85,7 @@ They didn't have to do the math, however, or even read out the angles themselves
 During a P52 alignment confirmation, the computer would even point the telescope automatically at stars, and the crew needed only to adjust and confirm.
 
 [55 48 20] LAYOUT
-STATUS NARRATION 0.6 DIAGRAM
+STATUS NARRATION 60 DIAGRAM
 
 # STATUS
 inert
@@ -129,7 +129,7 @@ The Reaction Control System ({{RCS}}) is a collection of small jets that could f
 To actually accerelate in a direction, the Service Propulsion System ({{SPS}}) in the {{Service Module}} and the Descent Propulsion System ({{DPS}}) in the {{Lunar Module}} are the primary engine systems you'll hear about today.
 
 [55 49 25] LAYOUT
-STATUS NARRATION 0.6 DIAGRAM
+STATUS NARRATION 60 DIAGRAM
 
 # DIAGRAM
 rcs
