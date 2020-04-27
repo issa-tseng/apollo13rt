@@ -32,7 +32,8 @@ for (const line of text.split('\n')) {
     }
   } else if (state === 'NARRATION') {
     if (!target.text) target.text = '';
-    target.text += `<p>${line}</p>`;
+    const html = line.replace(/\{\{([^}]+)\}\}/g, '<span class="glossary-term">$1</span>');
+    target.text += `<p>${html}</p>`;
   } else if (state === 'STATUS') {
     target.name = line;
   } else if (state === 'DIAGRAM') {

@@ -22,6 +22,10 @@
   right: 1em
   top: 0
 
+
+////////////////////////////////////////
+// NARRATION STYLES
+
 .narration
   overflow: hidden
 
@@ -83,4 +87,33 @@
         transform: scaleX(#{$i - 1})
     &.in-1
       transform: scaleX(0.2)
+
+
+////////////////////////////////////////
+// STATUS STYLES
+
+.status
+  overflow: hidden
+
+  .ship
+    height: 20em
+    left: calc(50% - 23.5em)
+    position: absolute
+    top: calc(50% - 10em)
+    transition: 1s left $ease-extreme-out, 1s top $ease-extreme-out
+    width: 47em
+  .ship div
+    position: absolute
+    transition: 4s transform $ease-extreme-out
+  .ship img
+    height: 20em
+
+  .ship-sm
+    left: 0
+  .ship-cm
+    left: 21.4em
+  .ship-lm-a
+    left: 27.6em
+  .ship-lm-d
+    left: 36.1em
 

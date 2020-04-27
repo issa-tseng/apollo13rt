@@ -16,12 +16,13 @@ default-widths = {
 }
 
 do-layout = (layout) ->
-  console.log(layout)
-
-  last = layout[layout.length - 1]
   result = {}
+  for name of default-widths
+    result["left-#name"] = result["width-#name"] = 0
+
   left-em = 0
   left-vw = 0
+  last = layout[layout.length - 1]
   for box in layout
     result["left-#{box.name}"] =
       if !left-vw then "#{left-em}em"
