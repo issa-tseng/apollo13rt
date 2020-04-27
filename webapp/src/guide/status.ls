@@ -14,10 +14,24 @@ class StatusView extends DomView.build(
   )
   $('<div class="guide-box status">
   <div class="ship">
-    <div class="ship-sm"><img src="/assets/sm.svg"/></div>
-    <div class="ship-cm"><img src="/assets/cm.svg"/></div>
-    <div class="ship-lm-a"><img src="/assets/lm-a.svg"/></div>
-    <div class="ship-lm-d"><img src="/assets/lm-d.svg"/></div>
+    <div class="ship-sm">
+      <img src="/assets/sm.svg"/>
+      <span class="sublabel">Command/Service Module (CSM)</span>
+      <span class="subsublabel">Service Module (SM)</span>
+    </div>
+    <div class="ship-cm">
+      <img src="/assets/cm.svg"/>
+      <span class="subsublabel">Command Module (CM)</span>
+    </div>
+    <div class="ship-lm-a">
+      <img src="/assets/lm-a.svg"/>
+      <span class="sublabel">Lunar Module (LM)</span>
+      <span class="subsublabel">Ascent</span>
+    </div>
+    <div class="ship-lm-d">
+      <img src="/assets/lm-d.svg"/>
+      <span class="subsublabel">Descent</span>
+    </div>
   </div>
 </div>')
   template(

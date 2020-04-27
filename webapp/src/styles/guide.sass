@@ -117,3 +117,21 @@
   .ship-lm-d
     left: 36.1em
 
+  .sublabel, .subsublabel
+    display: none
+    font-size: 1.1em
+    left: calc(50% - 14em)
+    opacity: 0
+    pointer-events: none
+    position: absolute
+    text-align: center
+    top: 20em
+    transition: 2s opacity
+    width: 28em
+
+  .sublabel
+    margin-left: 3em
+  .ship-lm-a, .ship-lm-b
+    .subsublabel
+      margin-left: -1em
+

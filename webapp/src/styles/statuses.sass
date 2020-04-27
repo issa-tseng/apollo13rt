@@ -1,10 +1,20 @@
 @import './common'
 
+.status-init
+  .sublabel
+    display: block
+
 .status-exploded-1
   .ship-sm, .ship-cm
     transform: translateX(-3em)
   .ship-lm-a, .ship-lm-d
     transform: translateX(3em)
+
+  .sublabel
+    display: block
+    opacity: 1
+  .subsublabel
+    display: block
 
 .status-exploded-2
   .ship-sm
@@ -15,4 +25,11 @@
     transform: translateX(1.3em)
   .ship-lm-d
     transform: translateX(6em)
+
+  .sublabel
+    display: block
+    opacity: 0
+  .subsublabel
+    display: block
+    opacity: 1
 
