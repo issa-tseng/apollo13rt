@@ -13,26 +13,50 @@ class StatusView extends DomView.build(
       events[idx]?.name))
   )
   $('<div class="guide-box status">
+  <div class="moon-panel"><div class="moon"/></div>
+
   <div class="ship">
-    <div class="ship-sm">
-      <img src="/assets/sm.svg"/>
-      <span class="sublabel">Command/Service Module (CSM)</span>
-      <span class="subsublabel">Service Module (SM)</span>
+    <div class="ship-csm">
+      <div class="ship-sm">
+        <img src="/assets/sm.svg"/>
+        <span class="sublabel">Command/Service Module (CSM)</span>
+        <span class="subsublabel">Service Module (SM)</span>
+      </div>
+      <div class="ship-cm">
+        <img src="/assets/cm.svg"/>
+        <span class="subsublabel">Command Module (CM)</span>
+      </div>
     </div>
-    <div class="ship-cm">
-      <img src="/assets/cm.svg"/>
-      <span class="subsublabel">Command Module (CM)</span>
-    </div>
-    <div class="ship-lm-a">
-      <img src="/assets/lm-a.svg"/>
-      <span class="sublabel">Lunar Module (LM)</span>
-      <span class="subsublabel">Ascent</span>
-    </div>
-    <div class="ship-lm-d">
-      <img src="/assets/lm-d.svg"/>
-      <span class="subsublabel">Descent</span>
+    <div class="ship-lm">
+      <div class="ship-lm-a">
+        <img src="/assets/lm-a.svg"/>
+        <span class="sublabel">Lunar Module (LM)</span>
+        <span class="subsublabel"><span>Ascent</span></span>
+      </div>
+      <div class="ship-lm-d">
+        <span class="lm-leg stbd">
+          <span class="leg-sec"/>
+          <span class="leg-prim">
+            <span class="leg-foot"/>
+          </span>
+        </span>
+        <span class="lm-leg port">
+          <span class="leg-sec"/>
+          <span class="leg-prim">
+            <span class="leg-foot"/>
+          </span>
+        </span>
+        <img src="/assets/lm-d.svg"/>
+        <span class="lm-leg center">
+          <span class="foot"/>
+          <span class="leg"/>
+        </span>
+        <span class="subsublabel">Descent</span>
+      </div>
     </div>
   </div>
+
+  <div class="s-ivb"><img src="/assets/s-ivb.svg"/></div>
 </div>')
   template(
     find('.status').classGroup(\status-, from.vm(\status))

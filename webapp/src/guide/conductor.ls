@@ -10,6 +10,9 @@ class Conductor extends Model.build(
   attribute(\narration, attribute.Model.of(Narration))
 )
 
+default-lefts = {
+  status: 0
+}
 default-widths = {
   status: 25
   narration: 40
@@ -18,7 +21,8 @@ default-widths = {
 do-layout = (layout) ->
   result = {}
   for name of default-widths
-    result["left-#name"] = result["width-#name"] = 0
+    result["left-#name"] = default-lefts[name] ? \100vw
+    result["width-#name"] = 0
 
   left-em = 0
   left-vw = 0

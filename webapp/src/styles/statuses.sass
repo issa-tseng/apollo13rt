@@ -1,10 +1,55 @@
 @import './common'
 
-.status-init
-  .sublabel
-    display: block
+@mixin legs-deployed
+  .lm-leg
+    .leg-prim
+      transform: rotate(-62deg)
+    .leg-sec
+      height: 7.2em
+      transform: rotate(-7deg)
+    .leg
+      width: 7em
+    .foot
+      left: 7em
+      transform: none
+      width: 0.6em
 
-.status-exploded-1
+.status-preinit
+  .ship
+    opacity: 0
+    transform: translateX(-40em) scale(0.9)
+
+.status-init
+  .ship
+    transition: 5s opacity ease-out, 15s transform $ease-extreme-out
+  .s-ivb
+    display: block
+    top: calc(100% + 4em)
+    transform: scale(1.3)
+
+.status-s-ivb
+  .ship
+    filter: brightness(0.5)
+    left: 0
+    top: 0
+    transform: rotate(-20deg) scale(0.4)
+    transition: 4s left $ease-extreme-out, 4s top $ease-extreme-out, 4s transform $ease-extreme-out, 4s filter $ease-extreme-out
+    div
+      transition-duration: 1s
+  .s-ivb
+    display: block
+    top: calc(50% - 11em)
+    transform: rotate(-10deg)
+
+.status-staged-0
+  .ship
+    transition-duration: 4s
+  .s-ivb
+    display: block
+    top: calc(100% + 4em)
+    transform: scale(1.3)
+
+.status-staged-1
   .ship-sm, .ship-cm
     transform: translateX(-3em)
   .ship-lm-a, .ship-lm-d
@@ -13,23 +58,87 @@
   .sublabel
     display: block
     opacity: 1
-  .subsublabel
+  .moon-panel
+    display: block
+    transform: translateX(34em)
+
+.status-staged-2
+  @include legs-deployed
+  .ship-csm
+    transform: translateX(-5em)
+    transition: 3s transform $ease-extreme-out
+  .ship-lm
+    left: calc(20em + 13.5vw)
+    transform: translateY(-8em) rotate(90deg) scale(0.7)
+    transition: 2s left ease-out, 2s transform ease-out !important
+  .moon-panel
+    display: block
+    transition: 4s transform ease-out
+
+.status-descent
+  @include legs-deployed
+  .ship-csm
+    transform: translateX(-5em)
+  .ship-lm
+    left: calc(20em + 13.5vw)
+    transform: translateY(7em) rotate(90deg) scale(0.5)
+    transition: 4s transform ease-out !important
+    .subsublabel
+      display: block
+      opacity: 0
+  .moon-panel
     display: block
 
-.status-exploded-2
+.status-ascent
+  @include legs-deployed
+  .ship-csm
+    transform: translateX(-5em)
+  .ship-lm
+    left: calc(20em + 13.5vw)
+    transform: translateY(7em) rotate(90deg) scale(0.5)
+    .subsublabel
+      display: block
+      opacity: 1
+      transform: translateY(3em) scale(2)
+      transition: 4s opacity
+    .ship-lm-a .subsublabel span
+      background: #222
+      border-radius: 0.2em
+      box-shadow: 0 0 0 0.2em #222
+      color: #fff
+      padding: 0 0.2em
+  .ship-lm-a
+    transform: translateX(-30em)
+    transition: 4s transform ease-in-out !important
+  .moon-panel
+    display: block
+
+
+.status-staged-3
   .ship-sm
     transform: translateX(-6em)
   .ship-cm
     transform: translateX(-2em)
+  .ship-lm
+    transition: 4s transform $ease-extreme-out, 4s left $ease-extreme-out
+    .subsublabel
+      transition: 2s transform $ease-extreme-out
   .ship-lm-a
     transform: translateX(1.3em)
+    .subsublabel span
+      transition: 0.4s all
   .ship-lm-d
     transform: translateX(6em)
-
-  .sublabel
+  .moon-panel
     display: block
-    opacity: 0
+    transform: translateX(34em)
+    transition: 4s transform $ease-extreme-out
   .subsublabel
     display: block
     opacity: 1
+
+//.status-descent
+  .subsublabel
+    display: block
+    transition-duration: 0.3s
 

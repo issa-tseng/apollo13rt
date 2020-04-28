@@ -1,53 +1,58 @@
 [55 46 11] LAYOUT
-NARRATION
+STATUS
+
+# STATUS
+preinit
+
+[55 46 12] STATUS
+init
+
+[55 46 31] LAYOUT
+STATUS 60 NARRATION
 
 # NARRATION
 Welcome to Apollo 13 Real-time. This is a deep-dive educational experience on the six hours immediately following the Apollo 13 accident.
 
-[55 46 20] NARRATION
-Presently, the crew is wrapping up a TV broadcast, and Mission Control is preparing some housekeeping tasks before sleep period. The accident will not occur for almost another ten minutes.
+[55 46 38] NARRATION
+The crew just wrapped up a TV broadcast, and Mission Control is preparing some housekeeping tasks before sleep period. The accident will not occur for almost another ten minutes.
 
-[55 46 30] NARRATION
-In the meantime, let's go over some basics and information about the Apollo spacecraft, Mission Control, and this website.
+Don't worry too much about what they're saying just yet. We'll get there.
+
+[55 46 50] NARRATION
+While they work out their chores, let's go over some basics and information about the Apollo spacecraft, Mission Control, and what you're hearing.
 
 If you would rather this narration go away, you can <a href="#ref-only">click here</a>.
 
-[55 46 40] LAYOUT
-STATUS 60 NARRATION
-
-# STATUS
-init
-
-# NARRATION
+[55 47 05] NARRATION
 This is the Apollo spacecraft. It's made up of four modules mated together. Together like this, it's sometimes called a {{stack}}.
 
-[55 46 45] STATUS
-exploded-1
-
-# NARRATION
-The two primary spacecraft are the Command and Service Module (referred to as the CSM), and the Lunar Module (called the LM).
-
-[55 46 50] STATUS
-exploded-2
-
-# NARRATION
-But the Service Module could separate from the Command Module, and was discarded before reëntry to Earth. And the Lunar Module also came apart into the Descent Stage, which was left on the Lunar surface to save weight, and the Ascent Stage, which took the astronauts back to the CSM to go home.
-
-[55 47 50] STATUS
+[55 47 17] STATUS
 s-ivb
 
 # NARRATION
-Apollo had a travel companion: the S-IVB stage, part of the Saturn V rocket, was responsible for the heavy lifting of sending the spacecraft from Earth orbit all the way out to intercept the Moon.
+Apollo had a travel companion: the S-IVB stage, part of the Saturn V rocket, was responsible for the heavy duty work of sending the spacecraft from Earth orbit all the way out to intercept the Moon.
 
-For the first time on Apollo 13, the S-IVB was directed to impact the Moon rather than boost away into a safe Solar orbit, as a seismometer had been left behind by Apollo 12. This change meant that they left its computer and radio equipment running. This detail will become important later.
+For the first time on Apollo 13, the S-IVB was directed to impact the Moon rather than boost away into a safe Solar orbit, as a seismometer had been left behind by Apollo 12. This detail will become important later.
 
-[55 48 05] STATUS
-descent
+[55 47 35] STATUS
+staged-0
+
+[55 47 37] STATUS
+staged-1
 
 # NARRATION
-Together, the Command and Service Modules (referred to as the CSM) would orbit the Moon, while the Lunar Module (LM) would descend to the Lunar surface.
+The two primary spacecraft units are the Command/Service Module (referred to as the CSM), and the Lunar Module (called the LM).
 
-[55 48 12] STATUS
+[55 47 49] STATUS
+staged-2
+
+# NARRATION
+Together, the Command and Service Module (CSM) would orbit the Moon, while the Lunar Module (LM) would descend to the Lunar surface.
+
+[55 47 54] STATUS
+descent
+
+[55 48 07] STATUS
 ascent
 
 # NARRATION
@@ -55,13 +60,13 @@ To return from the surface, the Lunar Module would leave behind a lot of heavy e
 
 Each stage had its own batteries, tanks, and engine, with the Descent engine being more powerful and featureful.
 
-[55 48 20] STATUS
-unexploded
+[55 48 28] STATUS
+staged-3
 
 # NARRATION
 On their way to the Moon, however, all these stages were mated together to form the complete Apollo spacecraft. During this phase of the mission, the Service Module provided most of the consumables (power, oxygen, and so on) and did most of the work, aided by the Command Module instrumentation and computer.
 
-[55 48 30] NARRATION
+[55 48 35] NARRATION
 In reality, it wouldn't just remain stationary like this, however, because in space the temperature difference between Sun and shade become extreme without air to diffuse the temperature.
 
 Thermal management is a huge concern in spaceflight. Too hot, and delicate components could fry; too cold, and they might stop working.
