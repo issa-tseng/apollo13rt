@@ -11,7 +11,6 @@
       width: 7em
     .foot
       left: 7em
-      transform: none
       width: 0.6em
 
 .status-preinit
@@ -68,7 +67,7 @@
     transform: translateX(-5em)
     transition: 3s transform $ease-extreme-out
   .ship-lm
-    left: calc(20em + 13.5vw)
+    left: calc(30vw - 3.5em)
     transform: translateY(-8em) rotate(90deg) scale(0.7)
     transition: 2s left ease-out, 2s transform ease-out !important
   .moon-panel
@@ -80,9 +79,9 @@
   .ship-csm
     transform: translateX(-5em)
   .ship-lm
-    left: calc(20em + 13.5vw)
+    left: calc(30vw - 3.5em)
     transform: translateY(7em) rotate(90deg) scale(0.5)
-    transition: 4s transform ease-out !important
+    transition: 4s transform ease-in-out !important
     .subsublabel
       display: block
       opacity: 0
@@ -94,7 +93,7 @@
   .ship-csm
     transform: translateX(-5em)
   .ship-lm
-    left: calc(20em + 13.5vw)
+    left: calc(30vw - 3.5em)
     transform: translateY(7em) rotate(90deg) scale(0.5)
     .subsublabel
       display: block
