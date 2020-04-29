@@ -57,6 +57,11 @@ class StatusView extends DomView.build(
   </div>
 
   <div class="s-ivb"><img src="/assets/s-ivb.svg"/></div>
+  <div class="attitude">
+    <div class="roll">roll</div>
+    <div class="pitch">pitch</div>
+    <div class="yaw">yaw</div>
+  </div>
 </div>')
   template(
     find('.status').classGroup(\status-, from.vm(\status))
