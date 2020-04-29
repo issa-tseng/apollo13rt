@@ -32,7 +32,7 @@ for (const line of text.split('\n')) {
     }
   } else if (state === 'NARRATION') {
     if (!target.text) target.text = '';
-    const html = line.replace(/\{\{([^}]+)\}\}/g, '<span class="glossary-term">$1</span>');
+    const html = line.replace(/\{\{([^}]+)\}\}/g, '<span class="glossary-term" data-term="$1">$1</span>');
     target.text += `<p>${html}</p>`;
   } else if (state === 'STATUS') {
     target.name = line;
