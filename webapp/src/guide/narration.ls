@@ -1,7 +1,7 @@
 $ = require(\jquery)
 { List, Model, bind, DomView, template, find, from } = require(\janus)
 { event-idx } = require('./util')
-{ clamp, epoch-to-hms } = require('../util')
+{ clamp, epoch-to-hms, pad } = require('../util')
 
 class Narration extends Model
 
@@ -39,9 +39,9 @@ class NarrationLineView extends DomView.build(
   template(
     find('.nl-epoch').attr(\href, from.vm(\hms.hh).and.vm(\hms.mm).and.vm(\hms.ss)
       .all.map((hh, mm, ss) -> "##hh:#mm:#ss"))
-    find('.nl-epoch .hh').text(from.vm(\hms.hh))
-    find('.nl-epoch .mm').text(from.vm(\hms.mm))
-    find('.nl-epoch .ss').text(from.vm(\hms.ss))
+    find('.nl-epoch .hh').text(from.vm(\hms.hh).map(pad))
+    find('.nl-epoch .mm').text(from.vm(\hms.mm).map(pad))
+    find('.nl-epoch .ss').text(from.vm(\hms.ss).map(pad))
     find('.nl-content').html(from(\text))
   )
 )
