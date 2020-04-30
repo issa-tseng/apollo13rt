@@ -62,6 +62,18 @@ class StatusView extends DomView.build(
     <div class="pitch">pitch</div>
     <div class="yaw">yaw</div>
   </div>
+  <div class="stars">
+    <div class="star star-a"/>
+    <div class="star star-b"/>
+    <div class="star star-c"/>
+    <div class="star star-d"/>
+    <div class="star star-e"/>
+    <div class="star star-f"/>
+  </div>
+  <div class="angle">
+    <div class="angle-fixed"/>
+    <div class="angle-member"/>
+  </div>
 </div>')
   template(
     find('.status').classGroup(\status-, from.vm(\status))

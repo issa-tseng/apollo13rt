@@ -285,4 +285,102 @@
         top: -1em
         width: 12em
 
+  .star
+    border: 10em solid transparent
+    border-bottom: 7em solid #000
+    border-top: none
+    height: 0
+    margin: 5em 0
+    position: absolute
+    transform: rotate(35deg) scale(0.1)
+    width: 0
+
+    &::before
+      @include reify
+      border: 3em solid transparent
+      border-bottom: 8em solid #000
+      border-top: none
+      left: -6.5em
+      position: absolute
+      top: -4.5em
+      transform: rotate(-35deg)
+
+    &::after
+      @include reify
+      border: 10em solid transparent
+      border-bottom: 7em solid #000
+      border-top: none
+      left: -10.5em
+      position: absolute
+      top: 0.3em
+      transform: rotate(-70deg)
+
+  .stars
+    display: none
+    left: calc(50% + 20em)
+    opacity: 0
+    position: absolute
+    top: calc(50% - 22em)
+    transition: 4s opacity
+
+    .star-a
+      left: 3em
+      transform: rotate(26deg) scale(0.1)
+      top: 1em
+    .star-b
+      left: 1.5em
+      transform: rotate(60deg) scale(0.08)
+      top: 3em
+    .star-c
+      left: 0
+      transform: rotate(10deg) scale(0.12)
+      top: 1em
+    .star-d
+      left: 1em
+      transform: rotate(16deg) scale(0.07)
+      top: 5em
+    .star-e
+      left: 1.7em
+      transform: rotate(55deg) scale(0.03)
+      top: 0
+    .star-f
+      left: 3em
+      transform: rotate(35deg) scale(0.03)
+      top: 4em
+
+  .angle
+    $size: 30em
+    display: none
+    height: $size
+    left: calc(50% - 6em)
+    margin-top: -#{$size}
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    top: calc(50% + 2em)
+    transform-origin: bottom left
+    transition: 1s opacity, 2s transform ease-in-out
+    width: $size
+
+    div
+      border-top: 2px solid #000
+      bottom: 0
+      position: absolute
+      width: 100%
+
+    .angle-member
+      transform-origin: 0 0
+      transition: 2s transform ease-in-out
+      &::after
+        @include reify
+        border: 1px solid transparent
+          bottom-color: #000
+          radius: 4em
+          right-color: #000
+        height: 4em
+        left: -2em
+        position: absolute
+        top: -2em
+        transform: rotate(45deg)
+        width: 4em
 

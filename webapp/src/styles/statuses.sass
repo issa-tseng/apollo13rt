@@ -145,4 +145,75 @@
   .attitude
     display: block
     opacity: 1
+  .stars
+    display: block
+
+.status-stars-1
+  .stars
+    display: block
+    opacity: 1
+  .ship
+    transform: translateX(-6em) translateY(2em) scale(0.8) rotate(8deg)
+    transition: 4s transform $ease-extreme-out
+
+  .attitude
+    display: block
+    transition-duration: 1s
+  .angle
+    display: block
+    transform: rotate(8deg)
+    .angle-member
+      transform: rotate(-30deg)
+
+.status-stars-2, .status-stars-3, .status-stars-4, .status-stars-5
+  .stars
+    display: block
+    opacity: 1
+    .star-c
+      border-bottom-color: #fbb03c
+      transition: 1s border-color
+      &::before, &::after
+        border-bottom-color: #fbb03c
+        transition: 1s border-color
+  .ship
+    opacity: 0.4
+    transition: 2s transform ease-in-out
+
+  .angle
+    display: block
+    opacity: 1
+
+.status-stars-2
+  .ship
+    transform: translateX(-6em) translateY(2em) scale(0.8) rotate(8deg)
+    transition: 1s opacity
+  .angle
+    transform: rotate(8deg)
+    .angle-member
+      transform: rotate(-30deg)
+
+.status-stars-3
+  .ship
+    transform: translateX(-6em) translateY(2em) scale(0.8) rotate(20deg)
+  .angle
+    transform: rotate(20deg)
+    .angle-member
+      transform: rotate(-42deg)
+
+.status-stars-4
+  .ship
+    transform: translateX(-6em) translateY(2em) scale(0.8) rotate(-5deg)
+  .angle
+    transform: rotate(-5deg)
+    .angle-member
+      transform: rotate(-17deg)
+
+.status-stars-5
+  .ship
+    transform: translateX(-6em) translateY(2em) scale(0.8) rotate(15deg)
+  .angle
+    transform: rotate(15deg)
+    .angle-member
+      transform: rotate(-37deg)
+
 
