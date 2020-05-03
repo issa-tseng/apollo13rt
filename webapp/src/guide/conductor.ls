@@ -2,12 +2,14 @@ $ = require(\jquery)
 { Model, attribute, bind, from, DomView, template, find } = require(\janus)
 
 { event-idx } = require('./util')
-{ Status } = require('./status')
+{ Diagram } = require('./diagram')
 { Narration } = require('./narration')
+{ Status } = require('./status')
 
 class Conductor extends Model.build(
   attribute(\status, attribute.Model.of(Status))
   attribute(\narration, attribute.Model.of(Narration))
+  attribute(\diagram, attribute.Model.of(Diagram))
 )
 
 default-lefts = {
@@ -16,6 +18,7 @@ default-lefts = {
 default-widths = {
   status: 25
   narration: 40
+  diagram: 30
 }
 
 do-layout = (layout) ->
@@ -56,6 +59,7 @@ class ConductorView extends DomView.build(
     bind(\event-idx, event-idx)
   )
   $('<div class="guide-main">
+  <div class="guide-diagram guide-wrapper"/>
   <div class="guide-status guide-wrapper"/>
   <div class="guide-narration guide-wrapper"/>
 </div>')
@@ -63,10 +67,11 @@ class ConductorView extends DomView.build(
     find('.guide-main').css(\height, from.app(\global).get(\player).get(\height)
       .map((script-height) -> "calc(100vh - 20.5em - #{script-height}px)"))
 
-    find('.guide-status').render(from(\status))
+    find('.guide-diagram').render(from(\diagram))
     find('.guide-narration').render(from(\narration))
+    find('.guide-status').render(from(\status))
 
-    ...([ \status, \narration ].map(box-layout))
+    ...([ \diagram, \narration, \status ].map(box-layout))
   )
 )
   _wireEvents: ->
