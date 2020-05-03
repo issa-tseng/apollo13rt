@@ -110,29 +110,32 @@ stars-3
 stars-4
 
 [55 50 12] NARRATION
-The Apollo Guidance Computer ({{AGC}}) assisted in doing the homework. During a program P51 from-scratch alignment, the crew pressed a button once they had aimed the telescope precisely at a known star, and the computer would take a sample. They then needed only to tell it which star it was, and repeat the task for a second star.
+The Apollo Guidance Computer ({{AGC}}) did the readings and math. During a P51 from-scratch alignment, the crew pressed a button once they had aimed the telescope at a known star, and the computer would take a sample. They then told it which star it was, and repeated the task for a second star.
 
-During a P52 alignment confirmation, the computer would even point the telescope automatically at stars, and the crew needed only to adjust and confirm.
+During a P52 alignment confirmation, the computer would point the telescope automatically at stars, and the crew needed only to adjust and confirm.
 
-[55 50 16] STATUS
-stars-5
+[55 50 17] STATUS
+stars-2
 
+[55 50 22] STATUS
+stars-3
 
+[55 50 27] STATUS
+stars-4
 
-
-[99 50 20] LAYOUT
-STATUS NARRATION 60 DIAGRAM
+[55 50 32] LAYOUT
+STATUS 35 NARRATION 35 DIAGRAM
 
 # STATUS
-inert
+imu-1
 
 # DIAGRAM
 imu
 
 # NARRATION
-It is one thing to determine the {{attitude}} at one point in time; it is another to keep it updated as the spacecraft drifted around. Without air resistance to slow motion, it was essentially impossible to simply remain fixed.
+It is one thing to determine the {{attitude}} at one point in time; it is another to keep it updated as the spacecraft drifts around. In space, with no air to slow things down, nothing stays still.
 
-This was accomplished using an advanced gyroscope system, called the Inertial Measurement Unit ({{IMU}}).
+This movement tracking was accomplished using an advanced gyroscope system, called the Inertial Measurement Unit ({{IMU}}).
 
 [99 50 28] NARRATION
 The {{IMU}} works much the way a compass would resting in your palm: a freely rotating <em>stable member</em> (in this case, the compass needle) remains fixed relative to a reference point (the Earth's magnetic field) even if you yourself turn around.
