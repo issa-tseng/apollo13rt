@@ -31,7 +31,7 @@ do-layout = (layout) ->
     result["left-#{box.name}"] =
       if !left-vw then "#{left-em}em"
       else if !left-em then "#{left-vw}vw"
-      else "calc(#{left-em}em + #{left-vw})"
+      else "calc(#{left-em}em + #{left-vw}vw)"
 
     if box is last
       result["width-#{box.name}"] = "calc(100vw - #{left-em + 2.5}em - #{left-vw}vw)"
