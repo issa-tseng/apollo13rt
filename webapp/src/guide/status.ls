@@ -27,6 +27,9 @@ class StatusView extends DomView.build(
         <span class="subsublabel">Command Module (CM)</span>
       </div>
     </div>
+    <div class="imu">
+      <div class="imu-member"/>
+    </div>
     <div class="ship-lm">
       <div class="ship-lm-a">
         <img src="/assets/lm-a.svg"/>
@@ -73,6 +76,16 @@ class StatusView extends DomView.build(
   <div class="angle">
     <div class="angle-fixed"/>
     <div class="angle-member"/>
+  </div>
+  <div class="compass">
+    <div class="compass-rose"/>
+    <div class="compass-rose"/>
+    <div class="compass-minor"/>
+    <div class="compass-minor"/>
+    <div class="compass-stable">
+      <div class="needle"/>
+      <span>N</span>
+    </div>
   </div>
 </div>')
   template(

@@ -72,6 +72,9 @@
     animation-name: narration-appear
     animation-timing-function: $ease-extreme-out
 
+    .nl-epoch
+      color: $color-accent-text
+
     .nl-content
       color: #333
       font-size: 1.8em
@@ -106,6 +109,9 @@
 .status
   overflow: hidden
 
+  ////////////////////
+  // ships
+
   .ship
     height: 20em
     left: calc(50% - 23.5em)
@@ -133,6 +139,9 @@
     left: 8.5em
     img
       position: relative // for z
+
+  ////////////////////
+  // legs
 
   .lm-leg
     display: block
@@ -196,6 +205,9 @@
       transform-origin: 0 0
       top: 3.8em
 
+  ////////////////////
+  // labels
+
   .sublabel, .subsublabel
     display: none
     font-size: 1.1em
@@ -214,6 +226,9 @@
     .subsublabel
       margin-left: -1em
 
+  ////////////////////
+  // s-ivb
+
   .s-ivb
     display: none
     height: 22em
@@ -223,6 +238,9 @@
     width: 57em
     img
       height: 22em
+
+  ////////////////////
+  // moon panel
 
   .moon-panel
     background-color: #222
@@ -245,6 +263,9 @@
       position: absolute
       top: 15em
       width: 200em
+
+  ////////////////////
+  // attitude axes
 
   .attitude
     display: none
@@ -295,6 +316,9 @@
         position: absolute
         top: -1em
         width: 12em
+
+  ////////////////////
+  // stars
 
   .star
     border: 10em solid transparent
@@ -359,6 +383,9 @@
       transform: rotate(35deg) scale(0.03)
       top: 4em
 
+  ////////////////////
+  // angle ind
+
   .angle
     $size: 30em
     display: none
@@ -394,4 +421,120 @@
         top: -2em
         transform: rotate(45deg)
         width: 4em
+
+  ////////////////////
+  // imu
+
+  .imu
+    background: #bbb
+    border: 1px solid #000
+    border-radius: 5em
+    box-shadow: 0 0 0 4px #888, 0 0 0 6px #000
+    display: none
+    height: 3.2em
+    left: 23.6em
+    opacity: 0
+    position: absolute
+    top: calc(50% - 1.5em)
+    transition: 1s opacity
+    width: 3.2em
+
+    .imu-member
+      background-color: #e7e7e7
+      border: 1px solid #000
+      height: 1.8em
+      left: 1em
+      position: absolute
+      top: 0.5em
+      width: 1em
+      &::after
+        @include reify
+        background-color: #eee
+        border: 1px solid #000
+        height: 1em
+        left: -0.6em
+        position: absolute
+        top: 0.5em
+        width: 2em
+
+  ////////////////////
+  // compass
+
+  .compass
+    background: #ddd
+    border: 2px solid #777
+    border-radius: 4em
+    display: none
+    height: 6em
+    left: 2em
+    opacity: 0
+    position: absolute
+    top: 2em
+    transition: 1s opacity, 2s transform ease-in-out
+    width: 6em
+
+    .compass-rose
+      left: calc(50% - 0.6em)
+      position: absolute
+      width: 1.2em
+      &::before, &::after
+        @include reify
+        border: 0.6em solid transparent
+        width: 0
+      &::before
+        border-bottom: 2.5em solid #aaa
+      &::after
+        border-top: 2.5em solid #aaa
+      + .compass-rose
+        transform: rotate(90deg)
+    .compass-minor
+      left: calc(50% - 0.2em)
+      position: absolute
+      top: 0.4em
+      transform: rotate(45deg)
+      width: 0.4em
+      &::before, &::after
+        @include reify
+        border: 0.2em solid transparent
+        width: 0
+      &::before
+        border-bottom: 2.5em solid #c4c4c4
+      &::after
+        border-top: 2.5em solid #c4c4c4
+      + .compass-minor
+        transform: rotate(135deg)
+
+    .compass-stable
+      left: calc(50% - 0.3em)
+      position: absolute
+      top: 0.3em
+      transform: rotate(55deg)
+      transition: 2s transform ease-in-out
+      width: 0.6em
+
+      .needle
+        &::before, &::after
+          @include reify
+          border: 0.3em solid transparent
+          width: 0
+        &::before
+          border-bottom: 2.5em solid #d00
+        &::after
+          border-top: 2.5em solid #fff
+      span
+        color: #555
+        display: block
+        left: -0.6em
+        position: absolute
+        text-align: center
+        top: -2.6em
+        width: 2em
+
+        &::before
+          @include reify
+          border: 0.4em solid transparent
+          border-bottom-color: #555
+          left: 0.6em
+          position: absolute
+          top: 1em
 

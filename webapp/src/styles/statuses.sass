@@ -49,6 +49,9 @@
     transform: scale(1.3)
 
 .status-staged-1
+  .ship div
+    transition-duration: 2s
+    transition-timing-function: ease-in-out
   .ship-sm, .ship-cm
     transform: translateX(-3em)
   .ship-lm-a, .ship-lm-d
@@ -186,7 +189,7 @@
 .status-stars-2
   .ship
     transform: translateX(-6em) translateY(2em) scale(0.8) rotate(8deg)
-    transition: 1s opacity
+    transition: 1s opacity, 2s transform ease-in-out
   .angle
     transform: rotate(8deg)
     .angle-member
@@ -215,5 +218,65 @@
     transform: rotate(15deg)
     .angle-member
       transform: rotate(-37deg)
+  .imu, .compass
+    display: block
 
+.status-imu-1
+  .ship
+    transform: scale(0.6)
+    transition: 1s opacity
+
+  .ship-cm,
+    opacity: 0.1
+    transition: 1s opacity
+  .ship-sm, .ship-lm
+    opacity: 0.2
+
+  .angle
+    display: block
+  .imu, .compass
+    display: block
+    opacity: 1
+
+.status-imu-2,
+.status-imu-3,
+.status-imu-4
+  .ship
+    transition: 2s transform ease-in-out !important
+  .ship-cm
+    opacity: 0.1
+  .ship-sm, .ship-lm
+    opacity: 0.2
+  .imu, .compass
+    display: block
+    opacity: 1
+    transition: 2s transform ease-in-out !important
+
+.status-imu-2
+  .ship
+    transform: scale(0.6) rotate(-50deg)
+  .imu
+    transform: rotate(50deg)
+  .compass
+    transform: rotate(-50deg)
+    .compass-stable
+      transform: rotate(105deg)
+.status-imu-3
+  .ship
+    transform: scale(0.6) rotate(20deg)
+  .imu
+    transform: rotate(-20deg)
+  .compass
+    transform: rotate(20deg)
+    .compass-stable
+      transform: rotate(35deg)
+.status-imu-4
+  .ship
+    transform: scale(0.6) rotate(80deg)
+  .imu
+    transform: rotate(-80deg)
+  .compass
+    transform: rotate(80deg)
+    .compass-stable
+      transform: rotate(-25deg)
 
