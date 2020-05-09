@@ -32,6 +32,9 @@
   img
     max-height: 100%
     max-width: 100%
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
 
 
 ////////////////////////////////////////
@@ -537,4 +540,69 @@
           left: 0.6em
           position: absolute
           top: 1em
+
+  ////////////////////
+  // earth
+
+  .earth
+    animation-duration: 45s
+    animation-iteration-count: infinite
+    animation-name: earth-rotate
+    animation-timing-function: linear
+    bottom: -2em
+    display: none
+    height: 16em
+    opacity: 0
+    position: absolute
+    right: -2em
+    width: 16em
+
+  .station
+    $radius: 4.8em
+    left: #{3.2em + $radius * 2}
+    height: 6em
+    overflow: hidden
+    position: absolute
+    top: #{3.2em + $radius * 2}
+    transform-origin: #{-$radius} #{-$radius}
+    width: 6em
+
+    &::before
+      @include reify
+      background: #000
+      border-radius: 1em
+      height: 1em
+      left: 0
+      position: absolute
+      top: 0
+      width: 1em
+
+    &::after, .station-waves::before, .station-waves::after
+      @include reify
+      animation-duration: 2s
+      animation-iteration-count: infinite
+      animation-name: radio-signal
+      border: 2px solid #000
+      border-radius: 6em
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.2)
+      left: 0.5em
+      position: absolute
+      top: 0.5em
+      transform: translateX(-50%) translateY(-50%)
+
+    &::after
+      height: 2em
+      width: 2em
+    .station-waves::before
+      animation-delay: 0.1s
+      height: 3.5em
+      width: 3.5em
+    .station-waves::after
+      animation-delay: 0.2s
+      height: 5em
+      width: 5em
+
+    @for $i from 2 through 5
+      &.station-#{$i}
+        transform: rotate(#{($i - 1) * 72}deg)
 

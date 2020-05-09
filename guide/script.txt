@@ -112,7 +112,7 @@ stars-4
 [55 50 12] NARRATION
 The Apollo Guidance Computer ({{AGC}}) did the readings and math. During a P51 from-scratch alignment, the crew pressed a button once they had aimed the telescope at a known star, and the computer would take a sample. They then told it which star it was, and repeated the task for a second star.
 
-During a P52 alignment confirmation, the computer would point the telescope automatically at stars, and the crew needed only to adjust and confirm.
+During a P52 alignment confirmation, the computer would point the telescope automatically at stars, and the crew needed only to adjust and confirm. ADD STARCHART!
 
 [55 50 17] STATUS
 stars-2
@@ -127,7 +127,7 @@ stars-4
 STATUS 35 NARRATION 35 DIAGRAM
 
 # STATUS
-imu-1
+imu-0
 
 # DIAGRAM
 imu
@@ -138,7 +138,7 @@ It is one thing to determine the {{attitude}} at one point in time; it is anothe
 This movement tracking was accomplished using an advanced gyroscope system, called the Inertial Measurement Unit ({{IMU}}).
 
 [55 50 42] STATUS
-imu-2
+imu-1
 
 # NARRATION
 The {{IMU}} works like a compass resting in your palm: a freely rotating <em>stable member</em> (here, the compass needle) remains fixed relative to a reference point (the Earth's magnetic field) even if you yourself turn around.
@@ -146,13 +146,13 @@ The {{IMU}} works like a compass resting in your palm: a freely rotating <em>sta
 In a gyroscope, the force that holds the stable member (<em>right</em>: the boxes) fixed is the angular momentum of a spinning weight rather than magnetism, but it's the same idea. The spacecraft then reads the orientation of the stable member with {{resolvers}} in the rings.
 
 [55 50 47] STATUS
-imu-3
+imu-2
 
 [55 50 52] STATUS
-imu-4
+imu-3
 
 [55 50 57] STATUS
-imu-2
+imu-4
 
 [55 51 03] NARRATION
 The {{IMU}} is an advanced gyroscope. Its stable member is not held stationary by a spinning weight. Rather, extra-sensitive small gyroscope instruments are fed into servo motors that actively drive the stable member to hold it still relative to the universe.
@@ -160,37 +160,86 @@ The {{IMU}} is an advanced gyroscope. Its stable member is not held stationary b
 This is useful because it is often necessary to shift the stable member around, and choose exactly where it rests, to avoid {{gimbal lock}}.
 
 [55 51 08] STATUS
-imu-3
+imu-5
 
 [55 51 13] STATUS
-imu-4
+imu-6
 
 [55 51 18] STATUS
-imu-2
+imu-7
 
 # NARRATION
-It's not especially important why, but with only three gimbal rings, the {{IMU}} is susceptible to a problem known as {{gimbal lock}}: if the spacecraft rotates through certain angles the stable member will get dragged along with it rather than float, ruining the reference.
+With only three gimbal rings, the {{IMU}} is susceptible to a problem called {{gimbal lock}}: if the spacecraft rotates through certain angles the stable member will get dragged along with it rather than float, ruining the reference.
 
-Because of this, the stable member would be deliberately placed at certain angles chosen based on the activities the crew was performing, to lower the chances of a gimbal lock. It could be moved quickly but imprecisely, in a {{coarse align}} procedure, or torqued incrementally and carefully as part of a {{fine align}}.
+To lower the chances of a gimbal lock the stable member would be carefully placed at certain angles chosen based on the activities the crew was performing. It could be moved quickly but imprecisely, in a {{coarse align}} procedure, or tuned slowly as part of a {{fine align}}.
 
+[55 51 23] STATUS
+imu-5
 
+[55 51 28] STATUS
+imu-6
 
+[55 51 33] STATUS
+imu-7
 
+[55 51 35] NARRATION
+The combination of maintaining a healthy {{IMU}} and understanding the spacecraft's {{attitude}} was called a {{platform}}. When you hear people in the audio refer to the platform, this is what they mean.
 
-[99 51 00] NARRATION
-The combination of maintaining a healthy IMU and understanding the spacecraft's {{attitude}} was called a {{platform}}. When you hear people in the audio refer to the platform, this is what they mean.
+Even if everything was done correctly, the IMU could drift over time, and the platform needed recalibration. A P52 could reconfirm the alignment, after which the IMU might be adjusted slightly with a {{fine align}} operation.
 
-Even if everything was done correctly, the IMU could drift over time, and the platform would need to be recalibrated. A P52 was usually done to accomplish this reconfirmation, after which the IMU might be adjusted slightly with a {{fine align}} operation.
+[55 51 38] STATUS
+imu-5
 
-[99 51 12] LAYOUT
-STATUS NARRATION
+[55 51 44] STATUS
+imu-6
+
+[55 51 50] STATUS
+comms-0
 
 # NARRATION
-Once you know your attitude reference, you'll want to use it to go places. In spaceflight, this is generally handled through two independent systems.
+To get the astronauts where they needed to go, though, their <em>position</em> was necessary as well.
 
-The Reaction Control System ({{RCS}}) is a collection of small jets that could fire in a coördinated fashion, to rotate the vehicle.
+The {{IMU}} and {{AGC}} did their best to track the spacecraft's movement, but the instruments on board were limited. Imagine trying to measure your distance travelled down a freeway, but using only your speedometer. Spaceships only have an accelerometer!
+
+[55 52 05] STATUS
+comms-1
+
+# DIAGRAM
+msfn-sites
+
+# NARRATION
+So, the spacecraft was better tracked from a reliable point of reference: the Earth. A series of radio stations on Earth maintained communications with Apollo as the Earth rotated stations in and out of view.
+
+Handoffs between stations were a routine part of Apollo life, and typically involved a short loss of signal.
+
+[55 52 20] NARRATION
+The signal contained telemetry data, voice, and uplink command data on top of a constant carrier signal. The {{doppler shift}} of that carrier wave as it bounced back to the Earth could be measured and triangulated to determine Apollo's exact position.
+
+We will talk more about Apollo comms later, as a loss of communication becomes a major issue.
+
+[55 52 40] STATUS
+rcs
+
+# DIAGRAM
+rcs
+
+# NARRATION
+Once you know where you are and what you're looking at, you can get where you're going. In spaceflight, a control system spins and points the ship, and the propulsion system makes it go.
+
+The Reaction Control System ({{RCS}}) is a collection of small jets that would fire in concert to rotate the vehicle. Usually, this was done by the ship's computer, but the crew could take over, with its help if they wanted.
+
+[55 53 00] NARRATION
 
 To actually accerelate in a direction, the Service Propulsion System ({{SPS}}) in the {{Service Module}} and the Descent Propulsion System ({{DPS}}) in the {{Lunar Module}} are the primary engine systems you'll hear about today.
+
+
+
+
+
+
+
+
+
 
 [99 51 25] LAYOUT
 STATUS NARRATION 60 DIAGRAM

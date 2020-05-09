@@ -14,6 +14,24 @@ class StatusView extends DomView.build(
   )
   $('<div class="guide-box status">
   <div class="moon-panel"><div class="moon"/></div>
+  <div class="earth">
+    <img src="/assets/earth.svg"/>
+    <div class="station station-1">
+      <div class="station-waves"/>
+    </div>
+    <div class="station station-2">
+      <div class="station-waves"/>
+    </div>
+    <div class="station station-3">
+      <div class="station-waves"/>
+    </div>
+    <div class="station station-4">
+      <div class="station-waves"/>
+    </div>
+    <div class="station station-5">
+      <div class="station-waves"/>
+    </div>
+  </div>
 
   <div class="ship">
     <div class="ship-csm">

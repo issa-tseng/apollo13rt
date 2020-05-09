@@ -221,7 +221,7 @@
   .imu, .compass
     display: block
 
-.status-imu-1
+.status-imu-0, .status-imu-1
   .ship
     transform: scale(0.6)
     transition: 1s opacity
@@ -232,15 +232,16 @@
   .ship-sm, .ship-lm
     opacity: 0.2
 
-  .angle
-    display: block
   .imu, .compass
     display: block
     opacity: 1
 
-.status-imu-2,
-.status-imu-3,
-.status-imu-4
+.status-imu-0
+  .compass
+    opacity: 0
+
+.status-imu-2, .status-imu-3, .status-imu-4,
+.status-imu-5, .status-imu-6, .status-imu-7
   .ship
     transition: 2s transform ease-in-out !important
   .ship-cm
@@ -250,9 +251,13 @@
   .imu, .compass
     display: block
     opacity: 1
-    transition: 2s transform ease-in-out !important
+    transition: 1s opacity, 2s transform ease-in-out !important
 
-.status-imu-2
+.status-imu-5, .status-imu-6, .status-imu-7
+  .compass
+    opacity: 0
+
+.status-imu-2, .status-imu-5
   .ship
     transform: scale(0.6) rotate(-50deg)
   .imu
@@ -261,7 +266,7 @@
     transform: rotate(-50deg)
     .compass-stable
       transform: rotate(105deg)
-.status-imu-3
+.status-imu-3, .status-imu-6
   .ship
     transform: scale(0.6) rotate(20deg)
   .imu
@@ -270,7 +275,7 @@
     transform: rotate(20deg)
     .compass-stable
       transform: rotate(35deg)
-.status-imu-4
+.status-imu-4, .status-imu-7
   .ship
     transform: scale(0.6) rotate(80deg)
   .imu
@@ -279,4 +284,24 @@
     transform: rotate(80deg)
     .compass-stable
       transform: rotate(-25deg)
+
+.status-comms-0
+  .ship
+    transform: scale(0.6) rotate(-60deg)
+    transition: 1s transform $ease-extreme-out !important
+  .imu, .compass
+    display: block
+    transition: 0.6s opacity
+  .earth
+    bottom: -5em
+    display: block
+    right: -5em
+
+.status-comms-1
+  .ship
+    transform: scale(0.6) rotate(-60deg)
+  .earth
+    display: block
+    opacity: 1
+    transition: 1s opacity, 4s bottom $ease-extreme-out, 4s right $ease-extreme-out
 
