@@ -1217,7 +1217,7 @@ Go ahead, Aquarius.
 
 [58 04 03 - 58 04 25] CDR
 Houston - okay, I want you to double check my arithmetic to make sure we got a good coarse align. {The roll CAL angle} was -2°. The Command Module angles were 355.57, 167.78, 351.87.
-> This the docking angle index from the very beginning of this audio.
+1> This the docking angle index from the very beginning of this audio.
 
 [58 04 36 - 58 04 46] CAPCOM
 Okay, Jim. We copy the roll CAL at -2.0. Command Module is 355.57, 167.78, 351.87.
