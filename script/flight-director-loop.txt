@@ -5194,7 +5194,7 @@ Okay.
 As soon as we've got the alignment and we're finished with it we're going CMC OFF, IMU OFF, we'll leave the heater circuit breakers on and power them from - BATTERY A. Until you tell me whether we need to keep them up or not.
 
 [58 07 43 - 58 07 45] CAPCOM
-How come we're getting so much noise on the COMM?
+How come I'm getting so much noise on the COMM?
 > Again, an important question.
 
 [58 07 46 - 58 07 47] FLIGHT
