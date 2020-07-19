@@ -8019,7 +8019,7 @@ And anything that they would like us to run, we can proceed to do it.
 FLIGHT, TELMU.
 
 [59 43 03 - 59 43 07] FLIGHT
-TELMU, let me hear the COMM. Okay? Can we hear it? Do you need something?
+TELMU, let me hear the air-to-ground. Okay? Can we hear it? Do you need something?
 
 [59 43 08 - 59 43 09] TELMU
 We've got to power down, here, pretty quick.
