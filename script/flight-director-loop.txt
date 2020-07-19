@@ -355,7 +355,7 @@ FLIGHT, EECOM.
 - we have a lot of instrumentation problems here. Go ahead.
 
 [55 58 18 - 55 58 22] EECOM
-That's affirm. {He's flipping out fuel cells around, FLIGHT.}
+That's affirm. {He's flipping the fuel cells around, FLIGHT.}
 1> This ended up being a problem for the flight controllers. The astronauts were doing their own problem solving and configuration changes, so every time the controllers on the ground had a recommendation for them something would get changed and they'd have to start over.
 
 [55 58 24 - 55 58 26] FLIGHT
