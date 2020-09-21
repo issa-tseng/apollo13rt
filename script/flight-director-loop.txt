@@ -2407,6 +2407,9 @@ Go.
 [57 05 12] GNC
 He has it on, FLIGHT.
 
+[57 05 27 - 57 05 28] INCO
+We still don't have OMNI Charlie, FLIGHT.
+
 [57 05 31 - 57 05 32] CAPCOM
 I never got a call for OMNI Charlie, you want it?
 
