@@ -140,7 +140,7 @@ Okay, Houston. Are you still reading - 13?
 That's affirmative, we're reading you. We're trying to come up with some good ideas here for you.
 
 [56 03 29 - 56 03 36] LMP
-Okay. Let me give you some readings - in the interim to help MAIN A voltage, Jack. I've got BUS TIE AC on.
+Okay. Let me give you some readings - in the interim to help MAIN A voltage, Jack. I've got BUS TIE A/C on.
 
 [56 03 37 - 56 03 38] CAPCOM
 Say again, Fred.
@@ -254,7 +254,7 @@ Okay. Got it.
 OMNI Bravo.
 
 [56 16 08 - 56 16 18] CAPCOM
-Okay, 13, this is Houston. We'd like you to go to your GNC checklist, the pink pages, 1-5. Do a powerdown until we get a delta of 10 amps. Over.
+Okay, 13, this is Houston. We'd like you to go to your GNC checklist, the pink pages, 1-5. Do a power down until we get a delta of 10 amps. Over.
 
 [56 16 21 - 56 16 23] LMP
 Alright. Roger.
@@ -287,7 +287,7 @@ And 13, you might also check for those pages in your launch checklist. They're e
 Okay. That was in the launch checklist, Jack.
 
 [56 18 42 - 56 18 47] CAPCOM
-Roger. Power down until you get an amperage of 10 amps less than what you got now. Over.
+Roger. Power down until you get an amperage of 10 amps less than what you got now.
 
 [56 18 50] CDR
 Okay.
@@ -540,7 +540,7 @@ Okay. On the ECS RADIATORS, ?? is grey. On the - on the ECS, PRIMARY INDICATOR.
 Okay, Jack. Starting at the top. Okay. The CRYO TANKS: H₂ 1 is reading 230 and the same for 2. Our O₂ CRYO TANK 1 is - looks like it's barely holding its own at 300. And, CRYO TANK 2 is reading zip. Our quantities: H₂ 1 is reading 73, 2, 74.
 
 [56 51 34 - 56 52 10] LMP
-On the O₂ side, we're reading O₂ 1 at quantity 76. O₂ 2 pegged to full scale high. RAD TEMPs PRIMARY INLET we're reading about 55; RAD OUT is reading about 30, and the SECONDARY OUTLET is reading - reading 52°.
+On the O₂ side, we're reading O₂ 1 at quantity 76. O₂ 2 pegged full scale high. RAD TEMPs PRIMARY INLET we're reading about 55; RAD OUT is reading about 30, and the SECONDARY OUTLET is reading - reading 52°.
 
 [56 52 11 - 56 53 03] LMP
 And the EVAP OUT TEMP is 45, STEAM PRESSURE 0.17, and GLYCOL DISCHARGE 48. SUIT COMPRESSOR is reading zip. The ACCUM is reading 30; H₂O WASTE is reading about 34; POTABLE's reading about 98; SECONDARY RAD INLET is reading about 71; and the RAD OUT is about 30; GLYCOL EVAP TEMP is reading 65, STEAM PRESSURE pegged full scale high; DISCHARGE PRESSURE 9 psi.
@@ -676,7 +676,7 @@ That's affirm. I watched it and it went barber pole as I threw the switch.
 Roger.
 
 [57 08 01 - 57 08 29] CMP
-Okay. Jack. Let me give you a thruster configuration right now. Able 1, Charlie 1, Able 2 are OFF. Charlie 2, MAIN A, all the thrusters that I call that are ON are on MAIN A. Baker 1 OFF. Dog 1 ON, Baker 2 OFF, Dog 2 ON. Able 3, Charlie 3, Able 4, Charlie 4 on. Baker 3 OFF, Dog 3 ON, Baker 4 OFF, Dog 4 ON.
+Okay. Jack. Let me give you a thruster configuration right now. Able 1, Charlie 1, Able 2 are OFF. Charlie 2, MAIN A, all the thrusters that I call that are ON are on MAIN A. Baker 1 OFF. Dog 1 ON, Baker 2 OFF, Dog 2 ON. Able 3, Charlie 3, Able 4, Charlie 4 ON. Baker 3 OFF, Dog 3 ON, Baker 4 OFF, Dog 4 ON.
 > The seemingly disjointed order of callouts here is actually the order the switches appeared on [panel 8](#ref-panel-cm-aux).
 
 [57 09 28 - 57 09 30] CAPCOM
@@ -949,7 +949,7 @@ Okay. In the CSM on panel 5, circuit breakers LM POWER 1 and 2, OPEN. Then LM PO
 Standby 1.
 
 [57 38 25 - 57 38 56] LMP
-Okay. In the CSM, on panel 5, we want CB LM POWER 1 and 2, OPEN. Then the LM POWER switch to reset, release. In the LM, panels 11 and 16, XLUNAR BUS TIE breakers closed. The DECSENT ECA CONTROL closed. On panel 14, BAT 5 NORMAL feed ON, followed by BATS 1, 2, 3, and 4 LOW VOLTAGE taps ON. Then BAT 5 NORMAL feed OFF. Then ASCENT ECA CONTROL breaker OPEN.
+Okay. In the CSM, on panel 5, we want CB LM POWER 1 and 2, OPEN. Then the LM POWER switch to reset, release. In the LM, panels 11 and 16, XLUNAR BUS TIE breakers closed. On panel 16, the ASCENT ECA CONTROL closed, the DESCENT ECA CONTROL closed. On panel 14, BAT 5 NORMAL feed ON, followed by BATS 1, 2, 3, and 4 LOW VOLTAGE taps ON. Then BAT 5 NORMAL feed OFF. Then ASCENT ECA CONTROL breaker OPEN.
 
 [57 38 59] CAPCOM
 That's a good readback, Fred.
@@ -1072,7 +1072,7 @@ Alright. Real good. Right now, we're charging BATTERY A. Do you want to disconti
 Discontinue the charge on BATTERY A, Jack.
 
 [57 49 22 - 57 49 31] CMP
-Okay, Jack. I discontinued charge on BATTERY A. You give me the call and I'll turn BUS TIE AC on.
+Okay, Jack. I discontinued charge on BATTERY A. You give me the call and I'll turn BUS TIE A/C on.
 
 [57 49 32 - 57 49 35] CAPCOM
 Roger. And we want you to keep the lights up and the IMU on.
@@ -1666,7 +1666,7 @@ Okay, Jack. What we want you to do is close the reactants valve on FUEL CELL 2. 
 Check the control, and make sure we don't go to gimbal lock, Fred.
 
 [58 37 21 - 58 37 37] CMP
-Okay, Jack. Understand. Close REAC valve circuit breakers in FUEL CELL 2. Power down inverters. Power down BAT relay bus. BAT TIES OFF. Power entry and both running circuit breakers A, B, and C. All off.
+Okay, Jack. Understand. Close REAC valve circuit breakers in FUEL CELL 2. Power down inverters. Power down BAT relay bus. BAT TIES OFF. Power entry and both running circuit breakers A, B, and C. All open.
 
 [58 37 41 - 58 37 47] CAPCOM
 That's affirmative, Jack, and - close the reactant valve on FUEL CELL 2, there.
@@ -2098,7 +2098,7 @@ Okay. COMM DISPLAYS, ECS DISPLAYS - both OPEN.
 Okay, and two more. In row 4 under HEATERS, open DISPLAYS and under EPS, open DISPLAYS.
 
 [59 08 40 - 59 08 48] LMP
-Okay. HEADERS DISPLAY, EPS DISPLAY OPEN. And I've long since had all the lights off; floods, etc.
+Okay. HEATERS DISPLAY, EPS DISPLAY OPEN. And I've long since had all the lights off; floods, etc.
 
 [59 08 55 - 59 09 00] CDR
 Where are those bags? Where are those bags for weighing water in the PLSS?
@@ -2323,7 +2323,7 @@ Houston, Aquarius. Over.
 Go ahead, Aquarius.
 
 [59 41 19 - 59 41 23] CDR
-Okay, we're thinking of rigging up the urine dump to the side hatch.
+Okay, we're thinking about rigging up the urine dump to the side hatch.
 
 [59 41 29 - 59 41 34] CDR
 We're thinking about rigging up the urine dump to the side hatch to save urine heater power. What do you think?
@@ -2792,10 +2792,10 @@ And do you want the SECONDARY S-BAND?
 Negative on SECONDARY S-BAND. Leave them open.
 
 [60 43 14 - 60 43 16] CDR
-UP DATA LINK is IN. Do you want that in or out?
+UPDATA LINK is IN. Do you want that in or out?
 
 [60 43 22 - 60 43 24] CAPCOM
-Leave the UP DATA LINK OPEN. We'll call for it when you want to put it in.
+Leave the UPDATA LINK OPEN. We'll call for it when you want to put it in.
 
 [60 44 37 - 60 44 47] LMP
 Okay, Jack. On panel 11 on the top row, do you really want the PROPULSION PQGS and ASCENT HELIUM REGs IN?
