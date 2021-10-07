@@ -3,7 +3,7 @@ Apollo 13 real-time
 
 This project consists of three efforts:
 
-* One is a **full digital transcription** of the Apollo 13 Flight Director's Loop, the audio of which is generously provided to the public by NASA through the efforts of [John Stoll](https://archive.org/details/Apollo13Audio). The full transcript may be found under the `script/` directory. Timing is based on [corrected playback audio](https://www.youtube.com/watch?v=KWfnY9cRXO4) done by [ulysses777x](https://www.youtube.com/user/ulysses777x) on YouTube.
+* One is a **full digital transcription** of the Apollo 13 Flight Director's Loop, the audio of which is generously provided to the public by NASA through the efforts of [John Stoll](https://archive.org/details/Apollo13Audio). The full transcript may be found under the `script/` directory. Timing is based on the IRIG-B timed multitrack audio now available as of 2020.
 * The second is a web player for this audio which plays the audio side-by-side with the transcript, with as much additional interactive information as we can provide to help contextualize the loop chatter for curious folk who are unfamiliar with Apollo systems and terminology. The code for this is found in the `webapp/` directory.
 * The third are a series of brief articles, high-quality diagrams, and other resources aimed at easing laypeople into spaceflight, and providing deeper technical information for those who desire it. These are located under the `exhibits/` directory, and are written in markdown and HTML to ease contribution.
 
