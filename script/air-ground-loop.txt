@@ -1567,7 +1567,7 @@ Okay, Fred. Negative on the Activation on page 37. We want your RCS pressurized 
 Okay, Jack, how do you read?
 
 [58 31 57 - 58 32 01] CAPCOM
-Okay, this is Houston. We want you to load the DAP with 30120.
+Okay, Jim, this is Houston. We want you to load the DAP with 30120.
 
 [58 32 07 - 58 32 09] CDR
 Load the DAP with 30120.
