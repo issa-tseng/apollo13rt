@@ -3350,7 +3350,7 @@ Okay, you tell me - you tell me when.
 Okay, turn it off now. See you in 5 minutes.
 
 [61 44 26 - 61 44 29] LMP
-Okay, it's gone off. It's gone off for 5 minutes.
+Okay, it's going off. It's going off for 5 minutes.
 
 [61 51 05] LMP
 - -
