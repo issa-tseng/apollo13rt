@@ -148,7 +148,7 @@ Say again, Fred.
 [56 03 42 - 56 03 51] LMP
 In the interim, to help out MAIN A voltage, I've got MAIN BUS TIE BAT {A/C} on. Or would you rather accept the 25 volts we are seeing on MAIN A?
 1> These letters are designations, not "alternating current."
-> 29 volts was the target operating voltage of the bus. Adding more power sources in series ups the voltage.
+> 29 volts was the target operating voltage of the bus. Adding more power sources in parallel reduces the load on each, increasing the voltage overall.
 
 [56 03 52 - 56 03 54] CAPCOM
 Okay. BUS TIE A/C on.
