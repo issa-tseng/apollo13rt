@@ -12401,6 +12401,9 @@ Okay.
 [- 61 52 24] FLIGHT
 - I'd like, quickly, to know what you want done.
 
+[61 52 36] INCO (off loop)
+Okay, CAPCOM, you should have the LM back.
+
 [61 52 41] INCO
 FLIGHT, INCO.
 
